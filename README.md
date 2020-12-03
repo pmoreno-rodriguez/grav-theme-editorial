@@ -34,7 +34,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 
 
 ### Featured Pages
-The latest three pages tagged with the category "featured" will automatically display in a mini-listing in the sidebar with teaser images and summaries.  The current page, if featured, will not display in that listing.
+The latest three ~~pages~~ posts from blog tagged with the category "featured" will automatically display in a mini-listing in the sidebar with teaser images and summaries.  The current page, if featured, will not display in that listing.
 
 ![featured image example](images/featured.jpg)
 

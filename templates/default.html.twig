@@ -1,5 +1,15 @@
 {% extends 'partials/base.html.twig' %}
+{% set primaryImage = ((page.header.primaryImage)|first) %}
 
 {% block content %}
-    {{ page.content }}
+    <section>
+    <header>
+        {% if page.header.primaryImage %}
+            <span class="image main">{{ page.media[primaryImage.name].html() }}</span>
+        {% endif %}
+        <h2>{{ page.title }}</h2>
+    </header>
+    <div>
+        {{ page.content }}
+    </div>
 {% endblock %}

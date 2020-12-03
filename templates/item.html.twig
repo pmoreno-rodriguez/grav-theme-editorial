@@ -1,0 +1,54 @@
+{% extends 'partials/base.html.twig' %}
+{% set primaryImage = ((page.header.primaryImage)|first) %}
+
+{% block content %}
+    <p>
+        {% if config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
+        {% endif %}
+    </p>
+    <header>
+        <h1 class="item-h1">{{ page.title }}</h1>
+        <p class="data-post">
+        {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime}}</small>{% endif %}
+        {% if page.date %}
+        <!-- To show date of post with international option. It's necessary to have enable intl extension in php.ini and Twig Extensions plugin installed.  -->
+        <br><small><i class="far fa-clock"></i> {{ page.date|date("d/m/Y") }}</small>
+        {% endif %}
+        {% if page.header.metadata.author %}<br><small><i class="fas fa-user"></i> {{ page.header.metadata.author|e|title }}</small>{% endif %}
+        </p>
+        
+    </header>
+    {% if page.header.primaryImage %}
+        <span class="image main">{{ page.media[primaryImage.name].html() }}</span>
+    {% endif %}
+
+    {{ page.content }}
+    <p>
+        <span>
+        {% if config.plugins.taxonomylist.enabled %}
+           <i class="fas fa-tags"></i>
+            {% for tag in page.taxonomy.tag %}
+            <a class=""
+               href="{{ base_url|rtrim('/') }}/blog/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        {% endif %}
+        <span>
+        {% if page.taxonomy.category %}
+            <i class="fas fa-link fa-md"></i>
+            {% for category in page.taxonomy.category %}
+                <a class="tags" title="{{ 'See other posts of ' ~ (category|capitalize) }}"
+			     href="{{ base_url|rtrim('/') }}/blog/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+            {% endfor %}
+        {% endif %}
+        </span>
+    </p>
+    <p class="align-center">
+        {% if not page.isLast %}
+                <a class="button small" href="{{ page.prevSibling.url }}"><i class="fas fa-angle-left"></i> {{ 'Previous'|t }}</a>
+        {% endif %}
+        {% if not page.isFirst %}
+            <a class="button small" href="{{ page.nextSibling.url }}">{{ 'Next'|t }} <i class="fas fa-angle-right"></i></a>
+        {% endif %}
+    </p>
+{% endblock %}

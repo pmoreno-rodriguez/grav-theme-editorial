@@ -1,16 +1,28 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block body %}
-    <section>
-        <header class="main">
-            <h1>{{ page.title }}</h1>
-            <h2 class="posttime">Posted {{ page.date|nicetime(false) }}</h2>
-        </header>
-        {% if page.header.primaryImage %}
-            {% set primaryImage = ((page.header.primaryImage)|first) %}
 
-            <span class="image main">{{ page.media[primaryImage.name].html() }}</span>
-        {% endif %}
-        {% block content %}{{ page.content }}{% endblock %}
-    </section><!-- End section -->
+    <p>
+    {% if config.plugins.breadcrumbs.enabled %}
+        {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+    </p>
+    <header>
+        <h1>{{ page.title }}</h1>
+    </header>
+        
+        <div class="posts">
+            {% set collection = page.collection() %}
+
+            {% for child in collection %}
+                    {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+            {% endfor %}
+        </div>
+        {# Render the pagination list #}
+            <div class="align-center">
+            {% if config.plugins.pagination.enabled and collection.params.pagination %}
+                {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+            {% endif %}
+            </div>
+
 {% endblock %}

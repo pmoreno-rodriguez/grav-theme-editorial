@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAaC,4EAIQ,CACP,MAAM,CAAE,iBAA0B,CAMlC,cAAQ,CACP,KAAK,CAAE,GAAG",
-"sources": ["../sass/ie8.scss"],
-"names": [],
-"file": "ie8.css"
-}

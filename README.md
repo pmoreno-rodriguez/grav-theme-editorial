@@ -44,9 +44,17 @@ The latest three ~~pages~~ posts from blog tagged with the category "featured" w
 * Item template is ready to work the Reading Time plugin. 
 * Added blog.html.twig and item.html.twig files.
 
+### Reordered assets
+
+* All assets (css, js, sass, etc) have been reordered into **assets** folder.
+
+### Update Styles
+
+* All styles have been updated to latest version of Editorial Theme by HTML5Up.
 
 ## Future plans
 * ~~Add a page for all featured pages.~~
+* Theme config translation to use different languages
 * Readd the older IE stylesheets/ js.
 * Instructions for editing sass files.
 

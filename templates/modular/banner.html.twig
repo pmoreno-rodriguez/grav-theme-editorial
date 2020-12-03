@@ -1,0 +1,19 @@
+{% set primaryImage = ((page.header.primaryImage)|first) %}
+
+<section id="banner">
+    <div class="content">
+        <header>
+            <h1>{{ page.title }}</h1>
+            <p>{{page.header.subtitulo}}</p>
+        </header>
+        <p>{{page.content}}</p>
+        <ul class="actions">
+            <li><a href="{{page.header.enlaceboton}}" class="button big">{{page.header.textoboton}}</a></li>
+        </ul>
+    </div>
+    {% if page.header.primaryImage %}
+    <span class="image object">
+        <img src="{{page.media[primaryImage.name].url}}" alt="" />
+    </span>
+     {% endif %}
+</section>

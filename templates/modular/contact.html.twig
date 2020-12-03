@@ -1,0 +1,7 @@
+<section id="contact">
+<header class="major">
+    <h2>{{ page.title }}</h2>
+</header>
+    <p class="lead">{{ page.content|raw }}</p>
+            {% include "forms/form.html.twig" with { form: forms('contact-form')} %}
+</section>

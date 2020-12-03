@@ -1,0 +1,32 @@
+<section>
+<header class="major">
+    <h2>{{ page.title }}</h2>
+</header>
+
+    <div class="posts">
+    {% for post in page.find('/blog').children.order('date', 'desc').slice(0,3) %}
+        {% set primaryImage = ((post.header.primaryImage)|first) %}
+
+        
+        <article>
+            {% if primaryImage %}
+            <a href="{{post.url}}" class="image"><img src="{{ post.media[primaryImage.name].url }}" alt="" /></a>
+            {% endif %}
+            <h3>{{post.title}}</h3>
+                <p>
+                {% if post.summary != post.content %}
+                        {{ post.summary|raw }}
+                    {% else %}
+                        {{ post.content|raw }}
+                    {% endif %}
+                </p>
+            <ul class="actions">
+                <li><a href="{{post.url}}" class="button">More</a></li>
+            </ul>
+        </article>
+       
+
+    {% endfor %}
+
+     </div>
+</section>

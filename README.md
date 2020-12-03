@@ -31,6 +31,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Social Icons (optional) - Add the full URL to a social platform, and an icon/link will automatically display on the top of the page.
 * Blog (optional) - Blog and Item templates.
 * Contact Form - Modular contact form template included
+* Blog List Modular page - Show the three latest posts in a modular page, eg. Home. (can be changed from twig template)
 
 
 ### Featured Pages

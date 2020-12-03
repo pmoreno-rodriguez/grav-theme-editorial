@@ -1,17 +1,17 @@
 # v0.1.4
 ## 03/12/2020
 
-1. [](#new)
+1. [new](#new)
     * Blog (optional) - Blog and Item templates.
     * Contact Form - Modular contact form template included
     * Added Banner Modular page like original theme.
     * Blog List Modular page - Show the three latest posts in a modular page, eg. Home. (can be changed from twig template)
     * Added custom.css to customize the css styles.
-2. [](#improved)
+2. [improved](#improved)
     * Added main.js from the original theme.
     * Removed from sidebar.html.twig lines 1,3 and 5.
     * Removed from blueprints.yaml the sidebarEnabled option.
-3. [](#bugfix)
+3. [bugfix](#bugfix)
     * The editorial theme ported to grav by [jgonyea](https://github.com/jgonyea) had several commented lines in main.js, which presented bad results in small screen of sidebar. 
 
 # v0.1.3

@@ -12,20 +12,28 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 
     {% block stylesheets %}
-        {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/pure-min.css', 100) %}
-        {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 99) %}
-        {% do assets.addCss('theme://css/main.css', 97) %}
-        {% do assets.addCss('theme://css/custom.css', 97) %}
+        {# {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/pure-min.css', 100) %} #}
+        {# {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 99) %} #}
+        {% do assets.addCss('theme://assets/css/main.min.css', 97) %}
+        {% do assets.addCss('theme://assets/css/custom.css', 10) %}
     {% endblock %}
     {{ assets.css() }}
 
     {% block javascripts %}
-        {% do assets.addJs('jquery', 100) %}
-        {% do assets.addJs('theme://js/skel.min.js', 99) %}
-        {% do assets.addJs('theme://js/util.js', 98) %}
-        {% do assets.addJs('theme://js/main.js', {'priority':97, 'group':'bottom'}) %}
+        {% do assets.addJs('theme://assets/js/jquery.min.js', {'priority':100, 'group':'bottom'}) %}
+        {# {% do assets.addJs('theme://js/skel.min.js', {'priority':99, 'group':'bottom'}) %} #}
+        {% do assets.addJs('theme://assets/js/util.js', {'priority':98, 'group':'bottom'}) %}
+        {% do assets.addJs('theme://assets/js/main.js', {'priority':97, 'group':'bottom'}) %}
+        {% do assets.addJs('theme://assets/js/breakpoints.min.js', {'priority':101, 'group':'bottom'}) %}
+        {% do assets.addJs('theme://assets/js/browser.min.js', {'priority':102, 'group':'bottom'}) %}
+
     {% endblock %}
     {{ assets.js() }}
+
+    {% block assets %}
+        {{ assets.css() }}
+        {{ assets.js() }}
+    {% endblock %}
 
 {% endblock head%}
 </head>
@@ -40,18 +48,11 @@
                 {% include 'partials/socialIcons.html.twig' %}
             </header><!-- End #header -->
             {% endblock %}
+            
             {% block body %}
-            <section>
-                <header class="main">
-                    <h1>{{ page.title }}</h1>
-                </header>
-                {% if page.header.primaryImage %}
-                    {% set primaryImage = ((page.header.primaryImage)|first) %}
 
-                    <span class="image main">{{ page.media[primaryImage.name].html() }}</span>
-                {% endif %}
                 {% block content %}{% endblock %}
-            </section><!-- End section -->
+
             {% endblock %}
 
         </div> <!-- End .inner -->

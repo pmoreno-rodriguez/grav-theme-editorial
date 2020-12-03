@@ -1,8 +1,8 @@
-{% if theme_config['sidebarEnabled'] == 'inactive' %}
+{# {% if theme_config['sidebarEnabled'] == 'inactive' %}
 <div id="sidebar" class="inactive">
-{% else %}
+{% else %} #}
 <div id="sidebar">
-{% endif %}
+{# {% endif %} #}
 
     <div class="inner">
 
@@ -24,7 +24,7 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright">&copy; {{ site.title|e('html') }}. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            <p class="copyright">&copy; {{ "now"|date("Y") }} {{ site.title|e('html') }}. All rights reserved. Grav Theme by <a href="https://design-pmoreno.com">{{ site.author.name }}</a>. Original Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>. Images: <a href="http://unsplash.com" target="_blank">Unsplash</a>.</p>
         </footer>
 
     </div>

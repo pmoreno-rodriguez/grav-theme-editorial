@@ -51,6 +51,6 @@ The latest three ~~pages~~ posts from blog tagged with the category "featured" w
 * Instructions for editing sass files.
 
 ## Credits
-* Thanks to Jeremy Gonyea, who ported the first Editorial theme for Grav.
+* Thanks to [Jeremy Gonyea](https://github.com/jgonyea), who ported the first Editorial theme for Grav.
 * This theme wouldn't be here without HTML5Up.net.  Many thanks to [AJ](aj@lkn.io) for creating the theme initially on that site.
 * Demo images came from [Unsplash](https://unsplash.com/)

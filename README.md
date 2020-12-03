@@ -44,6 +44,7 @@ The latest three ~~pages~~ posts from blog tagged with the category "featured" w
 
 * Add a blog page if you need it in your web. 
 * Item template is ready to work the Reading Time plugin. 
+* Breadcumbs plugin activated by default in posts.
 * Added blog.html.twig and item.html.twig files.
 
 ### Reordered assets

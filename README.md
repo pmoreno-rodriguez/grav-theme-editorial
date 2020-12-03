@@ -29,14 +29,24 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Theme Slogan (optional) - Used to add additional text to the site name at the top of the page.
 * Contact Information - Complete the form and the contact information will display in the sidebar.
 * Social Icons (optional) - Add the full URL to a social platform, and an icon/link will automatically display on the top of the page.
+* Blog (optional) - Blog and Item templates.
+* Contact Form - Modular contact form template included
+
 
 ### Featured Pages
 The latest three pages tagged with the category "featured" will automatically display in a mini-listing in the sidebar with teaser images and summaries.  The current page, if featured, will not display in that listing.
 
 ![featured image example](images/featured.jpg)
 
+### Blog Pages
+
+* Add a blog page if you need it in your web. 
+* Item template is ready to work the Reading Time plugin. 
+* Added blog.html.twig and item.html.twig files.
+
+
 ## Future plans
-* Add a page for all featured pages.
+* ~~Add a page for all featured pages.~~
 * Readd the older IE stylesheets/ js.
 * Instructions for editing sass files.
 

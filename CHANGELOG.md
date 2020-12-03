@@ -8,7 +8,12 @@
     * Blog List Modular page - Show the three latest posts in a modular page, eg. Home. (can be changed from twig template)
     * Added custom.css to customize the css styles.
 2. [](#improved)
-    * 
+    * Added main.js from the original theme.
+    * Removed from sidebar.html.twig lines 1,3 and 5.
+    * Removed from blueprints.yaml the sidebarEnabled option.
+3. [](#bugfix)
+    * The editorial theme ported to grav by [jgonyea](https://github.com/jgonyea) had several commented lines in main.js, which presented bad results in small screen of sidebar. 
+
 # v0.1.3
 ##  02/14/2018
 

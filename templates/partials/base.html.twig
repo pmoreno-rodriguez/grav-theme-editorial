@@ -12,6 +12,8 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 
     {% block stylesheets %}
+        {# {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/pure-min.css', 100) %} #}
+        {# {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 99) %} #}
         {% do assets.addCss('theme://assets/css/main.min.css', 97) %}
         {% do assets.addCss('theme://assets/css/custom.css', 10) %}
     {% endblock %}
@@ -19,6 +21,7 @@
 
     {% block javascripts %}
         {% do assets.addJs('theme://assets/js/jquery.min.js', {'priority':100, 'group':'bottom'}) %}
+        {# {% do assets.addJs('theme://js/skel.min.js', {'priority':99, 'group':'bottom'}) %} #}
         {% do assets.addJs('theme://assets/js/util.js', {'priority':98, 'group':'bottom'}) %}
         {% do assets.addJs('theme://assets/js/main.js', {'priority':97, 'group':'bottom'}) %}
         {% do assets.addJs('theme://assets/js/breakpoints.min.js', {'priority':101, 'group':'bottom'}) %}

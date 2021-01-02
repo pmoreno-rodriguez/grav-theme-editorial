@@ -1,4 +1,4 @@
-{% set featuredPages = page.collection({'items':{'@taxonomy':{'category': 'featured'}},'order': {'by': 'default', 'dir': 'asc'}}).remove(page).slice(0,3) %}
+{% set featuredPages = page.collection({'items':{'@taxonomy':{'category': 'featured'}},'order': {'by': 'date', 'dir': 'desc'}}).remove(page).slice(0,3) %}
 {% if count(featuredPages) > 0 %}
 <section>
     <header class="major">
@@ -9,8 +9,7 @@
             <article>
                 <a href="{{ p.url }}" class="featured-title"><h2>{{ p.title }}</h2></a>
                 {% if p.header.primaryImage %}
-                    {% set image = p.header.primaryImage|first %}
-                    <a href="{{ p.url }}" class="image">{{ p.media[image.name].html("",p.title) }} </a>
+                   <a href="{{ p.url }}" class="image"><img src="{{ p.media[p.header.primaryImage].url|e}}"></a>
                 {% endif %}
 
                 <p>{{ p.summary(100) }}</p>

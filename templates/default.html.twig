@@ -1,11 +1,10 @@
 {% extends 'partials/base.html.twig' %}
-{% set primaryImage = ((page.header.primaryImage)|first) %}
 
 {% block content %}
     <section>
     <header>
         {% if page.header.primaryImage %}
-            <span class="image main">{{ page.media[primaryImage.name].html() }}</span>
+            <span class="image main"><img src="{{ page.media[page.header.primaryImage].url|e}}"></span>
         {% endif %}
         <h2>{{ page.title }}</h2>
     </header>

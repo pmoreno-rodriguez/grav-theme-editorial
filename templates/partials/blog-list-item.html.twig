@@ -1,8 +1,6 @@
- {% set primaryImage = ((page.header.primaryImage)|first) %}
-
 <article>
-    {% if primaryImage %}
-    <a href="{{page.url}}" class="image"><img src="{{ page.media[primaryImage.name].url }}" alt="" /></a>
+    {% if page.header.primaryImage %}
+    <a href="{{page.url}}" class="image"><img src="{{ page.media[page.header.primaryImage].url|e}}"></a>
     {% endif %}
     <h3>{{page.title}}</h3>
         <p>

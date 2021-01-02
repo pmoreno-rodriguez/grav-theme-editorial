@@ -1,5 +1,3 @@
-{% set primaryImage = ((page.header.primaryImage)|first) %}
-
 <section id="banner">
     <div class="content">
         <header>
@@ -13,7 +11,7 @@
     </div>
     {% if page.header.primaryImage %}
     <span class="image object">
-        <img src="{{page.media[primaryImage.name].url}}" alt="" />
+        <img src="{{page.media[page.header.primaryImage].url}}" alt="" />
     </span>
      {% endif %}
 </section>

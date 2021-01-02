@@ -1,0 +1,25 @@
+title: Banner
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        banner:
+          type: tab
+          title: Banner
+          fields:
+            header.subtitulo:
+              type: text
+              label: Subtitulo
+            header.textoboton:
+              type: text
+              label: Texto del botón
+            header.enlaceboton:
+              type: text
+              label: URL del botón
+            header.imagen:
+              type: pagemediaselect
+              label: Seleccione una imagen
+
+        

@@ -1,0 +1,29 @@
+title: Features
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: Features
+          fields:
+            header.features:
+              name: features
+              type: list
+              label: Features
+              fields:
+                .icon:
+                  type: text
+                  label: Icon
+                  description: Select the code of Fontawesome Icons free version (https://fontawesome.com/icons?m=free)
+                .title:
+                  type: text
+                  label: Title
+                .text:
+                  type: text
+                  label: Text
+                .url:
+                  type: text
+                  label: Link

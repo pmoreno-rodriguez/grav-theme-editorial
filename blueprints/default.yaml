@@ -13,10 +13,6 @@ form:
           type: tab
           fields:
              header.primaryImage:
-              @ordering: 2
-              type: file
+              type: pagemediaselect
               label: 'Primary Image'
-              multiple: false
-              destination: '@self'
-              accept:
-                - image/*
+              preview_images: true

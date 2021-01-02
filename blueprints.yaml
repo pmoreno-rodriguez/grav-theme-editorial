@@ -27,14 +27,6 @@ form:
             type: text
             label: Theme Slogan
             help: Use this to add a text snippet to the sitename.
-        sidebarEnabled:
-            type: toggle
-            label: Sidebar Default State
-            highlight: 'active'
-            default: inactive
-            options:
-                active: Open
-                inactive: Closed
         dropdown.enabled:
             type: toggle
             label: Dropdown in Menu

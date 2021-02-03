@@ -1,14 +1,14 @@
 name: Editorial
-version: 0.1.3
+version: 0.1.5
 description: Port of the Editorial theme from HTML5Up.net
 icon: paint-brush
 author:
-  name: Jeremy Gonyea
-  email: jeremy.gonyea@gmail.com
-homepage: https://github.com/jgonyea/grav-theme-editorial
+  name: Pedro Moreno (original from Jeremy Gonyea)
+  email: pmoreno.rodriguez@outlook.com
+homepage: https://github.com/pmoreno-rodriguez/grav-theme-editorial
 keywords: grav, theme, html5up, editorial
-bugs: https://github.com/jgonyea/grav-theme-editorial/issues
-readme: https://github.com/jgonyea/grav-theme-editorial/blob/develop/README.md
+bugs: https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues
+readme: https://github.com/pmoreno-rodriguez/grav-theme-editorial/blob/develop/README.md
 license: MIT
 
 dependencies:

@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for module in page.collection() %}
-        {{ module.content }}
+        {{ module.content|raw }}
     {% endfor %}
 {% endblock %}
 

@@ -7,7 +7,7 @@
     <ul class="contact">
         <li class="icon solid fa-envelope"><a href="#">{{ theme_config.contact.email }}</a></li>
         <li class="icon solid fa-phone">{{ theme_config.contact.phone }}</li>
-        <li class="icon solid fa-home">{{ theme_config.contact.street }}<br />
+        <li class="icon solid fa-home">{{ theme_config.contact.street|raw }}<br />
             {{ theme_config.contact.city }}, {{ theme_config.contact.state }} {{ theme_config.contact.zip }}</li>
     </ul>
 </section>

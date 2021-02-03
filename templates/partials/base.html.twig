@@ -17,7 +17,7 @@
         {% do assets.addCss('theme://assets/css/main.min.css', 97) %}
         {% do assets.addCss('theme://assets/css/custom.css', 10) %}
     {% endblock %}
-    {{ assets.css() }}
+    
 
     {% block javascripts %}
         {% do assets.addJs('theme://assets/js/jquery.min.js', {'priority':100, 'group':'bottom'}) %}
@@ -28,11 +28,11 @@
         {% do assets.addJs('theme://assets/js/browser.min.js', {'priority':102, 'group':'bottom'}) %}
 
     {% endblock %}
-    {{ assets.js() }}
+   
 
     {% block assets %}
-        {{ assets.css() }}
-        {{ assets.js() }}
+        {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
     {% endblock %}
 
 {% endblock head%}
@@ -65,7 +65,7 @@
 
 </div> <!--End #wrapper -->
 {% block bottom %}
-    {{ assets.js('bottom') }}
+    {{ assets.js('bottom')|raw }}
 {% endblock %}
 
 </body>

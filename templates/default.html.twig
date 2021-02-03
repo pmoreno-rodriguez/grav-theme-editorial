@@ -4,11 +4,11 @@
     <section>
     <header>
         {% if page.header.primaryImage %}
-            <span class="image main"><img src="{{ page.media[page.header.primaryImage].url|e}}"></span>
+            <span class="image main"><img src="{{page.media[page.header.primaryImage].url}}" alt="" /></span>
         {% endif %}
-        <h2>{{ page.title }}</h2>
+        <h2>{{ page.title|raw }}</h2>
     </header>
     <div>
-        {{ page.content }}
+        {{ page.content|raw }}
     </div>
 {% endblock %}

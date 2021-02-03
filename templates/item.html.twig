@@ -7,9 +7,9 @@
         {% endif %}
     </p>
     <header>
-        <h1 class="item-h1">{{ page.title }}</h1>
+        <h1 class="item-h1">{{ page.title|raw }}</h1>
         <p class="data-post">
-        {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime}}</small>{% endif %}
+        {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|raw|readingtime}}</small>{% endif %}
         {% if page.date %}
         <!-- To show date of post with international option. It's necessary to have enable intl extension in php.ini and Twig Extensions plugin installed.  -->
         <br><small><i class="far fa-clock"></i> {{ page.date|date("d/m/Y") }}</small>
@@ -22,7 +22,7 @@
         <span class="image main"><img src="{{ page.media[page.header.primaryImage].url|e}}"></span>
     {% endif %}
 
-    {{ page.content }}
+    {{ page.content|raw }}
     <p>
         <span>
         {% if config.plugins.taxonomylist.enabled %}

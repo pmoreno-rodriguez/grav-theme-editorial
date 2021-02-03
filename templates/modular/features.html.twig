@@ -1,6 +1,6 @@
 <section>
 <header class="major">
-    <h2>{{ page.title }}</h2>
+    <h2>{{ page.title|raw }}</h2>
 </header>
     {{ content|raw }}
 
@@ -10,9 +10,9 @@
             
                 {% if feature.icon %}<span class="icon {{feature.icon}}"></span>{% endif %}
                 <div class="content">
-                    {% if feature.title %}<h3>{{feature.title}}</h3>{% endif %}
-                    {% if feature.url %}<a href="{{feature.url}}" target="_blank">{% if feature.title %}<h3>{{feature.title}}</h3>{% endif %}{% endif %}
-                    {% if feature.text %}<p>{{feature.text}}</p>{% endif %}
+                    {% if feature.title %}<h3>{{feature.title|raw}}</h3>{% endif %}
+                    {% if feature.url %}<a href="{{feature.url}}" target="_blank">{% if feature.title %}<h3>{{feature.title|raw}}</h3>{% endif %}{% endif %}
+                    {% if feature.text %}<p>{{feature.text|raw}}</p>{% endif %}
                 </div>
             
         </article>

@@ -1,3 +1,9 @@
+# v0.1.5
+## 03/02/2021
+
+1. [improved](#improved]
+   * Fixed autoescaping in preparation for Grav 1.7
+
 # v0.1.4
 ## 03/12/2020
 

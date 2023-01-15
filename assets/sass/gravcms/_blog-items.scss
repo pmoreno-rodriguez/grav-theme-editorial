@@ -1,0 +1,27 @@
+/* Blog items listing  */
+
+ul.blog-items {
+    list-style-type: none;
+    text-align: left;
+
+    li:nth-child(even){
+        background-color: _palette(bg-alt);
+    }
+
+    li a{
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 2px;
+    }
+
+    h2 {
+        text-align: left;
+        padding-left: 2em;
+    }
+    h2 + p {
+        margin-bottom: 0;
+    }
+    p.blog-datestamp {
+        padding-left: 4em;
+    }
+}

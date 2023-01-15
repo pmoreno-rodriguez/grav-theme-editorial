@@ -1,0 +1,62 @@
+/*# Custom CSS Styles */
+
+#breadcrumbs {
+    height: 2rem;
+    line-height: 1.7rem;
+    padding-left: 0rem;
+}
+
+#breadcrumbs span {
+    display: inline-block;
+    padding: 0 0.2rem;
+}
+
+
+/*item-h1 */
+
+.item-h1 {
+    font-size: 3.4rem;
+}
+
+@media screen and (max-width: 1280px) {
+    .item-h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .item-h1 {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Active the pagination numbers in small screens */
+
+@media screen and (max-width: 480px) {
+    ul.pagination li:nth-child(n+2):nth-last-child(n+2) {
+        display: inline-block;
+    }
+    ul.pagination li:first-child {
+        padding-right: 0;
+    }
+}
+
+
+/* Class for tags and categories */
+
+.tags {
+    color: #5a2908;
+    font-size: 0.9em;
+    border-bottom: none;
+}
+
+.data-post {
+    color: #7c6556;
+    font-size: 0.9em;
+    text-transform: none;
+}
+
+#header .logo {
+    font-size: 2.125em;
+}

@@ -1,0 +1,33 @@
+title: Generic Page
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          fields:
+            header.options:
+              type: columns
+              ordering@: header.title
+              fields:
+                header.content:
+                  type: column
+                  fields:
+                    header.subtitle:
+                      type: text
+                      style: vertical
+                      label: EDITORIAL.ADMIN.DEFAULT.HEADER_SUBTITLE
+                    header.featured_image:
+                      ordering@: header.subtitle
+                      style: vertical
+                      size: medium
+                      type: pagemediaselect
+                      label: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE_LABEL
+                      help: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE_HELP
+                      preview_images: true

@@ -1,0 +1,39 @@
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% set show_featured = theme_var('featured')|defined(true) %}
+{% set featured_number = theme_var('featured_number') %}
+{% set featured_tag = theme_var('featured_tag') %}
+{% set featured = taxonomy.findTaxonomy({'tag': featured_tag}) %}
+
+{% if show_featured %}
+<section>
+    <header class="major">
+        <h2>Featured Posts</h2>
+    </header>
+    {% if featured.count > 0 %}
+        <div class="mini-posts">
+            {% for p in featured.slice(0,featured_number) %}
+            {% set image = p.media[p.header.featured_image] ?: page.media.images|first %}
+            {% if page.url != p.url %}
+                <article>
+                <a href="{{ p.url }}" class="featured-title"><h3>{{ p.title }}</h3></a>
+                {% if image %}
+                   <a href="{{ p.url }}" title="{{ p.title }}">{{ image.cropZoom(288,174).loading('lazy').attribute('width', '300').attribute('height','auto').html(title,title,'image')|raw }}</a>
+                {% endif %}
+                <p>{{ p.summary|safe_truncate_html(25)|striptags }}</p>
+            </article>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <ul class="actions">
+            <li><a href="{{blog.url}}/tag:{{featured_tag}}" class="button">More featured posts</a></li>
+        </ul>
+
+    {% else %}
+    <div class="mini-posts">
+        <p> No featured posts </p>
+    </div>
+
+    {% endif %}
+</section>
+{% endif %}

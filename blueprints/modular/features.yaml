@@ -1,0 +1,29 @@
+title: EDITORIAL.ADMIN.MODULAR.FEATURES.TAB
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: EDITORIAL.ADMIN.MODULAR.FEATURES.TAB
+          fields:
+            header.features:
+              name: features
+              type: list
+              label: EDITORIAL.ADMIN.MODULAR.FEATURES.TAB
+              fields:
+                .icon:
+                  type: text
+                  label: EDITORIAL.ADMIN.MODULAR.FEATURES.ICON
+                  description: EDITORIAL.ADMIN.MODULAR.FEATURES.ICON_DESCRIPTION
+                .title:
+                  type: text
+                  label: EDITORIAL.ADMIN.MODULAR.FEATURES.TITLE
+                .text:
+                  type: text
+                  label: EDITORIAL.ADMIN.MODULAR.FEATURES.TEXT
+                .url:
+                  type: text
+                  label: EDITORIAL.ADMIN.MODULAR.FEATURES.BUTTON_URL

@@ -1,0 +1,105 @@
+title: Blog
+'@extends':
+    type: default
+    context: blueprints://pages
+
+child_type: item
+
+rules:
+  slug:
+    pattern: "[a-z][a-z0-9_-]+"
+    min: 2
+    max: 80
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.child_type:
+                  default: item
+        blog:
+          type: tab
+          title: EDITORIAL.ADMIN.BLOG.BLOG_TAB
+
+          fields:
+
+            content_title:
+              type: spacer
+              title: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_TITLE
+
+            header.content.items:
+              type: textarea
+              yaml: true
+              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS
+              default: '@self.children'
+              validate:
+                type: yaml
+
+            header.content.limit:
+              type: text
+              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_LIMIT
+              default: 5
+              validate:
+                required: true
+                type: int
+                min: 1
+
+            header.content.order.by:
+              type: select
+              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY
+              default: date
+              options:
+                folder: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER
+                title: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY_TITLE
+                date: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY_DATE
+                default: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT
+
+            header.content.order.dir:
+              type: select
+              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_DIR
+              default: desc
+              options:
+                asc: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_DIR_ASC
+                desc: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_DIR_DESC
+
+            header.content.breadcrumbs:
+              type: toggle
+              toggleable: true
+              label:  EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_SHOW_BREADCRUMBS
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+                
+            header.content.pagination:
+              type: toggle
+              toggleable: true
+              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_PAGINATION
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.content.url_taxonomy_filters:
+              type: toggle
+              toggleable: true
+              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool

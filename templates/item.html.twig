@@ -1,0 +1,76 @@
+{% extends 'partials/base.html.twig' %}
+{% set show_pagination = header_var('content.pagination')|defined(false) %}
+{% set show_breadcrumbs = header_var('content.breadcrumbs')|defined(false) %}
+{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set title = page.title %}
+{% if page.header.metadata.author %}
+    {% set author =  page.header.metadata.author %}
+{% elseif page.header.author %}
+    {% set author =  page.header.author %}
+{% else %}
+    {% set author =  page.header.taxonomy.author[0] %}
+{% endif %}
+{% block body %}
+{% block content %}
+    <p>
+        {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
+        {% endif %}
+    </p>
+<article itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 class="item-h1">{{ page.title }}</h1>
+        <p class="data-post">
+        {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime}}</small>{% endif %}
+        {% if (page.header.publish_date) %}
+            {% set datestamp = page.header.publish_date %}
+        {% elseif (page.header.date) %}
+            {% set datestamp = page.header.date %}
+        {% else %}
+            {% set datestamp = page.modified %}
+        {% endif %}
+        {% if datestamp %}
+        <br><small itemprop="datePublished"><i class="far fa-clock"></i> Posted on {{ datestamp|date(system.pages.dateformat.short) }}</small>
+        {% endif %}
+        {% if author %}<br><small itemprop="author" itemscope itemtype="https://schema.org/Person"><i class="fas fa-user"></i><span itemprop="name"> {{ author|e|title }}</span></small>{% endif %}
+        </p>
+        
+    </header>
+    {% if image %}
+        <span class="image main" itemprop="image">{{ image.cropZoom(1000,300).loading('lazy').html(title,title,'image')|raw }}</span>
+    {% endif %}
+    <div itemprop="articleBody">
+        {{ page.content|raw }}
+    </div>
+    <p>
+        <span>
+        {% if config.plugins.taxonomylist.enabled %}
+           <i class="fas fa-tags"></i>
+            {% for tag in page.taxonomy.tag %}
+            <a class=""
+               href="{{ base_url|rtrim('/') }}/blog/tag{{ config.system.param_sep }}{{ tag }}"><span itemprop="keywords">{{ tag }}</span></a>
+            {% endfor %}
+        {% endif %}
+        <span>
+        {% if page.taxonomy.category %}
+            <i class="fas fa-link fa-md"></i>
+            {% for category in page.taxonomy.category %}
+                <a class="tags" title="{{ 'See other posts of ' ~ (category|capitalize) }}"
+			     href="{{ base_url|rtrim('/') }}/blog/category{{ config.system.param_sep }}{{ category }}"><span itemprop="keywords">{{ category }}</span></a>
+            {% endfor %}
+        {% endif %}
+        </span>
+    </p>
+    {% if show_pagination %}
+    <p class="align-center">
+        {% if not page.isLast %}
+                <a class="button" href="{{ page.prevSibling.url }}"><i class="fas fa-angle-left"></i> {{ 'Previous'|t }}</a>
+        {% endif %}
+        {% if not page.isFirst %}
+            <a class="button" href="{{ page.nextSibling.url }}">{{ 'Next'|t }} <i class="fas fa-angle-right"></i></a>
+        {% endif %}
+    </p>
+    {% endif %}
+</article>
+{% endblock %}
+{% endblock %}

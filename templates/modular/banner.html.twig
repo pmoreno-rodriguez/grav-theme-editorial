@@ -1,0 +1,21 @@
+{% set banner_image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set title = p.title %}
+<section id="banner">
+    <div class="content">
+        <header>
+            {% if page.header.title %}<h1>{{ page.title|raw }}</h1>{% endif %}
+            {% if page.header.subtitle %}<p>{{page.header.subtitle|raw}}</p>{% endif %}
+        </header>
+        {{page.content|raw}}
+        {% if page.header.button_text is not null or page.header.button_url is not null %}
+        <ul class="actions">
+            <li><a href="{{page.header.button_url}}" class="button big">{{page.header.button_text}}</a></li>
+        </ul>
+        {% endif %}
+    </div>
+    {% if banner_image %}
+        <span class="image object">
+            {{ banner_image.cropZoom(736,512).html(title,title,'')|raw }}
+        </span>
+    {% endif %}
+</section>

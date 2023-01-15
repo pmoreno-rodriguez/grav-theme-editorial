@@ -1,0 +1,31 @@
+title: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.TAB
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        bloglist:
+          type: tab
+          title: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.TAB
+          fields:
+            header.blog_url:
+              type: text
+              label: EDITORIAL.ADMIN.BLOG.BLOG_ROUTE
+              help: EDITORIAL.ADMIN.BLOG.BLOG_HELP
+              default: '/blog'
+              placeholder: '/blog'
+              size: medium
+            header.limit:
+              type: number
+              size: small
+              label: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.LIMIT
+              help: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.LIMIT_HELP
+              default: 3
+              validate:
+                required: true
+                type: int
+                min: 1
+                max: 9

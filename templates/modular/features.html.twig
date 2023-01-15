@@ -1,0 +1,28 @@
+<section>
+<header class="major">
+    <h2>{{ page.title }}</h2>
+</header>
+    {{ content|raw }}
+
+    <div class="features">
+    {% for feature in page.header.features %}
+        <article>
+            
+                {% if feature.icon %}<span class="icon {{feature.icon}}"></span>{% endif %}
+                <div class="content">
+                    {% if feature.title %}
+                    <h3>
+                        {% if feature.url %}
+                            <a href="{{feature.url}}" target="_blank">{{feature.title}}</a>
+                        {% else %}
+                            {{feature.title}}
+                        {% endif %}
+                    </h3>
+                    {% endif %}
+                    {% if feature.text %}<p>{{feature.text}}</p>{% endif %}
+                </div>
+            
+        </article>
+    {% endfor %}
+     </div>
+</section>

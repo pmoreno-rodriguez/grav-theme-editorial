@@ -1,0 +1,23 @@
+<!-- Section -->
+<section>
+    <header class="major">
+        <h2>Get in touch</h2>
+    </header>
+    <p>{{ theme_config.contact_text }}</p>
+    <ul class="contact">
+        
+         {% if theme_config.contact.email %}
+        <li class="icon solid fa-envelope"><a href="mailto:{{ theme_config.contact.email }}">{{ theme_config.contact.email }}</a></li>
+        {% endif %}
+
+        {% if theme_config.contact.phone %}
+        <li class="icon solid fa-phone">{{ theme_config.contact.phone }}</li>
+        {% endif %}
+        
+        {% if theme_config.contact.street %}
+        <li class="icon solid fa-home">{{ theme_config.contact.street }}<br />
+        {{ theme_config.contact.city }}, {{ theme_config.contact.state }} {{ theme_config.contact.zip }}
+        </li>
+        {% endif %}
+    </ul>
+</section>

@@ -1,0 +1,123 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% set favicon = theme_var('favicon') %}
+{% set logo_enabled = theme_var('custom_logo_enabled')|defined(false) %}
+{% set logo = theme_var(mobile ? 'custom_logo_mobile' : 'custom_logo') %}
+{% set socials = theme_var('social_enabled')|defined(false) %}
+
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="{{ grav.language.getActive ?: config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    {% include 'partials/metadata.html.twig' %}
+    {% if favicon %}
+    {% set favicon_file = (favicon|first).name %}
+    <link rel="icon" type="{{ favicon.type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
+    {% else %}
+    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+    {% endif %}
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {# Original assets from HTML5Up with a few custom styles for several Grav plugins #}
+    {% block stylesheets %}
+        {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 96, 'group':'preload'}) %}
+        {% do assets.addCss('theme://assets/css/custom.css', {'priority': 95, 'group':'preload'}) %}
+    {% endblock %}
+    
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 100) %}
+        {% do assets.addJs('theme://assets/js/util.js', {'priority':98, 'group':'bottom'}) %}
+        {% do assets.addJs('theme://assets/js/main.js', {'priority':97, 'group':'bottom'}) %}
+        {% do assets.addJs('theme://assets/js/breakpoints.min.js', {'priority':101, 'group':'bottom'}) %}
+        {% do assets.addJs('theme://assets/js/browser.min.js', {'priority':102, 'group':'bottom'}) %}
+
+    {% endblock %}
+
+    {% block assets deferred %}
+        {{ assets.css('preload',{'rel':'preload', 'as':'style'})|raw }}
+        {{ assets.js()|raw }}
+    {% endblock %}
+
+{% endblock head%}
+</head>
+<body class="is-preload {{ page.header.body_classes }}">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+    
+    <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                
+                <!-- Header -->
+                <header id="header">
+                    {% if logo_enabled  %}
+                        <!-- If logo is defined, include logo template here -->
+                        {% include 'partials/logo.html.twig' %}
+                    {% endif %}
+                    <a class="logo"{% if not logo_enabled %} style="text-align:left !important;"{% endif %}href="{{ base_url == '' ? '/' : base_url }}">
+                        <strong>{{ config.site.title }}</strong>
+                        <span class="slogan">{{theme_config.themeSlogan}}</span>
+                    </a>
+                    {% if socials %}
+                        <!-- If socials icons are defined, include template here -->
+                        {% include 'partials/social.html.twig' %}
+                    {% endif %}
+                </header>
+
+                <!-- Content -->
+                {% block body %}
+                <section>
+                    <header class="main">
+                        <h1>{{ header.title }}</h1>
+                    </header>
+                    {% block content %}{% endblock %}
+                </section>
+                {% endblock %}
+            </div>
+        </div>
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+                {% if config.plugins.simplesearch.enabled %}
+                <!-- Search -->
+                <section id="search" class="alt">
+                    {% include 'partials/simplesearch_searchbox.html.twig' %}
+                </section>
+                {% endif %}
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    {% include 'partials/navigation.html.twig' %}
+                </nav>
+
+                <!-- Section -->
+                {% include 'partials/featured-posts.html.twig' %}
+
+                <!-- Section -->
+                {% include 'partials/contact.html.twig' %}
+
+                <!-- Footer -->
+                {% include 'partials/footer.html.twig' %}
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    {% block bottom %}
+        {{ assets.js('bottom')|raw }}
+    {% endblock %}
+</body>
+</html>

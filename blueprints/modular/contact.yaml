@@ -1,0 +1,21 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        contactSettings:
+          type: tab
+          title: Settings
+     
+          fields:
+            addressSection:
+              type: section
+              label: Address
+            header.addressDetails:
+              type: textarea
+              label: Address details                

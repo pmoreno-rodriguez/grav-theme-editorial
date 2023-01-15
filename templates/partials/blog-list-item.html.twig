@@ -1,0 +1,33 @@
+{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set title = page.title %}
+
+<article>
+    {% if image %}
+    <a href="{{page.url}}" class="image">
+        {{ image.cropZoom(416,256).loading('lazy').attribute('width', '300').attribute('height','300').html(title,title,'')|raw }}
+    </a>
+    {% endif %}
+    <h3>{{page.title}}</h3>
+    {% if (page.header.publish_date) %}
+        {% set datestamp = page.header.publish_date %}
+    {% elseif (page.header.date) %}
+        {% set datestamp = page.header.date %}
+    {% else %}
+        {% set datestamp = page.modified %}
+    {% endif %}
+    {% if datestamp %}
+    <p class="data-post">
+        Posted on {{ datestamp|date(system.pages.dateformat.short)  }}
+    </p>
+    {% endif %}
+    <p>
+    {% if page.summary != page.content %}
+            {{ page.summary|raw }}
+        {% else %}
+            {{ page.content|raw }}
+        {% endif %}
+    </p>
+    <ul class="actions">
+        <li><a href="{{page.url}}" class="button">More</a></li>
+    </ul>
+</article>

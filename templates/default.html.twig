@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<section>
+	<header>   
+	{% if header.featured_image %}
+	    <span class="image main">
+		{{ page.media[header.featured_image].cropZoom(500,150).html()|raw  }}
+	    </span>
+	{% endif %}
+	</header>
+	<div>
+	    {{ page.content|raw }}
+	</div>
+</section>
+{% endblock %}

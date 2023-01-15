@@ -1,0 +1,9 @@
+<ul class="icons">
+    {% for item in theme_config.social %}
+    {% if item.icon != "mastodon" %}
+        <li><a href="{{ item.url }}" class="icon brands fa-{{ item.icon }}" title="{{ item.name }}"><span class="label">{{ item.name }}</span></a></li>
+    {% else %}
+        <li><a href="{{ item.url }}" rel="me" class="icon brands fa-{{ item.icon }}" title="{{ item.name }}"><span class="label">{{ item.name }}</span></a></li>
+    {% endif %}
+    {% endfor %}
+</ul>

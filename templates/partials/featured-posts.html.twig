@@ -17,7 +17,7 @@
                 <article>
                 <a href="{{ p.url }}" class="featured-title"><h3>{{ p.title }}</h3></a>
                 {% if image %}
-                   <a href="{{ p.url }}" title="{{ p.title }}">{{ image.cropZoom(288,174).loading('lazy').attribute('width', '300').attribute('height','auto').html(title,title,'image')|raw }}</a>
+                   <a class="image" href="{{ p.url }}" title="{{ p.title }}">{{ image.cropZoom(288,174).loading('lazy').attribute('width', '300').attribute('height','auto').html(title,title)|raw }}</a>
                 {% endif %}
                 <p>{{ p.summary|safe_truncate_html(25)|striptags }}</p>
             </article>

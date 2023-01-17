@@ -2,27 +2,27 @@
 ##  01/15/2023
 
 1. [](#new)
-   * Added modular Banner template
-   * Added modular Recent Posts template
-   * Added modular Contact template
-   * Added modular Features template
-   * Added Forms templates
-   * Added blueprints for default, blog, item, and modulars templates.
-   * Added partials templates: blog-list-item, logo, metadata and simplesearch_searchbox
-   * Added Item template
-   * Added Modular template
-   * Added Error template
-   * Added Simplesearch Results template
-   * Added functionality to searchbox in sidebar
-   * Added Production mode for CSS styles.
-   * Added Custom logo and Custom logo mobile in theme config.
+    * Added modular Banner template
+    * Added modular Recent Posts template
+    * Added modular Contact template
+    * Added modular Features template
+    * Added Forms templates
+    * Added blueprints for default, blog, item, and modulars templates.
+    * Added partials templates: blog-list-item, logo, metadata and simplesearch_searchbox
+    * Added Item template
+    * Added Modular template
+    * Added Error template
+    * Added Simplesearch Results template
+    * Added functionality to searchbox in sidebar
+    * Added Production mode for CSS styles.
+    * Added Custom logo and Custom logo mobile in theme config.
 
-2. [](#improved)
-   * Improved the languages.yaml file and added the Spanish language
-   * Improved all blueprints to support language translation
-   * Improved the featured posts template in the sidebar, to use a taxonomy chosen by the user and not the default `featured`. A limit of posts that will appear is also established.
+1. [](#improved)
+    * Improved the languages.yaml file and added the Spanish language
+    * Improved all blueprints to support language translation
+    * Improved the featured posts template in the sidebar, to use a taxonomy chosen by the user and not the default `featured`. A limit of posts that will appear is also established.
 
-3. [](#bugfix)
+2. [](#bugfix)
     * Rolling back assets to original HTML5Up version, to fix Fontawesome fonts.
 # v1.0.2
 ##  11/13/2022

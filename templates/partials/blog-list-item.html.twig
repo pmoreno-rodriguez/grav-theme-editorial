@@ -1,4 +1,4 @@
-{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set image = page.media[page.header.featured_image] ?: page.media.images|first %}
 {% set title = page.title %}
 
 <article>

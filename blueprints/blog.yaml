@@ -103,3 +103,10 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
+            header.readmore_text:
+              type: text
+              toggleable: true
+              default: 'Read more'
+              size: large
+              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_READMORE_TEXT
+              description: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_READMORE_TEXT_DESCRIPTION

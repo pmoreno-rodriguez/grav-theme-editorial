@@ -34,7 +34,7 @@
     * Improved the languages.yaml file and added the Spanish language
     * Improved all blueprints to support language translation
     * Improved the featured posts template in the sidebar, to use a taxonomy chosen by the user and not the default `featured`. A limit of posts that will appear is also established.
-1. [](#bugfix)
+3. [](#bugfix)
     * Rolling back assets to original HTML5Up version, to fix Fontawesome fonts.
   
 # v1.0.2

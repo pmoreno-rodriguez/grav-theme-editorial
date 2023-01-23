@@ -1,3 +1,17 @@
+# v1.0.4
+## 01/23/2023
+
+1.  [](#bugfix)
+    * Fixed `raw` Twig filter in modular.html.twig.
+    * Fixed `page.header` in media for featured image in blog-list-item.html.twig.
+    * Fixed bug when showing the mobile logo if there is no other image loaded.
+    * Fixed show tags in item footer,
+
+2.  [](#improved)
+    * Rebuilded languages.yaml file and blueprints.
+    * Added header subtitle on various twig templates.
+    * Added option to choose the `Read more` text on item buttons.
+
 # v1.0.3
 ##  01/15/2023
 

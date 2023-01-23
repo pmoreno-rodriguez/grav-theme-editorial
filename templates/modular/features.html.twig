@@ -1,6 +1,7 @@
 <section>
 <header class="major">
     <h2>{{ page.title }}</h2>
+    {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
 </header>
     {{ content|raw }}
 

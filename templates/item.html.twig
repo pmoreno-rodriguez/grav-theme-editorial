@@ -10,7 +10,7 @@
 {% else %}
     {% set author =  page.header.taxonomy.author[0] %}
 {% endif %}
-{% block body %}
+
 {% block content %}
     <p>
         {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
@@ -19,7 +19,8 @@
     </p>
 <article itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
     <header>
-        <h1 class="item-h1">{{ page.title }}</h1>
+        <h1>{{ page.title }}</h1>
+        {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
         <p class="data-post">
         {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime}}</small>{% endif %}
         {% if (page.header.publish_date) %}
@@ -44,7 +45,7 @@
     </div>
     <p>
         <span>
-        {% if config.plugins.taxonomylist.enabled %}
+        {% if page.taxonomy.tag %}
            <i class="fas fa-tags"></i>
             {% for tag in page.taxonomy.tag %}
             <a class=""
@@ -72,5 +73,4 @@
     </p>
     {% endif %}
 </article>
-{% endblock %}
 {% endblock %}

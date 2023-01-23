@@ -1,16 +1,12 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block body %}
-
 {% block content %}
     <div class="lead text-center">
         <p>    
-            <h2>{{ 'PLUGIN_ERROR.ERROR'|t }} {{ page.header.http_response_code }} </h2>
+            <h1>{{ 'PLUGIN_ERROR.ERROR'|t }} {{ page.header.http_response_code }} </h1>
         </p>
     </div>
     <div class="text-center">
         {{ page.content|raw }}
     </div>
-{% endblock %}
-
 {% endblock %}

@@ -1,7 +1,8 @@
 <section id="contact">
 <header class="major">
     <h2>{{ page.title }}</h2>
+    {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
 </header>
     <p class="lead">{{ page.content|raw }}</p>
-            {% include "forms/form.html.twig" with { form: forms('contact-form')} %}
+    {% include "forms/form.html.twig" with { form: forms('contact-form')} %}
 </section>

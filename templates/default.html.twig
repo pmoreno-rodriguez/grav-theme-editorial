@@ -1,16 +1,20 @@
 {% extends 'partials/base.html.twig' %}
+{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set title = page.title %}
 
 {% block content %}
-<section>
-	<header>   
-	{% if header.featured_image %}
+
+	<header class="main">   
+	{% if image %}
 	    <span class="image main">
-		{{ page.media[header.featured_image].cropZoom(500,150).html()|raw  }}
+		{{ image.cropZoom(1000,300).loading('lazy').html(title,title,'image')|raw }}
 	    </span>
 	{% endif %}
+	<h1>{{ title|raw }}</h1>
+    {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
 	</header>
 	<div>
 	    {{ page.content|raw }}
 	</div>
-</section>
+
 {% endblock %}

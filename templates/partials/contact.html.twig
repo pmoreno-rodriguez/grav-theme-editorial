@@ -1,12 +1,12 @@
 <!-- Section -->
 <section>
     <header class="major">
-        <h2>Get in touch</h2>
+        <h2>{{ 'EDITORIAL.SIDEBAR.CONTACT_INFO'|t }}</h2>
     </header>
-    <p>{{ theme_config.contact_text }}</p>
+    <p>{{ theme_config.contact.text }}</p>
     <ul class="contact">
         
-         {% if theme_config.contact.email %}
+        {% if theme_config.contact.email %}
         <li class="icon solid fa-envelope"><a href="mailto:{{ theme_config.contact.email }}">{{ theme_config.contact.email }}</a></li>
         {% endif %}
 

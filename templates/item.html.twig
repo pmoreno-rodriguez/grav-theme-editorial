@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 {% set show_pagination = header_var('content.pagination')|defined(false) %}
 {% set show_breadcrumbs = header_var('content.breadcrumbs')|defined(false) %}
-{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set image = page.media[page.header.featured_image] ?: page.media.images|first %}
 {% set title = page.title %}
 {% if page.header.metadata.author %}
     {% set author =  page.header.metadata.author %}
@@ -10,7 +10,7 @@
 {% else %}
     {% set author =  page.header.taxonomy.author[0] %}
 {% endif %}
-{% block body %}
+
 {% block content %}
     <p>
         {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
@@ -19,7 +19,8 @@
     </p>
 <article itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
     <header>
-        <h1 class="item-h1">{{ page.title }}</h1>
+        <h1>{{ page.title }}</h1>
+        {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
         <p class="data-post">
         {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime}}</small>{% endif %}
         {% if (page.header.publish_date) %}
@@ -43,23 +44,32 @@
         {{ page.content|raw }}
     </div>
     <p>
+        {% if page.taxonomy.tag %}
         <span>
-        {% if config.plugins.taxonomylist.enabled %}
            <i class="fas fa-tags"></i>
             {% for tag in page.taxonomy.tag %}
-            <a class=""
-               href="{{ base_url|rtrim('/') }}/blog/tag{{ config.system.param_sep }}{{ tag }}"><span itemprop="keywords">{{ tag }}</span></a>
+            <a class="tags" href="{{ base_url|rtrim('/') }}/blog/tag{{ config.system.param_sep }}{{ tag }}"><span itemprop="keywords">{{ tag }}</span></a>
             {% endfor %}
+        </span>
         {% endif %}
-        <span>
+        
         {% if page.taxonomy.category %}
+        <span>
             <i class="fas fa-link fa-md"></i>
             {% for category in page.taxonomy.category %}
                 <a class="tags" title="{{ 'See other posts of ' ~ (category|capitalize) }}"
 			     href="{{ base_url|rtrim('/') }}/blog/category{{ config.system.param_sep }}{{ category }}"><span itemprop="keywords">{{ category }}</span></a>
             {% endfor %}
-        {% endif %}
         </span>
+        {% endif %}
+
+        {% if author %}
+        <span>
+            <i class="fas fa-user fa-md"></i>
+            <a class="tags" href="{{ base_url|rtrim('/') }}/blog/author{{ config.system.param_sep }}{{ author }}"><span itemprop="keywords">{{ author }}</span></a>
+        </span>
+        {% endif %}
+                
     </p>
     {% if show_pagination %}
     <p class="align-center">
@@ -72,5 +82,4 @@
     </p>
     {% endif %}
 </article>
-{% endblock %}
 {% endblock %}

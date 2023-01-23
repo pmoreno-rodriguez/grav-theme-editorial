@@ -7,19 +7,19 @@ form:
       fields:
         blog-item:
           type: tab
-          title: EDITORIAL.ADMIN.ITEM.ITEM_TAB
+          title: EDITORIAL.ADMIN.ITEM.TAB
           fields:
 
             summary:
               type: section
-              title: EDITORIAL.ADMIN.ITEM.ITEM_SUMMARY
+              title: EDITORIAL.ADMIN.ITEM.SUMMARY.TITLE
               underline: true
 
 
             header.summary.enabled:
               type: toggle
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.ITEM_SUMMARY_ENABLED
+              label: EDITORIAL.ADMIN.ITEM.SUMMARY.ENABLED
               highlight: 1
               options:
                 1: Enabled
@@ -28,16 +28,16 @@ form:
             header.summary.format:
               type: select
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.ITEM_SUMMARY_FORMAT
+              label: EDITORIAL.ADMIN.ITEM.SUMMARY.FORMAT
               classes: fancy
               options:
-                'short': EDITORIAL.ADMIN.ITEM.ITEM_SUMMARY_FORMAT_SHORT
-                'long': EDITORIAL.ADMIN.ITEM.ITEM_SUMMARY_FORMAT_LONG
+                'short': EDITORIAL.ADMIN.ITEM.SUMMARY.FORMAT_SHORT
+                'long': EDITORIAL.ADMIN.ITEM.SUMMARY.FORMAT_LONG
 
             header.summary.size:
               type: text
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.ITEM_SUMMARY_SIZE
+              label: EDITORIAL.ADMIN.ITEM.SUMMARY.SIZE
               classes: large
               placeholder: 300
               validate:
@@ -47,6 +47,6 @@ form:
             header.summary.delimiter:
               type: text
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.ITEM_SUMMARY_DELIMITER
+              label: EDITORIAL.ADMIN.ITEM.SUMMARY.DELIMITER
               classes: large
               placeholder: ===

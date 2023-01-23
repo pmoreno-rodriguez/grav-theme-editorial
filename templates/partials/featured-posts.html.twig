@@ -7,7 +7,7 @@
 {% if show_featured %}
 <section>
     <header class="major">
-        <h2>Featured Posts</h2>
+        <h2>{{ 'EDITORIAL.SIDEBAR.FEATURED_POSTS'|t }}</h2>
     </header>
     {% if featured.count > 0 %}
         <div class="mini-posts">
@@ -26,12 +26,12 @@
         </div>
 
         <ul class="actions">
-            <li><a href="{{blog.url}}/tag:{{featured_tag}}" class="button">More featured posts</a></li>
+            <li><a href="{{blog.url}}/tag:{{featured_tag}}" class="button">{{ 'EDITORIAL.SIDEBAR.FEATURED_MORE'|t }}</a></li>
         </ul>
 
     {% else %}
     <div class="mini-posts">
-        <p> No featured posts </p>
+        <p> {{ 'EDITORIAL.SIDEBAR.NO_FEATURED'|t }} </p>
     </div>
 
     {% endif %}

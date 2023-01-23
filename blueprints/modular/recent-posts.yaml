@@ -13,8 +13,8 @@ form:
           fields:
             header.blog_url:
               type: text
-              label: EDITORIAL.ADMIN.BLOG.BLOG_ROUTE
-              help: EDITORIAL.ADMIN.BLOG.BLOG_HELP
+              label: EDITORIAL.ADMIN.BLOG.ROUTE
+              help: EDITORIAL.ADMIN.BLOG.ROUTE_HELP
               default: '/blog'
               placeholder: '/blog'
               size: medium
@@ -29,3 +29,10 @@ form:
                 type: int
                 min: 1
                 max: 9
+            header.readmore_text:
+              type: text
+              toggleable: true
+              default: 'Read more'
+              size: large
+              label: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.READMORE_TEXT
+              description: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.READMORE_TEXT_DESCRIPTION

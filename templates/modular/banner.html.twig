@@ -1,9 +1,9 @@
 {% set banner_image = page.media[header.featured_image] ?: page.media.images|first %}
-{% set title = p.title %}
+{% set title = page.title %}
 <section id="banner">
     <div class="content">
         <header>
-            {% if page.header.title %}<h1>{{ page.title|raw }}</h1>{% endif %}
+            <h1>{{ title|raw }}</h1>
             {% if page.header.subtitle %}<p>{{page.header.subtitle|raw}}</p>{% endif %}
         </header>
         {{page.content|raw}}

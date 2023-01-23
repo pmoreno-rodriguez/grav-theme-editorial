@@ -2,8 +2,9 @@
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 {% set favicon = theme_var('favicon') %}
 {% set logo_enabled = theme_var('custom_logo_enabled')|defined(false) %}
-{% set logo = theme_var(mobile ? 'custom_logo_mobile' : 'custom_logo') %}
+{% set logo = theme_var('custom_logo_mobile' ?: 'custom_logo') %}
 {% set socials = theme_var('social_enabled')|defined(false) %}
+{% set slogan = theme_config.themeSlogan %}
 
 <!DOCTYPE HTML>
 <!--
@@ -31,7 +32,7 @@
     {# Original assets from HTML5Up with a few custom styles for several Grav plugins #}
     {% block stylesheets %}
         {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 96, 'group':'preload'}) %}
-        {% do assets.addCss('theme://assets/css/custom.css', {'priority': 95, 'group':'preload'}) %}
+        {% do assets.addCss('theme://assets/css/misc.css', {'priority': 95, 'group':'preload'}) %}
     {% endblock %}
     
     {% block javascripts %}
@@ -61,13 +62,13 @@
                 
                 <!-- Header -->
                 <header id="header">
-                    {% if logo_enabled  %}
+                    {% if logo_enabled and logo %}
                         <!-- If logo is defined, include logo template here -->
                         {% include 'partials/logo.html.twig' %}
                     {% endif %}
-                    <a class="logo"{% if not logo_enabled %} style="text-align:left !important;"{% endif %}href="{{ base_url == '' ? '/' : base_url }}">
+                    <a class="logo"{% if not logo_enabled or logo is empty %} style="text-align:left !important;"{% endif %}href="{{ base_url == '' ? '/' : base_url }}">
                         <strong>{{ config.site.title }}</strong>
-                        <span class="slogan">{{theme_config.themeSlogan}}</span>
+                        {% if slogan %}<span class="slogan">{{ slogan }}</span>{% endif %}
                     </a>
                     {% if socials %}
                         <!-- If socials icons are defined, include template here -->
@@ -76,14 +77,9 @@
                 </header>
 
                 <!-- Content -->
-                {% block body %}
                 <section>
-                    <header class="main">
-                        <h1>{{ header.title }}</h1>
-                    </header>
                     {% block content %}{% endblock %}
                 </section>
-                {% endblock %}
             </div>
         </div>
         <!-- Sidebar -->

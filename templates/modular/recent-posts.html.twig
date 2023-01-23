@@ -1,10 +1,12 @@
 
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set limit = page.header.limit|default(3) %}
+{% set readmore_txt = page.header.readmore_text|raw|default('Read more') %}
 
 <section>
     <header class="major">
         <h2>{{ page.title }}</h2>
+        {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
     </header>
 
 <div class="posts">
@@ -37,7 +39,7 @@
         {% endif %}
         </p>
         <ul class="actions">
-            <li><a href="{{p.url}}" class="button" title="Read more about {{title|title}}" aria-label="Read more about {{title|title}}">View post</a></li>
+            <li><a href="{{p.url}}" class="button">{{readmore_txt}}</a></li>
         </ul>
     </article>
     

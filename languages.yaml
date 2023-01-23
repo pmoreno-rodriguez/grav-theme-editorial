@@ -9,58 +9,71 @@ en:
         HEADER_OPTIONS: Header Options
         FAVICON: Choose your own favicon
         FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
-        SLOGAN: Slogan
-        CUSTOM_LOGO_ENABLED: Enabled Logo
-        CUSTOM_LOGO_WIDTH: Custom Logo Width
-        CUSTOM_LOGO: Custom Logo
-        CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
-        CUSTOM_LOGO_MOBILE: Mobile Custom Logo
-        CONTACT_INFORMATION_TITLE: Contact Information
-        CONTACT_INFORMATION_TEXT: Contact information is displayed in the sidebar area.
-        CONTACT_TEXT: Contact Information Text
-        CONTACT_EMAIL: Email
-        CONTACT_PHONE: Phone
-        CONTACT_ADDRESS_STREET: Street Address
-        CONTACT_ADDRESS_CITY: City
-        CONTACT_ADDRESS_STATE: State
-        CONTACT_ADDRESS_ZIP: Postal Code
-        BLOG_DEFAULTS: Blog Defaults
-        BLOG_PAGE_LABEL: Blog Page
-        BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
-        FEATUREDPOSTS: Enable Featured posts in Sidebar
-        FEATUREDPOSTS_NUMBER: Featured posts number to show
-        FEATUREDPOSTS_NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
-        FEATUREDPOSTS_CATEGORY: Featured category
-        FEATUREDPOSTS_CATEGORY_DESCRIPTION: Set name to featured category.<br />`You must include this name in Options->Taxonomy->Category`
-        SOCIAL_TITLE: Social Media
-        SOCIAL_TEXT: Include full url's to your various social media presences.  An icon/ link will appear at the top of the page for each respective platform.
-        SOCIAL_ENABLED: Enable Social Icons
-        SOCIAL_ICONS: Social Icons
-        SOCIAL_NAME: Social Name
-        SOCIAL_URL: URL Link to Social
-        SOCIAL_ICON: Icon to Social
-        CUSTOM_MENU_TITLE: 'Custom Menu Items'
-        CUSTOM_MENU_ENABLE: 'Display Custom Menu Items'
-        CUSTOM_MENU_ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
-        CUSTOM_MENU_ITEM_TEXT: 'Text'
-        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Text label for menu item.'
-        CUSTOM_MENU_ITEM_ICON: 'Icon'
-        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
-        CUSTOM_MENU_ITEM_URL: 'URL'
-        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL for menu item.'
-        CUSTOM_MENU_ITEM_TARGET: 'Target'
-        CUSTOM_MENU_ITEM_TARGET_BLANK: 'Open in a new window'
-        CUSTOM_MENU_ITEM_TARGET_PARENT: 'Open in the parent frame'
-        CUSTOM_MENU_ITEM_TARGET_SELF: 'Open in the same frame as clicked'
-        CUSTOM_MENU_ITEM_TARGET_TOP: 'Open in the full body of the window'
+        SLOGAN: Theme Slogan
+        SLOGAN_HELP: Use this to add a text snippet to the sitename.
+        CUSTOM_LOGO:
+          ENABLED: Enabled Logo
+          WIDTH: Custom Logo Width
+          LOGO: Custom Logo
+          DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
+          MOBILE: Mobile Custom Logo
+        CONTACT:
+          INFORMATION_TITLE: Contact Information
+          INFORMATION_TEXT: Contact information is displayed in the sidebar area.
+          TEXT: Contact Information Text
+          EMAIL: Email
+          PHONE: Phone
+          ADDRESS:
+            STREET: Street Address
+            CITY: City
+            STATE: State
+            ZIP: Postal Code
+        BLOG:
+          DEFAULTS: Blog Defaults
+          PAGE_LABEL: Blog Page
+          PAGE_HELP: The route to the blog page when working with blog sidebar
+          LISTING_TITLE:
+            TAXONOMY:
+              CATEGORY: Set Title to filter posts by Category
+              TAG: Set Title to filter posts by Tag
+              AUTHOR: Set Title to filter posts by Author
+            BLOG: Set Title for blog without filter
+        FEATURED: 
+          LABEL: Enable Featured posts in Sidebar
+          NUMBER: Featured posts number to show
+          NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
+          CATEGORY: Featured Tag
+          CATEGORY_DESCRIPTION: Set name to featured tag.<br />`You must include this name in Options->Taxonomy->Tag`
+        SOCIAL:
+          TITLE: Social Media
+          TEXT: Include full url's to your various social media presences.  An icon/ link will appear at the top of the page for each respective platform.
+          ENABLED: Enable Social Icons
+          ICONS: Social Icons
+          NAME: Social Name
+          URL: URL Link to Social
+          ICON: Icon to Social
+        CUSTOM_MENU:
+          TITLE: 'Custom Menu Items'
+          ENABLE: 'Display Custom Menu Items'
+          ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
+          LABEL: 'Menu Items'
+          ITEM:
+            TEXT: 'Text'
+            TEXT_DESCRIPTION: 'Text label for menu item.'
+            ICON: 'Icon'
+            ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
+            URL: 'URL'
+            URL_DESCRIPTION: 'URL for menu item.'
+            TARGET: 
+              LABEL: 'Target'
+              BLANK: 'Open in a new window'
+              PARENT: 'Open in the parent frame'
+              SELF: 'Open in the same frame as clicked'
+              TOP: 'Open in the full body of the window'
       MODULAR:
         BANNER:
-          TAB: Banner
-          SUBTITLE: Subtitle
           BUTTON_TEXT: Button Text
-          BUTTON_URL: Button URL
-          IMAGE: Image
-          IMAGE_DESCRIPTION: Select one image
+          BUTTON_URL: Button URL   
         FEATURES:
           TAB: Features
           ICON: Icon
@@ -77,39 +90,51 @@ en:
             THREE_COLS: Standard  = 3 / 2 / 1 columns
           LIMIT: Limit 
           LIMIT_HELP: Maximum number of posts to display.
+          READMORE_TEXT: Readmore button text
+          READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
       BLOG:
-        BLOG_TAB: Blog Config
-        BLOG_ROUTE: Blog Route
-        BLOG_HELP: The route to the main blog page that contains the "Show ..." configuration
-        BLOG_CONTENT_TITLE: Content Definition
-        BLOG_CONTENT_ITEMS: Items
-        BLOG_CONTENT_ITEMS_LIMIT: Max Item Count
-        BLOG_CONTENT_ITEMS_ORDER_BY: Order By
-        BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Date
-        BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Title
-        BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Folder
-        BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Default
-        BLOG_CONTENT_ITEMS_ORDER_DIR: Order
-        BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascending
-        BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descending
-        BLOG_CONTENT_ITEMS_SHOW_BREADCRUMBS: Show Breadcrumbs
-        BLOG_CONTENT_ITEMS_PAGINATION: Pagination
-        BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+        TAB: Blog Config
+        ROUTE: Blog Route
+        ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
+        TITLE: Content Definition
+        ITEMS: 
+          LABEL: Items
+          LIMIT: Max Item Count
+          ORDER_BY:
+            LABEL: Order By
+            DATE: Date
+            TITLE: Title
+            FOLDER: Folder
+            DEFAULT: Default
+          DIR: Order
+          DIR_ASC: Ascending
+          DIR_DESC: Descending
+        SHOW_BREADCRUMBS: Show Breadcrumbs
+        PAGINATION: Pagination
+        URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+        READMORE_TEXT: Readmore button text
+        READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
       ITEM:
-        ITEM_TAB: Blog Item
-        ITEM_OPTIONS: Options
-        ITEM_SUMMARY: Summary Item
-        ITEM_SUMMARY_ENABLED: Enabled Summary
-        ITEM_SUMMARY_FORMAT: Summary Format
-        ITEM_SUMMARY_FORMAT_SHORT: Use the first occurence of delimter or size
-        ITEM_SUMMARY_FORMAT_LONG: Summary delimiter will be ignored
-        ITEM_SUMMARY_SIZE: Size
-        ITEM_SUMMARY_DELIMITER: Summary Delimiter
+        TAB: Blog Item
+        OPTIONS: Options
+        SUMMARY: 
+          TITLE: Summary Item
+          ENABLED: Enabled Summary
+          FORMAT: Summary Format
+          FORMAT_SHORT: Use the first occurence of delimter or size
+          FORMAT_LONG: Summary delimiter will be ignored
+          SIZE: Size
+          DELIMITER: Summary Delimiter
       DEFAULT:
         HEADER_SUBTITLE: Subtitle
         FEATURED_IMAGE_LABEL: Featured Image
         FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
         MENU_TEXT: Menu
+    SIDEBAR:
+      CONTACT_INFO: Get in touch
+      FEATURED_POSTS: Featured Posts
+      FEATURED_MORE: More featured posts
+      NO_FEATURED: No featured posts
 es:
   EDITORIAL:
     ADMIN:
@@ -121,58 +146,71 @@ es:
         HEADER_SECTION: Sección de encabezado
         FAVICON: Elige tu propio favicon
         FAVICON_DESCRIPTION: Se usará en lugar del favicon predeterminado `theme://images/favicon.png`
-        SLOGAN: Eslogan
-        CUSTOM_LOGO_ENABLED: Activar logo
-        CUSTOM_LOGO_WIDTH: Ancho del logo personalizado
-        CUSTOM_LOGO: Logo personalizado
-        CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
-        CUSTOM_LOGO_MOBILE: Logo personalizado para dispositivos móviles
-        CONTACT_INFORMATION_TITLE: Información de contacto
-        CONTACT_INFORMATION_TEXT: Información de contacto que se mostrará en la barra lateral.
-        CONTACT_TEXT: Texto de la Información de contacto
-        CONTACT_EMAIL: Email
-        CONTACT_PHONE: Teléfono
-        CONTACT_ADDRESS_STREET: Dirección Postal
-        CONTACT_ADDRESS_CITY: Ciudad
-        CONTACT_ADDRESS_STATE: Estado
-        CONTACT_ADDRESS_ZIP: Código Postal
-        BLOG_DEFAULTS: Opciones de Blog
-        BLOG_PAGE_LABEL: Página de Blog
-        BLOG_PAGE_HELP: La ruta a la página del blog cuando se trabaja con la barra lateral del blog
-        FEATUREDPOSTS: Activar artículos destacados en la barra lateral
-        FEATUREDPOSTS_NUMBER: Número de artículos destacados a mostrar
-        FEATUREDPOSTS_NUMBER_DESCRIPTION: Número de artículos destacados que se mostrarán en la barra lateral
-        FEATUREDPOSTS_CATEGORY: Categoría para destacados
-        FEATUREDPOSTS_CATEGORY_DESCRIPTION: Establezca un nombre para la categoría de artículos destacados.<br />`Deberá incluir este nombre en Opciones->Taxonomía->Categoría`
-        SOCIAL_TITLE: Redes Sociales
-        SOCIAL_TEXT: Incluya las direcciones URL completas de sus distintas direcciones en las redes sociales. Aparecerá un icono/enlace en la parte superior de la página para cada plataforma respectiva.
-        SOCIAL_ENABLED: Activar Iconos Sociales
-        SOCIAL_ICONS: Iconos Redes Sociales
-        SOCIAL_NAME: Nombre de la Red Social
-        SOCIAL_URL: Enlace de la Red Social
-        SOCIAL_ICON: Icono de la Red Social
-        CUSTOM_MENU_TITLE: 'Elementos de menú personalizados'
-        CUSTOM_MENU_ENABLE: 'Mostrar elementos de menú personalizados'
-        CUSTOM_MENU_ENABLE_HELP: 'Determina si se muestra alguna entrada de menú personalizada definida en la barra de menú.'
-        CUSTOM_MENU_ITEM_TEXT: 'Texto'
-        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Etiqueta de texto para el elemento del menú.'
-        CUSTOM_MENU_ITEM_ICON: 'Icono'
-        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'Icono de Font Awesome para el elemento del menú.'
-        CUSTOM_MENU_ITEM_URL: 'URL'
-        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL para el elemento del menú.'
-        CUSTOM_MENU_ITEM_TARGET: 'Destino'
-        CUSTOM_MENU_ITEM_TARGET_BLANK: 'Abrir en nueva ventana'
-        CUSTOM_MENU_ITEM_TARGET_PARENT: 'Abrir en el marco principal'
-        CUSTOM_MENU_ITEM_TARGET_SELF: 'Abrir en el marco en el que se hizo click'
-        CUSTOM_MENU_ITEM_TARGET_TOP: 'Abierto en todo el cuerpo de la ventana.'
+        SLOGAN: Slogan del Tema
+        SLOGAN_HELP: Use esto para agregar un fragmento de texto al nombre del sitio.
+        CUSTOM_LOGO:
+          ENABLED: Activar logo
+          WIDTH: Ancho del logo personalizado
+          LOGO: Logo personalizado
+          DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
+          MOBILE: Logo personalizado para dispositivos móviles
+        CONTACT:
+          INFORMATION_TITLE: Información de contacto
+          INFORMATION_TEXT: Información de contacto que se mostrará en la barra lateral.
+          TEXT: Texto de la Información de contacto
+          EMAIL: Email
+          PHONE: Teléfono
+          ADDRESS:
+            STREET: Dirección Postal
+            CITY: Ciudad
+            STATE: Estado
+            ZIP: Código Postal
+        BLOG:
+          DEFAULTS: Opciones de Blog
+          PAGE_LABEL: Página de Blog
+          PAGE_HELP: La ruta a la página del blog cuando se trabaja con la barra lateral del blog
+          LISTING_TITLE:
+            TAXONOMY:
+              CATEGORY: Establecer Título para filtro de entradas por Categoría
+              TAG: Establecer Título para filtro de entradas por Etiqueta
+              AUTHOR: Establecer Título para filtro de entradas por Autor
+            BLOG: Establecer Título para el blog sin filtro
+        FEATURED:
+          LABEL: Activar artículos destacados en la barra lateral
+          NUMBER: Número de artículos destacados a mostrar
+          NUMBER_DESCRIPTION: Número de artículos destacados que se mostrarán en la barra lateral
+          CATEGORY: Etiqueta para destacados
+          CATEGORY_DESCRIPTION: Establezca un nombre para la etiqueta de artículos destacados.<br />`Deberá incluir este nombre en Opciones->Taxonomía->Etiqueta`
+        SOCIAL:
+          TITLE: Redes Sociales
+          TEXT: Incluya las direcciones URL completas de sus distintas direcciones en las redes sociales. Aparecerá un icono/enlace en la parte superior de la página para cada plataforma respectiva.
+          ENABLED: Activar Iconos Sociales
+          ICONS: Iconos Redes Sociales
+          NAME: Nombre de la Red Social
+          URL: Enlace de la Red Social
+          ICON: Icono de la Red Social
+        CUSTOM_MENU:
+          TITLE: 'Elementos de menú personalizados'
+          ENABLE: 'Mostrar elementos de menú personalizados'
+          ENABLE_HELP: 'Determina si se muestra alguna entrada de menú personalizada definida en la barra de menú.'
+          LABEL: 'Elementos del menú'
+          ITEM:
+            TEXT: 'Texto'
+            TEXT_DESCRIPTION: 'Etiqueta de texto para el elemento del menú.'
+            ICON: 'Icono'
+            ICON_DESCRIPTION: 'Icono de Font Awesome para el elemento del menú.'
+            URL: 'URL'
+            URL_DESCRIPTION: 'URL para el elemento del menú.'
+            TARGET: 
+              LABEL: 'Destino'
+              BLANK: 'Abrir en nueva ventana'
+              PARENT: 'Abrir en el marco principal'
+              SELF: 'Abrir en el marco en el que se hizo click'
+              TOP: 'Abierto en todo el cuerpo de la ventana.'
       MODULAR:
         BANNER:
-          TAB: Banner
-          SUBTITLE: Subtítulo
           BUTTON_TEXT: Texto del botón
           BUTTON_URL: URL del botón
-          IMAGE: Imagen
-          IMAGE_DESCRIPTION: Selecione una imagen
         FEATURES:
           TAB: Características
           ICON: Icono
@@ -189,36 +227,48 @@ es:
             THREE_COLS: Estándar  = 3 / 2 / 1 columnas
           LIMIT: Límite 
           LIMIT_HELP: Máximo número de entradas para mostrar
+          READMORE_TEXT: Texto del botón `Leer más`
+          READMORE_TEXT_DESCRIPTION: Especifique un texto personalizado para el botón `leer más`
       BLOG:
-        BLOG_TAB: Configuración del Blog
-        BLOG_ROUTE: Ruta del Blog
-        BLOG_HELP: La ruta de la página principal del Blog a la que hace referencia "Mostrar ..." en la configuración
-        BLOG_CONTENT_TITLE: Definición de Contenido
-        BLOG_CONTENT_ITEMS: Artículos
-        BLOG_CONTENT_ITEMS_LIMIT: Límite máximo de artículos
-        BLOG_CONTENT_ITEMS_ORDER_BY: Ordenar por
-        BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Fecha
-        BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Título
-        BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Carpeta
-        BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Por defecto
-        BLOG_CONTENT_ITEMS_ORDER_DIR: Orden
-        BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascendente
-        BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descendente
-        BLOG_CONTENT_ITEMS_SHOW_BREADCRUMBS: Mostrar Migas de pan
-        BLOG_CONTENT_ITEMS_PAGINATION: Paginación
-        BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Filtros de taxonomía de URL
+        TAB: Configuración del Blog
+        ROUTE: Ruta del Blog
+        ROUTE_HELP: La ruta de la página principal del Blog a la que hace referencia "Mostrar ..." en la configuración
+        TITLE: Definición de Contenido
+        ITEMS:
+          LABEL: Artículos
+          LIMIT: Límite máximo de artículos
+          ORDER_BY: 
+            LABEL: Ordenar por
+            DATE: Fecha
+            TITLE: Título
+            FOLDER: Carpeta
+            DEFAULT: Por defecto
+          DIR: Orden
+          DIR_ASC: Ascendente
+          DIR_DESC: Descendente
+        SHOW_BREADCRUMBS: Mostrar Migas de pan
+        PAGINATION: Paginación
+        URL_TAXONOMY_FILTERS: Filtros de taxonomía de URL
+        READMORE_TEXT: Texto del botón `Leer más`
+        READMORE_TEXT_DESCRIPTION: Especifique un texto personalizado para el botón `leer más`
       ITEM:
-        ITEM_TAB: Artículo de Blog
-        ITEM_OPTIONS: Opciones
-        ITEM_SUMMARY: Resumen de Artículo
-        ITEM_SUMMARY_ENABLED: Activar Resumen
-        ITEM_SUMMARY_FORMAT: Formato de Resumen
-        ITEM_SUMMARY_FORMAT_SHORT: Utilizar la primera aparición de delimitador o tamaño
-        ITEM_SUMMARY_FORMAT_LONG: Se ignorará el delimitador de resumen
-        ITEM_SUMMARY_SIZE: Tamaño
-        ITEM_SUMMARY_DELIMITER: Delimitador de Resumen
+        TAB: Artículo de Blog
+        OPTIONS: Opciones
+        SUMMARY: 
+          TITLE: Resumen de Artículo
+          ENABLED: Activar Resumen
+          FORMAT: Formato de Resumen
+          FORMAT_SHORT: Utilizar la primera aparición de delimitador o tamaño
+          FORMAT_LONG: Se ignorará el delimitador de resumen
+          SIZE: Tamaño
+          DELIMITER: Delimitador de Resumen
       DEFAULT:
         HEADER_SUBTITLE: Subtitle
         FEATURED_IMAGE_LABEL: Imagen destacada
         FEATURED_IMAGE_HELP: Seleccione un archivo para usarlo como la imagen destacada superior de la página 
         MENU_TEXT: Menu
+    SIDEBAR:
+      CONTACT_INFO: Ponerse en contacto
+      FEATURED_POSTS: Entradas destacadas
+      FEATURED_MORE: Más entradas destacadas
+      NO_FEATURED: No hay entradas destacadas

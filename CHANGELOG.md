@@ -11,6 +11,7 @@
     * Rebuilded languages.yaml file and blueprints.
     * Added header subtitle on various twig templates.
     * Added option to choose the `Read more` text on item buttons.
+    * Taxonomy Author added in item footer.
 
 # v1.0.3
 ##  01/15/2023

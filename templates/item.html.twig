@@ -44,23 +44,32 @@
         {{ page.content|raw }}
     </div>
     <p>
-        <span>
         {% if page.taxonomy.tag %}
+        <span>
            <i class="fas fa-tags"></i>
             {% for tag in page.taxonomy.tag %}
-            <a class=""
-               href="{{ base_url|rtrim('/') }}/blog/tag{{ config.system.param_sep }}{{ tag }}"><span itemprop="keywords">{{ tag }}</span></a>
+            <a class="tags" href="{{ base_url|rtrim('/') }}/blog/tag{{ config.system.param_sep }}{{ tag }}"><span itemprop="keywords">{{ tag }}</span></a>
             {% endfor %}
+        </span>
         {% endif %}
-        <span>
+        
         {% if page.taxonomy.category %}
+        <span>
             <i class="fas fa-link fa-md"></i>
             {% for category in page.taxonomy.category %}
                 <a class="tags" title="{{ 'See other posts of ' ~ (category|capitalize) }}"
 			     href="{{ base_url|rtrim('/') }}/blog/category{{ config.system.param_sep }}{{ category }}"><span itemprop="keywords">{{ category }}</span></a>
             {% endfor %}
-        {% endif %}
         </span>
+        {% endif %}
+
+        {% if author %}
+        <span>
+            <i class="fas fa-user fa-md"></i>
+            <a class="tags" href="{{ base_url|rtrim('/') }}/blog/author{{ config.system.param_sep }}{{ author }}"><span itemprop="keywords">{{ author }}</span></a>
+        </span>
+        {% endif %}
+                
     </p>
     {% if show_pagination %}
     <p class="align-center">

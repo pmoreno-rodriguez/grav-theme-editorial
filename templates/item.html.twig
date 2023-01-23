@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 {% set show_pagination = header_var('content.pagination')|defined(false) %}
 {% set show_breadcrumbs = header_var('content.breadcrumbs')|defined(false) %}
-{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set image = page.media[page.header.featured_image] ?: page.media.images|first %}
 {% set title = page.title %}
 {% if page.header.metadata.author %}
     {% set author =  page.header.metadata.author %}

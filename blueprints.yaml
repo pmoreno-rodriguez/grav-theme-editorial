@@ -52,8 +52,8 @@ form:
             underline: true
         themeSlogan:
             type: text
-            label: Theme Slogan
-            help: Use this to add a text snippet to the sitename.
+            label: EDITORIAL.ADMIN.THEME.SLOGAN
+            help: EDITORIAL.ADMIN.THEME.SLOGAN_HELP
         favicon:
             type: file
             label: EDITORIAL.ADMIN.THEME.FAVICON
@@ -67,7 +67,7 @@ form:
             accept: ['image/png', '.ico']
         custom_logo_enabled:
             type: toggle
-            label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO_ENABLED
+            label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.ENABLED
             highlight: 1
             default: 1
             options:
@@ -82,20 +82,20 @@ form:
             validate:
                 min: 50
                 max: 150
-            label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO_WIDTH
+            label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.WIDTH
         custom_logo:
             type: file
-            label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO
+            label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.LOGO
             size: large
             destination: 'theme://images/logo'
             multiple: false
             markdown: true
-            description: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO_DESCRIPTION
+            description: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.DESCRIPTION
             accept:
             - image/*
         custom_logo_mobile:
             type: file
-            label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO_MOBILE
+            label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.MOBILE
             size: large
             destination: 'theme://images/logo'
             multiple: false
@@ -103,36 +103,36 @@ form:
             - image/*
         contact_section:
             type: fieldset
-            title: EDITORIAL.ADMIN.THEME.CONTACT_INFORMATION_TITLE
+            title: EDITORIAL.ADMIN.THEME.CONTACT.INFORMATION_TITLE
             collapsible: true
             collapsed: true
             icon: id-card-o
             fields:
-                contact_text:
+                contact.text:
                     type: text
-                    label: EDITORIAL.ADMIN.THEME.CONTACT_TEXT
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.TEXT
                 contact.email:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT_EMAIL
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.EMAIL
                     type: email
                     default: webmaster@example.com
                 contact.phone:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT_PHONE
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.PHONE
                     type: text
                     default: (555) 555-5555
                 contact.street:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT_ADDRESS_STREET
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STREET
                     type: text
                     default: 123 Any Street
                 contact.city:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT_ADDRESS_CITY
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.CITY
                     type: text
                     default: AnyTown
                 contact.state:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT_ADDRESS_STATE
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STATE
                     type: text
                     default: CA
                 contact.zip:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT_ADDRESS_ZIP
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.ZIP
                     type: text
                     default: 12345
         blog_section:
@@ -140,19 +140,19 @@ form:
             collapsible: true
             collapsed: true
             icon: bold
-            title: EDITORIAL.ADMIN.THEME.BLOG_DEFAULTS
+            title: EDITORIAL.ADMIN.THEME.BLOG.DEFAULTS
             fields:
 
                 blog-page:
                     type: text
-                    label: EDITORIAL.ADMIN.THEME.BLOG_PAGE_LABEL
-                    help: EDITORIAL.ADMIN.THEME.BLOG_PAGE_HELP
+                    label: EDITORIAL.ADMIN.THEME.BLOG.PAGE_LABEL
+                    help: EDITORIAL.ADMIN.THEME.BLOG.PAGE_HELP
                     size: medium
                     default: '/blog'
 
                 featured:
                     type: toggle
-                    label: EDITORIAL.ADMIN.THEME.FEATUREDPOSTS
+                    label: EDITORIAL.ADMIN.THEME.FEATURED.LABEL
                     highlight: 1
                     default: 1
                     options:
@@ -163,29 +163,45 @@ form:
                 featured_tag:
                     type: text
                     markdown: true
-                    label: EDITORIAL.ADMIN.THEME.FEATUREDPOSTS_CATEGORY
-                    description: EDITORIAL.ADMIN.THEME.FEATUREDPOSTS_CATEGORY_DESCRIPTION
+                    label: EDITORIAL.ADMIN.THEME.FEATURED.CATEGORY
+                    description: EDITORIAL.ADMIN.THEME.FEATURED.CATEGORY_DESCRIPTION
                     size: medium
                     default: 'featured'
 
                 featured_number:
                     type: range
-                    label: EDITORIAL.ADMIN.THEME.FEATUREDPOSTS_NUMBER
-                    description: EDITORIAL.ADMIN.THEME.FEATUREDPOSTS_NUMBER_DESCRIPTION
+                    label: EDITORIAL.ADMIN.THEME.FEATURED.NUMBER
+                    description: EDITORIAL.ADMIN.THEME.FEATURED.NUMBER_DESCRIPTION
                     default: 3
                     validate:
                         min: 1
                         max: 5
+                listing_title.taxonomy.category:
+                    type: text
+                    label: EDITORIAL.ADMIN.THEME.BLOG.LISTING_TITLE.TAXONOMY.CATEGORY
+                    default: 'Posts in Category: '
+                listing_title.taxonomy.tag:
+                    type: text
+                    label: EDITORIAL.ADMIN.THEME.BLOG.LISTING_TITLE.TAXONOMY.TAG
+                    default: 'Posts with Tag: '
+                listing_title.taxonomy.author:
+                    type: text
+                    label: EDITORIAL.ADMIN.THEME.BLOG.LISTING_TITLE.TAXONOMY.AUTHOR
+                    default: 'Posts written by Author: '
+                listing_title.blog:
+                    type: text
+                    label: EDITORIAL.ADMIN.THEME.BLOG.LISTING_TITLE.BLOG
+                    default: 'Blog'
         social_section:
             type: fieldset
             collapsible: true
             collapsed: true
             icon: rss
-            title: EDITORIAL.ADMIN.THEME.SOCIAL_TITLE
+            title: EDITORIAL.ADMIN.THEME.SOCIAL.TITLE
             fields:
                 social_enabled:
                     type: toggle
-                    label: EDITORIAL.ADMIN.THEME.SOCIAL_ENABLED
+                    label: EDITORIAL.ADMIN.THEME.SOCIAL.ENABLED
                     highlight: 1
                     default: 1
                     options:
@@ -195,7 +211,7 @@ form:
                         type: bool
                 social:
                     name: social
-                    label: EDITORIAL.ADMIN.THEME.SOCIAL_ICONS
+                    label: EDITORIAL.ADMIN.THEME.SOCIAL.ICONS
                     type: list
                     style: vertical
                     collapsed: false
@@ -203,24 +219,24 @@ form:
                     fields:
                         .name:
                             type: text
-                            label: EDITORIAL.ADMIN.THEME.SOCIAL_NAME
+                            label: EDITORIAL.ADMIN.THEME.SOCIAL.NAME
                         .url:
                             type: text
-                            label: EDITORIAL.ADMIN.THEME.SOCIAL_URL
+                            label: EDITORIAL.ADMIN.THEME.SOCIAL.URL
                         .icon:
                             type: iconpicker
-                            label: EDITORIAL.ADMIN.THEME.SOCIAL_ICON
+                            label: EDITORIAL.ADMIN.THEME.SOCIAL.ICON
         custommenu_section:
             type: fieldset
             collapsible: true
             collapsed: true
             icon: bars
-            title: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_TITLE
+            title: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.TITLE
             fields:
                 custommenu_enabled:
                     type: toggle
-                    label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ENABLE
-                    help: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ENABLE_HELP
+                    label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ENABLE
+                    help: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ENABLE_HELP
                     default: 0
                     highlight: 1
                     options:
@@ -231,27 +247,27 @@ form:
                 custommenu:
                     name: menu
                     type: list
-                    label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_TITLE
+                    label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.LABEL
                     fields:
                         .text:
                             type: text
-                            label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_TEXT
-                            description: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_TEXT_DESCRIPTION
+                            label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TEXT
+                            description: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TEXT_DESCRIPTION
                         .icon:
                             type: text
-                            label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_ICON
-                            description: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_ICON_DESCRIPTION
+                            label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.ICON
+                            description: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.ICON_DESCRIPTION
                         .url:
                             type: text
-                            label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_URL
-                            description: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_URL_DESCRIPTION
+                            label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.URL
+                            description: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.URL_DESCRIPTION
                         .target:
                             type: select
-                            label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET
+                            label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.LABEL
                             default: _self
                             size: medium
                             options:
-                                _blank: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_BLANK
-                                _parent: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_PARENT
-                                _self: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_SELF
-                                _top: EDITORIAL.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_TOP
+                                _blank: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.BLANK
+                                _parent: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.PARENT
+                                _self: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.SELF
+                                _top: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.TOP

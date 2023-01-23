@@ -26,25 +26,25 @@ form:
                   default: item
         blog:
           type: tab
-          title: EDITORIAL.ADMIN.BLOG.BLOG_TAB
+          title: EDITORIAL.ADMIN.BLOG.TAB
 
           fields:
 
             content_title:
               type: spacer
-              title: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_TITLE
+              title: EDITORIAL.ADMIN.BLOG.TITLE
 
             header.content.items:
               type: textarea
               yaml: true
-              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS
+              label: EDITORIAL.ADMIN.BLOG.ITEMS.LABEL
               default: '@self.children'
               validate:
                 type: yaml
 
             header.content.limit:
               type: text
-              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_LIMIT
+              label: EDITORIAL.ADMIN.BLOG.ITEMS.LIMIT
               default: 5
               validate:
                 required: true
@@ -53,26 +53,26 @@ form:
 
             header.content.order.by:
               type: select
-              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY
+              label: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.LABEL
               default: date
               options:
-                folder: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER
-                title: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY_TITLE
-                date: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY_DATE
-                default: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT
+                folder: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.FOLDER
+                title: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.TITLE
+                date: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.DATE
+                default: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.DEFAULT
 
             header.content.order.dir:
               type: select
-              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_DIR
+              label: EDITORIAL.ADMIN.BLOG.ITEMS.DIR
               default: desc
               options:
-                asc: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_DIR_ASC
-                desc: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_DIR_DESC
+                asc: EDITORIAL.ADMIN.BLOG.ITEMS.DIR_ASC
+                desc: EDITORIAL.ADMIN.BLOG.ITEMS.DIR_DESC
 
             header.content.breadcrumbs:
               type: toggle
               toggleable: true
-              label:  EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_SHOW_BREADCRUMBS
+              label:  EDITORIAL.ADMIN.BLOG.SHOW_BREADCRUMBS
               highlight: 1
               options:
                 1: PLUGIN_ADMIN.ENABLED
@@ -83,7 +83,7 @@ form:
             header.content.pagination:
               type: toggle
               toggleable: true
-              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_PAGINATION
+              label: EDITORIAL.ADMIN.BLOG.PAGINATION
               highlight: 1
               default: 1
               options:
@@ -95,7 +95,7 @@ form:
             header.content.url_taxonomy_filters:
               type: toggle
               toggleable: true
-              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS
+              label: EDITORIAL.ADMIN.BLOG.URL_TAXONOMY_FILTERS
               highlight: 1
               default: 1
               options:
@@ -108,5 +108,5 @@ form:
               toggleable: true
               default: 'Read more'
               size: large
-              label: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_READMORE_TEXT
-              description: EDITORIAL.ADMIN.BLOG.BLOG_CONTENT_ITEMS_READMORE_TEXT_DESCRIPTION
+              label: EDITORIAL.ADMIN.BLOG.READMORE_TEXT
+              description: EDITORIAL.ADMIN.BLOG.READMORE_TEXT_DESCRIPTION

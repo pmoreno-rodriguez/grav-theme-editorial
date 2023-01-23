@@ -73,11 +73,7 @@ en:
       MODULAR:
         BANNER:
           BUTTON_TEXT: Button Text
-          BUTTON_URL: Button URL
-        CONTACT:
-          TAB: Settings
-          ADDRESS_SECTION: Address
-          ADDRESS_DETAILS: Address Details
+          BUTTON_URL: Button URL   
         FEATURES:
           TAB: Features
           ICON: Icon
@@ -134,7 +130,9 @@ en:
         FEATURED_IMAGE_LABEL: Featured Image
         FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
         MENU_TEXT: Menu
-    MISC:
+    SIDEBAR:
+      CONTACT_INFO: Get in touch
+      FEATURED_POSTS: Featured Posts
       FEATURED_MORE: More featured posts
       NO_FEATURED: No featured posts
 es:
@@ -213,10 +211,6 @@ es:
         BANNER:
           BUTTON_TEXT: Texto del botón
           BUTTON_URL: URL del botón
-        CONTACT:
-          TAB: Opciones
-          ADDRESS_SECTION: Dirección
-          ADDRESS_DETAILS: Detalles de la dirección
         FEATURES:
           TAB: Características
           ICON: Icono
@@ -273,6 +267,8 @@ es:
         FEATURED_IMAGE_LABEL: Imagen destacada
         FEATURED_IMAGE_HELP: Seleccione un archivo para usarlo como la imagen destacada superior de la página 
         MENU_TEXT: Menu
-    MISC:
+    SIDEBAR:
+      CONTACT_INFO: Ponerse en contacto
+      FEATURED_POSTS: Entradas destacadas
       FEATURED_MORE: Más entradas destacadas
       NO_FEATURED: No hay entradas destacadas

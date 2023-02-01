@@ -2,7 +2,7 @@
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 {% set favicon = theme_var('favicon') %}
 {% set logo_enabled = theme_var('custom_logo_enabled')|defined(false) %}
-{% set logo = theme_var('custom_logo_mobile' ?: 'custom_logo') %}
+{% set logo = theme_var('custom_logo_mobile') ?: theme_var('custom_logo') %}
 {% set socials = theme_var('social_enabled')|defined(false) %}
 {% set slogan = theme_config.themeSlogan %}
 
@@ -31,8 +31,8 @@
 
     {# Original assets from HTML5Up with a few custom styles for several Grav plugins #}
     {% block stylesheets %}
-        {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 96, 'group':'preload'}) %}
-        {% do assets.addCss('theme://assets/css/misc.css', {'priority': 95, 'group':'preload'}) %}
+        {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 96}) %}
+        {% do assets.addCss('theme://assets/css/misc.css', {'priority': 95}) %}
     {% endblock %}
     
     {% block javascripts %}
@@ -45,7 +45,7 @@
     {% endblock %}
 
     {% block assets deferred %}
-        {{ assets.css('preload',{'rel':'preload', 'as':'style'})|raw }}
+        {{ assets.css()|raw }}
         {{ assets.js()|raw }}
     {% endblock %}
 

@@ -4,32 +4,26 @@
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
 
-{# Set the listing_title for category, tag and author  #}
-{% set listing_title_category = theme_var('listing_title.taxonomy.category')|raw|defined('Posts in Category: ') %}
-{% set listing_title_tag = theme_var('listing_title.taxonomy.tag')|defined('Posts with Tag: ') %}
-{% set listing_title_author = theme_var('listing_title.taxonomy.author')|defined('Posts written by Author: ') %}
-
 {# Set page title by taxonomy #}
 {% if uri.param('category') %}
-	{% set page_title = listing_title_category ~ uri.param('category') %}
+	{% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_CATEGORY'|t ~ uri.param('category') %}
 {% elseif uri.param('tag') %}
-	{% set page_title = listing_title_tag ~ uri.param('tag') %}
+	{% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
 {% elseif uri.param('author') %}
-	{% set page_title = listing_title_author ~ uri.param('author') %}
+	{% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
 {% else %}
-	{% set page_title = theme_var('listing_title.blog')|default('Blog') %}
+    {% set listing_title = page.header.subtitle|raw %}
 {% endif %}
 
 {% block content %}
 
-    <p>
     {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
         {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
-    </p>
+    
     <header class="main">
-        <h1>{{page_title}}</h1>
-        {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+        <h1>{{page.title|raw}}</h1>
+        {% if listing_title %}<p>{{ listing_title|raw }}</p>{% endif %}
     </header>
         
         <div class="posts">

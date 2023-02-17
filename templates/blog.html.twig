@@ -25,7 +25,9 @@
         <h1>{{page.title|raw}}</h1>
         {% if listing_title %}<p>{{ listing_title|raw }}</p>{% endif %}
     </header>
-        
+
+    {{ page.content|raw }}
+       
         <div class="posts">
             {% for child in collection %}
                 {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}

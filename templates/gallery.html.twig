@@ -48,7 +48,7 @@
 					<div class="{{columns}} gallery_item" itemprop="associatedMedia" itemscope itemtype="MediaObject">
 						<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
 							<span class="image fit">
-								{{ thumbnail }}
+								{{ thumbnail|raw }}
 							</span>
 						</a>
 					</div>

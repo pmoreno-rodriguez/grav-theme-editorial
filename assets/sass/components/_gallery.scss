@@ -1,0 +1,24 @@
+/* Gallery */
+
+.gallery_item {
+		
+		
+
+    .image {
+        overflow: hidden;
+        width: 100%;
+        border-radius:10px;
+
+
+        img {
+            @include vendor('transition', 'transform #{_duration(transition)} ease-out');
+            width: 100%;
+        }
+
+        &:hover {
+            img {
+                @include vendor('transform', 'scale(1.05)');
+            }
+        }
+    }
+}

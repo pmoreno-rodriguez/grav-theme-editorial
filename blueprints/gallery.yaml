@@ -46,6 +46,7 @@ form:
               fields:
                 .image:
                   type: pagemediaselect
+                  size: medium
                   label: EDITORIAL.ADMIN.GALLERY.IMAGES.IMAGE
                   preview_images: true
                   accept:
@@ -55,9 +56,11 @@ form:
                   - .svg
                 .title:
                   type: text
+                  size: medium
                   label: EDITORIAL.ADMIN.GALLERY.IMAGES.IMAGE_TITLE
                 .description:
-                  type: text
+                  type: textarea
+                  rows: 3
                   label: EDITORIAL.ADMIN.GALLERY.IMAGES.IMAGE_DESCRIPTION
                 .descPosition:
                   type: select
@@ -185,13 +188,13 @@ form:
               type: text
               label: EDITORIAL.ADMIN.GALLERY.OPTIONS.WIDTH
               help: EDITORIAL.ADMIN.GALLERY.OPTIONS.WIDTH_HELP
-              default: '900px'
+              placeholder: 'auto'
               size: small
             header.height:
               type: text
               label: EDITORIAL.ADMIN.GALLERY.OPTIONS.HEIGHT
               help: EDITORIAL.ADMIN.GALLERY.OPTIONS.HEIGHT_HELP
-              default: '506px'
+              placeholder: 'auto'
               size: small
             Behavior_title:
               type: spacer

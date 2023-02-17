@@ -1,7 +1,7 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 1.0.4
+version: 1.0.5
 description: GravCMS port of the HTML5UP theme Editorial
 icon: rebel
 author:
@@ -101,40 +101,7 @@ form:
             multiple: false
             accept:
             - image/*
-        contact_section:
-            type: fieldset
-            title: EDITORIAL.ADMIN.THEME.CONTACT.INFORMATION_TITLE
-            collapsible: true
-            collapsed: true
-            icon: id-card-o
-            fields:
-                contact.text:
-                    type: text
-                    label: EDITORIAL.ADMIN.THEME.CONTACT.TEXT
-                contact.email:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT.EMAIL
-                    type: email
-                    default: webmaster@example.com
-                contact.phone:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT.PHONE
-                    type: text
-                    default: (555) 555-5555
-                contact.street:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STREET
-                    type: text
-                    default: 123 Any Street
-                contact.city:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.CITY
-                    type: text
-                    default: AnyTown
-                contact.state:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STATE
-                    type: text
-                    default: CA
-                contact.zip:
-                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.ZIP
-                    type: text
-                    default: 12345
+        
         blog_section:
             type: fieldset
             collapsible: true
@@ -176,22 +143,50 @@ form:
                     validate:
                         min: 1
                         max: 5
-                listing_title.taxonomy.category:
+
+        contact_section:
+            type: fieldset
+            title: EDITORIAL.ADMIN.THEME.CONTACT.INFORMATION_TITLE
+            collapsible: true
+            collapsed: true
+            icon: id-card-o
+            fields:
+                copyright.text:
+                    type: textarea
+                    rows: 2
+                    size: long
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.COPYRIGHT_TEXT
+                    help: EDITORIAL.ADMIN.THEME.CONTACT.COPYRIGHT_TEXT_HELP
+                contact.text:
+                    type: textarea
+                    rows: 3
+                    size: long
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.TEXT
+                contact.email:
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.EMAIL
+                    type: email
+                    default: webmaster@example.com
+                contact.phone:
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.PHONE
                     type: text
-                    label: EDITORIAL.ADMIN.THEME.BLOG.LISTING_TITLE.TAXONOMY.CATEGORY
-                    default: 'Posts in Category: '
-                listing_title.taxonomy.tag:
+                    default: (555) 555-5555
+                contact.street:
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STREET
                     type: text
-                    label: EDITORIAL.ADMIN.THEME.BLOG.LISTING_TITLE.TAXONOMY.TAG
-                    default: 'Posts with Tag: '
-                listing_title.taxonomy.author:
+                    default: 123 Any Street
+                contact.city:
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.CITY
                     type: text
-                    label: EDITORIAL.ADMIN.THEME.BLOG.LISTING_TITLE.TAXONOMY.AUTHOR
-                    default: 'Posts written by Author: '
-                listing_title.blog:
+                    default: AnyTown
+                contact.state:
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STATE
                     type: text
-                    label: EDITORIAL.ADMIN.THEME.BLOG.LISTING_TITLE.BLOG
-                    default: 'Blog'
+                    default: CA
+                contact.zip:
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.ZIP
+                    type: text
+                    default: 12345
+
         social_section:
             type: fieldset
             collapsible: true
@@ -240,8 +235,8 @@ form:
                     default: 0
                     highlight: 1
                     options:
-                        0: PLUGIN_ADMIN.DISABLED
                         1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
                     validate:
                         type: bool
                 custommenu:

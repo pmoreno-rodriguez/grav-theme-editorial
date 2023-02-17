@@ -36,6 +36,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Banner modular page like original theme.
 * Contact Form modular page.
 * Recent Posts modular page - Show the latest posts in a modular page, eg. Home. (can be changed from twig template)
+* Gallery template (with Glightbox JS)
 * Custom SimpleSearch twig templates.
 * Functionality to searchbox in sidebar
 * Production mode for CSS styles
@@ -53,6 +54,7 @@ The latest pages tagged with the selected tag in the theme settings and the chos
 * Item template is ready to work the Reading Time plugin. 
 * Breadcumbs plugin activated by default in posts.
 * Added blog.html.twig and item.html.twig files.
+* Added option to filter by author taxonomy. It is necessary to configure the author taxonomy, in the site configuration, so that the authors of the blog pages appear in them and you can use the filters by author that the theme has.
   
 ### Reordered assets
 
@@ -68,6 +70,8 @@ The latest pages tagged with the selected tag in the theme settings and the chos
 
 ## Future plans
 
+* Add support for taxonomylist, related pages and archives plugins.
+* Add support for date translations in blog (with translate-date and twig-extensions plugins) 
 
 ## Credits
 * Thanks to [Jeremy Gonyea](https://github.com/jgonyea), who ported the first Editorial theme for Grav.

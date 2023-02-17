@@ -7,7 +7,7 @@
 	<header class="main">   
 	{% if image %}
 	    <span class="image main">
-		{{ image.cropZoom(1000,300).loading('lazy').html(title,title,'image')|raw }}
+		{{ image.cropZoom(1000,300).loading('lazy').html(title,title,'')|raw }}
 	    </span>
 	{% endif %}
 	<h1>{{ title|raw }}</h1>

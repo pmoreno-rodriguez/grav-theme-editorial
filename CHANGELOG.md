@@ -19,8 +19,8 @@
    * Added option to choose the `Read more` text on item buttons.
    * Taxonomy Author added in item footer.
 2. [](#bugfix)
-   * Fixed `raw` Twig filter in modular.html.twig.
-   * Fixed `page.header` in media for featured image in blog-list-item.html.twig.
+   * Fixed `raw` Twig filter in modular.html.twig (issue [#4](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/4))
+   * Fixed `page.header` in media for featured image in blog-list-item.html.twig (issue [#5](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/5)).
    * Fixed bug when showing the mobile logo if there is no other image loaded.
    * Fixed show tags in item footer,
 # v1.0.3

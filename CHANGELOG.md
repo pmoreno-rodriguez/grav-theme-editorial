@@ -3,12 +3,12 @@
 
 1. [](#new)
    * Added Gallery template
-   * Added demo content
+   * Added demo content (issue [#10](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/10))
 2. [](#improved)
    * Improved styles for breadcrumbs
    * Improved translations in blueprints
 3. [](#bugfix)
-   * Fixed error when displaying content with various plugins (lightbox-gallery, highlight, etc)
+   * Fixed error when displaying content with various plugins (lightbox-gallery, highlight, etc)(issues [#11](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/11) and [#12](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/12))
 
 # v1.0.4
 ## 01/23/2023

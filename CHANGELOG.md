@@ -9,6 +9,7 @@
    * Improved translations in blueprints
 3. [](#bugfix)
    * Fixed error when displaying content with various plugins (lightbox-gallery, highlight, etc)
+
 # v1.0.4
 ## 01/23/2023
 

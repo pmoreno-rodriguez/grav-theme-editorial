@@ -24,9 +24,9 @@
     {% endif %}
     <p>
     {% if page.summary != page.content %}
-            {{ page.summary|raw }}
+            {{ page.summary|striptags|raw }}
         {% else %}
-            {{ page.content|raw }}
+            {{ page.content|striptags|raw }}
         {% endif %}
     </p>
     <ul class="actions">

@@ -9,6 +9,7 @@
     </a>
     {% endif %}
     <h3>{{page.title}}</h3>
+    {# Set page date stamp #}
     {% if (page.header.publish_date) %}
         {% set datestamp = page.header.publish_date %}
     {% elseif (page.header.date) %}
@@ -18,7 +19,7 @@
     {% endif %}
     {% if datestamp %}
     <p class="data-post">
-        Posted on {{ datestamp|date(system.pages.dateformat.short)  }}
+        {{'EDITORIAL.ITEM.POSTED_ON'|t}} {{ datestamp|date(system.pages.dateformat.short)  }}
     </p>
     {% endif %}
     <p>

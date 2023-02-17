@@ -28,7 +28,7 @@
         {% endif %}
         {% if datestamp %}
         <p class="data-post">
-            Posted on {{ datestamp|date(system.pages.dateformat.short)  }}
+            {{'EDITORIAL.ITEM.POSTED_ON'|t}} {{ datestamp|date(system.pages.dateformat.short)  }}
         </p>
         {% endif %}
         <p>

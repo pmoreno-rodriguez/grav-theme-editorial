@@ -3,7 +3,7 @@
 {% set favicon = theme_var('favicon') %}
 {% set logo_enabled = theme_var('custom_logo_enabled')|defined(false) %}
 {% set logo = theme_var('custom_logo_mobile') ?: theme_var('custom_logo') %}
-{% set socials = theme_var('social_enabled')|defined(false) %}
+{% set social = theme_var('social_enabled')|defined(false) %}
 {% set slogan = theme_config.themeSlogan %}
 
 <!DOCTYPE HTML>
@@ -32,7 +32,7 @@
     {# Original assets from HTML5Up with a few custom styles for several Grav plugins #}
     {% block stylesheets %}
         {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 96}) %}
-        {% do assets.addCss('theme://assets/css/misc.css', {'priority': 95}) %}
+        {% do assets.addCss('theme://assets/css/misc.css', {'priority': 10}) %}
     {% endblock %}
     
     {% block javascripts %}
@@ -41,7 +41,6 @@
         {% do assets.addJs('theme://assets/js/main.js', {'priority':97, 'group':'bottom'}) %}
         {% do assets.addJs('theme://assets/js/breakpoints.min.js', {'priority':101, 'group':'bottom'}) %}
         {% do assets.addJs('theme://assets/js/browser.min.js', {'priority':102, 'group':'bottom'}) %}
-
     {% endblock %}
 
     {% block assets deferred %}
@@ -70,7 +69,7 @@
                         <strong>{{ config.site.title }}</strong>
                         {% if slogan %}<span class="slogan">{{ slogan }}</span>{% endif %}
                     </a>
-                    {% if socials %}
+                    {% if social %}
                         <!-- If socials icons are defined, include template here -->
                         {% include 'partials/social.html.twig' %}
                     {% endif %}

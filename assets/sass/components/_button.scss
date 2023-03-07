@@ -57,6 +57,10 @@
 			font-size: 0.6em;
 		}
 
+		&.medium {
+			font-size: 0.7em;
+		}
+
 		&.large {
 			font-size: 1em;
 			height: 3.65em;
@@ -64,6 +68,20 @@
 		}
 
 		&.primary {
+			background-color: _palette(accent);
+			box-shadow: none;
+			color: _palette(bg) !important;
+
+			&:hover {
+				background-color: lighten(_palette(accent), 3);
+			}
+
+			&:active {
+				background-color: darken(_palette(accent), 3);
+			}
+		}
+
+		&.secondary {
 			background-color: _palette(accent);
 			box-shadow: none;
 			color: _palette(bg) !important;

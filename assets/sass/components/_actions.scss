@@ -8,6 +8,8 @@
 
 	ul.actions {
 		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		@include vendor('align-items', 'center');
 		cursor: default;
 		list-style: none;
 		margin-left: (_size(element-margin) * -0.5);
@@ -18,6 +20,16 @@
 			vertical-align: middle;
 		}
 
+		&.aln-left {
+			@include vendor('flex-direction', 'column');
+			@include vendor('align-items', 'flex-start');
+			width: 100%;
+			margin-left: 0;
+
+			li {
+				padding-left: 0;
+			}
+		}
 		&.special {
 			@include vendor('justify-content', 'center');
 			width: 100%;
@@ -58,6 +70,43 @@
 
 			&.stacked {
 				width: 100%;
+			}
+		}
+	}
+
+	/* Tags */
+
+	ul.tags {
+		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		@include vendor('align-items', 'center');
+		@include vendor('justify-content', 'stretch');
+		cursor: default;
+		list-style: none;
+		margin-left: (_size(element-margin) * -0.5);
+		padding-left: 0;
+
+		li {
+			padding: (_size(element-margin) * 0.25);
+			vertical-align: middle;
+		}
+	}
+
+	/* Login */
+
+	#login {
+
+		margin: _size(element-margin) 0;
+
+		ul {
+			@include vendor('display', 'flex');
+			@include vendor('flex-wrap', 'wrap');
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				vertical-align: middle;
 			}
 		}
 	}

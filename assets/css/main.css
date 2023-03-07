@@ -1759,6 +1759,14 @@ ul.actions {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
   cursor: default;
   list-style: none;
   margin-left: -1em;
@@ -1767,6 +1775,21 @@ ul.actions {
 ul.actions li {
   padding: 0 0 0 1em;
   vertical-align: middle;
+}
+ul.actions.aln-left {
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-align-items: -moz-flex-start;
+  -webkit-align-items: -webkit-flex-start;
+  -ms-align-items: -ms-flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 0;
+}
+ul.actions.aln-left li {
+  padding-left: 0;
 }
 ul.actions.special {
   -moz-justify-content: center;
@@ -1811,6 +1834,55 @@ ul.actions.fit li > * {
 }
 ul.actions.fit.stacked {
   width: 100%;
+}
+
+/* Tags */
+ul.tags {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: -moz-stretch;
+  -webkit-justify-content: -webkit-stretch;
+  -ms-justify-content: -ms-stretch;
+  justify-content: stretch;
+  cursor: default;
+  list-style: none;
+  margin-left: -1em;
+  padding-left: 0;
+}
+ul.tags li {
+  padding: 0.5em;
+  vertical-align: middle;
+}
+
+/* Login */
+#login {
+  margin: 2em 0;
+}
+#login ul {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+#login ul li {
+  vertical-align: middle;
 }
 
 /* Icons */
@@ -1891,6 +1963,7 @@ ul.pagination li {
   display: inline-block;
   padding-left: 0;
   vertical-align: middle;
+  border: none;
 }
 ul.pagination li > .page {
   -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -2057,6 +2130,13 @@ button.small,
 .button.small {
   font-size: 0.6em;
 }
+input[type=submit].medium,
+input[type=reset].medium,
+input[type=button].medium,
+button.medium,
+.button.medium {
+  font-size: 0.7em;
+}
 input[type=submit].large,
 input[type=reset].large,
 input[type=button].large,
@@ -2087,6 +2167,29 @@ input[type=reset].primary:active,
 input[type=button].primary:active,
 button.primary:active,
 .button.primary:active {
+  background-color: #f45c5c;
+}
+input[type=submit].secondary,
+input[type=reset].secondary,
+input[type=button].secondary,
+button.secondary,
+.button.secondary {
+  background-color: #f56a6a;
+  box-shadow: none;
+  color: #ffffff !important;
+}
+input[type=submit].secondary:hover,
+input[type=reset].secondary:hover,
+input[type=button].secondary:hover,
+button.secondary:hover,
+.button.secondary:hover {
+  background-color: #f67878;
+}
+input[type=submit].secondary:active,
+input[type=reset].secondary:active,
+input[type=button].secondary:active,
+button.secondary:active,
+.button.secondary:active {
   background-color: #f45c5c;
 }
 input[type=submit].disabled, input[type=submit]:disabled,

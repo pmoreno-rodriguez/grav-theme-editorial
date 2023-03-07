@@ -1,11 +1,8 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set base_url = page.parent.url %}
-{% if base_url == '/' %}
-  {% set base_url = '' %}
-{% endif %}
-
-{% set show_pagination = header_var('content.pagination')|defined(false) %}
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% set new_base_url = blog.url == '/' ? '' : blog.url %}
+{% set show_pagination = header_var('content.pagination')|defined(true) %}
 {% set show_breadcrumbs = header_var('content.breadcrumbs')|defined(false) %}
 {% set image = page.media[page.header.featured_image] ?: page.media.images|first %}
 {% set title = page.title %}
@@ -34,7 +31,7 @@
         {% endif %}
         {% if page.taxonomy.author %}<br><small itemprop="author" itemscope itemtype="https://schema.org/Person"><i class="fas fa-user"></i>
         {% for author in page.taxonomy.author %}
-        <a href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}"><span itemprop="name">{{ author|e|title }}</span></a>
+        <a href="{{ new_base_url }}/author{{ config.system.param_sep }}{{ author }}"><span itemprop="name">{{ author|capitalize }}</span></a>
         {% if not loop.last %}, {% endif %}
         {% endfor %}
         </small>{% endif %}
@@ -53,7 +50,7 @@
            <i class="fas fa-tags"></i>
             {% for tag in page.taxonomy.tag %}
                 <a class="tags" title="{{ 'See other posts in ' ~ (tag|capitalize) }}" 
-                href="{{ base_url  }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="url"><span itemprop="keywords">{{ tag }}</span></a>
+                href="{{ new_base_url  }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="url"><span itemprop="keywords">{{ tag|capitalize }}</span></a>
                 {% if not loop.last %}, {% endif %}
             {% endfor %}
         </span>
@@ -64,7 +61,7 @@
             <i class="fas fa-link fa-md"></i>
             {% for category in page.taxonomy.category %}
                 <a class="tags" title="{{ 'See other posts in ' ~ (category|capitalize) }}"
-			    href="{{ base_url }}/category{{ config.system.param_sep }}{{ category }}" itemprop="url"><span itemprop="keywords">{{ category }}</span></a>
+			    href="{{ new_base_url }}/category{{ config.system.param_sep }}{{ category }}" itemprop="url"><span itemprop="keywords">{{ category|capitalize }}</span></a>
                 {% if not loop.last %}, {% endif %}
             {% endfor %}
         </span>
@@ -75,7 +72,7 @@
             <i class="fas fa-user fa-md"></i>
             {% for author in page.taxonomy.author %}
                 <a class="tags" title="{{ 'See other posts by ' ~ (author|capitalize) }}" 
-                href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url"><span class="name" itemprop="name" rel="author">{{ author }}</span>
+                href="{{ new_base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url"><span class="name" itemprop="name" rel="author">{{ author|capitalize }}</span>
                 {% if not loop.last %}, {% endif %}
             {% endfor %}
         </span>

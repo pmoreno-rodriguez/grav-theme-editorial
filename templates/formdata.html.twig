@@ -1,0 +1,29 @@
+{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+  
+  <article>
+    <header>
+        <h1>{{ form.message }}</h1>
+      </div>
+      <p class="data-post">
+        {% if (page.header.publish_date) %}
+            {% set datestamp = page.header.publish_date %}
+        {% elseif (page.header.date) %}
+            {% set datestamp = page.header.date %}
+        {% else %}
+            {% set datestamp = page.modified %}
+        {% endif %}
+        {% if datestamp %}
+        <br><small itemprop="datePublished"><i class="far fa-clock"></i> Posted on {{ datestamp|date(system.pages.dateformat.short) }}</small>
+        {% endif %}
+      </p>
+    </header>
+    <p>{{'EDITORIAL.FORM_SUMMARY'|t}}</p>
+      
+      {{ content|raw }}
+      {% include "forms/data.html.twig" %}
+      
+  </article>
+{% endblock %}

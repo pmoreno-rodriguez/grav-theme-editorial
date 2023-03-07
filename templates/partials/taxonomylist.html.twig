@@ -1,0 +1,17 @@
+{% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+
+{% if taxlist %}
+<section>
+    <header class="major">
+        <h2>{{ 'EDITORIAL.SIDEBAR.TAXONOMYLIST.LABEL'|t }}</h2>
+    </header>
+    <ul class="tags">
+        {% for tax,value in taxlist[taxonomy]|sort %}
+            {% set label_class = uri.param(taxonomy) == tax ? 'primary' : 'secondary' %}
+            <li>
+                <a class="button medium {{ label_class }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}

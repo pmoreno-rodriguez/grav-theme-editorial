@@ -80,21 +80,9 @@ form:
               options:
                 asc: EDITORIAL.ADMIN.BLOG.ITEMS.DIR_ASC
                 desc: EDITORIAL.ADMIN.BLOG.ITEMS.DIR_DESC
-
-            header.content.breadcrumbs:
-              type: toggle
-              toggleable: true
-              label:  EDITORIAL.ADMIN.BLOG.SHOW_BREADCRUMBS
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
-                
+            
             header.content.pagination:
               type: toggle
-              toggleable: true
               label: EDITORIAL.ADMIN.BLOG.PAGINATION
               highlight: 1
               default: 1
@@ -103,10 +91,9 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
-
+            
             header.content.url_taxonomy_filters:
               type: toggle
-              toggleable: true
               label: EDITORIAL.ADMIN.BLOG.URL_TAXONOMY_FILTERS
               highlight: 1
               default: 1
@@ -115,10 +102,7 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
-            header.readmore_text:
-              type: text
-              toggleable: true
-              default: 'Read more'
-              size: large
-              label: EDITORIAL.ADMIN.BLOG.READMORE_TEXT
-              description: EDITORIAL.ADMIN.BLOG.READMORE_TEXT_DESCRIPTION
+
+          import@:
+            type: partials/blog-bits
+            context: blueprints://pages

@@ -176,9 +176,7 @@ form:
               label: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_STARTAT
               help: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_STARTAT_HELP
               size: small
-              default: 0
               validate:
-                required: true
                 min: 0
                 max: 1000
             Styling_title:

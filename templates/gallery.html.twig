@@ -76,7 +76,7 @@
 	    preload: {{ page.header.preload }},
 	    dragAutoSnap: {{ page.header.dragAuto }},
 	    moreText: '{{ page.header.more_text }}',
-		startAt: {{ page.header.startAt }},
+		{% if page.header.startAt is defined %}startAt: {{ page.header.startAt }},{% endif %}
 	    moreLength: {{page.header.more_length}}
 	});
 	{% endset %}

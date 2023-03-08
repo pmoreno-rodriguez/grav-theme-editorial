@@ -12,6 +12,8 @@
 	{% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
 {% elseif uri.param('author') %}
 	{% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
+{% elseif uri.param('archives_month') %}
+    {% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({'_': ' '}) %}
 {% else %}
     {% set listing_title = page.header.subtitle|raw %}
 {% endif %}

@@ -232,6 +232,7 @@ en:
       LISTING_TITLE_CATEGORY: 'Posts in Category: '
       LISTING_TITLE_TAG: 'Posts with Tag: '
       LISTING_TITLE_AUTHOR: 'Posts written by Author: '
+      LISTING_TITLE_MONTH: 'Post of the month: '
     ITEM:
       POSTED_ON: Posted on
     FORM_SUMMARY: Here is the summary of what you wrote to us
@@ -466,6 +467,7 @@ es:
       LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
       LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
       LISTING_TITLE_AUTHOR: 'Publicaciones escritas por: '
+      LISTING_TITLE_MONTH: 'Publicaciones del mes: '
     ITEM:
       POSTED_ON: Publicado en
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.

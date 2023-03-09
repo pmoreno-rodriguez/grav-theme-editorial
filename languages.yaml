@@ -6,6 +6,14 @@ en:
         DROPDOWN_MENU: Dropdown in navbar
         PRODUCTION_MODE: Production mode
         PRODUCTION_MODE_HELP: When enabled, MUNDANA will render with minified CSS
+        MENU:
+          TITLE: Top Menu Configuration
+          LANGSWITCHER: Enable Langswitcher menu option
+          LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the top menu.
+          SEARCH: Enable Search menu option
+          SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in top menu.
+          LOGIN: Enable Login menu option
+          LOGIN_HELP: You can enable or disable Login icon in top menu, to show login status.
         HEADER_OPTIONS: Header Options
         FAVICON: Choose your own favicon
         FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
@@ -214,6 +222,7 @@ en:
         FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
         MENU_TEXT: Menu
     SIDEBAR:
+      LANGSWITCHER: Choose language
       CONTACT_INFO: Get in touch
       FEATURED_POSTS: Featured Posts
       FEATURED_MORE: More featured posts
@@ -449,6 +458,7 @@ es:
         FEATURED_IMAGE_HELP: Seleccione un archivo para usarlo como la imagen destacada superior de la página 
         MENU_TEXT: Menu
     SIDEBAR:
+      LANGSWITCHER: Elegir idioma
       CONTACT_INFO: Ponerse en contacto
       FEATURED_POSTS: Entradas destacadas
       FEATURED_MORE: Más entradas destacadas

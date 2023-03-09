@@ -42,7 +42,7 @@
         {% include 'partials/featured-posts.html.twig' %}
         
         {# Show Random post if plugin is enabled #}
-        {% if config.plugins.random.enabled and (page.template == 'blog' or page.template == 'item') %}
+        {% if config.plugins.random.enabled %}
         <section>
             <h4>{{ 'EDITORIAL.SIDEBAR.RANDOM_ARTICLE.LABEL'|t }}</h4>
             <a class="button fit" href="{{ base_url }}/random">

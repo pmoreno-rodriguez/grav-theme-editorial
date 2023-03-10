@@ -1,8 +1,16 @@
 ---
-title: 'Sed etiam facilis'
+title: 'Interdum aenean'
 subtitle: Subtitle
-media_order: pic04.jpg
-featured_image: pic04.jpg
+media_order: pic02.jpg
+featured_image: pic02.jpg
+taxonomy:
+    category:
+        - blog
+    tag:
+        - featured
+        - tag1
+    author:
+        - ana
 ---
 
 ###**Lorem ipsum** dolor sit amet, consectetur adipiscing elit.

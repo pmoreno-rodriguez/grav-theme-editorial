@@ -13,7 +13,6 @@ touch_navigation: '1'
 touch_axis: '1'
 keyboard_navigation: '1'
 closeOutside: '1'
-startAt: 0
 loop: '0'
 zoomable: '1'
 draggable: '1'
@@ -21,35 +20,35 @@ draggableX: 40
 draggableY: 65
 dragAuto: '0'
 preload: '1'
-media_order: 'pic01.jpg,pic02.jpg,pic03.jpg,pic04.jpg,pic05.jpg,pic06.jpg'
+media_order: 'q75_pic03.jpg,q75_pic04.jpg,q75_pic05.jpg,q75_pic06.jpg,q75_pic07.jpg,q75_pic08.jpg'
 images:
     -
-        image: pic01.jpg
+        image: q75_pic03.jpg
         title: 'Picture one'
         description: 'Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris.'
         descPosition: bottom
     -
-        image: pic02.jpg
+        image: q75_pic04.jpg
         title: 'Picture two'
         description: 'Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris.'
         descPosition: top
     -
-        image: pic03.jpg
+        image: q75_pic05.jpg
         title: 'Picture three'
         description: 'Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris.'
         descPosition: left
     -
-        image: pic04.jpg
+        image: q75_pic06.jpg
         title: 'Picture four'
         description: 'Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris.'
         descPosition: right
     -
-        image: pic05.jpg
+        image: q75_pic07.jpg
         title: 'Picture five'
         description: 'Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris.'
         descPosition: bottom
     -
-        image: pic06.jpg
+        image: q75_pic08.jpg
         title: 'Picture six'
         description: 'Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris.'
         descPosition: top

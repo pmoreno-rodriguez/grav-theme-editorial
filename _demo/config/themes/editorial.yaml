@@ -2,25 +2,12 @@ enabled: true
 dropdown:
   enabled: true
 production-mode: false
+menu_langswitcher: true
+menu_search: true
+menu_login: true
 themeSlogan: 'by HTML5Up'
 custom_logo_enabled: false
 custom_logo_width: 100
-blog-page: /blog
-featured: true
-featured_tag: featured
-featured_number: 3
-copyright:
-  text: 'All rights reserved. Demo Images by <a href="https://unsplash.com/es/@freys/" target="_blank">Freysteinn G. Jonsson</a>. Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.'
-contact:
-  text: 'Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.'
-  email: webmaster@example.com
-  phone: '(555) 555-5555'
-  street: '123 Any Street'
-  city: AnyTown
-  state: CA
-  zip: '12345'
-social_enabled: true
-custommenu_enabled: true
 custom_logo:
   user/themes/editorial/images/logo/grav-logo.svg:
     name: grav-logo.svg
@@ -39,6 +26,22 @@ favicon:
     type: image/png
     size: 13203
     path: user/themes/editorial/images/favicon.png
+blog-page: /blog
+featured: true
+featured_tag: featured
+featured_number: 3
+copyright:
+  text: 'All rights reserved. Demo Images by <a href="https://unsplash.com/es/@freys/" target="_blank">Freysteinn G. Jonsson</a>. Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.'
+contact:
+  text: 'Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.'
+  email: webmaster@example.com
+  phone: '(555) 555-5555'
+  street: '123 Any Street'
+  city: AnyTown
+  state: CA
+  zip: '12345'
+social_enabled: true
+custommenu_enabled: true
 social:
   -
     name: Facebook

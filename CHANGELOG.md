@@ -16,6 +16,7 @@
    * Updated css styles
 3. [](#bugfix)
    * Fixed blog routes in item and blog templates
+
 # v1.0.5
 ## 02/17/2023
 

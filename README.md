@@ -67,7 +67,7 @@ The latest pages tagged with the selected tag in the theme settings and the chos
 Editorial comes with a few default options that can be set site-wide.  These options are:
 
 ```yaml
-production-mode: true         # In production mode, only minified CSS is used. When disabled, nested CSS are enabled
+production-mode:              # In production mode, only minified CSS is used. When disabled, nested CSS are enabled
 menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
 menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
 menu_login:                   # Enable/Disable login icon in menu
@@ -75,7 +75,7 @@ favicon:                      # Choosse your own favicon
 custom_logo:                  # A custom logo rather than the default (see below)  
 custom_logo_mobile:           # A custom logo to use for mobile navigation
 custom_logo_width:            # Set custom width for custom logo
-themeSlogan:                       # Custom text for slogan
+themeSlogan:                  # Custom text for slogan
 blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout
 featured:                     # Enable/Disable featured posts in left sidebar
 featured_tag:                 # Select category name for featured posts (configured in taxonomies)

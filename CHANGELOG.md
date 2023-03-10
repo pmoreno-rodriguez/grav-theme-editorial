@@ -1,3 +1,21 @@
+# v1.0.6
+## 03/10/2023
+
+1. [](#new)
+   * Added sections for Langswitcher and Login in sidebar
+   * Added login, forgot, reset and profile templates
+   * Added offline template
+   * Added taxonomylist template
+   * Added relatedpages template
+   * Added metadata template
+   * Added Form template
+   * Added breacrumbs support to the blog
+2. [](#improved)
+   * Improved styles for breadcrumbs
+   * Updated translations
+   * Updated css styles
+3. [](#bugfix)
+   * Fixed blog routes in item and blog templates
 # v1.0.5
 ## 02/17/2023
 

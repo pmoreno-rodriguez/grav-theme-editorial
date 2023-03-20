@@ -121,7 +121,8 @@ en:
           DIR_ASC: Ascending
           DIR_DESC: Descending
         SHOW_BREADCRUMBS: Show Breadcrumbs
-        PAGINATION: Pagination
+        PAGINATION: 
+          LABEL: Pagination
         URL_TAXONOMY_FILTERS: URL Taxonomy Filters
         READMORE_TEXT: Readmore button text
         READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
@@ -221,6 +222,14 @@ en:
         FEATURED_IMAGE_LABEL: Featured Image
         FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
         MENU_TEXT: Menu
+        IMAGE_OPTIONS: Image options
+        FEATURED_IMAGE: 
+          LABEL: Featured image
+          HELP: Select a featured image to display at the top of the page
+          WIDTH: Width
+          HEIGHT: Height
+        SHOW_PAGEIMAGE: Show Image
+        SHOW_PAGEIMAGE_HELP: Enable primary image if it is defined or the first image of the media page.
     SIDEBAR:
       LANGSWITCHER: Choose language
       CONTACT_INFO: Get in touch
@@ -242,6 +251,9 @@ en:
       LISTING_TITLE_TAG: 'Posts with Tag: '
       LISTING_TITLE_AUTHOR: 'Posts written by Author: '
       LISTING_TITLE_MONTH: 'Post of the month: '
+      PAGINATION: 
+        PREV: Previous
+        NEXT: Next
     ITEM:
       POSTED_ON: Posted on
     FORM_SUMMARY: Here is the summary of what you wrote to us
@@ -357,7 +369,8 @@ es:
           DIR_ASC: Ascendente
           DIR_DESC: Descendente
         SHOW_BREADCRUMBS: Mostrar Migas de pan
-        PAGINATION: Paginación
+        PAGINATION:
+          LABEL: Paginación
         URL_TAXONOMY_FILTERS: Filtros de taxonomía de URL
         READMORE_TEXT: Texto del botón `Leer más`
         READMORE_TEXT_DESCRIPTION: Especifique un texto personalizado para el botón `leer más`
@@ -457,6 +470,14 @@ es:
         FEATURED_IMAGE_LABEL: Imagen destacada
         FEATURED_IMAGE_HELP: Seleccione un archivo para usarlo como la imagen destacada superior de la página 
         MENU_TEXT: Menu
+        IMAGE_OPTIONS: Opciones de imagen
+        FEATURED_IMAGE: 
+          LABEL: Imagen destacada
+          HELP: Seleccione una imagen destacada para mostrar en la superior de la página
+          WIDTH: Ancho
+          HEIGHT: Alto
+        SHOW_PAGEIMAGE: Mostrar imagen
+        SHOW_PAGEIMAGE_HELP: Habilitar la imagen principal si está definida o la primera de las imágenes de la página.
     SIDEBAR:
       LANGSWITCHER: Elegir idioma
       CONTACT_INFO: Ponerse en contacto
@@ -478,6 +499,9 @@ es:
       LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
       LISTING_TITLE_AUTHOR: 'Publicaciones escritas por: '
       LISTING_TITLE_MONTH: 'Publicaciones del mes: '
+      PAGINATION:
+        PREV: Anterior
+        NEXT: Siguiente
     ITEM:
       POSTED_ON: Publicado en
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.

@@ -1,13 +1,16 @@
 {% extends 'partials/base.html.twig' %}
+{% set show_image = header_var('show_pageimage')|defined(true) %}
 {% set image = page.media[header.featured_image] ?: page.media.images|first %}
-{% set title = page.title %}
+{% set img_width = header_var('image_width')|default(1000) %}
+{% set img_height = header_var('image_height')|default(300) %}
+{% set title = page.title|raw %}
 
 {% block content %}
 
 	<header class="main">   
-	{% if image %}
+	{% if show_image and image %}
 	    <span class="image main">
-		{{ image.cropZoom(1000,300).loading('lazy').html(title,title,'')|raw }}
+		{{ image.cropZoom(img_width, img_height).loading('lazy').html(title,title,'')|raw }}
 	    </span>
 	{% endif %}
 	<h1>{{ title|raw }}</h1>

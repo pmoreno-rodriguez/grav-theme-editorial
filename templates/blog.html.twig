@@ -4,6 +4,11 @@
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_pagination = header_var('content.pagination', [page, blog])|defined(true) %}
 {% set show_breadcrumbs = header_var('content.breadcrumbs', [page, blog])|defined(false) %}
+{% set show_image = header_var('show_pageimage')|defined(true) %}
+{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set img_width = header_var('image_width')|default(1000) %}
+{% set img_height = header_var('image_height')|default(300) %}
+{% set title = page.title|raw %}
 
 {# Set page title by taxonomy #}
 {% if uri.param('category') %}
@@ -27,22 +32,27 @@
     </p>
     
     <header class="main">
+        {% if show_image and image %}
+	    <span class="image main">
+		{{ image.cropZoom(img_width, img_height).loading('lazy').html(title,title,'')|raw }}
+	    </span>
+	{% endif %}
         <h1>{{page.title|raw}}</h1>
         {% if listing_title %}<p>{{ listing_title|raw }}</p>{% endif %}
     </header>
-
+    <div>
     {{ page.content|raw }}
-       
-        <div class="posts">
-            {% for child in collection %}
-                {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
-            {% endfor %}
-        </div>
-        {# Render the pagination list #}
+    </div>
+    <div class="posts">
+        {% for child in collection %}
+            {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+        {% endfor %}
+    </div>
+    {# Render the pagination list #}
     {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
-        <div class="align-center">
-            {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
-        </div>
+    <div class="align-center">
+        {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+    </div>
     {% endif %}
 
 {% endblock %}

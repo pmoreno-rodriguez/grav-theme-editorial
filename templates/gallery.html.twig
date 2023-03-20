@@ -1,8 +1,14 @@
 {% extends 'partials/base.html.twig' %}
-
+{% set show_image = header_var('show_pageimage')|defined(true) %}
+{% set img_width = header_var('image_width')|default(1000) %}
+{% set img_height = header_var('image_height')|default(300) %}
 {% set featuredImage = page.media[header.featured_image] %}
-{% set title = page.title %}
+{% set title = page.title|raw %}
 {% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
+{% set gallery = page.header.images %}
+{% set thumb_w = page.header.thumb_width|default(600) %}
+{% set thumb_h = page.header.thumb_height|default(450) %}
+
 {% block stylesheets %}
 	{{ parent() }}
 	{% do assets.addCss('theme://assets/css/glightbox.min.css') %}
@@ -13,14 +19,12 @@
 	{% endset %}
 {% do assets.addInlineCss(styling) %}
 {% endblock %}
-{% set gallery = page.header.images %}
-{% set thumb_w = page.header.thumb_width|default(600) %}
-{% set thumb_h = page.header.thumb_height|default(450) %}
+
 {% block content %}
 	<header class="main">
-		{% if featuredImage %}
+		{% if show_image and featuredImage %}
 			<span class="image main">
-				{{ featuredImage.cropZoom(1000,300).loading('lazy').html(title,title,'')|raw }}
+				{{ featuredImage.cropZoom(img_width,img_height).loading('lazy').html(title,title,'')|raw }}
 			</span>
 		{% endif %}
 		<h1>
@@ -32,10 +36,9 @@
 			</p>
 		{% endif %}
 	</header>
-	{% if page.header.primaryImage %}
-		{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-	{% endif %}
+	<div style="margin-bottom: 4em">
 	{{ page.content|raw}}
+	</div>
 	<!-- Gallery -->
 	{% block gallery %}
 		<section itemscope itemtype="http://schema.org/ImageGallery">

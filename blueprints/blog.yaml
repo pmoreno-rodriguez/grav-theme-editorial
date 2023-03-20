@@ -18,17 +18,6 @@ form:
       active: 1
 
       fields:
-
-        content:
-          fields:
-            header.options:
-              fields:
-                header.content:
-                  fields:
-                    header.featured_image:
-                      unset@: true
-            header.media_order:
-              unset@: true
                 
         advanced:
           fields:
@@ -83,7 +72,7 @@ form:
             
             header.content.pagination:
               type: toggle
-              label: EDITORIAL.ADMIN.BLOG.PAGINATION
+              label: EDITORIAL.ADMIN.BLOG.PAGINATION.LABEL
               highlight: 1
               default: 1
               options:

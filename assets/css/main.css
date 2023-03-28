@@ -1404,6 +1404,10 @@ header p {
   margin-top: -0.5em;
   text-transform: uppercase;
 }
+header p time, header p small {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+}
 header.major > :last-child {
   border-bottom: solid 3px #f56a6a;
   display: inline-block;
@@ -1412,6 +1416,10 @@ header.major > :last-child {
 }
 header.main > :last-child {
   margin: 0 0 1em 0;
+}
+header.authors {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
 }
 
 /* Form */

@@ -256,6 +256,8 @@ en:
         NEXT: Next
     ITEM:
       POSTED_ON: Posted on
+      SEE_OTHER_POSTS_OF: See other posts by
+      SEE_OTHER_POSTS_IN: See other posts in
     FORM_SUMMARY: Here is the summary of what you wrote to us
 es:
   EDITORIAL:
@@ -503,5 +505,7 @@ es:
         PREV: Anterior
         NEXT: Siguiente
     ITEM:
-      POSTED_ON: Publicado en
+      POSTED_ON: Publicado el
+      SEE_OTHER_POSTS_OF: Ver otras publicaciones de
+      SEE_OTHER_POSTS_IN: Ver otras publicaciones en
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.

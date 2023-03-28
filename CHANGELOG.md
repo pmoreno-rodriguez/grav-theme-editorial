@@ -1,3 +1,15 @@
+# v1.0.7
+## 03/29/2023
+
+1. [](#new)
+   * Added support por `translate-date` and `twig-extensions` plugins.
+   * New non-modular contact template
+   * New options for featured image
+2. [](#improved)
+   * Improved simplesearch results with `striptags` filter.
+   * Updated translations
+   * Updated css styles
+  
 # v1.0.6
 ## 03/10/2023
 

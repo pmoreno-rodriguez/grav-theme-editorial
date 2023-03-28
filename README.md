@@ -35,6 +35,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Features modular page
 * Banner modular page like original theme.
 * Contact Form modular page.
+* Contact Form non-modular page.
 * Recent Posts modular page - Show the latest posts in a modular page, eg. Home. (can be changed from twig template)
 * Gallery template (with Glightbox JS)
 * Custom SimpleSearch twig templates.

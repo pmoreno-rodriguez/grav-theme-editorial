@@ -1,10 +1,10 @@
 {% macro loop(page) %}
     {% for p in page.children.visible %}
-        {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
+        {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
         {% if p.children.visible.count > 0 %}
-            <li>
-                <span class="opener">{{ p.menu }}</a></span>
-                <ul>
+            <li> 
+                <span class="opener">{{ p.menu }}</span>
+                <ul class="submenu">
                     {{ _self.loop(p) }}
                 </ul>
             </li>
@@ -24,7 +24,7 @@
         {{ _self.loop(pages) }}
     {% else %}
         {% for page in pages.children.visible %}
-            {% set current_page = (page.active or page.activeChild) ? 'selected' : '' %}
+            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
             <li class="{{ current_page|e }}">
                 <a href="{{ page.url|e }}">
                     {% if page.header.icon %}<i class="fa fa-{{ page.header.icon|e }}"></i>{% endif %}

@@ -242,6 +242,7 @@
 			$menu_openers.each(function() {
 
 				var $this = $(this);
+				$(".submenu").hide(); /* Initially submenus are hidden */
 
 				$this.on('click', function(event) {
 
@@ -249,8 +250,15 @@
 						event.preventDefault();
 
 					// Toggle.
-						$menu_openers.not($this).removeClass('active');
+					if ($this.hasClass('active')) {
+						$this.removeClass('active');
+						$this.next(".submenu").css('display','block');
+						$this.next(".submenu").slideToggle();
+					} else {
 						$this.toggleClass('active');
+						$this.next(".submenu").css('display','none');
+						$this.next(".submenu").slideToggle();
+					}
 
 					// Trigger resize (sidebar lock).
 						$window.triggerHandler('resize.sidebar-lock');

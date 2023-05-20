@@ -1,3 +1,11 @@
+# v1.0.8
+## 05/20/2023
+
+1. [](#improved)
+   * Modified some styles to improve web accessibility.
+
+2. [](#bugfix)
+   * Fixed dropdown menu (issue [#16](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/16))
 # v1.0.7
 ## 03/29/2023
 

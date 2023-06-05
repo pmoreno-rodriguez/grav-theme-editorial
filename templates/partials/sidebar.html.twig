@@ -10,7 +10,8 @@
 {% endif %}
 
 <!-- Sidebar -->
-<div id="sidebar">
+
+<div id="sidebar"{% if theme_var('sidebar_open') == false %} class="inactive"{% endif %}>
     <div class="inner">
         {% if menu_search %}
             {% if config.plugins.simplesearch.enabled %}

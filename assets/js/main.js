@@ -78,9 +78,11 @@
 				$sidebar.addClass('inactive');
 			});
 
-			breakpoints.on('>large', function() {
+			/* Set active or inactive on large screens via the sidebar Twig template with the sidebar_opened variable */
+
+			/*breakpoints.on('>large', function() {
 				$sidebar.removeClass('inactive');
-			});
+			});*/
 
 		// Hack: Workaround for Chrome/Android scrollbar position bug.
 			if (browser.os == 'android'

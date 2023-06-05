@@ -5,7 +5,9 @@ en:
         THEME_CONFIG: Theme Config
         DROPDOWN_MENU: Dropdown in navbar
         PRODUCTION_MODE: Production mode
-        PRODUCTION_MODE_HELP: When enabled, MUNDANA will render with minified CSS
+        PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
+        SIDEBAR_OPEN: Open sidebar
+        SIDEBAR_OPEN_HELP: Set if the sidebar is open or closed at startup
         MENU:
           TITLE: Top Menu Configuration
           LANGSWITCHER: Enable Langswitcher menu option
@@ -102,6 +104,18 @@ en:
           LIMIT_HELP: Maximum number of posts to display.
           READMORE_TEXT: Readmore button text
           READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
+        TEAM:
+          TAB: Team
+          IMAGE: Profile image
+          IMAGE_HELP: Select a profile image
+          NAME: Name
+          POSITION: Position
+          DETAILS: Profile details
+          DETAILS_HELP: Brief profile description
+          SOCIAL_MEDIA:
+            LABEL: Social media
+            NAME: Social name
+            URL: Social URL
       BLOG:
         TAB: Blog Config
         ROUTE: Blog Route
@@ -167,6 +181,17 @@ en:
           ACTIONS_TITLE: Actions
           STYLING_TITLE: Styling
           BEHAVIOR_TITLE: Behaviors
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Overlay effect on hover
+            HELP: Set the hover effect when the mouse is over an image
+            FADEIN_BOTTOM: Fade in bottom
+            FADEIN_TOP: Fade in top
+            FADEIN_LEFT: Fade in left
+            FADEIN_RIGHT: Fade in right
+            FADEIN_TOP_RIGHT: Fade in top right
+            FADEIN_TOP_LEFT: Fade in top left
+            FADEIN_BOTTOM_RIGHT: Fade in bottom right
+            FADEIN_BOTTOM_LEFT: Fade in bottom left
           OPEN_EFFECT:
             LABEL: Open Effect
             ZOOM: Zoom
@@ -259,6 +284,8 @@ en:
       SEE_OTHER_POSTS_OF: See other posts by
       SEE_OTHER_POSTS_IN: See other posts in
     FORM_SUMMARY: Here is the summary of what you wrote to us
+    MISC:
+      SHARE_ON: Share on
 es:
   EDITORIAL:
     ADMIN:
@@ -266,7 +293,9 @@ es:
         THEME_CONFIG: Configuración del Tema
         DROPDOWN_MENU: Menu Desplegable
         PRODUCTION_MODE: Modo Producción
-        PRODUCTION_MODE_HELP: Si está activado, Future cargará con CSS minificado
+        PRODUCTION_MODE_HELP: Si está activado, EDITORIAL cargará con CSS minificado
+        SIDEBAR_OPEN: Barra lateral abierta
+        SIDEBAR_OPEN_HELP: Establece si la barra lateral está abierta o cerrada al inicio.
         HEADER_SECTION: Sección de encabezado
         FAVICON: Elige tu propio favicon
         FAVICON_DESCRIPTION: Se usará en lugar del favicon predeterminado `theme://images/favicon.png`
@@ -353,6 +382,18 @@ es:
           LIMIT_HELP: Máximo número de entradas para mostrar
           READMORE_TEXT: Texto del botón `Leer más`
           READMORE_TEXT_DESCRIPTION: Especifique un texto personalizado para el botón `leer más`
+        TEAM:
+          TAB: Equipo
+          IMAGE: Imagen de perfil
+          IMAGE_HELP: Seleccione una imagen de perfil
+          NAME: Nombre
+          POSITION: Cargo
+          DETAILS: Detalles del perfil
+          DETAILS_HELP: Breve descripción del perfil
+          SOCIAL_MEDIA:
+            LABEL: Redes sociales
+            NAME: Nombre de red social
+            URL: URL de red social
       BLOG:
         TAB: Configuración del Blog
         ROUTE: Ruta del Blog
@@ -417,6 +458,17 @@ es:
           ACTIONS_TITLE: Acciones
           STYLING_TITLE: Estilos
           BEHAVIOR_TITLE: Comportamiento
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Efecto de superposición al pasar el ratón
+            HELP: Establece el efecto de superposición cuando el ratón está sobre una imagen
+            FADEIN_BOTTOM: Fundido inferior
+            FADEIN_TOP: Fundido superior
+            FADEIN_LEFT: Fundido desde la izquierda
+            FADEIN_RIGHT: Fundido desde la derecha
+            FADEIN_TOP_RIGHT: Fundido superior derecha
+            FADEIN_TOP_LEFT: Fundido superior izquierda
+            FADEIN_BOTTOM_RIGHT: Fundido inferior derecha
+            FADEIN_BOTTOM_LEFT: Fundido inferior izquierda
           OPEN_EFFECT:
             LABEL: Efecto de apertura
             ZOOM: Zoom
@@ -509,3 +561,5 @@ es:
       SEE_OTHER_POSTS_OF: Ver otras publicaciones de
       SEE_OTHER_POSTS_IN: Ver otras publicaciones en
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
+    MISC:
+      SHARE_ON: Compartir en

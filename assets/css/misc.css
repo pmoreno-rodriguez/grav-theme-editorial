@@ -11,6 +11,10 @@
     padding: 0 0.2rem;
 }
 
+.pagination a, .pagination span {padding: 0 15px;}
+
+ul.pagination li > .page.active {font-size: 0.9em;}
+ul.pagination li > .page {font-size: 0.9em;}
 
 /* Active the pagination numbers in small screens */
 

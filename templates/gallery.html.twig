@@ -47,13 +47,20 @@
 					{% set item_image = page.media[item.image] %}
 					{% set item_title = item.title %}
 					{% set item_desc = item.description %}
-					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title) %}
-					<div class="{{columns}} gallery_item" itemprop="associatedMedia" itemscope itemtype="MediaObject">
-						<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
-							<span class="image fit">
+					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title,'gallery_content-image') %}
+					
+					<div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="MediaObject">
+						<h3 class="title">{{item_title}}</h3>
+						<div class="gallery_content">
+							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
+							<div class="gallery_content-overlay"></div>
 								{{ thumbnail|raw }}
-							</span>
-						</a>
+							<div class="gallery_content-details {{page.header.overlay_hover_effect}}">
+								<h3 class="gallery_content-title">{{item_title}}</h3>
+								<p class="gallery_content-text">{{item_desc|truncate(75)|raw}}</p>
+							</div>
+							</a>
+						</div>
 					</div>
 				{% endfor %}
 			</div>

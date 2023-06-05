@@ -1,9 +1,20 @@
+# v1.0.9
+## 06/05/2023
+
+1. [](#new)
+   * New effects in Gallery template
+   * New Team twig template
+   * Option to enable or disable open sidebar on startup
+   * Social sharing icons added to blog items
+2. [](#improved)
+   * Improved css styles
+   * Improved traslations
+   * `responsive` css class to make tables responsive
 # v1.0.8
 ## 05/20/2023
 
 1. [](#improved)
    * Modified some styles to improve web accessibility.
-
 2. [](#bugfix)
    * Fixed dropdown menu (issue [#16](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/16))
 # v1.0.7

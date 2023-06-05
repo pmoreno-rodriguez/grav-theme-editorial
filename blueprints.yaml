@@ -1,7 +1,7 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 1.0.8
+version: 1.0.9
 description: GravCMS port of the HTML5UP theme Editorial
 icon: rebel
 author:
@@ -39,6 +39,17 @@ form:
             type: toggle
             label: EDITORIAL.ADMIN.THEME.PRODUCTION_MODE
             help: EDITORIAL.ADMIN.THEME.PRODUCTION_MODE_HELP
+            highlight: 1
+            default: 1
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
+        sidebar_open:
+            type: toggle
+            label: EDITORIAL.ADMIN.THEME.SIDEBAR_OPEN
+            help: EDITORIAL.ADMIN.THEME.SIDEBAR_OPEN_HELP
             highlight: 1
             default: 1
             options:

@@ -61,3 +61,4 @@ custommenu:
     icon: arrow-circle-right
     url: 'https://getgrav.org'
     target: _parent
+sidebar_open: true

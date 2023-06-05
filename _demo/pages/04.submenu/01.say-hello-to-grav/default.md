@@ -1,6 +1,9 @@
 ---
 title: 'Say Hello to Grav'
 visible: true
+show_pageimage: true
+image_width: 1000
+image_height: 300
 ---
 
 ## installation successful...

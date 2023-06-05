@@ -52,5 +52,12 @@ images:
         title: 'Picture six'
         description: 'Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris.'
         descPosition: top
+show_pageimage: true
+image_width: 1000
+image_height: 300
+overlay_hover_effects: fadeIn-top
+overlay_hover_effect: fadeIn-top
 ---
 
+This is an example of a gallery made with the Editorial theme's Gallery template, using the Javascript library, Glightbox.
+You can take a look at the README file to see the options of this gallery.

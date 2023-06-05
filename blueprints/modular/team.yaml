@@ -1,0 +1,51 @@
+title: EDITORIAL.ADMIN.MODULAR.TEAM.TAB
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        TEAM:
+          type: tab
+          title: EDITORIAL.ADMIN.MODULAR.TEAM.TAB
+          fields:
+            header.team:
+              name: team
+              type: list
+              size: long
+              collapsed: true
+              label: EDITORIAL.ADMIN.MODULAR.TEAM.TAB
+              fields:
+                .image:
+                  type: pagemediaselect
+                  size: medium
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.IMAGE
+                  help: EDITORIAL.ADMIN.MODULAR.TEAM.IMAGE_HELP
+                  preview_images: true
+                .name:
+                  type: text
+                  size: medium
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.NAME
+                .position:
+                  type: text
+                  size: medium
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.POSITION
+                .details:
+                  type: textarea
+                  columns: 4
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.DETAILS
+                  help: EDITORIAL.ADMIN.MODULAR.TEAM.DETAILS_HELP
+                .social_media:
+                  type: list
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.SOCIAL_MEDIA.LABEL
+                  collapsed: true
+                  max: 6
+                  fields:
+                    .name:
+                      type: text
+                      size: small
+                      label: EDITORIAL.ADMIN.MODULAR.TEAM.SOCIAL_MEDIA.NAME
+                    .url:
+                      type: text
+                      size: small
+                      label: EDITORIAL.ADMIN.MODULAR.TEAM.SOCIAL_MEDIA.URL

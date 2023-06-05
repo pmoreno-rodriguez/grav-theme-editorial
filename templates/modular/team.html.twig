@@ -1,0 +1,30 @@
+<section id="team">
+<header class="major">
+    <h2>{{ page.title }}</h2>
+    {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+</header>
+    {{ content|raw }}
+<div class="row">
+    {% for member in page.header.team %}
+    <div class="team col-4 col-6-medium col-12-small">
+        <div class="text">
+            {% set member_image = page.media[member.image] %}
+            {{ member_image.html(member.name,member.name,'')|raw }}
+            <h3>{{ member.name|raw }}</h3>
+            <p>{{ member.position|raw }}</p>
+            <p>{{ member.details|raw }}</p>
+        </div>
+        <div class="links">
+            {% for item in member.social_media %}
+            <a class="icon brands fa-{{ item.name|lower|raw }}" 
+            target="_blank" 
+            href="{{ item.url }}" 
+            alt="{{ item.name|raw }}" 
+            title="{{ item.name|raw }}">
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</section>

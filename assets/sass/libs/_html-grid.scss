@@ -60,6 +60,12 @@
 				}
 
 			// Alignment.
+				&.aln-between {
+					justify-content: space-between;
+				}
+				&.aln-around {
+					justify-content: space-around;
+				}
 				&.aln-left {
 					justify-content: flex-start;
 				}

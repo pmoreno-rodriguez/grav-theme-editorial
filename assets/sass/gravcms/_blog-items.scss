@@ -25,3 +25,26 @@ ul.blog-items {
         padding-left: 4em;
     }
 }
+
+/* Share icons */
+
+.share {
+
+    .align-left {
+        text-align: left;
+      }
+      
+      .align-center {
+        text-align: center;
+      }
+      
+      .align-right {
+        text-align: right;
+      }
+    
+      @include breakpoint('<=small') {
+        .align-left, .align-center, .align-right {
+            text-align: center;
+          }
+      }
+}

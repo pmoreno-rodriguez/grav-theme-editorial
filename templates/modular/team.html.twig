@@ -1,12 +1,19 @@
+{# Set columns for team page #}
+{% set columns = page.header.layout == 'standard' ? 'col-4' : 'col-6'  %}
+
 <section id="team">
 <header class="major">
     <h2>{{ page.title }}</h2>
     {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
 </header>
     {{ content|raw }}
-<div class="row">
+
+{# Team container #}
+<div class="team">
+
+    {# Members list #}
     {% for member in page.header.team %}
-    <div class="team col-4 col-6-medium col-12-small">
+    <div class="member {{ columns }}">
         <div class="text">
             {% set member_image = page.media[member.image] %}
             {{ member_image.html(member.name,member.name,'')|raw }}
@@ -16,6 +23,7 @@
         </div>
         <div class="links">
             {% for item in member.social_media %}
+            {# Fontawesome icons only work with brands family #}
             <a class="icon brands fa-{{ item.name|lower|raw }}" 
             target="_blank" 
             href="{{ item.url }}" 

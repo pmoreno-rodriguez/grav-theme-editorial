@@ -4,7 +4,7 @@ body_classes: modular
 show_pageimage: true
 image_width: 1000
 image_height: 300
-media_order: 'ana_avataaars.jpg,avatar1.jpg,avataaars_pedro.png'
+media_order: 'ana_avataaars.jpg,avatar1.jpg,avataaars_pedro.png,juan_avataaars.jpg'
 team:
     -
         image: ana_avataaars.jpg
@@ -33,23 +33,27 @@ team:
             -
                 name: Youtube
                 url: '#'
+            -
+                name: Linkedin
+                url: '#'
+            -
+                name: Twitch
+                url: '#'
+            -
+                name: Whatsapp
+                url: '#'
     -
-        image: avatar1.jpg
-        name: 'Juan Fernández'
+        image: juan_avataaars.jpg
+        name: 'Juan Villén'
         position: Editor
         details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis ex rutrum lorem suscipit porttitor non eget velit'
         social_media:
             -
-                name: Youtube
+                name: Facebook
                 url: '#'
             -
                 name: Twitter
                 url: '#'
-            -
-                name: Facebook
-                url: '#'
-            -
-                name: Instagram
-                url: '#'
+layout: standard
 ---
 

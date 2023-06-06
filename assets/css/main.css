@@ -287,6 +287,9 @@ hr.major {
 .row.aln-around {
   justify-content: space-around;
 }
+.row.aln-evenly {
+  justify-content: space-evenly;
+}
 .row.aln-left {
   justify-content: flex-start;
 }
@@ -476,6 +479,9 @@ hr.major {
   }
   .row.aln-around {
     justify-content: space-around;
+  }
+  .row.aln-evenly {
+    justify-content: space-evenly;
   }
   .row.aln-left {
     justify-content: flex-start;
@@ -668,6 +674,9 @@ hr.major {
   .row.aln-around {
     justify-content: space-around;
   }
+  .row.aln-evenly {
+    justify-content: space-evenly;
+  }
   .row.aln-left {
     justify-content: flex-start;
   }
@@ -858,6 +867,9 @@ hr.major {
   }
   .row.aln-around {
     justify-content: space-around;
+  }
+  .row.aln-evenly {
+    justify-content: space-evenly;
   }
   .row.aln-left {
     justify-content: flex-start;
@@ -1050,6 +1062,9 @@ hr.major {
   .row.aln-around {
     justify-content: space-around;
   }
+  .row.aln-evenly {
+    justify-content: space-evenly;
+  }
   .row.aln-left {
     justify-content: flex-start;
   }
@@ -1240,6 +1255,9 @@ hr.major {
   }
   .row.aln-around {
     justify-content: space-around;
+  }
+  .row.aln-evenly {
+    justify-content: space-evenly;
   }
   .row.aln-left {
     justify-content: flex-start;
@@ -2619,13 +2637,29 @@ button:disabled,
     Styles for new team template 
     by Pedro Moreno 
 */
-#team {
-  margin: 3em 0;
-}
-
 .team {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  margin: 0 0 2em -2.25em;
+  width: calc(100% + 2.25em);
+}
+.team > .col-4 {
+  width: calc((100% / 3) - 2.25em);
+}
+.team > .col-6 {
+  width: calc((100% / 2) - 2.25em);
+}
+.team .member {
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
   padding: 30px;
+  margin: 0 0 2.25em 2.25em;
   display: -moz-flex;
   display: -ms-flex;
   display: flex;
@@ -2636,7 +2670,7 @@ button:disabled,
   -ms-align-items: center;
   align-items: center;
 }
-.team .text {
+.team .member .text {
   display: -moz-flex;
   display: -ms-flex;
   display: flex;
@@ -2645,23 +2679,22 @@ button:disabled,
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  font-size: 0.9em;
 }
-.team .text img {
+.team .member .text img {
   height: 125px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
-.team .text p:nth-of-type(1) {
+.team .member .text p:nth-of-type(1) {
   color: #f56a6a;
   margin-top: -5px;
 }
-.team .text p:nth-of-type(2) {
+.team .member .text p:nth-of-type(2) {
   margin: 10px;
   width: 90%;
   text-align: center;
 }
-.team .links {
+.team .member .links {
   width: 30%;
   display: -moz-flex;
   display: -ms-flex;
@@ -2670,23 +2703,38 @@ button:disabled,
   -ms-justify-content: space-evenly;
   justify-content: space-evenly;
 }
-.team .links a {
+.team .member .links .icon {
+  font-size: 1.25em;
+  padding-left: 0.75em;
+}
+.team .member .links a {
   border: none;
 }
-.team .links a i {
+.team .member .links a i {
   color: #f56a6a;
-  font-size: 1.25em;
+  font-size: 3.75em;
   cursor: pointer;
 }
-.team .links a i:hover {
+.team .member .links a i:hover {
   color: #f67878;
 }
-
-@media screen and (max-width: 736px) {
-  .team {
-    width: 100%;
+@media screen and (max-width: 980px) {
+  .team .member {
+    width: calc(50% - 2.25em);
+  }
+  .team .member:last-child {
+    margin-bottom: 0;
   }
 }
+@media screen and (max-width: 736px) {
+  .team .member {
+    width: 100%;
+  }
+  .team .member:last-child {
+    margin-bottom: 0;
+  }
+}
+
 /* Wrapper */
 #wrapper {
   display: -moz-flex;

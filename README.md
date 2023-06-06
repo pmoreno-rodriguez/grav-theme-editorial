@@ -43,6 +43,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Production mode for CSS styles
 * Custom logo and Custom logo mobile in theme config
 * Added support for Taxonomylist, Related pages, Random article. Feeds and Archives plugins
+* Team template
 
 ### Featured Pages
 
@@ -57,6 +58,7 @@ The latest pages tagged with the selected tag in the theme settings and the chos
 * Breadcumbs plugin activated by default in posts.
 * Added blog.html.twig and item.html.twig files.
 * Added option to filter by author taxonomy. It is necessary to configure the author taxonomy, in the site configuration, so that the authors of the blog pages appear in them and you can use the filters by author that the theme has.
+* Social sharing icons added to blog items
 ### Reordered assets
 
 * All assets (css, js, sass, etc) have been reordered into **assets** folder.
@@ -99,6 +101,7 @@ custom_logo_mobile:
     - name: 'my-custom-mobile-logo.png'    
 ```
 Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Editorial theme options.
+
 ## Gallery Options
 
 | Option | Type | Default | Description |
@@ -130,8 +133,7 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Editor
 
 ## Future plans
 
-* Add support for date translations in blog (with translate-date and twig-extensions plugins) 
-
+* Future plans here
 ## Credits
 * Thanks to [Jeremy Gonyea](https://github.com/jgonyea), who ported the first Editorial theme for Grav.
 * This theme wouldn't be here without HTML5Up.net.  Many thanks to [AJ](aj@lkn.io) for creating the theme initially on that site.

@@ -27,6 +27,8 @@ en:
           LOGO: Custom Logo
           DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
           MOBILE: Mobile Custom Logo
+        GOOGLE_FONTS:
+          LOCAL: Use locally hosted Google Fonts
         CONTACT:
           COPYRIGHT_TEXT: Copyright Text
           COPYRIGHT_TEXT_HELP: Display custom copyright text in the footer, next to the site name.

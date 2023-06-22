@@ -153,6 +153,16 @@ form:
             multiple: false
             accept:
             - image/*
+        google_fonts_local:
+            type: toggle
+            label: EDITORIAL.ADMIN.THEME.GOOGLE_FONTS.LOCAL
+            highlight: 1
+            default: 0
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
         
         blog_section:
             type: fieldset

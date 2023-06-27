@@ -57,6 +57,16 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             validate:
                 type: bool
+        google_fonts_local:
+            type: toggle
+            label: EDITORIAL.ADMIN.THEME.GOOGLE_FONTS.LOCAL
+            highlight: 1
+            default: 0
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
         menu_options:
           type: section 
           title: EDITORIAL.ADMIN.THEME.MENU.TITLE
@@ -152,18 +162,7 @@ form:
             destination: 'theme://images/logo'
             multiple: false
             accept:
-            - image/*
-        google_fonts_local:
-            type: toggle
-            label: EDITORIAL.ADMIN.THEME.GOOGLE_FONTS.LOCAL
-            highlight: 1
-            default: 0
-            options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            validate:
-                type: bool
-        
+            - image/*        
         blog_section:
             type: fieldset
             collapsible: true

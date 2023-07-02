@@ -127,6 +127,12 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Editor
 | dragToleranceY | number | `65` | Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag). |
 | dragAutoSnap | boolean | `false` | If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released. |
 | preload | boolean | `true` | Enable or disable preloading. | 
+
+# Shortcodes
+
+To view details of Editorial theme shortcodes visit this link: [Editorial theme shortcodes](https://app.gitbook.com/o/vK7CS8dVPZWBTvKggibF/s/jmoGVrRMLQIl462tvGDH/)
+
+You can view some examples of shortcodes in the demo page.
 # Demo page
 
 [http://editorial.juanvillen.es/](http://editorial.juanvillen.es/)

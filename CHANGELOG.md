@@ -1,3 +1,18 @@
+# v1.0.10
+## 07/02/2023
+
+1. [](#new)
+   * Added option to enable or disable contact section
+   * New shortcodes for buttons, flex rows and columns, tables, boxes and images.
+   * Added option to load Google fonts from local folder.
+   * New colors for buttons and boxes (as in Bootstrap)
+2. [](#improved)
+   * Improved CSS styles
+   * Improved traslations
+   * Updated demo content
+3. [](#bugfix)
+   * Fixed date in modular template recent-posts (issue [#18](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/18))
+   * Fixed visibility unplished posts in modular template recent-posts (issue [#20](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/20))
 # v1.0.9
 ## 06/05/2023
 

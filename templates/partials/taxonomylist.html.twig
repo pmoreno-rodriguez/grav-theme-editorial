@@ -7,7 +7,7 @@
     </header>
     <ul class="tags">
         {% for tax,value in taxlist[taxonomy]|sort %}
-            {% set label_class = uri.param(taxonomy) == tax ? 'primary' : 'secondary' %}
+            {% set label_class = uri.param(taxonomy) == tax ? 'warning' : 'primary' %}
             <li>
                 <a class="button medium {{ label_class }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
             </li>

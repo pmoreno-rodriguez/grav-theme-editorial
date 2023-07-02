@@ -10,12 +10,12 @@
     {% endif %}
     <h3>{{page.title}}</h3>
     {# Set page date stamp #}
-    {% if (page.header.publish_date) %}
-        {% set datestamp = page.header.publish_date %}
-    {% elseif (page.header.date) %}
-        {% set datestamp = page.header.date %}
+    {% if config.plugins["translate-date"].enabled %}
+        {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|td(null, "Y-m-d")) : (page.date|td(null, "Y-m-d")) %}
+    {% elseif config.plugins["twig-extensions"].enabled %}
+        {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|localizeddate('medium', 'none', lang)) : (page.date|localizeddate('medium', 'none', lang)) %}
     {% else %}
-        {% set datestamp = page.modified %}
+        {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|date(system.pages.dateformat.short)) : (page.date|date(system.pages.dateformat.short)) %}
     {% endif %}
     {% if datestamp %}
     <p class="data-post">

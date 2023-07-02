@@ -30,6 +30,7 @@ en:
           DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
           MOBILE: Mobile Custom Logo
         CONTACT:
+          ENABLE: Enable Contact section
           COPYRIGHT_TEXT: Copyright Text
           COPYRIGHT_TEXT_HELP: Display custom copyright text in the footer, next to the site name.
           INFORMATION_TITLE: Contact Information
@@ -317,6 +318,7 @@ es:
           DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
           MOBILE: Logo personalizado para dispositivos móviles
         CONTACT:
+          ENABLE: Habilitar la sección Contacto
           INFORMATION_TITLE: Información de contacto
           INFORMATION_TEXT: Información de contacto que se mostrará en la barra lateral.
           TEXT: Texto de la Información de contacto

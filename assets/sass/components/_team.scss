@@ -51,7 +51,7 @@
             @include vendor('display', 'flex');
             @include vendor('justify-content', 'space-evenly');
             
-            .icon {font-size: 1.25em; padding-left: ($gutter / 3);}
+            .icon {font-size: 1.25em; padding-left: calc($gutter / 3);}
             
             a { border: none;
                     

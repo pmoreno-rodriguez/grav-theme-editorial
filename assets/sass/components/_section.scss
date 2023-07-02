@@ -18,8 +18,10 @@
 			font-size: 1em;
 			font-weight: _font(weight-heading-alt);
 			letter-spacing: _font(kerning-heading);
-			margin-top: -0.5em;
+			margin-top: -0.8em !important;
+			margin-bottom: 1.5em !important;
 			text-transform: uppercase;
+			font-size: 1.3em !important;
 
 			time,small {
 				font-family: _font(family);
@@ -46,5 +48,12 @@
 			font-family: _font(family);
 			font-size: 0.9em;
 		}
-		
+
+		@include breakpoint('<=small') {
+
+			p {
+				font-size: 1.1em !important;
+	
+			}
+		}	
 	}

@@ -4,6 +4,7 @@
     height: 2rem;
     line-height: 1.7rem;
     padding-left: 0rem;
+    margin: 1em 0;
 }
 
 #breadcrumbs span {
@@ -38,8 +39,9 @@ ul.pagination li > .page {font-size: 0.9em;}
 
 .data-post {
     color: #7c6556;
-    font-size: 0.9em;
+    font-size: 0.9em !important;
     text-transform: none;
+    margin-bottom: 1em !important;
 }
 
 #header .logo {

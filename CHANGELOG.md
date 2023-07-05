@@ -1,3 +1,8 @@
+# v1.0.10.1
+## 07/05/2023
+
+1. [](#bugfix)
+   * Fixed use of `default` filter by `defined` in sidebar template (issue [#21](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/21))
 # v1.0.10
 ## 07/02/2023
 

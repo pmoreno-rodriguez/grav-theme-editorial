@@ -1,11 +1,12 @@
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
-{% set menu_search = theme_var('menu_search')|default(true) %}
-{% set menu_login = theme_var('menu_login')|default(true) %}
-{% set menu_lang = theme_var('menu_langswitcher')|default(true) %}
+{% set menu_search = theme_var('menu_search')|defined(true) %}
+{% set menu_login = theme_var('menu_login')|defined(true) %}
+{% set menu_lang = theme_var('menu_langswitcher')|defined(true) %}
 {% set show_featured = theme_var('featured')|defined(true) %}
-{% set sidebar_open = theme_var('sidebar_open')|default(true) %}
-{% set contact = theme_var('enable_contact')|default(true) %}
+{% set sidebar_open = theme_var('sidebar_open')|defined(true) %}
+{% set contact = theme_var('enable_contact')|defined(true) %}
+
 {% if uri.params %}
     {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (uri.uri~'/'~blog.slug) : blog.url %}
 {% else %}

@@ -1,14 +1,84 @@
+# v1.0.10.1
+## 07/05/2023
+
+1. [](#bugfix)
+   * Fixed use of `default` filter by `defined` in sidebar template (issue [#21](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/21))
+# v1.0.10
+## 07/02/2023
+
+1. [](#new)
+   * Added option to enable or disable contact section
+   * New shortcodes for buttons, flex rows and columns, tables, boxes and images.
+   * Added option to load Google fonts from local folder.
+   * New colors for buttons and boxes (as in Bootstrap)
+2. [](#improved)
+   * Improved CSS styles
+   * Improved traslations
+   * Updated demo content
+3. [](#bugfix)
+   * Fixed date in modular template recent-posts (issue [#18](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/18))
+   * Fixed visibility unplished posts in modular template recent-posts (issue [#20](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/20))
+# v1.0.9
+## 06/05/2023
+
+1. [](#new)
+   * New effects in Gallery template
+   * New Team twig template
+   * Option to enable or disable open sidebar on startup
+   * Social sharing icons added to blog items
+2. [](#improved)
+   * Improved css styles
+   * Improved traslations
+   * `responsive` css class to make tables responsive
+# v1.0.8
+## 05/20/2023
+
+1. [](#improved)
+   * Modified some styles to improve web accessibility.
+2. [](#bugfix)
+   * Fixed dropdown menu (issue [#16](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/16))
+# v1.0.7
+## 03/29/2023
+
+1. [](#new)
+   * Added support por `translate-date` and `twig-extensions` plugins.
+   * New non-modular contact template
+   * New options for featured image
+2. [](#improved)
+   * Improved simplesearch results with `striptags` filter.
+   * Updated translations
+   * Updated css styles
+  
+# v1.0.6
+## 03/10/2023
+
+1. [](#new)
+   * Added sections for Langswitcher and Login in sidebar
+   * Added login, forgot, reset and profile templates
+   * Added offline template
+   * Added taxonomylist template
+   * Added relatedpages template
+   * Added metadata template
+   * Added Form template
+   * Added breacrumbs support to the blog
+2. [](#improved)
+   * Improved styles for breadcrumbs
+   * Updated translations
+   * Updated css styles
+3. [](#bugfix)
+   * Fixed blog routes in item and blog templates
+
 # v1.0.5
 ## 02/17/2023
 
 1. [](#new)
    * Added Gallery template
-   * Added demo content
+   * Added demo content (issue [#10](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/10))
 2. [](#improved)
    * Improved styles for breadcrumbs
    * Improved translations in blueprints
 3. [](#bugfix)
-   * Fixed error when displaying content with various plugins (lightbox-gallery, highlight, etc)
+   * Fixed error when displaying content with various plugins (lightbox-gallery, highlight, etc)(issues [#11](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/11) and [#12](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/12))
 
 # v1.0.4
 ## 01/23/2023
@@ -19,8 +89,8 @@
    * Added option to choose the `Read more` text on item buttons.
    * Taxonomy Author added in item footer.
 2. [](#bugfix)
-   * Fixed `raw` Twig filter in modular.html.twig.
-   * Fixed `page.header` in media for featured image in blog-list-item.html.twig.
+   * Fixed `raw` Twig filter in modular.html.twig (issue [#4](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/4))
+   * Fixed `page.header` in media for featured image in blog-list-item.html.twig (issue [#5](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/5)).
    * Fixed bug when showing the mobile logo if there is no other image loaded.
    * Fixed show tags in item footer,
 # v1.0.3

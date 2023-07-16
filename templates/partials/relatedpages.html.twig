@@ -1,0 +1,38 @@
+{% block stylesheets %}
+    <style>
+        .score {
+            background-color: #f56a6a;
+            color: #ffffff !important;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            border-bottom: 0;
+            border-radius: 0.375em;
+            display: inline-block;
+            font-size: 0.8em;
+            font-weight: 600;
+            height: 2em;
+            line-height: 2em;
+            margin: 0 0.125em;
+            min-width: 2em;
+            padding: 0 0.5em;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+<section id="relatedpages">
+    <header class="major">
+        <h2>{{ 'EDITORIAL.SIDEBAR.RELATEDPAGES_SECTION'|t }}</h2>
+    </header>
+<ul class="actions aln-left">
+    {% for related_path, score in related_pages %}
+        {% set related = grav['pages'].get(related_path) %}
+        {% if related %}
+            <li>
+                {% if config.plugins.relatedpages.show_score %}
+                    <span class="score">{{ score }}</span>
+                {% endif %}
+                <a href="{{ related.url }}" title="{{ related.title }}">{{ related.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+</section>

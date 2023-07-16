@@ -23,11 +23,39 @@ form:
                       type: text
                       style: vertical
                       label: EDITORIAL.ADMIN.DEFAULT.HEADER_SUBTITLE
+                    image_section:
+                      type: section
+                      underline: true
+                      title: EDITORIAL.ADMIN.DEFAULT.IMAGE_OPTIONS
+                    header.show_pageimage:
+                      type: toggle
+                      style: vertical
+                      label: EDITORIAL.ADMIN.DEFAULT.SHOW_PAGEIMAGE
+                      help: EDITORIAL.ADMIN.DEFAULT.SHOW_PAGEIMAGE_HELP
+                      default: 1
+                      highlight: 1
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
                     header.featured_image:
                       ordering@: header.subtitle
                       style: vertical
                       size: medium
                       type: pagemediaselect
-                      label: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE_LABEL
-                      help: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE_HELP
+                      label: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE.LABEL
+                      help: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE.HELP
                       preview_images: true
+                    header.image_width:
+                        type: number
+                        style: vertical
+                        label: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE.WIDTH
+                        size: small
+                        default: 1000
+                    header.image_height:
+                      type: number
+                      style: vertical
+                      label: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE.HEIGHT
+                      size: small
+                      default: 300

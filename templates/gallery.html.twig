@@ -1,8 +1,14 @@
 {% extends 'partials/base.html.twig' %}
-
+{% set show_image = header_var('show_pageimage')|defined(true) %}
+{% set img_width = header_var('image_width')|default(1000) %}
+{% set img_height = header_var('image_height')|default(300) %}
 {% set featuredImage = page.media[header.featured_image] %}
-{% set title = page.title %}
+{% set title = page.title|raw %}
 {% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
+{% set gallery = page.header.images %}
+{% set thumb_w = page.header.thumb_width|default(600) %}
+{% set thumb_h = page.header.thumb_height|default(450) %}
+
 {% block stylesheets %}
 	{{ parent() }}
 	{% do assets.addCss('theme://assets/css/glightbox.min.css') %}
@@ -13,14 +19,12 @@
 	{% endset %}
 {% do assets.addInlineCss(styling) %}
 {% endblock %}
-{% set gallery = page.header.images %}
-{% set thumb_w = page.header.thumb_width|default(600) %}
-{% set thumb_h = page.header.thumb_height|default(450) %}
+
 {% block content %}
 	<header class="main">
-		{% if featuredImage %}
+		{% if show_image and featuredImage %}
 			<span class="image main">
-				{{ featuredImage.cropZoom(1000,300).loading('lazy').html(title,title,'')|raw }}
+				{{ featuredImage.cropZoom(img_width,img_height).loading('lazy').html(title,title,'')|raw }}
 			</span>
 		{% endif %}
 		<h1>
@@ -32,10 +36,9 @@
 			</p>
 		{% endif %}
 	</header>
-	{% if page.header.primaryImage %}
-		{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-	{% endif %}
+	<div style="margin-bottom: 4em">
 	{{ page.content|raw}}
+	</div>
 	<!-- Gallery -->
 	{% block gallery %}
 		<section itemscope itemtype="http://schema.org/ImageGallery">
@@ -44,13 +47,20 @@
 					{% set item_image = page.media[item.image] %}
 					{% set item_title = item.title %}
 					{% set item_desc = item.description %}
-					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title) %}
-					<div class="{{columns}} gallery_item" itemprop="associatedMedia" itemscope itemtype="MediaObject">
-						<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
-							<span class="image fit">
+					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title,'gallery_content-image') %}
+					
+					<div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="MediaObject">
+						<h3 class="title">{{item_title}}</h3>
+						<div class="gallery_content">
+							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
+							<div class="gallery_content-overlay"></div>
 								{{ thumbnail|raw }}
-							</span>
-						</a>
+							<div class="gallery_content-details {{page.header.overlay_hover_effect}}">
+								<h3 class="gallery_content-title">{{item_title}}</h3>
+								<p class="gallery_content-text">{{item_desc|truncate(75)|raw}}</p>
+							</div>
+							</a>
+						</div>
 					</div>
 				{% endfor %}
 			</div>
@@ -76,7 +86,7 @@
 	    preload: {{ page.header.preload }},
 	    dragAutoSnap: {{ page.header.dragAuto }},
 	    moreText: '{{ page.header.more_text }}',
-		startAt: {{ page.header.startAt }},
+		{% if page.header.startAt is defined %}startAt: {{ page.header.startAt }},{% endif %}
 	    moreLength: {{page.header.more_length}}
 	});
 	{% endset %}

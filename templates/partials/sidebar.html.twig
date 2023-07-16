@@ -1,0 +1,97 @@
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% set new_base_url = blog.url == '/' ? '' : blog.url %}
+{% set menu_search = theme_var('menu_search')|defined(true) %}
+{% set menu_login = theme_var('menu_login')|defined(true) %}
+{% set menu_lang = theme_var('menu_langswitcher')|defined(true) %}
+{% set show_featured = theme_var('featured')|defined(true) %}
+{% set sidebar_open = theme_var('sidebar_open')|defined(true) %}
+{% set contact = theme_var('enable_contact')|defined(true) %}
+
+{% if uri.params %}
+    {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (uri.uri~'/'~blog.slug) : blog.url %}
+{% else %}
+    {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
+{% endif %}
+
+<!-- Sidebar -->
+
+<div id="sidebar"{% if sidebar_open != true %} class="inactive"{% endif %}>
+    <div class="inner">
+        {% if menu_search %}
+            {% if config.plugins.simplesearch.enabled %}
+            <!-- Search -->
+            <section id="search" class="alt">
+                {% include 'partials/simplesearch_searchbox.html.twig' %}
+            </section>
+            {% endif %}
+        {% endif %}
+        
+        <!-- Menu -->
+        <nav id="menu">
+            <header class="major">
+                <h2>Menu</h2>
+            </header>
+            {% include 'partials/navigation.html.twig' %}
+        </nav>
+
+        {% if menu_lang and config.plugins.langswitcher.enabled and system.languages.supported is not null %} 
+        <section>
+            <header class="major">
+                <h2>{{ 'EDITORIAL.SIDEBAR.LANGSWITCHER'|t }}</h2>
+            </header>
+            
+            {% include 'partials/langswitcher.html.twig' %}
+        </section>
+        {% endif %}
+
+        {# display posts with 'featured_tag' tag on current blog page #}
+        {% if show_featured is same as(true) %}
+            {% include 'partials/featured-posts.html.twig' %}
+        {% endif %}
+        
+        {# Show Random post if plugin is enabled #}
+        {% if config.plugins.random.enabled %}
+        <section>
+            <h4>{{ 'EDITORIAL.SIDEBAR.RANDOM_ARTICLE.LABEL'|t }}</h4>
+            <a class="button fit" href="{{ base_url }}/random">
+                <i class="fa fa-retweet"></i> {{ 'EDITORIAL.SIDEBAR.RANDOM_ARTICLE.BUTTON'|t }}
+            </a>
+        </section>
+        {% endif %}
+
+        {% if config.plugins.feed.enabled %}
+        <section class="sidebar-content syndicate">
+            <h4>{{ 'EDITORIAL.SIDEBAR.SYNDICATE.LABEL'|t }}</h4>
+            <a class="button medium primary" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
+            <a class="button medium primary" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+            {% if config.plugins.feed.enable_json_feed %}<a class="btn" href="{{ feed_url }}.json"><i class="fa fa-rss-square"></i> JSON</a>{% endif %}
+        </section>
+        {% endif %}
+
+        {# Show Archives if plugin is enabled #}
+        {% if config.plugins.archives.enabled and archives_data is not empty %}
+            {% include 'partials/archives.html.twig' with {'base_url': new_base_url} %}
+        {% endif %}
+
+        {# Show Related Pages if plugin is enabled #}
+        {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+            {% include 'partials/relatedpages.html.twig' %}
+        {% endif %}
+        
+        {# Only show taxonomylist in blog pages #}
+        {% if config.plugins.taxonomylist.enabled %}
+            {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+        {% endif %}
+
+        {% if menu_login %}
+            {% include 'partials/login-button.html.twig' %}
+        {% endif %}
+
+        {# Show Contact section if it is enabled #}
+        {% if contact is same as(true) %}
+            {% include 'partials/contact.html.twig' %}
+        {% endif %}
+
+        {% include 'partials/footer.html.twig' %}
+    </div>
+</div>

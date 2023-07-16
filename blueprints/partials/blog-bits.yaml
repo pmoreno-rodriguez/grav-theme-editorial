@@ -1,0 +1,34 @@
+form:
+  fields:
+
+    blog_config:
+      type: spacer
+      title: EDITORIAL.ADMIN.BLOG.CONFIGURATION
+
+    header.readmore_text:
+      type: text
+      toggleable: true
+      default: 'Read more'
+      size: large
+      label: EDITORIAL.ADMIN.BLOG.READMORE_TEXT
+      description: EDITORIAL.ADMIN.BLOG.READMORE_TEXT_DESCRIPTION
+
+    header.blog_url:
+      type: text
+      toggleable: true
+      label: Blog Route
+      help: The route to the main blog page that contains the "Show ..." configuration
+      default: '/blog'
+      placeholder: '/blog'
+      size: medium
+    
+    header.content.breadcrumbs:
+      type: toggle
+      toggleable: true
+      label:  EDITORIAL.ADMIN.BLOG.SHOW_BREADCRUMBS
+      highlight: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool

@@ -1,10 +1,10 @@
+<!-- Section -->
+
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
-{% set show_featured = theme_var('featured')|defined(true) %}
 {% set featured_number = theme_var('featured_number') %}
 {% set featured_tag = theme_var('featured_tag') %}
 {% set featured = taxonomy.findTaxonomy({'tag': featured_tag}) %}
 
-{% if show_featured %}
 <section>
     <header class="major">
         <h2>{{ 'EDITORIAL.SIDEBAR.FEATURED_POSTS'|t }}</h2>
@@ -36,4 +36,3 @@
 
     {% endif %}
 </section>
-{% endif %}

@@ -1,14 +1,25 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set base_url = page.parent.url %}
-{% if base_url == '/' %}
-  {% set base_url = '' %}
-{% endif %}
-
-{% set show_pagination = header_var('content.pagination')|defined(false) %}
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% set new_base_url = blog.url == '/' ? '' : blog.url %}
+{% set show_pagination = header_var('content.pagination')|defined(true) %}
 {% set show_breadcrumbs = header_var('content.breadcrumbs')|defined(false) %}
-{% set image = page.media[page.header.featured_image] ?: page.media.images|first %}
-{% set title = page.title %}
+{% set show_image = header_var('show_pageimage')|defined(true) %}
+{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set img_width = header_var('image_width')|default(1000) %}
+{% set img_height = header_var('image_height')|default(300) %}
+{% set title = page.title|raw %}
+
+{# Support for translate and twig extensions plugins #}
+{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+
+{% if config.plugins["translate-date"].enabled %}
+    {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|td(null, "Y-m-d")) : (page.date|td(null, "Y-m-d")) %}
+{% elseif config.plugins["twig-extensions"].enabled %}
+    {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|localizeddate('medium', 'none', lang)) : (page.date|localizeddate('medium', 'none', lang)) %}
+{% else %}
+    {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|date(system.pages.dateformat.short)) : (page.date|date(system.pages.dateformat.short)) %}
+{% endif %}
 
 {% block content %}
     <p>
@@ -22,73 +33,88 @@
         {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
         <p class="data-post">
         {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime}}</small>{% endif %}
-        {% if (page.header.publish_date) %}
-            {% set datestamp = page.header.publish_date %}
-        {% elseif (page.header.date) %}
-            {% set datestamp = page.header.date %}
-        {% else %}
-            {% set datestamp = page.modified %}
-        {% endif %}
+        
         {% if datestamp %}
-        <br><small itemprop="datePublished"><i class="far fa-clock"></i> Posted on {{ datestamp|date(system.pages.dateformat.short) }}</small>
+        <br><time itemprop="datePublished"><i class="far fa-clock"></i> {{ 'EDITORIAL.ITEM.POSTED_ON'|t }} {{ datestamp }}</time>
         {% endif %}
         {% if page.taxonomy.author %}<br><small itemprop="author" itemscope itemtype="https://schema.org/Person"><i class="fas fa-user"></i>
         {% for author in page.taxonomy.author %}
-        <a href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}"><span itemprop="name">{{ author|e|title }}</span></a>
+        <a class="authors" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_OF'|t }} {{ (author|capitalize) }}"
+        href="{{ new_base_url }}/author{{ config.system.param_sep }}{{ author }}"><span class="name" itemprop="name" rel="author">{{ author|capitalize }}</span>
+        </a>
         {% if not loop.last %}, {% endif %}
         {% endfor %}
         </small>{% endif %}
         </p>
         
     </header>
-    {% if image %}
-        <span class="image main" itemprop="image">{{ image.cropZoom(1000,300).loading('lazy').html(title,title,'image')|raw }}</span>
+    {% if show_image and image %}
+        <span class="image main" itemprop="image">{{ image.cropZoom(img_width, img_height).loading('lazy').attribute('decoding','async').html(title,title,'image')|raw }}</span>
     {% endif %}
     <div itemprop="articleBody">
         {{ page.content|raw }}
     </div>
-    <p>
-        {% if page.taxonomy.tag %}
-        <span>
-           <i class="fas fa-tags"></i>
-            {% for tag in page.taxonomy.tag %}
-                <a class="tags" title="{{ 'See other posts in ' ~ (tag|capitalize) }}" 
-                href="{{ base_url  }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="url"><span itemprop="keywords">{{ tag }}</span></a>
-                {% if not loop.last %}, {% endif %}
-            {% endfor %}
-        </span>
-        {% endif %}
-        
-        {% if page.taxonomy.category %}
-        <span>
-            <i class="fas fa-link fa-md"></i>
-            {% for category in page.taxonomy.category %}
-                <a class="tags" title="{{ 'See other posts in ' ~ (category|capitalize) }}"
-			    href="{{ base_url }}/category{{ config.system.param_sep }}{{ category }}" itemprop="url"><span itemprop="keywords">{{ category }}</span></a>
-                {% if not loop.last %}, {% endif %}
-            {% endfor %}
-        </span>
-        {% endif %}
-        
-        {% if page.taxonomy.author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <i class="fas fa-user fa-md"></i>
-            {% for author in page.taxonomy.author %}
-                <a class="tags" title="{{ 'See other posts by ' ~ (author|capitalize) }}" 
-                href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url"><span class="name" itemprop="name" rel="author">{{ author }}</span>
-                {% if not loop.last %}, {% endif %}
-            {% endfor %}
-        </span>
-        {% endif %}
+    <div class="share row aln-between">
+        <div class="col-6 col-12-small align-left">
+            <p>
+                {% if page.taxonomy.tag %}
+                <span>
+                <i class="fas fa-tags"></i>
+                    {% for tag in page.taxonomy.tag %}
+                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_IN'|t }} {{ (tag|capitalize) }}" 
+                        href="{{ new_base_url  }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="url"><span itemprop="keywords">{{ tag|capitalize }}</span></a>
+                        {% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </span>
+                {% endif %}
                 
-    </p>
+                {% if page.taxonomy.category %}
+                <span>
+                    <i class="fas fa-link fa-md"></i>
+                    {% for category in page.taxonomy.category %}
+                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_IN'|t }} {{ (category|capitalize) }}"
+                        href="{{ new_base_url }}/category{{ config.system.param_sep }}{{ category }}" itemprop="url"><span itemprop="keywords">{{ category|capitalize }}</span></a>
+                        {% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </span>
+                {% endif %}
+                
+                {% if page.taxonomy.author %}
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <i class="fas fa-user fa-md"></i>
+                    {% for author in page.taxonomy.author %}
+                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_OF'|t }} {{ (author|capitalize) }}" 
+                        href="{{ new_base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url"><span class="name" itemprop="name" rel="author">{{ author|capitalize }}</span></a>
+                        {% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </span>
+                {% endif %}
+                        
+            </p>
+        </div>
+        <div class="col-6 col-12-small align-right">
+            <ul class="icons">
+                {% set share = [
+                { 'name': 'facebook', 'icon': 'fa-facebook', 'enabled': header_var('shareicons.facebook')|defined(true), 'url': 'https://www.facebook.com/sharer/sharer.php?', 'params': {'u': page.url(true)} },
+                { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?', 'params': {'text': page.title, 'url': page.url(true)} },
+                { 'name': 'whatsapp', 'icon': 'fa-whatsapp', 'enabled': header_var('shareicons.whatsapp')|defined(true), 'url': 'https://wa.me/?', 'params': {'text': page.title ~ '. ' ~ page.url(true)}, 'action': 'share/whatsapp/share' },
+                { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?', 'params': {'url': page.url(true), 'text': page.title} },
+                ] %}
+                {% for item in share %}
+                    {% if item.enabled|defined(true) %}
+                        <li><a class="icon brands {{ item.icon }}" target="_blank" href="{{- item.url -}}{{- item.params|url_encode-}}" {% if item.action is defined %}data-action="{{ item.action }}"{% endif %} aria-label="{{ 'EDITORIAL.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}" title="{{ 'EDITORIAL.MISC.SHARE_ON'|t }} {{item.name|capitalize }}"></a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
     {% if show_pagination %}
     <p class="align-center">
         {% if not page.isLast %}
-                <a class="button" href="{{ page.prevSibling.url }}"><i class="fas fa-angle-left"></i> {{ 'Previous'|t }}</a>
+                <a class="button" href="{{ page.prevSibling.url }}"><i class="fas fa-angle-left"></i> {{ 'EDITORIAL.BLOG.PAGINATION.PREV'|t }}</a>
         {% endif %}
         {% if not page.isFirst %}
-            <a class="button" href="{{ page.nextSibling.url }}">{{ 'Next'|t }} <i class="fas fa-angle-right"></i></a>
+            <a class="button" href="{{ page.nextSibling.url }}">{{ 'EDITORIAL.BLOG.PAGINATION.NEXT'|t }} <i class="fas fa-angle-right"></i></a>
         {% endif %}
     </p>
     {% endif %}

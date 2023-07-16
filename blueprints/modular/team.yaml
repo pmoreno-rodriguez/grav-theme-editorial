@@ -1,0 +1,61 @@
+title: EDITORIAL.ADMIN.MODULAR.TEAM.TAB
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        TEAM:
+          type: tab
+          title: EDITORIAL.ADMIN.MODULAR.TEAM.TAB
+          fields:
+            header.layout:
+              type: select
+              label: EDITORIAL.ADMIN.MODULAR.TEAM.TEAM_LAYOUT
+              default: standard
+              size: medium
+              options:
+                medium: EDITORIAL.ADMIN.MODULAR.TEAM.TEAM_LAYOUT_TWOCOLS
+                standard: EDITORIAL.ADMIN.MODULAR.TEAM.TEAM_LAYOUT_THREECOLS
+            header.team:
+              name: team
+              type: list
+              size: long
+              collapsed: true
+              label: EDITORIAL.ADMIN.MODULAR.TEAM.TAB
+              fields:
+                .image:
+                  type: pagemediaselect
+                  size: medium
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.IMAGE
+                  help: EDITORIAL.ADMIN.MODULAR.TEAM.IMAGE_HELP
+                  preview_images: true
+                .name:
+                  type: text
+                  size: medium
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.NAME
+                .position:
+                  type: text
+                  size: medium
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.POSITION
+                .details:
+                  type: textarea
+                  columns: 4
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.DETAILS
+                  help: EDITORIAL.ADMIN.MODULAR.TEAM.DETAILS_HELP
+                .social_media:
+                  type: list
+                  label: EDITORIAL.ADMIN.MODULAR.TEAM.SOCIAL_MEDIA.LABEL
+                  help: EDITORIAL.ADMIN.MODULAR.TEAM.SOCIAL_MEDIA.HELP
+                  collapsed: true
+                  max: 6
+                  fields:
+                    .name:
+                      type: text
+                      size: small
+                      label: EDITORIAL.ADMIN.MODULAR.TEAM.SOCIAL_MEDIA.NAME
+                      help: EDITORIAL.ADMIN.MODULAR.TEAM.SOCIAL_MEDIA.NAME_HELP
+                    .url:
+                      type: text
+                      size: small
+                      label: EDITORIAL.ADMIN.MODULAR.TEAM.SOCIAL_MEDIA.URL

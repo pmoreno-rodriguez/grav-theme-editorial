@@ -1,7 +1,7 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 1.0.5
+version: 1.0.10.1
 description: GravCMS port of the HTML5UP theme Editorial
 icon: rebel
 author:
@@ -17,6 +17,7 @@ license: MIT
 dependencies:
   - { name: grav, version: '>=1.7.0' }
   - simplesearch
+  - shortcode-core
 
 form:
     validation: loose
@@ -46,6 +47,68 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             validate:
                 type: bool
+        sidebar_open:
+            type: toggle
+            label: EDITORIAL.ADMIN.THEME.SIDEBAR_OPEN
+            help: EDITORIAL.ADMIN.THEME.SIDEBAR_OPEN_HELP
+            highlight: 1
+            default: 1
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
+        google_fonts_local:
+            type: toggle
+            label: EDITORIAL.ADMIN.THEME.GOOGLE_FONTS.LOCAL
+            highlight: 0
+            default: 0
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
+        menu_options:
+          type: section 
+          title: EDITORIAL.ADMIN.THEME.MENU.TITLE
+          underline: true
+
+        menu_langswitcher:
+          type: toggle
+          label: EDITORIAL.ADMIN.THEME.MENU.LANGSWITCHER
+          help: EDITORIAL.ADMIN.THEME.MENU.LANGSWITCHER_HELP
+          default: 1
+          highlight: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        
+        menu_search:
+          type: toggle
+          label: EDITORIAL.ADMIN.THEME.MENU.SEARCH
+          help: EDITORIAL.ADMIN.THEME.MENU.SEARCH_HELP
+          default: 1
+          highlight: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        
+        menu_login:
+          type: toggle
+          label: EDITORIAL.ADMIN.THEME.MENU.LOGIN
+          help: EDITORIAL.ADMIN.THEME.MENU.LOGIN_HELP
+          default: 1
+          highlight: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
         header_section:
             type: section
             title: EDITORIAL.ADMIN.THEME.HEADER_OPTIONS
@@ -100,8 +163,7 @@ form:
             destination: 'theme://images/logo'
             multiple: false
             accept:
-            - image/*
-        
+            - image/*        
         blog_section:
             type: fieldset
             collapsible: true
@@ -151,6 +213,16 @@ form:
             collapsed: true
             icon: id-card-o
             fields:
+                enable_contact:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.CONTACT.ENABLE
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                    validate:
+                        type: bool
                 copyright.text:
                     type: textarea
                     rows: 2

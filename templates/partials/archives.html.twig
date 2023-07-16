@@ -1,0 +1,39 @@
+{% block stylesheets %}
+    <style>
+        .archive_items {
+            background-color: #f56a6a;
+            color: #ffffff !important;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            border-bottom: 0;
+            border-radius: 0.375em;
+            display: inline-block;
+            font-size: 0.8em;
+            font-weight: 600;
+            height: 2em;
+            line-height: 2em;
+            margin: 0 0.125em;
+            min-width: 2em;
+            padding: 0 0.5em;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+<section id="archives">
+    <header class="major">
+        <h2>{{ 'EDITORIAL.SIDEBAR.ARCHIVES_SECTION'|t }}</h2>
+    </header>
+    <ul class="actions aln-left">
+
+    {% for month,items in archives_data %}
+        <li>
+            {% if archives_show_count %}
+            <span class="archive_items">{{ items|length }}</span>
+            {% endif %}
+            <a href="{{ archives_url ?? base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date(config.plugins.archives.taxonomy_values.month)|lower|e('url') }}">
+            <span class="archive_date">{{ month|date(config.plugins.archives.date_display_format) }} </span>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</section>

@@ -1,0 +1,25 @@
+{% extends 'partials/base.html.twig' %}
+{% set show_image = header_var('show_pageimage')|defined(true) %}
+{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set img_width = header_var('image_width')|default(1000) %}
+{% set img_height = header_var('image_height')|default(300) %}
+{% set title = page.title|raw %}
+
+{% block content %}
+
+	<header class="main">   
+	{% if show_image and image %}
+	    <span class="image main">
+		{{ image.cropZoom(img_width, img_height).loading('lazy').html(title,title,'')|raw }}
+	    </span>
+	{% endif %}
+	<h1>{{ title|raw }}</h1>
+    {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+	</header>
+	<div>
+	    <p class="lead">{{ page.content|raw }}</p>
+		{% include "forms/form.html.twig" with { form: forms('contact-form')} %}
+	</div>
+		
+{% endblock %}
+

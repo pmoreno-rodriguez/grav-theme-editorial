@@ -23,7 +23,7 @@
 				color: inherit;
 				cursor: pointer;
 				display: block;
-				font-size: 0.9em;
+				font-size: inherit;
 				padding: 0.625em 0;
 
 				&:hover {
@@ -56,6 +56,7 @@
 					&.active {
 						& + ul {
 							display: block;
+							color: _palette(fg-light);
 						}
 
 						&:before {
@@ -79,7 +80,8 @@
 					padding-left: 1em;
 
 					a, span {
-						font-size: 0.8em;
+						font-size: 1em;
+						color: _palette(fg);
 					}
 
 					> li {

@@ -80,6 +80,21 @@ form:
             Effects_title:
               type: spacer
               title: EDITORIAL.ADMIN.GALLERY.OPTIONS.EFFECTS_TITLE
+            header.overlay_hover_effect:
+              type: select
+              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.LABEL
+              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.HELP
+              default: fadeIn-bottom
+              size: medium
+              options:
+                fadeIn-bottom: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM
+                fadeIn-top: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP
+                fadeIn-left: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_LEFT
+                fadeIn-right: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_RIGHT
+                fadeIn-top fadeIn-right: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP_RIGHT
+                fadeIn-top fadeIn-left: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP_LEFT
+                fadeIn-bottom fadeIn-right: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM_RIGHT
+                fadeIn-bottom fadeIn-left: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM_LEFT
             header.open_effect:
               type: select
               label: EDITORIAL.ADMIN.GALLERY.OPTIONS.OPEN_EFFECT.LABEL
@@ -176,9 +191,7 @@ form:
               label: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_STARTAT
               help: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_STARTAT_HELP
               size: small
-              default: 0
               validate:
-                required: true
                 min: 0
                 max: 1000
             Styling_title:

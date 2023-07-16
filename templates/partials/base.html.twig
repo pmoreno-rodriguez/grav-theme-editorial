@@ -5,6 +5,7 @@
 {% set logo = theme_var('custom_logo_mobile') ?: theme_var('custom_logo') %}
 {% set social = theme_var('social_enabled')|defined(false) %}
 {% set slogan = theme_config.themeSlogan %}
+{% set google_fonts = theme_var('google_fonts_local') ? '-local.css' : '-remote.css' %}
 
 <!DOCTYPE HTML>
 <!--
@@ -31,12 +32,13 @@
 
     {# Original assets from HTML5Up with a few custom styles for several Grav plugins #}
     {% block stylesheets %}
-        {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 96}) %}
+        {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 15}) %}
         {% do assets.addCss('theme://assets/css/misc.css', {'priority': 10}) %}
+        {% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {'priority': 20}) %}
     {% endblock %}
     
     {% block javascripts %}
-        {% do assets.addJs('jquery', 100) %}
+        {% do assets.addJs('jquery', 10) %}
         {% do assets.addJs('theme://assets/js/util.js', {'priority':98, 'group':'bottom'}) %}
         {% do assets.addJs('theme://assets/js/main.js', {'priority':97, 'group':'bottom'}) %}
         {% do assets.addJs('theme://assets/js/breakpoints.min.js', {'priority':101, 'group':'bottom'}) %}
@@ -77,41 +79,21 @@
 
                 <!-- Content -->
                 <section>
+                    {% block messages %}
+                        {% include 'partials/messages.html.twig' ignore missing %}
+                    {% endblock %}
+
                     {% block content %}{% endblock %}
                 </section>
             </div>
         </div>
-        <!-- Sidebar -->
-        <div id="sidebar">
-            <div class="inner">
-                {% if config.plugins.simplesearch.enabled %}
-                <!-- Search -->
-                <section id="search" class="alt">
-                    {% include 'partials/simplesearch_searchbox.html.twig' %}
-                </section>
-                {% endif %}
+        
+        {% include 'partials/sidebar.html.twig' %}
 
-                <!-- Menu -->
-                <nav id="menu">
-                    <header class="major">
-                        <h2>Menu</h2>
-                    </header>
-                    {% include 'partials/navigation.html.twig' %}
-                </nav>
-
-                <!-- Section -->
-                {% include 'partials/featured-posts.html.twig' %}
-
-                <!-- Section -->
-                {% include 'partials/contact.html.twig' %}
-
-                <!-- Footer -->
-                {% include 'partials/footer.html.twig' %}
-            </div>
-        </div>
     </div>
-    <!-- Scripts -->
+    
     {% block bottom %}
+    <!-- Scripts -->
         {{ assets.js('bottom')|raw }}
     {% endblock %}
 </body>

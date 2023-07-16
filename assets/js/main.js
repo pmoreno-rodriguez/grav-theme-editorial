@@ -78,9 +78,11 @@
 				$sidebar.addClass('inactive');
 			});
 
-			breakpoints.on('>large', function() {
+			/* Set active or inactive on large screens via the sidebar Twig template with the sidebar_opened variable */
+
+			/*breakpoints.on('>large', function() {
 				$sidebar.removeClass('inactive');
-			});
+			});*/
 
 		// Hack: Workaround for Chrome/Android scrollbar position bug.
 			if (browser.os == 'android'
@@ -242,6 +244,7 @@
 			$menu_openers.each(function() {
 
 				var $this = $(this);
+				$(".submenu").hide(); /* Initially submenus are hidden */
 
 				$this.on('click', function(event) {
 
@@ -249,10 +252,17 @@
 						event.preventDefault();
 
 					// Toggle.
-						$menu_openers.not($this).removeClass('active');
+					if ($this.hasClass('active')) {
+						$this.removeClass('active');
+						$this.next(".submenu").css('display','block');
+					} else {
 						$this.toggleClass('active');
+						$this.next(".submenu").css('display','none');
+					}
 
-					// Trigger resize (sidebar lock).
+						$this.next(".submenu").slideToggle();
+					
+						// Trigger resize (sidebar lock).
 						$window.triggerHandler('resize.sidebar-lock');
 
 				});

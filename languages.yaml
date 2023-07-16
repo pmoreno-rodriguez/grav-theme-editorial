@@ -5,7 +5,19 @@ en:
         THEME_CONFIG: Theme Config
         DROPDOWN_MENU: Dropdown in navbar
         PRODUCTION_MODE: Production mode
-        PRODUCTION_MODE_HELP: When enabled, MUNDANA will render with minified CSS
+        PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
+        SIDEBAR_OPEN: Open sidebar
+        SIDEBAR_OPEN_HELP: Set if the sidebar is open or closed at startup
+        GOOGLE_FONTS:
+          LOCAL: Use locally hosted Google Fonts
+        MENU:
+          TITLE: Top Menu Configuration
+          LANGSWITCHER: Enable Langswitcher menu option
+          LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the top menu.
+          SEARCH: Enable Search menu option
+          SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in top menu.
+          LOGIN: Enable Login menu option
+          LOGIN_HELP: You can enable or disable Login icon in top menu, to show login status.
         HEADER_OPTIONS: Header Options
         FAVICON: Choose your own favicon
         FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
@@ -18,6 +30,7 @@ en:
           DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
           MOBILE: Mobile Custom Logo
         CONTACT:
+          ENABLE: Enable Contact section
           COPYRIGHT_TEXT: Copyright Text
           COPYRIGHT_TEXT_HELP: Display custom copyright text in the footer, next to the site name.
           INFORMATION_TITLE: Contact Information
@@ -94,10 +107,28 @@ en:
           LIMIT_HELP: Maximum number of posts to display.
           READMORE_TEXT: Readmore button text
           READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
+        TEAM:
+          TAB: Team
+          TEAM_LAYOUT: Layout
+          TEAM_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
+          TEAM_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
+          IMAGE: Profile image
+          IMAGE_HELP: Select a profile image
+          NAME: Name
+          POSITION: Position
+          DETAILS: Profile details
+          DETAILS_HELP: Brief profile description
+          SOCIAL_MEDIA:
+            LABEL: Social media
+            HELP: The template allows a maximum of 6 icons for each member. 
+            NAME: Social name
+            NAME_HELP: You only have to write the name of the social network here (eg, Facebook, Twitter, etc)
+            URL: Social URL
       BLOG:
         TAB: Blog Config
         ROUTE: Blog Route
         ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
+        CONFIGURATION: Configuration
         TITLE: Content Definition
         ITEMS: 
           LABEL: Items
@@ -112,7 +143,8 @@ en:
           DIR_ASC: Ascending
           DIR_DESC: Descending
         SHOW_BREADCRUMBS: Show Breadcrumbs
-        PAGINATION: Pagination
+        PAGINATION: 
+          LABEL: Pagination
         URL_TAXONOMY_FILTERS: URL Taxonomy Filters
         READMORE_TEXT: Readmore button text
         READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
@@ -157,6 +189,17 @@ en:
           ACTIONS_TITLE: Actions
           STYLING_TITLE: Styling
           BEHAVIOR_TITLE: Behaviors
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Overlay effect on hover
+            HELP: Set the hover effect when the mouse is over an image
+            FADEIN_BOTTOM: Fade in bottom
+            FADEIN_TOP: Fade in top
+            FADEIN_LEFT: Fade in left
+            FADEIN_RIGHT: Fade in right
+            FADEIN_TOP_RIGHT: Fade in top right
+            FADEIN_TOP_LEFT: Fade in top left
+            FADEIN_BOTTOM_RIGHT: Fade in bottom right
+            FADEIN_BOTTOM_LEFT: Fade in bottom left
           OPEN_EFFECT:
             LABEL: Open Effect
             ZOOM: Zoom
@@ -188,7 +231,7 @@ en:
           CLOSE_OUTSIDE: Close with Outside Click
           CLOSE_OUTSIDE_HELP: Close the lightbox when clicking outside the active slide.
           MORE_STARTAT: 'Start At:'
-          MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide)
+          MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide). If it is not defined, the clicked image is shown
           WIDTH: Width
           WIDTH_HELP: 'Default width for inline elements and iframes, you can define a specific size on each slide. You can use any unit for example 90% or 100vw for full width'
           HEIGHT: Height
@@ -212,17 +255,45 @@ en:
         FEATURED_IMAGE_LABEL: Featured Image
         FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
         MENU_TEXT: Menu
+        IMAGE_OPTIONS: Image options
+        FEATURED_IMAGE: 
+          LABEL: Featured image
+          HELP: Select a featured image to display at the top of the page
+          WIDTH: Width
+          HEIGHT: Height
+        SHOW_PAGEIMAGE: Show Image
+        SHOW_PAGEIMAGE_HELP: Enable primary image if it is defined or the first image of the media page.
     SIDEBAR:
+      LANGSWITCHER: Choose language
       CONTACT_INFO: Get in touch
       FEATURED_POSTS: Featured Posts
       FEATURED_MORE: More featured posts
       NO_FEATURED: No featured posts
+      LOGIN_SECTION: Login
+      RELATEDPAGES_SECTION: Related pages
+      ARCHIVES_SECTION: Archives
+      RANDOM_ARTICLE:
+        LABEL: Random Article
+        BUTTON: I'm Feeling Lucky!
+      SYNDICATE:
+        LABEL: Syndicate 
+      TAXONOMYLIST:
+        LABEL: Popular Tags
     BLOG:
       LISTING_TITLE_CATEGORY: 'Posts in Category: '
       LISTING_TITLE_TAG: 'Posts with Tag: '
       LISTING_TITLE_AUTHOR: 'Posts written by Author: '
+      LISTING_TITLE_MONTH: 'Post of the month: '
+      PAGINATION: 
+        PREV: Previous
+        NEXT: Next
     ITEM:
       POSTED_ON: Posted on
+      SEE_OTHER_POSTS_OF: See other posts by
+      SEE_OTHER_POSTS_IN: See other posts in
+    FORM_SUMMARY: Here is the summary of what you wrote to us
+    MISC:
+      SHARE_ON: Share on
 es:
   EDITORIAL:
     ADMIN:
@@ -230,7 +301,11 @@ es:
         THEME_CONFIG: Configuración del Tema
         DROPDOWN_MENU: Menu Desplegable
         PRODUCTION_MODE: Modo Producción
-        PRODUCTION_MODE_HELP: Si está activado, Future cargará con CSS minificado
+        PRODUCTION_MODE_HELP: Si está activado, EDITORIAL cargará con CSS minificado
+        SIDEBAR_OPEN: Barra lateral abierta
+        SIDEBAR_OPEN_HELP: Establece si la barra lateral está abierta o cerrada al inicio.
+        GOOGLE_FONTS:
+          LOCAL: Usar fuentes de Google alojadas localmente
         HEADER_SECTION: Sección de encabezado
         FAVICON: Elige tu propio favicon
         FAVICON_DESCRIPTION: Se usará en lugar del favicon predeterminado `theme://images/favicon.png`
@@ -243,6 +318,7 @@ es:
           DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
           MOBILE: Logo personalizado para dispositivos móviles
         CONTACT:
+          ENABLE: Habilitar la sección Contacto
           INFORMATION_TITLE: Información de contacto
           INFORMATION_TEXT: Información de contacto que se mostrará en la barra lateral.
           TEXT: Texto de la Información de contacto
@@ -317,6 +393,23 @@ es:
           LIMIT_HELP: Máximo número de entradas para mostrar
           READMORE_TEXT: Texto del botón `Leer más`
           READMORE_TEXT_DESCRIPTION: Especifique un texto personalizado para el botón `leer más`
+        TEAM:
+          TAB: Equipo
+          TEAM_LAYOUT: Diseño
+          TEAM_LAYOUT_TWOCOLS: Medio   = 2 / 1 columnas
+          TEAM_LAYOUT_THREECOLS: Estándar  = 3 / 2 / 1 columnas
+          IMAGE: Imagen de perfil
+          IMAGE_HELP: Seleccione una imagen de perfil
+          NAME: Nombre
+          POSITION: Cargo
+          DETAILS: Detalles del perfil
+          DETAILS_HELP: Breve descripción del perfil
+          SOCIAL_MEDIA:
+            LABEL: Redes sociales
+            HELP: La plantilla permite un maximo de 6 de iconos para cada miembro.
+            NAME: Nombre de red social
+            NAME_HELP: Sólo debe escribir el nombre de la red social aquí (ej, Facebook, Twitter, etc)
+            URL: URL de red social
       BLOG:
         TAB: Configuración del Blog
         ROUTE: Ruta del Blog
@@ -335,7 +428,8 @@ es:
           DIR_ASC: Ascendente
           DIR_DESC: Descendente
         SHOW_BREADCRUMBS: Mostrar Migas de pan
-        PAGINATION: Paginación
+        PAGINATION:
+          LABEL: Paginación
         URL_TAXONOMY_FILTERS: Filtros de taxonomía de URL
         READMORE_TEXT: Texto del botón `Leer más`
         READMORE_TEXT_DESCRIPTION: Especifique un texto personalizado para el botón `leer más`
@@ -380,6 +474,17 @@ es:
           ACTIONS_TITLE: Acciones
           STYLING_TITLE: Estilos
           BEHAVIOR_TITLE: Comportamiento
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Efecto de superposición al pasar el ratón
+            HELP: Establece el efecto de superposición cuando el ratón está sobre una imagen
+            FADEIN_BOTTOM: Fundido inferior
+            FADEIN_TOP: Fundido superior
+            FADEIN_LEFT: Fundido desde la izquierda
+            FADEIN_RIGHT: Fundido desde la derecha
+            FADEIN_TOP_RIGHT: Fundido superior derecha
+            FADEIN_TOP_LEFT: Fundido superior izquierda
+            FADEIN_BOTTOM_RIGHT: Fundido inferior derecha
+            FADEIN_BOTTOM_LEFT: Fundido inferior izquierda
           OPEN_EFFECT:
             LABEL: Efecto de apertura
             ZOOM: Zoom
@@ -411,7 +516,7 @@ es:
           CLOSE_OUTSIDE: Cerrar al pulsar fuera
           CLOSE_OUTSIDE_HELP: Cierra el cuadro de luz al hacer clic fuera de la diapositiva activa.
           MORE_STARTAT: 'Comenzar en:'
-          MORE_STARTAT_HELP: Iniciar lightbox en el índice definido (0 es la primera diapositiva)
+          MORE_STARTAT_HELP: Iniciar lightbox en el índice definido (0 es la primera diapositiva). Si no se define, se muestra la imagen en la que se hizo clic
           WIDTH: Ancho
           WIDTH_HELP: 'Ancho predeterminado para elementos en línea e iframes, puede definir un tamaño específico en cada diapositiva. Puede usar cualquier unidad, por ejemplo, 90% o 100vw para ancho completo'
           HEIGHT: Alto
@@ -435,14 +540,42 @@ es:
         FEATURED_IMAGE_LABEL: Imagen destacada
         FEATURED_IMAGE_HELP: Seleccione un archivo para usarlo como la imagen destacada superior de la página 
         MENU_TEXT: Menu
+        IMAGE_OPTIONS: Opciones de imagen
+        FEATURED_IMAGE: 
+          LABEL: Imagen destacada
+          HELP: Seleccione una imagen destacada para mostrar en la superior de la página
+          WIDTH: Ancho
+          HEIGHT: Alto
+        SHOW_PAGEIMAGE: Mostrar imagen
+        SHOW_PAGEIMAGE_HELP: Habilitar la imagen principal si está definida o la primera de las imágenes de la página.
     SIDEBAR:
+      LANGSWITCHER: Elegir idioma
       CONTACT_INFO: Ponerse en contacto
       FEATURED_POSTS: Entradas destacadas
       FEATURED_MORE: Más entradas destacadas
       NO_FEATURED: No hay entradas destacadas
+      LOGIN_SECTION: Acceder
+      RELATEDPAGES_SECTION: Páginas relacionadas
+      ARCHIVES_SECTION: Archivo
+      RANDOM_ARTICLE:
+        LABEL: Artículo Aleatorio
+        BUTTON: Voy a tener suerte!
+      SYNDICATE:
+        LABEL: Distribuir
+      TAXONOMYLIST:
+        LABEL: Etiquetas populares
     BLOG:
       LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
       LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
       LISTING_TITLE_AUTHOR: 'Publicaciones escritas por: '
+      LISTING_TITLE_MONTH: 'Publicaciones del mes: '
+      PAGINATION:
+        PREV: Anterior
+        NEXT: Siguiente
     ITEM:
-      POSTED_ON: Publicado en
+      POSTED_ON: Publicado el
+      SEE_OTHER_POSTS_OF: Ver otras publicaciones de
+      SEE_OTHER_POSTS_IN: Ver otras publicaciones en
+    FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
+    MISC:
+      SHARE_ON: Compartir en

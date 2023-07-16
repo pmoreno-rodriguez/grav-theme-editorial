@@ -99,23 +99,23 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after, body.is-re
 body, input, select, textarea {
   color: #454549;
   font-family: "Open Sans", sans-serif;
-  font-size: 14pt;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.65;
 }
 @media screen and (max-width: 1680px) {
   body, input, select, textarea {
-    font-size: 12pt;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 1280px) {
   body, input, select, textarea {
-    font-size: 11pt;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 360px) {
   body, input, select, textarea {
-    font-size: 10pt;
+    font-size: 12px;
   }
 }
 
@@ -160,29 +160,29 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 2.5em;
   margin: 0 0 0.5em 0;
   line-height: 1.3;
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 1.25em;
+  font-size: 1.75em;
 }
 
 h4 {
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 h5 {
-  font-size: 0.9em;
+  font-size: 1.25em;
 }
 
 h6 {
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 @media screen and (max-width: 1680px) {

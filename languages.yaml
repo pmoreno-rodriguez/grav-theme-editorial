@@ -306,6 +306,14 @@ es:
         SIDEBAR_OPEN_HELP: Establece si la barra lateral está abierta o cerrada al inicio.
         GOOGLE_FONTS:
           LOCAL: Usar fuentes de Google alojadas localmente
+        MENU:
+          TITLE: Configuración del menú superior
+          LANGSWITCHER: Activar la opción de menú Langswitcher
+          LANGSWITCHER_HELP: Con el plugin Langswitcher activado y la configuración multi-idioma en su sitio, puede activar o desactivar la funcionalidad langswitcher que aparece en el menú superior.
+          SEARCH: Activar la opción de menú Buscar
+          SEARCH_HELP: Con el plugin SimpleSearch activado puede activar o desactivar el bloque de búsqueda en el menú superior.
+          LOGIN: Activar la opción de menú Login
+          LOGIN_HELP: Puede activar o desactivar el icono de inicio de sesión en el menú superior, para mostrar el estado de inicio de sesión.
         HEADER_SECTION: Sección de encabezado
         FAVICON: Elige tu propio favicon
         FAVICON_DESCRIPTION: Se usará en lugar del favicon predeterminado `theme://images/favicon.png`
@@ -581,286 +589,294 @@ es:
       SHARE_ON: Compartir en
 fr:
   EDITORIAL:
-  ADMIN:
-    THEME:
-      THEME_CONFIG: Configuration du thème
-      DROPDOWN_MENU: Menu dépliant dans la barre de navigation
-      PRODUCTION_MODE: Mode production
-      PRODUCTION_MODE_HELP: Si activé, EDITORIAL chargera le CSS minifié
-      SIDEBAR_OPEN: Barre latérale ouverte
-      SIDEBAR_OPEN_HELP: Définit si la barre latérale est ouverte ou fermée au démarrage.
-      GOOGLE_FONTS:
-        LOCAL: Utiliser les polices Google hébergées localement
-      HEADER_SECTION: "Section d'en-tête"
-      FAVICON: Choisir son propre favicon
-      FAVICON_DESCRIPTION: Sera utilisé à la place du favicon par défaut `theme://images/favicon.png`
-      SLOGAN: Slogan du thème
-      SLOGAN_HELP: Ajouter un texte au nom du site.
-      CUSTOM_LOGO:
-        ENABLED: Activer le logo
-        WIDTH: Largeur du logo personnalisé
-        LOGO: Logo personnalisé
-        DESCRIPTION: Ce logo sera utilisé à la place du logo par défaut `theme://images/grav-logo.svg`
-        MOBILE: Logo personnalisé pour appareils mobiles
-      CONTACT:
-        ENABLE: Activer la section Contact
-        INFORMATION_TITLE: Informations de contact
-        INFORMATION_TEXT: Informations de contact de la barre latérale
-        TEXT: Texte à ajouter aux informations de contact
-        EMAIL: Courriel
-        PHONE: Téléphone
-        ADDRESS:
-          STREET: Numéro et nom de la voie
-          CITY: Ville
-          STATE: État / Région
-          ZIP: Code postal
+    ADMIN:
+      THEME:
+        THEME_CONFIG: Configuration du thème
+        DROPDOWN_MENU: Menu dépliant dans la barre de navigation
+        PRODUCTION_MODE: Mode production
+        PRODUCTION_MODE_HELP: Si activé, EDITORIAL chargera le CSS minifié
+        SIDEBAR_OPEN: Barre latérale ouverte
+        SIDEBAR_OPEN_HELP: Définit si la barre latérale est ouverte ou fermée au démarrage.
+        GOOGLE_FONTS:
+          LOCAL: Utiliser les polices Google hébergées localement
+        MENU:
+          TITLE: Configuration du menu principal
+          LANGSWITCHER: Activer l'option de menu Langswitcher
+          LANGSWITCHER_HELP: Lorsque le plugin Langswitcher est activé et que votre site est configuré en plusieurs langues, vous pouvez activer ou désactiver la fonctionnalité Langswitcher qui apparaît dans le menu supérieur.
+          SEARCH: Active l'option de menu Recherche
+          SEARCH_HELP: Si le plugin SimpleSearch est activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu supérieur.
+          LOGIN: Activer l'option de menu Login
+          LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de login dans le menu supérieur pour afficher le statut de connexion.
+        HEADER_SECTION: "Section d'en-tête"
+        FAVICON: Choisir son propre favicon
+        FAVICON_DESCRIPTION: Sera utilisé à la place du favicon par défaut `theme://images/favicon.png`
+        SLOGAN: Slogan du thème
+        SLOGAN_HELP: Ajouter un texte au nom du site.
+        CUSTOM_LOGO:
+          ENABLED: Activer le logo
+          WIDTH: Largeur du logo personnalisé
+          LOGO: Logo personnalisé
+          DESCRIPTION: Ce logo sera utilisé à la place du logo par défaut `theme://images/grav-logo.svg`
+          MOBILE: Logo personnalisé pour appareils mobiles
+        CONTACT:
+          ENABLE: Activer la section Contact
+          INFORMATION_TITLE: Informations de contact
+          INFORMATION_TEXT: Informations de contact de la barre latérale
+          TEXT: Texte à ajouter aux informations de contact
+          EMAIL: Courriel
+          PHONE: Téléphone
+          ADDRESS:
+            STREET: Numéro et nom de la voie
+            CITY: Ville
+            STATE: État / Région
+            ZIP: Code postal
+        BLOG:
+          DEFAULTS: Paramètres du blog
+          PAGE_LABEL: Page du blog
+          PAGE_HELP: La route vers la page du blog
+          LISTING_TITLE:
+            TAXONOMY:
+              CATEGORY: Définir le titre de la page de contenus filtrés par catégorie
+              TAG: Définir le titre de la page de contenus filtrés par tag
+              AUTHOR: Définir le titre de la page de contenus filtrés par auteur
+            BLOG: Définir le titre du blog sans filtre
+        FEATURED:
+          LABEL: Activer les articles promus dans la barre latérale
+          NUMBER: "Nombre d'articles promus à afficher"
+          NUMBER_DESCRIPTION: "Nombre d'articles promus qui seront affichés dans la barre latérale"
+          CATEGORY: Etiquette utilisée pour les articles promus
+          CATEGORY_DESCRIPTION: "Définir le nom de l'étiquette utilisée pour les articles promus.<br />`Vous devrez ajouter ce nom dans Options->Taxonomie->Etiquette`"
+        SOCIAL:
+          TITLE: Réseaux sociaux
+          TEXT: Inclure les adresses URL complètes de vos différents réseaux sociaux. Une icône/un lien apparaîtra en haut de la page pour chaque plateforme.
+          ENABLED: Activer les icônes des réseaux sociaux
+          ICONS: Icônes des réseaux sociaux
+          NAME: Nom du réseau social
+          URL: Lien du réseau social
+          ICON: Icône du réseau social
+        CUSTOM_MENU:
+          TITLE: 'Éléments de menu personnalisés'
+          ENABLE: 'Afficher les éléments de menu personnalisés'
+          ENABLE_HELP: 'Détermine si les entrées de menu personnalisées définies sont affichées dans la barre de menu.'
+          LABEL: 'Éléments du menu'
+          ITEM:
+            TEXT: 'Texte'
+            TEXT_DESCRIPTION: "Libellé de l'élément de menu"
+            ICON: 'Icône'
+            ICON_DESCRIPTION: "Icône Font Awesome pour l'élément de menu"
+            URL: 'URL'
+            URL_DESCRIPTION: "URL pour l'élément de menu"
+            TARGET: 
+              LABEL: 'Cible'
+              BLANK: 'Ouvrir dans une nouvelle fenêtre'
+              PARENT: 'Ouvrir dans le cadre parent'
+              SELF: 'Ouvrir dans le même cadre que celui sur lequel on a cliqué'
+              TOP: 'Ouvrir dans le corps entier de la fenêtre'
+      MODULAR:
+        BANNER:
+          BUTTON_TEXT: Texte du bouton
+          BUTTON_URL: URL du bouton
+        FEATURES:
+          TAB: Options
+          ICON: Icônes
+          ICON_DESCRIPTION: Sélectionnez le code de la version gratuite de Fontawesome Icons (https://fontawesome.com/icons?m=free)
+          TITLE: Titre
+          TEXT: Texte
+          BUTTON_URL: URL du bouton
+          BUTTON_URL_TARGET: "Ouvrir l'URL dans une nouvelle fenêtre"
+        RECENT_POSTS:
+          TAB: Configuration des messages récents
+          LAYOUT:
+            LABEL: Disposition
+            TWO_COLS: Medium = 2 / 1 colonnes
+            THREE_COLS: Standard = 3 / 2 / 1 colonnes
+          LIMIT: Limite 
+          LIMIT_HELP: Nombre maximum de publications à afficher
+          READMORE_TEXT: Texte du bouton `Lire plus`
+          READMORE_TEXT_DESCRIPTION: Texte personnalisé pour le bouton `Lire plus`.
+        TEAM:
+          TAB: Équipe
+          TEAM_LAYOUT: Disposition
+          TEAM_LAYOUT_TWOCOLS: Medium = 2 / 1 colonnes
+          TEAM_LAYOUT_THREECOLS: Standard = 3 / 2 / 1 colonnes
+          IMAGE: Image de profil
+          IMAGE_HELP: Sélectionner une image de profil
+          NAME: Nom
+          POSITION: Rôle
+          DETAILS: Détails du profil
+          DETAILS_HELP: Brève description du profil
+          SOCIAL_MEDIA:
+            LABEL: Réseaux sociaux
+            HELP: Le modèle autorise un maximum de 6 icônes pour chaque membre.
+            NAME: Nom du réseau social
+            NAME_HELP: Vous ne devez écrire ici que le nom du réseau social (par exemple Facebook, Twitter, etc.).
+            URL: URL du réseau social
       BLOG:
-        DEFAULTS: Paramètres du blog
-        PAGE_LABEL: Page du blog
-        PAGE_HELP: La route vers la page du blog
-        LISTING_TITLE:
-          TAXONOMY:
-            CATEGORY: Définir le titre de la page de contenus filtrés par catégorie
-            TAG: Définir le titre de la page de contenus filtrés par tag
-            AUTHOR: Définir le titre de la page de contenus filtrés par auteur
-          BLOG: Définir le titre du blog sans filtre
-      FEATURED:
-        LABEL: Activer les articles promus dans la barre latérale
-        NUMBER: "Nombre d'articles promus à afficher"
-        NUMBER_DESCRIPTION: "Nombre d'articles promus qui seront affichés dans la barre latérale"
-        CATEGORY: Etiquette utilisée pour les articles promus
-        CATEGORY_DESCRIPTION: "Définir le nom de l'étiquette utilisée pour les articles promus.<br />`Vous devrez ajouter ce nom dans Options->Taxonomie->Etiquette`"
-      SOCIAL:
-        TITLE: Réseaux sociaux
-        TEXT: Inclure les adresses URL complètes de vos différents réseaux sociaux. Une icône/un lien apparaîtra en haut de la page pour chaque plateforme.
-        ENABLED: Activer les icônes des réseaux sociaux
-        ICONS: Icônes des réseaux sociaux
-        NAME: Nom du réseau social
-        URL: Lien du réseau social
-        ICON: Icône du réseau social
-      CUSTOM_MENU:
-        TITLE: 'Éléments de menu personnalisés'
-        ENABLE: 'Afficher les éléments de menu personnalisés'
-        ENABLE_HELP: 'Détermine si les entrées de menu personnalisées définies sont affichées dans la barre de menu.'
-        LABEL: 'Éléments du menu'
-        ITEM:
-          TEXT: 'Texte'
-          TEXT_DESCRIPTION: "Libellé de l'élément de menu"
-          ICON: 'Icône'
-          ICON_DESCRIPTION: "Icône Font Awesome pour l'élément de menu"
-          URL: 'URL'
-          URL_DESCRIPTION: "URL pour l'élément de menu"
-          TARGET: 
-            LABEL: 'Cible'
-            BLANK: 'Ouvrir dans une nouvelle fenêtre'
-            PARENT: 'Ouvrir dans le cadre parent'
-            SELF: 'Ouvrir dans le même cadre que celui sur lequel on a cliqué'
-            TOP: 'Ouvrir dans le corps entier de la fenêtre'
-    MODULAR:
-      BANNER:
-        BUTTON_TEXT: Texte du bouton
-        BUTTON_URL: URL du bouton
-      FEATURES:
-        TAB: Options
-        ICON: Icônes
-        ICON_DESCRIPTION: Sélectionnez le code de la version gratuite de Fontawesome Icons (https://fontawesome.com/icons?m=free)
-        TITLE: Titre
-        TEXT: Texte
-        BUTTON_URL: URL du bouton
-        BUTTON_URL_TARGET: "Ouvrir l'URL dans une nouvelle fenêtre"
-      RECENT_POSTS:
-        TAB: Configuration des messages récents
-        LAYOUT:
-          LABEL: Disposition
-          TWO_COLS: Medium = 2 / 1 colonnes
-          THREE_COLS: Standard = 3 / 2 / 1 colonnes
-        LIMIT: Limite 
-        LIMIT_HELP: Nombre maximum de publications à afficher
+        TAB: Configuration du blog
+        ROUTE: Route du blog
+        ROUTE_HELP: La route vers la page principale du blog
+        TITLE: Définition du contenu
+        ITEMS:
+          LABEL: Articles
+          LIMIT: "Nombre maximum d'articles"
+          ORDER_BY: 
+            LABEL: Trier par
+            DATE: Date
+            TITLE: Titre
+            FOLDER: Nom de dossier
+            DEFAULT: Par défaut
+          DIR: Ordre
+          DIR_ASC: Ascendant
+          DIR_DESC: Descendant
+        SHOW_BREADCRUMBS: "Afficher le fil d'Ariane"
+        PAGINATION:
+          LABEL: Pagination
+        URL_TAXONOMY_FILTERS: URL des filtres de taxonomie
         READMORE_TEXT: Texte du bouton `Lire plus`
         READMORE_TEXT_DESCRIPTION: Texte personnalisé pour le bouton `Lire plus`.
-      TEAM:
-        TAB: Équipe
-        TEAM_LAYOUT: Disposition
-        TEAM_LAYOUT_TWOCOLS: Medium = 2 / 1 colonnes
-        TEAM_LAYOUT_THREECOLS: Standard = 3 / 2 / 1 colonnes
-        IMAGE: Image de profil
-        IMAGE_HELP: Sélectionner une image de profil
-        NAME: Nom
-        POSITION: Rôle
-        DETAILS: Détails du profil
-        DETAILS_HELP: Brève description du profil
-        SOCIAL_MEDIA:
-          LABEL: Réseaux sociaux
-          HELP: Le modèle autorise un maximum de 6 icônes pour chaque membre.
-          NAME: Nom du réseau social
-          NAME_HELP: Vous ne devez écrire ici que le nom du réseau social (par exemple Facebook, Twitter, etc.).
-          URL: URL du réseau social
+      ITEM:
+        TAB: Article de blog
+        OPTIONS: Options
+        SUMMARY: 
+          TITLE: "Résumé de l'article"
+          ENABLED: Activer le résumé
+          FORMAT: Format du résumé
+          FORMAT_SHORT: Utilise la première occurrence du délimiteur ou de la taille
+          FORMAT_LONG: Ignorer le délimiteur du résumé
+          SIZE: Taille
+          DELIMITER: Délimiteur du résumé
+      GALLERY:
+        TAB: Galerie
+        TITLE: "Galerie d'images"
+        LAYOUT: 
+          LABEL: Disposition
+          TWOCOLS: Medium = 2 / 1 colonnes
+          THREECOLS: Standard = 3 / 2 / 1 colonnes
+        THUMB_WIDTH: Largeur de la vignette
+        THUMB_WIDTH_HELP: Définir la largeur des vignettes
+        THUMB_HEIGHT: Hauteur de la vignette
+        THUMB_HEIGHT_HELP: Définir la hauteur des vignettes
+        IMAGES: 
+          LABEL: Images
+          IMAGE: Image
+          IMAGE_TITLE: Titre
+          IMAGE_DESCRIPTION: Description
+          DESCPOSITION: 
+            LABEL: Position de la description
+            HELP: "Position globale pour la description des images, vous pouvez définir une position spécifique sur chaque image (en bas, en haut, à gauche, à droite)"
+            BOTTOM: En bas
+            TOP: En haut
+            LEFT: À gauche
+            RIGHT: À droite
+          IMAGE_THUMB: Vignette
+        OPTIONS:
+          TAB: Options de la galerie
+          EFFECTS_TITLE: Apparence et effets
+          ACTIONS_TITLE: Actions
+          STYLING_TITLE: Styles
+          BEHAVIOR_TITLE: Comportements
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Effet de superposition au survol
+            HELP: "Définir l'effet de survol lorsque la souris est au-dessus d'une image"
+            FADEIN_BOTTOM: Fondu en bas
+            FADEIN_TOP: Fondu en haut
+            FADEIN_LEFT: Fondu à gauche
+            FADEIN_RIGHT: Fondu à droite
+            FADEIN_TOP_RIGHT: Fondu en haut à droite
+            FADEIN_TOP_LEFT: Fondu en haut à gauche
+            FADEIN_BOTTOM_RIGHT: Fondu en bas à droite
+            FADEIN_BOTTOM_LEFT: Fondu en bas à gauche
+          OPEN_EFFECT:
+            LABEL: "Effet d'ouverture"
+            ZOOM: Zoom
+            FADE: Fondu
+            NONE: Aucun
+          CLOSE_EFFECT:
+            LABEL: Effet de fermeture
+            ZOOM: Zoom
+            FADE: Fondu
+            NONE: Aucun
+          SLIDE_EFFECT:
+            LABEL: Effet de déplacement
+            SLIDE: Swipe
+            ZOOM: Zoom
+            FADE: Fondu
+            NONE: Aucun
+          MORE_TEXT: Texte `Voir plus`
+          MORE_TEXT_HELP: Texte `Voir plus` personnalisé (pour les appareils mobiles)
+          MORE_LENGTH: Nombre de caractères `Voir plus`
+          MORE_LENGTH_HELP:  "Nombre de caractères à afficher dans la description avant d'ajouter le lien `Voir plus` (uniquement pour les appareils mobiles). Si ce nombre est égal à 0, la description sera affichée dans son intégralité."
+          CLOSE_BUTTON: Bouton fermer
+          CLOSE_BUTTON_HELP: Afficher ou cacher le bouton fermer
+          TOUCH_NAVIGATION: Navigation tactile
+          TOUCH_NAVIGATION_HELP: Activer ou désactiver la navigation tactile (swipe)
+          TOUCH_AXIS: "Suivre l'axe"
+          TOUCH_AXIS_HELP: "L'image suit l'axe lorsqu'elle est déplacée sur le mobile."
+          KEYBOARD: Navigation au clavier
+          KEYBOARD_HELP: Activer ou désactiver la navigation au clavier
+          CLOSE_OUTSIDE: "Fermer en cliqunt à l'extérieur"
+          CLOSE_OUTSIDE_HELP: "Ferme le cadre lorsque l'on clique en dehors de l'image active."
+          MORE_STARTAT: 'Commencer à :'
+          MORE_STARTAT_HELP: "Démarrer la présentation à l'index défini (0 est la première diapositive). S'il n'est pas défini, l'image cliquée est affichée."
+          WIDTH: Largeur
+          WIDTH_HELP: "Largeur par défaut pour les éléments en ligne et les iframes, vous pouvez définir une taille spécifique pour chaque diapositive. Vous pouvez utiliser n'importe quelle unité, par exemple 90% ou 100vw pour la pleine largeur."
+          HEIGHT: Hauteur
+          HEIGHT_HELP: "Hauteur par défaut pour les éléments en ligne et les iframes, vous pouvez définir une taille spécifique pour chaque diapositive. Vous pouvez utiliser n'importe quelle unité, par exemple 90% ou 100vh pour les éléments en ligne, vous pouvez régler la hauteur sur auto."
+          LOOP: Boucle
+          LOOP_HELP: Boucle les diapositives à la fin
+          ZOOMABLE: Zoomable
+          ZOOMABLE_HELP: "Activer ou désactiver les images zoomables. Vous pouvez également utiliser `data-zoomable=false` sur des items individuels."
+          DRAGGABLE: Déplaçable
+          DRAGGABLE_HELP: "Activer ou désactiver le glissement avec la souris pour passer à la diapositive précédente ou suivante (seulement les images et le contenu en ligne), vous pouvez aussi utiliser `data-draggable=false` sur des items individuels."
+          DRAGGABLE_X: Tolérance au glissement X
+          DRAGGABLE_X_HELP: "Utilisé avec Déplaçable. Nombre de pixels que l'utilisateur doit faire glisser pour passer à la diapositive précédente ou suivante."
+          DRAGGABLE_Y: Tolérance au glissement Y
+          DRAGGABLE_Y_HELP: "Utilisé avec Déplaçable. Nombre de pixels que l'utilisateur doit faire glisser vers le haut ou vers le bas pour fermer la diapositive (mettre 0 pour désactiver le glissement vertical)."
+          DRAG_AUTO_SNAP: Déplacement automatique
+          DRAG_AUTO_SNAP_HELP: "Si activé, la diapositive passera automatiquement à la précédent / suivante ou se fermera si Tolérance au glissement X ou Tolérance au glissement Y est atteint, sinon elle attendra que la souris soit relâchée."
+          PRELOAD: Préchargement
+          PRELOAD_HELP: Activer ou désactiver le préchargement
+      DEFAULT:
+        HEADER_SUBTITLE: Sous-titre
+        FEATURED_IMAGE_LABEL: Image promue
+        FEATURED_IMAGE_HELP: "Sélectionner le fichier pour l'image principale de la page"
+        MENU_TEXT: Menu
+        IMAGE_OPTIONS: "Options de l'image"
+        FEATURED_IMAGE: 
+          LABEL: Image promue
+          HELP: Sélectionner une image à afficher en haut de la page
+          WIDTH: Largeur
+          HEIGHT: Hauteur
+        SHOW_PAGEIMAGE: "Afficher l'image"
+        SHOW_PAGEIMAGE_HELP: "Activer l'image principale si elle est définie ou la première image de la page."
+    SIDEBAR:
+      LANGSWITCHER: Choisir une langue
+      CONTACT_INFO: Prendre contact
+      FEATURED_POSTS: Articles promus
+      FEATURED_MORE: "Plus d'articles promus"
+      NO_FEATURED: "Pas d'article promu"
+      LOGIN_SECTION: Login
+      RELATEDPAGES_SECTION: Pages liées
+      ARCHIVES_SECTION: Archives
+      RANDOM_ARTICLE:
+        LABEL: Article au hasard
+        BUTTON: "J'ai de la chance !"
+      SYNDICATE:
+        LABEL: Syndication
+      TAXONOMYLIST:
+        LABEL: Tags populaires
     BLOG:
-      TAB: Configuration du blog
-      ROUTE: Route du blog
-      ROUTE_HELP: La route vers la page principale du blog
-      TITLE: Définition du contenu
-      ITEMS:
-        LABEL: Articles
-        LIMIT: "Nombre maximum d'articles"
-        ORDER_BY: 
-          LABEL: Trier par
-          DATE: Date
-          TITLE: Titre
-          FOLDER: Nom de dossier
-          DEFAULT: Par défaut
-        DIR: Ordre
-        DIR_ASC: Ascendant
-        DIR_DESC: Descendant
-      SHOW_BREADCRUMBS: "Afficher le fil d'Ariane"
+      LISTING_TITLE_CATEGORY: 'Publications dans la catégorie '
+      LISTING_TITLE_TAG: 'Publications associées au tag '
+      LISTING_TITLE_AUTHOR: 'Publications écrites par '
+      LISTING_TITLE_MONTH: 'Publications du mois de '
       PAGINATION:
-        LABEL: Pagination
-      URL_TAXONOMY_FILTERS: URL des filtres de taxonomie
-      READMORE_TEXT: Texte du bouton `Lire plus`
-      READMORE_TEXT_DESCRIPTION: Texte personnalisé pour le bouton `Lire plus`.
+        PREV: Précédent
+        NEXT: Suivant
     ITEM:
-      TAB: Article de blog
-      OPTIONS: Options
-      SUMMARY: 
-        TITLE: "Résumé de l'article"
-        ENABLED: Activer le résumé
-        FORMAT: Format du résumé
-        FORMAT_SHORT: Utilise la première occurrence du délimiteur ou de la taille
-        FORMAT_LONG: Ignorer le délimiteur du résumé
-        SIZE: Taille
-        DELIMITER: Délimiteur du résumé
-    GALLERY:
-      TAB: Galerie
-      TITLE: "Galerie d'images"
-      LAYOUT: 
-        LABEL: Disposition
-        TWOCOLS: Medium = 2 / 1 colonnes
-        THREECOLS: Standard = 3 / 2 / 1 colonnes
-      THUMB_WIDTH: Largeur de la vignette
-      THUMB_WIDTH_HELP: Définir la largeur des vignettes
-      THUMB_HEIGHT: Hauteur de la vignette
-      THUMB_HEIGHT_HELP: Définir la hauteur des vignettes
-      IMAGES: 
-        LABEL: Images
-        IMAGE: Image
-        IMAGE_TITLE: Titre
-        IMAGE_DESCRIPTION: Description
-        DESCPOSITION: 
-          LABEL: Position de la description
-          HELP: "Position globale pour la description des images, vous pouvez définir une position spécifique sur chaque image (en bas, en haut, à gauche, à droite)"
-          BOTTOM: En bas
-          TOP: En haut
-          LEFT: À gauche
-          RIGHT: À droite
-        IMAGE_THUMB: Vignette
-      OPTIONS:
-        TAB: Options de la galerie
-        EFFECTS_TITLE: Apparence et effets
-        ACTIONS_TITLE: Actions
-        STYLING_TITLE: Styles
-        BEHAVIOR_TITLE: Comportements
-        OVERLAY_HOVER_EFFECT:
-          LABEL: Effet de superposition au survol
-          HELP: "Définir l'effet de survol lorsque la souris est au-dessus d'une image"
-          FADEIN_BOTTOM: Fondu en bas
-          FADEIN_TOP: Fondu en haut
-          FADEIN_LEFT: Fondu à gauche
-          FADEIN_RIGHT: Fondu à droite
-          FADEIN_TOP_RIGHT: Fondu en haut à droite
-          FADEIN_TOP_LEFT: Fondu en haut à gauche
-          FADEIN_BOTTOM_RIGHT: Fondu en bas à droite
-          FADEIN_BOTTOM_LEFT: Fondu en bas à gauche
-        OPEN_EFFECT:
-          LABEL: "Effet d'ouverture"
-          ZOOM: Zoom
-          FADE: Fondu
-          NONE: Aucun
-        CLOSE_EFFECT:
-          LABEL: Effet de fermeture
-          ZOOM: Zoom
-          FADE: Fondu
-          NONE: Aucun
-        SLIDE_EFFECT:
-          LABEL: Effet de déplacement
-          SLIDE: Swipe
-          ZOOM: Zoom
-          FADE: Fondu
-          NONE: Aucun
-        MORE_TEXT: Texte `Voir plus`
-        MORE_TEXT_HELP: Texte `Voir plus` personnalisé (pour les appareils mobiles)
-        MORE_LENGTH: Nombre de caractères `Voir plus`
-        MORE_LENGTH_HELP:  "Nombre de caractères à afficher dans la description avant d'ajouter le lien `Voir plus` (uniquement pour les appareils mobiles). Si ce nombre est égal à 0, la description sera affichée dans son intégralité."
-        CLOSE_BUTTON: Bouton fermer
-        CLOSE_BUTTON_HELP: Afficher ou cacher le bouton fermer
-        TOUCH_NAVIGATION: Navigation tactile
-        TOUCH_NAVIGATION_HELP: Activer ou désactiver la navigation tactile (swipe)
-        TOUCH_AXIS: "Suivre l'axe"
-        TOUCH_AXIS_HELP: "L'image suit l'axe lorsqu'elle est déplacée sur le mobile."
-        KEYBOARD: Navigation au clavier
-        KEYBOARD_HELP: Activer ou désactiver la navigation au clavier
-        CLOSE_OUTSIDE: "Fermer en cliqunt à l'extérieur"
-        CLOSE_OUTSIDE_HELP: "Ferme le cadre lorsque l'on clique en dehors de l'image active."
-        MORE_STARTAT: 'Commencer à :'
-        MORE_STARTAT_HELP: "Démarrer la présentation à l'index défini (0 est la première diapositive). S'il n'est pas défini, l'image cliquée est affichée."
-        WIDTH: Largeur
-        WIDTH_HELP: "Largeur par défaut pour les éléments en ligne et les iframes, vous pouvez définir une taille spécifique pour chaque diapositive. Vous pouvez utiliser n'importe quelle unité, par exemple 90% ou 100vw pour la pleine largeur."
-        HEIGHT: Hauteur
-        HEIGHT_HELP: "Hauteur par défaut pour les éléments en ligne et les iframes, vous pouvez définir une taille spécifique pour chaque diapositive. Vous pouvez utiliser n'importe quelle unité, par exemple 90% ou 100vh pour les éléments en ligne, vous pouvez régler la hauteur sur auto."
-        LOOP: Boucle
-        LOOP_HELP: Boucle les diapositives à la fin
-        ZOOMABLE: Zoomable
-        ZOOMABLE_HELP: "Activer ou désactiver les images zoomables. Vous pouvez également utiliser `data-zoomable=false` sur des items individuels."
-        DRAGGABLE: Déplaçable
-        DRAGGABLE_HELP: "Activer ou désactiver le glissement avec la souris pour passer à la diapositive précédente ou suivante (seulement les images et le contenu en ligne), vous pouvez aussi utiliser `data-draggable=false` sur des items individuels."
-        DRAGGABLE_X: Tolérance au glissement X
-        DRAGGABLE_X_HELP: "Utilisé avec Déplaçable. Nombre de pixels que l'utilisateur doit faire glisser pour passer à la diapositive précédente ou suivante."
-        DRAGGABLE_Y: Tolérance au glissement Y
-        DRAGGABLE_Y_HELP: "Utilisé avec Déplaçable. Nombre de pixels que l'utilisateur doit faire glisser vers le haut ou vers le bas pour fermer la diapositive (mettre 0 pour désactiver le glissement vertical)."
-        DRAG_AUTO_SNAP: Déplacement automatique
-        DRAG_AUTO_SNAP_HELP: "Si activé, la diapositive passera automatiquement à la précédent / suivante ou se fermera si Tolérance au glissement X ou Tolérance au glissement Y est atteint, sinon elle attendra que la souris soit relâchée."
-        PRELOAD: Préchargement
-        PRELOAD_HELP: Activer ou désactiver le préchargement
-    DEFAULT:
-      HEADER_SUBTITLE: Sous-titre
-      FEATURED_IMAGE_LABEL: Image promue
-      FEATURED_IMAGE_HELP: "Sélectionner le fichier pour l'image principale de la page"
-      MENU_TEXT: Menu
-      IMAGE_OPTIONS: "Options de l'image"
-      FEATURED_IMAGE: 
-        LABEL: Image promue
-        HELP: Sélectionner une image à afficher en haut de la page
-        WIDTH: Largeur
-        HEIGHT: Hauteur
-      SHOW_PAGEIMAGE: "Afficher l'image"
-      SHOW_PAGEIMAGE_HELP: "Activer l'image principale si elle est définie ou la première image de la page."
-  SIDEBAR:
-    LANGSWITCHER: Choisir une langue
-    CONTACT_INFO: Prendre contact
-    FEATURED_POSTS: Articles promus
-    FEATURED_MORE: "Plus d'articles promus"
-    NO_FEATURED: "Pas d'article promu"
-    LOGIN_SECTION: Login
-    RELATEDPAGES_SECTION: Pages liées
-    ARCHIVES_SECTION: Archives
-    RANDOM_ARTICLE:
-      LABEL: Article au hasard
-      BUTTON: "J'ai de la chance !"
-    SYNDICATE:
-      LABEL: Syndication
-    TAXONOMYLIST:
-      LABEL: Tags populaires
-  BLOG:
-    LISTING_TITLE_CATEGORY: 'Publications dans la catégorie '
-    LISTING_TITLE_TAG: 'Publications associées au tag '
-    LISTING_TITLE_AUTHOR: 'Publications écrites par '
-    LISTING_TITLE_MONTH: 'Publications du mois de '
-    PAGINATION:
-      PREV: Précédent
-      NEXT: Suivant
-  ITEM:
-    POSTED_ON: Publié le
-    SEE_OTHER_POSTS_OF: "Voir d'autres publications de"
-    SEE_OTHER_POSTS_IN: "Voir d'autres publications dans"
-  FORM_SUMMARY: Voici le résumé de votre message
-  MISC:
-    SHARE_ON: Partager sur
+      POSTED_ON: Publié le
+      SEE_OTHER_POSTS_OF: "Voir d'autres publications de"
+      SEE_OTHER_POSTS_IN: "Voir d'autres publications dans"
+    FORM_SUMMARY: Voici le résumé de votre message
+    MISC:
+      SHARE_ON: Partager sur

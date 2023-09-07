@@ -134,12 +134,16 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Editor
 
 # Shortcodes
 
-To view details of Editorial theme shortcodes visit this link: [Editorial theme shortcodes](https://app.gitbook.com/o/vK7CS8dVPZWBTvKggibF/s/jmoGVrRMLQIl462tvGDH/)
+To view details of Editorial theme shortcodes visit this link: [Editorial theme shortcodes](https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index?id=shortcodes)
 
 You can view some examples of shortcodes in the demo page.
 # Demo page
 
 [http://editorial.juanvillen.es/](http://editorial.juanvillen.es/)
+
+# Documentation 
+
+You can read the Editorial Theme documentation at [https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index](https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index)
 
 ## Future plans
 

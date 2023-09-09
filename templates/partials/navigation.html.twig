@@ -1,17 +1,10 @@
 {% import 'macros/macros.html.twig' as macros %}
+
 <ul>
     {% if config.theme.dropdown.enabled %}
-        {{ macros.nav_loop(pages) }}
+        {{ macros.nav_loop(pages, 'opener', 'submenu' ) }}
     {% else %}
-        {% for page in pages.children.visible %}
-            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-            <li class="{{ current_page|e }}">
-                <a href="{{ page.url|e }}">
-                    {% if page.header.icon %}<i class="fa fa-{{ page.header.icon|e }}"></i>{% endif %}
-                    {{ page.menu|e }}
-                </a>
-            </li>
-        {% endfor %}
+        {{ macros.nav_loop(pages, '', 'no-dropdown') }}
     {% endif %}
     {% if theme_var('custommenu_enabled') %}
     {% for mitem in theme_var('custommenu') %}

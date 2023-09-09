@@ -1,12 +1,12 @@
-{% macro nav_loop(page) %}
+{% macro nav_loop(page, openerClass, submenuClass) %}
     {% import _self as macros %}
     {% for p in page.children.visible %}
         {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
         {% if p.children.visible.count > 0 %}
             <li> 
-                <span class="opener">{{ p.menu }}</span>
-                <ul class="submenu">
-                    {{ macros.nav_loop(p) }}
+                <span class="{{ openerClass }}">{{ p.menu }}</span>
+                <ul class="{{ submenuClass }}">
+                    {{ macros.nav_loop(p, openerClass, submenuClass) }}
                 </ul>
             </li>
         {% else %}

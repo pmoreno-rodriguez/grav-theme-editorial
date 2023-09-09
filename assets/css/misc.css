@@ -47,3 +47,15 @@ ul.pagination li > .page {font-size: 0.9em;}
 #header .logo {
     font-size: 2.125em;
 }
+.no-dropdown {
+    display: block !important;
+}
+
+/* GRAV LOGIN OVERRIDED STYLES */
+#grav-login .button {
+  vertical-align: middle;
+  height: auto;
+  line-height: 2.5em;
+  padding: 0.5em 1.5em;
+  white-space: normal;
+}

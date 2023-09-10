@@ -1,5 +1,8 @@
 <!-- Footer -->
+{% set year = 'now'|date('Y') %}
 
 <footer id="footer">
-    <div class="copyright">&copy; {{ site.title }}. {{ theme_var('copyright.text')|raw }}</div>
+    <div class="copyright">{{ year }} &copy; {{ site.title|upper }}. <br>
+        {{ theme_var('copyright.text')|raw }}
+    </div>
 </footer>

@@ -28,8 +28,8 @@
         {% endblock %}  
     </div>
     </header>
-       {% for page in search_results %}
-        {% include 'partials/simplesearch_item.html.twig' with {'page':page} %}
+    {% for page in search_results %}
+        {% include 'partials/simplesearch_item.html.twig' with { 'page': page } %}
     {% endfor %}
 </article>
 

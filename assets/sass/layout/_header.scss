@@ -15,6 +15,9 @@
 		flex-flow: row;
 		flex-wrap: nowrap;
 
+		h1 {
+			font-size: unset;
+		}
 		> * {
 			@include vendor('flex', '1');
 			margin-bottom: 0;

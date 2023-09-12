@@ -1,10 +1,15 @@
-{% set banner_image = page.media[header.featured_image] ?: page.media.images|first %}
-{% set title = page.title %}
+{% set show_image = header_var('show_pageimage')|defined(true) %}
+{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set show_title = header_var('show_title')|defined(true) %}
+{% set title = page.title|raw  %}
+
 <section id="banner">
     <div class="content">
         <header>
-            <h1>{{ title|raw }}</h1>
-            {% if page.header.subtitle %}<p>{{page.header.subtitle|raw}}</p>{% endif %}
+        {% if show_title %}<h2>{{ title }}</h2>{% endif %}
+        {% if page.header.subtitle %}
+            <p>{{page.header.subtitle|raw}}</p>
+        {% endif %}
         </header>
         {{page.content|raw}}
         {% if page.header.button_text is not null or page.header.button_url is not null %}
@@ -13,9 +18,9 @@
         </ul>
         {% endif %}
     </div>
-    {% if banner_image %}
+    {% if show_image == true and image ?? null %}
         <span class="image object">
-            {{ banner_image.cropZoom(736,512).html(title,title,'')|raw }}
+            {{ image.cropZoom(736,512).loading('lazy').attribute('decoding','async').html(title,title,'')|raw }}
         </span>
     {% endif %}
 </section>

@@ -1,6 +1,5 @@
 <!-- Section -->
 
-{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set featured_number = theme_var('featured_number') %}
 {% set featured_tag = theme_var('featured_tag') %}
 {% set featured = taxonomy.findTaxonomy({'tag': featured_tag}) %}
@@ -13,20 +12,21 @@
         <div class="mini-posts">
             {% for p in featured.slice(0,featured_number) %}
             {% set image = p.media[p.header.featured_image] ?: page.media.images|first %}
+            {% set title = p.title|raw %}
             {% if page.url != p.url %}
                 <article>
-                <a href="{{ p.url }}" class="featured-title"><h3>{{ p.title }}</h3></a>
+                <a href="{{ p.url }}" class="featured-title"><h3>{{ title }}</h3></a>
                 {% if image %}
-                   <a class="image" href="{{ p.url }}" title="{{ p.title }}">{{ image.cropZoom(288,174).loading('lazy').attribute('width', '300').attribute('height','auto').html(title,title)|raw }}</a>
+                   <a class="image" href="{{ p.url }}" title="{{ title }}">{{ image.cropZoom(288,174).loading('lazy').attribute('width', '300').attribute('height','auto').html(title,title)|raw }}</a>
                 {% endif %}
-                <p>{{ p.summary|safe_truncate_html(25)|striptags }}</p>
+                <p>{{ p.summary|safe_truncate_html(25)|striptags|raw }}</p>
             </article>
             {% endif %}
             {% endfor %}
         </div>
 
         <ul class="actions">
-            <li><a href="{{blog.url}}/tag:{{featured_tag}}" class="button">{{ 'EDITORIAL.SIDEBAR.FEATURED_MORE'|t }}</a></li>
+            <li><a href="{{blog}}/tag:{{featured_tag}}" class="button">{{ 'EDITORIAL.SIDEBAR.FEATURED_MORE'|t }}</a></li>
         </ul>
 
     {% else %}

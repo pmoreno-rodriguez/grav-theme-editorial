@@ -1,4 +1,4 @@
-{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{# OPTIONS FOR SIDEBAR #}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 {% set menu_search = theme_var('menu_search')|defined(true) %}
 {% set menu_login = theme_var('menu_login')|defined(true) %}
@@ -31,7 +31,9 @@
             <header class="major">
                 <h2>Menu</h2>
             </header>
-            {% include 'partials/navigation.html.twig' %}
+            {% block navigation %}
+                {% include 'partials/navigation.html.twig' %}
+            {% endblock %}
         </nav>
 
         {% if menu_lang and config.plugins.langswitcher.enabled and system.languages.supported is not null %} 
@@ -46,7 +48,7 @@
 
         {# display posts with 'featured_tag' tag on current blog page #}
         {% if show_featured is same as(true) %}
-            {% include 'partials/featured-posts.html.twig' %}
+            {% include 'partials/featured-posts.html.twig' with {'blog': new_base_url} %}
         {% endif %}
         
         {# Show Random post if plugin is enabled #}

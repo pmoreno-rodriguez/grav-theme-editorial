@@ -1,7 +1,59 @@
 {% extends 'partials/base.html.twig' %}
 
+{% set show_onpage_menu = header_var('onpage_menu')|defined(false) %}
+
+{% block bottom %}
+    {{ parent() }}
+    {% if show_onpage_menu == true %}
+        <script>
+        jQuery(document).ready(function($) {
+          function scrollToSection(event) {
+            event.preventDefault();
+            var $section = $($(this).attr('href')); 
+            $('html, body').animate({
+              scrollTop: $section.offset().top - 60
+            }, 500);
+          }
+          $('[data-scroll]').on('click', scrollToSection);
+        }(jQuery));
+        </script>
+    {% endif %}
+{% endblock %}
+
 {% block content %}
-    {% for module in page.collection() %}
+     {% for module in page.collection() %}
+        {% if show_onpage_menu == true %}
+            <div id="{{ module.menu|hyphenize }}"></div>
+        {% endif %}
         {{ module.content|raw }}
     {% endfor %}
+{% endblock %}
+
+{% block sidebar %}
+{% embed 'partials/sidebar.html.twig' %}
+        {% block navigation %}
+            {% if show_onpage_menu == true %}
+                <ul class="navigation">
+                {% for module in page.collection() if module.header.visible is not same as(false) %}
+                    {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
+                    <li><a data-scroll class="{{ current_module }}" href="#{{ module.menu|hyphenize }}">{{ module.menu }}</a></li>
+                {% endfor %}
+                {% if theme_var('custommenu_enabled') %}
+                {% for mitem in theme_var('custommenu') %}
+                    <li>
+                        <a href="{{ mitem.url }}" target="{{ mitem.target }}">
+                            {% if mitem.icon %}
+                                <i class="fa fa-{{ mitem.icon }}"></i>
+                            {% endif %}
+                            {{ mitem.text }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+                {% endif %}
+                </ul>
+            {% else %}
+                {% include 'partials/navigation.html.twig' %}
+            {% endif %}
+        {% endblock %}   
+{% endembed %}
 {% endblock %}

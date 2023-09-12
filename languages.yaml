@@ -11,13 +11,13 @@ en:
         GOOGLE_FONTS:
           LOCAL: Use locally hosted Google Fonts
         MENU:
-          TITLE: Top Menu Configuration
+          TITLE: Sidebar Menu Configuration
           LANGSWITCHER: Enable Langswitcher menu option
-          LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the top menu.
+          LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the sidebar menu.
           SEARCH: Enable Search menu option
-          SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in top menu.
+          SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in sidebar menu.
           LOGIN: Enable Login menu option
-          LOGIN_HELP: You can enable or disable Login icon in top menu, to show login status.
+          LOGIN_HELP: You can enable or disable Login icon in sidebar menu, to show login status.
         HEADER_OPTIONS: Header Options
         FAVICON: Choose your own favicon
         FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
@@ -86,7 +86,10 @@ en:
               SELF: 'Open in the same frame as clicked'
               TOP: 'Open in the full body of the window'
       MODULAR:
+        SHOW_ONPAGE_MENU: Show navigation on one-page sites
+        SHOW_ONPAGE_MENU_HELP: On single-page sites, it adds smooth scrolling on click navigation and automatically selects the correct navigation elements as you scroll through different sections.
         BANNER:
+          SECTION: Banner Options
           BUTTON_TEXT: Button Text
           BUTTON_URL: Button URL   
         FEATURES:
@@ -124,6 +127,12 @@ en:
             NAME: Social name
             NAME_HELP: You only have to write the name of the social network here (eg, Facebook, Twitter, etc)
             URL: Social URL
+        DOWNLOADS:
+          TH_NAME: Name
+          TH_SIZE: Size
+          TH_MODIFIED: Modified
+          TH_DOWNLOAD: Download
+          TD_BUTTON: Download
       BLOG:
         TAB: Blog Config
         ROUTE: Blog Route
@@ -251,7 +260,11 @@ en:
           PRELOAD: Preload
           PRELOAD_HELP: Enable or disable preloading.
       DEFAULT:
+        HEADINGS_SECTION: Headings options
+        SHOW_TITLE: Show Title
+        SHOW_TITLE_HELP: Show or hide the page title
         HEADER_SUBTITLE: Subtitle
+        CONTENT_SECTION: Content options
         FEATURED_IMAGE_LABEL: Featured Image
         FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
         MENU_TEXT: Menu
@@ -262,7 +275,7 @@ en:
           WIDTH: Width
           HEIGHT: Height
         SHOW_PAGEIMAGE: Show Image
-        SHOW_PAGEIMAGE_HELP: Enable primary image if it is defined or the first image of the media page.
+        SHOW_PAGEIMAGE_HELP: Show featured image if it is defined or the first image of the media page. 
     SIDEBAR:
       LANGSWITCHER: Choose language
       CONTACT_INFO: Get in touch
@@ -270,6 +283,7 @@ en:
       FEATURED_MORE: More featured posts
       NO_FEATURED: No featured posts
       LOGIN_SECTION: Login
+      LOGGUED_AS: 'Logged as: '
       RELATEDPAGES_SECTION: Related pages
       ARCHIVES_SECTION: Archives
       RANDOM_ARTICLE:
@@ -294,6 +308,8 @@ en:
     FORM_SUMMARY: Here is the summary of what you wrote to us
     MISC:
       SHARE_ON: Share on
+      IN: in
+      BACK_TO_TOP: Back to top
 es:
   EDITORIAL:
     ADMIN:
@@ -307,13 +323,13 @@ es:
         GOOGLE_FONTS:
           LOCAL: Usar fuentes de Google alojadas localmente
         MENU:
-          TITLE: Configuración del menú superior
+          TITLE: Configuración del menú lateral
           LANGSWITCHER: Activar la opción de menú Langswitcher
-          LANGSWITCHER_HELP: Con el plugin Langswitcher activado y la configuración multi-idioma en su sitio, puede activar o desactivar la funcionalidad langswitcher que aparece en el menú superior.
+          LANGSWITCHER_HELP: Con el plugin Langswitcher activado y la configuración multi-idioma en su sitio, puede activar o desactivar la funcionalidad langswitcher que aparece en el menú lateral.
           SEARCH: Activar la opción de menú Buscar
-          SEARCH_HELP: Con el plugin SimpleSearch activado puede activar o desactivar el bloque de búsqueda en el menú superior.
+          SEARCH_HELP: Con el plugin SimpleSearch activado puede activar o desactivar el bloque de búsqueda en el menú lateral.
           LOGIN: Activar la opción de menú Login
-          LOGIN_HELP: Puede activar o desactivar el icono de inicio de sesión en el menú superior, para mostrar el estado de inicio de sesión.
+          LOGIN_HELP: Puede activar o desactivar el icono de inicio de sesión en el menú lateral, para mostrar el estado de inicio de sesión.
         HEADER_SECTION: Sección de encabezado
         FAVICON: Elige tu propio favicon
         FAVICON_DESCRIPTION: Se usará en lugar del favicon predeterminado `theme://images/favicon.png`
@@ -380,7 +396,10 @@ es:
               SELF: 'Abrir en el marco en el que se hizo click'
               TOP: 'Abierto en todo el cuerpo de la ventana.'
       MODULAR:
+        SHOW_ONPAGE_MENU: Mostrar navegación en sitios de una página
+        SHOW_ONPAGE_MENU_HELP: En sitios de una sola página, agrega un desplazamiento suave al hacer clic en la navegación y selecciona automáticamente los elementos de navegación correctos a medida que se desplaza por las diferentes secciones.
         BANNER:
+          SECTION: Opciones del Banner
           BUTTON_TEXT: Texto del botón
           BUTTON_URL: URL del botón
         FEATURES:
@@ -418,6 +437,12 @@ es:
             NAME: Nombre de red social
             NAME_HELP: Sólo debe escribir el nombre de la red social aquí (ej, Facebook, Twitter, etc)
             URL: URL de red social
+        DOWNLOADS:
+          TH_NAME: Nombre
+          TH_SIZE: Tamaño
+          TH_MODIFIED: Modificado
+          TH_DOWNLOAD: Descarga
+          TD_BUTTON: Descargar
       BLOG:
         TAB: Configuración del Blog
         ROUTE: Ruta del Blog
@@ -544,7 +569,11 @@ es:
           PRELOAD: Precarga
           PRELOAD_HELP: Activa o desactiva la precarga.
       DEFAULT:
-        HEADER_SUBTITLE: Subtitle
+        HEADINGS_SECTION: Opciones de encabezados
+        SHOW_TITLE: Mostrar título
+        SHOW_TITLE_HELP: Muestra u oculta el título de la página
+        HEADER_SUBTITLE: Subtítulo
+        CONTENT_SECTION: Opciones de Contenido
         FEATURED_IMAGE_LABEL: Imagen destacada
         FEATURED_IMAGE_HELP: Seleccione un archivo para usarlo como la imagen destacada superior de la página 
         MENU_TEXT: Menu
@@ -555,7 +584,7 @@ es:
           WIDTH: Ancho
           HEIGHT: Alto
         SHOW_PAGEIMAGE: Mostrar imagen
-        SHOW_PAGEIMAGE_HELP: Habilitar la imagen principal si está definida o la primera de las imágenes de la página.
+        SHOW_PAGEIMAGE_HELP: Muestra la imagen principal si está definida o la primera de las imágenes de la página.
     SIDEBAR:
       LANGSWITCHER: Elegir idioma
       CONTACT_INFO: Ponerse en contacto
@@ -563,6 +592,7 @@ es:
       FEATURED_MORE: Más entradas destacadas
       NO_FEATURED: No hay entradas destacadas
       LOGIN_SECTION: Acceder
+      LOGGUED_AS: 'Autenticado como: '
       RELATEDPAGES_SECTION: Páginas relacionadas
       ARCHIVES_SECTION: Archivo
       RANDOM_ARTICLE:
@@ -587,6 +617,8 @@ es:
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
     MISC:
       SHARE_ON: Compartir en
+      IN: en
+      BACK_TO_TOP: Volver arriba
 fr:
   EDITORIAL:
     ADMIN:
@@ -600,13 +632,13 @@ fr:
         GOOGLE_FONTS:
           LOCAL: Utiliser les polices Google hébergées localement
         MENU:
-          TITLE: Configuration du menu principal
+          TITLE: Configuration du menu latérale
           LANGSWITCHER: Activer l'option de menu Langswitcher
-          LANGSWITCHER_HELP: Lorsque le plugin Langswitcher est activé et que votre site est configuré en plusieurs langues, vous pouvez activer ou désactiver la fonctionnalité Langswitcher qui apparaît dans le menu supérieur.
+          LANGSWITCHER_HELP: Lorsque le plugin Langswitcher est activé et que votre site est configuré en plusieurs langues, vous pouvez activer ou désactiver la fonctionnalité Langswitcher qui apparaît dans le menu latérale.
           SEARCH: Active l'option de menu Recherche
-          SEARCH_HELP: Si le plugin SimpleSearch est activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu supérieur.
+          SEARCH_HELP: Si le plugin SimpleSearch est activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu latérale.
           LOGIN: Activer l'option de menu Login
-          LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de login dans le menu supérieur pour afficher le statut de connexion.
+          LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de login dans le menu latérale pour afficher le statut de connexion.
         HEADER_SECTION: "Section d'en-tête"
         FAVICON: Choisir son propre favicon
         FAVICON_DESCRIPTION: Sera utilisé à la place du favicon par défaut `theme://images/favicon.png`
@@ -673,7 +705,10 @@ fr:
               SELF: 'Ouvrir dans le même cadre que celui sur lequel on a cliqué'
               TOP: 'Ouvrir dans le corps entier de la fenêtre'
       MODULAR:
+        SHOW_ONPAGE_MENU: Afficher la navigation sur les sites d'une seule page
+        SHOW_ONPAGE_MENU_HELP: Sur les sites à page unique, ajoute un défilement fluide lorsque vous cliquez dans la navigation et sélectionne automatiquement les éléments de navigation corrects lorsque vous faites défiler les différentes sections.
         BANNER:
+          SECTION: Options de bannière
           BUTTON_TEXT: Texte du bouton
           BUTTON_URL: URL du bouton
         FEATURES:
@@ -711,6 +746,12 @@ fr:
             NAME: Nom du réseau social
             NAME_HELP: Vous ne devez écrire ici que le nom du réseau social (par exemple Facebook, Twitter, etc.).
             URL: URL du réseau social
+        DOWNLOADS:
+          TH_NAME : Nom
+          TH_SIZE : Taille
+          TH_MODIFIED : Modifié
+          TH_DOWNLOAD : Télécharger
+          TD_BUTTON : Télécharger
       BLOG:
         TAB: Configuration du blog
         ROUTE: Route du blog
@@ -837,7 +878,11 @@ fr:
           PRELOAD: Préchargement
           PRELOAD_HELP: Activer ou désactiver le préchargement
       DEFAULT:
+        HEADINGS_SECTION: Options de titre
+        SHOW_TITLE: Montrer le titre
+        SHOW_TITLE_HELP: Afficher ou masquer le titre de la page
         HEADER_SUBTITLE: Sous-titre
+        CONTENT_SECTION: Options de contenu
         FEATURED_IMAGE_LABEL: Image promue
         FEATURED_IMAGE_HELP: "Sélectionner le fichier pour l'image principale de la page"
         MENU_TEXT: Menu
@@ -856,6 +901,7 @@ fr:
       FEATURED_MORE: "Plus d'articles promus"
       NO_FEATURED: "Pas d'article promu"
       LOGIN_SECTION: Login
+      LOGGUED_AS: 'Connecté en tant que: '
       RELATEDPAGES_SECTION: Pages liées
       ARCHIVES_SECTION: Archives
       RANDOM_ARTICLE:
@@ -880,3 +926,5 @@ fr:
     FORM_SUMMARY: Voici le résumé de votre message
     MISC:
       SHARE_ON: Partager sur
+      IN: sur
+      BACK_TO_TOP: Retour en haut

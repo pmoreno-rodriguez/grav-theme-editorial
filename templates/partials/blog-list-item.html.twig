@@ -1,27 +1,15 @@
-{% set image = page.media[page.header.featured_image] ?: page.media.images|first %}
-{% set title = page.title %}
-{% set readmore_txt = blog.header.readmore_text|raw|default('Read more') %}
+{% set datestamp = include('partials/page-bits/date.html.twig') %}
 
 <article>
-    {% if image %}
+   {% if show_image and image %}
     <a href="{{page.url}}" class="image">
         {{ image.cropZoom(416,256).loading('lazy').attribute('width', '300').attribute('height','300').html(title,title,'')|raw }}
     </a>
     {% endif %}
-    <h3>{{page.title}}</h3>
-    {# Set page date stamp #}
-    {% if config.plugins["translate-date"].enabled %}
-        {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|td(null, "Y-m-d")) : (page.date|td(null, "Y-m-d")) %}
-    {% elseif config.plugins["twig-extensions"].enabled %}
-        {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|localizeddate('medium', 'none', lang)) : (page.date|localizeddate('medium', 'none', lang)) %}
-    {% else %}
-        {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|date(system.pages.dateformat.short)) : (page.date|date(system.pages.dateformat.short)) %}
-    {% endif %}
-    {% if datestamp %}
+    <h2>{{ title|raw }}</h2>
     <p class="data-post">
-        {{'EDITORIAL.ITEM.POSTED_ON'|t}} {{ datestamp|date(system.pages.dateformat.short)  }}
+        {{'EDITORIAL.ITEM.POSTED_ON'|t}} {{ datestamp }}
     </p>
-    {% endif %}
     <p>
     {% if page.summary != page.content %}
             {{ page.summary|striptags|raw }}
@@ -30,6 +18,6 @@
         {% endif %}
     </p>
     <ul class="actions">
-        <li><a href="{{page.url}}" class="button">{{readmore_txt}}</a></li>
+        <li><a href="{{page.url}}" class="button">{{ readmore_txt }}</a></li>
     </ul>
 </article>

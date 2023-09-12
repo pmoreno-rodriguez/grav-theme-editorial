@@ -3163,6 +3163,9 @@ button:disabled,
   flex-flow: row;
   flex-wrap: nowrap;
 }
+#header h1 {
+  font-size: unset;
+}
 #header > * {
   -moz-flex: 1;
   flex: 1;

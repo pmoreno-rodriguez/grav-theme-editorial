@@ -48,6 +48,10 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Custom logo and Custom logo mobile in theme config
 * Added support for Taxonomylist, Related pages, Random article. Feeds and Archives plugins
 * Team template
+* Downloads template
+* Shortcodes to write your pages easily, taking advantage of the styles offered by the theme.
+* Custom styles for Login forms. 
+* Support for navigation menu on one-page websites.
 
 ### Featured Pages
 
@@ -63,18 +67,24 @@ The latest pages tagged with the selected tag in the theme settings and the chos
 * Added blog.html.twig and item.html.twig files.
 * Added option to filter by author taxonomy. It is necessary to configure the author taxonomy, in the site configuration, so that the authors of the blog pages appear in them and you can use the filters by author that the theme has.
 * Social sharing icons added to blog items
+* Support for date translation if using the translate-date or twig-extensions plugins.
+
 ### Reordered assets
 
 * All assets (css, js, sass, etc) have been reordered into **assets** folder.
+
 ### Update Styles
 
 * All styles have been updated to latest version of the original Editorial Theme by HTML5Up.
+
 ## Default Options
 
 Editorial comes with a few default options that can be set site-wide.  These options are:
 
 ```yaml
 production-mode:              # In production mode, only minified CSS is used. When disabled, nested CSS are enabled
+sidebar_open:                 # Option to display the main page with the sidebar open or closed.
+google_fonts_local:           # Option to load Google Fonts from the theme or from Google servers.
 menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
 menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
 menu_login:                   # Enable/Disable login icon in menu
@@ -94,6 +104,7 @@ custommenus.enabled:          # Enable/Disable custom menus in top menu
 To make modifications, you can copy the `user/themes/editorial/editorial.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
 > NOTE: Do not modify the `user/themes/editorial/editorial.yaml` file directly or your changes will be lost with any updates
+
 ## Custom Logos
 
 To add a custom logo, you should put the log into the `user/themes/editorial/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
@@ -137,6 +148,11 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Editor
 To view details of Editorial theme shortcodes visit this link: [Editorial theme shortcodes](https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index?id=shortcodes)
 
 You can view some examples of shortcodes in the demo page.
+
+# Downloads template
+
+Editorial theme includes a simple template to manage downloads of files uploaded to a page. These files are automatically found and processed by Grav using `page.media.all` and displayed in a table with four columns: name, size, modification date and download button.
+
 # Demo page
 
 [http://editorial.juanvillen.es/](http://editorial.juanvillen.es/)
@@ -148,7 +164,8 @@ You can read the Editorial Theme documentation at [https://pmoreno-rodriguez.git
 ## Future plans
 
 * Future plans here
+
 ## Credits
 * Thanks to [Jeremy Gonyea](https://github.com/jgonyea), who ported the first Editorial theme for Grav.
 * This theme wouldn't be here without HTML5Up.net.  Many thanks to [AJ](aj@lkn.io) for creating the theme initially on that site.
-* Demo images came from [Unsplash](https://unsplash.com/)
+* Demo images came from [Unsplash](https://unsplash.com/es/@freys/)

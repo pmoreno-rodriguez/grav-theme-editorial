@@ -1,6 +1,11 @@
 # v2.0.0
 ## 09/12/2023
 
+1. [](#bugfix)
+   * Fixed CHANGELOG format
+# v2.0.0
+## 09/12/2023
+
 1. [](#new)
    * New Downloads template (issue [#32](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
    * New macro for navigation
@@ -115,11 +120,7 @@
    * Fixed bug when showing the mobile logo if there is no other image loaded.
    * Fixed show tags in item footer,
 # v1.0.3
-<<<<<<< HEAD
 ## 01/15/2023
-=======
-##  01/15/2023
->>>>>>> f22b578... Updated date of changes of version 1.0.3
 
 1. [](#new)
    * Added modular Banner template
@@ -186,8 +187,4 @@
 ## 01/05/2018
 
 1. [](#new)
-<<<<<<< HEAD
    * ChangeLog started...
-=======
-    * ChangeLog started...
->>>>>>> f22b578... Updated date of changes of version 1.0.3

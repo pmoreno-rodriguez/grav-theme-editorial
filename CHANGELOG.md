@@ -1,5 +1,5 @@
 # v2.0.0
-## 09/16/2023
+## 09/12/2023
 
 1. [](#new)
    * New Downloads template (issue [#32](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))

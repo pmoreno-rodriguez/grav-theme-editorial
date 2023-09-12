@@ -1,3 +1,24 @@
+# v2.0.0
+## 09/16/2023
+
+1. [](#new)
+   * New Downloads template (issue [#32](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
+   * New macro for navigation
+   * New design for related pages template.
+   * Added custom.css to assets links (issue [#35](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
+   * Added custom.js to assets links
+   * Added Back to top button
+   * Added support for navigation on modular one-page pages. 
+2. [](#improved)
+   * Code restructure in all twig templates
+   * Option to hide or show page title (issue [#26](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
+   * Improved CSS styles for login and forgot forms
+   * Removed the extra text from the checkbox label, from the privacy.html.twig template (Note: use the `markdown` attribute on the form field to be able to use html tags within the privacy field) (issue [#31](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
+   * Updated translations and added French translations (thanks [@Fazarel](https://github.com/Fazarel))
+   * H1 tag optimized for SEO purposes.
+3. [](#bugfix)
+   * Fixed raw filter in featured posts
+   * Fixed date traslations in recent-posts and blog templates (issue [#34](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
 # v1.0.10.1
 ## 07/05/2023
 
@@ -94,7 +115,11 @@
    * Fixed bug when showing the mobile logo if there is no other image loaded.
    * Fixed show tags in item footer,
 # v1.0.3
+<<<<<<< HEAD
 ## 01/15/2023
+=======
+##  01/15/2023
+>>>>>>> f22b578... Updated date of changes of version 1.0.3
 
 1. [](#new)
    * Added modular Banner template
@@ -161,4 +186,8 @@
 ## 01/05/2018
 
 1. [](#new)
+<<<<<<< HEAD
    * ChangeLog started...
+=======
+    * ChangeLog started...
+>>>>>>> f22b578... Updated date of changes of version 1.0.3

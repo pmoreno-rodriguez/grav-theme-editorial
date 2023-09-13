@@ -159,7 +159,7 @@ Editorial theme includes a simple template to manage downloads of files uploaded
 
 # Documentation 
 
-You can read the Editorial Theme documentation at [https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index](https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index)
+You can read extra documentation of Editorial Theme at [https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index](https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index)
 
 ## Future plans
 

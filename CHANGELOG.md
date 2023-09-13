@@ -1,3 +1,9 @@
+# v2.0.2
+## 09/13/2023
+
+1. [](#bugfix)
+   * Fixed code for datestamp on blog pages
+
 # v2.0.1
 ## 09/12/2023
 

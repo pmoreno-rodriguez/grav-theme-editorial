@@ -15,7 +15,7 @@
 {% for p in blog.collection.slice(0,limit) %}
 {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
 {% set title = p.title|raw %}
-{% set datestamp = include('partials/page-bits/date.html.twig', {'page': p}) %}
+{% set datestamp = include('partials/page-bits/date.html.twig', { 'page': p } ) %}
 
     <article class="">
         {% if image ?? null %}

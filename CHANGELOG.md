@@ -1,3 +1,15 @@
+# v2.0.3
+## 10/28/2023
+
+1. [](#bugfix)
+   * Fixed sort filter error when taxonomy is empty
+2. [](#improved)
+   * Improved code in recent posts, blog-list and blog templates
+   * Increased font size in styles
+   * Moved the copyright text field to the sidebar section in the admin
+3. [](#new)
+   * Added support for comments plugin
+
 # v2.0.2
 ## 09/13/2023
 

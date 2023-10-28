@@ -3,7 +3,7 @@
     <header class="major">
         <h2>{{ 'EDITORIAL.SIDEBAR.CONTACT_INFO'|t }}</h2>
     </header>
-    <p>{{ theme_config.contact.text }}</p>
+    <p>{{ theme_config.contact.text|raw }}</p>
     <ul class="contact">
         
         {% if theme_config.contact.email %}

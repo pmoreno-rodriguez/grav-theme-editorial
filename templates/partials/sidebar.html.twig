@@ -54,7 +54,7 @@
         {# Show Random post if plugin is enabled #}
         {% if config.plugins.random.enabled %}
         <section>
-            <h4>{{ 'EDITORIAL.SIDEBAR.RANDOM_ARTICLE.LABEL'|t }}</h4>
+            <h2>{{ 'EDITORIAL.SIDEBAR.RANDOM_ARTICLE.LABEL'|t }}</h2>
             <a class="button fit" href="{{ base_url }}/random">
                 <i class="fa fa-retweet"></i> {{ 'EDITORIAL.SIDEBAR.RANDOM_ARTICLE.BUTTON'|t }}
             </a>
@@ -63,7 +63,7 @@
 
         {% if config.plugins.feed.enabled %}
         <section class="sidebar-content syndicate">
-            <h4>{{ 'EDITORIAL.SIDEBAR.SYNDICATE.LABEL'|t }}</h4>
+            <h2>{{ 'EDITORIAL.SIDEBAR.SYNDICATE.LABEL'|t }}</h2>
             <a class="button medium primary" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
             <a class="button medium primary" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
             {% if config.plugins.feed.enable_json_feed %}<a class="btn" href="{{ feed_url }}.json"><i class="fa fa-rss-square"></i> JSON</a>{% endif %}
@@ -82,7 +82,11 @@
         
         {# Only show taxonomylist in blog pages #}
         {% if config.plugins.taxonomylist.enabled %}
-            {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+            {% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+            {# If there is a taxonomy, load taxonomylist.html.twig #}
+            {% if taxlist %}
+                {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+            {% endif %}
         {% endif %}
 
         {% if menu_login %}

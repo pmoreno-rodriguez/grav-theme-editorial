@@ -41,6 +41,8 @@
         {% for child in collection %}
             {% set image_child = child.media[header.featured_image] ?: child.media.images|first %}
             {% set child_showImage = child.header.show_pageimage|defined(true) %}
+            {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': child }) %}
+            {% set Htag_title = 'h2' %}
             {% include 'partials/blog-list-item.html.twig' with { page: child, 'show_image': child_showImage, 'image': image_child, 'title': child.title } %}
         {% endfor %}
     </div>

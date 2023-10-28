@@ -1,12 +1,10 @@
-{% set datestamp = include('partials/page-bits/date.html.twig') %}
-
 <article>
    {% if show_image and image %}
     <a href="{{page.url}}" class="image">
         {{ image.cropZoom(416,256).loading('lazy').attribute('width', '300').attribute('height','300').html(title,title,'')|raw }}
     </a>
     {% endif %}
-    <h2>{{ title|raw }}</h2>
+    <{{Htag_title}}>{{ title|raw }}</{{Htag_title}}>
     <p class="data-post">
         {{'EDITORIAL.ITEM.POSTED_ON'|t}} {{ datestamp }}
     </p>

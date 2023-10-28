@@ -1,3 +1,9 @@
+# v2.0.4
+## 10/28/2023
+
+1. [](#bugfix)
+   * Fixed raw filter on copyright text 
+
 # v2.0.3
 ## 10/28/2023
 

@@ -90,6 +90,14 @@
             </ul>
         </div>
     </div>
+    
+    {# Show Comments if plugin is enabled #}
+    {% if config.plugins.comments.enabled %}
+    <div>
+        {% include 'partials/comments.html.twig' with {'page': page} %}
+    </div>
+    {% endif %}
+    
     {% if show_pagination %}
     <p class="align-center">
         {% if not page.isLast %}

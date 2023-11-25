@@ -24,6 +24,9 @@
 {% set img_width = header_var('image_width')|default(1000) %}
 {% set img_height = header_var('image_height')|default(300) %}
 
+{# SET DEFAULT BLOG URL #}
+{% set blog = page.find(header_var('blog_url', [page, blog])|defined(theme_var('blog-page'))) %}
+
 <!DOCTYPE HTML>
 <html lang="{{ lang }}">
 <!-- HEAD SECTION -->

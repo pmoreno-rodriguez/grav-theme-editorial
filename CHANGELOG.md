@@ -1,3 +1,11 @@
+# v2.0.5
+## 11/25/2023
+
+1. [](#bugfix)
+   * Fixed route of Popular tags in sidebar (issue [#37](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/37))
+2. [](#new)
+   * New options to enable/disable plugin sections in the sidebar
+   
 # v2.0.4
 ## 10/28/2023
 

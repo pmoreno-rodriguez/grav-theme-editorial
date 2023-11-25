@@ -1,9 +1,9 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 2.0.4
+version: 2.0.5
 description: GravCMS port of the HTML5UP theme Editorial
-icon: rebel
+icon: text-width
 author:
   name: Pedro Moreno
   email: birdydesign@proton.me
@@ -68,46 +68,7 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             validate:
                 type: bool
-        menu_options:
-            type: section 
-            title: EDITORIAL.ADMIN.THEME.MENU.TITLE
-            underline: true
 
-        menu_langswitcher:
-            type: toggle
-            label: EDITORIAL.ADMIN.THEME.MENU.LANGSWITCHER
-            help: EDITORIAL.ADMIN.THEME.MENU.LANGSWITCHER_HELP
-            default: 1
-            highlight: 1
-            options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            validate:
-                type: bool
-        
-        menu_search:
-            type: toggle
-            label: EDITORIAL.ADMIN.THEME.MENU.SEARCH
-            help: EDITORIAL.ADMIN.THEME.MENU.SEARCH_HELP
-            default: 1
-            highlight: 1
-            options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            validate:
-                type: bool
-        
-        menu_login:
-            type: toggle
-            label: EDITORIAL.ADMIN.THEME.MENU.LOGIN
-            help: EDITORIAL.ADMIN.THEME.MENU.LOGIN_HELP
-            default: 1
-            highlight: 1
-            options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            validate:
-                type: bool
         copyright.text:
             type: textarea
             rows: 2
@@ -116,7 +77,7 @@ form:
             help: EDITORIAL.ADMIN.THEME.CONTACT.COPYRIGHT_TEXT_HELP
         header_section:
             type: section
-            title: EDITORIAL.ADMIN.THEME.HEADER_OPTIONS
+            title: EDITORIAL.ADMIN.THEME.HEADER_SECTION
             underline: true
         themeSlogan:
             type: text
@@ -169,6 +130,94 @@ form:
             multiple: false
             accept:
             - image/*        
+        sidebar_section:
+            type: fieldset
+            collapsible: true
+            collapsed: true
+            icon: bars
+            title: EDITORIAL.ADMIN.THEME.SIDEBAR.SECTION
+            fields:
+                menu_langswitcher:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER_HELP
+                    default: 1
+                    highlight: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                    validate:
+                        type: bool
+                
+                menu_search:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH_HELP
+                    default: 1
+                    highlight: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                    validate:
+                        type: bool
+                
+                menu_login:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN_HELP
+                    default: 1
+                    highlight: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                    validate:
+                        type: bool
+  
+                sidebar_showtaxonomy:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                sidebar_showarchives:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                sidebar_showrelatedpages:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                sidebar_showfeeds:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                sidebar_showrandom:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
         blog_section:
             type: fieldset
             collapsible: true

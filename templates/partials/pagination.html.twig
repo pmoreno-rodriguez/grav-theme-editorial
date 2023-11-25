@@ -6,7 +6,7 @@
 <ul class="pagination">
     {% if pagination.hasPrev %}
         {% set url =  (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
-        <li><a rel="prev" class="button" href="{{ url }}">{{'EDITORIAL.BLOG.PAGINATION.PREV'|t}}</a></li>
+        <li><a rel="prev" class="button" href="{{ url }}">&laquo; {{'EDITORIAL.BLOG.PAGINATION.PREV'|t}}</a></li>
     {% else %}
         <li><span class="button disabled">{{'EDITORIAL.BLOG.PAGINATION.PREV'|t}}</span></li>
     {% endif %}
@@ -26,7 +26,7 @@
 
     {% if pagination.hasNext %}
         {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
-        <li><a rel="next" class="button" href="{{ url }}">{{'EDITORIAL.BLOG.PAGINATION.NEXT'|t}}</a></li>
+        <li><a rel="next" class="button" href="{{ url }}">{{'EDITORIAL.BLOG.PAGINATION.NEXT'|t}} &raquo;</a></li>
     {% else %}
         <li><span class="button disabled">{{'EDITORIAL.BLOG.PAGINATION.NEXT'|t}}</span></li>
     {% endif %}

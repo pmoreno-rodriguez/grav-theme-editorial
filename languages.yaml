@@ -9,16 +9,8 @@ en:
         SIDEBAR_OPEN: Open sidebar
         SIDEBAR_OPEN_HELP: Set if the sidebar is open or closed at startup
         GOOGLE_FONTS:
-          LOCAL: Use locally hosted Google Fonts
-        MENU:
-          TITLE: Sidebar Menu Configuration
-          LANGSWITCHER: Enable Langswitcher menu option
-          LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the sidebar menu.
-          SEARCH: Enable Search menu option
-          SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in sidebar menu.
-          LOGIN: Enable Login menu option
-          LOGIN_HELP: You can enable or disable Login icon in sidebar menu, to show login status.
-        HEADER_OPTIONS: Header Options
+          LOCAL: Use locally hosted Google Fonts    
+        HEADER_SECTION: Header Section
         FAVICON: Choose your own favicon
         FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
         SLOGAN: Theme Slogan
@@ -43,6 +35,24 @@ en:
             CITY: City
             STATE: State
             ZIP: Postal Code
+        SIDEBAR: 
+            SECTION: Sidebar Configuration
+            LANGSWITCHER: Enable Langswitcher menu option
+            LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the sidebar menu.
+            SEARCH: Enable Search menu option
+            SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in sidebar menu.
+            LOGIN: Enable Login menu option
+            LOGIN_HELP: You can enable or disable Login icon in sidebar menu, to show login status.
+            SHOW_TAXONOMY: Show Popular Tags
+            SHOW_TAXONOMY_HELP: 'Taxonomylist plugin must be installed'
+            SHOW_ARCHIVES: Show Archives
+            SHOW_ARCHIVES_HELP: 'Archives plugin must be installed'
+            SHOW_RELATED_PAGES: Show Related Pages
+            SHOW_RELATED_PAGES_HELP: 'Related pages plugin must be installed'
+            SHOW_FEEDS: Show Feeds
+            SHOW_FEEDS_HELP: 'Feeds plugin must be installed'
+            SHOW_RANDOM: Show Random Post
+            SHOW_RANDOM_HELP: 'Random plugin must be installed'
         BLOG:
           DEFAULTS: Blog Defaults
           PAGE_LABEL: Blog Page
@@ -322,14 +332,6 @@ es:
         SIDEBAR_OPEN_HELP: Establece si la barra lateral está abierta o cerrada al inicio.
         GOOGLE_FONTS:
           LOCAL: Usar fuentes de Google alojadas localmente
-        MENU:
-          TITLE: Configuración del menú lateral
-          LANGSWITCHER: Activar la opción de menú Langswitcher
-          LANGSWITCHER_HELP: Con el plugin Langswitcher activado y la configuración multi-idioma en su sitio, puede activar o desactivar la funcionalidad langswitcher que aparece en el menú lateral.
-          SEARCH: Activar la opción de menú Buscar
-          SEARCH_HELP: Con el plugin SimpleSearch activado puede activar o desactivar el bloque de búsqueda en el menú lateral.
-          LOGIN: Activar la opción de menú Login
-          LOGIN_HELP: Puede activar o desactivar el icono de inicio de sesión en el menú lateral, para mostrar el estado de inicio de sesión.
         HEADER_SECTION: Sección de encabezado
         FAVICON: Elige tu propio favicon
         FAVICON_DESCRIPTION: Se usará en lugar del favicon predeterminado `theme://images/favicon.png`
@@ -353,6 +355,24 @@ es:
             CITY: Ciudad
             STATE: Estado
             ZIP: Código Postal
+        SIDEBAR: 
+            SECTION: Configuración de la barra lateral
+            LANGSWITCHER: Activar la opción de menú Langswitcher
+            LANGSWITCHER_HELP: Con el plugin Langswitcher activado y la configuración multi-idioma en su sitio, puede activar o desactivar la funcionalidad langswitcher que aparece en el menú lateral.
+            SEARCH: Activar la opción de menú Buscar
+            SEARCH_HELP: Con el plugin SimpleSearch activado puede activar o desactivar el bloque de búsqueda en el menú lateral.
+            LOGIN: Activar la opción de menú Login
+            LOGIN_HELP: Puede activar o desactivar el icono de inicio de sesión en el menú lateral, para mostrar el estado de inicio de sesión.
+            SHOW_TAXONOMY: Mostrar Etiquetas Populares
+            SHOW_TAXONOMY_HELP: 'El plugin Taxonomylist debe estar instalado'
+            SHOW_ARCHIVES: Mostrar Archivos
+            SHOW_ARCHIVES_HELP: 'El plugin Archives debe estar instalado'
+            SHOW_RELATED_PAGES: Mostrar Páginas Relacionadas
+            SHOW_RELATED_PAGES_HELP: 'El plugin Related pages debe estar instalado'
+            SHOW_FEEDS: Mostrar Feeds
+            SHOW_FEEDS_HELP: 'El plugin Feeds debe estar instalado'
+            SHOW_RANDOM: Mostrar Publicación Aleatoria
+            SHOW_RANDOM_HELP: 'El plugin Random debe estar instalado'
         BLOG:
           DEFAULTS: Opciones de Blog
           PAGE_LABEL: Página de Blog
@@ -631,14 +651,6 @@ fr:
         SIDEBAR_OPEN_HELP: Définit si la barre latérale est ouverte ou fermée au démarrage.
         GOOGLE_FONTS:
           LOCAL: Utiliser les polices Google hébergées localement
-        MENU:
-          TITLE: Configuration du menu latérale
-          LANGSWITCHER: Activer l'option de menu Langswitcher
-          LANGSWITCHER_HELP: Lorsque le plugin Langswitcher est activé et que votre site est configuré en plusieurs langues, vous pouvez activer ou désactiver la fonctionnalité Langswitcher qui apparaît dans le menu latérale.
-          SEARCH: Active l'option de menu Recherche
-          SEARCH_HELP: Si le plugin SimpleSearch est activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu latérale.
-          LOGIN: Activer l'option de menu Login
-          LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de login dans le menu latérale pour afficher le statut de connexion.
         HEADER_SECTION: "Section d'en-tête"
         FAVICON: Choisir son propre favicon
         FAVICON_DESCRIPTION: Sera utilisé à la place du favicon par défaut `theme://images/favicon.png`
@@ -662,6 +674,24 @@ fr:
             CITY: Ville
             STATE: État / Région
             ZIP: Code postal
+        SIDEBAR: 
+            SECTION: Configuration de la barre latérale
+            LANGSWITCHER: Activer l'option de menu Langswitcher
+            LANGSWITCHER_HELP: Lorsque le plugin Langswitcher est activé et que votre site est configuré en plusieurs langues, vous pouvez activer ou désactiver la fonctionnalité Langswitcher qui apparaît dans le menu latérale.
+            SEARCH: Active l'option de menu Recherche
+            SEARCH_HELP: Si le plugin SimpleSearch est activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu latérale.
+            LOGIN: Activer l'option de menu Login
+            LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de login dans le menu latérale pour afficher le statut de connexion.
+            SHOW_TAXONOMY: Afficher les balises populaires
+            SHOW_TAXONOMY_HELP: 'Le plugin Taxonomylist doit être installé'
+            SHOW_ARCHIVES: Afficher les archives
+            SHOW_ARCHIVES_HELP: 'Le plugin Archives doit être installé'
+            SHOW_RELATED_PAGES: Afficher les pages associées
+            SHOW_RELATED_PAGES_HELP: 'Le plug-in des pages associées doit être installé'
+            SHOW_FEEDS: Afficher les flux
+            SHOW_FEEDS_HELP: 'Le plug-in Feeds doit être installé'
+            SHOW_RANDOM: Afficher la publication aléatoire
+            SHOW_RANDOM_HELP: 'Le plugin aléatoire doit être installé'
         BLOG:
           DEFAULTS: Paramètres du blog
           PAGE_LABEL: Page du blog

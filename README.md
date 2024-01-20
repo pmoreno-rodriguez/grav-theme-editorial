@@ -23,6 +23,7 @@ To install this theme, just download the zip version of this repository and unzi
 ### Post Installation
 
 Enable the **Editorial** theme, either via the Admin plugin at admin/themes or in the system.yaml file under pages.theme.
+
 ```
 pages:
   theme: editorial
@@ -36,17 +37,17 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Contact Information - Complete the form and the contact information will display in the sidebar.
 * Social Icons (optional) - Add the full URL to a social platform, and an icon/link will automatically display on the top of the page.
 * Blog (optional) - Blog and Item templates.
-* Features modular page
-* Banner modular page like original theme.
-* Contact Form modular page.
-* Contact Form non-modular page.
-* Recent Posts modular page - Show the latest posts in a modular page, eg. Home. (can be changed from twig template)
+* Features module
+* Banner module like the original theme.
+* Contact Form module.
+* Contact Form non-modular template.
+* Recent Posts module - Show the latest posts in a module, eg. Home. (can be changed from twig template)
 * Gallery template (with Glightbox JS)
-* Custom SimpleSearch twig templates.
+* Custom Twig templates for SimpleSearch plugin.
 * Functionality to searchbox in sidebar
 * Production mode for CSS styles
 * Custom logo and Custom logo mobile in theme config
-* Added support for Taxonomylist, Related pages, Random article. Feeds and Archives plugins
+* Support for Taxonomylist, Related Pages, Random, Feeds and Archives plugins.
 * Team template
 * Downloads template
 * Shortcodes to write your pages easily, taking advantage of the styles offered by the theme.
@@ -55,7 +56,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 
 ### Featured Pages
 
-The latest pages tagged with the selected tag in the theme settings and the chosen number (up to a maximum of 5), will be automatically displayed in a mini-list in the sidebar with teaser images and summaries. The current page, if it appears, will not be displayed on that list.
+The featured pages tagged with the selected tag in the theme settings and the chosen number (up to a maximum of 5), will be automatically displayed in a mini-list in the sidebar with teaser images and summaries. The current page, if it appears, will not be displayed on that list.
 
 ![featured image example](images/featured.jpg)
 
@@ -66,7 +67,7 @@ The latest pages tagged with the selected tag in the theme settings and the chos
 * Breadcumbs plugin activated by default in posts.
 * Added blog.html.twig and item.html.twig files.
 * Added option to filter by author taxonomy. It is necessary to configure the author taxonomy, in the site configuration, so that the authors of the blog pages appear in them and you can use the filters by author that the theme has.
-* Social sharing icons added to blog items
+* Icons to share blog posts on social networks.
 * Support for date translation if using the translate-date or twig-extensions plugins.
 
 ### Reordered assets
@@ -107,7 +108,7 @@ To make modifications, you can copy the `user/themes/editorial/editorial.yaml` f
 
 ## Custom Logos
 
-To add a custom logo, you should put the log into the `user/themes/editorial/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
+To add a custom logo, you should put the logo into the `user/themes/editorial/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
 
 ```yaml
 custom_logo:
@@ -155,7 +156,7 @@ Editorial theme includes a simple template to manage downloads of files uploaded
 
 # Demo page
 
-[http://editorial.juanvillen.es/](http://editorial.juanvillen.es/)
+[https://editorial.pmdesign.dev/](https://editorial.pmdesign.dev/)
 
 # Documentation 
 
@@ -167,5 +168,5 @@ You can read extra documentation of Editorial Theme at [https://pmoreno-rodrigue
 
 ## Credits
 * Thanks to [Jeremy Gonyea](https://github.com/jgonyea), who ported the first Editorial theme for Grav.
-* This theme wouldn't be here without HTML5Up.net.  Many thanks to [AJ](aj@lkn.io) for creating the theme initially on that site.
+* This theme wouldn't be here without HTML5Up.net.  Many thanks to [AJ](mailto:aj@lkn.io) for creating the theme initially on that site.
 * Demo images came from [Unsplash](https://unsplash.com/es/@freys/)

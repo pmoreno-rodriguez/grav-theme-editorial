@@ -1,14 +1,14 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 2.0.5
+version: 2.0.6
 description: GravCMS port of the HTML5UP theme Editorial
 icon: text-width
 author:
   name: Pedro Moreno
-  email: birdydesign@proton.me
+  email: pmoreno@pmdesign.dev
 homepage: https://github.com/pmoreno-rodriguez/grav-theme-editorial
-demo: http://editorial.juanvillen.es
+demo: https://editorial.pmdesign.dev/
 keywords: grav, theme, etc
 bugs: https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues
 readme: https://github.com/pmoreno-rodriguez/grav-theme-editorial/blob/develop/README.md
@@ -281,31 +281,32 @@ form:
                     type: textarea
                     rows: 3
                     size: long
+                    markdown: true
                     label: EDITORIAL.ADMIN.THEME.CONTACT.TEXT
                 contact.email:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.EMAIL
                     type: email
-                    default: webmaster@example.com
+                    placeholder: webmaster@example.com
                 contact.phone:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.PHONE
                     type: text
-                    default: (555) 555-5555
+                    placeholder: (555) 555-5555
                 contact.street:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STREET
                     type: text
-                    default: 123 Any Street
+                    placeholder: 123 Any Street
                 contact.city:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.CITY
                     type: text
-                    default: AnyTown
+                    placeholder: AnyTown
                 contact.state:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STATE
                     type: text
-                    default: CA
+                    placeholder: CA
                 contact.zip:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.ZIP
                     type: text
-                    default: 12345
+                    placeholder: 12345
 
         social_section:
             type: fieldset

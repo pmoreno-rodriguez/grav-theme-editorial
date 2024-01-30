@@ -7,7 +7,7 @@
     <ul class="contact">
         
         {% if theme_config.contact.email %}
-        <li class="icon solid fa-envelope"><a href="mailto:{{ theme_config.contact.email }}">{{ theme_config.contact.email }}</a></li>
+        <li class="icon solid fa-envelope"><a href="mailto:{{ theme_config.contact.email|safe_email }}">{{ theme_config.contact.email|safe_email }}</a></li>
         {% endif %}
 
         {% if theme_config.contact.phone %}

@@ -99,7 +99,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed eleifend magn
     
 ### Usage
 
-Wrap some buttons in [raw]`[ed-buttons]`[/raw] tags.  The [raw]`[ed-buttons]`[/raw] has the following parameters:  `stacked`, `special` or`fit`
+Wrap some buttons in [raw]`[ed-buttons]`[/raw] tags.  The [raw]`[ed-buttons]`[/raw] has the parameter `ulclass` with the following values:  `stacked`, `special` or`fit`
     
 The `[ed-button]` shortcode that defines each _button_ has the following parameters:
     

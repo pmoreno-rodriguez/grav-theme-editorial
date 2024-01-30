@@ -1,0 +1,7 @@
+<div class="{{ row_class }}" {% if row_styles %}style="{{ row_styles }}"{% endif %}>
+    {% for key, column in columns %}
+        <div class="{{ column.getParameter('class', 'col-6') }}">
+            {{ column.getContent()|raw }}
+        </div>
+    {% endfor %}
+</div>

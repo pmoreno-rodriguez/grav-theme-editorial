@@ -1,4 +1,11 @@
 <?php
+
+/**
+* @author Pedro Moreno https://pmdesign.dev
+* @license Public Domain
+* @url https://github.com/pmoreno-rodriguez/grav-theme-editorial
+*/
+
 namespace Grav\Plugin\Shortcodes;
 
 use Grav\Common\Utils;

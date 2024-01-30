@@ -2640,7 +2640,7 @@ button:disabled,
   flex-shrink: 1;
   margin: 0 0 6em 6em;
   position: relative;
-  width: calc((100% / 3) - 6em);
+  width: calc(33.3333333333% - 6em);
 }
 .posts article:before {
   background: rgba(210, 215, 217, 0.75);
@@ -2889,10 +2889,10 @@ button:disabled,
   width: calc(100% + 2.25em);
 }
 .team > .col-4 {
-  width: calc((100% / 3) - 2.25em);
+  width: calc(33.3333333333% - 2.25em);
 }
 .team > .col-6 {
-  width: calc((100% / 2) - 2.25em);
+  width: calc(50% - 2.25em);
 }
 .team .member {
   box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
@@ -3578,5 +3578,14 @@ ul.blog-items p.blog-datestamp {
 @media screen and (max-width: 736px) {
   .share .align-left, .share .align-center, .share .align-right {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-image {
+    display: none;
+  }
+  .search-item {
+    margin-left: 0 !important;
   }
 }

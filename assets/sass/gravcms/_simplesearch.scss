@@ -1,0 +1,8 @@
+@include breakpoint('<=xsmall') {
+    .search-image {
+        display: none;
+    }
+    .search-item {
+        margin-left: 0 !important;
+    }
+}

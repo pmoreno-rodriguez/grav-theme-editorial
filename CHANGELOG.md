@@ -1,7 +1,7 @@
 # v2.0.6
 ## 01/30/2024
 
-2. [](#improved)
+1. [](#improved)
    * Simplified Flex-Row shortcode code. New twig template to process the shortcode
    * Image hidden in search results on small devices
    * Added raw filter in Contact template

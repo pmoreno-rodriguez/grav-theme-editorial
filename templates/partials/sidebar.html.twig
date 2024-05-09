@@ -83,17 +83,13 @@
         {% endif %}
 
         {# Show Related Pages if plugin is enabled #}
-        {% if showRelatedPages %}
+        {% if showRelatedPages and page.template == 'blog' %}
             {% include 'partials/relatedpages.html.twig' %}
         {% endif %}
         
         {# Only show taxonomylist in blog pages #}
-        {% if showTaxonomyList %}
-            {% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
-            {# If there is a taxonomy, load taxonomylist.html.twig #}
-            {% if taxlist %}
-                {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
-            {% endif %}
+        {% if showTaxonomyList and page.template == 'blog' %}
+            {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag', children_only: true} %}
         {% endif %}
 
         {% if menu_login %}

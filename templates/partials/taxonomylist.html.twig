@@ -1,3 +1,6 @@
+{% set taxlist = children_only ?? true ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+
+{% if taxlist and page.template == 'blog' %}
 <section>
     <header class="major">
         <h2>{{ 'EDITORIAL.SIDEBAR.TAXONOMYLIST.LABEL'|t }}</h2>
@@ -11,3 +14,4 @@
         {% endfor %}
     </ul>
 </section>
+{% endif %}

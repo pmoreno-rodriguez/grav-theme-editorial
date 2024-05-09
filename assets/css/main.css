@@ -1,4 +1,3 @@
-@import 'fontawesome-all.min.css';
 /*
 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
@@ -1731,6 +1730,14 @@ input[type=radio] + label:before {
 .box.danger h1, .box.danger h2, .box.danger h3, .box.danger h4, .box.danger h5, .box.danger h6 {
   color: #f5f6f7 !important;
 }
+.box.light {
+  background-color: rgba(230, 235, 237, 0.25);
+  box-shadow: none;
+  color: #2e3438 !important;
+}
+.box.light h1, .box.light h2, .box.light h3, .box.light h4, .box.light h5, .box.light h6 {
+  color: #2e3438 !important;
+}
 .box.alt {
   border: 0;
   border-radius: 0;
@@ -2949,10 +2956,10 @@ button:disabled,
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  -moz-justify-content: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -ms-justify-content: space-evenly;
-  justify-content: space-evenly;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
 }
 .team .member .links .icon {
   font-size: 1.25em;

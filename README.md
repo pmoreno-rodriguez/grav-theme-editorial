@@ -160,13 +160,14 @@ Editorial theme includes a simple template to manage downloads of files uploaded
 
 # Documentation 
 
-You can read extra documentation of Editorial Theme at [https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index](https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index)
+You can read extra documentation of Editorial Theme at [https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index](https://pmoreno-rodriguez.github.io/#/./gravthemes/editorial/index). This is [Spanish document site for Editorial Theme](https://pmdesign.dev/temas/editorial)
 
 ## Future plans
 
 * Future plans here
 
 ## Credits
+
 * Thanks to [Jeremy Gonyea](https://github.com/jgonyea), who ported the first Editorial theme for Grav.
 * This theme wouldn't be here without HTML5Up.net.  Many thanks to [AJ](mailto:aj@lkn.io) for creating the theme initially on that site.
 * Demo images came from [Unsplash](https://unsplash.com/es/@freys/)

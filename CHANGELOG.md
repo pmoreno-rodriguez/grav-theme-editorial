@@ -1,3 +1,13 @@
+# v2.0.7
+## 05/09/2024
+
+1. [](#improved)
+   * Removed `@import` declaration for Fontawesome fonts, duplicated in CSS styles.
+   * Updated `taxonomylist` partial template to latest changes of [taxonomylist plugin](https://github.com/getgrav/grav-plugin-taxonomylist/releases/tag/1.3.6)
+   * Render markdown in `data.html.twig` template
+   * Updated styles for `box` class
+   * Updated demo content
+  
 # v2.0.6
 ## 01/30/2024
 

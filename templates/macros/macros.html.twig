@@ -23,8 +23,7 @@
         {% else %}
             <li>
                 <a href="{{ p.url }}">
-                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
-                    {{ p.menu }}
+                   {{ icon_menu|raw }} {{ p.menu }}
                 </a>
             </li>
         {% endif %}

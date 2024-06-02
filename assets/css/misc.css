@@ -87,9 +87,6 @@ ul.pagination li > .page {font-size: 0.9em;}
     opacity: 1;
     visibility: visible;
   }
-.no-dropdown {
-    display: block !important;
-}
 
 /* GRAV LOGIN OVERRIDED STYLES */
 #grav-login .button, #grav-login button {

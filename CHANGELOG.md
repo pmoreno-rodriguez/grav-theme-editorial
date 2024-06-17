@@ -1,3 +1,9 @@
+# v2.1.0
+## 06/17/2024
+
+1. [](#improved)
+   * Changed the navigation menu to allow dropdown links to open, set to `routable` in settings. The behavior of the arrow to open submenus has been separated from the menu link.
+
 # v2.0.7
 ## 05/09/2024
 

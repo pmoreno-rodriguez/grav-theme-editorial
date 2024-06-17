@@ -1,5 +1,10 @@
+{% set year = 'now'|date('Y') %}
+{% set copyright = theme_var('copyright.text') %}
+{% if copyright is not empty %}
 <!-- Footer -->
-
 <footer id="footer">
-    <div class="copyright">&copy; {{ site.title }}. {{ theme_var('copyright.text')|raw }}</div>
+    <div class="copyright">{{ year }} &copy; {{ site.title|upper }}. <br>
+        {{ copyright|raw }}
+    </div>
 </footer>
+{% endif %}

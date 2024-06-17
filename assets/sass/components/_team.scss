@@ -49,7 +49,7 @@
         .links {
             width: 30%;
             @include vendor('display', 'flex');
-            @include vendor('justify-content', 'space-evenly');
+            @include vendor('justify-content', 'center');
             
             .icon {font-size: 1.25em; padding-left: calc($gutter / 3);}
             

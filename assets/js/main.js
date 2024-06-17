@@ -238,7 +238,7 @@
 
 	// Menu.
 		var $menu = $('#menu'),
-			$menu_openers = $menu.children('ul').find('.opener');
+			$menu_openers = $menu.children('ul').find('.dropdown');
 
 		// Openers.
 			$menu_openers.each(function() {
@@ -250,17 +250,17 @@
 
 					// Prevent default.
 						event.preventDefault();
-
+					
 					// Toggle.
 					if ($this.hasClass('active')) {
 						$this.removeClass('active');
-						$this.next(".submenu").css('display','block');
+						$this.closest('li').find('.submenu').first().css('display','block');
 					} else {
 						$this.toggleClass('active');
-						$this.next(".submenu").css('display','none');
+						$this.closest('li').find('.submenu').first().css('display','none');
 					}
 
-						$this.next(".submenu").slideToggle();
+						$this.closest('li').find('.submenu').first().slideToggle();
 					
 						// Trigger resize (sidebar lock).
 						$window.triggerHandler('resize.sidebar-lock');

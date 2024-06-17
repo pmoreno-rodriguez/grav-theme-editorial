@@ -1,0 +1,9 @@
+{# Original assets from HTML5Up with a few custom styles for several Grav plugins #}
+<!-- PAGE STYLES -->
+{% block stylesheets %}
+    {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 15}) %}
+    {% do assets.addCss('theme://assets/css/misc.css', {'priority': 10}) %}
+    {% do assets.addCss('theme://assets/css/custom.css', {'priority': 5}) %}
+    {% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {'priority': 20}) %}
+    {% do assets.addCss('theme://assets/css/fontawesome-all.min.css', {rel: 'stylesheet'}) %}
+{% endblock %}

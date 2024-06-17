@@ -1,4 +1,11 @@
 <?php
+
+/**
+* @author Pedro Moreno https://pmdesign.dev
+* @license Public Domain
+* @url https://github.com/pmoreno-rodriguez/grav-theme-editorial
+*/
+
 namespace Grav\Plugin\Shortcodes;
 
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
@@ -8,42 +15,28 @@ class FlexRowShortcode extends Shortcode
     public function init()
     {
         $this->shortcode->getHandlers()->add('ed-flex-row', function (ShortcodeInterface $sc) {
-            // Get the shortcode content
-            $content = $sc->getContent();
-            // Remove paragraph tags
-            $content = str_replace(array('<p>', '</p>'), '', $content);
 
-            // Process your custom logic here to distribute the content in columns and flex row
-            $columns = $this->parseColumns($content);
-            $rowClass = $sc->getParameter('class', '');
+            $hash = $this->shortcode->getId($sc);
 
-            $columnClasses = [];
-            foreach ($columns as $column) {
-                $columnClass = $column['class'] ?? '';
-                $columnContent = $column['content'] ?? '';
+            $output = $this->twig->processTemplate(
+                'shortcodes/flexbox-layout.html.twig', // Twig template for shortcode
+                [
+                    'hash' => $hash,
+                    'row_class' => 'row ' . $sc->getParameter('class', ''), // Concatenate 'row' with user-provided class
+                    'row_styles' => $sc->getParameter('style',''), // Define inline styles
+                    'columns' => $this->shortcode->getStates($hash),
+                ]
+            );
 
-                $columnClasses[] = '<div class="' . $columnClass . '">' . $columnContent . '</div>';
-            }
-
-            // Return the processed content
-            return '<p><div class="row ' . $rowClass . '">' . implode('', $columnClasses) . '</div></p>';
+            return $output;
         });
-    }
 
-    protected function parseColumns($content)
-    {
-        $pattern = '/\[column\s+class="([^"]+)"\](.*?)\[\/column\]/is';
-        preg_match_all($pattern, $content, $matches, PREG_SET_ORDER);
+        $this->shortcode->getHandlers()->add('column', function (ShortcodeInterface $sc) {
+            // Add column to layout state using parent layout id
+            $hash = $this->shortcode->getId($sc->getParent());
+            $this->shortcode->setStates($hash, $sc);
 
-        $columns = [];
-        foreach ($matches as $match) {
-            $column = [
-                'class' => $match[1],
-                'content' => $match[2],
-            ];
-            $columns[] = $column;
-        }
-
-        return $columns;
+            return '';
+        });
     }
 }

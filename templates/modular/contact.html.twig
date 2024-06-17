@@ -1,6 +1,9 @@
+{% set show_title = header_var('show_title')|defined(true) %}
+{% set title = page.title|raw  %}
+
 <section id="contact">
 <header class="major">
-    <h2>{{ page.title }}</h2>
+    {% if show_title %}<h2>{{ title }}</h2>{% endif %}
     {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
 </header>
     <p class="lead">{{ page.content|raw }}</p>

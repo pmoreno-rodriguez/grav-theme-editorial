@@ -1,0 +1,28 @@
+{% set logo_style = (not logo_enabled or logo is empty) ? 'style="text-align:left !important;"' : '' %}
+
+<header id="header">
+    {% if logo_enabled and logo %}
+        <!-- If logo is defined, include logo template here -->
+        {% include 'partials/logo.html.twig' %}
+    {% endif %}
+    {% if page.home() %}
+        <h1>
+    {% endif %}
+    <a class="logo" {{ logo_style|raw }} href="{{ base_url == '' ? '/' : base_url }}">
+        <strong>
+            {{ config.site.title }}
+        </strong>
+        {% if slogan %}
+            <span class="slogan">
+                {{ slogan }}
+            </span>
+        {% endif %}
+    </a>
+    {% if page.home() %}
+        </h1>
+    {% endif %}
+    {% if social %}
+        <!-- If socials icons are defined, include template here -->
+        {% include 'partials/social.html.twig' %}
+    {% endif %}
+</header>

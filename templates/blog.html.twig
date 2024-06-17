@@ -4,11 +4,7 @@
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_pagination = header_var('content.pagination', [page, blog])|defined(true) %}
 {% set show_breadcrumbs = header_var('content.breadcrumbs', [page, blog])|defined(false) %}
-{% set show_image = header_var('show_pageimage')|defined(true) %}
-{% set image = page.media[header.featured_image] ?: page.media.images|first %}
-{% set img_width = header_var('image_width')|default(1000) %}
-{% set img_height = header_var('image_height')|default(300) %}
-{% set title = page.title|raw %}
+{% set readmore_txt = blog.header.readmore_text|raw|default('Read more') %}
 
 {# Set page title by taxonomy #}
 {% if uri.param('category') %}
@@ -25,11 +21,9 @@
 
 {% block content %}
 
-    <p>
     {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
         {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
-    </p>
     
     <header class="main">
         {% if show_image and image %}
@@ -37,7 +31,7 @@
 		{{ image.cropZoom(img_width, img_height).loading('lazy').html(title,title,'')|raw }}
 	    </span>
 	{% endif %}
-        <h1>{{page.title|raw}}</h1>
+        {% if show_title %}<h1>{{ title }}</h1>{% endif %}
         {% if listing_title %}<p>{{ listing_title|raw }}</p>{% endif %}
     </header>
     <div>
@@ -45,7 +39,11 @@
     </div>
     <div class="posts">
         {% for child in collection %}
-            {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+            {% set image_child = child.media[header.featured_image] ?: child.media.images|first %}
+            {% set child_showImage = child.header.show_pageimage|defined(true) %}
+            {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': child }) %}
+            {% set Htag_title = 'h2' %}
+            {% include 'partials/blog-list-item.html.twig' with { page: child, 'show_image': child_showImage, 'image': image_child, 'title': child.title } %}
         {% endfor %}
     </div>
     {# Render the pagination list #}

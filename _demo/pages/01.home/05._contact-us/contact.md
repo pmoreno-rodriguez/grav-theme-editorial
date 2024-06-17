@@ -11,7 +11,7 @@ form:
     fields:
         -
             name: Name
-            label: false
+            label: Name
             placeholder: Name
             validate:
                 required: true
@@ -23,7 +23,7 @@ form:
             classes: null
         -
             name: Email
-            label: false
+            label: Email
             placeholder: Email
             validate:
                 required: true
@@ -33,7 +33,7 @@ form:
             classes: null
         -
             name: Subject
-            label: false
+            label: Subject
             type: text
             placeholder: Subject
             validate:
@@ -43,7 +43,7 @@ form:
             classes: null
         -
             name: Message
-            label: false
+            label: Message
             placeholder: Message
             validate:
                 required: true
@@ -54,11 +54,12 @@ form:
             rows: 10
         -
             name: Privacy
-            type: privacy
-            label: 'Privacy Policy'
+            type: checkbox
+            markdown: true
+            label: 'By using this form you agree with our [Privacy Policy](/privacy)'
             validate:
                 required: true
-                message: 'By using this form you agree with our Privacy Policy'
+                message: 'Accept the privacy policy is required'
     buttons:
         -
             type: submit
@@ -76,7 +77,10 @@ form:
             body: '{% include ''forms/data.html.twig'' %}'
         message: 'Thank you from your submission !'
         display: /thankyou
-        reset: true
+show_pageimage: true
+image_width: 1000
+image_height: 300
+show_title: true
 ---
 
 <h3>Send us your comments</h3>

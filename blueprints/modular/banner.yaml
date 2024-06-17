@@ -8,9 +8,14 @@ form:
         content:
           type: tab
           fields:
-            header.options:
+            _BannerSection:
+              type: section
+              underline: true
+              ordering@: _ContentOptions
+              title: EDITORIAL.ADMIN.MODULAR.BANNER.SECTION
+            _BannerOptions:
               type: columns
-              ordering@: header.title
+              ordering@: _BannerSection
               fields:
                 header.content:
                   type: column

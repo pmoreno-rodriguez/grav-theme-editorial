@@ -1,14 +1,14 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 1.0.10.1
+version: 2.0.7
 description: GravCMS port of the HTML5UP theme Editorial
-icon: rebel
+icon: text-width
 author:
   name: Pedro Moreno
-  email: birdydesign@proton.me
+  email: pmoreno@pmdesign.dev
 homepage: https://github.com/pmoreno-rodriguez/grav-theme-editorial
-demo: http://editorial.juanvillen.es
+demo: https://editorial.pmdesign.dev/
 keywords: grav, theme, etc
 bugs: https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues
 readme: https://github.com/pmoreno-rodriguez/grav-theme-editorial/blob/develop/README.md
@@ -68,50 +68,16 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             validate:
                 type: bool
-        menu_options:
-          type: section 
-          title: EDITORIAL.ADMIN.THEME.MENU.TITLE
-          underline: true
 
-        menu_langswitcher:
-          type: toggle
-          label: EDITORIAL.ADMIN.THEME.MENU.LANGSWITCHER
-          help: EDITORIAL.ADMIN.THEME.MENU.LANGSWITCHER_HELP
-          default: 1
-          highlight: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool
-        
-        menu_search:
-          type: toggle
-          label: EDITORIAL.ADMIN.THEME.MENU.SEARCH
-          help: EDITORIAL.ADMIN.THEME.MENU.SEARCH_HELP
-          default: 1
-          highlight: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool
-        
-        menu_login:
-          type: toggle
-          label: EDITORIAL.ADMIN.THEME.MENU.LOGIN
-          help: EDITORIAL.ADMIN.THEME.MENU.LOGIN_HELP
-          default: 1
-          highlight: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool
-
+        copyright.text:
+            type: textarea
+            rows: 2
+            size: long
+            label: EDITORIAL.ADMIN.THEME.CONTACT.COPYRIGHT_TEXT
+            help: EDITORIAL.ADMIN.THEME.CONTACT.COPYRIGHT_TEXT_HELP
         header_section:
             type: section
-            title: EDITORIAL.ADMIN.THEME.HEADER_OPTIONS
+            title: EDITORIAL.ADMIN.THEME.HEADER_SECTION
             underline: true
         themeSlogan:
             type: text
@@ -164,6 +130,94 @@ form:
             multiple: false
             accept:
             - image/*        
+        sidebar_section:
+            type: fieldset
+            collapsible: true
+            collapsed: true
+            icon: bars
+            title: EDITORIAL.ADMIN.THEME.SIDEBAR.SECTION
+            fields:
+                menu_langswitcher:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER_HELP
+                    default: 1
+                    highlight: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                    validate:
+                        type: bool
+                
+                menu_search:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH_HELP
+                    default: 1
+                    highlight: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                    validate:
+                        type: bool
+                
+                menu_login:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN_HELP
+                    default: 1
+                    highlight: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                    validate:
+                        type: bool
+  
+                sidebar_showtaxonomy:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                sidebar_showarchives:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                sidebar_showrelatedpages:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                sidebar_showfeeds:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                sidebar_showrandom:
+                    type: toggle
+                    label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM
+                    help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM_HELP
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
         blog_section:
             type: fieldset
             collapsible: true
@@ -223,41 +277,36 @@ form:
                         0: PLUGIN_ADMIN.DISABLED
                     validate:
                         type: bool
-                copyright.text:
-                    type: textarea
-                    rows: 2
-                    size: long
-                    label: EDITORIAL.ADMIN.THEME.CONTACT.COPYRIGHT_TEXT
-                    help: EDITORIAL.ADMIN.THEME.CONTACT.COPYRIGHT_TEXT_HELP
                 contact.text:
                     type: textarea
                     rows: 3
                     size: long
+                    markdown: true
                     label: EDITORIAL.ADMIN.THEME.CONTACT.TEXT
                 contact.email:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.EMAIL
                     type: email
-                    default: webmaster@example.com
+                    placeholder: webmaster@example.com
                 contact.phone:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.PHONE
                     type: text
-                    default: (555) 555-5555
+                    placeholder: (555) 555-5555
                 contact.street:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STREET
                     type: text
-                    default: 123 Any Street
+                    placeholder: 123 Any Street
                 contact.city:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.CITY
                     type: text
-                    default: AnyTown
+                    placeholder: AnyTown
                 contact.state:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STATE
                     type: text
-                    default: CA
+                    placeholder: CA
                 contact.zip:
                     label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.ZIP
                     type: text
-                    default: 12345
+                    placeholder: 12345
 
         social_section:
             type: fieldset

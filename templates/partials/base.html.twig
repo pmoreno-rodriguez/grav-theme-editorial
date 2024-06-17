@@ -1,3 +1,9 @@
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{# SET THEME OPTIONS #}
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 {% set favicon = theme_var('favicon') %}
@@ -7,76 +13,47 @@
 {% set slogan = theme_config.themeSlogan %}
 {% set google_fonts = theme_var('google_fonts_local') ? '-local.css' : '-remote.css' %}
 
+{# SET DEFAULT GRAV LANGUAGE #}
+{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+
+{# SET PAGE OPTIONS #}
+{% set show_title = header_var('show_title')|defined(true) %}
+{% set title = page.title|raw  %}
+{% set show_image = header_var('show_pageimage')|defined(true) %}
+{% set image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set img_width = header_var('image_width')|default(1000) %}
+{% set img_height = header_var('image_height')|default(300) %}
+
+{# SET DEFAULT BLOG URL #}
+{% set blog = page.find(header_var('blog_url', [page, blog])|defined(theme_var('blog-page'))) %}
+
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html lang="{{ grav.language.getActive ?: config.site.default_lang }}">
+<html lang="{{ lang }}">
+<!-- HEAD SECTION -->
 <head>
-{% block head %}
-    <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-    {% include 'partials/metadata.html.twig' %}
-    {% if favicon %}
-    {% set favicon_file = (favicon|first).name %}
-    <link rel="icon" type="{{ favicon.type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
-    {% else %}
-    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
-    {% endif %}
-    <link rel="canonical" href="{{ page.url(true, true) }}" />
-
-    {# Original assets from HTML5Up with a few custom styles for several Grav plugins #}
-    {% block stylesheets %}
-        {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 15}) %}
-        {% do assets.addCss('theme://assets/css/misc.css', {'priority': 10}) %}
-        {% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {'priority': 20}) %}
-    {% endblock %}
-    
-    {% block javascripts %}
-        {% do assets.addJs('jquery', 10) %}
-        {% do assets.addJs('theme://assets/js/util.js', {'priority':98, 'group':'bottom'}) %}
-        {% do assets.addJs('theme://assets/js/main.js', {'priority':97, 'group':'bottom'}) %}
-        {% do assets.addJs('theme://assets/js/breakpoints.min.js', {'priority':101, 'group':'bottom'}) %}
-        {% do assets.addJs('theme://assets/js/browser.min.js', {'priority':102, 'group':'bottom'}) %}
-    {% endblock %}
-
-    {% block assets deferred %}
-        {{ assets.css()|raw }}
-        {{ assets.js()|raw }}
-    {% endblock %}
-
-{% endblock head%}
+{% include 'partials/page-bits/head.html.twig' with { favicon } %}
+{% block stylesheets %} 
+    {% include 'partials/page-bits/head-styles.html.twig' with { compress, google_fonts } %}
+{% endblock %}
+{% block javascripts %} 
+    {% include 'partials/page-bits/head-scripts.html.twig' %}
+{% endblock %}
+{% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+{% endblock %}
 </head>
+<!-- BODY SECTION -->
 <body class="is-preload {{ page.header.body_classes }}">
-
     <!-- Wrapper -->
     <div id="wrapper">
-    
     <!-- Main -->
         <div id="main">
             <div class="inner">
-                
                 <!-- Header -->
-                <header id="header">
-                    {% if logo_enabled and logo %}
-                        <!-- If logo is defined, include logo template here -->
-                        {% include 'partials/logo.html.twig' %}
-                    {% endif %}
-                    <a class="logo"{% if not logo_enabled or logo is empty %} style="text-align:left !important;"{% endif %}href="{{ base_url == '' ? '/' : base_url }}">
-                        <strong>{{ config.site.title }}</strong>
-                        {% if slogan %}<span class="slogan">{{ slogan }}</span>{% endif %}
-                    </a>
-                    {% if social %}
-                        <!-- If socials icons are defined, include template here -->
-                        {% include 'partials/social.html.twig' %}
-                    {% endif %}
-                </header>
-
+                {% block header %}
+                    {% include 'partials/header.html.twig' %}
+                {% endblock %}
                 <!-- Content -->
                 <section>
                     {% block messages %}
@@ -87,11 +64,15 @@
                 </section>
             </div>
         </div>
-        
-        {% include 'partials/sidebar.html.twig' %}
-
+        {% block sidebar %}
+            {% include 'partials/sidebar.html.twig' %}
+        {% endblock %}
     </div>
-    
+
+    <a id="back-to-top" href="#" aria-label="{{ 'EDITORIAL.MISC.BACK_TO_TOP'|t }}" title="{{ 'EDITORIAL.MISC.BACK_TO_TOP'|t }}">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+
     {% block bottom %}
     <!-- Scripts -->
         {{ assets.js('bottom')|raw }}

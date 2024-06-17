@@ -1,3 +1,81 @@
+# v2.0.7
+## 05/09/2024
+
+1. [](#improved)
+   * Removed `@import` declaration for Fontawesome fonts, duplicated in CSS styles.
+   * Updated `taxonomylist` partial template to latest changes of [taxonomylist plugin](https://github.com/getgrav/grav-plugin-taxonomylist/releases/tag/1.3.6)
+   * Render markdown in `data.html.twig` template
+   * Updated styles for `box` class
+   * Updated demo content
+  
+# v2.0.6
+## 01/30/2024
+
+1. [](#improved)
+   * Simplified Flex-Row shortcode code. New twig template to process the shortcode
+   * Image hidden in search results on small devices
+   * Added raw filter in Contact template
+   * Added `safe_email` filter to contact
+   * Updated demo site address
+   
+# v2.0.5
+## 11/25/2023
+
+1. [](#bugfix)
+   * Fixed route of Popular tags in sidebar (issue [#37](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/37))
+2. [](#new)
+   * New options to enable/disable plugin sections in the sidebar
+   
+# v2.0.4
+## 10/28/2023
+
+1. [](#bugfix)
+   * Fixed raw filter on copyright text 
+
+# v2.0.3
+## 10/28/2023
+
+1. [](#bugfix)
+   * Fixed sort filter error when taxonomy is empty
+2. [](#improved)
+   * Improved code in recent posts, blog-list and blog templates
+   * Increased font size in styles
+   * Moved the copyright text field to the sidebar section in the admin
+3. [](#new)
+   * Added support for comments plugin
+
+# v2.0.2
+## 09/13/2023
+
+1. [](#bugfix)
+   * Fixed code for datestamp on blog pages
+
+# v2.0.1
+## 09/12/2023
+
+1. [](#bugfix)
+   * Fixed CHANGELOG format
+# v2.0.0
+## 09/12/2023
+
+1. [](#new)
+   * New Downloads template (issue [#32](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
+   * New macro for navigation
+   * New design for related pages template.
+   * Added custom.css to assets links (issue [#35](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
+   * Added custom.js to assets links
+   * Added Back to top button
+   * Added support for navigation on modular one-page pages. 
+2. [](#improved)
+   * Code restructure in all twig templates
+   * Option to hide or show page title (issue [#26](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
+   * Improved CSS styles for login and forgot forms
+   * Removed the extra text from the checkbox label, from the privacy.html.twig template (Note: use the `markdown` attribute on the form field to be able to use html tags within the privacy field) (issue [#31](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
+   * Updated translations and added French translations (thanks [@Fazarel](https://github.com/Fazarel))
+   * H1 tag optimized for SEO purposes.
+3. [](#bugfix)
+   * Fixed raw filter in featured posts
+   * Fixed date traslations in recent-posts and blog templates (issue [#34](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/35))
 # v1.0.10.1
 ## 07/05/2023
 

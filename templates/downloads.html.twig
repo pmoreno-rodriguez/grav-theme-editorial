@@ -1,0 +1,36 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <header class="main">   
+	{% if show_image and image %}
+	    <span class="image main">
+		{{ image.cropZoom(img_width, img_height).loading('lazy').attribute('decoding','async').html(title,title,'')|raw }}
+	    </span>
+	{% endif %}
+	{% if show_title %}<h1>{{ title }}</h1>{% endif %}
+    {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+	</header>
+	<div>
+	    {{ page.content|raw }}
+
+        <table class="responsive">
+        <thead>
+            <tr>
+                <th><h3>{{ 'EDITORIAL.ADMIN.MODULAR.DOWNLOADS.TH_NAME'|t }}</h3></th>
+                <th><h3>{{ 'EDITORIAL.ADMIN.MODULAR.DOWNLOADS.TH_SIZE'|t }}</h3></th>
+                <th><h3>{{ 'EDITORIAL.ADMIN.MODULAR.DOWNLOADS.TH_MODIFIED'|t }}</h3></th>
+                <th><h3>{{ 'EDITORIAL.ADMIN.MODULAR.DOWNLOADS.TH_DOWNLOAD'|t }}</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        {% for file in page.media.all %}
+            <tr>
+                {% include 'partials/download_item.html.twig' with {file: file} %}
+            </tr>
+        {% endfor %}
+        
+        </tbody>
+        </table>
+	</div>
+{% endblock %}

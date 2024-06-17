@@ -1,0 +1,33 @@
+{# MACRO FOR NAVIGATION #}
+
+{# Generates a navigation menu taking into account three parameters:
+   - dropdownClass: Adds the 'dropdown' or 'no-dropdown' class, depending on the option chosen in the theme settings.
+   - submenuClass: A 'submenu' class is added to identify the block of child items.
+   - showSubmenu: Child items will not be shown if dropdown.enabled, in the theme settings, is set to false 
+#}
+
+{% macro nav_loop(page, dropdownClass, submenuClass, showSubmenu) %}
+    {% import _self as macros %}
+    {% for p in page.children.visible %}
+        {% set page_routable = (p.routable ) ? 'href="' ~ p.url ~ '"' : '' %}
+        {% set icon_menu = p.header.icon_menu is defined ? '<i class="' ~ p.header.icon_menu ~ '"></i>' : '' %}
+        {% if p.children.visible.count > 0 %}
+            <li> 
+                
+                <a {{ page_routable|raw }}>{{ icon_menu|raw }} {{ p.menu }}</a>
+                {% if showSubmenu %}
+                <span class="{{ dropdownClass }}"></span>
+                <ul class="{{ submenuClass }}">
+                    {{ macros.nav_loop(p, dropdownClass, submenuClass, showSubmenu) }}
+                </ul>
+                {% endif %}
+            </li>
+        {% else %}
+            <li>
+                <a href="{{ p.url }}">
+                   {{ icon_menu|raw }} {{ p.menu }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

@@ -2,51 +2,22 @@
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set limit = page.header.limit|default(3) %}
 {% set readmore_txt = page.header.readmore_text|raw|default('Read more') %}
+{% set show_title = header_var('show_title')|defined(true) %}
+{% set title = page.title|raw  %}
 
 <section>
     <header class="major">
-        <h2>{{ page.title }}</h2>
+        {% if show_title %}<h2>{{ title }}</h2>{% endif %}
         {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
     </header>
 
-<div class="posts">
-{% for p in blog.collection.slice(0,limit) %}
-{% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
-{% set title = p.title %}
-
-    <article class="">
-        {% if image %}
-        <a href="{{p.url}}" class="image">{{ image.cropZoom(416,256).loading('lazy').attribute('width', '300').attribute('height','300').html(title,title,'')|raw }}</a>
-        {% endif %}
-        <h3>{{p.title}}</h3>
-        
-        {# Set page date stamp #}
-        {% if config.plugins["translate-date"].enabled %}
-            {% set datestamp = (p.header.publish_date) ? (p.header.publish_date|td(null, "Y-m-d")) : (p.date|td(null, "Y-m-d")) %}
-        {% elseif config.plugins["twig-extensions"].enabled %}
-            {% set datestamp = (p.header.publish_date) ? (p.header.publish_date|localizeddate('medium', 'none', lang)) : (p.date|localizeddate('medium', 'none', lang)) %}
-        {% else %}
-            {% set datestamp = (p.header.publish_date) ? (p.header.publish_date|date(system.pages.dateformat.short)) : (p.date|date(system.pages.dateformat.short)) %}
-        {% endif %}
-
-        {% if datestamp %}
-        <p class="data-post">
-            {{'EDITORIAL.ITEM.POSTED_ON'|t}} {{ datestamp|date(system.pages.dateformat.short)  }}
-        </p>
-        {% endif %}
-        <p>
-        {% if p.summary != p.content %}
-            {{ p.summary|striptags('<p>')|raw }}
-        {% else %}
-            {{ p.content|striptags('<p>')|raw }}
-        {% endif %}
-        </p>
-        <ul class="actions">
-            <li><a href="{{p.url}}" class="button">{{readmore_txt}}</a></li>
-        </ul>
-    </article>
-    
-{% endfor %}
-
+    <div class="posts">
+        {% for p in blog.collection.slice(0,limit) %}
+            {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
+            {% set title = p.title|raw %}
+            {% set Htag_title = 'h3' %}
+            {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': p } ) %}
+            {% include 'partials/blog-list-item.html.twig' with { 'page': p, image, title, datestamp, show_image: true } %}
+        {% endfor %}
     </div>
 </section>

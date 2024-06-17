@@ -1,0 +1,13 @@
+<!-- HEAD METADATA -->
+<meta charset="utf-8" />
+<title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+{% include 'partials/page-bits/metadata.html.twig' %}
+{% if favicon %}
+{% set favicon_file = (favicon|first).name %}
+<link rel="icon" type="{{ favicon.type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
+{% else %}
+<link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+{% endif %}
+<link rel="canonical" href="{{ page.url(true, true) }}" />

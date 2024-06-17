@@ -18,41 +18,36 @@
 			padding: 0;
 			text-transform: uppercase;
 
-			a, span {
-				border-bottom: 0;
-				color: inherit;
-				cursor: pointer;
-				display: block;
-				font-size: inherit;
-				padding: 0.625em 0;
+			li {
 
-				&:hover {
-					color: _palette(accent);
-				}
-
-				&.opener {
+				.dropdown {
 					@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
 					@include icon(false, solid);
 					-webkit-tap-highlight-color: rgba(255,255,255,0);
 					position: relative;
 
 					&:before {
+
+						float: right;
 						@include vendor('transition', (
-							'color #{_duration(transition)} ease-in-out',
-							'transform #{_duration(transition)} ease-in-out'
+						'color #{_duration(transition)} ease-in-out',
+						'transform #{_duration(transition)} ease-in-out'
 						));
 						color: _palette(fg-light);
-						content: '\f078';
-						position: absolute;
-						right: 0;
+						content: '\f053'; 
+						position: relative;
+						line-height: 4em;
+						
+					}
+
+					&.no-dropdown {
+						content: '';
 					}
 
 					&:hover {
-						&:before {
-							color: _palette(accent);
-						}
+						color: _palette(accent);
+						cursor: pointer;
 					}
-
 					&.active {
 						& + ul {
 							display: block;
@@ -60,18 +55,28 @@
 						}
 
 						&:before {
-							@include vendor('transform', 'rotate(-180deg)');
+							@include vendor('transform', 'rotate(-90deg)');
 						}
 					}
 				}
+
+				a {
+
+					border-bottom: 0;
+					color: inherit;
+					cursor: pointer;
+					display: inline-block;
+					font-size: inherit;
+					position: relative;
+
+					
+				}
 			}
 		}
-
 		> ul {
 			> li {
 				border-top: solid 1px _palette(border);
-				margin: 0.5em 0 0 0;
-				padding: 0.5em 0 0 0;
+				line-height: 4em;
 
 				> ul {
 					color: _palette(fg-light);

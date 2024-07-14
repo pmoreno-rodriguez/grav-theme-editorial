@@ -9,10 +9,10 @@
 <meta name="og:site_name" property="og:site_name" content="{{ site.title|raw }}" />
 {% endif %}
 {% if not page.metadata["og:title"] %}
-<meta name="og:title" property="og:title" content="{{ page.title|raw }}" />
+<meta name="og:title" property="og:title" content="{{ page.title|e('html')|raw }}" />
 {% endif %}
 {% if not page.metadata["og:description"] %}
-<meta name="og:description" property="og:description" content="{{ page.summary|striptags|truncate(150)|raw }}" />
+<meta name="og:description" property="og:description" content="{{ page.summary|striptags|e('html')|truncate(150)|raw }}" />
 {% endif %}
 {% if not page.metadata["og:type"] %}
 <meta name="og:type" property="og:type" content="article" />
@@ -38,10 +38,10 @@
   {% endfor %}
 {% endif %}
 {% if not page.metadata["twitter:title"] %}
-<meta name="twitter:title" property="twitter:title" content="{{ page.title|raw }}" />
+<meta name="twitter:title" property="twitter:title" content="{{ page.title|e('html')|raw }}" />
 {% endif %}
 {% if not page.metadata["twitter:description"] %}
-<meta name="twitter:description" property="twitter:description" content="{{ page.summary|striptags|truncate(150)|raw }}" />
+<meta name="twitter:description" property="twitter:description" content="{{ page.summary|striptags|e('html')|truncate(150)|raw }}" />
 {% endif %}
 {% if not page.metadata["twitter:image"] and image %}
 <meta name="twitter:image" property="twitter:image" content="{{ uri.base ~ image.url|raw }}" />

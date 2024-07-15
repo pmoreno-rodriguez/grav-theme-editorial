@@ -21,6 +21,10 @@ en:
           LOGO: Custom Logo
           DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
           MOBILE: Mobile Custom Logo
+        CUSTOM_CSS: Load Custom CSS
+        CUSTOM_CSS_HELP: Load custom CSS styles from theme://assets/css/custom.css
+        CUSTOM_JS: Load Custom JS
+        CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
         CONTACT:
           ENABLE: Enable Contact section
           COPYRIGHT_TEXT: Copyright Text
@@ -343,6 +347,10 @@ es:
           LOGO: Logo personalizado
           DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
           MOBILE: Logo personalizado para dispositivos móviles
+        CUSTOM_CSS: Cargar CSS personalizado
+        CUSTOM_CSS_HELP: Carga los estilos CSS personalizados desde theme://assets/css/custom.css
+        CUSTOM_JS: Cargar JS personalizado
+        CUSTOM_JS_HELP: Carga JS personalizado desde theme://assets/css/custom.js
         CONTACT:
           ENABLE: Habilitar la sección Contacto
           INFORMATION_TITLE: Información de contacto
@@ -662,6 +670,10 @@ fr:
           LOGO: Logo personnalisé
           DESCRIPTION: Ce logo sera utilisé à la place du logo par défaut `theme://images/grav-logo.svg`
           MOBILE: Logo personnalisé pour appareils mobiles
+        CUSTOM_CSS: Charge CSS personnalisé
+        CUSTOM_CSS_HELP: Charge style de CSS personnalisé depuis theme://assets/css/custom.css
+        CUSTOM_JS: Chage JS personnalisé
+        CUSTOM_JS_HELP: Charge JS personnalisé depuis theme://assets/css/custom.js
         CONTACT:
           ENABLE: Activer la section Contact
           INFORMATION_TITLE: Informations de contact

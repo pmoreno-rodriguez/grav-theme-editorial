@@ -1,3 +1,20 @@
+
+# v2.2.0
+## 07/14/2024
+
+1. [](#new)
+   * Removed the `custom.js` and `custom.css` files from the theme, to avoid overwriting user customizations with the release of new versions. These files are now loaded, if they exist in the theme's `assets/css` or `assets/js` folder, using the `onTwigSiteVariables` function within `editorial.php` and can be enabled from the theme settings.
+2. [](#improved)
+   * Fixed the escaping of an html string in the metadata description
+   * Integrated "Back to Top" button code in main.js
+   * Updated demo content
+   
+# v2.1.0
+## 06/17/2024
+
+1. [](#improved)
+   * Changed the navigation menu to allow dropdown links to open, set to `routable` in settings. The behavior of the arrow to open submenus has been separated from the menu link.
+
 # v2.0.7
 ## 05/09/2024
 

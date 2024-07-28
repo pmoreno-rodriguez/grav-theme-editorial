@@ -2993,6 +2993,11 @@ button:disabled,
   }
 }
 
+/* Notices */
+.notices p {
+  margin: 1rem 0;
+}
+
 /* Wrapper */
 #wrapper {
   display: -moz-flex;

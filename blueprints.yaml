@@ -58,6 +58,13 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             validate:
                 type: bool
+        sidebar_position:
+            type: select
+            label: Sidebar Position
+            default: left
+            options:
+                left: Left
+                right: Right
         google_fonts_local:
             type: toggle
             label: EDITORIAL.ADMIN.THEME.GOOGLE_FONTS.LOCAL

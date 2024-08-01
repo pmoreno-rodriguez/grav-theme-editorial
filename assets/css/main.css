@@ -2993,11 +2993,6 @@ button:disabled,
   }
 }
 
-/* Notices */
-.notices p {
-  margin: 1rem 0;
-}
-
 /* Wrapper */
 #wrapper {
   display: -moz-flex;
@@ -3601,4 +3596,8 @@ ul.blog-items p.blog-datestamp {
   .search-item {
     margin-left: 0 !important;
   }
+}
+/* Notices */
+.notices p {
+  margin: 1rem 0;
 }

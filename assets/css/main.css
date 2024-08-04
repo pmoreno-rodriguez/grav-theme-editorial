@@ -3597,3 +3597,7 @@ ul.blog-items p.blog-datestamp {
     margin-left: 0 !important;
   }
 }
+/* Notices */
+.notices p {
+  margin: 1rem 0;
+}

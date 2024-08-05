@@ -1,4 +1,15 @@
 
+# v2.2.1
+## 08/05/2024
+
+1. [](#new)
+   * Added styles to center text of notices vertically (thanks [@elAlberino](https://github.com/ElAberino))
+2. [](#improved)
+   * Option in `ImageFloatShortcode` shortcode to add additional css classes
+   * Update contact demo page to include `id` and `autocomplete` attributes
+3. [](#bugfix)
+   * Fixed `raw` filter on some items in the contact section
+   
 # v2.2.0
 ## 07/14/2024
 

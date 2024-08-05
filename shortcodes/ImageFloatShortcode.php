@@ -16,6 +16,7 @@ class ImageFloatShortcode extends Shortcode
     public function init()
     {
         $this->shortcode->getHandlers()->add('ed-float', function (ShortcodeInterface $sc) {
+            $classes = $sc->getParameter('classes', '');
             $direction = $sc->getParameter('direction', false);
             $image = $sc->getParameter('image', '');
             $alt = $sc->getParameter('alt', '');
@@ -34,7 +35,7 @@ class ImageFloatShortcode extends Shortcode
 
             $output = '<p>';
 
-            $output .= '<span class="image ' . $direction . '"><img src="' . $imagePath . '/' . $image . '" alt="' . $alt . '" title="' . $title . '"></span>';
+            $output .= '<span class="image ' . $classes . ' ' . $direction . '"><img src="' . $imagePath . '/' . $image . '" alt="' . $alt . '" title="' . $title . '"></span>';
             $output .= $parsedContent;
             $output .= '</p>';
 

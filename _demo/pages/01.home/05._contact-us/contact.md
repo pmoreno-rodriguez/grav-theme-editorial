@@ -10,6 +10,7 @@ form:
     refresh_prevention: true
     fields:
         -
+            id: name
             name: Name
             label: Name
             placeholder: Name
@@ -22,8 +23,10 @@ form:
             outerclasses: 'col-6 col-12-small'
             classes: null
         -
+            id: email
             name: Email
             label: Email
+            autocomplete: 'on'
             placeholder: Email
             validate:
                 required: true
@@ -32,6 +35,7 @@ form:
             outerclasses: 'col-6 col-12-small'
             classes: null
         -
+            id: subject
             name: Subject
             label: Subject
             type: text
@@ -42,6 +46,7 @@ form:
             outerclasses: 'col-12 col-12-small'
             classes: null
         -
+            id: message
             name: Message
             label: Message
             placeholder: Message
@@ -53,6 +58,7 @@ form:
             classes: null
             rows: 10
         -
+            id: privacy
             name: Privacy
             type: checkbox
             markdown: true

@@ -11,12 +11,12 @@
         {% endif %}
 
         {% if theme_config.contact.phone %}
-        <li class="icon solid fa-phone">{{ theme_config.contact.phone }}</li>
+        <li class="icon solid fa-phone">{{ theme_config.contact.phone|raw }}</li>
         {% endif %}
         
         {% if theme_config.contact.street %}
-        <li class="icon solid fa-home">{{ theme_config.contact.street }}<br />
-        {{ theme_config.contact.city }}, {{ theme_config.contact.state }} {{ theme_config.contact.zip }}
+        <li class="icon solid fa-home">{{ theme_config.contact.street|raw }}<br />
+        {{ theme_config.contact.city|raw }}, {{ theme_config.contact.state|raw }} {{ theme_config.contact.zip|raw }}
         </li>
         {% endif %}
     </ul>

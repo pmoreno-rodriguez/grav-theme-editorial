@@ -1,4 +1,9 @@
+# v2.2.2
+## 08/08/2024
 
+1. [](#bugfix)
+   * Fixed invalid value in `itemtype` field in gallery template
+     
 # v2.2.1
 ## 08/05/2024
 

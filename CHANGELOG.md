@@ -1,3 +1,9 @@
+# v2.2.3
+## 08/12/2024
+
+1. [](#bugfix)
+   * Fixed HTML encoding in gallery image description in lightbox (thanks [@artecnico](https://github.com/artecnico))
+     
 # v2.2.2
 ## 08/08/2024
 

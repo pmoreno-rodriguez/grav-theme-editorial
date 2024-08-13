@@ -2,8 +2,10 @@
 ## 08/13/2024
 
 1. [](#new)
-   * Added the `target` tag to social media icons 
-2. [](#bugfix)
+   * Added the `target` tag to social media icons
+2. [](#improved)
+    * Added `rel=nofollow` attribute to improve SEO
+3. [](#bugfix)
    * Fixed HTML encoding in gallery image description in lightbox (thanks [@artecnico](https://github.com/artecnico))
      
 # v2.2.2

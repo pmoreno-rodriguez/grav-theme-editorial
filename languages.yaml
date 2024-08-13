@@ -80,6 +80,12 @@ en:
           ICONS: Social Icons
           NAME: Social Name
           URL: URL Link to Social
+          TARGET:
+            LABEL: Target
+            BLANK: 'Open in a new window'
+            PARENT: 'Open in the parent frame'
+            SELF: 'Open in the same frame as clicked'
+            TOP: 'Open in the full body of the window'
           ICON: Icon to Social
         CUSTOM_MENU:
           TITLE: 'Custom Menu Items'
@@ -404,6 +410,12 @@ es:
           ICONS: Iconos Redes Sociales
           NAME: Nombre de la Red Social
           URL: Enlace de la Red Social
+          TARGET:
+            LABEL: Destino
+            BLANK: 'Abrir en una nueva ventana'
+            PARENT: 'Abrir en el marco principal'
+            SELF: 'Abrir en el mismo marco donde se hizo clic'
+            TOP: 'Abrir en todo el cuerpo de la ventana'
           ICON: Icono de la Red Social
         CUSTOM_MENU:
           TITLE: 'Elementos de menú personalizados'
@@ -727,6 +739,12 @@ fr:
           ICONS: Icônes des réseaux sociaux
           NAME: Nom du réseau social
           URL: Lien du réseau social
+          TARGET:
+            LABEL: Destination
+            BLANK: 'Ouvrir dans une nouvelle fenêtre'
+            PARENT: 'Ouvrir dans le cadre principal'
+            SELF: 'Ouvrir dans le même cadre où le clic a été fait'
+            TOP: 'Ouvrir dans tout le corps de la fenêtre'
           ICON: Icône du réseau social
         CUSTOM_MENU:
           TITLE: 'Éléments de menu personnalisés'

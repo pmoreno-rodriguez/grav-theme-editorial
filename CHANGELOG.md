@@ -1,7 +1,9 @@
 # v2.2.3
-## 08/12/2024
+## 08/13/2024
 
-1. [](#bugfix)
+1. [](#new)
+   * Added the `target` tag to social media icons 
+2. [](#bugfix)
    * Fixed HTML encoding in gallery image description in lightbox (thanks [@artecnico](https://github.com/artecnico))
      
 # v2.2.2

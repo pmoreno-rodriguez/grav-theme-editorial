@@ -357,6 +357,16 @@ form:
                         .url:
                             type: text
                             label: EDITORIAL.ADMIN.THEME.SOCIAL.URL
+                        .target:
+                            type: select
+                            label: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.LABEL
+                            default: _self
+                            size: medium
+                            options:
+                                _blank: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.BLANK
+                                _parent: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.PARENT
+                                _self: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.SELF
+                                _top: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.TOP
                         .icon:
                             type: iconpicker
                             label: EDITORIAL.ADMIN.THEME.SOCIAL.ICON

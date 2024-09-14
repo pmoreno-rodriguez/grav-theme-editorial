@@ -224,6 +224,10 @@
 
 	.sidebar-right {
 		#sidebar {
+			@include vendor('transition', (
+				'margin-right 0.5s ease',
+				'box-shadow 0.5s ease'
+			));
 			.toggle {
 				left: auto;
 				right: _size(sidebar-width);

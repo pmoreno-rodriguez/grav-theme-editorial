@@ -3286,6 +3286,12 @@ button:disabled,
   }
 }
 
+.sidebar-right #sidebar {
+  -moz-transition: margin-right 0.5s ease, box-shadow 0.5s ease;
+  -webkit-transition: margin-right 0.5s ease, box-shadow 0.5s ease;
+  -ms-transition: margin-right 0.5s ease, box-shadow 0.5s ease;
+  transition: margin-right 0.5s ease, box-shadow 0.5s ease;
+}
 .sidebar-right #sidebar .toggle {
   left: auto;
   right: 26em;

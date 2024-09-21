@@ -1,4 +1,5 @@
-<ul class="icons">
+{% set sidebar_style = sidebar_position == 'right' ? 'right: unset; left: -0.5em;' : '' %}
+<ul class="icons" style="{{ sidebar_style }}">
     {% for item in theme_config.social %}
     {% if item.icon != "mastodon" %}
         <li><a href="{{ item.url }}" class="icon brands {{ item.icon }}" title="{{ item.name }}" target="{{ item.target }}"><span class="label">{{ item.name }}</span></a></li>

@@ -15,6 +15,7 @@
 {% set social = theme_var('social_enabled')|defined(false) %}
 {% set slogan = theme_config.themeSlogan %}
 {% set google_fonts = theme_var('google_fonts_local') ? '-local.css' : '-remote.css' %}
+{% set sidebar_position = theme_config.sidebar_position|defined('left') %}
 
 {# SET DEFAULT GRAV LANGUAGE #}
 {% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
@@ -47,7 +48,7 @@
 {% endblock %}
 </head>
 <!-- BODY SECTION -->
-<body class="is-preload {{ page.header.body_classes }} sidebar-{{ theme_config.sidebar_position }}">
+<body class="is-preload {{ page.header.body_classes }} sidebar-{{ sidebar_position }}">
     <!-- Wrapper -->
     <div id="wrapper">
     <!-- Main -->

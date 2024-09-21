@@ -60,11 +60,12 @@ form:
                 type: bool
         sidebar_position:
             type: select
-            label: Sidebar Position
-            default: left
+            label: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION
+            help: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION_HELP
+            default: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION_LEFT
             options:
-                left: Left
-                right: Right
+                left: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION_LEFT
+                right: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION_RIGHT
         google_fonts_local:
             type: toggle
             label: EDITORIAL.ADMIN.THEME.GOOGLE_FONTS.LOCAL

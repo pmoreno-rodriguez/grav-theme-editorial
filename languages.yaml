@@ -8,10 +8,8 @@ en:
         PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
         SIDEBAR_OPEN: Open sidebar
         SIDEBAR_OPEN_HELP: Set if the sidebar is open or closed at startup
-        SIDEBAR_POSITION: Sidebar position
-        SIDEBAR_POSITION_HELP: Set if the sidebar is displayed on the left or the right side
-        SIDEBAR_POSITION_LEFT: Left
-        SIDEBAR_POSITION_RIGHT: Right
+        RIGHT_SIDEBAR: Sidebar on the right
+        RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
         GOOGLE_FONTS:
           LOCAL: Use locally hosted Google Fonts    
         HEADER_SECTION: Header Section
@@ -344,10 +342,8 @@ es:
         PRODUCTION_MODE_HELP: Si está activado, EDITORIAL cargará con CSS minificado
         SIDEBAR_OPEN: Barra lateral abierta
         SIDEBAR_OPEN_HELP: Establece si la barra lateral está abierta o cerrada al inicio.
-        SIDEBAR_POSITION: Posición de la barra lateral
-        SIDEBAR_POSITION_HELP: Establece si la barra lateral se muestra a la izquierda o a la derecha.
-        SIDEBAR_POSITION_LEFT: Izquierda
-        SIDEBAR_POSITION_RIGHT: Derecha
+        RIGHT_SIDEBAR: Barra lateral a la derecha
+        RIGHT_SIDEBAR_HELP: Si está habilitado, la barra lateral aparecerá a la derecha
         GOOGLE_FONTS:
           LOCAL: Usar fuentes de Google alojadas localmente
         HEADER_SECTION: Sección de encabezado
@@ -677,10 +673,8 @@ fr:
         PRODUCTION_MODE_HELP: Si activé, EDITORIAL chargera le CSS minifié
         SIDEBAR_OPEN: Barre latérale ouverte
         SIDEBAR_OPEN_HELP: Définit si la barre latérale est ouverte ou fermée au démarrage.
-        SIDEBAR_POSITION: Position de la barre latérale
-        SIDEBAR_POSITION_HELP: Définit si la barre latérale est affichée à gauche ou à droite.
-        SIDEBAR_POSITION_LEFT: Gauche
-        SIDEBAR_POSITION_RIGHT: Droite
+        RIGHT_SIDEBAR: Barre latérale à droite
+        RIGHT_SIDEBAR_HELP: Si activée, la barre latérale apparaîtra à droite
         GOOGLE_FONTS:
           LOCAL: Utiliser les polices Google hébergées localement
         HEADER_SECTION: "Section d'en-tête"

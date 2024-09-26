@@ -58,14 +58,17 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             validate:
                 type: bool
-        sidebar_position:
-            type: select
-            label: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION
-            help: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION_HELP
-            default: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION_LEFT
+        right_sidebar:
+            type: toggle
+            label: EDITORIAL.ADMIN.THEME.RIGHT_SIDEBAR
+            help: EDITORIAL.ADMIN.THEME.RIGHT_SIDEBAR_HELP
+            highlight: 0
+            default: 0
             options:
-                left: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION_LEFT
-                right: EDITORIAL.ADMIN.THEME.SIDEBAR_POSITION_RIGHT
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
         google_fonts_local:
             type: toggle
             label: EDITORIAL.ADMIN.THEME.GOOGLE_FONTS.LOCAL

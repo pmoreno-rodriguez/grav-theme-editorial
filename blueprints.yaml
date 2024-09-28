@@ -58,6 +58,17 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             validate:
                 type: bool
+        right_sidebar:
+            type: toggle
+            label: EDITORIAL.ADMIN.THEME.RIGHT_SIDEBAR
+            help: EDITORIAL.ADMIN.THEME.RIGHT_SIDEBAR_HELP
+            highlight: 0
+            default: 0
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
         google_fonts_local:
             type: toggle
             label: EDITORIAL.ADMIN.THEME.GOOGLE_FONTS.LOCAL

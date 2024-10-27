@@ -286,6 +286,8 @@ en:
         SHOW_TITLE: Show Title
         SHOW_TITLE_HELP: Show or hide the page title
         HEADER_SUBTITLE: Subtitle
+        PAGE_INDEX: Page Index
+        PAGE_INDEX_HELP: If enabled, child pages will be displayed as if they were a table of contents
         CONTENT_SECTION: Content options
         FEATURED_IMAGE_LABEL: Featured Image
         FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
@@ -315,6 +317,8 @@ en:
         LABEL: Syndicate 
       TAXONOMYLIST:
         LABEL: Popular Tags
+    DEFAULT:
+      PAGE_INDEX_TITLE: Page content
     BLOG:
       LISTING_TITLE_CATEGORY: 'Posts in Category: '
       LISTING_TITLE_TAG: 'Posts with Tag: '
@@ -617,6 +621,8 @@ es:
         SHOW_TITLE: Mostrar título
         SHOW_TITLE_HELP: Muestra u oculta el título de la página
         HEADER_SUBTITLE: Subtítulo
+        PAGE_INDEX: Índice de página
+        PAGE_INDEX_HELP: Si está habilitado, las páginas secundarias se mostrarán como si fueran una tabla de contenido.
         CONTENT_SECTION: Opciones de Contenido
         FEATURED_IMAGE_LABEL: Imagen destacada
         FEATURED_IMAGE_HELP: Seleccione un archivo para usarlo como la imagen destacada superior de la página 
@@ -646,6 +652,8 @@ es:
         LABEL: Distribuir
       TAXONOMYLIST:
         LABEL: Etiquetas populares
+    DEFAULT:
+      PAGE_INDEX_TITLE: Contenido de la página
     BLOG:
       LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
       LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
@@ -948,6 +956,8 @@ fr:
         SHOW_TITLE: Montrer le titre
         SHOW_TITLE_HELP: Afficher ou masquer le titre de la page
         HEADER_SUBTITLE: Sous-titre
+        PAGE_INDEX: Index des pages
+        PAGE_INDEX_HELP: Si cette option est activée, les pages enfants seront affichées comme s'il s'agissait d'une table des matières.
         CONTENT_SECTION: Options de contenu
         FEATURED_IMAGE_LABEL: Image promue
         FEATURED_IMAGE_HELP: "Sélectionner le fichier pour l'image principale de la page"
@@ -977,6 +987,8 @@ fr:
         LABEL: Syndication
       TAXONOMYLIST:
         LABEL: Tags populaires
+    DEFAULT:
+      PAGE_INDEX_TITLE: Contenu de la page
     BLOG:
       LISTING_TITLE_CATEGORY: 'Publications dans la catégorie '
       LISTING_TITLE_TAG: 'Publications associées au tag '

@@ -5,6 +5,10 @@ form:
   fields:
     tabs:
       fields:
+        content:
+          fields:
+            header.page_index:
+              unset@: true
         features:
           type: tab
           title: EDITORIAL.ADMIN.MODULAR.FEATURES.TAB

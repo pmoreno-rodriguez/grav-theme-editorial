@@ -5,17 +5,18 @@ form:
     tabs:
 
       fields:
+        content:
+          fields:
+             header.page_index:
+              unset@: true
         blog-item:
           type: tab
           title: EDITORIAL.ADMIN.ITEM.TAB
           fields:
-
             summary:
               type: section
               title: EDITORIAL.ADMIN.ITEM.SUMMARY.TITLE
               underline: true
-
-
             header.summary.enabled:
               type: toggle
               toggleable: true
@@ -24,7 +25,6 @@ form:
               options:
                 1: Enabled
                 0: Disabled
-
             header.summary.format:
               type: select
               toggleable: true
@@ -33,7 +33,6 @@ form:
               options:
                 'short': EDITORIAL.ADMIN.ITEM.SUMMARY.FORMAT_SHORT
                 'long': EDITORIAL.ADMIN.ITEM.SUMMARY.FORMAT_LONG
-
             header.summary.size:
               type: text
               toggleable: true
@@ -43,7 +42,6 @@ form:
               validate:
                 type: int
                 min: 1
-
             header.summary.delimiter:
               type: text
               toggleable: true

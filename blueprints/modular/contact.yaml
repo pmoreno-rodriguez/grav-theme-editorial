@@ -8,6 +8,10 @@ form:
       active: 1
 
       fields:
+        content:
+          fields:
+            header.page_index:
+              unset@: true
         contactSettings:
           type: tab
           title: Settings
@@ -17,5 +21,8 @@ form:
               type: section
               label: Address
             header.addressDetails:
-              type: textarea
-              label: Address details                
+              type: editor
+              label: Address details
+              markdown: true
+              validate:
+                type: textarea          

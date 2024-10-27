@@ -5,6 +5,10 @@ form:
   fields:
     tabs:
       fields:
+        content:
+          fields:
+             header.page_index:
+              unset@: true
         gallery_images:
           type: tab
           title: EDITORIAL.ADMIN.GALLERY.TAB

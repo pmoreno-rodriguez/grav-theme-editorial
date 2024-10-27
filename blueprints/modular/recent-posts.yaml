@@ -7,6 +7,10 @@ form:
       type: tabs
       active: 1
       fields:
+        content:
+          fields:
+            header.page_index:
+              unset@: true
         bloglist:
           type: tab
           title: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.TAB

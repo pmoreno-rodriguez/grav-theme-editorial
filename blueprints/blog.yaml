@@ -18,7 +18,11 @@ form:
       active: 1
 
       fields:
-                
+
+        content:
+          fields:
+             header.page_index:
+              unset@: true    
         advanced:
           fields:
             overrides:
@@ -28,13 +32,10 @@ form:
         blog:
           type: tab
           title: EDITORIAL.ADMIN.BLOG.TAB
-
           fields:
-
             content_title:
               type: spacer
               title: EDITORIAL.ADMIN.BLOG.TITLE
-
             header.content.items:
               type: textarea
               yaml: true
@@ -42,7 +43,6 @@ form:
               default: '@self.children'
               validate:
                 type: yaml
-
             header.content.limit:
               type: text
               label: EDITORIAL.ADMIN.BLOG.ITEMS.LIMIT
@@ -52,7 +52,6 @@ form:
                 required: true
                 type: int
                 min: 1
-
             header.content.order.by:
               type: select
               label: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.LABEL
@@ -63,7 +62,6 @@ form:
                 title: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.TITLE
                 date: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.DATE
                 default: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.DEFAULT
-
             header.content.order.dir:
               type: select
               label: EDITORIAL.ADMIN.BLOG.ITEMS.DIR
@@ -72,7 +70,6 @@ form:
               options:
                 asc: EDITORIAL.ADMIN.BLOG.ITEMS.DIR_ASC
                 desc: EDITORIAL.ADMIN.BLOG.ITEMS.DIR_DESC
-            
             header.content.pagination:
               type: toggle
               label: EDITORIAL.ADMIN.BLOG.PAGINATION.LABEL
@@ -82,8 +79,7 @@ form:
                 1: PLUGIN_ADMIN.ENABLED
                 0: PLUGIN_ADMIN.DISABLED
               validate:
-                type: bool
-            
+                type: bool            
             header.content.url_taxonomy_filters:
               type: toggle
               label: EDITORIAL.ADMIN.BLOG.URL_TAXONOMY_FILTERS
@@ -94,7 +90,6 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
-
           import@:
             type: partials/blog-bits
             context: blueprints://pages

@@ -1,3 +1,16 @@
+# v2.3.0
+## 10/27/2024
+
+1. [](#new)
+   * New option to show sidebar on the right (thanks [@elAlberino](https://github.com/ElAberino))
+   * New option to display a page index at the beginning of a page with children
+   * New option (`addressDetails`) to add extra information to the contact template
+2. [](#improved)
+   * Remove extra paragraph in breadcrumbs in item template (thanks [@elAlberino](https://github.com/ElAberino))
+   * Fixed Box shortcode to remove extra paragraphs
+   * Set all options in the sidebar section, contact section and social media icons to `false` in default settings
+   * Updated README
+   * Update translations
 # v2.2.3
 ## 08/13/2024
 

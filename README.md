@@ -85,19 +85,30 @@ Editorial comes with a few default options that can be set site-wide.  These opt
 ```yaml
 production-mode:              # In production mode, only minified CSS is used. When disabled, nested CSS are enabled
 sidebar_open:                 # Option to display the main page with the sidebar open or closed.
+right_sidebar:                # Enable/Disable sidebar on the right
 google_fonts_local:           # Option to load Google Fonts from the theme or from Google servers.
-menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
-menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
-menu_login:                   # Enable/Disable login icon in menu
+copyright.text:               # Set the copyright text
+themeSlogan:                  # Custom text for slogan
 favicon:                      # Choosse your own favicon
 custom_logo:                  # A custom logo rather than the default (see below)  
 custom_logo_mobile:           # A custom logo to use for mobile navigation
 custom_logo_width:            # Set custom width for custom logo
-themeSlogan:                  # Custom text for slogan
+custom_logo_enabled:          # Enable/Disable logo
+custom_css:                   # Load the custom.css file if it exists in the assets/css folder
+custom_js:                    # Load the custom.js file if it exists in the assets/js folder
+menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
+menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
+menu_login:                   # Enable/Disable login icon in menu
+sidebar_showtaxonomy:         # Show/Hide taxonomy section in sidebar
+sidebar_showarchives:         # Show/Hide archives section in sidebar
+sidebar_showrelatedpages:     # Show/Hide related pages section in sidebar
+sidebar_showfeeds:            # Show/Hide feeds section in sidebar
+sidebar_showrandom:           # Show/Hide random button in sidebar
 blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout
 featured:                     # Enable/Disable featured posts in left sidebar
 featured_tag:                 # Select category name for featured posts (configured in taxonomies)
 featured_number:              # The number of featured posts will be displayed on the left sidebar
+enable_contact:               # Enable/Disable contact section
 contact_section:              # Set copyright text, contact text, contact email and other contact information
 social_enabled:               # Enable/Disable social icons in footer
 custommenus.enabled:          # Enable/Disable custom menus in top menu

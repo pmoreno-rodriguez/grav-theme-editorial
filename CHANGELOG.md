@@ -11,6 +11,7 @@
    * Set all options in the sidebar section, contact section and social media icons to `false` in default settings
    * Updated README
    * Update translations
+
 # v2.2.3
 ## 08/13/2024
 

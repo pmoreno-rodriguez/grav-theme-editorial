@@ -3544,7 +3544,7 @@ button:disabled,
   color: #9fa3a6;
   content: "\f053";
   position: relative;
-  line-height: 4em;
+  line-height: 3.5em;
 }
 #menu ul li .dropdown.no-dropdown {
   content: "";
@@ -3573,7 +3573,7 @@ button:disabled,
 }
 #menu > ul > li {
   border-top: solid 1px rgba(210, 215, 217, 0.75);
-  line-height: 4em;
+  line-height: 3.5em;
 }
 #menu > ul > li > ul {
   color: #9fa3a6;

@@ -20,7 +20,7 @@
     </div>
     {% if show_image == true and image ?? null %}
         <span class="image object">
-            {{ image.cropZoom(736,512).loading('lazy').attribute('decoding','async').html(title,title,'')|raw }}
+            {{ image.cropZoom(736,512).loading('lazy').decoding('async').html(title,title,'')|raw }}
         </span>
     {% endif %}
 </section>

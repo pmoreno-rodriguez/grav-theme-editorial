@@ -31,7 +31,7 @@
         
     </header>
     {% if show_image and image %}
-        <span class="image main" itemprop="image">{{ image.cropZoom(img_width, img_height).loading('lazy').attribute('decoding','async').html(title,title,'image')|raw }}</span>
+        <span class="image main" itemprop="image">{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title,title,'image')|raw }}</span>
     {% endif %}
     <div itemprop="articleBody">
         {{ page.content|raw }}

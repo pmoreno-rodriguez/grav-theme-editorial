@@ -1,7 +1,7 @@
 <article>
    {% if show_image and image %}
     <a href="{{page.url}}" class="image">
-        {{ image.cropZoom(416,256).loading('lazy').attribute('width', '300').attribute('height','300').html(title,title,'')|raw }}
+        {{ image.cropZoom(416,256).loading('lazy').decoding('async').attribute('width', '300').attribute('height','300').html(title,title,'')|raw }}
     </a>
     {% endif %}
     <{{Htag_title}}>{{ title|raw }}</{{Htag_title}}>

@@ -1,3 +1,11 @@
+# v2.3.1
+## 11/06/2024
+
+1. [](#improved)
+   * Improved styles for related pages in sidebar
+   * Fixed the condition for displaying related pages in the sidebar
+   * Using the new `decoding` filter in all templates that load images
+
 # v2.3.0
 ## 10/27/2024
 

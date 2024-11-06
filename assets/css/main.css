@@ -3647,3 +3647,7 @@ ul.blog-items p.blog-datestamp {
 .notices p {
   margin: 1rem 0;
 }
+
+#relatedpages .row > .col-8 {
+  padding-left: 0.2em;
+}

@@ -22,35 +22,33 @@
     <header class="major">
         <h2>{{ 'EDITORIAL.SIDEBAR.RELATEDPAGES_SECTION'|t }}</h2>
     </header>
-<ul class="actions aln-left">
-    {% for related_path, score in related_pages %}
-        {% set related = grav['pages'].get(related_path) %}
-        {% if related %}
-        {% set related_image = related.media.images[related.header.featured_image] ?: related.media.images|first %}
-            <li>
-                <div class="row aln-between">
-                    {% if related.taxonomy.category is not null %}
-                        {% if related_image is not empty %}
-                            <div class="col-4">
-                                <a class="image" aria-label="{{ related.title }}" href="{{ related.url }}">
-                                    {{ related_image.cropResize(64,64).loading('lazy').attribute('decoding','async').html|raw }}
-                                </a>
-                            </div>
+    <div>
+        {% for related_path, score in related_pages %}
+            {% set related = grav['pages'].get(related_path) %}
+            {% if related %}
+            {% set related_image = related.media.images[related.header.featured_image] ?: related.media.images|first %}
+                    <div class="row aln-left">
+                        {% if related.taxonomy.category is not null %}
+                            {% if related_image is not empty %}
+                                <div class="col-4">
+                                    <a class="image" aria-label="{{ related.title }}" href="{{ related.url }}">
+                                        {{ related_image.cropZoom(64,48).loading('lazy').decoding('async').html|raw }}
+                                    </a>
+                                </div>
+                            {% endif %}
+                                <div class="{% if related_image is not empty %}col-8 {% else %} col-12 {% endif %}">
+                                    <a class="align-left" href="{{ related.url }}" title="{{ related.title }}" rel="nofollow">{{ related.title }}</a>
+                                    <small class="published">
+                                        {{ 'EDITORIAL.MISC.IN'|t }} <span class="catlist">
+                                        {% for category in related.taxonomy.category %}
+                                            <a class="" href="{{ new_base_url }}/category{{ config.system.param_sep }}{{ category }}">{{ category|raw }}</a>{% if not loop.last %}<span class="sep">, </span>{% endif %}
+                                        {% endfor %}
+                                        </span>
+                                    </small>
+                                </div>
                         {% endif %}
-                            <div class="{% if related_image is not empty %}col-8 {% else %} col-12 {% endif %}">
-                                <a class="" href="{{ related.url }}" title="{{ related.title }}" rel="nofollow">{{ related.title }}</a>
-                                <small class="published">
-                                    {{ 'EDITORIAL.MISC.IN'|t }} <span class="catlist">
-                                    {% for category in related.taxonomy.category %}
-                                        <a class="" href="{{ new_base_url }}/category{{ config.system.param_sep }}{{ category }}">{{ category|raw }}</a>{% if not loop.last %}<span class="sep">, </span>{% endif %}
-                                    {% endfor %}
-                                    </span>
-                                </small>
-                            </div>
-                    {% endif %}
-                </div>
-            </li>
-        {% endif %}
-    {% endfor %}
-</ul>
+                    </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 </section>

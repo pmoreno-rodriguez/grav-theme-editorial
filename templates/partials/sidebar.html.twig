@@ -83,7 +83,7 @@
         {% endif %}
 
         {# Show Related Pages if plugin is enabled #}
-        {% if showRelatedPages and page.template == 'blog' %}
+        {% if showRelatedPages %}
             {% include 'partials/relatedpages.html.twig' %}
         {% endif %}
         

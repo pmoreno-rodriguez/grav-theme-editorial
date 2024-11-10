@@ -1,18 +1,18 @@
 {# OPTIONS FOR SIDEBAR #}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
-{% set menu_search = theme_var('menu_search')|defined(true) %}
-{% set menu_login = theme_var('menu_login')|defined(true) %}
-{% set menu_lang = theme_var('menu_langswitcher')|defined(true) %}
-{% set show_featured = theme_var('featured')|defined(true) %}
+{% set menu_search = theme_var('menu_search')|defined(false) %}
+{% set menu_login = theme_var('menu_login')|defined(false) %}
+{% set menu_lang = theme_var('menu_langswitcher')|defined(false) %}
+{% set show_featured = theme_var('featured')|defined(false) %}
 {% set sidebar_open = theme_var('sidebar_open')|defined(true) %}
-{% set contact = theme_var('enable_contact')|defined(true) %}
+{% set contact = theme_var('enable_contact')|defined(false) %}
 
 {# Plugin Settings in Sidebar #}
-{% set showTaxonomyList = config.plugins.taxonomylist.enabled and theme_var('sidebar_showtaxonomy')|defined(true) %}
-{% set showRelatedPages = config.plugins.relatedpages.enabled and related_pages|length > 0 and theme_var('sidebar_showrelatedpages')|defined(true)%}
-{% set random = config.plugins.random.enabled  and theme_var('sidebar_showrandom')|defined(true) %}
-{% set archives = config.plugins.archives.enabled and archives_data is not empty and theme_var('sidebar_showarchives')|defined(true) %}
-{% set feeds = config.plugins.feed.enabled and theme_var('sidebar_showfeeds')|defined(true) %}
+{% set showTaxonomyList = config.plugins.taxonomylist.enabled and theme_var('sidebar_showtaxonomy')|defined(false) %}
+{% set showRelatedPages = config.plugins.relatedpages.enabled and related_pages|length > 0 and theme_var('sidebar_showrelatedpages')|defined(false)%}
+{% set random = config.plugins.random.enabled  and theme_var('sidebar_showrandom')|defined(false) %}
+{% set archives = config.plugins.archives.enabled and archives_data is not empty and theme_var('sidebar_showarchives')|defined(false) %}
+{% set feeds = config.plugins.feed.enabled and theme_var('sidebar_showfeeds')|defined(false) %}
 
 {% if uri.params %}
     {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (uri.uri~'/'~blog.slug) : blog.url %}
@@ -83,7 +83,7 @@
         {% endif %}
 
         {# Show Related Pages if plugin is enabled #}
-        {% if showRelatedPages and page.template == 'blog' %}
+        {% if showRelatedPages %}
             {% include 'partials/relatedpages.html.twig' %}
         {% endif %}
         

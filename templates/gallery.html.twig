@@ -21,7 +21,7 @@
 	<header class="main">
 		{% if show_image and image %}
 			<span class="image main">
-				{{ image.cropZoom(img_width, img_height).loading('lazy').attribute('decoding','async').html(title,title,'image')|raw }}
+				{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title,title,'image')|raw }}
 			</span>
 		{% endif %}
 		{% if show_title %}<h1>{{ title }}</h1>{% endif %}
@@ -40,14 +40,14 @@
 					{% set item_desc = item.description %}
 					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title,'gallery_content-image') %}
 					
-					<div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="MediaObject">
-						<h3 class="title">{{item_title}}</h3>
+					<div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
+						<h3 class="title">{{item_title|raw}}</h3>
 						<div class="gallery_content">
-							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
+							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|e('html_attr')|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
 							<div class="gallery_content-overlay"></div>
 								{{ thumbnail|raw }}
 							<div class="gallery_content-details {{page.header.overlay_hover_effect}}">
-								<h3 class="gallery_content-title">{{item_title}}</h3>
+								<h3 class="gallery_content-title">{{item_title|raw}}</h3>
 								<p class="gallery_content-text">{{item_desc|truncate(75)|raw}}</p>
 							</div>
 							</a>

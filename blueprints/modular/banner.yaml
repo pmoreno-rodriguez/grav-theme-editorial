@@ -8,6 +8,8 @@ form:
         content:
           type: tab
           fields:
+            header.page_index:
+              unset@: true
             _BannerSection:
               type: section
               underline: true

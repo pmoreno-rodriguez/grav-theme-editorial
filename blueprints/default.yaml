@@ -57,6 +57,16 @@ form:
               type: section
               underline: true
               title: EDITORIAL.ADMIN.DEFAULT.CONTENT_SECTION
+            header.page_index:
+              type: toggle
+              style: vertical
+              label: EDITORIAL.ADMIN.DEFAULT.PAGE_INDEX
+              help: EDITORIAL.ADMIN.DEFAULT.PAGE_INDEX_HELP
+              default: 0
+              highlight: 0
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
             _ContentOptions:
               type: column
               fields:

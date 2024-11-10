@@ -1,5 +1,6 @@
 {% set show_title = header_var('show_title')|defined(true) %}
 {% set title = page.title|raw  %}
+{% set address_details = page.header.addressDetails %}
 
 <section id="contact">
 <header class="major">
@@ -8,4 +9,10 @@
 </header>
     <p class="lead">{{ page.content|raw }}</p>
     {% include "forms/form.html.twig" with { form: forms('contact-form')} %}
+    {% if address_details %}
+	<div>
+        <hr>
+		{{ address_details|markdown|shortcodes|raw }}
+	</div>
+	{% endif %}
 </section>

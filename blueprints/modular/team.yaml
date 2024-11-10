@@ -5,6 +5,10 @@ form:
   fields:
     tabs:
       fields:
+        content:
+          fields:
+            header.page_index:
+              unset@: true
         TEAM:
           type: tab
           title: EDITORIAL.ADMIN.MODULAR.TEAM.TAB

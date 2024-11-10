@@ -1,7 +1,7 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 2.2.1
+version: 2.3.1
 description: GravCMS port of the HTML5UP theme Editorial
 icon: text-width
 author:
@@ -53,6 +53,17 @@ form:
             help: EDITORIAL.ADMIN.THEME.SIDEBAR_OPEN_HELP
             highlight: 1
             default: 1
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            validate:
+                type: bool
+        right_sidebar:
+            type: toggle
+            label: EDITORIAL.ADMIN.THEME.RIGHT_SIDEBAR
+            help: EDITORIAL.ADMIN.THEME.RIGHT_SIDEBAR_HELP
+            highlight: 0
+            default: 0
             options:
                 1: PLUGIN_ADMIN.ENABLED
                 0: PLUGIN_ADMIN.DISABLED
@@ -159,8 +170,8 @@ form:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER
                     help: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER_HELP
-                    default: 1
-                    highlight: 1
+                    default: 0
+                    highlight: 0
                     options:
                         1: PLUGIN_ADMIN.YES
                         0: PLUGIN_ADMIN.NO
@@ -171,8 +182,8 @@ form:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH
                     help: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH_HELP
-                    default: 1
-                    highlight: 1
+                    default: 0
+                    highlight: 0
                     options:
                         1: PLUGIN_ADMIN.YES
                         0: PLUGIN_ADMIN.NO
@@ -183,8 +194,8 @@ form:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN
                     help: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN_HELP
-                    default: 1
-                    highlight: 1
+                    default: 0
+                    highlight: 0
                     options:
                         1: PLUGIN_ADMIN.YES
                         0: PLUGIN_ADMIN.NO
@@ -195,8 +206,8 @@ form:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY
                     help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY_HELP
-                    highlight: 1
-                    default: 1
+                    highlight: 0
+                    default: 0
                     options:
                         1: PLUGIN_ADMIN.YES
                         0: PLUGIN_ADMIN.NO
@@ -204,8 +215,8 @@ form:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES
                     help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES_HELP
-                    highlight: 1
-                    default: 1
+                    highlight: 0
+                    default: 0
                     options:
                         1: PLUGIN_ADMIN.YES
                         0: PLUGIN_ADMIN.NO
@@ -213,8 +224,8 @@ form:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES
                     help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES_HELP
-                    highlight: 1
-                    default: 1
+                    highlight: 0
+                    default: 0
                     options:
                         1: PLUGIN_ADMIN.YES
                         0: PLUGIN_ADMIN.NO
@@ -222,8 +233,8 @@ form:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS
                     help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS_HELP
-                    highlight: 1
-                    default: 1
+                    highlight: 0
+                    default: 0
                     options:
                         1: PLUGIN_ADMIN.YES
                         0: PLUGIN_ADMIN.NO
@@ -231,8 +242,8 @@ form:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM
                     help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM_HELP
-                    highlight: 1
-                    default: 1
+                    highlight: 0
+                    default: 0
                     options:
                         1: PLUGIN_ADMIN.YES
                         0: PLUGIN_ADMIN.NO
@@ -254,8 +265,8 @@ form:
                 featured:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.FEATURED.LABEL
-                    highlight: 1
-                    default: 1
+                    highlight: 0
+                    default: 0
                     options:
                         1: PLUGIN_ADMIN.ENABLED
                         0: PLUGIN_ADMIN.DISABLED
@@ -288,8 +299,8 @@ form:
                 enable_contact:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.CONTACT.ENABLE
-                    highlight: 1
-                    default: 1
+                    highlight: 0
+                    default: 0
                     options:
                         1: PLUGIN_ADMIN.ENABLED
                         0: PLUGIN_ADMIN.DISABLED
@@ -336,8 +347,8 @@ form:
                 social_enabled:
                     type: toggle
                     label: EDITORIAL.ADMIN.THEME.SOCIAL.ENABLED
-                    highlight: 1
-                    default: 1
+                    highlight: 0
+                    default: 0
                     options:
                         1: PLUGIN_ADMIN.ENABLED
                         0: PLUGIN_ADMIN.DISABLED
@@ -357,6 +368,16 @@ form:
                         .url:
                             type: text
                             label: EDITORIAL.ADMIN.THEME.SOCIAL.URL
+                        .target:
+                            type: select
+                            label: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.LABEL
+                            default: _self
+                            size: medium
+                            options:
+                                _blank: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.BLANK
+                                _parent: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.PARENT
+                                _self: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.SELF
+                                _top: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.TOP
                         .icon:
                             type: iconpicker
                             label: EDITORIAL.ADMIN.THEME.SOCIAL.ICON
@@ -372,7 +393,7 @@ form:
                     label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ENABLE
                     help: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ENABLE_HELP
                     default: 0
-                    highlight: 1
+                    highlight: 0
                     options:
                         1: PLUGIN_ADMIN.ENABLED
                         0: PLUGIN_ADMIN.DISABLED

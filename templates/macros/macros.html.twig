@@ -14,7 +14,7 @@
         {% if p.children.visible.count > 0 %}
             <li> 
                 
-                <a {{ page_routable|raw }}>{{ icon_menu|raw }} {{ p.menu }}</a>
+                <a {{ page_routable|raw }} rel="nofollow">{{ icon_menu|raw }} {{ p.menu }}</a>
                 {% if showSubmenu %}
                 <span class="{{ dropdownClass }}"></span>
                 <ul class="{{ submenuClass }}">

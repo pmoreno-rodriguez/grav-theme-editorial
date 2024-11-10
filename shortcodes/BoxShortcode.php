@@ -21,15 +21,18 @@ class BoxShortcode extends Shortcode
 
             // Get the shortcode content
             $content = $sc->getContent();
-            // Remove paragraph tags
-            $content = str_replace(array('<p>', '</p>'), '', $content);
 
             $boxHeading= $sc->getParameter('heading', $sc->getBbCode());
             $boxColor= $sc->getParameter('color', $sc->getBbCode());
             $boxClass= $sc->getParameter('class', $sc->getBbCode());
 
-            $output = '<h3>'.$boxHeading.'</h3>
-                        <div class="box '. $boxClass . $boxColor .'"><p>'.$content.'</p></div>';
+            $output = '';
+
+            if (!empty($boxHeading)) {
+                $output .= '<h3>' . $boxHeading . '</h3>';
+            }
+
+            $output .= '<div class="box ' . $boxClass . ' ' . $boxColor . '">' . $content . '</div>';
             return $output;
 
         });

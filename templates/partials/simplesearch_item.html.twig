@@ -6,7 +6,7 @@
 <section class="search-row">
     {% if show_image and image %}
         <div class="search-image">
-            <a href="{{ page.url }}">{{ image.cropZoom(100,100).loading('lazy').attribute('decoding','async').html(title,title,'image')|raw }}</a>
+            <a href="{{ page.url }}">{{ image.cropZoom(100,100).loading('lazy').decoding('async').html(title,title,'image')|raw }}</a>
         </div>
     {% endif %}
     <div class="search-item">

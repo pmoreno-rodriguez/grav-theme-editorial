@@ -1,4 +1,41 @@
+# v2.3.1
+## 11/06/2024
 
+1. [](#improved)
+   * Improved styles for related pages in sidebar
+   * Fixed the condition for displaying related pages in the sidebar
+   * Using the new `decoding` filter in all templates that load images
+
+# v2.3.0
+## 10/27/2024
+
+1. [](#new)
+   * New option to show sidebar on the right (thanks [@elAlberino](https://github.com/ElAberino))
+   * New option to display a page index at the beginning of a page with children
+   * New option (`addressDetails`) to add extra information to the contact template
+2. [](#improved)
+   * Remove extra paragraph in breadcrumbs in item template (thanks [@elAlberino](https://github.com/ElAberino))
+   * Fixed Box shortcode to remove extra paragraphs
+   * Set all options in the sidebar section, contact section and social media icons to `false` in default settings
+   * Updated README
+   * Update translations
+
+# v2.2.3
+## 08/13/2024
+
+1. [](#new)
+   * Added the `target` tag to social media icons
+2. [](#improved)
+    * Added `rel=nofollow` attribute to improve SEO
+3. [](#bugfix)
+   * Fixed HTML encoding in gallery image description in lightbox (thanks [@artecnico](https://github.com/artecnico))
+     
+# v2.2.2
+## 08/08/2024
+
+1. [](#bugfix)
+   * Fixed invalid value in `itemtype` field in gallery template
+     
 # v2.2.1
 ## 08/05/2024
 

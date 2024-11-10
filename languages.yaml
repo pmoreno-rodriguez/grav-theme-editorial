@@ -8,6 +8,8 @@ en:
         PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
         SIDEBAR_OPEN: Open sidebar
         SIDEBAR_OPEN_HELP: Set if the sidebar is open or closed at startup
+        RIGHT_SIDEBAR: Sidebar on the right
+        RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
         GOOGLE_FONTS:
           LOCAL: Use locally hosted Google Fonts    
         HEADER_SECTION: Header Section
@@ -80,6 +82,12 @@ en:
           ICONS: Social Icons
           NAME: Social Name
           URL: URL Link to Social
+          TARGET:
+            LABEL: Target
+            BLANK: 'Open in a new window'
+            PARENT: 'Open in the parent frame'
+            SELF: 'Open in the same frame as clicked'
+            TOP: 'Open in the full body of the window'
           ICON: Icon to Social
         CUSTOM_MENU:
           TITLE: 'Custom Menu Items'
@@ -278,6 +286,8 @@ en:
         SHOW_TITLE: Show Title
         SHOW_TITLE_HELP: Show or hide the page title
         HEADER_SUBTITLE: Subtitle
+        PAGE_INDEX: Page Index
+        PAGE_INDEX_HELP: If enabled, child pages will be displayed as if they were a table of contents
         CONTENT_SECTION: Content options
         FEATURED_IMAGE_LABEL: Featured Image
         FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
@@ -307,6 +317,8 @@ en:
         LABEL: Syndicate 
       TAXONOMYLIST:
         LABEL: Popular Tags
+    DEFAULT:
+      PAGE_INDEX_TITLE: Page content
     BLOG:
       LISTING_TITLE_CATEGORY: 'Posts in Category: '
       LISTING_TITLE_TAG: 'Posts with Tag: '
@@ -334,6 +346,8 @@ es:
         PRODUCTION_MODE_HELP: Si está activado, EDITORIAL cargará con CSS minificado
         SIDEBAR_OPEN: Barra lateral abierta
         SIDEBAR_OPEN_HELP: Establece si la barra lateral está abierta o cerrada al inicio.
+        RIGHT_SIDEBAR: Barra lateral a la derecha
+        RIGHT_SIDEBAR_HELP: Si está habilitado, la barra lateral aparecerá a la derecha
         GOOGLE_FONTS:
           LOCAL: Usar fuentes de Google alojadas localmente
         HEADER_SECTION: Sección de encabezado
@@ -404,6 +418,12 @@ es:
           ICONS: Iconos Redes Sociales
           NAME: Nombre de la Red Social
           URL: Enlace de la Red Social
+          TARGET:
+            LABEL: Destino
+            BLANK: 'Abrir en una nueva ventana'
+            PARENT: 'Abrir en el marco principal'
+            SELF: 'Abrir en el mismo marco donde se hizo clic'
+            TOP: 'Abrir en todo el cuerpo de la ventana'
           ICON: Icono de la Red Social
         CUSTOM_MENU:
           TITLE: 'Elementos de menú personalizados'
@@ -601,6 +621,8 @@ es:
         SHOW_TITLE: Mostrar título
         SHOW_TITLE_HELP: Muestra u oculta el título de la página
         HEADER_SUBTITLE: Subtítulo
+        PAGE_INDEX: Índice de página
+        PAGE_INDEX_HELP: Si está habilitado, las páginas secundarias se mostrarán como si fueran una tabla de contenido.
         CONTENT_SECTION: Opciones de Contenido
         FEATURED_IMAGE_LABEL: Imagen destacada
         FEATURED_IMAGE_HELP: Seleccione un archivo para usarlo como la imagen destacada superior de la página 
@@ -630,6 +652,8 @@ es:
         LABEL: Distribuir
       TAXONOMYLIST:
         LABEL: Etiquetas populares
+    DEFAULT:
+      PAGE_INDEX_TITLE: Contenido de la página
     BLOG:
       LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
       LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
@@ -657,6 +681,8 @@ fr:
         PRODUCTION_MODE_HELP: Si activé, EDITORIAL chargera le CSS minifié
         SIDEBAR_OPEN: Barre latérale ouverte
         SIDEBAR_OPEN_HELP: Définit si la barre latérale est ouverte ou fermée au démarrage.
+        RIGHT_SIDEBAR: Barre latérale à droite
+        RIGHT_SIDEBAR_HELP: Si activée, la barre latérale apparaîtra à droite
         GOOGLE_FONTS:
           LOCAL: Utiliser les polices Google hébergées localement
         HEADER_SECTION: "Section d'en-tête"
@@ -727,6 +753,12 @@ fr:
           ICONS: Icônes des réseaux sociaux
           NAME: Nom du réseau social
           URL: Lien du réseau social
+          TARGET:
+            LABEL: Destination
+            BLANK: 'Ouvrir dans une nouvelle fenêtre'
+            PARENT: 'Ouvrir dans le cadre principal'
+            SELF: 'Ouvrir dans le même cadre où le clic a été fait'
+            TOP: 'Ouvrir dans tout le corps de la fenêtre'
           ICON: Icône du réseau social
         CUSTOM_MENU:
           TITLE: 'Éléments de menu personnalisés'
@@ -924,6 +956,8 @@ fr:
         SHOW_TITLE: Montrer le titre
         SHOW_TITLE_HELP: Afficher ou masquer le titre de la page
         HEADER_SUBTITLE: Sous-titre
+        PAGE_INDEX: Index des pages
+        PAGE_INDEX_HELP: Si cette option est activée, les pages enfants seront affichées comme s'il s'agissait d'une table des matières.
         CONTENT_SECTION: Options de contenu
         FEATURED_IMAGE_LABEL: Image promue
         FEATURED_IMAGE_HELP: "Sélectionner le fichier pour l'image principale de la page"
@@ -953,6 +987,8 @@ fr:
         LABEL: Syndication
       TAXONOMYLIST:
         LABEL: Tags populaires
+    DEFAULT:
+      PAGE_INDEX_TITLE: Contenu de la page
     BLOG:
       LISTING_TITLE_CATEGORY: 'Publications dans la catégorie '
       LISTING_TITLE_TAG: 'Publications associées au tag '

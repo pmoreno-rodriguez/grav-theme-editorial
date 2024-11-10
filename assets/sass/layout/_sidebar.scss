@@ -221,3 +221,50 @@
 			}
 		}
 	}
+
+	.sidebar-right {
+		#sidebar {
+			@include vendor('transition', (
+				'margin-right 0.5s ease',
+				'box-shadow 0.5s ease'
+			));
+			.toggle {
+				left: auto;
+				right: _size(sidebar-width);
+			}
+
+			&.inactive {
+				margin-left: auto;
+				margin-right: (_size(sidebar-width) * -1);
+			}
+
+			@include breakpoint('<=xlarge') {
+
+				> .inner {
+					left: auto;
+					right: 0;
+				}
+
+				.toggle {
+					left: auto;
+					right: _size(sidebar-width-alt);
+				}
+
+				&.inactive {
+					margin-left: auto;
+					margin-right: (_size(sidebar-width-alt) * -1);
+				}
+			}
+
+			@include breakpoint('<=large') {
+				left: auto;
+				right: 0;
+				.toggle {
+					&:before {
+						margin-left: auto;
+						margin-right: calc(-0.875em / 2);
+					}
+				}
+			}
+		}
+	}

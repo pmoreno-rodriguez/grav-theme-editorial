@@ -1,3 +1,11 @@
+# v2.3.2
+## 11/18/2024
+
+1. [](#improved)
+   * Improved styles for dropdown menu (no empty space between menu link and arrow icon).
+   * Changed position of page index in default template. Now it is displayed at the top.
+   * Included the Form plugin as a dependency in blueprints.
+
 # v2.3.1
 ## 11/06/2024
 

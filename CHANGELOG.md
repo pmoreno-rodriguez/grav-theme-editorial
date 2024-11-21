@@ -1,3 +1,9 @@
+# v2.3.3
+## XX/XX/XXXX
+
+1. [](#improved)
+   * Updated menu heading text in sidebar
+
 # v2.3.2
 ## 11/18/2024
 

@@ -6,7 +6,8 @@
 {% include 'partials/page-bits/metadata.html.twig' %}
 {% if favicon %}
 {% set favicon_file = (favicon|first).name %}
-<link rel="icon" type="{{ favicon.type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
+{% set favicon_type = (favicon|first).type %}
+<link rel="icon" type="{{ favicon_type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
 {% else %}
 <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
 {% endif %}

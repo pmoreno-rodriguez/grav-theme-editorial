@@ -291,7 +291,6 @@ en:
         CONTENT_SECTION: Content options
         FEATURED_IMAGE_LABEL: Featured Image
         FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
-        MENU_TEXT: Menu
         IMAGE_OPTIONS: Image options
         FEATURED_IMAGE: 
           LABEL: Featured image
@@ -301,6 +300,7 @@ en:
         SHOW_PAGEIMAGE: Show Image
         SHOW_PAGEIMAGE_HELP: Show featured image if it is defined or the first image of the media page. 
     SIDEBAR:
+      MENU_TITLE: Menu
       LANGSWITCHER: Choose language
       CONTACT_INFO: Get in touch
       FEATURED_POSTS: Featured Posts
@@ -626,7 +626,6 @@ es:
         CONTENT_SECTION: Opciones de Contenido
         FEATURED_IMAGE_LABEL: Imagen destacada
         FEATURED_IMAGE_HELP: Seleccione un archivo para usarlo como la imagen destacada superior de la página 
-        MENU_TEXT: Menu
         IMAGE_OPTIONS: Opciones de imagen
         FEATURED_IMAGE: 
           LABEL: Imagen destacada
@@ -636,6 +635,7 @@ es:
         SHOW_PAGEIMAGE: Mostrar imagen
         SHOW_PAGEIMAGE_HELP: Muestra la imagen principal si está definida o la primera de las imágenes de la página.
     SIDEBAR:
+      MENU_TITLE: Menu
       LANGSWITCHER: Elegir idioma
       CONTACT_INFO: Ponerse en contacto
       FEATURED_POSTS: Entradas destacadas
@@ -961,7 +961,6 @@ fr:
         CONTENT_SECTION: Options de contenu
         FEATURED_IMAGE_LABEL: Image promue
         FEATURED_IMAGE_HELP: "Sélectionner le fichier pour l'image principale de la page"
-        MENU_TEXT: Menu
         IMAGE_OPTIONS: "Options de l'image"
         FEATURED_IMAGE: 
           LABEL: Image promue
@@ -971,6 +970,7 @@ fr:
         SHOW_PAGEIMAGE: "Afficher l'image"
         SHOW_PAGEIMAGE_HELP: "Activer l'image principale si elle est définie ou la première image de la page."
     SIDEBAR:
+      MENU_TITLE: Menu
       LANGSWITCHER: Choisir une langue
       CONTACT_INFO: Prendre contact
       FEATURED_POSTS: Articles promus

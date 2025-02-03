@@ -96,6 +96,7 @@ custom_logo_width:            # Set custom width for custom logo
 custom_logo_enabled:          # Enable/Disable logo
 custom_css:                   # Load the custom.css file if it exists in the assets/css folder
 custom_js:                    # Load the custom.js file if it exists in the assets/js folder
+themeSlogan:                  # Custom text for slogan
 menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
 menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
 menu_login:                   # Enable/Disable login icon in menu

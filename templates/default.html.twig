@@ -12,14 +12,12 @@
     {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
 	</header>
 	<div>
-	    {{ page.content|raw }}
-
 		{% if header.page_index %}
 			{% if page.children %}
 			<h2>{{ 'EDITORIAL.DEFAULT.PAGE_INDEX_TITLE'|t }}</h2>
 			<div class="box">
 				<dl>
-					{% for child in page.children.visible %}
+					{% for child in page.children.visible if child.routable != false %}
 					{% set child_subtitle = child.header.subtitle %}
 						
 						<dt>
@@ -35,6 +33,9 @@
 			</div>
 			{% endif %}          
 		{% endif %}
+
+		{{ page.content|raw }}
+
 	</div>
 
 {% endblock %}

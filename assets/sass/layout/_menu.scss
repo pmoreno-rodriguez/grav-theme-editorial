@@ -37,7 +37,8 @@
 						content: '\f053'; 
 						position: relative;
 						line-height: 3.5em;
-						
+						width: 3.5em;					
+						text-align: center;
 					}
 
 					&.no-dropdown {
@@ -68,7 +69,7 @@
 					display: inline-block;
 					font-size: inherit;
 					position: relative;
-
+					width: calc(100% - 3.5em);
 					
 				}
 			}

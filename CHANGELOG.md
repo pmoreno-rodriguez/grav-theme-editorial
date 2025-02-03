@@ -1,8 +1,13 @@
 # v2.3.3
-## XX/XX/XXXX
+## 02/03/2025
 
 1. [](#improved)
    * Updated menu heading text in sidebar
+   * Adapted to latest version of [Taxonomylist plugin](https://github.com/getgrav/grav-plugin-taxonomylist/)
+   * Updated README
+   * Updated styles for Dropdown menu
+2. [](#bugfix)
+   * Fixed favicon type in link rel html attribute
 
 # v2.3.2
 ## 11/18/2024

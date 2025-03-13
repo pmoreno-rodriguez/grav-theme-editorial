@@ -86,7 +86,8 @@ form:
 show_pageimage: true
 image_width: 1000
 image_height: 300
-show_title: true
+show_title: '1'
+addressDetails: "[ed-box color=\"light\"]\n#### HELP CENTER\nLorem ipsum dolor sit amet, [consectetur](#) adipiscing elit. Etiam sed eleifend magna, non tempor urna. Integer maximus, velit non scelerisque ornare, ante libero porta lorem, ac eleifend felis sapien eu leo.\n\nLorem ipsum dolor sit amet, [consectetur](#) adipiscing elit. Etiam sed eleifend magna, non tempor urna. Integer maximus, velit non scelerisque ornare, ante libero porta lorem, ac eleifend felis sapien eu leo.\n[/ed-box]"
 ---
 
 <h3>Send us your comments</h3>

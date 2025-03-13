@@ -9,6 +9,6 @@
 {% set favicon_type = (favicon|first).type %}
 <link rel="icon" href="{{ url('theme://images/' ~ favicon_file) }}" type="{{ favicon_type }}" />
 {% else %}
-<link rel="icon" href="{{ url('theme://images/logo.png') }}" type="image/png" />
+<link rel="icon" href="{{ url('theme://images/favicon.png') }}" type="image/png" />
 {% endif %}
 <link rel="canonical" href="{{ page.url(true, true) }}" />

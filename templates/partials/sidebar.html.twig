@@ -28,7 +28,7 @@
             {% if config.plugins.simplesearch.enabled %}
             <!-- Search -->
             <section id="search" class="alt">
-                {% include 'partials/simplesearch_searchbox.html.twig' %}
+                {% include 'partials/sidebar/simplesearch_searchbox.html.twig' %}
             </section>
             {% endif %}
         {% endif %}
@@ -39,7 +39,7 @@
                 <h2>{{ 'EDITORIAL.SIDEBAR.MENU_TITLE'|t }}</h2>
             </header>
             {% block navigation %}
-                {% include 'partials/navigation.html.twig' %}
+                {% include 'partials/sidebar/navigation.html.twig' %}
             {% endblock %}
         </nav>
 
@@ -49,13 +49,13 @@
                 <h2>{{ 'EDITORIAL.SIDEBAR.LANGSWITCHER'|t }}</h2>
             </header>
             
-            {% include 'partials/langswitcher.html.twig' %}
+            {% include 'partials/sidebar/langswitcher.html.twig' %}
         </section>
         {% endif %}
 
         {# display posts with 'featured_tag' tag on current blog page #}
         {% if show_featured is same as(true) %}
-            {% include 'partials/featured-posts.html.twig' with {'blog': new_base_url} %}
+            {% include 'partials/sidebar/featured-posts.html.twig' with {'blog': new_base_url} %}
         {% endif %}
         
         {# Show Random post if plugin is enabled #}
@@ -79,28 +79,28 @@
 
         {# Show Archives if plugin is enabled #}
         {% if archives %}
-            {% include 'partials/archives.html.twig' with {'base_url': new_base_url} %}
+            {% include 'partials/sidebar/archives.html.twig' with {'base_url': new_base_url} %}
         {% endif %}
 
         {# Show Related Pages if plugin is enabled #}
         {% if showRelatedPages %}
-            {% include 'partials/relatedpages.html.twig' %}
+            {% include 'partials/sidebar/relatedpages.html.twig' %}
         {% endif %}
         
         {# Only show taxonomylist in blog pages #}
         {% if showTaxonomyList and page.template == 'blog' %}
-            {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag', children_only: true} %}
+            {% include 'partials/sidebar/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag', children_only: true} %}
         {% endif %}
 
         {% if menu_login %}
-            {% include 'partials/login-button.html.twig' %}
+            {% include 'partials/sidebar/login-button.html.twig' %}
         {% endif %}
 
         {# Show Contact section if it is enabled #}
         {% if contact is same as(true) %}
-            {% include 'partials/contact.html.twig' %}
+            {% include 'partials/sidebar/contact.html.twig' %}
         {% endif %}
 
-        {% include 'partials/footer.html.twig' %}
+        {% include 'partials/sidebar/footer.html.twig' %}
     </div>
 </div>

@@ -1,3 +1,8 @@
+{% set theme_name = config.system.pages.theme %}
+{% set blueprint_path = "user://themes/#{theme_name}/blueprints.yaml" %}
+{% set blueprint_content = read_file(blueprint_path) %}
+{% if blueprint_content %}
+{% set blueprint_data = blueprint_content|yaml_decode %}
 <!--
     Editorial by HTML5 UP
     html5up.net | @ajlkn
@@ -5,7 +10,11 @@
 
     Ported to Grav by Pedro Moreno <https://github.com/pmoreno-rodriguez>
     https://github.com/pmoreno-rodriguez/grav-theme-editorial
+
+    Grav theme version: {{ blueprint_data.version }}
 -->
+{% endif %}
+
 {# SET THEME OPTIONS #}
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}

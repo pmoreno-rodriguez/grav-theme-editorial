@@ -1,3 +1,12 @@
+# v2.3.4
+## 03/13/2025
+
+1. [](#improved)
+   * Upgraded Glightbox library to version 3.3.0
+   * Added theme version dynamically in HTML comment using Twig
+   * Moved sidebar partials templates into a dedicated `partials/sidebar` folder for better organization
+   * Replaced `logo.png` with `favicon.png` in the head section
+  
 # v2.3.3
 ## 02/03/2025
 

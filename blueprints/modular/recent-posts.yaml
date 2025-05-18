@@ -29,7 +29,6 @@ form:
               help: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.LIMIT_HELP
               default: 3
               validate:
-                required: true
                 type: int
                 min: 1
                 max: 9

@@ -1,3 +1,11 @@
+# v2.3.5
+## 05/18/2025
+
+1. [](#improved)
+   * Added addressDetails to demo contact page
+2. [](#bugfix)
+   * **Fixed:** Recent Posts template now correctly respects the user-defined post limit in modular pages.
+
 # v2.3.4
 ## 03/13/2025
 

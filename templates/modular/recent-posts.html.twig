@@ -1,4 +1,3 @@
-
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set limit = page.header.limit|default(3) %}
 {% set readmore_txt = page.header.readmore_text|raw|default('Read more') %}
@@ -12,7 +11,7 @@
     </header>
 
     <div class="posts">
-        {% for p in blog.collection.slice(0,limit) %}
+         {% for p in blog.children.order('date', 'desc').slice(0, limit) %}
             {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
             {% set title = p.title|raw %}
             {% set Htag_title = 'h3' %}

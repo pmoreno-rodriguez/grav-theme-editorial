@@ -28,9 +28,7 @@ ul.pagination li > .page {font-size: 0.9em;}
     }
 }
 
-
 /* Class for tags and categories */
-
 .tags {
     color: #5a2908;
     font-size: 0.9em;
@@ -47,8 +45,8 @@ ul.pagination li > .page {font-size: 0.9em;}
 #header .logo {
     font-size: 2.125em;
 }
-/* Styles for Back to Top button */
 
+/* Styles for Back to Top button */
 #back-to-top {
     display: none;
     font-family: 'Font Awesome 5 Free';
@@ -96,4 +94,40 @@ ul.pagination li > .page {font-size: 0.9em;}
     line-height: 2.5em;
     padding: 0.5em 1.5em;
     white-space: normal;
+}
+
+/* Styles for Archives Section in Sidebar */
+.archive_items {
+    background-color: #f56a6a;
+    color: #ffffff !important;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-bottom: 0;
+    border-radius: 0.375em;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+    height: 2em;
+    line-height: 2em;
+    margin: 0 0.125em;
+    min-width: 2em;
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+/* Styles for Related Pages Section in Sidebar */
+.score {
+    background-color: #f56a6a;
+    color: #ffffff !important;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-bottom: 0;
+    border-radius: 0.375em;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+    height: 2em;
+    line-height: 2em;
+    margin: 0 0.125em;
+    min-width: 2em;
+    padding: 0 0.5em;
+    text-align: center;
 }

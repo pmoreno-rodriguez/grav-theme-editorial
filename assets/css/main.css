@@ -1423,6 +1423,26 @@ ul.pagination li:last-child {
   flex-direction: column;
   position: relative;
 }
+.posts article::before {
+  content: "";
+  background: rgba(210, 215, 217, 0.75);
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  height: calc(100% + 3em);
+  width: 1px;
+  display: block;
+}
+.posts article::after {
+  content: "";
+  background: rgba(210, 215, 217, 0.75);
+  position: absolute;
+  right: 0;
+  bottom: -1.5em;
+  height: 1px;
+  width: calc(100% + 3em);
+  display: block;
+}
 .posts article .image {
   margin: 0 0 2em 0;
 }
@@ -1431,20 +1451,58 @@ ul.pagination li:last-child {
   width: 100%;
   height: auto;
 }
-.posts article > :last-child {
-  margin-bottom: 0;
-}
 .posts article .actions {
   margin-top: auto;
 }
-@media screen and (max-width: 1680px) {
+.posts article > :last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1681px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .posts article:nth-child(3n+1)::before {
+    display: none;
+  }
+  .posts article:nth-child(3n+1)::after {
+    width: 100%;
+  }
+  .posts article:nth-last-child(-n+3)::after {
+    display: none;
+  }
+  .posts article:nth-last-child(-n+3)::before {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1680px) {
   .posts {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .posts article:nth-child(2n+1)::before {
+    display: none;
+  }
+  .posts article:nth-child(2n+1)::after {
+    width: 100%;
+  }
+  .posts article:nth-last-child(-n+2)::after {
+    display: none;
+  }
+  .posts article:nth-last-child(-n+2)::before {
+    height: 100%;
   }
 }
 @media screen and (max-width: 480px) {
   .posts {
     grid-template-columns: 1fr;
+  }
+  .posts article::before {
+    display: none;
+  }
+  .posts article::after {
+    width: 100%;
+  }
+  .posts article:last-child::after {
+    display: none;
   }
 }
 

@@ -32,23 +32,24 @@
 
 // Component.
 
-	@import 'components/row';
-	@import 'components/section';
-	@import 'components/form';
+	@import 'components/actions';
+	@import 'components/backtotop';
 	@import 'components/box';
+	@import 'components/button';
+	@import 'components/contact';
+	@import 'components/features';
+	@import 'components/form';
+	@import 'components/gallery';
 	@import 'components/icon';
+	@import 'components/icons';
 	@import 'components/image';
 	@import 'components/list';
-	@import 'components/actions';
-	@import 'components/icons';
-	@import 'components/contact';
-	@import 'components/pagination';
-	@import 'components/table';
-	@import 'components/button';
 	@import 'components/mini-posts';
-	@import 'components/features';
+	@import 'components/pagination';
 	@import 'components/posts';
-	@import 'components/gallery';
+	@import 'components/row';
+	@import 'components/section';
+	@import 'components/table';
 	@import 'components/team';
 
 // Layout.
@@ -60,7 +61,14 @@
 	@import 'layout/banner';
 	@import 'layout/footer';
 	@import 'layout/menu';
+
+// Grav CMS
+	@import 'gravcms/archive';
 	@import 'gravcms/blog-items';
-	@import 'gravcms/simplesearch';
+	@import 'gravcms/breadcrumbs';
+	@import 'gravcms/login';
 	@import 'gravcms/notices';
+	@import 'gravcms/pagination';
 	@import 'gravcms/relatedpages';
+	@import 'gravcms/simplesearch';
+	@import 'gravcms/taxonomy';

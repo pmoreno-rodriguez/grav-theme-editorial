@@ -1,0 +1,40 @@
+/* Styles for Back to Top button */
+
+#back-to-top {
+    display: none;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6em;
+    line-height: 1.6em;
+    background-color: #f56a6a;
+    color: #fff;
+    width: 1.6em;
+    height: 1.6em;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+  }
+  #back-to-top.btt-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+  #back-to-top:hover {
+    cursor: pointer;
+    background-color: #333;
+    color:#fff !important;
+  }
+  #back-to-top:active,
+  #back-to-top:visited {
+    background-color: #ab1d35 !important;
+    color: #fff;
+  }
+  #back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }

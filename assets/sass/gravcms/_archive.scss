@@ -1,5 +1,5 @@
-/* Styles for Related Pages Section in Sidebar */
-.score {
+/* Styles for Archives Section in Sidebar */
+.archive_items {
     background-color: #f56a6a;
     color: #ffffff !important;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -14,8 +14,4 @@
     min-width: 2em;
     padding: 0 0.5em;
     text-align: center;
-}
-
-#relatedpages .row>.col-8 {
-    padding-left: 0.2em;
 }

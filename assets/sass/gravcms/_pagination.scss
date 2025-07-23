@@ -1,0 +1,17 @@
+/* GRAV PAGINATION PLUGIN OVERRIDED STYLES */
+
+.pagination a, .pagination span {padding: 0 15px;}
+
+ul.pagination li > .page.active {font-size: 0.9em;}
+ul.pagination li > .page {font-size: 0.9em;}
+
+/* Active the pagination numbers in small screens */
+
+@media screen and (max-width: 480px) {
+    ul.pagination li:nth-child(n+2):nth-last-child(n+2) {
+        display: inline-block;
+    }
+    ul.pagination li:first-child {
+        padding-right: 0;
+    }
+}

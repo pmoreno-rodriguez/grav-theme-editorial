@@ -9,7 +9,7 @@
 {% macro nav_loop(page, dropdownClass, submenuClass, showSubmenu) %}
     {% import _self as macros %}
     {% for p in page.children.visible %}
-        {% set page_routable = (p.routable ) ? 'href="' ~ p.url ~ '"' : '' %}
+        {% set page_routable = p.routable ? 'href="' ~ p.url ~ '"' : 'href="#"' %}
         {% set icon_menu = p.header.icon_menu is defined ? '<i class="' ~ p.header.icon_menu ~ '"></i>' : '' %}
         {% if p.children.visible.count > 0 %}
             <li> 

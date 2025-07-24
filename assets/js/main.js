@@ -300,4 +300,18 @@
 			);
 		});
 
+  // To avoid scrolling bugs when the height of the sidebar content changes
+    // Select the div #sidebar to be monitored
+    const myDiv = document.querySelector('#sidebar');
+
+    // Create a ResizeObserver instance
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        $window.triggerHandler('resize.sidebar-lock'); // trigger 'resize.sidebar-lock' on $window so stuff doesn't get out of sync
+      }
+    });
+
+    // Start observing the element
+    resizeObserver.observe(myDiv);
+
 })(jQuery);

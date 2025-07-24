@@ -18,7 +18,7 @@
         {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
         <p class="data-post">
         {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime}}</small>{% endif %}
-        <br><time itemprop="datePublished"><i class="far fa-clock"></i> {{ 'EDITORIAL.ITEM.POSTED_ON'|t }} {{ datestamp }}</time>
+        <br><i class="far fa-clock"></i><time itemprop="datePublished">{{ 'EDITORIAL.ITEM.POSTED_ON'|t }} {{ datestamp }}</time>
         {% if page.taxonomy.author %}<br><small itemprop="author" itemscope itemtype="https://schema.org/Person"><i class="fas fa-user"></i>
         {% for author in page.taxonomy.author %}
         <a class="authors" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_OF'|t }} {{ (author|capitalize) }}"

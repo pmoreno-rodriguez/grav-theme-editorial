@@ -13,8 +13,8 @@
     {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
 	</header>
 	<div>
-	    <p class="lead">{{ page.content|raw }}</p>
-		{% include "forms/form.html.twig" with { form: forms('contact-form')} %}
+	    {{ page.content|raw }}
+	    {% include "forms/form.html.twig" with { form: forms('contact-form')} %}
 	</div>
 	{% if address_details %}
 	<div>

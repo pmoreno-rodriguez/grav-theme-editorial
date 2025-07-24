@@ -7,7 +7,7 @@
     {% if show_title %}<h2>{{ title }}</h2>{% endif %}
     {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
 </header>
-    <p class="lead">{{ page.content|raw }}</p>
+    {{ page.content|raw }}
     {% include "forms/form.html.twig" with { form: forms('contact-form')} %}
     {% if address_details %}
 	<div>

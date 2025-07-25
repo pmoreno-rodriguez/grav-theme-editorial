@@ -1,3 +1,16 @@
+# v2.3.6
+## 07/25/2025
+
+1. [](#improved)
+   * Remove trailing slashes from void HTML tags
+   * Refactoring the posts layout from Flexbox to CSS Grid for better readability and maintainability
+   * Refactoring some SCSS styles for better structure and readability
+   * Fixed mandatory `href` attribute on `a` tags on non-routable pages
+   * Fixed HTML markup errors reported by the W3C validator (Thanks to [@Fazarel](https://github.com/Fazarel))
+
+2. [](#bugfix)
+   * Fixed sidebar lock position when content height changes dynamically [Issue #48](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/48)
+
 # v2.3.5
 ## 05/18/2025
 

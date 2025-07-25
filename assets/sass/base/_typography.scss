@@ -9,20 +9,20 @@
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
-		font-size: 14pt;
+		font-size: 13pt;
 		font-weight: _font(weight);
 		line-height: 1.65;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 13pt;
-		}
-
-		@include breakpoint('<=large') {
 			font-size: 12pt;
 		}
 
-		@include breakpoint('<=xxsmall') {
+		@include breakpoint('<=large') {
 			font-size: 11pt;
+		}
+
+		@include breakpoint('<=xxsmall') {
+			font-size: 10pt;
 		}
 	}
 
@@ -79,23 +79,23 @@
 	}
 
 	h2 {
-		font-size: 2em;
-	}
-
-	h3 {
 		font-size: 1.75em;
 	}
 
-	h4 {
-		font-size: 1.5em;
-	}
-
-	h5 {
+	h3 {
 		font-size: 1.25em;
 	}
 
+	h4 {
+		font-size: 1.1em;
+	}
+
+	h5 {
+		font-size: 0.9em;
+	}
+
 	h6 {
-		font-size: 1em;
+		font-size: 0.7em;
 	}
 
 	@include breakpoint('<=xlarge') {

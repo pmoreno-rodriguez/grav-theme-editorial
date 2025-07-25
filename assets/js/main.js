@@ -194,6 +194,10 @@
 
 							}
 
+						// Recalculate dimensions every scroll in case of dynamic height changes.
+							wh = $window.height();
+							sh = $sidebar_inner.outerHeight() + 30;
+
 						// Calculate positions.
 							x = Math.max(sh - wh, 0);
 							y = Math.max(0, $window.scrollTop() - x);
@@ -251,7 +255,7 @@
 					// Prevent default.
 						event.preventDefault();
 					
-					// Toggle.
+					// Toggle submenu.
 					if ($this.hasClass('active')) {
 						$this.removeClass('active');
 						$this.closest('li').find('.submenu').first().css('display','block');
@@ -260,11 +264,10 @@
 						$this.closest('li').find('.submenu').first().css('display','none');
 					}
 
-						$this.closest('li').find('.submenu').first().slideToggle();
-					
-						// Trigger resize (sidebar lock).
-						$window.triggerHandler('resize.sidebar-lock');
-
+					// Toggle with animation and trigger sidebar resize after toggle finishes.
+						$this.closest('li').find('.submenu').first().slideToggle(function () {
+							$window.triggerHandler('resize.sidebar-lock');
+						});
 				});
 
 			});

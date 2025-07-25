@@ -2,5 +2,5 @@
 
 <a href="{{ base_url == '' ? '/' : base_url }}" style="border: none; text-align: left;">
   {% set logo_file = (logo|first).name %}
-    <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" style="width: {{logo_width}}px; height: auto;" alt="{{ site.title }}" />
+    <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" style="width: {{logo_width}}px; height: auto;" alt="{{ site.title }}">
 </a>

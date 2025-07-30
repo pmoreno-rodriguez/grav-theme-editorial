@@ -77,6 +77,92 @@ form:
                     top: EDITORIAL.ADMIN.GALLERY.IMAGES.DESCPOSITION.TOP
                     left: EDITORIAL.ADMIN.GALLERY.IMAGES.DESCPOSITION.LEFT
                     right: EDITORIAL.ADMIN.GALLERY.IMAGES.DESCPOSITION.RIGHT
+            Videos_title:
+              type: spacer
+              title: EDITORIAL.ADMIN.GALLERY.VIDEO_TITLE
+
+            header.video_width:
+              type: text
+              label: EDITORIAL.ADMIN.GALLERY.VIDEO_WIDTH
+              help: EDITORIAL.ADMIN.GALLERY.VIDEO_WIDTH_HELP
+              placeholder: '960px'
+              size: small
+              default: '960px'
+
+            header.autofocus_videos:
+              type: toggle
+              label: EDITORIAL.ADMIN.GALLERY.VIDEO_AUTOFOCUS
+              help: EDITORIAL.ADMIN.GALLERY.VIDEO_AUTOFOCUS_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+
+            header.autoplay_videos:
+              type: toggle
+              label: EDITORIAL.ADMIN.GALLERY.VIDEO_AUTOPLAY
+              help: EDITORIAL.ADMIN.GALLERY.VIDEO_AUTOPLAY_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.videos:
+              type: list
+              style: vertical
+              label: EDITORIAL.ADMIN.GALLERY.VIDEOS.LABEL
+              collapsed: true
+              fields:
+                .source:
+                  type: select
+                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.SOURCE
+                  description: EDITORIAL.ADMIN.GALLERY.VIDEOS.SOURCE_DESCRIPTION
+                  size: medium
+                  default: local
+                  options:
+                      remote: EDITORIAL.ADMIN.GALLERY.VIDEOS.SOURCE_OPTIONS.REMOTE
+                      local: EDITORIAL.ADMIN.GALLERY.VIDEOS.SOURCE_OPTIONS.LOCAL
+                .remote_video:
+                  type: text
+                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.REMOTE_VIDEO
+                  description: EDITORIAL.ADMIN.GALLERY.VIDEOS.REMOTE_VIDEO_DESCRIPTION
+                  size: medium
+                .remote_thumbnail:
+                  type: text
+                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.REMOTE_THUMBNAIL
+                  description: EDITORIAL.ADMIN.GALLERY.VIDEOS.REMOTE_THUMBNAIL_DESCRIPTION
+                  size: medium
+                .video:
+                  type: pagemediaselect
+                  size: medium
+                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.LOCAL_VIDEO
+                  preview_images: false
+                  accept:
+                    - .mp4
+                    - .webm
+                    - .ogv
+                .local_thumbnail:
+                  type: pagemediaselect
+                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.LOCAL_THUMBNAIL
+                  description: EDITORIAL.ADMIN.GALLERY.VIDEOS.LOCAL_THUMBNAIL_DESCRIPTION
+                  size: medium
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+                    - .jpeg
+                    - .gif
+                .title:
+                  type: text
+                  size: medium
+                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.TITLE
+                  validate:
+                    required: true
+                .description:
+                  type: textarea
+                  rows: 3
+                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.DESCRIPTION
         gallery_options:
           type: tab
           title: EDITORIAL.ADMIN.GALLERY.OPTIONS.TAB
@@ -84,6 +170,14 @@ form:
             Effects_title:
               type: spacer
               title: EDITORIAL.ADMIN.GALLERY.OPTIONS.EFFECTS_TITLE
+            header.lightbox_selector:
+              type: text
+              label: CSS Selector for Lightbox
+              size: medium
+              placeholder: 'glightbox'
+              help: >
+                Define the CSS selector for the elements that trigger the lightbox.
+              default: 'glightbox'
             header.overlay_hover_effect:
               type: select
               label: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.LABEL

@@ -1,87 +1,224 @@
 {% extends 'partials/base.html.twig' %}
 
 {# Set gallery options #}
-{% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
-{% set gallery = page.header.images %}
+{% set columns = 
+    page.header.layout == 'medium' ? 'col-6 col-12-small' :
+    page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' :
+    page.header.layout == 'compact' ? 'col-3 col-6-medium col-12-small' :
+    'col-4 col-6-medium col-12-small' 
+%}
+{% set images_gallery = page.header.images %}
+{% set videos_gallery = page.header.videos %}
 {% set thumb_w = page.header.thumb_width|default(600) %}
 {% set thumb_h = page.header.thumb_height|default(450) %}
+{% set selector = page.header.lightbox_selector|default('glightbox')|replace({' ': '_', '.': '_', '#': '_', ',': '_', ';': '_', ':': '_', '/': '_', '\\': '_'}) %}
 
 {% block stylesheets %}
-	{{ parent() }}
-	{% do assets.addCss('theme://assets/css/glightbox.min.css') %}
-	{% set styling %}
-	button.gclose.gbtn, button.gnext.gbtn, button.gprev.gbtn {
-			box-shadow: none !important;
-		}
-	{% endset %}
-{% do assets.addInlineCss(styling) %}
+    {{ parent() }}
+    {% do assets.addCss('theme://assets/css/glightbox.min.css') %}
+    {% set styling %}
+    button.gclose.gbtn, button.gnext.gbtn, button.gprev.gbtn {
+            box-shadow: none !important;
+        }
+    .gvideo-container .gslide-description,
+    .gvideo-container .gslide-video {
+        max-width: {{ page.header.video_width|default('960px') }} !important;
+    }
+    .glightbox-container .plyr .plyr__controls button {
+        height: unset;
+        color: #ffffff !important;
+        box-shadow: none !important;
+    }
+    /* Selector altamente específico para el botón de play */
+    .glightbox-container .plyr .plyr__control--overlaid,
+    .glightbox-container .plyr .plyr__control--overlaid:hover {
+        background: rgba(0, 178, 255, 0.8) !important; /* Color azul de Plyr con opacidad */
+        border: 0 !important;
+        border-radius: 50% !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+        height: 50px !important;
+        width: 50px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease !important;
+    }
+
+    /* Estilos para el icono SVG dentro del botón */
+    .glightbox-container .plyr .plyr__control--overlaid svg {
+        width: 24px !important;
+        height: 24px !important;
+        fill: currentColor !important;
+        position: relative !important;
+        left: 2px !important;
+    }
+    {% endset %}
+    {% do assets.addInlineCss(styling) %}
 {% endblock %}
 
 {% block content %}
-	<header class="main">
-		{% if show_image and image %}
-			<span class="image main">
-				{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title,title,'image')|raw }}
-			</span>
-		{% endif %}
-		{% if show_title %}<h1>{{ title }}</h1>{% endif %}
-		{% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
-	</header>
-	<div style="margin-bottom: 4em">
-	{{ page.content|raw}}
-	</div>
-	<!-- Gallery -->
-	{% block gallery %}
-		<section itemscope itemtype="http://schema.org/ImageGallery">
-			<div class="row aln-center">
-				{% for item in gallery %}
-					{% set item_image = page.media[item.image] %}
-					{% set item_title = item.title %}
-					{% set item_desc = item.description %}
-					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title,'gallery_content-image') %}
-					
-					<div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
-						<h3 class="title">{{item_title|raw}}</h3>
-						<div class="gallery_content">
-							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|e('html_attr')|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
-							<div class="gallery_content-overlay"></div>
-								{{ thumbnail|raw }}
-							<div class="gallery_content-details {{page.header.overlay_hover_effect}}">
-								<h3 class="gallery_content-title">{{item_title|raw}}</h3>
-								<p class="gallery_content-text">{{item_desc|truncate(75)|raw}}</p>
-							</div>
-							</a>
-						</div>
-					</div>
-				{% endfor %}
-			</div>
-		</section>
-	{% endblock %}
+    <header class="main">
+        {% if show_image and image %}
+            <span class="image main">
+                {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title,title,'image')|raw }}
+            </span>
+        {% endif %}
+        {% if show_title %}<h1>{{ title }}</h1>{% endif %}
+        {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+    </header>
+    <div style="margin-bottom: 4em">
+    {{ page.content|raw}}
+    </div>
+    
+    <!-- Gallery -->
+    <section itemscope itemtype="http://schema.org/ImageGallery">
+        <div class="row aln-center">
+            {% if images_gallery %}
+                {% for item in images_gallery %}
+                    {% set item_image = page.media[item.image] %}
+                    {% set item_title = item.title %}
+                    {% set item_desc = item.description %}
+                    {% set img_thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title,'gallery_content-image') %}
+                    {% set zoomable = page.header.zoomable == 1 ? "true" : "false"  %}
+                    {% set draggable = page.header.draggable == 1 ? "true" : "false"  %}
+                    {% set descPosition = item.descPosition|default('bottom') %}
+                    
+                    <div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
+                        <h3 class="title">{{item_title|raw}}</h3>
+                        <div class="gallery_content">
+                            <a href="{{item_image.url}}" class="{{ selector }}" 
+                                data-height="{{page.header.height}}" 
+                                data-width="{{page.header.width}}" 
+                                data-title="{{item_title}}" 
+                                data-description="{{item_desc|e('html_attr')}}" 
+                                data-desc-position="{{descPosition}}" 
+                                data-zoomable="{{ zoomable }}"
+                                data-draggable="{{ draggable }}"
+                                data-type="image">
+                            <div class="gallery_content-overlay"></div>
+                                {{ img_thumbnail|raw }}
+                            <div class="gallery_content-details {{ page.header.overlay_hover_effect }}">
+                                <h3 class="gallery_content-title">{{item_title|raw}}</h3>
+                                <p class="gallery_content-text">{{item_desc|truncate(75)|raw}}</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+            {% if videos_gallery %}
+                {% for videoItem in videos_gallery %}
+                    {% if videoItem.source == 'local' %}
+                        {% set videoURL = page.media[videoItem.video].url %}
+                    {% else %}
+                        {% set videoURL = videoItem.remote_video %}
+                    {% endif %}
+
+                    {% if videoItem.local_thumbnail and page.media[videoItem.local_thumbnail] %}
+                        {% set videoItemThumbnail = page.media[videoItem.local_thumbnail].cropZoom(thumb_w, thumb_h).html(videoItem.title, videoItem.title, 'gallery_content-image') %}
+                    {% elseif videoItem.remote_thumbnail %}
+                        {% set videoItemThumbnail = 
+                            '<img src="' ~ videoItem.remote_thumbnail ~ '" ' ~
+                            'alt="' ~ videoItem.title|e ~ '" ' ~
+                            'class="gallery_content-image" ' ~
+                            'itemprop="http://schema.org/image" />' 
+                        %}
+                    {% else %}
+                        {% set videoItemThumbnail = '<div class="gallery_content-image no-thumbnail">' ~ videoItem.title|e ~ '</div>' %}
+                    {% endif %}
+                    <div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
+                        <h3 class="title">{{ videoItem.title|raw }}</h3>
+                        <div class="gallery_content">
+                            <a 
+                            href="{{ videoURL }}" 
+                            class="{{ selector }}" 
+                            data-type="video" 
+                            data-title="{{ videoItem.title }}"
+                            data-description="{{ videoItem.description|e('html_attr') }}"
+                            >
+                            
+                            {% if videoItemThumbnail %}
+                            <div class="gallery_content-overlay"></div>
+                            {{ videoItemThumbnail|raw }}
+                            <div class="gallery_content-details {{ page.header.overlay_hover_effect }}">
+                                <h3 class="gallery_content-title">{{ videoItem.title|raw }}</h3>
+                                <p class="gallery_content-text">{{ videoItem.description|truncate(75)|raw }}</p>
+                            </div>
+                            {% else %}
+                                {{ videoItem.title|raw }}
+                            {% endif %}
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
 {% endblock %}
 
 {% block javascripts %}
-	{{ parent() }}
-	{% set script %}
-	const lightbox = GLightbox({
-	    closeButton: {{ page.header.close_button }},
-	    touchFollowAxis: {{ page.header.touch_axis }},
-	    touchNavigation: {{ page.header.touch_navigation }},
-	    keyboardNavigation:	{{ page.header.keyboard_navigation }},
-	    loop: {{ page.header.loop }},
-	    openEffect: '{{ page.header.open_effect }}',
-	    closeEffect: '{{ page.header.close_effect }}',
-	    slideEffect: '{{ page.header.slide_effect }}',
-	    closeOnOutsideClick: {{ page.header.closeOutside }},
-	    dragToleranceX: {{ page.header.draggableX }},
-	    dragToleranceY: {{ page.header.draggableY }},
-	    preload: {{ page.header.preload }},
-	    dragAutoSnap: {{ page.header.dragAuto }},
-	    moreText: '{{ page.header.more_text }}',
-		{% if page.header.startAt is defined %}startAt: {{ page.header.startAt }},{% endif %}
-	    moreLength: {{page.header.more_length}}
-	});
-	{% endset %}
+    {{ parent() }}
+    {% set script %}
+    {% set lightbox_var = 'lightbox_' ~ page.slug|replace({'(?i)[^a-z0-9_]': '_'}, 'regex') %}
 
-	{% do assets.addJs('theme://assets/js/glightbox.min.js', {group:'bottom'}) %}
-	{% do assets.addInlineJs(script,{'group':'bottom'}) %}
+    const {{ lightbox_var }} = GLightbox({
+        selector: ".{{ selector }}",
+        {% if page.header.close_button is defined %}closeButton: {{ page.header.close_button }},{% endif %}
+        {% if page.header.touch_axis is defined %}touchFollowAxis: {{ page.header.touch_axis }},{% endif %}
+        {% if page.header.touch_navigation is defined %}touchNavigation: {{ page.header.touch_navigation }},{% endif %}
+        {% if page.header.keyboard_navigation is defined %}keyboardNavigation: {{ page.header.keyboard_navigation }},{% endif %}
+        {% if page.header.loop is defined %}loop: {{ page.header.loop }},{% endif %}
+        {% if page.header.open_effect is defined %}openEffect: '{{ page.header.open_effect }}',{% endif %}
+        {% if page.header.close_effect is defined %}closeEffect: '{{ page.header.close_effect }}',{% endif %}
+        {% if page.header.slide_effect is defined %}slideEffect: '{{ page.header.slide_effect }}',{% endif %}
+        {% if page.header.closeOutside is defined %}closeOnOutsideClick: {{ page.header.closeOutside }},{% endif %}
+        {% if page.header.draggableX is defined %}dragToleranceX: {{ page.header.draggableX }},{% endif %}
+        {% if page.header.draggableY is defined %}dragToleranceY: {{ page.header.draggableY }},{% endif %}
+        {% if page.header.preload is defined %}preload: {{ page.header.preload }},{% endif %}
+        {% if page.header.dragAuto is defined %}dragAutoSnap: {{ page.header.dragAuto }},{% endif %}
+        {% if page.header.more_text is defined %}moreText: '{{ page.header.more_text }}',{% endif %}
+        {% if page.header.startAt is defined %}startAt: {{ page.header.startAt }},{% endif %}
+        {% if page.header.more_length is defined %}moreLength: {{ page.header.more_length }},{% endif %}
+        {% if page.header.autoplay_videos is defined %}autoplayVideos: {{ page.header.autoplay_videos }},{% endif %}
+        {% if page.header.autofocus_videos is defined %}autofocusVideos: {{ page.header.autofocus_videos }},{% endif %}
+        {% if page.header.video_width is defined %}videosWidth: '{{ page.header.video_width }}',{% endif %}
+
+        {% if page.header.videos %}
+        plyr: {
+            config: {
+            autoplay: {{ page.header.autoplay_videos == 1 ? "true" : "false" }},
+            keyboard: true,
+            muted: {{ page.header.autoplay_videos ? "true" : "false" }},
+            ratio: '16:9',
+            clickToPlay: true,
+            hideControls: true,
+            fullscreen: {
+                enabled: true,
+                iosNative: true,
+                },
+            youtube: {
+                noCookie: true,
+                rel: 0,
+                showinfo: 0,
+                iv_load_policy: 3
+                }
+            },
+            vimeo: {
+                byline: false,
+                portrait: false,
+                title: false,
+                speed: true,
+                transparent: false
+            }
+        }
+        {% endif %}
+    });
+    {% endset %}
+
+    {% do assets.addJs('theme://assets/js/glightbox.min.js', {group:'bottom'}) %}
+    {% do assets.addInlineJs(script,{'group':'bottom'}) %}
 {% endblock %}

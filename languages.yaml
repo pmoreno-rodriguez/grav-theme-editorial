@@ -214,6 +214,29 @@ en:
             LEFT: Left
             RIGHT: Right
           IMAGE_THUMB: Thumbnail
+        VIDEO_TITLE: Video Gallery
+        VIDEO_WIDTH: Video Width
+        VIDEO_WIDTH_HELP: 'Default width for videos. Videos are responsive so height is not required. The width can be in px % or even vw for example, 500px, 90% or 100vw for full width videos'
+        VIDEO_AUTOFOCUS: Autofocus
+        VIDEO_AUTOFOCUS_HELP: If true video will be focused on play to allow keyboard sortcuts for the player, this will deactivate prev and next arrows to change slide so use it only if you know what you are doing
+        VIDEO_AUTOPLAY: Autoplay
+        VIDEO_AUTOPLAY_HELP: Autoplay videos on open
+        VIDEOS:
+          LABEL: Videos
+          SOURCE: Video Source
+          SOURCE_DESCRIPTION: Select the video source type
+          SOURCE_OPTIONS:
+            REMOTE: Remote Video
+            LOCAL: Local Video
+          REMOTE_VIDEO: Remote Video URL
+          REMOTE_VIDEO_DESCRIPTION: URL from YouTube, Vimeo, or other external service
+          REMOTE_THUMBNAIL: Remote Thumbnail
+          REMOTE_THUMBNAIL_DESCRIPTION: Thumbnail URL image for gallery
+          LOCAL_VIDEO: Local Video
+          LOCAL_THUMBNAIL: Local Thumbnail
+          LOCAL_THUMBNAIL_DESCRIPTION: Thumbnail image for gallery
+          TITLE: Video Title
+          DESCRIPTION: Video Description
         OPTIONS:
           TAB: Gallery Options
           EFFECTS_TITLE: Appearance & Effects
@@ -549,6 +572,29 @@ es:
             LEFT: Izquierda
             RIGHT: Derecha
           IMAGE_THUMB: Miniatura
+        VIDEO_TITLE: Galería de Videos
+        VIDEO_WIDTH: Ancho del Video
+        VIDEO_WIDTH_HELP: 'Ancho predeterminado para los videos. Los videos son responsivos, por lo que no se requiere altura. El ancho puede estar en px, %, o incluso vw, por ejemplo, 500px, 90% o 100vw para videos de ancho completo.'
+        VIDEO_AUTOFOCUS: Autofocus
+        VIDEO_AUTOFOCUS_HELP: Si está activado, el video se enfocará al reproducirse para permitir atajos de teclado del reproductor. Esto desactivará las flechas de anterior y siguiente para cambiar de diapositiva, así que úsalo solo si sabes lo que estás haciendo.
+        VIDEO_AUTOPLAY: Reproducción automática
+        VIDEO_AUTOPLAY_HELP: Reproducir los videos automáticamente al abrir
+        VIDEOS:
+          LABEL: "Videos"
+          SOURCE: "Fuente del video"
+          SOURCE_DESCRIPTION: "Selecciona el tipo de fuente del video"
+          SOURCE_OPTIONS:
+            REMOTE: "Video remoto"
+            LOCAL: "Video local"
+          REMOTE_VIDEO: "URL de video remoto"
+          REMOTE_VIDEO_DESCRIPTION: "URL de YouTube, Vimeo u otro servicio externo"
+          REMOTE_THUMBNAIL: "Miniatura remota"
+          REMOTE_THUMBNAIL_DESCRIPTION: "URL de imagen miniatura para la galería"
+          LOCAL_VIDEO: "Video local"
+          LOCAL_THUMBNAIL: "Miniatura local"
+          LOCAL_THUMBNAIL_DESCRIPTION: "Imagen miniatura para la galería"
+          TITLE: "Título del video"
+          DESCRIPTION: "Descripción del video"
         OPTIONS:
           TAB: Opciones Galería
           EFFECTS_TITLE: Apariencia y efectos

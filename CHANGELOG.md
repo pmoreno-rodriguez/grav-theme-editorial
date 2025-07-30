@@ -1,3 +1,9 @@
+# v2.3.7
+## 07/30/2025
+
+1. [](#improved)
+   * Added support for videos in the gallery template
+
 # v2.3.6
 ## 07/25/2025
 

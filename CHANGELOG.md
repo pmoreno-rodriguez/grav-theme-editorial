@@ -1,3 +1,10 @@
+# v2.3.8
+## 08/04/2025
+
+1. [](#improved)
+   * Use Grav locator to check for custom CSS/JS files, supporting theme inheritance
+   * Update SCSS for Sass 3 compatibility
+
 # v2.3.7
 ## 07/30/2025
 

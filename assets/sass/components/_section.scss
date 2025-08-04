@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -14,42 +17,42 @@
 
 	header {
 		p {
-			font-family: _font(family-heading);
+			font-family: functions.font(family-heading);
 			font-size: 1em;
-			font-weight: _font(weight-heading-alt);
-			letter-spacing: _font(kerning-heading);
+			font-weight: functions.font(weight-heading-alt);
+			letter-spacing: functions.font(kerning-heading);
 			margin-top: -0.8em !important;
 			margin-bottom: 1.5em !important;
 			text-transform: uppercase;
 			font-size: 1.3em !important;
 
 			time,small {
-				font-family: _font(family);
+				font-family: functions.font(family);
 				font-size: 0.9em;
 			}
 		}
 
 		&.major {
 			> :last-child {
-				border-bottom: solid 3px _palette(accent);
+				border-bottom: solid 3px functions.palette(accent);
 				display: inline-block;
-				margin: 0 0 _size(element-margin) 0;
+				margin: 0 0 functions.size(element-margin) 0;
 			 	padding: 0 0.75em 0.5em 0;
 			}
 		}
 
 		&.main {
 			> :last-child {
-				margin: 0 0 (_size(element-margin) * 0.5) 0;
+				margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 			}
 		}
 
 		&.authors {
-			font-family: _font(family);
+			font-family: functions.font(family);
 			font-size: 0.9em;
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoints.breakpoint('<=small') {
 
 			p {
 				font-size: 1.1em !important;

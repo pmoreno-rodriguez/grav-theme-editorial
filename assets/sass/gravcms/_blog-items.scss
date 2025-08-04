@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+
 /* Blog items listing  */
 
 ul.blog-items {
@@ -5,7 +8,7 @@ ul.blog-items {
     text-align: left;
 
     li:nth-child(even){
-        background-color: _palette(bg-alt);
+        background-color: functions.palette(bg-alt);
     }
 
     li a{
@@ -42,7 +45,7 @@ ul.blog-items {
         text-align: right;
       }
     
-      @include breakpoint('<=small') {
+      @include breakpoints.breakpoint('<=small') {
         .align-left, .align-center, .align-right {
             text-align: center;
           }

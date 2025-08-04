@@ -1,4 +1,6 @@
-@include breakpoint('<=xsmall') {
+@use "../libs/breakpoints";
+
+@include breakpoints.breakpoint('<=xsmall') {
     .search-image {
         display: none;
     }

@@ -1,3 +1,7 @@
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -8,11 +12,11 @@
 
 	#menu {
 		ul {
-			@include vendor('user-select', 'none');
-			color: _palette(fg-bold);
-			font-family: _font(family-heading);
-			font-weight: _font(weight-heading-alt);
-			letter-spacing: _font(kerning-heading);
+			@include vendor.vendor('user-select', 'none');
+			color: functions.palette(fg-bold);
+			font-family: functions.font(family-heading);
+			font-weight: functions.font(weight-heading-alt);
+			letter-spacing: functions.font(kerning-heading);
 			list-style: none;
 			margin-bottom: 0;
 			padding: 0;
@@ -21,19 +25,19 @@
 			li {
 
 				.dropdown {
-					@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
-					@include icon(false, solid);
+					@include vendor.vendor('transition', 'color #{functions.duration(transition)} ease-in-out');
+					@include mixins.icon(false, solid);
 					-webkit-tap-highlight-color: rgba(255,255,255,0);
 					position: relative;
 
 					&:before {
 
 						float: right;
-						@include vendor('transition', (
-						'color #{_duration(transition)} ease-in-out',
-						'transform #{_duration(transition)} ease-in-out'
+						@include vendor.vendor('transition', (
+						'color #{functions.duration(transition)} ease-in-out',
+						'transform #{functions.duration(transition)} ease-in-out'
 						));
-						color: _palette(fg-light);
+						color: functions.palette(fg-light);
 						content: '\f053'; 
 						position: relative;
 						line-height: 3.5em;
@@ -46,17 +50,17 @@
 					}
 
 					&:hover {
-						color: _palette(accent);
+						color: functions.palette(accent);
 						cursor: pointer;
 					}
 					&.active {
 						& + ul {
 							display: block;
-							color: _palette(fg-light);
+							color: functions.palette(fg-light);
 						}
 
 						&:before {
-							@include vendor('transform', 'rotate(-90deg)');
+							@include vendor.vendor('transform', 'rotate(-90deg)');
 						}
 					}
 				}
@@ -76,18 +80,18 @@
 		}
 		> ul {
 			> li {
-				border-top: solid 1px _palette(border);
+				border-top: solid 1px functions.palette(border);
 				line-height: 3.5em;
 
 				> ul {
-					color: _palette(fg-light);
+					color: functions.palette(fg-light);
 					display: none;
 					margin: 0.5em 0 1.5em 0;
 					padding-left: 1em;
 
 					a, span {
 						font-size: 1em;
-						color: _palette(fg);
+						color: functions.palette(fg);
 					}
 
 					> li {

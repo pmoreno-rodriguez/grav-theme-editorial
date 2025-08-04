@@ -1,3 +1,5 @@
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,11 +9,11 @@
 /* Wrapper */
 
 	#wrapper {
-		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'row-reverse');
+		@include vendor.vendor('display', 'flex');
+		@include vendor.vendor('flex-direction', 'row-reverse');
 		min-height: 100vh;
 	}
 
 	.sidebar-right #wrapper {
-		@include vendor('flex-direction', 'row');
+		@include vendor.vendor('flex-direction', 'row');
 	}

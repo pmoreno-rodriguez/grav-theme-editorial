@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,13 +10,13 @@
 /* Posts */
 
 .posts {
-  $gutter: _size(gutter);
-  $border-color: _palette(border);
+  $gutter: functions.size(gutter);
+  $border-color: functions.palette(border);
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $gutter;
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
   width: 100%;
 
   article {
@@ -44,7 +47,7 @@
     }
 
     .image {
-      margin: 0 0 _size(element-margin) 0;
+      margin: 0 0 functions.size(element-margin) 0;
 
       img {
         display: block;
@@ -62,7 +65,7 @@
     }
   }
 
-  @include breakpoint('xlarge-to-max') {
+  @include breakpoints.breakpoint('xlarge-to-max') {
     grid-template-columns: repeat(3, 1fr);
 
     article {
@@ -84,7 +87,7 @@
     }
   }
 
-  @include breakpoint('small-to-xlarge') {
+  @include breakpoints.breakpoint('small-to-xlarge') {
     grid-template-columns: repeat(2, 1fr);
 
     article {
@@ -106,7 +109,7 @@
     }
   }
 
-  @include breakpoint('<=xsmall') {
+  @include breakpoints.breakpoint('<=xsmall') {
     grid-template-columns: 1fr;
 
     article {

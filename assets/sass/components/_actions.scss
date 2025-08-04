@@ -1,3 +1,6 @@
+@use "../libs/functions";
+@use "../libs/vendor";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,22 +10,22 @@
 /* Actions */
 
 	ul.actions {
-		@include vendor('display', 'flex');
-		@include vendor('flex-wrap', 'wrap');
-		@include vendor('align-items', 'center');
+		@include vendor.vendor('display', 'flex');
+		@include vendor.vendor('flex-wrap', 'wrap');
+		@include vendor.vendor('align-items', 'center');
 		cursor: default;
 		list-style: none;
-		margin-left: (_size(element-margin) * -0.5);
+		margin-left: (functions.size(element-margin) * -0.5);
 		padding-left: 0;
 
 		li {
-			padding: 0 0 (_size(element-margin) * 0.3) (_size(element-margin) * 0.5);
+			padding: 0 0 (functions.size(element-margin) * 0.3) (functions.size(element-margin) * 0.5);
 			vertical-align: middle;
 		}
 
 		&.aln-left {
-			@include vendor('flex-direction', 'column');
-			@include vendor('align-items', 'flex-start');
+			@include vendor.vendor('flex-direction', 'column');
+			@include vendor.vendor('align-items', 'flex-start');
 			width: 100%;
 			margin-left: 0;
 
@@ -31,7 +34,7 @@
 			}
 		}
 		&.special {
-			@include vendor('justify-content', 'center');
+			@include vendor.vendor('justify-content', 'center');
 			width: 100%;
 			margin-left: 0;
 
@@ -43,11 +46,11 @@
 		}
 
 		&.stacked {
-			@include vendor('flex-direction', 'column');
+			@include vendor.vendor('flex-direction', 'column');
 			margin-left: 0;
 
 			li {
-				padding: (_size(element-margin) * 0.65) 0 0 0;
+				padding: (functions.size(element-margin) * 0.65) 0 0 0;
 
 				&:first-child {
 					padding-top: 0;
@@ -56,11 +59,11 @@
 		}
 
 		&.fit {
-			width: calc(100% + #{_size(element-margin) * 0.5});
+			width: calc(100% + #{functions.size(element-margin) * 0.5});
 
 			li {
-				@include vendor('flex-grow', '1');
-				@include vendor('flex-shrink', '1');
+				@include vendor.vendor('flex-grow', '1');
+				@include vendor.vendor('flex-shrink', '1');
 				width: 100%;
 
 				> * {
@@ -77,17 +80,17 @@
 	/* Tags */
 
 	ul.tags {
-		@include vendor('display', 'flex');
-		@include vendor('flex-wrap', 'wrap');
-		@include vendor('align-items', 'center');
-		@include vendor('justify-content', 'stretch');
+		@include vendor.vendor('display', 'flex');
+		@include vendor.vendor('flex-wrap', 'wrap');
+		@include vendor.vendor('align-items', 'center');
+		@include vendor.vendor('justify-content', 'stretch');
 		cursor: default;
 		list-style: none;
-		margin-left: (_size(element-margin) * -0.5);
+		margin-left: (functions.size(element-margin) * -0.5);
 		padding-left: 0;
 
 		li {
-			padding: (_size(element-margin) * 0.25);
+			padding: (functions.size(element-margin) * 0.25);
 			vertical-align: middle;
 		}
 	}
@@ -96,11 +99,11 @@
 
 	#login {
 
-		margin: _size(element-margin) 0;
+		margin: functions.size(element-margin) 0;
 
 		ul {
-			@include vendor('display', 'flex');
-			@include vendor('flex-wrap', 'wrap');
+			@include vendor.vendor('display', 'flex');
+			@include vendor.vendor('flex-wrap', 'wrap');
 			cursor: default;
 			list-style: none;
 			padding-left: 0;

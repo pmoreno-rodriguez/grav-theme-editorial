@@ -1,3 +1,6 @@
+@use "../libs/functions";
+@use "../libs/mixins";
+
 ///
 /// Editorial by HTML5 UP
 /// html5up.net | @ajlkn
@@ -11,14 +14,14 @@
 		padding: 0;
 
 		li {
-			@include icon;
-			border-top: solid 1px _palette(border);
+			@include mixins.icon;
+			border-top: solid 1px functions.palette(border);
 			margin: 1.5em 0 0 0;
 			padding: 1.5em 0 0 3em;
 			position: relative;
 
 			&:before {
-				color: _palette(accent);
+				color: functions.palette(accent);
 				display: inline-block;
 				font-size: 1.5em;
 				height: 1.125em;

@@ -42,11 +42,15 @@ class Editorial extends Theme
 
         $themeConfig = $this->config->get('themes.editorial');
 
-        if (isset($themeConfig['custom_css']) && $themeConfig['custom_css'] && file_exists(__DIR__ . '/assets/css/custom.css')) {
+        $custom_css_path = $this->grav['locator']->findResource('theme://assets/css/custom.css');
+
+        if (isset($themeConfig['custom_css']) && $themeConfig['custom_css'] && $custom_css_path) {
             $this->grav['assets']->addCss('theme://assets/css/custom.css', ['priority' => 5]);
         }
 
-        if (isset($themeConfig['custom_js']) && $themeConfig['custom_js'] && file_exists(__DIR__ . '/assets/js/custom.js')) {
+       $custom_js_path = $this->grav['locator']->findResource('theme://assets/js/custom.js');
+
+        if (isset($themeConfig['custom_js']) && $themeConfig['custom_js'] && $custom_js_path) {
             $this->grav['assets']->addJs('theme://assets/js/custom.js', ['group' => 'bottom', 'priority' => 15]);
         }
     }

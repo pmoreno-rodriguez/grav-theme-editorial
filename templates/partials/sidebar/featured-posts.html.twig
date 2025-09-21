@@ -11,7 +11,7 @@
     {% if featured.count > 0 %}
         <div class="mini-posts">
             {% for p in featured.slice(0,featured_number) %}
-            {% set image = p.media[p.header.featured_image] ?: page.media.images|first %}
+            {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
             {% set title = p.title|raw %}
             {% if page.url != p.url %}
                 <article>

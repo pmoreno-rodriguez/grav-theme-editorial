@@ -1,4 +1,4 @@
-{% set logo_style = (not logo_enabled or logo is empty) ? 'style="text-align:left !important;"' : '' %}
+{% set logo_style = (not logo_enabled or logo is empty) ? 'text-align:left !important;' : '' %}
 
 <header id="header">
     {% if logo_enabled and logo %}
@@ -8,7 +8,7 @@
     {% if page.home() %}
         <h1>
     {% endif %}
-    <a class="logo" {{ logo_style|raw }} href="{{ base_url == '' ? '/' : base_url }}">
+    <a class="logo" {% if logo_style %}style="{{ logo_style }}"{% endif %} href="{{ base_url == '' ? '/' : base_url }}">
         <strong>
             {{ config.site.title }}
         </strong>

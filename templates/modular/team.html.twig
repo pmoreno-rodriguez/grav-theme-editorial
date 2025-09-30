@@ -2,12 +2,12 @@
 {% set columns = page.header.layout == 'standard' ? 'col-4' : 'col-6'  %}
 
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set title = page.title|raw  %}
+{% set title = page.title  %}
 
 <section id="team">
 <header class="major">
-    {% if show_title %}<h2>{{ title }}</h2>{% endif %}
-    {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+    {% if show_title %}<h2>{{ title|e }}</h2>{% endif %}
+    {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
 </header>
     {{ content|raw }}
 
@@ -20,17 +20,19 @@
         <div class="text">
             {% set member_image = page.media[member.image] %}
             {{ member_image.html(member.name,member.name,'')|raw }}
-            <h3>{{ member.name|raw }}</h3>
-            <p>{{ member.position|raw }}</p>
-            <p>{{ member.details|raw }}</p>
+            <h3>{{ member.name|e }}</h3>
+            <p>{{ member.position|e }}</p>
+            {{ member.details|markdown }}
         </div>
         <div class="links">
             {% for item in member.social_media %}
             {# Fontawesome icons only work with brands family #}
-            <a class="icon brands fa-{{ item.name|lower|raw }}" 
+            <a class="icon brands fa-{{ item.name|lower|e }}" 
             target="_blank" 
-            href="{{ item.url }}" 
-            title="{{ item.name|raw }}">
+            href="{{ item.url|e }}"
+            rel="noopener noreferrer" 
+            title="{{ item.name|e('html_attr') }}"
+            aria-label="{{ item.name|e('html_attr') }}">
             </a>
             {% endfor %}
         </div>

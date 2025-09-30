@@ -14,17 +14,16 @@
 
 <article itemscope itemtype="http://schema.org/Article">
     <header>
-        {% if show_title %}<h1 itemprop="name headline">{{ title }}</h1>{% endif %}
-        {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+        {% if show_title %}<h1 itemprop="name headline">{{ title|e }}</h1>{% endif %}
+        {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
         <p class="data-post">
-        {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime}}</small>{% endif %}
-        <br><i class="far fa-clock"></i><time itemprop="datePublished">{{ 'EDITORIAL.ITEM.POSTED_ON'|t }} {{ datestamp }}</time>
+        {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime }}</small>{% endif %}
+        <br><i class="far fa-clock"></i><time itemprop="datePublished"> {{ 'EDITORIAL.ITEM.POSTED_ON'|t }} {{ datestamp }}</time>
         {% if page.taxonomy.author %}<br><small itemprop="author" itemscope itemtype="https://schema.org/Person"><i class="fas fa-user"></i>
         {% for author in page.taxonomy.author %}
-        <a class="authors" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_OF'|t }} {{ (author|capitalize) }}"
-        href="{{ new_base_url }}/author{{ config.system.param_sep }}{{ author }}"><span class="name" itemprop="name" rel="author">{{ author|capitalize }}</span>
-        </a>
-        {% if not loop.last %}, {% endif %}
+            <a class="authors" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_OF'|t }} {{ (author|titleize)|e }}"
+            href="{{ new_base_url }}/author{{ config.system.param_sep }}{{ author|e('url') }}"><span class="name" itemprop="name" rel="author">{{ author|titleize|e }}</span></a>
+            {% if not loop.last %}, {% endif %}
         {% endfor %}
         </small>{% endif %}
         </p>
@@ -43,8 +42,8 @@
                 <span>
                 <i class="fas fa-tags"></i>
                     {% for tag in page.taxonomy.tag %}
-                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_IN'|t }} {{ (tag|capitalize) }}" 
-                        href="{{ new_base_url  }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="url"><span itemprop="keywords">{{ tag|capitalize }}</span></a>
+                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_IN'|t }} {{ (tag|capitalize)|e }}" 
+                        href="{{ new_base_url }}/tag{{ config.system.param_sep }}{{ tag|e('url') }}"><span itemprop="keywords">{{ tag|capitalize|e }}</span></a>
                         {% if not loop.last %}, {% endif %}
                     {% endfor %}
                 </span>
@@ -54,8 +53,8 @@
                 <span>
                     <i class="fas fa-link fa-md"></i>
                     {% for category in page.taxonomy.category %}
-                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_IN'|t }} {{ (category|capitalize) }}"
-                        href="{{ new_base_url }}/category{{ config.system.param_sep }}{{ category }}" itemprop="url"><span itemprop="keywords">{{ category|capitalize }}</span></a>
+                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_IN'|t }} {{ (category|capitalize)|e }}"
+                        href="{{ new_base_url }}/category{{ config.system.param_sep }}{{ category }}"><span itemprop="keywords">{{ category|capitalize|e }}</span></a>
                         {% if not loop.last %}, {% endif %}
                     {% endfor %}
                 </span>
@@ -65,8 +64,8 @@
                 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <i class="fas fa-user fa-md"></i>
                     {% for author in page.taxonomy.author %}
-                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_OF'|t }} {{ (author|capitalize) }}" 
-                        href="{{ new_base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url"><span class="name" itemprop="name" rel="author">{{ author|capitalize }}</span></a>
+                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_OF'|t }} {{ (author|titleize)|e }}" 
+                        href="{{ new_base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url"><span class="name" itemprop="name" rel="author">{{ author|titleize }}</span></a>
                         {% if not loop.last %}, {% endif %}
                     {% endfor %}
                 </span>
@@ -77,14 +76,16 @@
         <div class="col-6 col-12-small align-right">
             <ul class="icons">
                 {% set share = [
-                { 'name': 'facebook', 'icon': 'fa-facebook', 'enabled': header_var('shareicons.facebook')|defined(true), 'url': 'https://www.facebook.com/sharer/sharer.php?', 'params': {'u': page.url(true)} },
-                { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?', 'params': {'text': title, 'url': page.url(true)} },
-                { 'name': 'whatsapp', 'icon': 'fa-whatsapp', 'enabled': header_var('shareicons.whatsapp')|defined(true), 'url': 'https://wa.me/?', 'params': {'text': title ~ '. ' ~ page.url(true)}, 'action': 'share/whatsapp/share' },
-                { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?', 'params': {'url': page.url(true), 'text': title} },
+                    { 'name': 'facebook', 'icon': 'fa-facebook', 'enabled': header_var('shareicons.facebook')|defined(true), 'url': 'https://www.facebook.com/sharer/sharer.php?', 'params': {'u': page.url(true)} },
+                    { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?', 'params': {'text': title, 'url': page.url(true)} },
+                    { 'name': 'whatsapp', 'icon': 'fa-whatsapp', 'enabled': header_var('shareicons.whatsapp')|defined(true), 'url': 'https://wa.me/?', 'params': {'text': title ~ '. ' ~ page.url(true)}, 'action': 'share/whatsapp/share' },
+                    { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?', 'params': {'url': page.url(true), 'text': title} },
                 ] %}
                 {% for item in share %}
                     {% if item.enabled|defined(true) %}
-                        <li><a class="icon brands {{ item.icon }}" target="_blank" href="{{- item.url -}}{{- item.params|url_encode-}}" {% if item.action is defined %}data-action="{{ item.action }}"{% endif %} aria-label="{{ 'EDITORIAL.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}" title="{{ 'EDITORIAL.MISC.SHARE_ON'|t }} {{item.name|capitalize }}"></a></li>
+                    <li><a class="icon brands {{ item.icon }}" target="_blank" href="{{- item.url -}}{{- item.params|url_encode-}}" {% if item.action is defined %}data-action="{{ item.action }}"{% endif %} 
+                        aria-label="{{ 'EDITORIAL.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}" 
+                        title="{{ 'EDITORIAL.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}"></a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

@@ -3,7 +3,7 @@
     <header class="major">
         <h2>{{ 'EDITORIAL.SIDEBAR.CONTACT_INFO'|t }}</h2>
     </header>
-    <p>{{ theme_config.contact.text|raw }}</p>
+        {{ theme_config.contact.text|markdown }}
     <ul class="contact">
         
         {% if theme_config.contact.email %}
@@ -11,12 +11,12 @@
         {% endif %}
 
         {% if theme_config.contact.phone %}
-        <li class="icon solid fa-phone">{{ theme_config.contact.phone|raw }}</li>
+        <li class="icon solid fa-phone">{{ theme_config.contact.phone|e }}</li>
         {% endif %}
         
         {% if theme_config.contact.street %}
-        <li class="icon solid fa-home">{{ theme_config.contact.street|raw }}<br />
-        {{ theme_config.contact.city|raw }}, {{ theme_config.contact.state|raw }} {{ theme_config.contact.zip|raw }}
+        <li class="icon solid fa-home">{{ theme_config.contact.street|markdown(false) }}<br />
+        {{ theme_config.contact.city|e }}, {{ theme_config.contact.state|e }} {{ theme_config.contact.zip|e }}
         </li>
         {% endif %}
     </ul>

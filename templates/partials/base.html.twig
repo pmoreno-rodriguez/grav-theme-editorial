@@ -1,19 +1,16 @@
-{% set theme_name = config.system.pages.theme %}
-{% set blueprint_path = "user://themes/#{theme_name}/blueprints.yaml" %}
-{% set blueprint_content = read_file(blueprint_path) %}
-{% if blueprint_content %}
-{% set blueprint_data = blueprint_content|yaml_decode %}
+{% set version = (grav.theme.getBlueprint()).get('version') %}
 <!--
-    Editorial by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Editorial by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
-    Ported to Grav by Pedro Moreno <https://github.com/pmoreno-rodriguez>
-    https://github.com/pmoreno-rodriguez/grav-theme-editorial
+Ported to Grav by Pedro Moreno <https://github.com/pmoreno-rodriguez>
+https://github.com/pmoreno-rodriguez/grav-theme-editorial
 
-    Grav theme version: {{ blueprint_data.version }}
+{% if version %}
+Grav theme version: v{{ version }}
+{% endif %} 
 -->
-{% endif %}
 
 {# SET THEME OPTIONS #}
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
@@ -29,9 +26,20 @@
 {# SET DEFAULT GRAV LANGUAGE #}
 {% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
 
-{# SET PAGE OPTIONS #}
+{# Canonical URL #}
+{% set canonical_url = page.url(true, true) %}
+
+{# Tile settings #}
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set title = page.title|raw  %}
+{% set title = page.title  %}
+{% set meta_title = page_title is defined ? page_title ~ ' | ' ~ site_title : site_title %}
+
+{# Description #}
+{% set meta_description = (not page.home() and page.summary|striptags|trim) 
+    ? page.summary|striptags|trim 
+    : (site.metadata.description ?: site_title) %}
+
+{# SET PAGE OPTIONS #}
 {% set show_image = header_var('show_pageimage')|defined(true) %}
 {% set image = page.media[header.featured_image] ?: page.media.images|first %}
 {% set img_width = header_var('image_width')|default(1000) %}
@@ -57,7 +65,7 @@
 {% endblock %}
 </head>
 <!-- BODY SECTION -->
-<body class="is-preload {{ page.header.body_classes }} {{ right_sidebar }}">
+<body class="is-preload {{ page.header.body_classes|e('html_attr') }} {{ right_sidebar }}">
     <!-- Wrapper -->
     <div id="wrapper">
     <!-- Main -->

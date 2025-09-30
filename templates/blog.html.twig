@@ -4,7 +4,7 @@
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_pagination = header_var('content.pagination', [page, blog])|defined(true) %}
 {% set show_breadcrumbs = header_var('content.breadcrumbs', [page, blog])|defined(false) %}
-{% set readmore_txt = blog.header.readmore_text|raw|default('Read more') %}
+{% set readmore_txt = blog.header.readmore_text|e|default('Read more') %}
 
 {# Set page title by taxonomy #}
 {% if uri.param('category') %}
@@ -16,7 +16,7 @@
 {% elseif uri.param('archives_month') %}
     {% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({'_': ' '}) %}
 {% else %}
-    {% set listing_title = page.header.subtitle|raw %}
+    {% set listing_title = page.header.subtitle %}
 {% endif %}
 
 {% block content %}
@@ -31,8 +31,8 @@
 		{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title,title,'')|raw }}
 	    </span>
 	{% endif %}
-        {% if show_title %}<h1>{{ title }}</h1>{% endif %}
-        {% if listing_title %}<p>{{ listing_title|raw }}</p>{% endif %}
+        {% if show_title %}<h1>{{ title|e }}</h1>{% endif %}
+        {% if listing_title %}{{ listing_title|markdown }}{% endif %}
     </header>
     <div>
     {{ page.content|raw }}

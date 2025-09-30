@@ -9,7 +9,7 @@
         {% for tax,value in taxlist[taxonomy] %}
             {% set label_class = uri.param(taxonomy) == tax ? 'warning' : 'primary' %}
             <li>
-                <a class="button medium {{ label_class }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+                <a class="button medium {{ label_class }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax|e('url') }}">{{ tax|e }}</a>
             </li>
         {% endfor %}
     </ul>

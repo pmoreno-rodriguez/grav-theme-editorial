@@ -66,8 +66,8 @@
                 {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title,title,'image')|raw }}
             </span>
         {% endif %}
-        {% if show_title %}<h1>{{ title }}</h1>{% endif %}
-        {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+        {% if show_title %}<h1>{{ title|e }}</h1>{% endif %}
+        {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
     </header>
     <div style="margin-bottom: 4em">
     {{ page.content|raw}}
@@ -87,13 +87,13 @@
                     {% set descPosition = item.descPosition|default('bottom') %}
                     
                     <div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
-                        <h3 class="title">{{item_title|raw}}</h3>
+                        <h3 class="title">{{item_title|e}}</h3>
                         <div class="gallery_content">
                             <a href="{{item_image.url}}" class="{{ selector }}" 
                                 data-height="{{page.header.height}}" 
                                 data-width="{{page.header.width}}" 
                                 data-title="{{item_title}}" 
-                                data-description="{{item_desc|e('html_attr')}}" 
+                                data-description="{{item_desc|striptags|trim }}" 
                                 data-desc-position="{{descPosition}}" 
                                 data-zoomable="{{ zoomable }}"
                                 data-draggable="{{ draggable }}"
@@ -101,8 +101,8 @@
                             <div class="gallery_content-overlay"></div>
                                 {{ img_thumbnail|raw }}
                             <div class="gallery_content-details {{ page.header.overlay_hover_effect }}">
-                                <h3 class="gallery_content-title">{{item_title|raw}}</h3>
-                                <p class="gallery_content-text">{{item_desc|truncate(75)|raw}}</p>
+                                <h3 class="gallery_content-title">{{item_title|e}}</h3>
+                                <p class="gallery_content-text">{{item_desc|truncate(75)|striptags|trim}}</p>
                             </div>
                             </a>
                         </div>
@@ -131,25 +131,25 @@
                         {% set videoItemThumbnail = '<div class="gallery_content-image no-thumbnail">' ~ videoItem.title|e ~ '</div>' %}
                     {% endif %}
                     <div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
-                        <h3 class="title">{{ videoItem.title|raw }}</h3>
+                        <h3 class="title">{{ videoItem.title|e }}</h3>
                         <div class="gallery_content">
                             <a 
                             href="{{ videoURL }}" 
                             class="{{ selector }}" 
                             data-type="video" 
-                            data-title="{{ videoItem.title }}"
-                            data-description="{{ videoItem.description|e('html_attr') }}"
+                            data-title="{{ videoItem.title|e }}"
+                            data-description="{{ videoItem.description|striptags|trim }}"
                             >
                             
                             {% if videoItemThumbnail %}
                             <div class="gallery_content-overlay"></div>
                             {{ videoItemThumbnail|raw }}
                             <div class="gallery_content-details {{ page.header.overlay_hover_effect }}">
-                                <h3 class="gallery_content-title">{{ videoItem.title|raw }}</h3>
-                                <p class="gallery_content-text">{{ videoItem.description|truncate(75)|raw }}</p>
+                                <h3 class="gallery_content-title">{{ videoItem.title|e }}</h3>
+                                <p class="gallery_content-text">{{ videoItem.description|truncate(75)|striptags|trim }}</p>
                             </div>
                             {% else %}
-                                {{ videoItem.title|raw }}
+                                {{ videoItem.title|e }}
                             {% endif %}
                             </a>
                         </div>
@@ -180,7 +180,7 @@
         {% if page.header.draggableY is defined %}dragToleranceY: {{ page.header.draggableY }},{% endif %}
         {% if page.header.preload is defined %}preload: {{ page.header.preload }},{% endif %}
         {% if page.header.dragAuto is defined %}dragAutoSnap: {{ page.header.dragAuto }},{% endif %}
-        {% if page.header.more_text is defined %}moreText: '{{ page.header.more_text }}',{% endif %}
+        {% if page.header.more_text is defined %}moreText: '{{ page.header.more_text|e('js') }}',{% endif %}
         {% if page.header.startAt is defined %}startAt: {{ page.header.startAt }},{% endif %}
         {% if page.header.more_length is defined %}moreLength: {{ page.header.more_length }},{% endif %}
         {% if page.header.autoplay_videos is defined %}autoplayVideos: {{ page.header.autoplay_videos }},{% endif %}

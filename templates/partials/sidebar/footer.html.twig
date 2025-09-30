@@ -3,8 +3,8 @@
 {% if copyright is not empty %}
 <!-- Footer -->
 <footer id="footer">
-    <div class="copyright">{{ year }} &copy; {{ site.title|upper }}. <br>
-        {{ copyright|raw }}
+    <div class="copyright">{{ year }} &copy; {{ site.title|upper|e }}. <br>
+        {{ copyright|markdown(false) }}
     </div>
 </footer>
 {% endif %}

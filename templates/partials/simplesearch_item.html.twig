@@ -1,4 +1,4 @@
-{% set title = page.title|raw %}
+{% set title = page.title %}
 {% set show_image = header_var('show_pageimage')|defined(true) %}
 {% set image = page.media[header.featured_image] ?: page.media.images|first %}
 {% set datestamp = include('partials/page-bits/date.html.twig') %}
@@ -11,15 +11,13 @@
     {% endif %}
     <div class="search-item">
         <div class="search-title">
-            <h3><a href="{{ page.url }}">{{ title }}</a></h3>
+            <h3><a href="{{ page.url }}">{{ title|e }}</a></h3>
         </div>
 
         <div class="search-details">
             <span class="search-date">{{ datestamp }}</span>
         </div>
-
-        {{ page.summary|striptags|truncate(300, true)|raw }}
-
+        {{ page.summary|striptags|truncate(300)|trim }}
         <hr/>
     </div>
 </section>

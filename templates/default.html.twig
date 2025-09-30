@@ -7,8 +7,8 @@
 		{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title,title,'')|raw }}
 	    </span>
 	{% endif %}
-	{% if show_title %}<h1>{{ title }}</h1>{% endif %}
-    {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+	{% if show_title %}<h1>{{ title|e }}</h1>{% endif %}
+    {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
 	</header>
 	<div>
 		{% if header.page_index and page.children.visible|length > 0 %}
@@ -17,10 +17,10 @@
 				<dl>
 					{% for child in page.children.visible if child.routable != false %}						
 						<dt>
-							<a href="{{ child.url }}">{{ child.title }}</a>
+							<a href="{{ child.url }}">{{ child.title|e }}</a>
 						</dt>
 						{% if child.header.subtitle %}
-                            <dd>{{ child.header.subtitle|raw }}</dd>
+                            <dd>{{ child.header.subtitle|markdown(false) }}</dd>
                         {% endif %}
 					{% endfor %}
 				</dl>

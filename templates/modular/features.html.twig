@@ -1,10 +1,10 @@
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set title = page.title|raw  %}
+{% set title = page.title  %}
 
 <section>
 <header class="major">
-    {% if show_title %}<h2>{{ title }}</h2>{% endif %}
-    {% if page.header.subtitle %}<p>{{ page.header.subtitle|raw }}</p>{% endif %}
+    {% if show_title %}<h2>{{ title|e }}</h2>{% endif %}
+    {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
 </header>
     {{ content|raw }}
 
@@ -12,18 +12,18 @@
     {% for feature in page.header.features %}
         <article>
             
-                {% if feature.icon %}<span class="icon {{feature.icon}}"></span>{% endif %}
+                {% if feature.icon %}<span class="icon {{ feature.icon }}"></span>{% endif %}
                 <div class="content">
                     {% if feature.title %}
                     <h3>
                         {% if feature.url %}
-                            <a href="{{feature.url}}" target="_blank">{{feature.title}}</a>
+                            <a href="{{ feature.url|e }}" target="_blank">{{ feature.title|e }}</a>
                         {% else %}
-                            {{feature.title}}
+                            {{ feature.title|e }}
                         {% endif %}
                     </h3>
                     {% endif %}
-                    {% if feature.text %}<p>{{feature.text}}</p>{% endif %}
+                    {% if feature.text %}<p>{{ feature.text|markdown }}</p>{% endif %}
                 </div>
             
         </article>

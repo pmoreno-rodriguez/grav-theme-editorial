@@ -26,8 +26,10 @@ form:
                   type: text
                   label: EDITORIAL.ADMIN.MODULAR.FEATURES.TITLE
                 .text:
-                  type: text
+                  type: textarea
+                  rows: 3
                   label: EDITORIAL.ADMIN.MODULAR.FEATURES.TEXT
+                  help: EDITORIAL.ADMIN.MODULAR.FEATURES.TEXT_HELP
                 .url:
                   type: text
                   label: EDITORIAL.ADMIN.MODULAR.FEATURES.BUTTON_URL

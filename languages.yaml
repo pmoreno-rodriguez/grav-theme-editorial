@@ -120,6 +120,7 @@ en:
           ICON_DESCRIPTION: Select the code of Fontawesome Icons free version (https://fontawesome.com/icons?m=free)
           TITLE: Title
           TEXT: Text
+          TEXT_HELP: Short description for each feature. Support markdown.
           BUTTON_URL: Button URL
           BUTTON_URL_TARGET: Open URL in a new window
         RECENT_POSTS:
@@ -479,6 +480,7 @@ es:
           ICON_DESCRIPTION: Seleccione el código de la versión gratuita de Fontawesome Icons (https://fontawesome.com/icons?m=free)
           TITLE: Título
           TEXT: Texto
+          TEXT_HELP: Breve descripción de cada característica. Soporta markdown.
           BUTTON_URL: URL del botón
           BUTTON_URL_TARGET: Abrir URL en una nueva ventana
         RECENT_POSTS:
@@ -731,7 +733,7 @@ fr:
         RIGHT_SIDEBAR_HELP: Si activée, la barre latérale apparaîtra à droite
         GOOGLE_FONTS:
           LOCAL: Utiliser les polices Google hébergées localement
-        HEADER_SECTION: "Section d'en-tête"
+        HEADER_SECTION: "Section d’en-tête"
         FAVICON: Choisir son propre favicon
         FAVICON_DESCRIPTION: Sera utilisé à la place du favicon par défaut `theme://images/favicon.png`
         SLOGAN: Slogan du thème
@@ -760,12 +762,12 @@ fr:
             ZIP: Code postal
         SIDEBAR: 
             SECTION: Configuration de la barre latérale
-            LANGSWITCHER: Activer l'option de menu Langswitcher
+            LANGSWITCHER: Activer l’option de menu Langswitcher
             LANGSWITCHER_HELP: Lorsque le plugin Langswitcher est activé et que votre site est configuré en plusieurs langues, vous pouvez activer ou désactiver la fonctionnalité Langswitcher qui apparaît dans le menu latérale.
-            SEARCH: Active l'option de menu Recherche
+            SEARCH: Active l’option de menu Recherche
             SEARCH_HELP: Si le plugin SimpleSearch est activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu latérale.
-            LOGIN: Activer l'option de menu Login
-            LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de login dans le menu latérale pour afficher le statut de connexion.
+            LOGIN: Activer l’option de menu Login
+            LOGIN_HELP: Vous pouvez activer ou désactiver l’icône de login dans le menu latérale pour afficher le statut de connexion.
             SHOW_TAXONOMY: Afficher les balises populaires
             SHOW_TAXONOMY_HELP: 'Le plugin Taxonomylist doit être installé'
             SHOW_ARCHIVES: Afficher les archives
@@ -788,10 +790,10 @@ fr:
             BLOG: Définir le titre du blog sans filtre
         FEATURED:
           LABEL: Activer les articles promus dans la barre latérale
-          NUMBER: "Nombre d'articles promus à afficher"
-          NUMBER_DESCRIPTION: "Nombre d'articles promus qui seront affichés dans la barre latérale"
+          NUMBER: "Nombre d’articles promus à afficher"
+          NUMBER_DESCRIPTION: "Nombre d’articles promus qui seront affichés dans la barre latérale"
           CATEGORY: Etiquette utilisée pour les articles promus
-          CATEGORY_DESCRIPTION: "Définir le nom de l'étiquette utilisée pour les articles promus.<br />`Vous devrez ajouter ce nom dans Options->Taxonomie->Etiquette`"
+          CATEGORY_DESCRIPTION: "Définir le nom de l’étiquette utilisée pour les articles promus.<br />`Vous devrez ajouter ce nom dans Options->Taxonomie->Etiquette`"
         SOCIAL:
           TITLE: Réseaux sociaux
           TEXT: Inclure les adresses URL complètes de vos différents réseaux sociaux. Une icône/un lien apparaîtra en haut de la page pour chaque plateforme.
@@ -813,11 +815,11 @@ fr:
           LABEL: 'Éléments du menu'
           ITEM:
             TEXT: 'Texte'
-            TEXT_DESCRIPTION: "Libellé de l'élément de menu"
+            TEXT_DESCRIPTION: "Libellé de l’élément de menu"
             ICON: 'Icône'
-            ICON_DESCRIPTION: "Icône Font Awesome pour l'élément de menu"
+            ICON_DESCRIPTION: "Icône Font Awesome pour l’élément de menu"
             URL: 'URL'
-            URL_DESCRIPTION: "URL pour l'élément de menu"
+            URL_DESCRIPTION: "URL pour l’élément de menu"
             TARGET: 
               LABEL: 'Cible'
               BLANK: 'Ouvrir dans une nouvelle fenêtre'
@@ -825,7 +827,7 @@ fr:
               SELF: 'Ouvrir dans le même cadre que celui sur lequel on a cliqué'
               TOP: 'Ouvrir dans le corps entier de la fenêtre'
       MODULAR:
-        SHOW_ONPAGE_MENU: Afficher la navigation sur les sites d'une seule page
+        SHOW_ONPAGE_MENU: Afficher la navigation sur les sites d’une seule page
         SHOW_ONPAGE_MENU_HELP: Sur les sites à page unique, ajoute un défilement fluide lorsque vous cliquez dans la navigation et sélectionne automatiquement les éléments de navigation corrects lorsque vous faites défiler les différentes sections.
         BANNER:
           SECTION: Options de bannière
@@ -837,8 +839,9 @@ fr:
           ICON_DESCRIPTION: Sélectionnez le code de la version gratuite de Fontawesome Icons (https://fontawesome.com/icons?m=free)
           TITLE: Titre
           TEXT: Texte
+          TEXT_HELP: Brève description de chaque fonctionnalité. Prend en charge le markdown.
           BUTTON_URL: URL du bouton
-          BUTTON_URL_TARGET: "Ouvrir l'URL dans une nouvelle fenêtre"
+          BUTTON_URL_TARGET: "Ouvrir l’URL dans une nouvelle fenêtre"
         RECENT_POSTS:
           TAB: Configuration des messages récents
           LAYOUT:
@@ -879,7 +882,7 @@ fr:
         TITLE: Définition du contenu
         ITEMS:
           LABEL: Articles
-          LIMIT: "Nombre maximum d'articles"
+          LIMIT: "Nombre maximum d’articles"
           ORDER_BY: 
             LABEL: Trier par
             DATE: Date
@@ -889,7 +892,7 @@ fr:
           DIR: Ordre
           DIR_ASC: Ascendant
           DIR_DESC: Descendant
-        SHOW_BREADCRUMBS: "Afficher le fil d'Ariane"
+        SHOW_BREADCRUMBS: "Afficher le fil d’Ariane"
         PAGINATION:
           LABEL: Pagination
         URL_TAXONOMY_FILTERS: URL des filtres de taxonomie
@@ -899,7 +902,7 @@ fr:
         TAB: Article de blog
         OPTIONS: Options
         SUMMARY: 
-          TITLE: "Résumé de l'article"
+          TITLE: "Résumé de l’article"
           ENABLED: Activer le résumé
           FORMAT: Format du résumé
           FORMAT_SHORT: Utilise la première occurrence du délimiteur ou de la taille
@@ -908,7 +911,7 @@ fr:
           DELIMITER: Délimiteur du résumé
       GALLERY:
         TAB: Galerie
-        TITLE: "Galerie d'images"
+        TITLE: "Galerie d’images"
         LAYOUT: 
           LABEL: Disposition
           TWOCOLS: Medium = 2 / 1 colonnes
@@ -938,7 +941,7 @@ fr:
           BEHAVIOR_TITLE: Comportements
           OVERLAY_HOVER_EFFECT:
             LABEL: Effet de superposition au survol
-            HELP: "Définir l'effet de survol lorsque la souris est au-dessus d'une image"
+            HELP: "Définir l’effet de survol lorsque la souris est au-dessus d’une image"
             FADEIN_BOTTOM: Fondu en bas
             FADEIN_TOP: Fondu en haut
             FADEIN_LEFT: Fondu à gauche
@@ -948,7 +951,7 @@ fr:
             FADEIN_BOTTOM_RIGHT: Fondu en bas à droite
             FADEIN_BOTTOM_LEFT: Fondu en bas à gauche
           OPEN_EFFECT:
-            LABEL: "Effet d'ouverture"
+            LABEL: "Effet d’ouverture"
             ZOOM: Zoom
             FADE: Fondu
             NONE: Aucun
@@ -966,23 +969,23 @@ fr:
           MORE_TEXT: Texte `Voir plus`
           MORE_TEXT_HELP: Texte `Voir plus` personnalisé (pour les appareils mobiles)
           MORE_LENGTH: Nombre de caractères `Voir plus`
-          MORE_LENGTH_HELP:  "Nombre de caractères à afficher dans la description avant d'ajouter le lien `Voir plus` (uniquement pour les appareils mobiles). Si ce nombre est égal à 0, la description sera affichée dans son intégralité."
+          MORE_LENGTH_HELP:  "Nombre de caractères à afficher dans la description avant d’ajouter le lien `Voir plus` (uniquement pour les appareils mobiles). Si ce nombre est égal à 0, la description sera affichée dans son intégralité."
           CLOSE_BUTTON: Bouton fermer
           CLOSE_BUTTON_HELP: Afficher ou cacher le bouton fermer
           TOUCH_NAVIGATION: Navigation tactile
           TOUCH_NAVIGATION_HELP: Activer ou désactiver la navigation tactile (swipe)
-          TOUCH_AXIS: "Suivre l'axe"
-          TOUCH_AXIS_HELP: "L'image suit l'axe lorsqu'elle est déplacée sur le mobile."
+          TOUCH_AXIS: "Suivre l’axe"
+          TOUCH_AXIS_HELP: "L’image suit l’axe lorsqu’elle est déplacée sur le mobile."
           KEYBOARD: Navigation au clavier
           KEYBOARD_HELP: Activer ou désactiver la navigation au clavier
-          CLOSE_OUTSIDE: "Fermer en cliqunt à l'extérieur"
-          CLOSE_OUTSIDE_HELP: "Ferme le cadre lorsque l'on clique en dehors de l'image active."
+          CLOSE_OUTSIDE: "Fermer en cliqunt à l’extérieur"
+          CLOSE_OUTSIDE_HELP: "Ferme le cadre lorsque l’on clique en dehors de l’image active."
           MORE_STARTAT: 'Commencer à :'
-          MORE_STARTAT_HELP: "Démarrer la présentation à l'index défini (0 est la première diapositive). S'il n'est pas défini, l'image cliquée est affichée."
+          MORE_STARTAT_HELP: "Démarrer la présentation à l’index défini (0 est la première diapositive). S’il n’est pas défini, l’image cliquée est affichée."
           WIDTH: Largeur
-          WIDTH_HELP: "Largeur par défaut pour les éléments en ligne et les iframes, vous pouvez définir une taille spécifique pour chaque diapositive. Vous pouvez utiliser n'importe quelle unité, par exemple 90% ou 100vw pour la pleine largeur."
+          WIDTH_HELP: "Largeur par défaut pour les éléments en ligne et les iframes, vous pouvez définir une taille spécifique pour chaque diapositive. Vous pouvez utiliser n’importe quelle unité, par exemple 90% ou 100vw pour la pleine largeur."
           HEIGHT: Hauteur
-          HEIGHT_HELP: "Hauteur par défaut pour les éléments en ligne et les iframes, vous pouvez définir une taille spécifique pour chaque diapositive. Vous pouvez utiliser n'importe quelle unité, par exemple 90% ou 100vh pour les éléments en ligne, vous pouvez régler la hauteur sur auto."
+          HEIGHT_HELP: "Hauteur par défaut pour les éléments en ligne et les iframes, vous pouvez définir une taille spécifique pour chaque diapositive. Vous pouvez utiliser n’importe quelle unité, par exemple 90% ou 100vh pour les éléments en ligne, vous pouvez régler la hauteur sur auto."
           LOOP: Boucle
           LOOP_HELP: Boucle les diapositives à la fin
           ZOOMABLE: Zoomable
@@ -990,9 +993,9 @@ fr:
           DRAGGABLE: Déplaçable
           DRAGGABLE_HELP: "Activer ou désactiver le glissement avec la souris pour passer à la diapositive précédente ou suivante (seulement les images et le contenu en ligne), vous pouvez aussi utiliser `data-draggable=false` sur des items individuels."
           DRAGGABLE_X: Tolérance au glissement X
-          DRAGGABLE_X_HELP: "Utilisé avec Déplaçable. Nombre de pixels que l'utilisateur doit faire glisser pour passer à la diapositive précédente ou suivante."
+          DRAGGABLE_X_HELP: "Utilisé avec Déplaçable. Nombre de pixels que l’utilisateur doit faire glisser pour passer à la diapositive précédente ou suivante."
           DRAGGABLE_Y: Tolérance au glissement Y
-          DRAGGABLE_Y_HELP: "Utilisé avec Déplaçable. Nombre de pixels que l'utilisateur doit faire glisser vers le haut ou vers le bas pour fermer la diapositive (mettre 0 pour désactiver le glissement vertical)."
+          DRAGGABLE_Y_HELP: "Utilisé avec Déplaçable. Nombre de pixels que l’utilisateur doit faire glisser vers le haut ou vers le bas pour fermer la diapositive (mettre 0 pour désactiver le glissement vertical)."
           DRAG_AUTO_SNAP: Déplacement automatique
           DRAG_AUTO_SNAP_HELP: "Si activé, la diapositive passera automatiquement à la précédent / suivante ou se fermera si Tolérance au glissement X ou Tolérance au glissement Y est atteint, sinon elle attendra que la souris soit relâchée."
           PRELOAD: Préchargement
@@ -1003,32 +1006,32 @@ fr:
         SHOW_TITLE_HELP: Afficher ou masquer le titre de la page
         HEADER_SUBTITLE: Sous-titre
         PAGE_INDEX: Index des pages
-        PAGE_INDEX_HELP: Si cette option est activée, les pages enfants seront affichées comme s'il s'agissait d'une table des matières.
+        PAGE_INDEX_HELP: Si cette option est activée, les pages enfants seront affichées comme s’il s’agissait d’une table des matières.
         CONTENT_SECTION: Options de contenu
         FEATURED_IMAGE_LABEL: Image promue
-        FEATURED_IMAGE_HELP: "Sélectionner le fichier pour l'image principale de la page"
-        IMAGE_OPTIONS: "Options de l'image"
+        FEATURED_IMAGE_HELP: "Sélectionner le fichier pour l’image principale de la page"
+        IMAGE_OPTIONS: "Options de l’image"
         FEATURED_IMAGE: 
           LABEL: Image promue
           HELP: Sélectionner une image à afficher en haut de la page
           WIDTH: Largeur
           HEIGHT: Hauteur
-        SHOW_PAGEIMAGE: "Afficher l'image"
-        SHOW_PAGEIMAGE_HELP: "Activer l'image principale si elle est définie ou la première image de la page."
+        SHOW_PAGEIMAGE: "Afficher l’image"
+        SHOW_PAGEIMAGE_HELP: "Activer l’image principale si elle est définie ou la première image de la page."
     SIDEBAR:
       MENU_TITLE: Menu
       LANGSWITCHER: Choisir une langue
       CONTACT_INFO: Prendre contact
       FEATURED_POSTS: Articles promus
-      FEATURED_MORE: "Plus d'articles promus"
-      NO_FEATURED: "Pas d'article promu"
+      FEATURED_MORE: "Plus d’articles promus"
+      NO_FEATURED: "Pas d’article promu"
       LOGIN_SECTION: Login
       LOGGUED_AS: 'Connecté en tant que: '
       RELATEDPAGES_SECTION: Pages liées
       ARCHIVES_SECTION: Archives
       RANDOM_ARTICLE:
         LABEL: Article au hasard
-        BUTTON: "J'ai de la chance !"
+        BUTTON: "J’ai de la chance !"
       SYNDICATE:
         LABEL: Syndication
       TAXONOMYLIST:
@@ -1045,8 +1048,8 @@ fr:
         NEXT: Suivant
     ITEM:
       POSTED_ON: Publié le
-      SEE_OTHER_POSTS_OF: "Voir d'autres publications de"
-      SEE_OTHER_POSTS_IN: "Voir d'autres publications dans"
+      SEE_OTHER_POSTS_OF: "Voir d’autres publications de"
+      SEE_OTHER_POSTS_IN: "Voir d’autres publications dans"
     FORM_SUMMARY: Voici le résumé de votre message
     MISC:
       SHARE_ON: Partager sur

@@ -1,3 +1,14 @@
+# v2.4.0
+## 09/30/2025
+
+1. [](#new)
+   * New `WordCount` twig filter for word counting functionality
+2. [](#improved)
+   * Enhanced security across all templates by implementing Twig escape filters to prevent malicious code injection
+   * Changed apostrophes to acute accents in French translations (`languages.yaml`) to avoid escape filter conflicts
+   * Refactored `onTwigSiteVariables()` to dynamically detect active theme
+   * Improved output escaping across multiple templates to enhance theme security
+
 # v2.3.8
 ## 08/04/2025
 

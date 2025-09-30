@@ -25,6 +25,15 @@
 				}
 			}
 
+				a.featured-title {
+				h3 {
+					transition: color 0.3s ease;
+					
+					&:hover {
+						color: functions.palette(accent);
+					}
+				}
+			}
 			&:first-child {
 				border-top: 0;
 				margin-top: 0;

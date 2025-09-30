@@ -163,29 +163,29 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   border-bottom: 0;
 }
 
-h1 {
+h1, .h1 {
   font-size: 2.5em;
   margin: 0 0 0.5em 0;
   line-height: 1.3;
 }
 
-h2 {
+h2, .h2 {
   font-size: 1.75em;
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.25em;
 }
 
-h4 {
+h4, .h4 {
   font-size: 1.1em;
 }
 
-h5 {
+h5, .h5 {
   font-size: 0.9em;
 }
 
-h6 {
+h6, .h6 {
   font-size: 0.7em;
 }
 
@@ -1477,6 +1477,14 @@ dl dd {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.mini-posts article a.featured-title h3 {
+  transition: color 0.3s ease;
+}
+
+.mini-posts article a.featured-title h3:hover {
+  color: #f56a6a;
 }
 
 .mini-posts article:first-child {

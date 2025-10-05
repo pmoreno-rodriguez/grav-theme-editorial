@@ -53,7 +53,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Shortcodes to write your pages easily, taking advantage of the styles offered by the theme.
 * Custom styles for Login forms. 
 * Support for navigation menu on one-page websites.
-* Languages (localisation): en, es, de
+* Languages (localization): en, es, de
 
 ### Featured Pages
 

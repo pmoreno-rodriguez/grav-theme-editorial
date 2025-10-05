@@ -1,4 +1,8 @@
 {% set logo_style = (not logo_enabled or logo is empty) ? 'text-align:left !important;' : '' %}
+{% set logo_enabled = theme_var('custom_logo_enabled')|defined(false) %}
+{% set logo = theme_var('custom_logo_mobile') ?: theme_var('custom_logo') %}
+{% set slogan = theme_config.themeSlogan %}
+{% set social = theme_var('social_enabled')|defined(false) %}
 
 <header id="header">
     {% if logo_enabled and logo %}

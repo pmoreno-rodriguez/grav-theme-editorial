@@ -1,5 +1,7 @@
 {# Original assets from HTML5Up with a few custom styles for several Grav plugins #}
 <!-- PAGE STYLES -->
+{% set google_fonts = theme_var('google_fonts_local') ? '-local.css' : '-remote.css' %}
+
 {% block stylesheets %}
     {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 15}) %}
     {% do assets.addCss('theme://assets/css/misc.css', {'priority': 10}) %}

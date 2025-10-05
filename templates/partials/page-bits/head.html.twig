@@ -4,11 +4,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 {% include 'partials/page-bits/metadata.html.twig' %}
+{% set favicon = theme_var('favicon') %}
 {% if favicon %}
-{% set favicon_file = (favicon|first).name %}
-{% set favicon_type = (favicon|first).type %}
-<link rel="icon" href="{{ url('theme://images/' ~ favicon_file) }}" type="{{ favicon_type }}">
-{% else %}
-<link rel="icon" href="{{ url('theme://images/favicon.png') }}" type="image/png">
+ {% set favicon_data = favicon|first %}
+<link rel="icon" href="{{ url('theme://images/' ~ favicon_data.name) }}" type="{{ favicon_data.type }}">
 {% endif %}
 <link rel="canonical" href="{{ page.url(true, true) }}">

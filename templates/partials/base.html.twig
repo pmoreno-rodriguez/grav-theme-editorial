@@ -15,12 +15,6 @@ Grav theme version: v{{ version }}
 {# SET THEME OPTIONS #}
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
-{% set favicon = theme_var('favicon') %}
-{% set logo_enabled = theme_var('custom_logo_enabled')|defined(false) %}
-{% set logo = theme_var('custom_logo_mobile') ?: theme_var('custom_logo') %}
-{% set social = theme_var('social_enabled')|defined(false) %}
-{% set slogan = theme_config.themeSlogan %}
-{% set google_fonts = theme_var('google_fonts_local') ? '-local.css' : '-remote.css' %}
 {% set right_sidebar = theme_config.right_sidebar == true ? 'sidebar-right' : '' %}
 
 {# SET DEFAULT GRAV LANGUAGE #}
@@ -32,12 +26,6 @@ Grav theme version: v{{ version }}
 {# Tile settings #}
 {% set show_title = header_var('show_title')|defined(true) %}
 {% set title = page.title  %}
-{% set meta_title = page_title is defined ? page_title ~ ' | ' ~ site_title : site_title %}
-
-{# Description #}
-{% set meta_description = (not page.home() and page.summary|striptags|trim) 
-    ? page.summary|striptags|trim 
-    : (site.metadata.description ?: site_title) %}
 
 {# SET PAGE OPTIONS #}
 {% set show_image = header_var('show_pageimage')|defined(true) %}
@@ -95,7 +83,7 @@ Grav theme version: v{{ version }}
       </a>
 
     {% block bottom %}
-    <!-- Scripts -->
+    <!-- PAGE SCRIPTS -->
         {{ assets.js('bottom')|raw }}
     {% endblock %}
 </body>

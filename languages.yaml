@@ -1330,7 +1330,7 @@ de:
             NONE: Kein Effekt
           MORE_TEXT: Mehr-Text
           MORE_TEXT_HELP: Mehr-Text für Beschreibungen auf mobilen Geräten.
-          MORE_LENGTH: "Mehr"-Länge
+          MORE_LENGTH: '"Mehr"-Länge'
           MORE_LENGTH_HELP: Anzahl Zeichen, die in der Beschreibung angezeigt werden, bevor ein "Mehr"-Link erscheint (nur Mobilgeräte). 0 = Zeige die gesamte Beschreibung an.
           CLOSE_BUTTON: Schließen‑Button
           CLOSE_BUTTON_HELP: Zeigt oder versteckt den Schließen‑Button

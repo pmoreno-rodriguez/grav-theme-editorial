@@ -8,11 +8,12 @@
 {# -------------------------
    Title
    ------------------------- #}
+{% set meta_title = page_title is defined ? page_title ~ ' | ' ~ site_title : site_title %}
 {% if meta_title %}
-<title>{{ meta_title }}</title>
-<meta itemprop="name" content="{{ meta_title }}">
-<meta property="og:title" content="{{ meta_title }}">
-<meta name="twitter:title" content="{{ meta_title }}">
+<title>{{ meta_title|e }}</title>
+<meta itemprop="name" content="{{ meta_title|e }}">
+<meta property="og:title" content="{{ meta_title|e }}">
+<meta name="twitter:title" content="{{ meta_title|e }}">
 {% endif %}
 
 {# -------------------------
@@ -27,20 +28,25 @@
 {# -------------------------
    Description
    ------------------------- #}
+{% set meta_description = (not page.home() and page.summary) 
+    ? page.summary 
+    : (site.metadata.description ?: site_title) %}
 {% if meta_description %}
-<meta name="description" content="{{ meta_description }}">
-<meta property="og:description" content="{{ meta_description }}">
-<meta name="twitter:description" content="{{ meta_description }}">
-<meta itemprop="description" content="{{ meta_description }}">
+{% set clean_description = meta_description|striptags|trim %}
+<meta name="description" content="{{ clean_description|e }}">
+<meta property="og:description" content="{{ clean_description|e }}">
+<meta name="twitter:description" content="{{ clean_description|e }}">
+<meta itemprop="description" content="{{ clean_description|e }}">
 {% endif %}
 
 {# -------------------------
    Featured Image
    ------------------------- #}
 {% if image %}
-<meta property="og:image" content="{{ image.url|e }}">
-<meta name="twitter:image" content="{{ image.url|e }}">
-<meta itemprop="image" content="{{ image.url|e }}">
+{% set image_url = url(image.url, true) %}
+<meta property="og:image" content="{{ image_url }}">
+<meta name="twitter:image" content="{{ image_url }}">
+<meta itemprop="image" content="{{ image_url }}">
 {% endif %}
 
 {# -------------------------
@@ -60,28 +66,28 @@
     "@type": "WebPage",
     "@id": canonical_url
   },
-  "headline": page_title,
-  "image": image ? image.url : '',
+  "headline": meta_title,
+  "image": image ? url(image.url, true) : '',
   "datePublished": page.date|date('c'),
   "inLanguage": lang,
   "wordCount": page.content|wordcount,
   "author": {
     "@type": "Person",
-    "name": page.taxonomy.author[0]
+    "name": page.taxonomy.author[0] ?: 'Unknown'
   },
-  "description": meta_description
+  "description": clean_description
 } | json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')) | raw }}
 </script>
 
 {# -------------------------
- Custom metadata only (excludes common duplicates)
- ------------------------- #}
+   Custom metadata
+   ------------------------- #}
 {% for meta in page.metadata %}
-    {% if meta.name and meta.name not in ['description', 'generator', 'viewport', 'author', 'keywords'] %}
+  {% if meta.name and meta.name not in ['description', 'generator', 'viewport', 'author', 'keywords'] %}
 <meta name="{{ meta.name|e }}" content="{{ meta.content|e }}">
-    {% elseif meta.http_equiv and meta.http_equiv != 'X-UA-Compatible' %}
+  {% elseif meta.http_equiv and meta.http_equiv != 'X-UA-Compatible' %}
 <meta http-equiv="{{ meta.http_equiv|e }}" content="{{ meta.content|e }}">
-    {% elseif meta.property and meta.property not in ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'] %}
+  {% elseif meta.property and meta.property not in ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'] %}
 <meta property="{{ meta.property|e }}" content="{{ meta.content|e }}">
-    {% endif %}
+  {% endif %}
 {% endfor %}

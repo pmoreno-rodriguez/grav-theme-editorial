@@ -1055,3 +1055,365 @@ fr:
       SHARE_ON: Partager sur
       IN: sur
       BACK_TO_TOP: Retour en haut
+de:
+  EDITORIAL:
+    ADMIN:
+      THEME:
+        THEME_CONFIG: Theme-Konfiguration
+        DROPDOWN_MENU: Dropdown im Navbar
+        PRODUCTION_MODE: Produktionsmodus
+        PRODUCTION_MODE_HELP: Wenn aktiviert, rendert EDITORIAL mit minifiziertem CSS
+        SIDEBAR_OPEN: Seitenleiste öffnen
+        SIDEBAR_OPEN_HELP: Legt fest, ob die Seitenleiste beim Start geöffnet oder geschlossen ist
+        RIGHT_SIDEBAR: Rechte Seitenleiste
+        RIGHT_SIDEBAR_HELP: Wenn aktiviert, erscheint die Seitenleiste rechts
+        GOOGLE_FONTS:
+          LOCAL: Lokal gehostete Google‑Fonts verwenden
+        HEADER_SECTION: Header-Bereich
+        FAVICON: Eigenes Favicon auswählen
+        FAVICON_DESCRIPTION: Wird anstelle des Standardfavicons `theme://images/favicon.png` verwendet
+        SLOGAN: Theme‑Slogan
+        SLOGAN_HELP: Benutzen Sie dies, um Text zum Seitennamen hinzuzufügen.
+        CUSTOM_LOGO:
+          ENABLED: Logo aktivieren
+          WIDTH: Breite des benutzerdifinierten Logos
+          LOGO: Benutzerdifiniertes‑Logo
+          DESCRIPTION: Wird anstelle des Standard-Logos `theme://images/logo.png` verwendet
+          MOBILE: Mobiles benutzerdefiniertes Logo
+        CUSTOM_CSS: Benutzerdefiniertes CSS laden
+        CUSTOM_CSS_HELP: Lädt benutzerdefinierte CSS‑Dateien von theme://assets/css/custom.css
+        CUSTOM_JS: Benutzerdefiniertes JS laden
+        CUSTOM_JS_HELP: Lädt benutzerdefiniertes JavaScript von theme://assets/js/custom.js
+        CONTACT:
+          ENABLE: Kontaktbereich aktivieren
+          COPYRIGHT_TEXT: Copyright‑Text
+          COPYRIGHT_TEXT_HELP: Zeigt benutzerdefinierten Copyright‑Text in der Fußzeile neben dem Seitennamen.
+          INFORMATION_TITLE: Kontaktinformationen
+          INFORMATION_TEXT: Kontaktinfos werden im Seitenleistenbereich angezeigt.
+          TEXT: Kontaktinformationstext
+          EMAIL: E‑Mail
+          PHONE: Telefon
+          ADDRESS:
+            STREET: Straße und Hausnummer
+            CITY: Stadt
+            STATE: Bundesland
+            ZIP: Postleitzahl
+        SIDEBAR:
+          SECTION: Seitenleisten-Konfiguration
+          LANGSWITCHER: Sprachumschalter im Menü aktivieren
+          LANGSWITCHER_HELP: Mit aktiviertem Langswitcher‑Plugin und mehrsprachiger Einrichtung können Sie die Funktionalität des Sprachumschalters in der Seitenleiste ein- oder ausschalten.
+          SEARCH: Suchfunktion im Menü aktivieren
+          SEARCH_HELP: Mit aktiviertem SimpleSearch‑Plugin kann das Suchfeld in der Seitenleiste ein- oder ausgeschaltet werden.
+          LOGIN: Login‑Symbol im Menü aktivieren
+          LOGIN_HELP: Aktiviert bzw. deaktiviert das Login‑Icon in der Seitenleiste, um den Anmeldestatus anzuzeigen.
+          SHOW_TAXONOMY: Beliebte Tags anzeigen
+          SHOW_TAXONOMY_HELP: 'Taxonomylist‑Plugin muss installiert sein'
+          SHOW_ARCHIVES: Archive anzeigen
+          SHOW_ARCHIVES_HELP: 'Archives‑Plugin muss installiert sein'
+          SHOW_RELATED_PAGES: Verwandte Seiten anzeigen
+          SHOW_RELATED_PAGES_HELP: 'Related pages‑Plugin muss installiert sein'
+          SHOW_FEEDS: Feeds anzeigen
+          SHOW_FEEDS_HELP: 'Feeds‑Plugin muss installiert sein'
+          SHOW_RANDOM: Zufälligen Artikel anzeigen
+          SHOW_RANDOM_HELP: 'Random‑Plugin muss installiert sein'
+        BLOG:
+          DEFAULTS: Blog Standardwerte
+          PAGE_LABEL: Blog-Seite
+          PAGE_HELP: Der Pfad zur Blogseite bei Verwendung der Seitenleiste
+          LISTING_TITLE:
+            TAXONOMY:
+              CATEGORY: Titel für Artikelfilter nach Kategorie setzen
+              TAG: Titel für Filter nach Tag setzen
+              AUTHOR: Titel für Filter nach Autor setzen
+            BLOG: Titel für Blog ohne Filter setzen
+        FEATURED:
+          LABEL: Featured‑Artikel in Seitenleiste aktivieren
+          NUMBER: Anzahl der angezeigten Featured‑Artikel
+          NUMBER_DESCRIPTION: Gibt an, wie viele Featured‑Artikel in der Seitenleiste angezeigt werden sollen.
+          CATEGORY: Featured‑Tag
+          CATEGORY_DESCRIPTION: Geben Sie den Namen des Tags ein.<br />`Sie müssen diesen Namen in Optionen->Taxonomy->Tag hinterlegen`
+        SOCIAL:
+          TITLE: Soziale Medien
+          TEXT: Fügen Sie vollständige URLs zu Ihren Social‑Media‑Präsenzen hinzu. Für jede Plattform erscheint ein Icon/Link im oberen Bereich.
+          ENABLED: Soziale Icons aktivieren
+          ICONS: Soziale Icons
+          NAME: Name des Sozialen Netzwerks
+          URL: URL zum Sozialen‑Netzwerk
+          TARGET:
+            LABEL: Ziel
+            BLANK: In neuem Fenster öffnen
+            PARENT: Im Eltern-Frame öffnen
+            SELF: Im gleichen Frame öffnen
+            TOP: Im gesamten Fenster öffnen
+          ICON: Icon zum Sozialen Medium
+        CUSTOM_MENU:
+          TITLE: 'Benutzerdefinierte Menüeinträge'
+          ENABLE: 'Benutzerdefinierte Menüeinträge anzeigen'
+          ENABLE_HELP: 'Bestimmt, ob definierte benutzerdefinierte Menüpunkte im Menü angezeigt werden.'
+          LABEL: 'Menüeinträge'
+          ITEM:
+            TEXT: 'Text'
+            TEXT_DESCRIPTION: 'Bezeichnung des Menüelements.'
+            ICON: 'Icon'
+            ICON_DESCRIPTION: 'Font Awesome Icon für das Menüelement.'
+            URL: 'URL'
+            URL_DESCRIPTION: 'Linkziel des Menüpunkts.'
+            TARGET:
+              LABEL: 'Ziel'
+              BLANK: In neuem Fenster öffnen
+              PARENT: Im Eltern-Frame öffnen
+              SELF: Im gleichen Frame öffnen
+              TOP: Im gesamten Fenster öffnen
+      MODULAR:
+        SHOW_ONPAGE_MENU: Navigation für One‑Page‑Seiten anzeigen
+        SHOW_ONPAGE_MENU_HELP: Auf einseitigen Websites sorgt dies für ein sanftes Scrollen bei der Klicknavigation und wählt automatisch die richtigen Navigationselemente aus, während Sie durch verschiedene Abschnitte scrollen.
+        BANNER:
+          SECTION: Banner‑Optionen
+          BUTTON_TEXT: Button‑Text
+          BUTTON_URL: Button‑URL
+        FEATURES:
+          TAB: Features
+          ICON: Icon
+          ICON_DESCRIPTION: Wählen Sie den Code des Font Awesome Icons (kostenlos) aus https://fontawesome.com/icons?m=free
+          TITLE: Titel
+          TEXT: Text
+          TEXT_HELP: Kurzbeschreibung zu jedem Feature. Markdown wird unterstützt.
+          BUTTON_URL: Button‑URL
+          BUTTON_URL_TARGET: URL in neuem Fenster öffnen
+        RECENT_POSTS:
+          TAB: Recent Posts Config
+          LAYOUT:
+            LABEL: Layout
+            TWO_COLS: Mittel   = 2 / 1 Spalten
+            THREE_COLS: Standard  = 3 / 2 / 1 Spalten
+          LIMIT: Limit
+          LIMIT_HELP: Maximale Anzahl der anzuzeigenden Artikel.
+          READMORE_TEXT: Text für Weiterlesen‑Button
+          READMORE_TEXT_DESCRIPTION: Setzt benutzerdefinierten Text für den Weiterlesen‑Button
+        TEAM:
+          TAB: Team
+          TEAM_LAYOUT: Layout
+          TEAM_LAYOUT_TWOCOLS: Mittel   = 2 / 1 Spalten
+          TEAM_LAYOUT_THREECOLS: Standart  = 3 / 2 / 1 Spalten
+          IMAGE: Profilbild
+          IMAGE_HELP: Wählen Sie ein Profilbild aus
+          NAME: Name
+          POSITION: Position
+          DETAILS: Profil‑Details
+          DETAILS_HELP: Kurzbeschreibung des Profils
+          SOCIAL_MEDIA:
+            LABEL: Soziale Medien
+            HELP: Diess Template erlaubt maximal 6 Icons pro Mitglied.
+            NAME: Social‑Name
+            NAME_HELP: Hier nur den Namen des Netzwerks angeben (z.B. Facebook, Twitter etc.)
+            URL: Social‑URL
+        DOWNLOADS:
+          TH_NAME: Name
+          TH_SIZE: Größe
+          TH_MODIFIED: Geändert
+          TH_DOWNLOAD: Download
+          TD_BUTTON: Download
+      BLOG:
+        TAB: Blog‑Konfiguration
+        ROUTE: Blog‑Route
+        ROUTE_HELP: Der Pfad zur Hauptblogseite, die die "Show …"-Konfiguration enthält
+        CONFIGURATION: Konfiguration
+        TITLE: Content-Definition
+        ITEMS:
+          LABEL: Elemente
+          LIMIT: Maximale Elementanzahl
+          ORDER_BY:
+            LABEL: Nach
+            DATE: Datum
+            TITLE: Titel
+            FOLDER: Ordner
+            DEFAULT: Standard
+          DIR: Sortierung
+          DIR_ASC: Aufsteigend
+          DIR_DESC: Absteigend
+        SHOW_BREADCRUMBS: Brotkrümelnavigation anzeigen
+        PAGINATION:
+          LABEL: Pagination
+        URL_TAXONOMY_FILTERS: Taxonomy‑Filter URL
+        READMORE_TEXT: Text für Weiterlesen‑Button
+        READMORE_TEXT_DESCRIPTION: Setzt benutzerdefinierten Text für den Weiterlesen‑Button
+      ITEM:
+        TAB: Blog‑Artikel
+        OPTIONS: Optionen
+        SUMMARY:
+          TITLE: Zusammenfassung
+          ENABLED: Zusammenfassung aktivieren
+          FORMAT: Format der Zusammenfassung
+          FORMAT_SHORT: Erste Vorkommen des Trenners oder Größe verwenden
+          FORMAT_LONG: Zusammenfassungs-Trenner wird ignoriert
+          SIZE: Größe
+          DELIMITER: Trenner für die Zusammenfassung
+      GALLERY:
+        TAB: Galerie
+        TITLE: Bildergalerie
+        LAYOUT:
+          LABEL: Layout
+          TWOCOLS: Mittel   = 2 / 1 Spalten
+          THREECOLS: Standard  = 3 / 2 / 1 Spalten
+        THUMB_WIDTH: Thumbnail‑Breite
+        THUMB_WIDTH_HELP: Setzt die Breite der Thumbnails
+        THUMB_HEIGHT: Thumbnail‑Höhe
+        THUMB_HEIGHT_HELP: Setzt die Höhe der Thumbnails
+        IMAGES:
+          LABEL: Bilder
+          IMAGE: Bild
+          IMAGE_TITLE: Titel
+          IMAGE_DESCRIPTION: Beschreibung
+          DESCPOSITION:
+            LABEL: Position der Beschreibung
+            HELP: Globale Position für Slide‑Beschreibungen, Sie können pro Slide eine eigene Position festlegen (unten, oben, links, rechts)
+            BOTTOM: Unten
+            TOP: Oben
+            LEFT: Links
+            RIGHT: Rechts
+          IMAGE_THUMB: Thumbnail
+        VIDEO_TITLE: Video‑Galerie
+        VIDEO_WIDTH: Videobreite
+        VIDEO_WIDTH_HELP: 'Standardbreite für Videos. Videos sind responsiv, daher ist Höhe nicht nötig. Breite kann in px %, vw etc. sein, z.B. 500px, 90% oder 100vw'
+        VIDEO_AUTOFOCUS: Autofocus
+        VIDEO_AUTOFOCUS_HELP: Wenn wahr, wird das Video beim Abspielen fokussiert, um Tastatur‑Shortcuts zu ermöglichen; deaktiviert die Prev/Next‑Tasten – nur verwenden, wenn Sie wissen, was Sie tun.
+        VIDEO_AUTOPLAY: Autoplay
+        VIDEO_AUTOPLAY_HELP: Videos automatisch abspielen bei Öffnung
+        VIDEOS:
+          LABEL: Videos
+          SOURCE: Videoquelle
+          SOURCE_DESCRIPTION: Wählen Sie den Typ der Videoquelle aus
+          SOURCE_OPTIONS:
+            REMOTE: Remote‑Video
+            LOCAL: Lokales Video
+          REMOTE_VIDEO: Remote‑Video‑URL
+          REMOTE_VIDEO_DESCRIPTION: URL von YouTube, Vimeo oder einem anderen externen Dienst
+          REMOTE_THUMBNAIL: Remote‑Thumbnail
+          REMOTE_THUMBNAIL_DESCRIPTION: Thumbnail‑URL für die Galerie
+          LOCAL_VIDEO: Lokales Video
+          LOCAL_THUMBNAIL: Lokales Thumbnail
+          LOCAL_THUMBNAIL_DESCRIPTION: Thumbnail‑Bild für die Galerie
+          TITLE: Videotitel
+          DESCRIPTION: Videobeschreibung
+        OPTIONS:
+          TAB: Galerie‑Optionen
+          EFFECTS_TITLE: Erscheinungsbild & Effekte
+          ACTIONS_TITLE: Aktionen
+          STYLING_TITLE: Styling
+          BEHAVIOR_TITLE: Verhalten
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Overlay-Effekt beim Hovern
+            HELP: Setzt den Hover‑Effekt, wenn die Maus über ein Bild fährt
+            FADEIN_BOTTOM: Fade in unten
+            FADEIN_TOP: Fade in oben
+            FADEIN_LEFT: Fade in links
+            FADEIN_RIGHT: Fade in rechts
+            FADEIN_TOP_RIGHT: Fade in oben rechts
+            FADEIN_TOP_LEFT: Fade in oben links
+            FADEIN_BOTTOM_RIGHT: Fade in unten rechts
+            FADEIN_BOTTOM_LEFT: Fade in unten links
+          OPEN_EFFECT:
+            LABEL: Öffnungseffekt
+            ZOOM: Zoom
+            FADE: Fade
+            NONE: Kein Effekt
+          CLOSE_EFFECT:
+            LABEL: Schließeffekt
+            ZOOM: Zoom
+            FADE: Fade
+            NONE: Kein Effekt
+          SLIDE_EFFECT:
+            LABEL: Slide‑Effekt
+            SLIDE: Slide
+            ZOOM: Zoom
+            FADE: Fade
+            NONE: Kein Effekt
+          MORE_TEXT: Mehr-Text
+          MORE_TEXT_HELP: Mehr-Text für Beschreibungen auf mobilen Geräten.
+          MORE_LENGTH: '"Mehr"-Länge'
+          MORE_LENGTH_HELP: Anzahl Zeichen, die in der Beschreibung angezeigt werden, bevor ein "Mehr"-Link erscheint (nur Mobilgeräte). 0 = Zeige die gesamte Beschreibung an.
+          CLOSE_BUTTON: Schließen‑Button
+          CLOSE_BUTTON_HELP: Zeigt oder versteckt den Schließen‑Button
+          TOUCH_NAVIGATION: Touch‑Navigation
+          TOUCH_NAVIGATION_HELP: Aktiviert/deaktiviert die Touch‑Navigation (Swipe)
+          TOUCH_AXIS: Touch‑Achse folgen
+          TOUCH_AXIS_HELP: Bild folgt der Achse beim Wischen auf Mobilgeräten.
+          KEYBOARD: Tastatur‑Navigation
+          KEYBOARD_HELP: Aktiviert/deaktiviert die Tastatur‑Navigation
+          CLOSE_OUTSIDE: Schließen bei Klick außerhalb
+          CLOSE_OUTSIDE_HELP: Schließt Lightbox, wenn außerhalb des aktiven Slides geklickt wird.
+          MORE_STARTAT: 'Start bei:'
+          MORE_STARTAT_HELP: Startet Lightbox beim definierten Index (0 = erster Slide). Wird nicht gesetzt, öffnet sich das angeklickte Bild.
+          WIDTH: Breite
+          WIDTH_HELP: 'Standardbreite für Inline‑Elemente und iframes. Sie können pro Slide eine eigene Größe angeben. Einheit z.B. 90% oder 100vw.'
+          HEIGHT: Höhe
+          HEIGHT_HELP: 'Standardhöhe für Inline‑Elemente und iframes. Sie können pro Slide eine eigene Größe angeben. Einheit z.B. 90vh. Für Inline‑Elemente kann die Höhe auf auto gesetzt werden.'
+          LOOP: Schleife
+          LOOP_HELP: Slides am Ende wiederholen
+          ZOOMABLE: Zoomfähig
+          ZOOMABLE_HELP: Aktiviert/deaktiviert zoomfähige Bilder; Sie können `data-zoomable="false"` für einzelne Nodes setzen.
+          DRAGGABLE: ziehbar
+          DRAGGABLE_HELP: Aktiviert/deaktiviert Maus-Ziehen zum Wechseln zur vorherigen/nächsten Slide (nur Bilder und Inline‑Content). Sie können `data-draggable="false"` für einzelne Nodes setzen.
+          DRAGGABLE_X: Zieh‑Toleranz X
+          DRAGGABLE_X_HELP: Benötigte Pixel beim Ziehen, um zum Vorherigen/Nächsten zu wechseln.
+          DRAGGABLE_Y: Zieh‑Toleranz Y
+          DRAGGABLE_Y_HELP: Benötigte Pixel beim Ziehen nach oben/unten zum Schließen der Lightbox (0 = vertikales Ziehen deaktivieren).
+          DRAG_AUTO_SNAP: Auto‑Einrasten beim Ziehen
+          DRAG_AUTO_SNAP_HELP: Wenn wahr, ändert die Slide automatisch zur Vorherigen/Nächsten oder schließt, wenn Zieh‑Toleranz erreicht ist; andernfalls wartet bis die Maus losgelassen wird.
+          PRELOAD: Vorladen
+          PRELOAD_HELP: Aktiviert/deaktiviert das Vorladen.
+      DEFAULT:
+        HEADINGS_SECTION: Überschriften‑Optionen
+        SHOW_TITLE: Titel anzeigen
+        SHOW_TITLE_HELP: Zeigt oder versteckt den Seitentitel
+        HEADER_SUBTITLE: Untertitel
+        PAGE_INDEX: Seitenindex
+        PAGE_INDEX_HELP: Wenn aktiviert, werden Unterseiten als Inhaltsverzeichnis angezeigt
+        CONTENT_SECTION: Inhaltseinstellungen
+        FEATURED_IMAGE_LABEL: Featured‑Bild
+        FEATURED_IMAGE_HELP: Wählen Sie eine Datei für das Artikelbild der Seite aus
+        IMAGE_OPTIONS: Bildoptionen
+        FEATURED_IMAGE:
+          LABEL: Featured‑Bild
+          HELP: Wählt ein Artikelbild, das oben auf der Seite angezeigt wird
+          WIDTH: Breite
+          HEIGHT: Höhe
+        SHOW_PAGEIMAGE: Bild anzeigen
+        SHOW_PAGEIMAGE_HELP: Zeigt das Featured‑Bild an, falls definiert, oder das erste Bild der Mediathek.
+    SIDEBAR:
+      MENU_TITLE: Menü
+      LANGSWITCHER: Sprache wählen
+      CONTACT_INFO: Kontakt
+      FEATURED_POSTS: Featured‑Artikel
+      FEATURED_MORE: Weitere Featured‑Artikel
+      NO_FEATURED: Keine Featured‑Artikel
+      LOGIN_SECTION: Anmelden
+      LOGGUED_AS: 'Angemeldet als: '
+      RELATEDPAGES_SECTION: Verwandte Seiten
+      ARCHIVES_SECTION: Archive
+      RANDOM_ARTICLE:
+        LABEL: Zufälliger Artikel
+        BUTTON: Zufall
+      SYNDICATE:
+        LABEL: Syndizieren
+      TAXONOMYLIST:
+        LABEL: Beliebte Tags
+    DEFAULT:
+      PAGE_INDEX_TITLE: Seiteninhalt
+    BLOG:
+      LISTING_TITLE_CATEGORY: 'Artikel in Kategorie: '
+      LISTING_TITLE_TAG: 'Artikel mit Tag: '
+      LISTING_TITLE_AUTHOR: 'Artikel von Autor: '
+      LISTING_TITLE_MONTH: 'Artikel des Monats: '
+      PAGINATION:
+        PREV: Vorherige
+        NEXT: Nächste
+    ITEM:
+      POSTED_ON: Veröffentlicht am
+      SEE_OTHER_POSTS_OF: Weitere Artikel von
+      SEE_OTHER_POSTS_IN: Weitere Artikel in
+    FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
+    MISC:
+      SHARE_ON: Teilen auf
+      IN: in
+      BACK_TO_TOP: Nach oben

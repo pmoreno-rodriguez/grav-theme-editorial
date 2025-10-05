@@ -1,12 +1,12 @@
 # v2.4.1
 ## 10/05/2025
 
-1. [](#improved)
-    * Enhanced security in metadata template by implementing proper Twig escape filters
-    * Variables relocated from the base template to their respective partial templates
-    * Optimized SEO metadata with absolute URLs for social media compatibility
-2. [](#new)
-    * Added German (Deutsch) language translation support (Thanks to [@oozeat](https://github.com/oozeat))
+1. [](#new)
+   * Added German (Deutsch) language translation support (Thanks to [@oozeat](https://github.com/oozeat))
+2. [](#improved)
+   * Enhanced security in metadata template by implementing proper Twig escape filters
+   * Variables relocated from the base template to their respective partial templates
+   * Optimized SEO metadata with absolute URLs for social media compatibility
 
 # v2.4.0
 ## 09/30/2025

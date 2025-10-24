@@ -20,6 +20,30 @@ This will install the Editorial theme into your `/user/themes` directory within 
 
 To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `editorial`. You can find these files on [GitHub](https://github.com/pmoreno-rodriguez/grav-theme-editorial) or via [GetGrav.org](http://getgrav.org/downloads/themes).
 
+## Dependencies
+
+Although the theme does not have specific dependencies to function, **it is highly recommended to install the following plugins for a complete experience**:
+
+- **[Archives](https://github.com/getgrav/grav-plugin-archives)** - For archive functionality
+- **[Breadcrumbs](https://github.com/getgrav/grav-plugin-breadcrumbs)** - For breadcrumb navigation
+- **[Feed](https://github.com/getgrav/grav-plugin-feed)** - For RSS/Atom feeds
+- **[Form](https://github.com/getgrav/grav-plugin-form)** - For contact forms and form handling
+- **[LangSwitcher](https://github.com/getgrav/grav-plugin-langswitcher)** - For multilingual site support
+- **[Pagination](https://github.com/getgrav/grav-plugin-pagination)** - For paginated content
+- **[Reading Time](https://github.com/getgrav/grav-plugin-readingtime)** - For estimated reading time display
+- **[Related Pages](https://github.com/getgrav/grav-plugin-relatedpages)** - For related content suggestions
+- **[Shortcode Core](https://github.com/getgrav/grav-plugin-shortcode-core)** - Core shortcode functionality
+- **[SimpleSearch](https://github.com/getgrav/grav-plugin-simplesearch)** - For search functionality
+- **[Taxonomy List](https://github.com/getgrav/grav-plugin-taxonomylist)** - For taxonomy-based content organization
+
+You can install these plugins via GPM with the following command:
+
+```bash
+bin/gpm install archives breadcrumbs feed form langswitcher pagination readingtime relatedpages shortcode-core simplesearch taxonomylist
+```
+
+Or install them individually through the Grav Admin Panel.
+
 ### Post Installation
 
 Enable the **Editorial** theme, either via the Admin plugin at admin/themes or in the system.yaml file under pages.theme.

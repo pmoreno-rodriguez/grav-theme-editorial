@@ -1,7 +1,7 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 2.4.1
+version: 2.4.2
 description: GravCMS port of the HTML5UP theme Editorial
 icon: text-width
 author:
@@ -9,16 +9,14 @@ author:
   email: pmoreno@pmdesign.dev
 homepage: https://github.com/pmoreno-rodriguez/grav-theme-editorial
 demo: https://editorial.pmdesign.dev/
+docs: https://github.com/pmoreno-rodriguez/grav-theme-editorial/blob/main/README.md
 keywords: grav, theme, etc
 bugs: https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues
 readme: https://github.com/pmoreno-rodriguez/grav-theme-editorial/blob/develop/README.md
 license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.7.0' }
-  - simplesearch
-  - shortcode-core
-  - form
+  - { name: grav, version: '>=1.7.8' }
 
 form:
     validation: loose

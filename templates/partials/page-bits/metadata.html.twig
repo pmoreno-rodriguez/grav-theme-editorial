@@ -50,10 +50,17 @@
 {% endif %}
 
 {# -------------------------
-   Social Media Defaults
-   ------------------------- #}
-<meta property="og:type" content="website">
+ Social Media Defaults
+ ------------------------- #}
+<meta property="og:type" content="{{ page.template == 'item' ? 'article' : 'website' }}">
+<meta property="og:site_name" content="{{ site.title|e }}">
 <meta name="twitter:card" content="summary_large_image">
+{# Twitter site handle #}
+{% if theme_config.social is defined and theme_config.social is not null %}
+ {% for item in theme_config.social if item.name|lower == 'twitter' %}
+<meta name="twitter:site" content="{{ item.url }}">
+ {% endfor %}
+{% endif %}
 
 {# -------------------------
    Structured Data (JSON-LD)
@@ -66,7 +73,7 @@
     "@type": "WebPage",
     "@id": canonical_url
   },
-  "headline": meta_title,
+  "headline": meta_title|e,
   "image": image ? url(image.url, true) : '',
   "datePublished": page.date|date('c'),
   "inLanguage": lang,
@@ -84,10 +91,10 @@
    ------------------------- #}
 {% for meta in page.metadata %}
   {% if meta.name and meta.name not in ['description', 'generator', 'viewport', 'author', 'keywords'] %}
-<meta name="{{ meta.name|e }}" content="{{ meta.content|e }}">
+    <meta name="{{ meta.name|e }}" content="{{ meta.content|e }}">
   {% elseif meta.http_equiv and meta.http_equiv != 'X-UA-Compatible' %}
-<meta http-equiv="{{ meta.http_equiv|e }}" content="{{ meta.content|e }}">
+    <meta http-equiv="{{ meta.http_equiv|e }}" content="{{ meta.content|e }}">
   {% elseif meta.property and meta.property not in ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'] %}
-<meta property="{{ meta.property|e }}" content="{{ meta.content|e }}">
+    <meta property="{{ meta.property|e }}" content="{{ meta.content|e }}">
   {% endif %}
 {% endfor %}

@@ -28,7 +28,6 @@ class Editorial extends Theme
         return [
             'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
             'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
-            'onTwigExtensions' => ['onTwigExtensions', 0]
         ];
     }
 
@@ -57,13 +56,5 @@ class Editorial extends Theme
         if (isset($themeConfig['custom_js']) && $themeConfig['custom_js'] && $custom_js_path) {
             $this->grav['assets']->addJs('theme://assets/js/custom.js', ['group' => 'bottom', 'priority' => 15]);
         }
-    }
-
-    public function onTwigExtensions()
-    {
-        $twig = $this->grav['twig'];
-        // Include and add WordCount extension
-        include_once __DIR__ . '/twig/WordCountTwigExtension.php';
-        $twig->twig->addExtension(new WordCountTwigExtension()); 
     }
 }

@@ -11,7 +11,7 @@
     </header>
 
     <div class="posts">
-         {% for p in blog.children.order('date', 'desc').slice(0, limit) %}
+         {% for p in blog.children.published.order('date', 'desc').slice(0, limit) %}
             {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
             {% set title = p.title %}
             {% set Htag_title = 'h3' %}
@@ -20,3 +20,4 @@
         {% endfor %}
     </div>
 </section>
+

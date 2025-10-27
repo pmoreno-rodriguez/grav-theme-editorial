@@ -14,7 +14,7 @@
 
 <article itemscope itemtype="http://schema.org/Article">
     <header>
-        {% if show_title %}<h1 itemprop="name headline">{{ title|e }}</h1>{% endif %}
+        {% if show_title %}<h1 itemprop="name headline">{{ page_title|e }}</h1>{% endif %}
         {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
         <p class="data-post">
         {% if config.plugins.readingtime.enabled %}<small><i class="fas fa-book-reader"></i> {{ page.content|readingtime }}</small>{% endif %}
@@ -30,7 +30,7 @@
         
     </header>
     {% if show_image and image %}
-        <span class="image main" itemprop="image">{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title,title,'image')|raw }}</span>
+        <span class="image main" itemprop="image">{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(page_title,page_title,'image')|raw }}</span>
     {% endif %}
     <div itemprop="articleBody">
         {{ page.content|raw }}
@@ -77,9 +77,9 @@
             <ul class="icons">
                 {% set share = [
                     { 'name': 'facebook', 'icon': 'fa-facebook', 'enabled': header_var('shareicons.facebook')|defined(true), 'url': 'https://www.facebook.com/sharer/sharer.php?', 'params': {'u': page.url(true)} },
-                    { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?', 'params': {'text': title, 'url': page.url(true)} },
+                    { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?', 'params': {'text': page_title, 'url': page.url(true)} },
                     { 'name': 'whatsapp', 'icon': 'fa-whatsapp', 'enabled': header_var('shareicons.whatsapp')|defined(true), 'url': 'https://wa.me/?', 'params': {'text': title ~ '. ' ~ page.url(true)}, 'action': 'share/whatsapp/share' },
-                    { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?', 'params': {'url': page.url(true), 'text': title} },
+                    { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?', 'params': {'url': page.url(true), 'text': page_title} },
                 ] %}
                 {% for item in share %}
                     {% if item.enabled|defined(true) %}

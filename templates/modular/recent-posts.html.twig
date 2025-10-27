@@ -2,21 +2,21 @@
 {% set limit = page.header.limit|default(3) %}
 {% set readmore_txt = page.header.readmore_text|default('Read more') %}
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set title = page.title  %}
+{% set page_title = page.title  %}
 
 <section>
     <header class="major">
-        {% if show_title %}<h2>{{ title|e }}</h2>{% endif %}
+        {% if show_title %}<h2>{{ page_title|e }}</h2>{% endif %}
         {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
     </header>
 
     <div class="posts">
          {% for p in blog.children.published.order('date', 'desc').slice(0, limit) %}
             {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
-            {% set title = p.title %}
+            {% set page_title = p.title %}
             {% set Htag_title = 'h3' %}
             {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': p } ) %}
-            {% include 'partials/blog-list-item.html.twig' with { 'page': p, image, title, datestamp, show_image: true } %}
+            {% include 'partials/blog-list-item.html.twig' with { 'page': p, image, page_title, datestamp, show_image: true } %}
         {% endfor %}
     </div>
 </section>

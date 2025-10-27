@@ -12,12 +12,12 @@
         <div class="mini-posts">
             {% for p in featured.slice(0,featured_number) %}
             {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
-            {% set title = p.title %}
+            {% set page_title = p.title %}
             {% if page.url != p.url %}
                 <article>
-                <a href="{{ p.url }}" class="featured-title"><h3>{{ title|e }}</h3></a>
+                <a href="{{ p.url }}" class="featured-title"><h3>{{ page_title|e }}</h3></a>
                 {% if image %}
-                   <a class="image" href="{{ p.url }}" title="{{ title|e('html_attr') }}">{{ image.cropZoom(288,174).loading('lazy').decoding('async').attribute('width', '300').html(title,title)|raw }}</a>
+                   <a class="image" href="{{ p.url }}" title="{{ title|e('html_attr') }}">{{ image.cropZoom(288,174).loading('lazy').decoding('async').attribute('width', '300').html(page_title,page_title)|raw }}</a>
                 {% endif %}
                 <p>{{ p.summary|safe_truncate_html(25)|striptags|e }}</p>
             </article>

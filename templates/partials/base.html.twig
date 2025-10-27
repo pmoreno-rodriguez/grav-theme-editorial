@@ -1,4 +1,7 @@
+{% spaceless %}
+{# THEME INFO COMMENT BLOCK #}
 {% set version = (grav.theme.getBlueprint()).get('version') %}
+{% set theme_name = (grav.theme.getBlueprint()).get('name') %}
 <!--
 Editorial by HTML5 UP
 html5up.net | @ajlkn
@@ -7,8 +10,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 Ported to Grav by Pedro Moreno <https://github.com/pmoreno-rodriguez>
 https://github.com/pmoreno-rodriguez/grav-theme-editorial
 
+{%if theme_name %}
+Theme name: {{ theme_name }}
+{% endif %}
 {% if version %}
-Grav theme version: v{{ version }}
+Version: v{{ version }}
 {% endif %} 
 -->
 
@@ -25,7 +31,7 @@ Grav theme version: v{{ version }}
 
 {# Tile settings #}
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set title = page.title  %}
+{% set page_title = page.title  %}
 
 {# SET PAGE OPTIONS #}
 {% set show_image = header_var('show_pageimage')|defined(true) %}
@@ -35,7 +41,7 @@ Grav theme version: v{{ version }}
 
 {# SET DEFAULT BLOG URL #}
 {% set blog = page.find(header_var('blog_url', [page, blog])|defined(theme_var('blog-page'))) %}
-
+{% endspaceless %}
 <!DOCTYPE HTML>
 <html lang="{{ lang }}">
 <!-- HEAD SECTION -->

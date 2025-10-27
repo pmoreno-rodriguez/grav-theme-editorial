@@ -1,0 +1,66 @@
+title: Contact Information
+
+form:
+  fields:
+    contact_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.CONTACT.INFORMATION_TITLE
+      underline: true
+    
+    enable_contact:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.CONTACT.ENABLE
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    
+    contact.text:
+      type: textarea
+      rows: 3
+      size: long
+      markdown: true
+      label: EDITORIAL.ADMIN.THEME.CONTACT.TEXT
+    
+    contact.email:
+      label: EDITORIAL.ADMIN.THEME.CONTACT.EMAIL
+      type: email
+      size: medium
+      placeholder: webmaster@example.com
+    
+    contact.phone:
+      label: EDITORIAL.ADMIN.THEME.CONTACT.PHONE
+      type: text
+      size: medium
+      placeholder: (555) 555-5555
+    
+    address_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.SECTION
+      underline: true
+    
+    contact.street:
+      label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STREET
+      type: text
+      placeholder: 123 Any Street
+    
+    contact.city:
+      label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.CITY
+      type: text
+      size: medium
+      placeholder: AnyTown
+    
+    contact.state:
+      label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STATE
+      type: text
+      size: medium
+      placeholder: CA
+    
+    contact.zip:
+      label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.ZIP
+      type: text
+      size: small
+      placeholder: 12345

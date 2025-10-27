@@ -1,0 +1,99 @@
+title: Sidebar Settings
+
+form:
+  fields:
+    sidebar_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.SIDEBAR.SECTION
+      underline: true
+    
+    menu_langswitcher:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER
+      help: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER_HELP
+      default: 0
+      highlight: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+    
+    menu_search:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH
+      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH_HELP
+      default: 0
+      highlight: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+    
+    menu_login:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN
+      help: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN_HELP
+      default: 0
+      highlight: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+    
+    widgets_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.SIDEBAR.WIDGETS_SECTION
+      underline: true
+    
+    sidebar_showtaxonomy:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY
+      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY_HELP
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+    
+    sidebar_showarchives:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES
+      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES_HELP
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+    
+    sidebar_showrelatedpages:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES
+      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES_HELP
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+    
+    sidebar_showfeeds:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS
+      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS_HELP
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+    
+    sidebar_showrandom:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM
+      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM_HELP
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO

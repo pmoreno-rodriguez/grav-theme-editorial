@@ -1,0 +1,48 @@
+title: Blog Settings
+
+form:
+  fields:
+    blog_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.BLOG.DEFAULTS
+      underline: true
+    
+    blog-page:
+      type: text
+      label: EDITORIAL.ADMIN.THEME.BLOG.PAGE_LABEL
+      help: EDITORIAL.ADMIN.THEME.BLOG.PAGE_HELP
+      size: medium
+      default: '/blog'
+    
+    featured_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.FEATURED.SECTION
+      underline: true
+    
+    featured:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.FEATURED.LABEL
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    
+    featured_tag:
+      type: text
+      markdown: true
+      label: EDITORIAL.ADMIN.THEME.FEATURED.CATEGORY
+      description: EDITORIAL.ADMIN.THEME.FEATURED.CATEGORY_DESCRIPTION
+      size: medium
+      default: 'featured'
+    
+    featured_number:
+      type: range
+      label: EDITORIAL.ADMIN.THEME.FEATURED.NUMBER
+      description: EDITORIAL.ADMIN.THEME.FEATURED.NUMBER_DESCRIPTION
+      default: 3
+      validate:
+        min: 1
+        max: 5

@@ -1,0 +1,51 @@
+title: Custom Menu
+
+form:
+  fields:
+    custommenu_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.TITLE
+      underline: true
+    
+    custommenu_enabled:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ENABLE
+      help: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ENABLE_HELP
+      default: 0
+      highlight: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    
+    custommenu:
+      name: menu
+      type: list
+      label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.LABEL
+      fields:
+        .text:
+          type: text
+          label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TEXT
+          description: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TEXT_DESCRIPTION
+        
+        .icon:
+          type: text
+          label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.ICON
+          description: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.ICON_DESCRIPTION
+        
+        .url:
+          type: text
+          label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.URL
+          description: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.URL_DESCRIPTION
+        
+        .target:
+          type: select
+          label: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.LABEL
+          default: _self
+          size: medium
+          options:
+            _blank: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.BLANK
+            _parent: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.PARENT
+            _self: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.SELF
+            _top: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.ITEM.TARGET.TOP

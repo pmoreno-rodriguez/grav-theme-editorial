@@ -1,0 +1,58 @@
+title: Social Media
+
+form:
+  fields:
+    social_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.SOCIAL.TITLE
+      underline: true
+    
+    social_enabled:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.SOCIAL.ENABLED
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    
+    social:
+      name: social
+      label: EDITORIAL.ADMIN.THEME.SOCIAL.ICONS
+      type: list
+      style: vertical
+      collapsed: false
+      max: 5
+      fields:
+        .name:
+          type: text
+          label: EDITORIAL.ADMIN.THEME.SOCIAL.NAME
+          size: medium
+        .url:
+          type: text
+          label: EDITORIAL.ADMIN.THEME.SOCIAL.URL
+        .target:
+          type: select
+          label: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.LABEL
+          default: _self
+          size: medium
+          options:
+            _blank: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.BLANK
+            _parent: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.PARENT
+            _self: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.SELF
+            _top: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.TOP
+        .icon:
+          type: iconpicker
+          label: EDITORIAL.ADMIN.THEME.SOCIAL.ICON
+          size: medium
+        .icon_type:
+          type: select
+          label: EDITORIAL.ADMIN.THEME.SOCIAL.ICON_TYPE
+          default: brands
+          size: medium
+          options:
+            brands: Brands
+            solid: Solid
+            regular: Regular

@@ -1,0 +1,70 @@
+title: Header Settings
+
+form:
+  fields:
+    header_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.HEADER_SECTION
+      underline: true
+    
+    themeSlogan:
+      type: text
+      label: EDITORIAL.ADMIN.THEME.SLOGAN
+      help: EDITORIAL.ADMIN.THEME.SLOGAN_HELP
+    
+    favicon:
+      type: file
+      label: EDITORIAL.ADMIN.THEME.FAVICON
+      description: EDITORIAL.ADMIN.THEME.FAVICON_DESCRIPTION
+      destination: 'theme@:/images'
+      multiple: false
+      avoid_overwriting: false
+      random_name: false
+      toggleable: true
+      filesize: 3
+      accept: ['image/png', '.ico']
+    
+    logo_section:
+      type: section
+      title: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.SECTION
+      underline: true
+    
+    custom_logo_enabled:
+      type: toggle
+      label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.ENABLED
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    
+    custom_logo_width:
+      type: number
+      size: small
+      default: 100
+      validate:
+        min: 50
+        max: 150
+      label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.WIDTH
+    
+    custom_logo:
+      type: file
+      label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.LOGO
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      markdown: true
+      description: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.DESCRIPTION
+      accept:
+        - image/*
+    
+    custom_logo_mobile:
+      type: file
+      label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.MOBILE
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      accept:
+        - image/*

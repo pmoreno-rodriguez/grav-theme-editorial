@@ -1,0 +1,41 @@
+form:
+  fields:
+    _SocialMedia_Section:
+      type: section
+      underline: true
+      title: EDITORIAL.ADMIN.DEFAULT.SEO.SECTION_TITLE
+    _TwitterOptions:
+      type: columns
+      fields:
+        _TwitterCreator:
+          type: column
+          fields:
+            header.seo.robots:
+              type: select
+              name: robots
+              label: EDITORIAL.ADMIN.THEME.SEO.ROBOTS
+              help: EDITORIAL.ADMIN.DEFAULT.SEO.ROBOTS_HELP
+              default: 'index, follow'
+              size: medium
+              options:
+                'index, follow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_INDEX_FOLLOW
+                'noindex, follow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_NOINDEX_FOLLOW
+                'index, nofollow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_INDEX_NOFOLLOW
+                'noindex, nofollow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_NOINDEX_NOFOLLOW
+              validate:
+                type: string
+            header.seo.twitter_creator:
+              type: text
+              label: EDITORIAL.ADMIN.DEFAULT.SEO.TWITTER_CREATOR
+              help: EDITORIAL.ADMIN.DEFAULT.SEO.TWITTER_CREATOR_HELP
+              size: medium
+              placeholder: '@username'
+              validate:
+                pattern: '^[A-Za-z0-9_]{1,15}$'
+                message: EDITORIAL.ADMIN.DEFAULT.SEO.TWITTER_CREATOR_VALIDATE
+            header.seo.image:
+              type: pagemediaselect
+              label: EDITORIAL.ADMIN.DEFAULT.SEO.IMAGE
+              help: EDITORIAL.ADMIN.DEFAULT.SEO.IMAGE_HELP
+              size: large
+              preview_images: true

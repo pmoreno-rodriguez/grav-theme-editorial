@@ -63,10 +63,10 @@
     <header class="main">
         {% if show_image and image %}
             <span class="image main">
-                {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title,title,'image')|raw }}
+                {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(page_title,titpage_titlele,'image')|raw }}
             </span>
         {% endif %}
-        {% if show_title %}<h1>{{ title|e }}</h1>{% endif %}
+        {% if show_title %}<h1>{{ page_title|e }}</h1>{% endif %}
         {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
     </header>
     <div style="margin-bottom: 4em">
@@ -87,7 +87,6 @@
                     {% set descPosition = item.descPosition|default('bottom') %}
                     
                     <div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
-                        <h3 class="title">{{item_title|e}}</h3>
                         <div class="gallery_content">
                             <a href="{{item_image.url}}" class="{{ selector }}" 
                                 data-height="{{page.header.height}}" 
@@ -101,11 +100,12 @@
                             <div class="gallery_content-overlay"></div>
                                 {{ img_thumbnail|raw }}
                             <div class="gallery_content-details {{ page.header.overlay_hover_effect }}">
-                                <h3 class="gallery_content-title">{{item_title|e}}</h3>
-                                <p class="gallery_content-text">{{item_desc|truncate(75)|striptags|trim}}</p>
+                                {% if item_title %}<h3 class="gallery_content-title">{{item_title|e}}</h3>{% endif %}
+                                {% if item_desc %}<p class="gallery_content-text">{{item_desc|truncate(75)|striptags|trim}}</p>{% endif %}
                             </div>
                             </a>
                         </div>
+                        {% if item_title %}<h3 class="title">{{item_title|e}}</h3>{% endif %}
                     </div>
                 {% endfor %}
             {% endif %}
@@ -131,7 +131,6 @@
                         {% set videoItemThumbnail = '<div class="gallery_content-image no-thumbnail">' ~ videoItem.title|e ~ '</div>' %}
                     {% endif %}
                     <div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
-                        <h3 class="title">{{ videoItem.title|e }}</h3>
                         <div class="gallery_content">
                             <a 
                             href="{{ videoURL }}" 
@@ -145,14 +144,15 @@
                             <div class="gallery_content-overlay"></div>
                             {{ videoItemThumbnail|raw }}
                             <div class="gallery_content-details {{ page.header.overlay_hover_effect }}">
-                                <h3 class="gallery_content-title">{{ videoItem.title|e }}</h3>
-                                <p class="gallery_content-text">{{ videoItem.description|truncate(75)|striptags|trim }}</p>
+                                {% if videoItem.title %}<h3 class="gallery_content-title">{{ videoItem.title|e }}</h3>{% endif %}
+                                {% if videoItem.description %}<p class="gallery_content-text">{{ videoItem.description|truncate(75)|striptags|trim }}</p>{% endif %}
                             </div>
                             {% else %}
-                                {{ videoItem.title|e }}
+                                {% if videoItem.title %}{{ videoItem.title|e }}{% endif %}
                             {% endif %}
                             </a>
                         </div>
+                        {% if videoItem.title %}<h3 class="title">{{ videoItem.title|e }}</h3>{% endif %}
                     </div>
                 {% endfor %}
             {% endif %}

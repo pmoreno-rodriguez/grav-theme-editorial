@@ -1,0 +1,415 @@
+EDITORIAL:
+    ADMIN:
+      THEME:
+        THEME_CONFIG: Theme-Konfiguration
+        DROPDOWN_MENU: Dropdown im Navbar
+        PRODUCTION_MODE: Produktionsmodus
+        PRODUCTION_MODE_HELP: Wenn aktiviert, rendert EDITORIAL mit minifiziertem CSS
+        SIDEBAR_OPEN: Seitenleiste öffnen
+        SIDEBAR_OPEN_HELP: Legt fest, ob die Seitenleiste beim Start geöffnet oder geschlossen ist
+        RIGHT_SIDEBAR: Seitenleiste rechts
+        RIGHT_SIDEBAR_HELP: Wenn aktiviert, erscheint die Seitenleiste auf der rechten Seite
+        GOOGLE_FONTS:
+          LOCAL: Lokal gehostete Google Fonts verwenden
+        HEADER_SECTION: Header-Bereich
+        FAVICON: Eigenes Favicon auswählen
+        FAVICON_DESCRIPTION: Wird anstelle des Standardfavicons `theme://images/favicon.png` verwendet
+        SLOGAN: Theme-Slogan
+        SLOGAN_HELP: Verwenden Sie dies, um einen Textausschnitt zum Seitennamen hinzuzufügen
+        CUSTOM_LOGO:
+          ENABLED: Logo aktiviert
+          SECTION: Benutzerdefinierter Logo-Bereich
+          WIDTH: Benutzerdefinierte Logo-Breite
+          LOGO: Benutzerdefiniertes Logo
+          DESCRIPTION: Wird anstelle des Standard-Logos `theme://images/logo.png` verwendet
+          MOBILE: Benutzerdefiniertes Mobile-Logo
+        CUSTOM_CSS: Benutzerdefiniertes CSS laden
+        CUSTOM_CSS_HELP: Lädt benutzerdefinierte CSS-Stile von theme://assets/css/custom.css
+        CUSTOM_JS: Benutzerdefiniertes JS laden
+        CUSTOM_JS_HELP: Lädt benutzerdefiniertes JS von theme://assets/js/custom.js
+        CONTACT:
+          TITLE: Kontakt
+          ENABLE: Kontaktbereich aktivieren
+          COPYRIGHT_TEXT: Copyright-Text
+          COPYRIGHT_TEXT_HELP: Zeigt benutzerdefinierten Copyright-Text in der Fußzeile neben dem Seitennamen an
+          INFORMATION_TITLE: Kontaktinformationen
+          INFORMATION_TEXT: Kontaktinformationen werden im Seitenleistenbereich angezeigt
+          TEXT: Kontaktinformationstext
+          EMAIL: E-Mail
+          PHONE: Telefon
+          ADDRESS:
+            SECTION: Adressinformationen
+            STREET: Straße
+            CITY: Stadt
+            STATE: Bundesland
+            ZIP: Postleitzahl
+        SIDEBAR:
+          SECTION: Seitenleisten-Konfiguration
+          WIDGETS_SECTION: Widget-Optionen
+          LANGSWITCHER: Langswitcher-Menüoption aktivieren
+          LANGSWITCHER_HELP: Mit aktiviertem Langswitcher-Plugin und mehrsprachiger Einrichtung können Sie die Langswitcher-Funktionalität in der Seitenleiste ein- oder ausschalten
+          SEARCH: Such-Menüoption aktivieren
+          SEARCH_HELP: Mit aktiviertem SimpleSearch-Plugin können Sie den Suchblock in der Seitenleiste ein- oder ausschalten
+          LOGIN: Login-Menüoption aktivieren
+          LOGIN_HELP: Sie können das Login-Icon in der Seitenleiste ein- oder ausschalten, um den Anmeldestatus anzuzeigen
+          SHOW_TAXONOMY: Beliebte Tags anzeigen
+          SHOW_TAXONOMY_HELP: 'Taxonomylist-Plugin muss installiert sein'
+          SHOW_ARCHIVES: Archive anzeigen
+          SHOW_ARCHIVES_HELP: 'Archives-Plugin muss installiert sein'
+          SHOW_RELATED_PAGES: Verwandte Seiten anzeigen
+          SHOW_RELATED_PAGES_HELP: 'Related Pages-Plugin muss installiert sein'
+          SHOW_FEEDS: Feeds anzeigen
+          SHOW_FEEDS_HELP: 'Feeds-Plugin muss installiert sein'
+          SHOW_RANDOM: Zufälligen Beitrag anzeigen
+          SHOW_RANDOM_HELP: 'Random-Plugin muss installiert sein'
+        BLOG:
+          DEFAULTS: Blog-Standardeinstellungen
+          PAGE_LABEL: Blog-Seite
+          PAGE_HELP: Die Route zur Blog-Seite bei Verwendung der Blog-Seitenleiste
+          LISTING_TITLE:
+            TAXONOMY:
+              CATEGORY: Titel zum Filtern von Beiträgen nach Kategorie setzen
+              TAG: Titel zum Filtern von Beiträgen nach Tag setzen
+              AUTHOR: Titel zum Filtern von Beiträgen nach Autor setzen
+            BLOG: Titel für Blog ohne Filter setzen
+        FEATURED:
+          SECTION: Featured-Bereich
+          LABEL: Featured-Beiträge in Seitenleiste aktivieren
+          NUMBER: Anzahl der anzuzeigenden Featured-Beiträge
+          NUMBER_DESCRIPTION: Anzahl der Featured-Beiträge, die in der Seitenleiste angezeigt werden
+          CATEGORY: Featured-Tag
+          CATEGORY_DESCRIPTION: Namen für Featured-Tag festlegen.<br />`Sie müssen diesen Namen in Optionen->Taxonomie->Tag einfügen`
+        SOCIAL:
+          TITLE: Soziale Medien
+          TEXT: Fügen Sie vollständige URLs zu Ihren Social-Media-Präsenzen hinzu. Für jede Plattform erscheint ein Icon/Link im oberen Bereich der Seite
+          ENABLED: Soziale Icons aktivieren
+          ICONS: Soziale Icons
+          NAME: Social-Name
+          URL: URL-Link zu Social Media
+          TARGET:
+            LABEL: Ziel
+            BLANK: 'In neuem Fenster öffnen'
+            PARENT: 'Im übergeordneten Frame öffnen'
+            SELF: 'Im gleichen Frame wie angeklickt öffnen'
+            TOP: 'Im gesamten Fensterkörper öffnen'
+          ICON: Icon zu Social Media
+          ICON_TYPE: Icon-Typ
+        CUSTOM_MENU:
+          TITLE: 'Benutzerdefinierte Menüeinträge'
+          ENABLE: 'Benutzerdefinierte Menüeinträge anzeigen'
+          ENABLE_HELP: 'Bestimmt, ob definierte benutzerdefinierte Menüpunkte in der Menüleiste angezeigt werden'
+          LABEL: 'Menüeinträge'
+          ITEM:
+            TEXT: 'Text'
+            TEXT_DESCRIPTION: 'Textbezeichnung für Menüeintrag'
+            ICON: 'Icon'
+            ICON_DESCRIPTION: 'Font Awesome Icon für Menüeintrag'
+            URL: 'URL'
+            URL_DESCRIPTION: 'URL für Menüeintrag'
+            TARGET:
+              LABEL: 'Ziel'
+              BLANK: 'In neuem Fenster öffnen'
+              PARENT: 'Im übergeordneten Frame öffnen'
+              SELF: 'Im gleichen Frame wie angeklickt öffnen'
+              TOP: 'Im gesamten Fensterkörper öffnen'
+        SEO:
+          TITLE: "SEO-Einstellungen"
+          ENABLED: "SEO aktivieren"
+          ENABLED_HELP: "Alle SEO-Funktionalitäten aktivieren oder deaktivieren. Deaktivieren, wenn ein SEO-Plugin verwendet wird"
+          JSON_LD_ENABLED: "Strukturierte JSON-LD-Daten"
+          JSON_LD_ENABLED_HELP: "JSON-LD strukturierte Daten für Rich Snippets generieren"
+          GENERAL_SECTION: "Allgemeine SEO-Einstellungen"
+          ROBOTS: "Robots-Direktiven"
+          ROBOTS_HELP: "Anweisungen für Suchmaschinen zur Indexierung und Folgung"
+          ROBOTS_INDEX_FOLLOW: "Indexieren, Folgen"
+          ROBOTS_NOINDEX_FOLLOW: "Nicht indexieren, Folgen"
+          ROBOTS_INDEX_NOFOLLOW: "Indexieren, Nicht folgen"
+          ROBOTS_NOINDEX_NOFOLLOW: "Nicht indexieren, Nicht folgen"
+          DESCRIPTION_SECTION: "Beschreibungs-Konfiguration"
+          DESCRIPTION_LENGTH: "Beschreibungs-Länge"
+          DESCRIPTION_LENGTH_HELP: "Maximale Anzahl von Wörtern im Beschreibungs-Meta-Tag"
+          DESCRIPTION_FALLBACK: "Beschreibungs-Fallback"
+          DESCRIPTION_FALLBACK_HELP: "Inhaltszusammenfassung verwenden, wenn keine Beschreibung verfügbar ist"
+          DESCRIPTION_SUMMARIZATION: "Beschreibungs-Zusammenfassung"
+          DESCRIPTION_SUMMARIZATION_HELP: "Methode zur Generierung von Beschreibungen aus Inhalten"
+          SUMMARIZATION_SIMPLE: "Einfache Kürzung"
+          SUMMARIZATION_SMART: "Intelligente Zusammenfassung"
+          TWITTER_SECTION: "Twitter Card-Einstellungen"
+          TWITTER_ENABLED: "Twitter Cards aktivieren"
+          TWITTER_ENABLED_HELP: "Twitter Card Meta-Tags generieren"
+          TWITTER_SITE: "Twitter Seiten-Benutzername"
+          TWITTER_SITE_HELP: "Dein Twitter-Handle für die Website (ohne @)"
+          TWITTER_SITE_VALIDATE: "Gültiger Twitter-Handle: 1-15 Buchstaben, Zahlen oder _"
+          TWITTER_CARD_TYPE: "Twitter Card-Typ"
+          TWITTER_CARD_TYPE_HELP: "Typ der zu generierenden Twitter Card"
+          TWITTER_CARD_SUMMARY_LARGE: "Summary Large Image"
+          TWITTER_CARD_SUMMARY: "Summary"
+          TWITTER_CARD_APP: "App"
+          TWITTER_CARD_PLAYER: "Player"
+          FACEBOOK_SECTION: "Facebook Open Graph-Einstellungen"
+          FACEBOOK_ENABLED: "Open Graph aktivieren"
+          FACEBOOK_ENABLED_HELP: "Facebook Open Graph Meta-Tags generieren"
+          FACEBOOK_APP_ID: "Facebook App-ID"
+          FACEBOOK_APP_ID_HELP: "Ihre Facebook-Anwendungs-ID"
+      MODULAR:
+        SHOW_ONPAGE_MENU: Navigation auf One-Page-Seiten anzeigen
+        SHOW_ONPAGE_MENU_HELP: Auf einseitigen Websites fügt es sanftes Scrollen bei Klicknavigation hinzu und wählt automatisch die richtigen Navigationselemente aus, während Sie durch verschiedene Abschnitte scrollen
+        BANNER:
+          SECTION: Banner-Optionen
+          BUTTON_TEXT: Button-Text
+          BUTTON_URL: Button-URL
+        FEATURES:
+          TAB: Features
+          ICON: Icon
+          ICON_DESCRIPTION: Wählen Sie den Code der Fontawesome Icons Free-Version (https://fontawesome.com/icons?m=free)
+          TITLE: Titel
+          TEXT: Text
+          TEXT_HELP: Kurzbeschreibung für jedes Feature. Unterstützt Markdown
+          BUTTON_URL: Button-URL
+          BUTTON_URL_TARGET: URL in neuem Fenster öffnen
+        RECENT_POSTS:
+          TAB: Recent Posts Konfiguration
+          LAYOUT:
+            LABEL: Layout
+            TWO_COLS: Mittel = 2 / 1 Spalten
+            THREE_COLS: Standard = 3 / 2 / 1 Spalten
+          LIMIT: Limit
+          LIMIT_HELP: Maximale Anzahl der anzuzeigenden Beiträge
+          READMORE_TEXT: Weiterlesen-Button-Text
+          READMORE_TEXT_DESCRIPTION: Benutzerdefinierten Text für Weiterlesen-Button festlegen
+        TEAM:
+          TAB: Team
+          TEAM_LAYOUT: Layout
+          TEAM_LAYOUT_TWOCOLS: Mittel = 2 / 1 Spalten
+          TEAM_LAYOUT_THREECOLS: Standard = 3 / 2 / 1 Spalten
+          IMAGE: Profilbild
+          IMAGE_HELP: Wählen Sie ein Profilbild aus
+          NAME: Name
+          POSITION: Position
+          DETAILS: Profil-Details
+          DETAILS_HELP: Kurze Profilbeschreibung
+          SOCIAL_MEDIA:
+            LABEL: Soziale Medien
+            HELP: Das Template erlaubt maximal 6 Icons für jedes Mitglied
+            NAME: Social-Name
+            NAME_HELP: Sie müssen hier nur den Namen des sozialen Netzwerks schreiben (z.B. Facebook, Twitter, etc)
+            URL: Social-URL
+        DOWNLOADS:
+          TH_NAME: Name
+          TH_SIZE: Größe
+          TH_MODIFIED: Geändert
+          TH_DOWNLOAD: Download
+          TD_BUTTON: Herunterladen
+      BLOG:
+        TAB: Blog-Konfiguration
+        ROUTE: Blog-Route
+        ROUTE_HELP: Die Route zur Hauptblog-Seite, die die "Show ..."-Konfiguration enthält
+        CONFIGURATION: Konfiguration
+        TITLE: Inhaltsdefinition
+        ITEMS:
+          LABEL: Elemente
+          LIMIT: Maximale Elementanzahl
+          ORDER_BY:
+            LABEL: Sortieren nach
+            DATE: Datum
+            TITLE: Titel
+            FOLDER: Ordner
+            DEFAULT: Standard
+          DIR: Sortierung
+          DIR_ASC: Aufsteigend
+          DIR_DESC: Absteigend
+        SHOW_BREADCRUMBS: Breadcrumbs anzeigen
+        PAGINATION:
+          LABEL: Paginierung
+        URL_TAXONOMY_FILTERS: URL-Taxonomie-Filter
+        READMORE_TEXT: Weiterlesen-Button-Text
+        READMORE_TEXT_DESCRIPTION: Benutzerdefinierten Text für Weiterlesen-Button festlegen
+      ITEM:
+        TAB: Blog-Element
+        OPTIONS: Optionen
+        SUMMARY:
+          TITLE: Zusammenfassungselement
+          ENABLED: Zusammenfassung aktiviert
+          FORMAT: Zusammenfassungsformat
+          FORMAT_SHORT: Erstes Vorkommen von Trennzeichen oder Größe verwenden
+          FORMAT_LONG: Zusammenfassungstrennzeichen wird ignoriert
+          SIZE: Größe
+          DELIMITER: Zusammenfassungstrennzeichen
+      GALLERY:
+        TAB: Galerie
+        TITLE: Bildergalerie
+        LAYOUT:
+          LABEL: Layout
+          TWOCOLS: Mittel = 2 / 1 Spalten
+          THREECOLS: Standard = 3 / 2 / 1 Spalten
+        THUMB_WIDTH: Thumbnail-Breite
+        THUMB_WIDTH_HELP: Breite für Thumbnails festlegen
+        THUMB_HEIGHT: Thumbnail-Höhe
+        THUMB_HEIGHT_HELP: Höhe für Thumbnails festlegen
+        IMAGES:
+          LABEL: Bilder
+          IMAGE: Bild
+          IMAGE_TITLE: Titel
+          IMAGE_DESCRIPTION: Beschreibung
+          DESCPOSITION:
+            LABEL: Beschreibungsposition
+            HELP: Globale Position für Slide-Beschreibungen, Sie können eine spezifische Position pro Slide festlegen (unten, oben, links, rechts)
+            BOTTOM: Unten
+            TOP: Oben
+            LEFT: Links
+            RIGHT: Rechts
+          IMAGE_THUMB: Thumbnail
+        VIDEO_TITLE: Video-Galerie
+        VIDEO_WIDTH: Video-Breite
+        VIDEO_WIDTH_HELP: 'Standardbreite für Videos. Videos sind responsiv, daher ist Höhe nicht erforderlich. Die Breite kann in px, % oder sogar vw sein, z.B. 500px, 90% oder 100vw für Full-Width-Videos'
+        VIDEO_AUTOFOCUS: Autofokus
+        VIDEO_AUTOFOCUS_HELP: Wenn true, wird das Video bei der Wiedergabe fokussiert, um Tastaturkürzel für den Player zu ermöglichen, dies deaktiviert die Vor- und Zurück-Pfeile zum Wechseln der Slides, also verwenden Sie es nur, wenn Sie wissen, was Sie tun
+        VIDEO_AUTOPLAY: Autoplay
+        VIDEO_AUTOPLAY_HELP: Videos automatisch beim Öffnen abspielen
+        VIDEOS:
+          LABEL: Videos
+          SOURCE: Videoquelle
+          SOURCE_DESCRIPTION: Wählen Sie den Typ der Videoquelle aus
+          SOURCE_OPTIONS:
+            REMOTE: Remote-Video
+            LOCAL: Lokales Video
+          REMOTE_VIDEO: Remote-Video-URL
+          REMOTE_VIDEO_DESCRIPTION: URL von YouTube, Vimeo oder anderen externen Diensten
+          REMOTE_THUMBNAIL: Remote-Thumbnail
+          REMOTE_THUMBNAIL_DESCRIPTION: Thumbnail-URL-Bild für Galerie
+          LOCAL_VIDEO: Lokales Video
+          LOCAL_THUMBNAIL: Lokales Thumbnail
+          LOCAL_THUMBNAIL_DESCRIPTION: Thumbnail-Bild für Galerie
+          TITLE: Video-Titel
+          DESCRIPTION: Video-Beschreibung
+        OPTIONS:
+          TAB: Galerie-Optionen
+          EFFECTS_TITLE: Erscheinungsbild & Effekte
+          ACTIONS_TITLE: Aktionen
+          STYLING_TITLE: Styling
+          BEHAVIOR_TITLE: Verhalten
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Overlay-Effekt beim Hovern
+            HELP: Setzt den Hover-Effekt, wenn die Maus über ein Bild fährt
+            FADEIN_BOTTOM: Von unten einblenden
+            FADEIN_TOP: Von oben einblenden
+            FADEIN_LEFT: Von links einblenden
+            FADEIN_RIGHT: Von rechts einblenden
+            FADEIN_TOP_RIGHT: Von oben rechts einblenden
+            FADEIN_TOP_LEFT: Von oben links einblenden
+            FADEIN_BOTTOM_RIGHT: Von unten rechts einblenden
+            FADEIN_BOTTOM_LEFT: Von unten links einblenden
+          OPEN_EFFECT:
+            LABEL: Öffnungseffekt
+            ZOOM: Zoom
+            FADE: Einblenden
+            NONE: Keiner
+          CLOSE_EFFECT:
+            LABEL: Schließeffekt
+            ZOOM: Zoom
+            FADE: Ausblenden
+            NONE: Keiner
+          SLIDE_EFFECT:
+            LABEL: Slide-Effekt
+            SLIDE: Slide
+            ZOOM: Zoom
+            FADE: Einblenden
+            NONE: Keiner
+          MORE_TEXT: Mehr Text
+          MORE_TEXT_HELP: Mehr Text für Beschreibungen auf mobilen Geräten
+          MORE_LENGTH: Mehr Länge
+          MORE_LENGTH_HELP: Anzahl der Zeichen, die in der Beschreibung angezeigt werden, bevor der Mehr-Text-Link hinzugefügt wird (nur für Mobilgeräte), bei 0 wird die gesamte Beschreibung angezeigt
+          CLOSE_BUTTON: Schließen-Button
+          CLOSE_BUTTON_HELP: Schließen-Button anzeigen oder ausblenden
+          TOUCH_NAVIGATION: Touch-Navigation
+          TOUCH_NAVIGATION_HELP: Touch-Navigation (Swipe) aktivieren oder deaktivieren
+          TOUCH_AXIS: Touch-Folgeachse
+          TOUCH_AXIS_HELP: Bild folgt Achse beim Ziehen auf Mobilgeräten
+          KEYBOARD: Tastaturnavigation
+          KEYBOARD_HELP: Tastaturnavigation aktivieren oder deaktivieren
+          CLOSE_OUTSIDE: Schließen bei Klick außerhalb
+          CLOSE_OUTSIDE_HELP: Lightbox schließen, wenn außerhalb des aktiven Slides geklickt wird
+          MORE_STARTAT: 'Start bei:'
+          MORE_STARTAT_HELP: Lightbox bei definiertem Index starten (0 ist der erste Slide). Wenn nicht definiert, wird das angeklickte Bild angezeigt
+          WIDTH: Breite
+          WIDTH_HELP: 'Standardbreite für Inline-Elemente und Iframes, Sie können eine spezifische Größe pro Slide definieren. Sie können jede Einheit verwenden, z.B. 90% oder 100vw für Full Width'
+          HEIGHT: Höhe
+          HEIGHT_HELP: 'Standardhöhe für Inline-Elemente und Iframes, Sie können eine spezifische Größe pro Slide definieren. Sie können jede Einheit verwenden, z.B. 90% oder 100vh Für Inline-Elemente können Sie die Höhe auf auto setzen'
+          LOOP: Schleife
+          LOOP_HELP: Slides am Ende wiederholen
+          ZOOMABLE: Zoomfähig
+          ZOOMABLE_HELP: Zoomfähige Bilder aktivieren oder deaktivieren, Sie können auch `data-zoomable="false"` für einzelne Nodes verwenden
+          DRAGGABLE: Ziehbar
+          DRAGGABLE_HELP: Mausziehen zum Wechseln zum vorherigen/nächsten Slide aktivieren oder deaktivieren (nur Bilder und Inline-Inhalt), Sie können auch `data-draggable="false"` für einzelne Nodes verwenden
+          DRAGGABLE_X: Zieh-Toleranz X
+          DRAGGABLE_X_HELP: Verwendet mit ziehbar. Anzahl der Pixel, die der Benutzer ziehen muss, um zum vorherigen oder nächsten Slide zu wechseln
+          DRAGGABLE_Y: Zieh-Toleranz Y
+          DRAGGABLE_Y_HELP: Verwendet mit ziehbar. Anzahl der Pixel, die der Benutzer nach oben oder unten ziehen muss, um die Lightbox zu schließen (0 setzen, um vertikales Ziehen zu deaktivieren)
+          DRAG_AUTO_SNAP: Zieh-Auto-Snap
+          DRAG_AUTO_SNAP_HELP: Wenn true, wechselt der Slide automatisch zu vorherig/nächste oder schließt, wenn dragToleranceX oder dragToleranceY erreicht ist, andernfalls wartet es, bis die Maus losgelassen wird
+          PRELOAD: Vorladen
+          PRELOAD_HELP: Vorladen aktivieren oder deaktivieren
+      DEFAULT:
+        HEADINGS_SECTION: Überschriften-Optionen
+        SHOW_TITLE: Titel anzeigen
+        SHOW_TITLE_HELP: Titel der Seite anzeigen oder ausblenden
+        HEADER_SUBTITLE: Untertitel
+        PAGE_INDEX: Seitenindex
+        PAGE_INDEX_HELP: Wenn aktiviert, werden Unterseiten als Inhaltsverzeichnis angezeigt
+        CONTENT_SECTION: Inhaltsoptionen
+        FEATURED_IMAGE_LABEL: Featured-Bild
+        FEATURED_IMAGE_HELP: Wählen Sie eine Datei für das Featured-Bild oben auf der Seite aus
+        IMAGE_OPTIONS: Bildoptionen
+        FEATURED_IMAGE:
+          LABEL: Featured-Bild
+          HELP: Wählen Sie ein Featured-Bild zur Anzeige oben auf der Seite aus
+          WIDTH: Breite
+          HEIGHT: Höhe
+        SHOW_PAGEIMAGE: Bild anzeigen
+        SHOW_PAGEIMAGE_HELP: Featured-Bild anzeigen, wenn definiert, oder das erste Bild der Medienseite
+        SEO:
+          TAB: "SEO & Soziale Medien"
+          SECTION_TITLE: "Soziale Medien Optionen"
+          ROBOTS_HELP: "Anweisungen für Suchmaschinen zur Indexierung und Folgung. Diese Seiteneinstellung überschreibt die globale Einstellung."
+          TWITTER_CREATOR: "Twitter Autoren-Benutzername"
+          TWITTER_CREATOR_HELP: "Ihr Twitter-Handle (ohne @)"
+          TWITTER_CREATOR_VALIDATE: "Gültiger Twitter-Handle: 1-15 Buchstaben, Zahlen oder _"
+          IMAGE: "Bild für soziale Medien teilen"
+          IMAGE_HELP: "Wählen Sie ein Bild aus, das für soziale Medien geteilt wird. Wenn kein Bild ausgewählt ist, wird das Featured-Bild der Seite verwendet." 
+    SIDEBAR:
+      MENU_TITLE: Menü
+      LANGSWITCHER: Sprache wählen
+      CONTACT_INFO: Kontakt aufnehmen
+      FEATURED_POSTS: Featured-Beiträge
+      FEATURED_MORE: Weitere Featured-Beiträge
+      NO_FEATURED: Keine Featured-Beiträge
+      LOGIN_SECTION: Anmeldung
+      LOGGUED_AS: 'Angemeldet als: '
+      RELATEDPAGES_SECTION: Verwandte Seiten
+      ARCHIVES_SECTION: Archive
+      RANDOM_ARTICLE:
+        LABEL: Zufälliger Artikel
+        BUTTON: Ich habe Glück!
+      SYNDICATE:
+        LABEL: Syndizieren
+      TAXONOMYLIST:
+        LABEL: Beliebte Tags
+    DEFAULT:
+      PAGE_INDEX_TITLE: Seiteninhalt
+    BLOG:
+      LISTING_TITLE_CATEGORY: 'Beiträge in Kategorie: '
+      LISTING_TITLE_TAG: 'Beiträge mit Tag: '
+      LISTING_TITLE_AUTHOR: 'Beiträge geschrieben von Autor: '
+      LISTING_TITLE_MONTH: 'Beitrag des Monats: '
+      PAGINATION:
+        PREV: Vorherige
+        NEXT: Nächste
+    ITEM:
+      POSTED_ON: Veröffentlicht am
+      SEE_OTHER_POSTS_OF: Weitere Beiträge von
+      SEE_OTHER_POSTS_IN: Weitere Beiträge in
+    FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
+    MISC:
+      SHARE_ON: Teilen auf
+      IN: in
+      BACK_TO_TOP: Nach oben

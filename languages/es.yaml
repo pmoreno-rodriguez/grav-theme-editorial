@@ -1,0 +1,415 @@
+EDITORIAL:
+    ADMIN:
+      THEME:
+        THEME_CONFIG: Configuración del Tema
+        DROPDOWN_MENU: Menú Desplegable en la barra de navegación
+        PRODUCTION_MODE: Modo Producción
+        PRODUCTION_MODE_HELP: Cuando está activado, EDITORIAL se renderizará con CSS minificado
+        SIDEBAR_OPEN: Barra lateral abierta
+        SIDEBAR_OPEN_HELP: Establece si la barra lateral está abierta o cerrada al inicio
+        RIGHT_SIDEBAR: Barra lateral a la derecha
+        RIGHT_SIDEBAR_HELP: Si está habilitado, la barra lateral aparecerá a la derecha
+        GOOGLE_FONTS:
+          LOCAL: Usar fuentes de Google alojadas localmente
+        HEADER_SECTION: Sección de Encabezado
+        FAVICON: Elige tu propio favicon
+        FAVICON_DESCRIPTION: Se usará en lugar del favicon predeterminado `theme://images/favicon.png`
+        SLOGAN: Slogan del Tema
+        SLOGAN_HELP: Usa esto para agregar un fragmento de texto al nombre del sitio
+        CUSTOM_LOGO:
+          ENABLED: Logo Habilitado
+          SECTION: Sección de Logo Personalizado
+          WIDTH: Ancho del Logo Personalizado
+          LOGO: Logo Personalizado
+          DESCRIPTION: Se usará en lugar del logo predeterminado `theme://images/logo.png`
+          MOBILE: Logo Personalizado para Móviles
+        CUSTOM_CSS: Cargar CSS Personalizado
+        CUSTOM_CSS_HELP: Cargar estilos CSS personalizados desde theme://assets/css/custom.css
+        CUSTOM_JS: Cargar JS Personalizado
+        CUSTOM_JS_HELP: Cargar JS personalizado desde theme://assets/css/custom.js
+        CONTACT:
+          TITLE: Contacto
+          ENABLE: Habilitar sección de Contacto
+          COPYRIGHT_TEXT: Texto de Copyright
+          COPYRIGHT_TEXT_HELP: Mostrar texto de copyright personalizado en el pie de página, junto al nombre del sitio
+          INFORMATION_TITLE: Información de Contacto
+          INFORMATION_TEXT: La información de contacto se muestra en el área de la barra lateral
+          TEXT: Texto de Información de Contacto
+          EMAIL: Email
+          PHONE: Teléfono
+          ADDRESS:
+            SECTION: Información de Dirección
+            STREET: Dirección Postal
+            CITY: Ciudad
+            STATE: Estado
+            ZIP: Código Postal
+        SIDEBAR: 
+            SECTION: Configuración de la Barra Lateral
+            WIDGETS_SECTION: Opciones de Widgets
+            LANGSWITCHER: Habilitar opción de menú Langswitcher
+            LANGSWITCHER_HELP: Con el plugin Langswitcher habilitado y la configuración multi-idioma en tu sitio, puedes habilitar o deshabilitar la funcionalidad langswitcher que aparece en el menú lateral
+            SEARCH: Habilitar opción de menú Buscar
+            SEARCH_HELP: Con el plugin SimpleSearch habilitado puedes habilitar o deshabilitar el bloque de búsqueda en el menú lateral
+            LOGIN: Habilitar opción de menú Login
+            LOGIN_HELP: Puedes habilitar o deshabilitar el icono de inicio de sesión en el menú lateral, para mostrar el estado de inicio de sesión
+            SHOW_TAXONOMY: Mostrar Etiquetas Populares
+            SHOW_TAXONOMY_HELP: 'El plugin Taxonomylist debe estar instalado'
+            SHOW_ARCHIVES: Mostrar Archivos
+            SHOW_ARCHIVES_HELP: 'El plugin Archives debe estar instalado'
+            SHOW_RELATED_PAGES: Mostrar Páginas Relacionadas
+            SHOW_RELATED_PAGES_HELP: 'El plugin Related pages debe estar instalado'
+            SHOW_FEEDS: Mostrar Feeds
+            SHOW_FEEDS_HELP: 'El plugin Feeds debe estar instalado'
+            SHOW_RANDOM: Mostrar Publicación Aleatoria
+            SHOW_RANDOM_HELP: 'El plugin Random debe estar instalado'
+        BLOG:
+          DEFAULTS: Valores Predeterminados del Blog
+          PAGE_LABEL: Página del Blog
+          PAGE_HELP: La ruta a la página del blog cuando se trabaja con la barra lateral del blog
+          LISTING_TITLE:
+            TAXONOMY:
+              CATEGORY: Establecer Título para filtrar publicaciones por Categoría
+              TAG: Establecer Título para filtrar publicaciones por Etiqueta
+              AUTHOR: Establecer Título para filtrar publicaciones por Autor
+            BLOG: Establecer Título para el blog sin filtro
+        FEATURED: 
+          SECTION: Sección Destacados
+          LABEL: Habilitar publicaciones destacadas en la Barra Lateral
+          NUMBER: Número de publicaciones destacadas a mostrar
+          NUMBER_DESCRIPTION: Número de publicaciones destacadas que se mostrarán en la barra lateral
+          CATEGORY: Etiqueta Destacada
+          CATEGORY_DESCRIPTION: Establecer nombre para la etiqueta destacada.<br />`Debes incluir este nombre en Opciones->Taxonomía->Etiqueta`
+        SOCIAL:
+          TITLE: Redes Sociales
+          TEXT: Incluye las URL completas de tus diversas presencias en redes sociales. Aparecerá un icono/enlace en la parte superior de la página para cada plataforma respectiva
+          ENABLED: Habilitar Iconos Sociales
+          ICONS: Iconos Sociales
+          NAME: Nombre Social
+          URL: Enlace URL a la Red Social
+          TARGET:
+            LABEL: Objetivo
+            BLANK: 'Abrir en una nueva ventana'
+            PARENT: 'Abrir en el marco principal'
+            SELF: 'Abrir en el mismo marco donde se hizo clic'
+            TOP: 'Abrir en todo el cuerpo de la ventana'
+          ICON: Icono de la Red Social
+          ICON_TYPE: Tipo de Icono
+        CUSTOM_MENU:
+          TITLE: 'Elementos de Menú Personalizados'
+          ENABLE: 'Mostrar Elementos de Menú Personalizados'
+          ENABLE_HELP: 'Determina si se muestran las entradas de menú personalizadas definidas en la barra de menú'
+          LABEL: 'Elementos del Menú'
+          ITEM:
+            TEXT: 'Texto'
+            TEXT_DESCRIPTION: 'Etiqueta de texto para el elemento del menú'
+            ICON: 'Icono'
+            ICON_DESCRIPTION: 'Icono de Font Awesome para el elemento del menú'
+            URL: 'URL'
+            URL_DESCRIPTION: 'URL para el elemento del menú'
+            TARGET: 
+              LABEL: 'Objetivo'
+              BLANK: 'Abrir en una nueva ventana'
+              PARENT: 'Abrir en el marco principal'
+              SELF: 'Abrir en el mismo marco donde se hizo clic'
+              TOP: 'Abrir en todo el cuerpo de la ventana'
+        SEO:
+          TITLE: "Configuración SEO"
+          ENABLED: "Habilitar SEO"
+          ENABLED_HELP: "Habilitar o deshabilitar toda la funcionalidad SEO. Deshabilitar si quieres usar un plugin de SEO"
+          JSON_LD_ENABLED: "Datos Estructurados JSON-LD"
+          JSON_LD_ENABLED_HELP: "Generar datos estructurados JSON-LD para rich snippets"
+          GENERAL_SECTION: "Configuración General SEO"
+          ROBOTS: "Directivas Robots"
+          ROBOTS_HELP: "Instrucciones para los motores de búsqueda sobre indexación y seguimiento"
+          ROBOTS_INDEX_FOLLOW: "Indexar, Seguir"
+          ROBOTS_NOINDEX_FOLLOW: "No Indexar, Seguir"
+          ROBOTS_INDEX_NOFOLLOW: "Indexar, No Seguir"
+          ROBOTS_NOINDEX_NOFOLLOW: "No Indexar, No Seguir"
+          DESCRIPTION_SECTION: "Configuración de Descripción"
+          DESCRIPTION_LENGTH: "Longitud de descripción"
+          DESCRIPTION_LENGTH_HELP: "Número máximo de palabras en la metaetiqueta de descripción"
+          DESCRIPTION_FALLBACK: "Descripción de respaldo"
+          DESCRIPTION_FALLBACK_HELP: "Usar resumen de contenido cuando la descripción no está disponible"
+          DESCRIPTION_SUMMARIZATION: "Resumen de descripción"
+          DESCRIPTION_SUMMARIZATION_HELP: "Método utilizado para generar descripciones desde el contenido"
+          SUMMARIZATION_SIMPLE: "Truncamiento simple"
+          SUMMARIZATION_SMART: "Resumen inteligente"
+          TWITTER_SECTION: "Configuración de Tarjetas Twitter"
+          TWITTER_ENABLED: "Habilitar Tarjetas Twitter"
+          TWITTER_ENABLED_HELP: "Generar metaetiquetas de Tarjetas Twitter"
+          TWITTER_SITE: "Nombre de usuario del sitio de Twitter"
+          TWITTER_SITE_HELP: "El handle de Twitter de tu sitio web (sin @)"
+          TWITTER_SITE_VALIDATE: "Handle de Twitter válido: 1-15 letras, números o _"
+          TWITTER_CARD_TYPE: "Tipo de Tarjeta Twitter"
+          TWITTER_CARD_TYPE_HELP: "Tipo de Tarjeta Twitter a generar"
+          TWITTER_CARD_SUMMARY_LARGE: "Resumen con Imagen Grande"
+          TWITTER_CARD_SUMMARY: "Resumen"
+          TWITTER_CARD_APP: "Aplicación"
+          TWITTER_CARD_PLAYER: "Reproductor"
+          FACEBOOK_SECTION: "Configuración Facebook Open Graph"
+          FACEBOOK_ENABLED: "Habilitar Open Graph"
+          FACEBOOK_ENABLED_HELP: "Generar metaetiquetas Facebook Open Graph"
+          FACEBOOK_APP_ID: "ID de Aplicación Facebook"
+          FACEBOOK_APP_ID_HELP: "Tu ID de Aplicación de Facebook"
+      MODULAR:
+        SHOW_ONPAGE_MENU: Mostrar navegación en sitios de una página
+        SHOW_ONPAGE_MENU_HELP: En sitios de una sola página, agrega desplazamiento suave al hacer clic en la navegación y selecciona automáticamente los elementos de navegación correctos a medida que te desplazas por diferentes secciones
+        BANNER:
+          SECTION: Opciones del Banner
+          BUTTON_TEXT: Texto del Botón
+          BUTTON_URL: URL del Botón
+        FEATURES:
+          TAB: Características
+          ICON: Icono
+          ICON_DESCRIPTION: Selecciona el código de los iconos gratuitos de Fontawesome (https://fontawesome.com/icons?m=free)
+          TITLE: Título
+          TEXT: Texto
+          TEXT_HELP: Descripción breve para cada característica. Soporta markdown
+          BUTTON_URL: URL del Botón
+          BUTTON_URL_TARGET: Abrir URL en una nueva ventana
+        RECENT_POSTS:
+          TAB: Configuración de Publicaciones Recientes
+          LAYOUT:
+            LABEL: Diseño
+            TWO_COLS: Medio = 2 / 1 columnas
+            THREE_COLS: Estándar = 3 / 2 / 1 columnas
+          LIMIT: Límite
+          LIMIT_HELP: Número máximo de publicaciones a mostrar
+          READMORE_TEXT: Texto del botón Leer más
+          READMORE_TEXT_DESCRIPTION: Establecer texto personalizado para el botón Leer más
+        TEAM:
+          TAB: Equipo
+          TEAM_LAYOUT: Diseño
+          TEAM_LAYOUT_TWOCOLS: Medio = 2 / 1 columnas
+          TEAM_LAYOUT_THREECOLS: Estándar = 3 / 2 / 1 columnas
+          IMAGE: Imagen de perfil
+          IMAGE_HELP: Seleccionar una imagen de perfil
+          NAME: Nombre
+          POSITION: Cargo
+          DETAILS: Detalles del perfil
+          DETAILS_HELP: Breve descripción del perfil
+          SOCIAL_MEDIA:
+            LABEL: Redes sociales
+            HELP: La plantilla permite un máximo de 6 iconos para cada miembro
+            NAME: Nombre de la red social
+            NAME_HELP: Solo tienes que escribir el nombre de la red social aquí (ej. Facebook, Twitter, etc)
+            URL: URL de la red social
+        DOWNLOADS:
+          TH_NAME: Nombre
+          TH_SIZE: Tamaño
+          TH_MODIFIED: Modificado
+          TH_DOWNLOAD: Descarga
+          TD_BUTTON: Descargar
+      BLOG:
+        TAB: Configuración del Blog
+        ROUTE: Ruta del Blog
+        ROUTE_HELP: La ruta a la página principal del blog que contiene la configuración "Mostrar ..."
+        CONFIGURATION: Configuración
+        TITLE: Definición de Contenido
+        ITEMS: 
+          LABEL: Elementos
+          LIMIT: Número Máximo de Elementos
+          ORDER_BY:
+            LABEL: Ordenar Por
+            DATE: Fecha
+            TITLE: Título
+            FOLDER: Carpeta
+            DEFAULT: Predeterminado
+          DIR: Orden
+          DIR_ASC: Ascendente
+          DIR_DESC: Descendente
+        SHOW_BREADCRUMBS: Mostrar Migas de Pan
+        PAGINATION: 
+          LABEL: Paginación
+        URL_TAXONOMY_FILTERS: Filtros de Taxonomía de URL
+        READMORE_TEXT: Texto del botón Leer más
+        READMORE_TEXT_DESCRIPTION: Establecer texto personalizado para el botón Leer más
+      ITEM:
+        TAB: Elemento del Blog
+        OPTIONS: Opciones
+        SUMMARY: 
+          TITLE: Resumen del Elemento
+          ENABLED: Resumen Habilitado
+          FORMAT: Formato del Resumen
+          FORMAT_SHORT: Usar la primera aparición del delimitador o tamaño
+          FORMAT_LONG: Se ignorará el delimitador del resumen
+          SIZE: Tamaño
+          DELIMITER: Delimitador del Resumen
+      GALLERY:
+        TAB: Galería
+        TITLE: Galería de Imágenes
+        LAYOUT: 
+          LABEL: Diseño
+          TWOCOLS: Medio = 2 / 1 columnas
+          THREECOLS: Estándar = 3 / 2 / 1 columnas
+        THUMB_WIDTH: Ancho de Miniatura
+        THUMB_WIDTH_HELP: Establecer ancho para miniaturas
+        THUMB_HEIGHT: Alto de Miniatura
+        THUMB_HEIGHT_HELP: Establecer alto para miniaturas
+        IMAGES: 
+          LABEL: Imágenes
+          IMAGE: Imagen
+          IMAGE_TITLE: Título
+          IMAGE_DESCRIPTION: Descripción
+          DESCPOSITION: 
+            LABEL: Posición de la Descripción
+            HELP: Posición global para la descripción de diapositivas, puedes definir una posición específica en cada diapositiva (inferior, superior, izquierda, derecha)
+            BOTTOM: Inferior
+            TOP: Superior
+            LEFT: Izquierda
+            RIGHT: Derecha
+          IMAGE_THUMB: Miniatura
+        VIDEO_TITLE: Galería de Video
+        VIDEO_WIDTH: Ancho del Video
+        VIDEO_WIDTH_HELP: 'Ancho predeterminado para videos. Los videos son responsivos por lo que no se requiere altura. El ancho puede estar en px, % o incluso vw, por ejemplo, 500px, 90% o 100vw para videos de ancho completo'
+        VIDEO_AUTOFOCUS: Autofoco
+        VIDEO_AUTOFOCUS_HELP: Si es verdadero, el video se enfocará al reproducirse para permitir atajos de teclado del reproductor, esto desactivará las flechas anterior y siguiente para cambiar de diapositiva, así que úsalo solo si sabes lo que estás haciendo
+        VIDEO_AUTOPLAY: Reproducción Automática
+        VIDEO_AUTOPLAY_HELP: Reproducir videos automáticamente al abrir
+        VIDEOS:
+          LABEL: Videos
+          SOURCE: Fuente del Video
+          SOURCE_DESCRIPTION: Seleccionar el tipo de fuente del video
+          SOURCE_OPTIONS:
+            REMOTE: Video Remoto
+            LOCAL: Video Local
+          REMOTE_VIDEO: URL de Video Remoto
+          REMOTE_VIDEO_DESCRIPTION: URL de YouTube, Vimeo u otro servicio externo
+          REMOTE_THUMBNAIL: Miniatura Remota
+          REMOTE_THUMBNAIL_DESCRIPTION: URL de imagen miniatura para la galería
+          LOCAL_VIDEO: Video Local
+          LOCAL_THUMBNAIL: Miniatura Local
+          LOCAL_THUMBNAIL_DESCRIPTION: Imagen miniatura para la galería
+          TITLE: Título del Video
+          DESCRIPTION: Descripción del Video
+        OPTIONS:
+          TAB: Opciones de Galería
+          EFFECTS_TITLE: Apariencia y Efectos
+          ACTIONS_TITLE: Acciones
+          STYLING_TITLE: Estilos
+          BEHAVIOR_TITLE: Comportamientos
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Efecto de superposición al pasar el ratón
+            HELP: Establecer el efecto al pasar el ratón cuando el mouse está sobre una imagen
+            FADEIN_BOTTOM: Aparecer desde abajo
+            FADEIN_TOP: Aparecer desde arriba
+            FADEIN_LEFT: Aparecer desde la izquierda
+            FADEIN_RIGHT: Aparecer desde la derecha
+            FADEIN_TOP_RIGHT: Aparecer desde arriba a la derecha
+            FADEIN_TOP_LEFT: Aparecer desde arriba a la izquierda
+            FADEIN_BOTTOM_RIGHT: Aparecer desde abajo a la derecha
+            FADEIN_BOTTOM_LEFT: Aparecer desde abajo a la izquierda
+          OPEN_EFFECT:
+            LABEL: Efecto de Apertura
+            ZOOM: Zoom
+            FADE: Desvanecer
+            NONE: Ninguno
+          CLOSE_EFFECT:
+            LABEL: Efecto de Cierre
+            ZOOM: Zoom
+            FADE: Desvanecer
+            NONE: Ninguno
+          SLIDE_EFFECT:
+            LABEL: Efecto de Diapositiva
+            SLIDE: Deslizar
+            ZOOM: Zoom
+            FADE: Desvanecer
+            NONE: Ninguno
+          MORE_TEXT: Texto Ver Más
+          MORE_TEXT_HELP: Texto Ver Más para descripciones en dispositivos móviles
+          MORE_LENGTH: Longitud Ver Más
+          MORE_LENGTH_HELP: Número de caracteres a mostrar en la descripción antes de agregar el enlace Ver Más (solo para móviles), si es 0 mostrará la descripción completa
+          CLOSE_BUTTON: Botón Cerrar
+          CLOSE_BUTTON_HELP: Mostrar u ocultar el botón de cerrar
+          TOUCH_NAVIGATION: Navegación Táctil
+          TOUCH_NAVIGATION_HELP: Habilitar o deshabilitar la navegación táctil (deslizar)
+          TOUCH_AXIS: Seguir Eje Táctil
+          TOUCH_AXIS_HELP: La imagen sigue el eje cuando se arrastra en móvil
+          KEYBOARD: Navegación por Teclado
+          KEYBOARD_HELP: Habilitar o deshabilitar la navegación por teclado
+          CLOSE_OUTSIDE: Cerrar con Clic Externo
+          CLOSE_OUTSIDE_HELP: Cerrar el lightbox al hacer clic fuera de la diapositiva activa
+          MORE_STARTAT: 'Comenzar En:'
+          MORE_STARTAT_HELP: Iniciar lightbox en el índice definido (0 es la primera diapositiva). Si no está definido, se muestra la imagen en la que se hizo clic
+          WIDTH: Ancho
+          WIDTH_HELP: 'Ancho predeterminado para elementos en línea e iframes, puedes definir un tamaño específico en cada diapositiva. Puedes usar cualquier unidad, por ejemplo 90% o 100vw para ancho completo'
+          HEIGHT: Alto
+          HEIGHT_HELP: 'Alto predeterminado para elementos en línea e iframes, puedes definir un tamaño específico en cada diapositiva. Puedes usar cualquier unidad, por ejemplo 90% o 100vh Para elementos en línea puedes establecer el alto en automático'
+          LOOP: Bucle
+          LOOP_HELP: Repetir diapositivas al final
+          ZOOMABLE: Ampliable
+          ZOOMABLE_HELP: Habilitar o deshabilitar imágenes ampliables, también puedes usar `data-zoomable="false"` en nodos individuales
+          DRAGGABLE: Arrastrable
+          DRAGGABLE_HELP: Habilitar o deshabilitar el arrastre del mouse para ir a la diapositiva anterior y siguiente (solo imágenes y contenido en línea), también puedes usar `data-draggable="false"` en nodos individuales
+          DRAGGABLE_X: Tolerancia de Arrastre X
+          DRAGGABLE_X_HELP: Usado con arrastrable. Número de píxeles que el usuario debe arrastrar para ir a la diapositiva anterior o siguiente
+          DRAGGABLE_Y: Tolerancia de Arrastre Y
+          DRAGGABLE_Y_HELP: Usado con arrastrable. Número de píxeles que el usuario debe arrastrar hacia arriba o hacia abajo para cerrar el lightbox (Establecer 0 para deshabilitar arrastre vertical)
+          DRAG_AUTO_SNAP: Auto-Ajuste de Arrastre
+          DRAG_AUTO_SNAP_HELP: Si es verdadero, la diapositiva cambiará automáticamente a anterior/siguiente o se cerrará si se alcanza dragToleranceX o dragToleranceY, de lo contrario esperará hasta que se suelte el mouse
+          PRELOAD: Precarga
+          PRELOAD_HELP: Habilitar o deshabilitar la precarga
+      DEFAULT:
+        HEADINGS_SECTION: Opciones de Encabezados
+        SHOW_TITLE: Mostrar Título
+        SHOW_TITLE_HELP: Mostrar u ocultar el título de la página
+        HEADER_SUBTITLE: Subtítulo
+        PAGE_INDEX: Índice de Página
+        PAGE_INDEX_HELP: Si está habilitado, las páginas secundarias se mostrarán como si fueran una tabla de contenido
+        CONTENT_SECTION: Opciones de Contenido
+        FEATURED_IMAGE_LABEL: Imagen Destacada
+        FEATURED_IMAGE_HELP: Seleccionar un archivo para usar como la imagen destacada superior de la página
+        IMAGE_OPTIONS: Opciones de Imagen
+        FEATURED_IMAGE: 
+          LABEL: Imagen destacada
+          HELP: Seleccionar una imagen destacada para mostrar en la parte superior de la página
+          WIDTH: Ancho
+          HEIGHT: Alto
+        SHOW_PAGEIMAGE: Mostrar Imagen
+        SHOW_PAGEIMAGE_HELP: Mostrar imagen destacada si está definida o la primera imagen de la página de medios
+        SEO:
+          TAB: "SEO y Redes Sociales"
+          SECTION_TITLE: "Opciones de Redes Sociales"
+          ROBOTS_HELP: "Instrucciones para los motores de búsqueda sobre indexación y seguimiento. Esta configuración de página anula la configuración global."
+          TWITTER_CREATOR: "Nombre de usuario de Twitter"
+          TWITTER_CREATOR_HELP: "Tu handle de Twitter (sin @)"
+          TWITTER_CREATOR_VALIDATE: "Handle de Twitter válido: 1-15 letras, números o _"
+          IMAGE: "Imagen para Compartir en Redes Sociales"
+          IMAGE_HELP: "Selecciona una imagen para usar en compartidos de redes sociales. Si no se selecciona ninguna imagen, se usará la imagen destacada de la página."
+    SIDEBAR:
+      MENU_TITLE: Menú
+      LANGSWITCHER: Elegir idioma
+      CONTACT_INFO: Ponerse en contacto
+      FEATURED_POSTS: Publicaciones Destacadas
+      FEATURED_MORE: Más publicaciones destacadas
+      NO_FEATURED: No hay publicaciones destacadas
+      LOGIN_SECTION: Inicio de Sesión
+      LOGGUED_AS: 'Conectado como: '
+      RELATEDPAGES_SECTION: Páginas relacionadas
+      ARCHIVES_SECTION: Archivos
+      RANDOM_ARTICLE:
+        LABEL: Artículo Aleatorio
+        BUTTON: ¡Voy a tener suerte!
+      SYNDICATE:
+        LABEL: Sindicar
+      TAXONOMYLIST:
+        LABEL: Etiquetas Populares
+    DEFAULT:
+      PAGE_INDEX_TITLE: Contenido de la página
+    BLOG:
+      LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
+      LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
+      LISTING_TITLE_AUTHOR: 'Publicaciones escritas por el autor: '
+      LISTING_TITLE_MONTH: 'Publicación del mes: '
+      PAGINATION: 
+        PREV: Anterior
+        NEXT: Siguiente
+    ITEM:
+      POSTED_ON: Publicado el
+      SEE_OTHER_POSTS_OF: Ver otras publicaciones de
+      SEE_OTHER_POSTS_IN: Ver otras publicaciones en
+    FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
+    MISC:
+      SHARE_ON: Compartir en
+      IN: en
+      BACK_TO_TOP: Volver arriba

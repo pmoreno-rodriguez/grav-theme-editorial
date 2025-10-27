@@ -79,6 +79,10 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Support for navigation menu on one-page websites.
 * Languages (localization): en, es, de
 
+> [!IMPORTANT]
+> ### Author Support
+>  The theme is prepared to manage and display the author or authors of a page. To enable this functionality, you need to add `author` to the taxonomy types in your site configuration. In the Grav Admin panel, go to the **Taxonomy Types** section under **Site** tabl and add `author` to the list of available taxonomies.
+
 ### Featured Pages
 
 The featured pages tagged with the selected tag in the theme settings and the chosen number (up to a maximum of 5), will be automatically displayed in a mini-list in the sidebar with teaser images and summaries. The current page, if it appears, will not be displayed on that list.

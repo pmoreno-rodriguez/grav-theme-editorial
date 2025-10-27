@@ -1,100 +1,244 @@
 {# ===========================================
-   SEO & META TEMPLATE
-   =========================================== #}
+ SEO & META TEMPLATE - Editorial Theme
+ =========================================== #}
+{# Variables #}
+{% set seo_config = theme_config.seo ?? {} %}
+{% set seo_enabled = seo_config.enabled ?? true %}
+{% set json_ld_enabled = seo_config.json_ld_enabled ?? true %}
+{% set description_length = seo_config.description_length ?? 70 %}
+{% set description_fallback = seo_config.description_fallback ?? true %}
+{% set description_summarization = seo_config.description_summarization ?? 'simple' %}
+{% set default_robots = page.header.seo.robots ?? seo_config.robots ?? 'index, follow' %}
+{% set twitter_enabled = seo_config.twitter.enabled ?? true %}
+{% set twitter_site = seo_config.twitter.site %}
+{% set twitter_card_type = seo_config.twitter.card_type ?? 'summary_large_image' %}
+{% set facebook_enabled = seo_config.facebook.enabled ?? true %}
+{% set facebook_app_id = seo_config.facebook.app_id %}
+{# -------------------------
+ Basic Meta Tags
+ ------------------------- #}
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 {# -------------------------
-   Title
-   ------------------------- #}
-{% set meta_title = page_title is defined ? page_title ~ ' | ' ~ site_title : site_title %}
-{% if meta_title %}
-<title>{{ meta_title|e }}</title>
-<meta itemprop="name" content="{{ meta_title|e }}">
-<meta property="og:title" content="{{ meta_title|e }}">
-<meta name="twitter:title" content="{{ meta_title|e }}">
-{% endif %}
-
-{# -------------------------
-   Canonical & URLs
-   ------------------------- #}
-{% if canonical_url %}
-<link rel="canonical" href="{{ canonical_url }}">
-<meta property="og:url" content="{{ canonical_url }}">
-<meta name="twitter:url" content="{{ canonical_url }}">
-{% endif %}
-
-{# -------------------------
-   Description
-   ------------------------- #}
-{% set meta_description = (not page.home() and page.summary) 
-    ? page.summary 
-    : (site.metadata.description ?: site_title) %}
-{% if meta_description %}
-{% set clean_description = meta_description|striptags|trim %}
-<meta name="description" content="{{ clean_description|e }}">
-<meta property="og:description" content="{{ clean_description|e }}">
-<meta name="twitter:description" content="{{ clean_description|e }}">
-<meta itemprop="description" content="{{ clean_description|e }}">
-{% endif %}
-
-{# -------------------------
-   Featured Image
-   ------------------------- #}
-{% if image %}
-{% set image_url = url(image.url, true) %}
-<meta property="og:image" content="{{ image_url }}">
-<meta name="twitter:image" content="{{ image_url }}">
-<meta itemprop="image" content="{{ image_url }}">
-{% endif %}
-
-{# -------------------------
- Social Media Defaults
+ Title
  ------------------------- #}
-<meta property="og:type" content="{{ page.template == 'item' ? 'article' : 'website' }}">
-<meta property="og:site_name" content="{{ site.title|e }}">
-<meta name="twitter:card" content="summary_large_image">
-{# Twitter site handle #}
-{% if theme_config.social is defined and theme_config.social is not null %}
- {% for item in theme_config.social if item.name|lower == 'twitter' %}
-<meta name="twitter:site" content="{{ item.url }}">
- {% endfor %}
+{% set meta_title = page.title ?: site.title %}
+{%- if meta_title -%}
+    <title>{{ meta_title|e }}</title>
+{% endif %}
+{% if facebook_enabled %}
+    <meta property="og:title" content="{{ meta_title|e }}">
+{% endif %}
+{% if twitter_enabled %}
+    <meta name="twitter:title" content="{{ meta_title|e }}">
+{% endif %}
+{# -------------------------
+Canonical & URLs
+------------------------- #}
+{%- if canonical_url -%}
+    <link rel="canonical" href="{{ canonical_url }}">
+{% endif %}
+{%- if facebook_enabled -%}
+    <meta property="og:url" content="{{ canonical_url }}">
+{% endif %}
+{%- if twitter_enabled -%}
+    <meta name="twitter:url" content="{{ canonical_url }}">
+{% endif %}
+{% spaceless %}
+{%- if seo_enabled -%}
+    {# -------------------------
+     Description
+     ------------------------- #}
+    {% set meta_description = null %}
+    
+    {# Priority: page.header.metadata > page summary > site description (if fallback enabled) #}
+    {% if header.metadata.description is defined and header.metadata.description %}
+        {% set meta_description = header.metadata.description %}
+    {% elseif page.summary is not empty %}
+        {% set meta_description = page.summary %}
+    {% elseif description_fallback and site.metadata.description %}
+        {% set meta_description = site.metadata.description %}
+    {% endif %}
+    
+    {% if meta_description %}
+        {% set clean_description = meta_description|striptags|trim %}
+        
+        {# Apply truncation #}
+        {% if description_summarization == 'smart' %}
+            {% set sentences = clean_description|split('.') %}
+            {% set result = '' %}
+            {% set word_count = 0 %}
+            {% for sentence in sentences %}
+                {% set sentence_words = sentence|trim|split(' ')|length %}
+                {% if word_count + sentence_words <= description_length %}
+                    {% set result = result ~ sentence ~ '.' %}
+                    {% set word_count = word_count + sentence_words %}
+                {% endif %}
+            {% endfor %}
+            {% set clean_description = result|trim %}
+        {% else %}
+            {% set words = clean_description|split(' ') %}
+            {% if words|length > description_length %}
+                {% set clean_description = words|slice(0, description_length)|join(' ') ~ '...' %}
+            {% endif %}
+        {% endif %}
+        
+        <meta name="description" content="{{ clean_description|e }}">
+        {% if facebook_enabled %}
+        <meta property="og:description" content="{{ clean_description|e }}">
+        {% endif %}
+        {% if twitter_enabled %}
+        <meta name="twitter:description" content="{{ clean_description|e }}">
+        {% endif %}
+    {% endif %}
+
+    {# -------------------------
+     Robots
+     ------------------------- #}
+    <meta name="robots" content="{{ default_robots|e }}">
+
+    {# -------------------------
+     Featured Image
+     ------------------------- #}
+    {% set seo_image = null %}
+
+    {% if header.seo.image %}
+        {% set seo_image = page.media[header.seo.image] %}
+    {% endif %}
+    {% if not seo_image and image %}
+        {% set seo_image = image %}
+    {% endif %}
+
+    {% if seo_image %}
+        {% set image_url = url(seo_image.url, true) %}
+        {% if facebook_enabled %}
+        <meta property="og:image" content="{{ image_url }}">
+            {% if seo_image.width and seo_image.height %}
+            <meta property="og:image:width" content="{{ seo_image.width }}">
+            <meta property="og:image:height" content="{{ seo_image.height }}">
+            {% endif %}
+        {% endif %}
+        {% if twitter_enabled %}
+        <meta name="twitter:image" content="{{ image_url }}">
+        {% endif %}
+    {% endif %}
+
+    {# -------------------------
+     Facebook Open Graph
+     ------------------------- #}
+    {% if facebook_enabled %}
+        {% set og_type = page.template() == 'item' ? 'article' : 'website' %}
+        <meta property="og:type" content="{{ og_type }}">
+        <meta property="og:site_name" content="{{ site.title|e }}">
+        <meta property="og:locale" content="{{ lang }}">
+        
+        {% if facebook_app_id %}
+        <meta property="fb:app_id" content="{{ facebook_app_id }}">
+        {% endif %}
+        
+        {# Article metadata #}
+        {% if og_type == 'article' %}
+            {% if page.date %}
+            <meta property="article:published_time" content="{{ page.date|date('c') }}">
+            {% endif %}
+            {% if page.modified %}
+            <meta property="article:modified_time" content="{{ page.modified|date('c') }}">
+            {% endif %}
+            {% if page.taxonomy.author|first %}
+            <meta property="article:author" content="{{ page.taxonomy.author|first }}">
+            {% elseif site.author.name %}
+            <meta property="article:author" content="{{ site.author.name }}">
+            {% endif %}
+            {% if page.taxonomy.tag %}
+                {% for tag in page.taxonomy.tag|slice(0,5) %}
+                <meta property="article:tag" content="{{ tag }}">
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    {# -------------------------
+     Twitter Cards
+     ------------------------- #}
+    {% if twitter_enabled %}
+        <meta name="twitter:card" content="{{ twitter_card_type }}">
+        
+        {% if twitter_site %}
+            {% set twitter_handle = twitter_site starts with '@' ? twitter_site : '@' ~ twitter_site %}
+            <meta name="twitter:site" content="{{ twitter_handle }}">
+        {% endif %}
+        
+        {# Twitter Creator - Specific Twitter handle #}
+        {% if page.header.seo.twitter_creator %}
+            {% set creator_handle = page.header.seo.twitter_creator %}
+            {# Ensure it starts with @ #}
+            {% if not creator_handle starts with '@' %}
+                {% set creator_handle = '@' ~ creator_handle %}
+            {% endif %}
+            <meta name="twitter:creator" content="{{ creator_handle|e }}">
+            
+        {% elseif site.metadata.twitter_creator %}
+            {# Fallback to global site creator #}
+            {% set creator_handle = site.metadata.twitter_creator %}
+            {% if not creator_handle starts with '@' %}
+                {% set creator_handle = '@' ~ creator_handle %}
+            {% endif %}
+            <meta name="twitter:creator" content="{{ creator_handle|e }}">
+        {% endif %}
+    {% endif %}
+
+    {# -------------------------
+    Custom Metadata
+    ------------------------- #}
+    {% for meta in page.metadata %}
+        {% if meta.name and meta.name not in ['description', 'viewport', 'robots'] %}
+            <meta name="{{ meta.name|e }}" content="{{ meta.content|e }}">
+        {% elseif meta.http_equiv and meta.http_equiv not in ['X-UA-Compatible'] %}
+            <meta http-equiv="{{ meta.http_equiv|e }}" content="{{ meta.content|e }}">
+        {% elseif meta.property and meta.property not in ['og:title', 'og:description', 'og:image', 'og:url', 'og:type', 'og:site_name', 'og:locale', 'fb:app_id', 'article:published_time', 'article:modified_time', 'article:author', 'article:tag'] %}
+            <meta property="{{ meta.property|e }}" content="{{ meta.content|e }}">
+        {% endif %}
+    {% endfor %}
+
+    {# -------------------------
+     JSON-LD Structured Data
+     ------------------------- #}
+    {% if json_ld_enabled %}
+        {% set author_name = page.taxonomy.author|first ?: site.author.name ?: 'Unknown' %}
+        {% set schema_type = page.template() == 'item' ? 'BlogPosting' : 'WebPage' %}
+        
+        <script type="application/ld+json">
+        {{ {
+            "@context": "https://schema.org",
+            "@type": schema_type,
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": canonical_url
+            },
+            "headline": meta_title,
+            "image": seo_image ? url(seo_image.url, true) : '',
+            "datePublished": page.date ? page.date|date('c') : '',
+            "dateModified": page.modified ? page.modified|date('c') : '',
+            "inLanguage": lang,
+            "wordCount": page.content ? page.content|wordcount : 0,
+            "author": {
+                "@type": "Person",
+                "name": author_name
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": site.title,
+                "logo": seo_image ? {
+                    "@type": "ImageObject",
+                    "url": url(seo_image.url, true)
+                } : null
+            },
+            "description": clean_description|default('')
+        } | json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')) | raw }}
+        </script>
+    {% endif %}
+
 {% endif %}
 
-{# -------------------------
-   Structured Data (JSON-LD)
-   ------------------------- #}
-<script type="application/ld+json">
-{{ {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": canonical_url
-  },
-  "headline": meta_title|e,
-  "image": image ? url(image.url, true) : '',
-  "datePublished": page.date|date('c'),
-  "inLanguage": lang,
-  "wordCount": page.content|wordcount,
-  "author": {
-    "@type": "Person",
-    "name": page.taxonomy.author[0] ?: 'Unknown'
-  },
-  "description": clean_description
-} | json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')) | raw }}
-</script>
-
-{# -------------------------
-   Custom metadata
-   ------------------------- #}
-{% for meta in page.metadata %}
-  {% if meta.name and meta.name not in ['description', 'generator', 'viewport', 'author', 'keywords'] %}
-    <meta name="{{ meta.name|e }}" content="{{ meta.content|e }}">
-  {% elseif meta.http_equiv and meta.http_equiv != 'X-UA-Compatible' %}
-    <meta http-equiv="{{ meta.http_equiv|e }}" content="{{ meta.content|e }}">
-  {% elseif meta.property and meta.property not in ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'] %}
-    <meta property="{{ meta.property|e }}" content="{{ meta.content|e }}">
-  {% endif %}
-{% endfor %}
+{% endspaceless %}

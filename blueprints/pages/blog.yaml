@@ -32,6 +32,7 @@ form:
         blog:
           type: tab
           title: EDITORIAL.ADMIN.BLOG.TAB
+          ordering@: 50
           fields:
             content_title:
               type: spacer
@@ -93,3 +94,9 @@ form:
           import@:
             type: partials/blog-bits
             context: blueprints://pages
+        
+        seo:
+          type: tab
+          title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB
+          ordering@: 999
+          import@: partials/seo-bits.yaml

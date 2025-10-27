@@ -119,3 +119,11 @@ form:
                       label: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE.HEIGHT
                       size: small
                       default: 300
+        
+        seo:
+          type: tab
+          title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB
+          ordering@: 999
+          import@: partials/seo-bits.yaml
+ 
+        

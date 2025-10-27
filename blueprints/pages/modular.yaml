@@ -43,3 +43,8 @@ form:
               help: '"desc" or "asc" are valid values'
               placeholder: desc
               size: small
+        seo:
+          type: tab
+          title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB
+          ordering@: 99
+          import@: partials/seo-tab.yaml

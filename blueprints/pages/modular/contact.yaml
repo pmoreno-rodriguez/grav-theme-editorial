@@ -25,4 +25,6 @@ form:
               label: Address details
               markdown: true
               validate:
-                type: textarea          
+                type: textarea    
+        seo:
+          unset@: true      

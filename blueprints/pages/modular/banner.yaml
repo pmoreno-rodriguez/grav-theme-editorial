@@ -30,6 +30,8 @@ form:
                       type: text
                       size: medium
                       label: EDITORIAL.ADMIN.MODULAR.BANNER.BUTTON_URL
+        seo:
+          unset@: true
             
 
                 

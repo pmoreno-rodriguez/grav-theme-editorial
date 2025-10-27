@@ -39,3 +39,5 @@ form:
               size: large
               label: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.READMORE_TEXT
               description: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.READMORE_TEXT_DESCRIPTION
+        seo:
+          unset@: true

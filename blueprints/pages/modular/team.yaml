@@ -63,3 +63,5 @@ form:
                       type: text
                       size: small
                       label: EDITORIAL.ADMIN.MODULAR.TEAM.SOCIAL_MEDIA.URL
+        seo:
+          unset@: true

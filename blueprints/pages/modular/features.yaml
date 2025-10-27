@@ -33,3 +33,5 @@ form:
                 .url:
                   type: text
                   label: EDITORIAL.ADMIN.MODULAR.FEATURES.BUTTON_URL
+        seo:
+          unset@: true

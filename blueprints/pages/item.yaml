@@ -48,3 +48,8 @@ form:
               label: EDITORIAL.ADMIN.ITEM.SUMMARY.DELIMITER
               classes: large
               placeholder: ===
+        seo:
+          type: tab
+          title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB
+          ordering@: 99
+          import@: partials/seo-tab.yaml

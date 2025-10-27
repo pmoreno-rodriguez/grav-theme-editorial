@@ -1,9 +1,6 @@
 <!-- HEAD METADATA -->
-<meta charset="utf-8">
-<title>{% if header.title %}{{ header.title|e }} | {% endif %}{{ site.title|e }}</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 {% include 'partials/page-bits/metadata.html.twig' %}
+<!-- FAVICON -->
 {% set favicon = theme_var('favicon') %}
 {% if favicon %}
  {% set favicon_data = favicon|first %}

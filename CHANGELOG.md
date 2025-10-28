@@ -1,3 +1,24 @@
+# v3.0.0
+## 10/28/2025
+
+1. [](#new)
+   * Added global SEO configuration options in theme settings
+   * Added icon type option to social media icons
+2. [](#improved)
+   * Refactored `metadata.html.twig` for better SEO management
+   * Reorganized page blueprints from blueprints to `blueprints/pages` directory
+   * Split theme `blueprints.yaml` into partial files within `blueprints/theme`
+   * Split `languages.yaml` into individual language files
+   * Improved social media meta tags implementation
+   * Changed page title variable from `title` to `page_title` to prevent conflicts with Grav core
+   * Removed [WordCount](https://learn.getgrav.org/17/themes/twig-tags-filters-functions/filters#wordcount) custom filter from theme (now part of Grav core)
+   * Updated minimum required Grav version to 1.7.50
+   * Moved dependencies from required to recommended during theme installation
+   * Changed the alignment of the image titles in the gallery
+3. [](#bugfix)
+   * Fixed recent posts displayed in the sidebar (only published posts are shown) [#72](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/72)
+
+
 # v2.4.1
 ## 10/05/2025
 

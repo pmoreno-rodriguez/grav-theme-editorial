@@ -14,7 +14,7 @@
    * Removed [WordCount](https://learn.getgrav.org/17/themes/twig-tags-filters-functions/filters#wordcount) custom filter from theme (now part of Grav core)
    * Updated minimum required Grav version to 1.7.50
    * Moved dependencies from required to recommended during theme installation
-   * Changed the alignment of the image titles in the gallery
+   * Changed the alignment of the image titles in the gallery [#71](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/71)
    * **Updated README**: Comprehensive documentation update with new features
 3. [](#bugfix)
    * Fixed recent posts displayed in the sidebar (only published posts are shown) [#72](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/72)

@@ -83,6 +83,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 
 > [!NOTE]
 > **Author Support**
+>
 > The theme is prepared to manage and display the author or authors of a page. To enable this functionality, you need to add `author` to the taxonomy types in your site configuration. In the Grav Admin panel, go to the **Taxonomy Types** section under **Site** tab and add `author` to the list of available taxonomies.
 
 ### Featured Pages
@@ -251,6 +252,15 @@ show_pageimage:               # Show/hide featured image (default: true)
 featured_image:               # Select specific image from page media
 image_width:                  # Image width in pixels (default: 1000)
 image_height:                 # Image height in pixels (default: 300)
+```
+
+### SEO & Social
+
+Each page can have its own SEO and social media settings:
+```yaml
+seo.robots:                   # Custom robots meta tag for this page (index/follow, noindex/follow, index/nofollow, noindex/nofollow)
+seo.twitter_creator:          # Twitter username of content creator (without @, max 15 characters)
+seo.image:                    # Select specific image from page media for social sharing (Open Graph & Twitter Cards)
 ```
 
 These options can be set in the page's frontmatter or through the Admin Panel's page editor.

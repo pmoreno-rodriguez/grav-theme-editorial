@@ -63,7 +63,7 @@ Version: v{{ version }}
     <!-- Wrapper -->
     <div id="wrapper">
     <!-- Main -->
-        <div id="main">
+        <main id="main">
             <div class="inner">
                 <!-- Header -->
                 {% block header %}
@@ -78,7 +78,7 @@ Version: v{{ version }}
                     {% block content %}{% endblock %}
                 </section>
             </div>
-        </div>
+        </main>
         {% block sidebar %}
             {% include 'partials/sidebar.html.twig' %}
         {% endblock %}

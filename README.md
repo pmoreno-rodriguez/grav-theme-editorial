@@ -77,11 +77,13 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Shortcodes to write your pages easily, taking advantage of the styles offered by the theme.
 * Custom styles for Login forms. 
 * Support for navigation menu on one-page websites.
+* **SEO optimization** - Built-in SEO features including meta tags, Open Graph, Twitter Cards, and JSON-LD structured data.
+* **Accessibility improvements** - Semantic HTML5 landmarks for better screen reader support.
 * Languages (localization): en, es, de
 
 > [!NOTE]
-> ### Author Support
->  The theme is prepared to manage and display the author or authors of a page. To enable this functionality, you need to add `author` to the taxonomy types in your site configuration. In the Grav Admin panel, go to the **Taxonomy Types** section under **Site** tabl and add `author` to the list of available taxonomies.
+> **Author Support**
+> The theme is prepared to manage and display the author or authors of a page. To enable this functionality, you need to add `author` to the taxonomy types in your site configuration. In the Grav Admin panel, go to the **Taxonomy Types** section under **Site** tab and add `author` to the list of available taxonomies.
 
 ### Featured Pages
 
@@ -111,21 +113,64 @@ The featured pages tagged with the selected tag in the theme settings and the ch
 
 Editorial comes with a few default options that can be set site-wide.  These options are:
 
+### General Settings
+
 ```yaml
+dropdown.enabled:             # Enable/Disable dropdown menu
 production-mode:              # In production mode, only minified CSS is used. When disabled, nested CSS are enabled
-sidebar_open:                 # Option to display the main page with the sidebar open or closed.
+sidebar_open:                 # Option to display the main page with the sidebar open or closed
 right_sidebar:                # Enable/Disable sidebar on the right
-google_fonts_local:           # Option to load Google Fonts from the theme or from Google servers.
-copyright.text:               # Set the copyright text
-themeSlogan:                  # Custom text for slogan
-favicon:                      # Choosse your own favicon
-custom_logo:                  # A custom logo rather than the default (see below)  
-custom_logo_mobile:           # A custom logo to use for mobile navigation
-custom_logo_width:            # Set custom width for custom logo
-custom_logo_enabled:          # Enable/Disable logo
+google_fonts_local:           # Option to load Google Fonts from the theme or from Google servers
 custom_css:                   # Load the custom.css file if it exists in the assets/css folder
 custom_js:                    # Load the custom.js file if it exists in the assets/js folder
+copyright.text:               # Set the copyright text
+```
+
+### Header Settings
+
+```yaml
 themeSlogan:                  # Custom text for slogan
+favicon:                      # Choose your own favicon
+custom_logo_enabled:          # Enable/Disable logo
+custom_logo:                  # A custom logo rather than the default (see below)  
+custom_logo_mobile:           # A custom logo to use for mobile navigation
+custom_logo_width:            # Set custom width for custom logo (50-150px)
+```
+
+### SEO Settings
+
+Editorial includes comprehensive SEO features to improve your site's search engine visibility and social media presence:
+
+```yaml
+seo.enabled:                  # Enable/Disable all SEO features
+seo.json_ld_enabled:          # Enable/Disable JSON-LD structured data
+seo.robots:                   # Set robots meta tag (index/follow, noindex/follow, etc.)
+
+# Description Configuration
+seo.description_length:       # Number of words for auto-generated descriptions (default: 70)
+seo.description_fallback:     # Use site description as fallback if page has none
+seo.description_summarization: # Method for generating descriptions ('simple' or 'smart')
+
+# Twitter Card Settings
+seo.twitter.enabled:          # Enable/Disable Twitter Card meta tags
+seo.twitter.site:             # Your Twitter username (without @)
+seo.twitter.card_type:        # Type of Twitter Card (summary_large_image, summary, app, player)
+
+# Facebook Open Graph Settings
+seo.facebook.enabled:         # Enable/Disable Facebook Open Graph meta tags
+seo.facebook.app_id:          # Your Facebook App ID (optional)
+```
+
+The SEO features automatically generate:
+- Meta descriptions from page content
+- Open Graph tags for Facebook sharing
+- Twitter Card tags for Twitter sharing
+- JSON-LD structured data for search engines
+- Canonical URLs to prevent duplicate content issues
+
+### Sidebar Settings
+
+```yaml
 menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
 menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
 menu_login:                   # Enable/Disable login icon in menu
@@ -134,18 +179,81 @@ sidebar_showarchives:         # Show/Hide archives section in sidebar
 sidebar_showrelatedpages:     # Show/Hide related pages section in sidebar
 sidebar_showfeeds:            # Show/Hide feeds section in sidebar
 sidebar_showrandom:           # Show/Hide random button in sidebar
+```
+
+### Blog Settings
+
+```yaml
 blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout
 featured:                     # Enable/Disable featured posts in left sidebar
 featured_tag:                 # Select category name for featured posts (configured in taxonomies)
-featured_number:              # The number of featured posts will be displayed on the left sidebar
-enable_contact:               # Enable/Disable contact section
-contact_section:              # Set copyright text, contact text, contact email and other contact information
-social_enabled:               # Enable/Disable social icons in footer
-custommenus.enabled:          # Enable/Disable custom menus in top menu
+featured_number:              # The number of featured posts will be displayed on the left sidebar (1-5)
 ```
+
+### Contact Information
+
+```yaml
+enable_contact:               # Enable/Disable contact section
+contact.text:                 # Contact section text
+contact.email:                # Contact email address
+contact.phone:                # Contact phone number
+contact.street:               # Street address
+contact.city:                 # City
+contact.state:                # State/Province
+contact.zip:                  # ZIP/Postal code
+```
+
+### Social Media
+
+```yaml
+social_enabled:               # Enable/Disable social icons in footer
+social:                       # List of social media links
+  - name:                     # Platform name
+    url:                      # Full URL to your profile
+    target:                   # Link target (_blank, _self, _parent, _top)
+    icon:                     # Font Awesome icon name
+    icon_type:                # Icon type (brands, solid, regular)
+```
+
+### Custom Menus
+
+```yaml
+custommenu_enabled:           # Enable/Disable custom menus in top menu
+custommenu:                   # List of custom menu items
+  - text:                     # Menu item text
+    icon:                     # Font Awesome icon (optional)
+    url:                      # Menu item URL
+    target:                   # Link target (_blank, _self, _parent, _top)
+```
+
 To make modifications, you can copy the `user/themes/editorial/editorial.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
-> NOTE: Do not modify the `user/themes/editorial/editorial.yaml` file directly or your changes will be lost with any updates
+> [!NOTE]
+> Do not modify the `user/themes/editorial/editorial.yaml` file directly or your changes will be lost with any updates
+
+## Page-Level Options
+
+Individual pages can override theme defaults with these frontmatter options:
+
+### Title and Display
+
+```yaml
+title:                        # Page title
+subtitle:                     # Optional subtitle
+show_title:                   # Show/hide page title (default: true)
+page_index:                   # Show page as index/listing (default: false)
+```
+
+### Featured Image
+
+```yaml
+show_pageimage:               # Show/hide featured image (default: true)
+featured_image:               # Select specific image from page media
+image_width:                  # Image width in pixels (default: 1000)
+image_height:                 # Image height in pixels (default: 300)
+```
+
+These options can be set in the page's frontmatter or through the Admin Panel's page editor.
 
 ## Custom Logos
 

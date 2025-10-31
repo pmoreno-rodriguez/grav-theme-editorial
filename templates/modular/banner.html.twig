@@ -2,16 +2,17 @@
 {% set image = page.media[header.featured_image] ?: page.media.images|first %}
 {% set show_title = header_var('show_title')|defined(true) %}
 {% set page_title = page.title %}
+{% set title_htag = page.header.title_htag|default('h2') %}
 
 <section id="banner">
     <div class="content">
         <header>
-        {% if show_title %}<h2>{{ page_title|e }}</h2>{% endif %}
+        {% if show_title %}<{{ title_htag }}>{{ page_title|e }}</{{ title_htag }}>{% endif %}
         {% if page.header.subtitle %}
             {{ page.header.subtitle|markdown }}
         {% endif %}
         </header>
-        {{page.content|raw}}
+        {{ page.content|raw }}
         {% if page.header.button_text is not null or page.header.button_url is not null %}
         <ul class="actions">
             <li><a href="{{ page.header.button_url|e('html_attr') }}" class="button big">{{ page.header.button_text|e }}</a></li>
@@ -20,7 +21,7 @@
     </div>
     {% if show_image == true and image ?? null %}
         <span class="image object">
-            {{ image.cropZoom(736,512).loading('lazy').decoding('async').html(page_title,page_title,'')|raw }}
+            {{ image.cropZoom(736, 512).loading('lazy').decoding('async').html(page_title, page_title, '')|raw }}
         </span>
     {% endif %}
 </section>

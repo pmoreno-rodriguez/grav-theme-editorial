@@ -158,6 +158,8 @@ EDITORIAL:
           SECTION: Options de bannière
           BUTTON_TEXT: Texte du bouton
           BUTTON_URL: URL du bouton
+          TITLE_HTAG: Titre HTML Tag
+          TITLE_HTAG_HELP: Sélectionnez la balise HTML à utiliser pour le titre de la bannière
         FEATURES:
           TAB: Fonctionnalités
           ICON: Icône

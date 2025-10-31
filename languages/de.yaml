@@ -158,6 +158,8 @@ EDITORIAL:
           SECTION: Banner-Optionen
           BUTTON_TEXT: Button-Text
           BUTTON_URL: Button-URL
+          TITLE_HTAG: Titel HTML-Tag
+          TITLE_HTAG_HELP: Wählen Sie das HTML-Tag aus, das für den Bannertitel verwendet werden soll 
         FEATURES:
           TAB: Features
           ICON: Icon

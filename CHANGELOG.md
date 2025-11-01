@@ -1,3 +1,11 @@
+# v3.0.1
+## 11/01/2025
+
+1. [](#new)
+   * New option to choose the banner's HTML headings
+2. [](#improved)
+   * Standardized Twig template formatting using [CS fixer tool](https://github.com/VincentLanglet/Twig-CS-Fixer)
+
 # v3.0.0
 ## 10/28/2025
 
@@ -18,7 +26,6 @@
    * **Updated README**: Comprehensive documentation update with new features
 3. [](#bugfix)
    * Fixed recent posts displayed in the sidebar (only published posts are shown) [#72](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/72)
-
 
 # v2.4.1
 ## 10/05/2025

@@ -1,7 +1,7 @@
 <ul class="icons" {% if right_sidebar %} style="right: unset; left: -0.5em;" {% endif %}>
   {% for item in theme_config.social %}
     {% set icon_class = item.icon_type|default('brands') %}
-    {% if item.icon != "mastodon" %}
+    {% if item.icon != 'mastodon' %}
       <li><a href="{{ item.url }}" class="icon {{ icon_class }} {{ item.icon }}" title="{{ item.name }}" target="{{ item.target }}"><span class="label">{{ item.name }}</span></a></li>
     {% else %}
       <li><a href="{{ item.url }}" rel="me" class="icon {{ icon_class }} {{ item.icon }}" title="{{ item.name }}" target="{{ item.target }}"><span class="label">{{ item.name }}</span></a></li>

@@ -14,21 +14,21 @@
             <a class="button logout" href="{{ uri.addNonce(base_url_relative ~ uri.path ~ '/task' ~ config.system.param_sep ~ 'login.logout', 'logout-form', 'logout-nonce')|e }}">{{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }}</a>
 
         {% elseif user.authenticated and user.twofa_enabled %}
-            {% include 'partials/login-twofa.html.twig' %}
+            {{ include('partials/login-twofa.html.twig') }}
 
         {% else %}
             {{ content|raw }}
 
             {# NEW WAY OF INCLUDING 3RD PARTY LOGIN OPTIONS #}
             {% for template in grav.login.getProviderLoginTemplates %}
-                {% include template %}
+                {{ include(template) }}
             {% endfor %}
             <form method="post" action="{{ (base_url_relative ~ uri.path)|e }}" class="{{ form_outer_classes }} row gtr-50 gtr-uniform">
 
                 {# OLD WAY OF INCLUDING 3RD PARTY LOGIN OPTIONS #}
                 {% if grav.twig.plugins_hooked_loginPage %}
                     {% for label in grav.twig.plugins_hooked_loginPage %}
-                        {% include label %}
+                        {{ include(label) }}
                     {% endfor %}
                 {% endif %}
 
@@ -40,7 +40,7 @@
                       {% set field_templates = include_form_field(field.type, field_layout) %}
                       {% block field %}
                         <div class="col-12">
-                        {% include field_templates ignore missing %}
+                        {{ include(field_templates, [], true, true) }}
                         </div>
                       {% endblock %}
                     {% endif %}

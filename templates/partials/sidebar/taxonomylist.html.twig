@@ -6,7 +6,7 @@
         <h2>{{ 'EDITORIAL.SIDEBAR.TAXONOMYLIST.LABEL'|t }}</h2>
     </header>
     <ul class="tags">
-        {% for tax,value in taxlist[taxonomy] %}
+        {% for tax, value in taxlist[taxonomy] %}
             {% set label_class = uri.param(taxonomy) == tax ? 'warning' : 'primary' %}
             <li>
                 <a class="button medium {{ label_class }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax|e('url') }}">{{ tax|e }}</a>

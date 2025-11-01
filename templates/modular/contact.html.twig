@@ -1,5 +1,5 @@
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set page_title = page.title  %}
+{% set page_title = page.title %}
 {% set address_details = page.header.addressDetails %}
 
 <section id="contact">
@@ -8,11 +8,11 @@
     {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
 </header>
     {{ page.content|raw }}
-    {% include "forms/form.html.twig" with { form: forms('contact-form')} %}
+    {{ include('forms/form.html.twig', {form: forms('contact-form')}) }}
     {% if address_details %}
-	<div>
+    <div>
         <hr>
-		{{ address_details|markdown|shortcodes|raw }}
-	</div>
-	{% endif %}
+        {{ address_details|markdown|shortcodes|raw }}
+    </div>
+    {% endif %}
 </section>

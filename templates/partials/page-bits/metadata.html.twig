@@ -51,7 +51,7 @@ Canonical & URLs
      Description
      ------------------------- #}
     {% set meta_description = null %}
-    
+
     {# Priority: page.header.metadata > page summary > site description (if fallback enabled) #}
     {% if header.metadata.description is defined and header.metadata.description %}
         {% set meta_description = header.metadata.description %}
@@ -60,10 +60,10 @@ Canonical & URLs
     {% elseif description_fallback and site.metadata.description %}
         {% set meta_description = site.metadata.description %}
     {% endif %}
-    
+
     {% if meta_description %}
         {% set clean_description = meta_description|striptags|trim %}
-        
+
         {# Apply truncation #}
         {% if description_summarization == 'smart' %}
             {% set sentences = clean_description|split('.') %}
@@ -83,7 +83,7 @@ Canonical & URLs
                 {% set clean_description = words|slice(0, description_length)|join(' ') ~ '...' %}
             {% endif %}
         {% endif %}
-        
+
         <meta name="description" content="{{ clean_description|e }}">
         {% if facebook_enabled %}
         <meta property="og:description" content="{{ clean_description|e }}">
@@ -132,11 +132,11 @@ Canonical & URLs
         <meta property="og:type" content="{{ og_type }}">
         <meta property="og:site_name" content="{{ site.title|e }}">
         <meta property="og:locale" content="{{ lang }}">
-        
+
         {% if facebook_app_id %}
         <meta property="fb:app_id" content="{{ facebook_app_id }}">
         {% endif %}
-        
+
         {# Article metadata #}
         {% if og_type == 'article' %}
             {% if page.date %}
@@ -151,7 +151,7 @@ Canonical & URLs
             <meta property="article:author" content="{{ site.author.name }}">
             {% endif %}
             {% if page.taxonomy.tag %}
-                {% for tag in page.taxonomy.tag|slice(0,5) %}
+                {% for tag in page.taxonomy.tag|slice(0, 5) %}
                 <meta property="article:tag" content="{{ tag }}">
                 {% endfor %}
             {% endif %}
@@ -163,12 +163,12 @@ Canonical & URLs
      ------------------------- #}
     {% if twitter_enabled %}
         <meta name="twitter:card" content="{{ twitter_card_type }}">
-        
+
         {% if twitter_site %}
             {% set twitter_handle = twitter_site starts with '@' ? twitter_site : '@' ~ twitter_site %}
             <meta name="twitter:site" content="{{ twitter_handle }}">
         {% endif %}
-        
+
         {# Twitter Creator - Specific Twitter handle #}
         {% if page.header.seo.twitter_creator %}
             {% set creator_handle = page.header.seo.twitter_creator %}
@@ -177,7 +177,7 @@ Canonical & URLs
                 {% set creator_handle = '@' ~ creator_handle %}
             {% endif %}
             <meta name="twitter:creator" content="{{ creator_handle|e }}">
-            
+
         {% elseif site.metadata.twitter_creator %}
             {# Fallback to global site creator #}
             {% set creator_handle = site.metadata.twitter_creator %}
@@ -207,35 +207,35 @@ Canonical & URLs
     {% if json_ld_enabled %}
         {% set author_name = page.taxonomy.author|first ?: site.author.name ?: 'Unknown' %}
         {% set schema_type = page.template() == 'item' ? 'BlogPosting' : 'WebPage' %}
-        
+
         <script type="application/ld+json">
         {{ {
-            "@context": "https://schema.org",
-            "@type": schema_type,
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": canonical_url
+            '@context': 'https://schema.org',
+            '@type': schema_type,
+            mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': canonical_url,
             },
-            "headline": meta_title,
-            "image": seo_image ? url(seo_image.url, true) : '',
-            "datePublished": page.date ? page.date|date('c') : '',
-            "dateModified": page.modified ? page.modified|date('c') : '',
-            "inLanguage": lang,
-            "wordCount": page.content ? page.content|wordcount : 0,
-            "author": {
-                "@type": "Person",
-                "name": author_name
+            headline: meta_title,
+            image: seo_image ? url(seo_image.url, true) : '',
+            datePublished: page.date ? page.date|date('c') : '',
+            dateModified: page.modified ? page.modified|date('c') : '',
+            inLanguage: lang,
+            wordCount: page.content ? page.content|wordcount : 0,
+            author: {
+                '@type': 'Person',
+                name: author_name,
             },
-            "publisher": {
-                "@type": "Organization",
-                "name": site.title,
-                "logo": seo_image ? {
-                    "@type": "ImageObject",
-                    "url": url(seo_image.url, true)
-                } : null
+            publisher: {
+                '@type': 'Organization',
+                name: site.title,
+                logo: seo_image ? {
+                    '@type': 'ImageObject',
+                    url: url(seo_image.url, true),
+                } : null,
             },
-            "description": clean_description|default('')
-        } | json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')) | raw }}
+            description: clean_description|default(''),
+        }|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES'))|raw }}
         </script>
     {% endif %}
 

@@ -5,7 +5,7 @@
     </header>
         {{ theme_config.contact.text|markdown }}
     <ul class="contact">
-        
+
         {% if theme_config.contact.email %}
         <li class="icon solid fa-envelope"><a href="mailto:{{ theme_config.contact.email|safe_email }}">{{ theme_config.contact.email|safe_email }}</a></li>
         {% endif %}
@@ -13,7 +13,7 @@
         {% if theme_config.contact.phone %}
         <li class="icon solid fa-phone">{{ theme_config.contact.phone|e }}</li>
         {% endif %}
-        
+
         {% if theme_config.contact.street %}
         <li class="icon solid fa-home">{{ theme_config.contact.street|markdown(false) }}<br />
         {{ theme_config.contact.city|e }}, {{ theme_config.contact.state|e }} {{ theme_config.contact.zip|e }}

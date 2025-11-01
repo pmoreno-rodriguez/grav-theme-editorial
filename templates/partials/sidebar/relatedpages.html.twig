@@ -12,7 +12,7 @@
                             {% if related_image is not empty %}
                                 <div class="col-4">
                                     <a class="image" aria-label="{{ related.title|e('html_attr') }}" href="{{ related.url }}">
-                                        {{ related_image.cropZoom(64,48).loading('lazy').decoding('async').html|raw }}
+                                        {{ related_image.cropZoom(64, 48).loading('lazy').decoding('async').html|raw }}
                                     </a>
                                 </div>
                             {% endif %}

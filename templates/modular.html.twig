@@ -9,7 +9,7 @@
         jQuery(document).ready(function($) {
           function scrollToSection(event) {
             event.preventDefault();
-            var $section = $($(this).attr('href')); 
+            var $section = $($(this).attr('href'));
             $('html, body').animate({
               scrollTop: $section.offset().top - 60
             }, 500);
@@ -52,8 +52,8 @@
                 {% endif %}
                 </ul>
             {% else %}
-                {% include 'partials/sidebar/navigation.html.twig' %}
+                {{ include('partials/sidebar/navigation.html.twig') }}
             {% endif %}
-        {% endblock %}   
+        {% endblock %}
 {% endembed %}
 {% endblock %}

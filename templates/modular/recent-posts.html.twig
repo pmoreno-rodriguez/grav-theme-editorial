@@ -2,7 +2,7 @@
 {% set limit = page.header.limit|default(3) %}
 {% set readmore_txt = page.header.readmore_text|default('Read more') %}
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set page_title = page.title  %}
+{% set page_title = page.title %}
 
 <section>
     <header class="major">
@@ -15,9 +15,8 @@
             {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
             {% set page_title = p.title %}
             {% set Htag_title = 'h3' %}
-            {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': p } ) %}
-            {% include 'partials/blog-list-item.html.twig' with { 'page': p, image, page_title, datestamp, show_image: true } %}
+            {% set datestamp = include('partials/page-bits/date.html.twig', {page: p}) %}
+            {{ include('partials/blog-list-item.html.twig', {page: p, image: image, page_title: page_title, datestamp: datestamp, show_image: true}) }}
         {% endfor %}
     </div>
 </section>
-

@@ -36,9 +36,9 @@
 {% block content %}
 
 <article>
-  {% include 'partials/messages.html.twig' %}
+  {{ include('partials/messages.html.twig') }}
   {{ page.content|raw }}
-  {% include 'forms/form.html.twig' %}
+  {{ include('forms/form.html.twig') }}
 </article>
 
 {% endblock %}

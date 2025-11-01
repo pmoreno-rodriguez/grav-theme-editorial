@@ -32,8 +32,8 @@
 {% endblock %}
 
 {% block content %}
-	<article>
-	    {{ page.content|raw }}
-      {% include "forms/form.html.twig" %}
-	</article>
+    <article>
+        {{ page.content|raw }}
+      {{ include('forms/form.html.twig') }}
+    </article>
 {% endblock %}

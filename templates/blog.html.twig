@@ -8,13 +8,13 @@
 
 {# Set page title by taxonomy #}
 {% if uri.param('category') %}
-	{% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_CATEGORY'|t ~ uri.param('category') %}
+    {% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_CATEGORY'|t ~ uri.param('category') %}
 {% elseif uri.param('tag') %}
-	{% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
+    {% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
 {% elseif uri.param('author') %}
-	{% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
+    {% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
 {% elseif uri.param('archives_month') %}
-    {% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({'_': ' '}) %}
+    {% set listing_title = 'EDITORIAL.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({_: ' '}) %}
 {% else %}
     {% set listing_title = page.header.subtitle %}
 {% endif %}
@@ -22,15 +22,15 @@
 {% block content %}
 
     {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-        {% include 'partials/breadcrumbs.html.twig' %}
+        {{ include('partials/breadcrumbs.html.twig') }}
     {% endif %}
-    
+
     <header class="main">
         {% if show_image and image %}
-	    <span class="image main">
-		{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(page_title,page_title,'')|raw }}
-	    </span>
-	{% endif %}
+        <span class="image main">
+        {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(page_title, page_title, '')|raw }}
+        </span>
+    {% endif %}
         {% if show_title %}<h1>{{ page_title|e }}</h1>{% endif %}
         {% if listing_title %}{{ listing_title|markdown }}{% endif %}
     </header>
@@ -41,15 +41,15 @@
         {% for child in collection %}
             {% set image_child = child.media[header.featured_image] ?: child.media.images|first %}
             {% set child_showImage = child.header.show_pageimage|defined(true) %}
-            {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': child }) %}
+            {% set datestamp = include('partials/page-bits/date.html.twig', {page: child}) %}
             {% set Htag_title = 'h2' %}
-            {% include 'partials/blog-list-item.html.twig' with { page: child, 'show_image': child_showImage, 'image': image_child, 'page_title': child.title } %}
+            {{ include('partials/blog-list-item.html.twig', {page: child, show_image: child_showImage, image: image_child, page_title: child.title}) }}
         {% endfor %}
     </div>
     {# Render the pagination list #}
     {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
     <div class="align-center">
-        {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+        {{ include('partials/pagination.html.twig', {base_url: page.url, pagination: collection.params.pagination}) }}
     </div>
     {% endif %}
 

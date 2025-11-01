@@ -1,5 +1,5 @@
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set page_title = page.title  %}
+{% set page_title = page.title %}
 
 <section>
 <header class="major">
@@ -11,7 +11,7 @@
     <div class="features">
     {% for feature in page.header.features %}
         <article>
-            
+
                 {% if feature.icon %}<span class="icon {{ feature.icon }}"></span>{% endif %}
                 <div class="content">
                     {% if feature.title %}
@@ -25,7 +25,7 @@
                     {% endif %}
                     {% if feature.text %}<p>{{ feature.text|markdown }}</p>{% endif %}
                 </div>
-            
+
         </article>
     {% endfor %}
      </div>

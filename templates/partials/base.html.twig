@@ -10,12 +10,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 Ported to Grav by Pedro Moreno <https://github.com/pmoreno-rodriguez>
 https://github.com/pmoreno-rodriguez/grav-theme-editorial
 
-{%if theme_name %}
+{% if theme_name %}
 Theme name: {{ theme_name }}
 {% endif %}
 {% if version %}
 Version: v{{ version }}
-{% endif %} 
+{% endif %}
 -->
 
 {# SET THEME OPTIONS #}
@@ -31,7 +31,7 @@ Version: v{{ version }}
 
 {# Tile settings #}
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set page_title = page.title  %}
+{% set page_title = page.title %}
 
 {# SET PAGE OPTIONS #}
 {% set show_image = header_var('show_pageimage')|defined(true) %}
@@ -46,12 +46,12 @@ Version: v{{ version }}
 <html lang="{{ lang }}">
 <!-- HEAD SECTION -->
 <head>
-{% include 'partials/page-bits/head.html.twig' with { favicon } %}
-{% block stylesheets %} 
-    {% include 'partials/page-bits/head-styles.html.twig' with { compress, google_fonts } %}
+{{ include('partials/page-bits/head.html.twig', {favicon: favicon}) }}
+{% block stylesheets %}
+    {{ include('partials/page-bits/head-styles.html.twig', {compress: compress, google_fonts: google_fonts}) }}
 {% endblock %}
-{% block javascripts %} 
-    {% include 'partials/page-bits/head-scripts.html.twig' %}
+{% block javascripts %}
+    {{ include('partials/page-bits/head-scripts.html.twig') }}
 {% endblock %}
 {% block assets deferred %}
     {{ assets.css()|raw }}
@@ -67,12 +67,12 @@ Version: v{{ version }}
             <div class="inner">
                 <!-- Header -->
                 {% block header %}
-                    {% include 'partials/header.html.twig' %}
+                    {{ include('partials/header.html.twig') }}
                 {% endblock %}
                 <!-- Content -->
                 <section>
                     {% block messages %}
-                        {% include 'partials/messages.html.twig' ignore missing %}
+                        {{ include('partials/messages.html.twig', [], true, true) }}
                     {% endblock %}
 
                     {% block content %}{% endblock %}
@@ -80,7 +80,7 @@ Version: v{{ version }}
             </div>
         </main>
         {% block sidebar %}
-            {% include 'partials/sidebar.html.twig' %}
+            {{ include('partials/sidebar.html.twig') }}
         {% endblock %}
     </div>
 

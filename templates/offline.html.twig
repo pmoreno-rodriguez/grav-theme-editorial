@@ -2,12 +2,12 @@
 
 {% block content %}
 
-  <header class="main">   
-	  <h1><a href="{{ home_url }}">{{ site.title|e }}</a></h1>
+  <header class="main">
+      <h1><a href="{{ home_url }}">{{ site.title|e }}</a></h1>
     <h2>Error {{ page.header.http_response_code }}</h2>
-	</header>
-	<div>
-	    {{ page.content|raw }}
-	</div>
-  
+    </header>
+    <div>
+        {{ page.content|raw }}
+    </div>
+
 {% endblock %}

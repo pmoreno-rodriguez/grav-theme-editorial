@@ -9,7 +9,7 @@
 {% block content %}
 
     {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-        {% include 'partials/breadcrumbs.html.twig' %}
+        {{ include('partials/breadcrumbs.html.twig') }}
     {% endif %}
 
 <article itemscope itemtype="http://schema.org/Article">
@@ -27,10 +27,10 @@
         {% endfor %}
         </small>{% endif %}
         </p>
-        
+
     </header>
     {% if show_image and image %}
-        <span class="image main" itemprop="image">{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(page_title,page_title,'image')|raw }}</span>
+        <span class="image main" itemprop="image">{{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(page_title, page_title, 'image')|raw }}</span>
     {% endif %}
     <div itemprop="articleBody">
         {{ page.content|raw }}
@@ -42,13 +42,13 @@
                 <span>
                 <i class="fas fa-tags"></i>
                     {% for tag in page.taxonomy.tag %}
-                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_IN'|t }} {{ (tag|capitalize)|e }}" 
+                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_IN'|t }} {{ (tag|capitalize)|e }}"
                         href="{{ new_base_url }}/tag{{ config.system.param_sep }}{{ tag|e('url') }}"><span itemprop="keywords">{{ tag|capitalize|e }}</span></a>
                         {% if not loop.last %}, {% endif %}
                     {% endfor %}
                 </span>
                 {% endif %}
-                
+
                 {% if page.taxonomy.category %}
                 <span>
                     <i class="fas fa-link fa-md"></i>
@@ -59,46 +59,46 @@
                     {% endfor %}
                 </span>
                 {% endif %}
-                
+
                 {% if page.taxonomy.author %}
                 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <i class="fas fa-user fa-md"></i>
                     {% for author in page.taxonomy.author %}
-                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_OF'|t }} {{ (author|titleize)|e }}" 
+                        <a class="tags" title="{{ 'EDITORIAL.ITEM.SEE_OTHER_POSTS_OF'|t }} {{ (author|titleize)|e }}"
                         href="{{ new_base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url"><span class="name" itemprop="name" rel="author">{{ author|titleize }}</span></a>
                         {% if not loop.last %}, {% endif %}
                     {% endfor %}
                 </span>
                 {% endif %}
-                        
+
             </p>
         </div>
         <div class="col-6 col-12-small align-right">
             <ul class="icons">
                 {% set share = [
-                    { 'name': 'facebook', 'icon': 'fa-facebook', 'enabled': header_var('shareicons.facebook')|defined(true), 'url': 'https://www.facebook.com/sharer/sharer.php?', 'params': {'u': page.url(true)} },
-                    { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?', 'params': {'text': page_title, 'url': page.url(true)} },
-                    { 'name': 'whatsapp', 'icon': 'fa-whatsapp', 'enabled': header_var('shareicons.whatsapp')|defined(true), 'url': 'https://wa.me/?', 'params': {'text': title ~ '. ' ~ page.url(true)}, 'action': 'share/whatsapp/share' },
-                    { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?', 'params': {'url': page.url(true), 'text': page_title} },
+                    {name: 'facebook', icon: 'fa-facebook', enabled: header_var('shareicons.facebook')|defined(true), url: 'https://www.facebook.com/sharer/sharer.php?', params: {u: page.url(true)}},
+                    {name: 'twitter', icon: 'fa-twitter', enabled: header_var('shareicons.twitter')|defined(true), url: 'https://twitter.com/intent/tweet?', params: {text: page_title, url: page.url(true)}},
+                    {name: 'whatsapp', icon: 'fa-whatsapp', enabled: header_var('shareicons.whatsapp')|defined(true), url: 'https://wa.me/?', params: {text: title ~ '. ' ~ page.url(true)}, action: 'share/whatsapp/share'},
+                    {name: 'telegram', icon: 'fa-telegram', enabled: header_var('shareicons.telegram')|defined(true), url: 'https://t.me/share/url?', params: {url: page.url(true), text: page_title}},
                 ] %}
                 {% for item in share %}
                     {% if item.enabled|defined(true) %}
-                    <li><a class="icon brands {{ item.icon }}" target="_blank" href="{{- item.url -}}{{- item.params|url_encode-}}" {% if item.action is defined %}data-action="{{ item.action }}"{% endif %} 
-                        aria-label="{{ 'EDITORIAL.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}" 
+                    <li><a class="icon brands {{ item.icon }}" target="_blank" href="{{- item.url -}}{{- item.params|url_encode -}}" {% if item.action is defined %}data-action="{{ item.action }}"{% endif %}
+                        aria-label="{{ 'EDITORIAL.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}"
                         title="{{ 'EDITORIAL.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}"></a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
         </div>
     </div>
-    
+
     {# Show Comments if plugin is enabled #}
     {% if config.plugins.comments.enabled %}
     <div>
-        {% include 'partials/comments.html.twig' with {'page': page} %}
+        {{ include('partials/comments.html.twig', {page: page}) }}
     </div>
     {% endif %}
-    
+
     {% if show_pagination %}
     <p class="align-center">
         {% if not page.isLast %}

@@ -1,11 +1,11 @@
 {% extends 'partials/base.html.twig' %}
 
 {# Set gallery options #}
-{% set columns = 
+{% set columns =
     page.header.layout == 'medium' ? 'col-6 col-12-small' :
     page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' :
     page.header.layout == 'compact' ? 'col-3 col-6-medium col-12-small' :
-    'col-4 col-6-medium col-12-small' 
+    'col-4 col-6-medium col-12-small'
 %}
 {% set images_gallery = page.header.images %}
 {% set videos_gallery = page.header.videos %}
@@ -63,16 +63,16 @@
     <header class="main">
         {% if show_image and image %}
             <span class="image main">
-                {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(page_title,titpage_titlele,'image')|raw }}
+                {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(page_title, titpage_titlele, 'image')|raw }}
             </span>
         {% endif %}
         {% if show_title %}<h1>{{ page_title|e }}</h1>{% endif %}
         {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
     </header>
     <div style="margin-bottom: 4em">
-    {{ page.content|raw}}
+    {{ page.content|raw }}
     </div>
-    
+
     <!-- Gallery -->
     <section itemscope itemtype="http://schema.org/ImageGallery">
         <div class="row aln-center">
@@ -81,35 +81,35 @@
                     {% set item_image = page.media[item.image] %}
                     {% set item_title = item.title %}
                     {% set item_desc = item.description %}
-                    {% set img_thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title,'gallery_content-image') %}
-                    {% set zoomable = page.header.zoomable == 1 ? "true" : "false"  %}
-                    {% set draggable = page.header.draggable == 1 ? "true" : "false"  %}
+                    {% set img_thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop', 'http://schema.org/image').html(item_title, item_title, 'gallery_content-image') %}
+                    {% set zoomable = page.header.zoomable == 1 ? 'true' : 'false' %}
+                    {% set draggable = page.header.draggable == 1 ? 'true' : 'false' %}
                     {% set descPosition = item.descPosition|default('bottom') %}
-                    
-                    <div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
+
+                    <div class="gallery_container {{ columns }}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
                         <div class="gallery_content">
-                            <a href="{{item_image.url}}" class="{{ selector }}" 
-                                data-height="{{page.header.height}}" 
-                                data-width="{{page.header.width}}" 
-                                data-title="{{item_title}}" 
-                                data-description="{{item_desc|striptags|trim }}" 
-                                data-desc-position="{{descPosition}}" 
+                            <a href="{{ item_image.url }}" class="{{ selector }}"
+                                data-height="{{ page.header.height }}"
+                                data-width="{{ page.header.width }}"
+                                data-title="{{ item_title }}"
+                                data-description="{{ item_desc|striptags|trim }}"
+                                data-desc-position="{{ descPosition }}"
                                 data-zoomable="{{ zoomable }}"
                                 data-draggable="{{ draggable }}"
                                 data-type="image">
                             <div class="gallery_content-overlay"></div>
                                 {{ img_thumbnail|raw }}
                             <div class="gallery_content-details {{ page.header.overlay_hover_effect }}">
-                                {% if item_title %}<h3 class="gallery_content-title">{{item_title|e}}</h3>{% endif %}
-                                {% if item_desc %}<p class="gallery_content-text">{{item_desc|truncate(75)|striptags|trim}}</p>{% endif %}
+                                {% if item_title %}<h3 class="gallery_content-title">{{ item_title|e }}</h3>{% endif %}
+                                {% if item_desc %}<p class="gallery_content-text">{{ item_desc|truncate(75)|striptags|trim }}</p>{% endif %}
                             </div>
                             </a>
                         </div>
-                        {% if item_title %}<h3 class="title">{{item_title|e}}</h3>{% endif %}
+                        {% if item_title %}<h3 class="title">{{ item_title|e }}</h3>{% endif %}
                     </div>
                 {% endfor %}
             {% endif %}
-            
+
             {% if videos_gallery %}
                 {% for videoItem in videos_gallery %}
                     {% if videoItem.source == 'local' %}
@@ -121,25 +121,25 @@
                     {% if videoItem.local_thumbnail and page.media[videoItem.local_thumbnail] %}
                         {% set videoItemThumbnail = page.media[videoItem.local_thumbnail].cropZoom(thumb_w, thumb_h).html(videoItem.title, videoItem.title, 'gallery_content-image') %}
                     {% elseif videoItem.remote_thumbnail %}
-                        {% set videoItemThumbnail = 
+                        {% set videoItemThumbnail =
                             '<img src="' ~ videoItem.remote_thumbnail ~ '" ' ~
                             'alt="' ~ videoItem.title|e ~ '" ' ~
                             'class="gallery_content-image" ' ~
-                            'itemprop="http://schema.org/image" />' 
+                            'itemprop="http://schema.org/image" />'
                         %}
                     {% else %}
                         {% set videoItemThumbnail = '<div class="gallery_content-image no-thumbnail">' ~ videoItem.title|e ~ '</div>' %}
                     {% endif %}
-                    <div class="gallery_container {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
+                    <div class="gallery_container {{ columns }}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
                         <div class="gallery_content">
-                            <a 
-                            href="{{ videoURL }}" 
-                            class="{{ selector }}" 
-                            data-type="video" 
+                            <a
+                            href="{{ videoURL }}"
+                            class="{{ selector }}"
+                            data-type="video"
                             data-title="{{ videoItem.title|e }}"
                             data-description="{{ videoItem.description|striptags|trim }}"
                             >
-                            
+
                             {% if videoItemThumbnail %}
                             <div class="gallery_content-overlay"></div>
                             {{ videoItemThumbnail|raw }}
@@ -190,9 +190,9 @@
         {% if page.header.videos %}
         plyr: {
             config: {
-            autoplay: {{ page.header.autoplay_videos == 1 ? "true" : "false" }},
+            autoplay: {{ page.header.autoplay_videos == 1 ? 'true' : 'false' }},
             keyboard: true,
-            muted: {{ page.header.autoplay_videos ? "true" : "false" }},
+            muted: {{ page.header.autoplay_videos ? 'true' : 'false' }},
             ratio: '16:9',
             clickToPlay: true,
             hideControls: true,
@@ -219,6 +219,6 @@
     });
     {% endset %}
 
-    {% do assets.addJs('theme://assets/js/glightbox.min.js', {group:'bottom'}) %}
-    {% do assets.addInlineJs(script,{'group':'bottom'}) %}
+    {% do assets.addJs('theme://assets/js/glightbox.min.js', {group: 'bottom'}) %}
+    {% do assets.addInlineJs(script, {group: 'bottom'}) %}
 {% endblock %}

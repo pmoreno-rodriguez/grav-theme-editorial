@@ -1,8 +1,8 @@
 {# Set columns for team page #}
-{% set columns = page.header.layout == 'standard' ? 'col-4' : 'col-6'  %}
+{% set columns = page.header.layout == 'standard' ? 'col-4' : 'col-6' %}
 
 {% set show_title = header_var('show_title')|defined(true) %}
-{% set page_title = page.title  %}
+{% set page_title = page.title %}
 
 <section id="team">
 <header class="major">
@@ -19,7 +19,7 @@
     <div class="member {{ columns }}">
         <div class="text">
             {% set member_image = page.media[member.image] %}
-            {{ member_image.html(member.name,member.name,'')|raw }}
+            {{ member_image.html(member.name, member.name, '')|raw }}
             <h3>{{ member.name|e }}</h3>
             <p>{{ member.position|e }}</p>
             {{ member.details|markdown }}
@@ -27,10 +27,10 @@
         <div class="links">
             {% for item in member.social_media %}
             {# Fontawesome icons only work with brands family #}
-            <a class="icon brands fa-{{ item.name|lower|e }}" 
-            target="_blank" 
+            <a class="icon brands fa-{{ item.name|lower|e }}"
+            target="_blank"
             href="{{ item.url|e }}"
-            rel="noopener noreferrer" 
+            rel="noopener noreferrer"
             title="{{ item.name|e('html_attr') }}"
             aria-label="{{ item.name|e('html_attr') }}">
             </a>

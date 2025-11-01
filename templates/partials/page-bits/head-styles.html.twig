@@ -3,8 +3,8 @@
 {% set google_fonts = theme_var('google_fonts_local') ? '-local.css' : '-remote.css' %}
 
 {% block stylesheets %}
-    {% do assets.addCss('theme://assets/css/main' ~ compress, {'priority': 15}) %}
-    {% do assets.addCss('theme://assets/css/misc.css', {'priority': 10}) %}
-    {% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {'priority': 20}) %}
+    {% do assets.addCss('theme://assets/css/main' ~ compress, {priority: 15}) %}
+    {% do assets.addCss('theme://assets/css/misc.css', {priority: 10}) %}
+    {% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {priority: 20}) %}
     {% do assets.addCss('theme://assets/css/fontawesome-all.min.css', {rel: 'stylesheet'}) %}
 {% endblock %}

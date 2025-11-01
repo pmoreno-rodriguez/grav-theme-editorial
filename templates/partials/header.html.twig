@@ -7,7 +7,7 @@
 <header id="header">
     {% if logo_enabled and logo %}
         <!-- If logo is defined, include logo template here -->
-        {% include 'partials/logo.html.twig' %}
+        {{ include('partials/logo.html.twig') }}
     {% endif %}
     {% if page.home() %}
         <h1>
@@ -27,6 +27,6 @@
     {% endif %}
     {% if social %}
         <!-- If socials icons are defined, include template here -->
-        {% include 'partials/social.html.twig' %}
+        {{ include('partials/social.html.twig') }}
     {% endif %}
 </header>

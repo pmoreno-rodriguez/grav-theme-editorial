@@ -7,7 +7,7 @@
 
     <ul class="actions fit">
     {% if not grav.user.authenticated %}
-    <li><a href="{{ base_url_absolute }}{{config.plugins.login.route}}" class="button">{{ 'PLUGIN_LOGIN.BTN_LOGIN'|t }}</a></li>
+    <li><a href="{{ base_url_absolute }}{{ config.plugins.login.route }}" class="button">{{ 'PLUGIN_LOGIN.BTN_LOGIN'|t }}</a></li>
     {% else %}
     <li>{{ 'EDITORIAL.SIDEBAR.LOGGUED_AS'|t }}<strong>{{ grav.user.fullname ?: grav.user.username }}</strong></li>
     <li><a class="button" href="{{ url(uri.addNonce((uri.path)|trim('/') ~ '/task' ~ config.system.param_sep ~ 'login.logout', 'logout-form', 'logout-nonce'))|e }}">{{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }}</a></li>

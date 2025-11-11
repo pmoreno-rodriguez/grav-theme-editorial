@@ -251,6 +251,7 @@ pre code {
   overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
+  max-width: 100%;
 }
 
 hr {
@@ -524,6 +525,16 @@ ul.tags li {
   color: #2e3438 !important;
 }
 
+.box.white {
+  background-color: #ffffff;
+  box-shadow: none;
+  color: #2e3438 !important;
+}
+
+.box.white h1, .box.white h2, .box.white h3, .box.white h4, .box.white h5, .box.white h6 {
+  color: #2e3438 !important;
+}
+
 .box.alt {
   border: 0;
   border-radius: 0;
@@ -550,14 +561,13 @@ button,
   font-family: "Roboto Slab", serif;
   font-size: 0.8em;
   font-weight: 700;
-  height: 3.5em;
+  height: auto;
   letter-spacing: 0.075em;
-  line-height: 3.5em;
-  padding: 0 2.25em;
+  padding: 1em 2.25em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 input[type=submit]:hover,
@@ -615,7 +625,6 @@ button.large,
 .button.large {
   font-size: 1em;
   height: 3.65em;
-  line-height: 3.65em;
 }
 
 input[type=submit].primary,
@@ -1312,6 +1321,10 @@ input[type=radio] + label:before {
 
 .icon:before {
   line-height: inherit;
+}
+
+.icon.regular:before {
+  font-weight: 400;
 }
 
 .icon.solid:before {
@@ -3148,12 +3161,15 @@ table.alt tfoot {
   flex-grow: 1;
   -ms-flex-shrink: 1;
   flex-shrink: 1;
+  min-width: 0;
   width: 100%;
 }
 
 #main > .inner {
   padding: 0 6em 0.1em 6em;
   margin: 0 auto;
+  min-width: 0;
+  overflow-x: hidden;
   max-width: 110em;
 }
 

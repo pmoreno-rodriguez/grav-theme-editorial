@@ -14,11 +14,14 @@
 	#main {
 		@include vendor.vendor('flex-grow', '1');
 		@include vendor.vendor('flex-shrink', '1');
+		min-width: 0;
 		width: 100%;
 
 		> .inner {
 			@include mixins.padding(0, 6em);
 			margin: 0 auto;
+			min-width: 0;
+			overflow-x: hidden;
 			max-width: 110em;
 
 			> section {

@@ -90,6 +90,15 @@
 				color: functions.palette(fg-bold) !important;
 			}
 		}
+		&.white {
+			background-color: functions.palette(bg);
+			box-shadow: none;
+			color: functions.palette(fg-bold) !important;
+
+			h1,h2,h3,h4,h5,h6 {
+				color: functions.palette(fg-bold) !important;
+			}
+		}
 
 		&.alt {
 			border: 0;

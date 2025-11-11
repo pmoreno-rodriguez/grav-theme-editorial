@@ -21,6 +21,12 @@
 			line-height: inherit;
 		}
 
+		&.regular {
+			&:before {
+				font-weight: 400;
+			}
+		}
+
 		&.solid {
 			&:before {
 				font-weight: 900;

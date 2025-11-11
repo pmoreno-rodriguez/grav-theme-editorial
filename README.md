@@ -2,9 +2,11 @@
 
 The **Editorial** Theme is for [Grav CMS](http://github.com/getgrav/grav).  **Editorial** is a GravCMS port of the Editorial theme from HTML5Up.net.  The theme from HTML5Up.net is free for personal and commercial use under the [CCA 3.0 license](https://html5up.net/license).
 
-**If you enjoy this theme, please consider sponsoring:**
+### ❤️ Support This Project
 
-<a href="https://www.buymeacoffee.com/birdydesign" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+If you find this theme useful, consider supporting its development:
+
+[![Donate with PayPal](https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=A2H2GMZDJDKCC)
 
 ## Installation
 

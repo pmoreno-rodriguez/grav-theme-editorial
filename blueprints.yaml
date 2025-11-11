@@ -1,7 +1,7 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 3.0.1
+version: 3.0.2
 description: GravCMS port of the HTML5UP theme Editorial
 icon: text-width
 author:
@@ -16,7 +16,7 @@ readme: https://github.com/pmoreno-rodriguez/grav-theme-editorial/blob/develop/R
 license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.7.50' }
+  - { name: grav, version: '>=1.7.49.5' }
 
 form:
   validation: loose

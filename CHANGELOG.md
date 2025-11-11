@@ -1,3 +1,11 @@
+# v3.0.2
+## 11/11/2025
+
+1. [](#improved)
+   * Improved CSS styles
+   * Downgraded Grav version dependency from 1.7.50 to 1.7.49.5
+   * Added page content to the `modular.html.twig` template
+
 # v3.0.1
 ## 11/01/2025
 

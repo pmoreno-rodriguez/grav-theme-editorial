@@ -21,12 +21,17 @@
 {% endblock %}
 
 {% block content %}
-     {% for module in page.collection() %}
-        {% if show_onpage_menu == true %}
-            <div id="{{ module.menu|hyphenize }}"></div>
-        {% endif %}
-        {{ module.content|raw }}
-    {% endfor %}
+    {% if page.content %}
+        <section class="page-content">
+            {{ page.content|raw }}
+        </section>
+    {% endif %}
+    {% for module in page.collection() %}
+    {% if show_onpage_menu == true %}
+        <div id="{{ module.menu|hyphenize }}"></div>
+    {% endif %}
+    {{ module.content|raw }}
+{% endfor %}
 {% endblock %}
 
 {% block sidebar %}

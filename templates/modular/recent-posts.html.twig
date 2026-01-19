@@ -1,6 +1,6 @@
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set limit = page.header.limit|default(3) %}
-{% set readmore_txt = page.header.readmore_text|default('Read more') %}
+{% set readmore_txt = page.header.readmore_text|e|default('Read more') %}
 {% set show_title = header_var('show_title')|defined(true) %}
 {% set page_title = page.title %}
 

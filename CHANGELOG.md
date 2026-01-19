@@ -2,7 +2,7 @@
 ## 01/19/2026
 
 1. [](#improved)
-   * Re-added `wordcount` Twig filter as theme extension due to Grav core regression from v1.50 to v1.49.5
+   * Re-added `wordcount` Twig filter as theme extension due to Grav core regression from v1.7.50 to v1.7.49.5
    * Refactored `editorial.php` main theme class
 
 # v3.0.2

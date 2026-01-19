@@ -1,3 +1,9 @@
+# v3.1.0
+## 01/19/2026
+
+1. [](#improved)
+   * Re-added `wordcount` Twig filter as theme extension due to Grav core regression from v1.50 to v1.49.5
+
 # v3.0.2
 ## 11/11/2025
 

@@ -1,3 +1,12 @@
+# v3.2.0
+## 01/21/2025
+
+1. [](#new)
+    * Added theme configuration options to control featured posts ordering (sort field and direction)
+    * Added translations for new featured posts settings
+2. [](#bugfix)
+    * Fixed featured posts sidebar not updating correctly.
+
 # v3.1.0
 ## 01/19/2026
 

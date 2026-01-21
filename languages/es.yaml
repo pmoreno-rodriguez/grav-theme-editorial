@@ -79,6 +79,16 @@ EDITORIAL:
           NUMBER_DESCRIPTION: Número de publicaciones destacadas que se mostrarán en la barra lateral
           CATEGORY: Etiqueta Destacada
           CATEGORY_DESCRIPTION: Establecer nombre para la etiqueta destacada.<br />`Debes incluir este nombre en Opciones->Taxonomía->Etiqueta`
+          ORDER: "Ordenar por"
+          ORDER_DESCRIPTION: "Campo por el cual ordenar los posts destacados"
+          ORDER_DATE: "Fecha"
+          ORDER_MODIFIED: "Fecha de modificación"
+          ORDER_TITLE: "Título"
+          ORDER_FOLDER: "Nombre de carpeta"
+          DIRECTION: "Dirección de ordenación"
+          DIRECTION_DESCRIPTION: "Orden ascendente o descendente"
+          DIRECTION_DESC: "Descendente"
+          DIRECTION_ASC: "Ascendente"
         SOCIAL:
           TITLE: Redes Sociales
           TEXT: Incluye las URL completas de tus diversas presencias en redes sociales. Aparecerá un icono/enlace en la parte superior de la página para cada plataforma respectiva

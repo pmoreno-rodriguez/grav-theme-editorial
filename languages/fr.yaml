@@ -79,6 +79,16 @@ EDITORIAL:
           NUMBER_DESCRIPTION: Nombre d'articles en vedette qui seront affichés dans la barre latérale
           CATEGORY: Étiquette en vedette
           CATEGORY_DESCRIPTION: Définir le nom de l'étiquette en vedette.<br />`Vous devez inclure ce nom dans Options->Taxonomie->Étiquette`
+          ORDER: "Trier par"
+          ORDER_DESCRIPTION: "Champ pour trier les articles mis en avant"
+          ORDER_DATE: "Date"
+          ORDER_MODIFIED: "Date de modification"
+          ORDER_TITLE: "Titre"
+          ORDER_FOLDER: "Nom du dossier"
+          DIRECTION: "Direction du tri"
+          DIRECTION_DESCRIPTION: "Ordre croissant ou décroissant"
+          DIRECTION_DESC: "Décroissant"
+          DIRECTION_ASC: "Croissant"
         SOCIAL:
           TITLE: Réseaux sociaux
           TEXT: Inclure les URL complètes de vos différentes présences sur les réseaux sociaux. Une icône/lien apparaîtra en haut de la page pour chaque plateforme respective

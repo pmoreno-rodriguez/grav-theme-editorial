@@ -79,6 +79,16 @@ EDITORIAL:
           NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
           CATEGORY: Featured Tag
           CATEGORY_DESCRIPTION: Set name to featured tag.<br />`You must include this name in Options->Taxonomy->Tag`
+          ORDER: "Order by"
+          ORDER_DESCRIPTION: "Field to sort featured posts by"
+          ORDER_DATE: "Date"
+          ORDER_MODIFIED: "Modified date"
+          ORDER_TITLE: "Title"
+          ORDER_FOLDER: "Folder name"
+          DIRECTION: "Sort direction"
+          DIRECTION_DESCRIPTION: "Ascending or descending order"
+          DIRECTION_DESC: "Descending"
+          DIRECTION_ASC: "Ascending"
         SOCIAL:
           TITLE: Social Media
           TEXT: Include full url's to your various social media presences.  An icon/ link will appear at the top of the page for each respective platform.
@@ -202,6 +212,76 @@ EDITORIAL:
           TH_MODIFIED: Modified
           TH_DOWNLOAD: Download
           TD_BUTTON: Download
+        TABS:
+          TITLE: Tabs Module
+          CONTENT_TABS: Tabs Content
+          INSTRUCTIONS: |
+                <p><strong>📑 Tabs Configuration Guide</strong></p>
+
+                <p><strong>Basic Structure:</strong></p>
+                <ul>
+                <li>Each tab includes a title, optional icon, content, and an optional image</li>
+                <li>The first tab opens by default on desktop</li>
+                <li>Content supports full markdown formatting</li>
+                <li>Tabs automatically convert into accordions on mobile for better usability</li>
+                </ul>
+
+                <p><strong>🖼️ Media & Layout:</strong></p>
+                <ul>
+                <li>If an image is provided, layout adjusts automatically (50/50 split)</li>
+                <li>Alt text for images enhances accessibility</li>
+                <li>Tabs without images display full-width content</li>
+                </ul>
+
+                <p><strong>🎨 Styling Features:</strong></p>
+                <ul>
+                <li>Font Awesome icons in tab titles</li>
+                <li>Customizable alignment of tab navigation (left or center)</li>
+                <li>Color customization for default and active tabs</li>
+                <li>Buttons with configurable text, URL and custom CSS class</li>
+                <li>Includes responsive styling and graceful collapse into accordion mode</li>
+                </ul>
+
+                <p><strong>💡 Pro Tips:</strong></p>
+                <ul>
+                <li>Keep tab titles short for better desktop display</li>
+                <li>Use icons to enhance visual hierarchy and quick scanning</li>
+                <li>Split complex content across multiple tabs for clarity</li>
+                <li>Add a call-to-action button when relevant</li>
+                <li>Use markdown to structure rich content inside each tab</li>
+                </ul>
+
+                <p><em>All fields are optional except the title.</em></p>
+          INTRO_TEXT: Intro Text
+          INTRO_TEXT_HELP: Text to display above the tabs component.
+          ITEMS_LABEL: Items
+          ITEM_TITLE: Tab Title
+          ITEM_ICON: Icon class (Font Awesome)
+          ITEM_IMAGE: Tab Image
+          ITEM_IMAGE_ALT: Image ALT text
+          CONTENT_TITLE: Content Title
+          DESCRIPTION: Description (Markdown)
+          LINK_URL: Link URL
+          LINK_TEXT: Link Text
+          LINK_CLASS: Link CSS Class
+          STYLES_TAB: Tabs Styles
+          DEFAULT_BG: Default Background
+          DEFAULT_TEXT: Default Text
+          BORDER_COLOR: Border Color
+          LINK_COLOR: "Link Color"
+          LINK_COLOR_HELP: "Color of links within the tab content"
+          LINK_HOVER_COLOR: "Link Hover Color"
+          LINK_HOVER_COLOR_HELP: "Color of links when hovering over them"
+          LINK_HOVER_BG: "Tab Background (hover)"
+          LINK_HOVER_BG_HELP: "Background color of tabs when hovering over them"
+          ACTIVE_BG: Active Background
+          ACTIVE_TEXT: Active Text
+          ACCORDION_BG: Mobile Accordion BG
+          ACCORDION_TEXT: Mobile Accordion Text
+          ALIGNMENT: Tab Alignment
+          ALIGN_LEFT: Left
+          ALIGN_CENTER: Center
+          ALIGN_VERTICAL: "Vertical (Left Sidebar)"
       BLOG:
         TAB: Blog Config
         ROUTE: Blog Route

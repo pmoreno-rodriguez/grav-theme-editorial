@@ -1,8 +1,9 @@
 <!-- Section -->
-
 {% set featured_number = theme_var('featured_number') %}
 {% set featured_tag = theme_var('featured_tag') %}
-{% set featured = taxonomy.findTaxonomy({tag: featured_tag}) %}
+{% set featured_order = theme_var('featured_order') ?: 'date' %}
+{% set featured_dir = theme_var('featured_dir') ?: 'desc' %}
+{% set featured = taxonomy.findTaxonomy({tag: featured_tag}).order(featured_order, featured_dir) %}
 
 <section>
     <header class="major">
@@ -15,24 +16,23 @@
             {% set page_title = p.title %}
             {% if page.url != p.url %}
                 <article>
-                <a href="{{ p.url }}" class="featured-title"><h3>{{ page_title|e }}</h3></a>
-                {% if image %}
-                   <a class="image" href="{{ p.url }}" title="{{ title|e('html_attr') }}">{{ image.cropZoom(288, 174).loading('lazy').decoding('async').attribute('width', '300').html(page_title, page_title)|raw }}</a>
-                {% endif %}
-                <p>{{ p.summary|safe_truncate_html(25)|striptags|e }}</p>
-            </article>
+                    <a href="{{ p.url }}" class="featured-title"><h3>{{ page_title|e }}</h3></a>
+                    {% if image %}
+                        <a class="image" href="{{ p.url }}" title="{{ page_title|e('html_attr') }}">{{ image.cropZoom(288, 174).loading('lazy').decoding('async').attribute('width', '300').html(page_title, page_title)|raw }}</a>
+                    {% endif %}
+                    <p>{{ p.summary|safe_truncate_html(25)|striptags|e }}</p>
+                </article>
             {% endif %}
             {% endfor %}
         </div>
-
         <ul class="actions">
-            <li><a href="{{ blog }}/tag:{{ featured_tag|e('url') }}" class="button">{{ 'EDITORIAL.SIDEBAR.FEATURED_MORE'|t }}</a></li>
+            <li>
+                <a href="{{ blog }}/tag:{{ featured_tag|e('url') }}" class="button">{{ 'EDITORIAL.SIDEBAR.FEATURED_MORE'|t }}</a>
+            </li>
         </ul>
-
     {% else %}
-    <div class="mini-posts">
-        <p> {{ 'EDITORIAL.SIDEBAR.NO_FEATURED'|t }} </p>
-    </div>
-
+        <div class="mini-posts">
+            <p> {{ 'EDITORIAL.SIDEBAR.NO_FEATURED'|t }} </p>
+        </div>
     {% endif %}
 </section>

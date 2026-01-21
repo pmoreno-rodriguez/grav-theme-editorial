@@ -46,3 +46,25 @@ form:
       validate:
         min: 1
         max: 5
+
+    featured_order:
+      type: select
+      label: EDITORIAL.ADMIN.THEME.FEATURED.ORDER
+      description: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_DESCRIPTION
+      size: medium
+      default: date
+      options:
+        date: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_DATE
+        modified: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_MODIFIED
+        title: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_TITLE
+        folder: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_FOLDER
+
+    featured_dir:
+      type: select
+      label: EDITORIAL.ADMIN.THEME.FEATURED.DIRECTION
+      description: EDITORIAL.ADMIN.THEME.FEATURED.DIRECTION_DESCRIPTION
+      size: medium
+      default: desc
+      options:
+        desc: EDITORIAL.ADMIN.THEME.FEATURED.DIRECTION_DESC
+        asc: EDITORIAL.ADMIN.THEME.FEATURED.DIRECTION_ASC

@@ -1,5 +1,5 @@
 # v3.2.0
-## 01/21/2025
+## 01/21/2026
 
 1. [](#new)
     * Added theme configuration options to control featured posts ordering (sort field and direction)

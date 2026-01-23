@@ -1,3 +1,9 @@
+# v3.2.1
+## 01/23/2026
+
+1. [](#improved)
+    * Featured posts can now be sorted by publication date
+
 # v3.2.0
 ## 01/21/2026
 

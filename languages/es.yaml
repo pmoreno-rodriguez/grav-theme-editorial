@@ -81,7 +81,8 @@ EDITORIAL:
           CATEGORY_DESCRIPTION: Establecer nombre para la etiqueta destacada.<br />`Debes incluir este nombre en Opciones->Taxonomía->Etiqueta`
           ORDER: "Ordenar por"
           ORDER_DESCRIPTION: "Campo por el cual ordenar los posts destacados"
-          ORDER_DATE: "Fecha"
+          ORDER_DATE: "Fecha de creación"
+          ORDER_PUBLISH_DATE: "Fecha de publicación"
           ORDER_MODIFIED: "Fecha de modificación"
           ORDER_TITLE: "Título"
           ORDER_FOLDER: "Nombre de carpeta"

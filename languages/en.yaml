@@ -81,7 +81,8 @@ EDITORIAL:
           CATEGORY_DESCRIPTION: Set name to featured tag.<br />`You must include this name in Options->Taxonomy->Tag`
           ORDER: "Order by"
           ORDER_DESCRIPTION: "Field to sort featured posts by"
-          ORDER_DATE: "Date"
+          ORDER_DATE: "Creation date"
+          ORDER_PUBLISH_DATE: "Publication date"
           ORDER_MODIFIED: "Modified date"
           ORDER_TITLE: "Title"
           ORDER_FOLDER: "Folder name"

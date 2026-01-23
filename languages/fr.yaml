@@ -81,7 +81,8 @@ EDITORIAL:
           CATEGORY_DESCRIPTION: Définir le nom de l'étiquette en vedette.<br />`Vous devez inclure ce nom dans Options->Taxonomie->Étiquette`
           ORDER: "Trier par"
           ORDER_DESCRIPTION: "Champ pour trier les articles mis en avant"
-          ORDER_DATE: "Date"
+          ORDER_DATE: "Date de création"
+          ORDER_PUBLISH_DATE: "Date de publication"
           ORDER_MODIFIED: "Date de modification"
           ORDER_TITLE: "Titre"
           ORDER_FOLDER: "Nom du dossier"

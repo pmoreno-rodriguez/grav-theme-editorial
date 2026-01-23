@@ -45,7 +45,7 @@ form:
       default: 3
       validate:
         min: 1
-        max: 5
+        max: 6
 
     featured_order:
       type: select
@@ -56,6 +56,7 @@ form:
       options:
         date: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_DATE
         modified: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_MODIFIED
+        publish_date: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_PUBLISH_DATE
         title: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_TITLE
         folder: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_FOLDER
 

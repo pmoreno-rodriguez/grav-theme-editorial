@@ -1,38 +1,64 @@
 <!-- Section -->
+{# Featured Posts Sidebar Partial #}
+{# Parameters from theme configuration #}
 {% set featured_number = theme_var('featured_number') %}
 {% set featured_tag = theme_var('featured_tag') %}
-{% set featured_order = theme_var('featured_order') ?: 'date' %}
+{% set featured_order = theme_var('featured_order') ?: 'header.publish_date|date' %}
 {% set featured_dir = theme_var('featured_dir') ?: 'desc' %}
-{% set featured = taxonomy.findTaxonomy({tag: featured_tag}).order(featured_order, featured_dir) %}
+
+{# Base collection by taxonomy #}
+{% set collection = taxonomy.findTaxonomy({tag: featured_tag}).order(featured_order, featured_dir) %}
+
+{# Filter out current page #}
+{% set filtered_collection = [] %}
+{% for p in collection %}
+    {% if filtered_collection|length < featured_number %}
+        {% if page.url != p.url %}
+            {% set filtered_collection = filtered_collection|merge([p]) %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
 
 <section>
     <header class="major">
         <h2>{{ 'EDITORIAL.SIDEBAR.FEATURED_POSTS'|t }}</h2>
     </header>
-    {% if featured.count > 0 %}
+    {% if filtered_collection|length > 0 %}
         <div class="mini-posts">
-            {% for p in featured.slice(0, featured_number) %}
-            {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
-            {% set page_title = p.title %}
-            {% if page.url != p.url %}
-                <article>
-                    <a href="{{ p.url }}" class="featured-title"><h3>{{ page_title|e }}</h3></a>
-                    {% if image %}
-                        <a class="image" href="{{ p.url }}" title="{{ page_title|e('html_attr') }}">{{ image.cropZoom(288, 174).loading('lazy').decoding('async').attribute('width', '300').html(page_title, page_title)|raw }}</a>
-                    {% endif %}
-                    <p>{{ p.summary|safe_truncate_html(25)|striptags|e }}</p>
-                </article>
-            {% endif %}
-            {% endfor %}
+        {% for p in filtered_collection|slice(0, featured_number) %}
+        {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
+        {% set page_title = p.title %}
+            <article>
+                <a href="{{ p.url }}" class="featured-title">
+                    <h3>{{ page_title|e }}</h3>
+                </a>
+                {% if image %}
+                <a class="image" href="{{ p.url }}" title="{{ page_title|e('html_attr') }}">
+                    {{ image
+                        .cropZoom(288, 174)
+                        .loading('lazy')
+                        .decoding('async')
+                        .attribute('width', '288')
+                        .attribute('height', '174')
+                        .html(page_title, page_title)
+                        |raw
+                    }}
+                </a>
+                {% endif %}
+                <p>{{ p.summary|striptags|truncate(80) }}</p>
+            </article>
+        {% endfor %}
         </div>
         <ul class="actions">
             <li>
-                <a href="{{ blog }}/tag:{{ featured_tag|e('url') }}" class="button">{{ 'EDITORIAL.SIDEBAR.FEATURED_MORE'|t }}</a>
+                <a href="{{ blog }}/tag:{{ featured_tag|e('url') }}" class="button">
+                    {{ 'EDITORIAL.SIDEBAR.FEATURED_MORE'|t }}
+                </a>
             </li>
         </ul>
     {% else %}
         <div class="mini-posts">
-            <p> {{ 'EDITORIAL.SIDEBAR.NO_FEATURED'|t }} </p>
+            <p>{{ 'EDITORIAL.SIDEBAR.NO_FEATURED'|t }}</p>
         </div>
     {% endif %}
 </section>

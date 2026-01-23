@@ -81,7 +81,8 @@ EDITORIAL:
           CATEGORY_DESCRIPTION: Namen für Featured-Tag festlegen.<br />`Sie müssen diesen Namen in Optionen->Taxonomie->Tag einfügen`
           ORDER: "Sortieren nach"
           ORDER_DESCRIPTION: "Feld zum Sortieren der hervorgehobenen Beiträge"
-          ORDER_DATE: "Datum"
+          ORDER_DATE: "Erstellungsdatum"
+          ORDER_PUBLISH_DATE: "Veröffentlichungsdatum"
           ORDER_MODIFIED: "Änderungsdatum"
           ORDER_TITLE: "Titel"
           ORDER_FOLDER: "Ordnername"

@@ -45,7 +45,7 @@
                     }}
                 </a>
                 {% endif %}
-                <p>{{ p.summary|striptags|truncate(80) }}</p>
+                <p>{{ p.summary|striptags|truncate(80, true, ' ', '…') }}</p>
             </article>
         {% endfor %}
         </div>

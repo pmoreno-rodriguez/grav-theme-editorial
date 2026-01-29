@@ -2,12 +2,6 @@
 
 The **Editorial** Theme is for [Grav CMS](http://github.com/getgrav/grav).  **Editorial** is a GravCMS port of the Editorial theme from HTML5Up.net.  The theme from HTML5Up.net is free for personal and commercial use under the [CCA 3.0 license](https://html5up.net/license).
 
-### ❤️ Support This Project
-
-If you find this theme useful, consider supporting its development:
-
-[![Donate with PayPal](https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=A2H2GMZDJDKCC)
-
 ## Installation
 
 ### GPM Installation (Preferred)
@@ -332,3 +326,12 @@ You can read extra documentation of Editorial Theme at [https://pmoreno-rodrigue
 * Thanks to [Jeremy Gonyea](https://github.com/jgonyea), who ported the first Editorial theme for Grav.
 * This theme wouldn't be here without HTML5Up.net.  Many thanks to [AJ](mailto:aj@lkn.io) for creating the theme initially on that site.
 * Demo images came from [Unsplash](https://unsplash.com/es/@freys/)
+
+## ☕ Support this open-source project
+
+If you find this project useful and would like to support its development,
+you can buy me a coffee on Ko-fi:
+
+👉 https://ko-fi.com/pmoreno
+
+Thank you for supporting open-source software 🙌

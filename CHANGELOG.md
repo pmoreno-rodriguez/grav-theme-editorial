@@ -1,3 +1,9 @@
+# v3.2.3
+## 01/30/2026
+
+1. [](#bugfix)
+   * Fixed missing Open Sans italic font face when using locally hosted Google Fonts, preventing incorrect semibold italic rendering (thanks to [@rwamI](https://github.com/rwam)).
+
 # v3.2.2
 ## 01/30/2026
 

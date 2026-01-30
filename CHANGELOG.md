@@ -1,3 +1,9 @@
+# v3.2.2
+## 01/30/2026
+
+1. [](#improved)
+    * Improved Featured Posts sidebar summaries to ensure truncated text displays a proper ellipsis (`...`) instead of the escaped `&hellip;`.
+
 # v3.2.1
 ## 01/23/2026
 

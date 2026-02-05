@@ -172,3 +172,22 @@
 		color: inherit !important;
 		border-bottom-color: currentColor !important;
 	}
+
+	.modular-text-blocks .text-blocks-col {
+		display: flex;
+	}
+
+	.modular-text-blocks .text-blocks-item {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.modular-text-blocks .text-blocks-item--plain {
+		flex: 1 1 auto;
+	}
+
+	.modular-text-blocks .text-blocks-item .box {
+		flex: 1 1 auto;
+	}

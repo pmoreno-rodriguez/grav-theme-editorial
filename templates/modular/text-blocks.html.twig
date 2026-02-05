@@ -17,14 +17,18 @@
     {% for block in page.header.texts %}
         {% set box_style = block.box_style|default('default') %}
         {% set box_class = box_style == 'none' ? '' : (box_style == 'default' ? 'box' : 'box ' ~ box_style) %}
-        <div class="{{ columns }}">
+        <div class="{{ columns }} text-blocks-col">
             {% if box_style == 'none' %}
-                {% if block.title %}<h3>{{ block.title|e }}</h3>{% endif %}
-                {% if block.content %}{{ block.content|markdown }}{% endif %}
-            {% else %}
-                <div class="{{ box_class }}">
+                <div class="text-blocks-item text-blocks-item--plain">
                     {% if block.title %}<h3>{{ block.title|e }}</h3>{% endif %}
                     {% if block.content %}{{ block.content|markdown }}{% endif %}
+                </div>
+            {% else %}
+                <div class="text-blocks-item">
+                    <div class="{{ box_class }}">
+                        {% if block.title %}<h3>{{ block.title|e }}</h3>{% endif %}
+                        {% if block.content %}{{ block.content|markdown }}{% endif %}
+                    </div>
                 </div>
             {% endif %}
         </div>

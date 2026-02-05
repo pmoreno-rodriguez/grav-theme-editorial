@@ -12,7 +12,7 @@
     {% if show_title %}<h2>{{ page_title|e }}</h2>{% endif %}
     {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
 </header>
-
+{{ page.content|raw }}
 <div class="row">
     {% for block in page.header.texts %}
         {% set box_style = block.box_style|default('default') %}

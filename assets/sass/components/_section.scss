@@ -33,7 +33,12 @@
 		}
 
 		&.major {
-			> :last-child {
+			> h1,
+			> h2,
+			> h3,
+			> h4,
+			> h5,
+			> h6 {
 				border-bottom: solid 3px functions.palette(accent);
 				display: inline-block;
 				margin: 0 0 functions.size(element-margin) 0;

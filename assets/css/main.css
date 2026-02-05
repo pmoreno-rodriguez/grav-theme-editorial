@@ -3027,7 +3027,12 @@ header p time, header p small {
   font-size: 0.9em;
 }
 
-header.major > :last-child {
+header.major > h1,
+header.major > h2,
+header.major > h3,
+header.major > h4,
+header.major > h5,
+header.major > h6 {
   border-bottom: solid 3px #f56a6a;
   display: inline-block;
   margin: 0 0 2em 0;

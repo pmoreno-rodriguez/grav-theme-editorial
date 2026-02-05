@@ -1,0 +1,33 @@
+{% set columns =
+    page.header.layout == 'two' ? 'col-6 col-12-small' :
+    page.header.layout == 'three' ? 'col-4 col-6-medium col-12-small' :
+    'col-12'
+%}
+
+{% set show_title = header_var('show_title')|defined(true) %}
+{% set page_title = page.title %}
+
+<section class="modular-text-blocks">
+<header class="major">
+    {% if show_title %}<h2>{{ page_title|e }}</h2>{% endif %}
+    {% if page.header.subtitle %}{{ page.header.subtitle|markdown }}{% endif %}
+</header>
+
+<div class="row">
+    {% for block in page.header.texts %}
+        {% set box_style = block.box_style|default('default') %}
+        {% set box_class = box_style == 'none' ? '' : (box_style == 'default' ? 'box' : 'box ' ~ box_style) %}
+        <div class="{{ columns }}">
+            {% if box_style == 'none' %}
+                {% if block.title %}<h3>{{ block.title|e }}</h3>{% endif %}
+                {% if block.content %}{{ block.content|markdown }}{% endif %}
+            {% else %}
+                <div class="{{ box_class }}">
+                    {% if block.title %}<h3>{{ block.title|e }}</h3>{% endif %}
+                    {% if block.content %}{{ block.content|markdown }}{% endif %}
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+</section>

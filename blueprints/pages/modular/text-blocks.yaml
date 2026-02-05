@@ -1,0 +1,60 @@
+title: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.TAB
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+          fields:
+            header.page_index:
+              unset@: true
+        text_blocks:
+          type: tab
+          title: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.CONFIG_TAB
+          fields:
+            _TextSection:
+              type: section
+              underline: true
+              ordering@: _ContentOptions
+              title: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.SECTION
+            header.layout:
+              type: select
+              label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.LAYOUT.LABEL
+              size: small
+              default: one
+              options:
+                one: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.LAYOUT.ONE
+                two: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.LAYOUT.TWO
+                three: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.LAYOUT.THREE
+            header.texts:
+              name: texts
+              type: list
+              label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEMS
+              fields:
+                .title:
+                  type: text
+                  label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEM_TITLE
+                .box_style:
+                  type: select
+                  label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEM_BOX
+                  default: default
+                  options:
+                    none: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.NONE
+                    default: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.DEFAULT
+                    primary: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.PRIMARY
+                    secondary: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.SECONDARY
+                    success: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.SUCCESS
+                    info: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.INFO
+                    warning: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.WARNING
+                    danger: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.DANGER
+                    light: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.LIGHT
+                .content:
+                  type: textarea
+                  rows: 6
+                  label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEM_CONTENT
+                  help: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEM_CONTENT_HELP
+        seo:
+          unset@: true

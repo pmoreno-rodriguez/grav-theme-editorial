@@ -505,6 +505,17 @@ ul.tags li {
   color: #2e3438 !important;
 }
 
+.box.warning table tbody tr,
+.box.warning table thead,
+.box.warning table tfoot {
+  border-color: #2e3438 !important;
+}
+
+.box.warning table td,
+.box.warning table th {
+  border-color: #2e3438 !important;
+}
+
 .box.danger {
   background-color: #ff3860;
   box-shadow: none;
@@ -535,10 +546,115 @@ ul.tags li {
   color: #2e3438 !important;
 }
 
+.box.primary a,
+.box.primary a:visited,
+.box.primary a:hover,
+.box.primary a:active, .box.secondary a,
+.box.secondary a:visited,
+.box.secondary a:hover,
+.box.secondary a:active, .box.success a,
+.box.success a:visited,
+.box.success a:hover,
+.box.success a:active, .box.info a,
+.box.info a:visited,
+.box.info a:hover,
+.box.info a:active, .box.warning a,
+.box.warning a:visited,
+.box.warning a:hover,
+.box.warning a:active, .box.danger a,
+.box.danger a:visited,
+.box.danger a:hover,
+.box.danger a:active, .box.white a,
+.box.white a:visited,
+.box.white a:hover,
+.box.white a:active {
+  color: inherit;
+  border-bottom-color: currentColor;
+}
+
+.box.primary strong,
+.box.primary b, .box.secondary strong,
+.box.secondary b, .box.success strong,
+.box.success b, .box.info strong,
+.box.info b, .box.warning strong,
+.box.warning b, .box.danger strong,
+.box.danger b, .box.white strong,
+.box.white b {
+  color: inherit;
+}
+
+.box.primary th,
+.box.primary thead,
+.box.primary tfoot,
+.box.primary tr,
+.box.primary td, .box.secondary th,
+.box.secondary thead,
+.box.secondary tfoot,
+.box.secondary tr,
+.box.secondary td, .box.success th,
+.box.success thead,
+.box.success tfoot,
+.box.success tr,
+.box.success td, .box.info th,
+.box.info thead,
+.box.info tfoot,
+.box.info tr,
+.box.info td, .box.warning th,
+.box.warning thead,
+.box.warning tfoot,
+.box.warning tr,
+.box.warning td, .box.danger th,
+.box.danger thead,
+.box.danger tfoot,
+.box.danger tr,
+.box.danger td, .box.white th,
+.box.white thead,
+.box.white tfoot,
+.box.white tr,
+.box.white td {
+  color: inherit;
+}
+
+.box.primary ul,
+.box.primary ol,
+.box.primary li, .box.secondary ul,
+.box.secondary ol,
+.box.secondary li, .box.success ul,
+.box.success ol,
+.box.success li, .box.info ul,
+.box.info ol,
+.box.info li, .box.warning ul,
+.box.warning ol,
+.box.warning li, .box.danger ul,
+.box.danger ol,
+.box.danger li, .box.white ul,
+.box.white ol,
+.box.white li {
+  color: inherit;
+}
+
 .box.alt {
   border: 0;
   border-radius: 0;
   padding: 0;
+}
+
+.modular-text-blocks .box.primary a:hover,
+.modular-text-blocks .box.primary a:active,
+.modular-text-blocks .box.secondary a:hover,
+.modular-text-blocks .box.secondary a:active,
+.modular-text-blocks .box.success a:hover,
+.modular-text-blocks .box.success a:active,
+.modular-text-blocks .box.info a:hover,
+.modular-text-blocks .box.info a:active,
+.modular-text-blocks .box.warning a:hover,
+.modular-text-blocks .box.warning a:active,
+.modular-text-blocks .box.danger a:hover,
+.modular-text-blocks .box.danger a:active,
+.modular-text-blocks .box.white a:hover,
+.modular-text-blocks .box.white a:active {
+  color: inherit !important;
+  border-bottom-color: currentColor !important;
 }
 
 /* Button */
@@ -624,7 +740,6 @@ input[type=button].large,
 button.large,
 .button.large {
   font-size: 1em;
-  height: 3.65em;
 }
 
 input[type=submit].primary,

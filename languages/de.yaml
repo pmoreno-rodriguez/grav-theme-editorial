@@ -171,6 +171,30 @@ EDITORIAL:
           BUTTON_URL: Button-URL
           TITLE_HTAG: Titel HTML-Tag
           TITLE_HTAG_HELP: Wählen Sie das HTML-Tag aus, das für den Bannertitel verwendet werden soll 
+        TEXT_BLOCKS:
+          TAB: Textblöcke
+          CONFIG_TAB: Textblöcke-Optionen
+          SECTION: Textblöcke-Optionen
+          LAYOUT:
+            LABEL: Layout
+            ONE: Eine Spalte
+            TWO: Zwei Spalten
+            THREE: Drei Spalten
+          ITEMS: Textblöcke
+          ITEM_TITLE: Box-Titel
+          ITEM_CONTENT: Inhalt
+          ITEM_CONTENT_HELP: Unterstützt Markdown.
+          ITEM_BOX: Box-Stil
+          BOX:
+            NONE: Keine Box
+            DEFAULT: Standard
+            PRIMARY: Primär
+            SECONDARY: Sekundär
+            SUCCESS: Erfolg
+            INFO: Info
+            WARNING: Warnung
+            DANGER: Gefahr
+            LIGHT: Hell
         FEATURES:
           TAB: Features
           ICON: Icon

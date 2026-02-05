@@ -171,6 +171,30 @@ EDITORIAL:
           BUTTON_URL: URL du bouton
           TITLE_HTAG: Titre HTML Tag
           TITLE_HTAG_HELP: Sélectionnez la balise HTML à utiliser pour le titre de la bannière
+        TEXT_BLOCKS:
+          TAB: Blocs de texte
+          CONFIG_TAB: Options des blocs de texte
+          SECTION: Options des blocs de texte
+          LAYOUT:
+            LABEL: Disposition
+            ONE: Une colonne
+            TWO: Deux colonnes
+            THREE: Trois colonnes
+          ITEMS: Blocs de texte
+          ITEM_TITLE: Titre de la boîte
+          ITEM_CONTENT: Contenu
+          ITEM_CONTENT_HELP: Prend en charge le markdown.
+          ITEM_BOX: Style de boîte
+          BOX:
+            NONE: Sans boîte
+            DEFAULT: Par défaut
+            PRIMARY: Primaire
+            SECONDARY: Secondaire
+            SUCCESS: Succès
+            INFO: Info
+            WARNING: Avertissement
+            DANGER: Danger
+            LIGHT: Clair
         FEATURES:
           TAB: Fonctionnalités
           ICON: Icône

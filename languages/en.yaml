@@ -171,6 +171,30 @@ EDITORIAL:
           BUTTON_URL: Button URL
           TITLE_HTAG: Title HTML Tag
           TITLE_HTAG_HELP: Select the HTML tag to be used for the banner title   
+        TEXT_BLOCKS:
+          TAB: Text Blocks
+          CONFIG_TAB: Text Blocks Options
+          SECTION: Text Blocks Options
+          LAYOUT:
+            LABEL: Layout
+            ONE: One column
+            TWO: Two columns
+            THREE: Three columns
+          ITEMS: Text blocks
+          ITEM_TITLE: Box title
+          ITEM_CONTENT: Content
+          ITEM_CONTENT_HELP: Supports markdown.
+          ITEM_BOX: Box style
+          BOX:
+            NONE: No box
+            DEFAULT: Default
+            PRIMARY: Primary
+            SECONDARY: Secondary
+            SUCCESS: Success
+            INFO: Info
+            WARNING: Warning
+            DANGER: Danger
+            LIGHT: Light
         FEATURES:
           TAB: Features
           ICON: Icon

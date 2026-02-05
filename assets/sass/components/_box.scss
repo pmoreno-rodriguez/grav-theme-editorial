@@ -69,6 +69,19 @@
 			h1,h2,h3,h4,h5,h6 {
 				color: functions.palette(fg-bold) !important;
 			}
+
+			table {
+				tbody tr,
+				thead,
+				tfoot {
+					border-color: functions.palette(fg-bold) !important;
+				}
+
+				td,
+				th {
+					border-color: functions.palette(fg-bold) !important;
+				}
+			}
 		}
 
 		&.danger {
@@ -100,9 +113,62 @@
 			}
 		}
 
+		&.primary,
+		&.secondary,
+		&.success,
+		&.info,
+		&.warning,
+		&.danger,
+		&.white {
+			a,
+			a:visited,
+			a:hover,
+			a:active {
+				color: inherit;
+				border-bottom-color: currentColor;
+			}
+
+			strong,
+			b {
+				color: inherit;
+			}
+
+			th,
+			thead,
+			tfoot,
+			tr,
+			td {
+				color: inherit;
+			}
+
+			ul,
+			ol,
+			li {
+				color: inherit;
+			}
+		}
+
 		&.alt {
 			border: 0;
 			border-radius: 0;
 			padding: 0;
 		}
+	}
+
+	.modular-text-blocks .box.primary a:hover,
+	.modular-text-blocks .box.primary a:active,
+	.modular-text-blocks .box.secondary a:hover,
+	.modular-text-blocks .box.secondary a:active,
+	.modular-text-blocks .box.success a:hover,
+	.modular-text-blocks .box.success a:active,
+	.modular-text-blocks .box.info a:hover,
+	.modular-text-blocks .box.info a:active,
+	.modular-text-blocks .box.warning a:hover,
+	.modular-text-blocks .box.warning a:active,
+	.modular-text-blocks .box.danger a:hover,
+	.modular-text-blocks .box.danger a:active,
+	.modular-text-blocks .box.white a:hover,
+	.modular-text-blocks .box.white a:active {
+		color: inherit !important;
+		border-bottom-color: currentColor !important;
 	}

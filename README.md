@@ -59,6 +59,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Blog (optional) - Blog and Item templates.
 * Features module
 * Banner module like the original theme.
+* Text Blocks module
 * Contact Form module.
 * Contact Form non-modular template.
 * Recent Posts module - Show the latest posts in a module, eg. Home. (can be changed from twig template)

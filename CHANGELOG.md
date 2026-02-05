@@ -1,3 +1,11 @@
+# v3.3.0
+## 02/05/2026
+
+1. [](#new)
+   * Added modular Text Blocks template with configurable columns and boxed content styles.
+2. [](#improved)
+   * Improved box typography handling for links, tables, and list elements in colored boxes.
+   
 # v3.2.3
 ## 01/30/2026
 

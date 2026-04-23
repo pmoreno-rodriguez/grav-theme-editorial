@@ -19,25 +19,37 @@ class ButtonsShortcode extends Shortcode
             $buttons = $this->parseContent($content);
             $ulclass= $sc->getParameter('ulclass', $sc->getBbCode());
 
-            $output = '<ul class="actions '.$ulclass.'">';
-            foreach ($buttons as $button) {
-                $text = $button['content'] ?? 'Button'; // Get the button content
-                $class = $button['class'] ?? '';
-                $type = $button['type'] ?? 'default';
-                $size = $button['size'] ?? '';
-                $target = $button['target'] ?? '_self';
-                $url = $button['url'] ?? '#';
-
-                $buttonClass = 'button ' . $type . ' ' . $size . ' ' . $class;
-                $output .= '<li><a class="' . $buttonClass . '" href="' . $url . '" target="' . $target . '">' . $text . '</a></li>';
-            }
-            $output .= '</ul>';
-
-            return $output;
+            return $this->buildButtonsHtml($buttons, $ulclass);
         });
     }
 
-    private function parseContent($content)
+    /**
+     * Build the buttons list HTML.
+     *
+     * @param array       $buttons  Array of parsed button parameter arrays
+     * @param string|null $ulclass  Extra CSS class for the <ul> element
+     * @return string
+     */
+    protected function buildButtonsHtml(array $buttons, ?string $ulclass): string
+    {
+        $output = '<ul class="actions '.$ulclass.'">';
+        foreach ($buttons as $button) {
+            $text = $button['content'] ?? 'Button'; // Get the button content
+            $class = $button['class'] ?? '';
+            $type = $button['type'] ?? 'default';
+            $size = $button['size'] ?? '';
+            $target = $button['target'] ?? '_self';
+            $url = $button['url'] ?? '#';
+
+            $buttonClass = 'button ' . $type . ' ' . $size . ' ' . $class;
+            $output .= '<li><a class="' . $buttonClass . '" href="' . $url . '" target="' . $target . '">' . $text . '</a></li>';
+        }
+        $output .= '</ul>';
+
+        return $output;
+    }
+
+    protected function parseContent($content)
     {
         $buttons = [];
 
@@ -52,7 +64,7 @@ class ButtonsShortcode extends Shortcode
         return $buttons;
     }
 
-    private function parseButtonParams($paramsString)
+    protected function parseButtonParams($paramsString)
     {
         $params = [];
 
@@ -62,7 +74,7 @@ class ButtonsShortcode extends Shortcode
 
             foreach ($matches as $match) {
                 $key = $match[1];
-                $value = $match[2] ?? $match[3] ?? $match[4];
+                $value = $match[2] !== '' ? $match[2] : ($match[3] !== '' ? $match[3] : ($match[4] ?? ''));
                 $params[$key] = $value;
             }
         }

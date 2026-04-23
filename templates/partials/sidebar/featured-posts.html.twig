@@ -19,46 +19,42 @@
     {% endif %}
 {% endfor %}
 
+{% if filtered_collection|length > 0 %}
 <section>
     <header class="major">
         <h2>{{ 'EDITORIAL.SIDEBAR.FEATURED_POSTS'|t }}</h2>
     </header>
-    {% if filtered_collection|length > 0 %}
-        <div class="mini-posts">
-        {% for p in filtered_collection|slice(0, featured_number) %}
-        {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
-        {% set page_title = p.title %}
-            <article>
-                <a href="{{ p.url }}" class="featured-title">
-                    <h3>{{ page_title|e }}</h3>
-                </a>
-                {% if image %}
-                <a class="image" href="{{ p.url }}" title="{{ page_title|e('html_attr') }}">
-                    {{ image
-                        .cropZoom(288, 174)
-                        .loading('lazy')
-                        .decoding('async')
-                        .attribute('width', '288')
-                        .attribute('height', '174')
-                        .html(page_title, page_title)
-                        |raw
-                    }}
-                </a>
-                {% endif %}
-                <p>{{ p.summary|striptags|truncate(80, true, ' ', '…') }}</p>
-            </article>
-        {% endfor %}
-        </div>
-        <ul class="actions">
-            <li>
-                <a href="{{ blog }}/tag:{{ featured_tag|e('url') }}" class="button">
-                    {{ 'EDITORIAL.SIDEBAR.FEATURED_MORE'|t }}
-                </a>
-            </li>
-        </ul>
-    {% else %}
-        <div class="mini-posts">
-            <p>{{ 'EDITORIAL.SIDEBAR.NO_FEATURED'|t }}</p>
-        </div>
-    {% endif %}
+    <div class="mini-posts">
+    {% for p in filtered_collection|slice(0, featured_number) %}
+    {% set image = p.media[p.header.featured_image] ?: p.media.images|first %}
+    {% set page_title = p.title %}
+        <article>
+            <a href="{{ p.url }}" class="featured-title">
+                <h3>{{ page_title|e }}</h3>
+            </a>
+            {% if image %}
+            <a class="image" href="{{ p.url }}" title="{{ page_title|e('html_attr') }}">
+                {{ image
+                    .cropZoom(288, 174)
+                    .loading('lazy')
+                    .decoding('async')
+                    .attribute('width', '288')
+                    .attribute('height', '174')
+                    .html(page_title, page_title)
+                    |raw
+                }}
+            </a>
+            {% endif %}
+            <p>{{ p.summary|striptags|truncate(80, true, ' ', '…') }}</p>
+        </article>
+    {% endfor %}
+    </div>
+    <ul class="actions">
+        <li>
+            <a href="{{ blog }}/tag:{{ featured_tag|e('url') }}" class="button">
+                {{ 'EDITORIAL.SIDEBAR.FEATURED_MORE'|t }}
+            </a>
+        </li>
+    </ul>
 </section>
+{% endif %}

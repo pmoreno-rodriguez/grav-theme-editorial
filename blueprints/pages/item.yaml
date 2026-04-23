@@ -48,6 +48,42 @@ form:
               label: EDITORIAL.ADMIN.ITEM.SUMMARY.DELIMITER
               classes: large
               placeholder: ===
+            shareicons:
+              type: section
+              title: EDITORIAL.ADMIN.ITEM.SHAREICONS.TITLE
+              underline: true
+            header.shareicons.facebook:
+              type: toggle
+              toggleable: true
+              label: EDITORIAL.ADMIN.ITEM.SHAREICONS.FACEBOOK
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+            header.shareicons.twitter:
+              type: toggle
+              toggleable: true
+              label: EDITORIAL.ADMIN.ITEM.SHAREICONS.TWITTER
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+            header.shareicons.whatsapp:
+              type: toggle
+              toggleable: true
+              label: EDITORIAL.ADMIN.ITEM.SHAREICONS.WHATSAPP
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+            header.shareicons.telegram:
+              type: toggle
+              toggleable: true
+              label: EDITORIAL.ADMIN.ITEM.SHAREICONS.TELEGRAM
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
         seo:
           type: tab
           title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB

@@ -5,6 +5,7 @@
 {% set show_pagination = header_var('content.pagination')|defined(true) %}
 {% set show_breadcrumbs = header_var('content.breadcrumbs')|defined(false) %}
 {% set datestamp = include('partials/page-bits/date.html.twig') %}
+{% set shareicons = page.header.shareicons ?? {} %}
 
 {% block content %}
 
@@ -76,10 +77,10 @@
         <div class="col-6 col-12-small align-right">
             <ul class="icons">
                 {% set share = [
-                    {name: 'facebook', icon: 'fa-facebook', enabled: header_var('shareicons.facebook')|defined(true), url: 'https://www.facebook.com/sharer/sharer.php?', params: {u: page.url(true)}},
-                    {name: 'twitter', icon: 'fa-twitter', enabled: header_var('shareicons.twitter')|defined(true), url: 'https://twitter.com/intent/tweet?', params: {text: page_title, url: page.url(true)}},
-                    {name: 'whatsapp', icon: 'fa-whatsapp', enabled: header_var('shareicons.whatsapp')|defined(true), url: 'https://wa.me/?', params: {text: title ~ '. ' ~ page.url(true)}, action: 'share/whatsapp/share'},
-                    {name: 'telegram', icon: 'fa-telegram', enabled: header_var('shareicons.telegram')|defined(true), url: 'https://t.me/share/url?', params: {url: page.url(true), text: page_title}},
+                    {name: 'facebook', icon: 'fa-facebook', enabled: shareicons.facebook ?? true, url: 'https://www.facebook.com/sharer/sharer.php?', params: {u: page.url(true)}},
+                    {name: 'twitter', icon: 'fa-twitter', enabled: shareicons.twitter ?? true, url: 'https://twitter.com/intent/tweet?', params: {text: page_title, url: page.url(true)}},
+                    {name: 'whatsapp', icon: 'fa-whatsapp', enabled: shareicons.whatsapp ?? true, url: 'https://wa.me/?', params: {text: page_title ~ '. ' ~ page.url(true)}, action: 'share/whatsapp/share'},
+                    {name: 'telegram', icon: 'fa-telegram', enabled: shareicons.telegram ?? true, url: 'https://t.me/share/url?', params: {url: page.url(true), text: page_title}},
                 ] %}
                 {% for item in share %}
                     {% if item.enabled|defined(true) %}

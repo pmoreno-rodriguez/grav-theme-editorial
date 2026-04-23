@@ -342,6 +342,12 @@ EDITORIAL:
           FORMAT_LONG: Summary delimiter will be ignored
           SIZE: Size
           DELIMITER: Summary Delimiter
+        SHAREICONS:
+          TITLE: Share icons
+          FACEBOOK: Facebook
+          TWITTER: Twitter
+          WHATSAPP: WhatsApp
+          TELEGRAM: Telegram
       GALLERY:
         TAB: Gallery
         TITLE: Image Gallery

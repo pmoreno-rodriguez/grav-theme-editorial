@@ -10,6 +10,12 @@ EDITORIAL:
         RIGHT_SIDEBAR: Barre latérale à droite
         RIGHT_SIDEBAR_HELP: Si activée, la barre latérale apparaîtra à droite
         GOOGLE_FONTS:
+        SHAREICONS:
+          TITLE: Icônes de partage
+          FACEBOOK: Facebook
+          TWITTER: X / Twitter
+          WHATSAPP: WhatsApp
+          TELEGRAM: Telegram
           LOCAL: Utiliser les polices Google hébergées localement
         HEADER_SECTION: Section d'en-tête
         FAVICON: Choisir son propre favicon

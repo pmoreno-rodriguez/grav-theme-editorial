@@ -10,6 +10,12 @@ EDITORIAL:
         RIGHT_SIDEBAR: Seitenleiste rechts
         RIGHT_SIDEBAR_HELP: Wenn aktiviert, erscheint die Seitenleiste auf der rechten Seite
         GOOGLE_FONTS:
+        SHAREICONS:
+          TITLE: Teilen-Symbole
+          FACEBOOK: Facebook
+          TWITTER: X / Twitter
+          WHATSAPP: WhatsApp
+          TELEGRAM: Telegram
           LOCAL: Lokal gehostete Google Fonts verwenden
         HEADER_SECTION: Header-Bereich
         FAVICON: Eigenes Favicon auswählen

@@ -734,7 +734,7 @@ input[type=reset].fit,
 input[type=button].fit,
 button.fit,
 .button.fit {
-  width: 100%;
+  width: 100% !important;
 }
 
 input[type=submit].small,
@@ -742,7 +742,7 @@ input[type=reset].small,
 input[type=button].small,
 button.small,
 .button.small {
-  font-size: 0.6em;
+  font-size: 0.6em !important;
 }
 
 input[type=submit].medium,
@@ -750,7 +750,7 @@ input[type=reset].medium,
 input[type=button].medium,
 button.medium,
 .button.medium {
-  font-size: 0.7em;
+  font-size: 0.7em !important;
 }
 
 input[type=submit].large,
@@ -758,7 +758,7 @@ input[type=reset].large,
 input[type=button].large,
 button.large,
 .button.large {
-  font-size: 1em;
+  font-size: 1em !important;
 }
 
 input[type=submit].primary,
@@ -917,6 +917,133 @@ button.danger:active,
   background-color: rgb(255, 40.7, 83.7753768844);
 }
 
+input[type=submit].outline,
+input[type=reset].outline,
+input[type=button].outline,
+button.outline,
+.button.outline {
+  background: transparent;
+  color: #f56a6a !important;
+  box-shadow: inset 0 0 0 2px #f56a6a;
+  transition: background-color 0.2s;
+}
+
+input[type=submit].outline:hover,
+input[type=reset].outline:hover,
+input[type=button].outline:hover,
+button.outline:hover,
+.button.outline:hover {
+  background: rgba(245, 106, 106, 0.07);
+}
+
+input[type=submit].outline-primary,
+input[type=reset].outline-primary,
+input[type=button].outline-primary,
+button.outline-primary,
+.button.outline-primary {
+  background: transparent;
+  color: #f56a6a !important;
+  box-shadow: inset 0 0 0 2px #f56a6a;
+}
+
+input[type=submit].outline-primary:hover,
+input[type=reset].outline-primary:hover,
+input[type=button].outline-primary:hover,
+button.outline-primary:hover,
+.button.outline-primary:hover {
+  background: rgba(245, 106, 106, 0.07);
+}
+
+input[type=submit].outline-secondary,
+input[type=reset].outline-secondary,
+input[type=button].outline-secondary,
+button.outline-secondary,
+.button.outline-secondary {
+  background: transparent;
+  color: #6c757d !important;
+  box-shadow: inset 0 0 0 2px #6c757d;
+}
+
+input[type=submit].outline-secondary:hover,
+input[type=reset].outline-secondary:hover,
+input[type=button].outline-secondary:hover,
+button.outline-secondary:hover,
+.button.outline-secondary:hover {
+  background: rgba(108, 117, 125, 0.07);
+}
+
+input[type=submit].outline-success,
+input[type=reset].outline-success,
+input[type=button].outline-success,
+button.outline-success,
+.button.outline-success {
+  background: transparent;
+  color: #48c774 !important;
+  box-shadow: inset 0 0 0 2px #48c774;
+}
+
+input[type=submit].outline-success:hover,
+input[type=reset].outline-success:hover,
+input[type=button].outline-success:hover,
+button.outline-success:hover,
+.button.outline-success:hover {
+  background: rgba(72, 199, 116, 0.07);
+}
+
+input[type=submit].outline-info,
+input[type=reset].outline-info,
+input[type=button].outline-info,
+button.outline-info,
+.button.outline-info {
+  background: transparent;
+  color: #209cee !important;
+  box-shadow: inset 0 0 0 2px #209cee;
+}
+
+input[type=submit].outline-info:hover,
+input[type=reset].outline-info:hover,
+input[type=button].outline-info:hover,
+button.outline-info:hover,
+.button.outline-info:hover {
+  background: rgba(32, 156, 238, 0.07);
+}
+
+input[type=submit].outline-warning,
+input[type=reset].outline-warning,
+input[type=button].outline-warning,
+button.outline-warning,
+.button.outline-warning {
+  background: transparent;
+  color: #ffdd57 !important;
+  box-shadow: inset 0 0 0 2px #ffdd57;
+}
+
+input[type=submit].outline-warning:hover,
+input[type=reset].outline-warning:hover,
+input[type=button].outline-warning:hover,
+button.outline-warning:hover,
+.button.outline-warning:hover {
+  background: rgba(255, 221, 87, 0.07);
+}
+
+input[type=submit].outline-danger,
+input[type=reset].outline-danger,
+input[type=button].outline-danger,
+button.outline-danger,
+.button.outline-danger {
+  background: transparent;
+  color: #ff3860 !important;
+  box-shadow: inset 0 0 0 2px #ff3860;
+}
+
+input[type=submit].outline-danger:hover,
+input[type=reset].outline-danger:hover,
+input[type=button].outline-danger:hover,
+button.outline-danger:hover,
+.button.outline-danger:hover {
+  background: rgba(255, 56, 96, 0.07);
+}
+
 input[type=submit].disabled, input[type=submit]:disabled,
 input[type=reset].disabled,
 input[type=reset]:disabled,
@@ -938,10 +1065,6 @@ ul.contact {
 
 ul.contact li {
   text-decoration: none;
-  border-top: solid 1px rgba(210, 215, 217, 0.75);
-  margin: 1.5em 0 0 0;
-  padding: 1.5em 0 0 3em;
-  position: relative;
 }
 
 ul.contact li:before {
@@ -955,6 +1078,13 @@ ul.contact li:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
+}
+
+ul.contact li {
+  border-top: solid 1px rgba(210, 215, 217, 0.75);
+  margin: 1.5em 0 0 0;
+  padding: 1.5em 0 0 3em;
+  position: relative;
 }
 
 ul.contact li:before {
@@ -1241,14 +1371,6 @@ input[type=radio] {
 input[type=checkbox] + label,
 input[type=radio] + label {
   text-decoration: none;
-  color: #454549;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1em;
-  font-weight: 400;
-  padding-left: 2.4em;
-  padding-right: 0.75em;
-  position: relative;
 }
 
 input[type=checkbox] + label:before,
@@ -1263,6 +1385,18 @@ input[type=radio] + label:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+
+input[type=checkbox] + label,
+input[type=radio] + label {
+  color: #454549;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  padding-left: 2.4em;
+  padding-right: 0.75em;
+  position: relative;
 }
 
 input[type=checkbox] + label:before,
@@ -1432,8 +1566,6 @@ input[type=radio] + label:before {
 /* Icon */
 .icon {
   text-decoration: none;
-  border-bottom: none;
-  position: relative;
 }
 
 .icon:before {
@@ -1447,6 +1579,11 @@ input[type=radio] + label:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
+}
+
+.icon {
+  border-bottom: none;
+  position: relative;
 }
 
 .icon > .label {
@@ -3348,7 +3485,6 @@ table.alt tfoot {
 /* Sidebar */
 #search form {
   text-decoration: none;
-  position: relative;
 }
 
 #search form:before {
@@ -3362,6 +3498,10 @@ table.alt tfoot {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+
+#search form {
+  position: relative;
 }
 
 #search form:before {
@@ -3434,6 +3574,22 @@ table.alt tfoot {
 
 #sidebar .toggle {
   text-decoration: none;
+}
+
+#sidebar .toggle:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-transform: none !important;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+#sidebar .toggle {
   transition: left 0.5s ease;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   border: 0;
@@ -3450,19 +3606,6 @@ table.alt tfoot {
   top: 0;
   width: 6em;
   z-index: 10000;
-}
-
-#sidebar .toggle:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
 }
 
 #sidebar .toggle:before {
@@ -3796,8 +3939,6 @@ table.alt tfoot {
 #menu ul li .dropdown {
   transition: color 0.2s ease-in-out;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  position: relative;
 }
 
 #menu ul li .dropdown:before {
@@ -3811,6 +3952,11 @@ table.alt tfoot {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+
+#menu ul li .dropdown {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  position: relative;
 }
 
 #menu ul li .dropdown:before {

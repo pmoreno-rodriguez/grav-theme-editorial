@@ -54,19 +54,19 @@ button,
 	}
 
 	&.fit {
-		width: 100%;
+		width: 100% !important;
 	}
 
 	&.small {
-		font-size: 0.6em;
+		font-size: 0.6em !important;
 	}
 
 	&.medium {
-		font-size: 0.7em;
+		font-size: 0.7em !important;
 	}
 
 	&.large {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	&.primary {
@@ -150,6 +150,63 @@ button,
 
 		&:active {
 			background-color: color.adjust(functions.palette(danger), $lightness: -3%);
+		}
+	}
+	&.outline {
+		background: transparent;
+		color: functions.palette(accent) !important;
+		box-shadow: inset 0 0 0 2px functions.palette(accent);
+		transition: background-color 0.2s;
+		&:hover {
+			background: color.adjust(functions.palette(accent), $alpha: -0.93);
+		}
+	}
+	&.outline-primary {
+		background: transparent;
+		color: functions.palette(accent) !important;
+		box-shadow: inset 0 0 0 2px functions.palette(accent);
+		&:hover {
+			background: color.adjust(functions.palette(accent), $alpha: -0.93);
+		}
+	}
+	&.outline-secondary {
+		background: transparent;
+		color: functions.palette(secondary) !important;
+		box-shadow: inset 0 0 0 2px functions.palette(secondary);
+		&:hover {
+			background: color.adjust(functions.palette(secondary), $alpha: -0.93);
+		}
+	}
+	&.outline-success {
+		background: transparent;
+		color: functions.palette(success) !important;
+		box-shadow: inset 0 0 0 2px functions.palette(success);
+		&:hover {
+			background: color.adjust(functions.palette(success), $alpha: -0.93);
+		}
+	}
+	&.outline-info {
+		background: transparent;
+		color: functions.palette(info) !important;
+		box-shadow: inset 0 0 0 2px functions.palette(info);
+		&:hover {
+			background: color.adjust(functions.palette(info), $alpha: -0.93);
+		}
+	}
+	&.outline-warning {
+		background: transparent;
+		color: functions.palette(warning) !important;
+		box-shadow: inset 0 0 0 2px functions.palette(warning);
+		&:hover {
+			background: color.adjust(functions.palette(warning), $alpha: -0.93);
+		}
+	}
+	&.outline-danger {
+		background: transparent;
+		color: functions.palette(danger) !important;
+		box-shadow: inset 0 0 0 2px functions.palette(danger);
+		&:hover {
+			background: color.adjust(functions.palette(danger), $alpha: -0.93);
 		}
 	}
 

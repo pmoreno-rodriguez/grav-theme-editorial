@@ -1,3 +1,14 @@
+# v3.4.0
+## 04/23/2026
+
+1. [](#new)
+   * Added per-page social icon controls for blog item pages
+   * Added translations for the new social icon controls
+2. [](#improved)
+   * Improved button styles and recompiled main CSS assets
+   * Improved the Recent Posts modular template
+   * Hide the Featured Posts sidebar section when no featured articles are available
+
 # v3.3.0
 ## 02/05/2026
 

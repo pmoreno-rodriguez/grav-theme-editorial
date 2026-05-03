@@ -58,6 +58,8 @@ form:
                   - .jpg
                   - .gif
                   - .svg
+                  - .webp
+                  - .jpeg
                 .title:
                   type: text
                   size: medium

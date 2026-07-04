@@ -97,7 +97,6 @@ The featured pages tagged with the selected tag in the theme settings and the ch
 * Added blog.html.twig and item.html.twig files.
 * Added option to filter by author taxonomy. It is necessary to configure the author taxonomy, in the site configuration, so that the authors of the blog pages appear in them and you can use the filters by author that the theme has.
 * Icons to share blog posts on social networks.
-* Support for date translation if using the translate-date or twig-extensions plugins.
 
 ### Reordered assets
 

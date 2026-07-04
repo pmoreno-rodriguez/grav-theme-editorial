@@ -45,7 +45,7 @@ Canonical & URLs
 {%- if twitter_enabled -%}
     <meta name="twitter:url" content="{{ canonical_url }}">
 {% endif %}
-{% spaceless %}
+{% apply spaceless %}
 {%- if seo_enabled -%}
     {# -------------------------
      Description
@@ -241,4 +241,4 @@ Canonical & URLs
 
 {% endif %}
 
-{% endspaceless %}
+{% endapply %}

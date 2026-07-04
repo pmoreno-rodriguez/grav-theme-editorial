@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 {# THEME INFO COMMENT BLOCK #}
 {% set version = (grav.theme.getBlueprint()).get('version') %}
 {% set theme_name = (grav.theme.getBlueprint()).get('name') %}
@@ -41,7 +41,7 @@ Version: v{{ version }}
 
 {# SET DEFAULT BLOG URL #}
 {% set blog = page.find(header_var('blog_url', [page, blog])|defined(theme_var('blog-page'))) %}
-{% endspaceless %}
+{% endapply %}
 <!DOCTYPE HTML>
 <html lang="{{ lang }}">
 <!-- HEAD SECTION -->

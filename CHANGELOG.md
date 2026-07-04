@@ -1,5 +1,11 @@
-# v4.0.0
+# v4.1.0
 ## 07/04/2026
+
+1. [](#improved)
+   * Changed social icon field from iconpicker to text input for better compatibility
+
+# v4.0.0
+## 07/03/2026
 
 1. [](#improved)
    * Added 1.7|2.0 compatibility flags

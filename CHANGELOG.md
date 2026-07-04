@@ -1,3 +1,11 @@
+# v4.0.0
+## 07/04/2026
+
+1. [](#improved)
+   * Added 1.7|2.0 compatibility flags
+   * Updated Twig templates for Grav 2.0 compatibility
+   * Simplified date handling - removed translate-date and twig-extensions plugins
+
 # v3.4.0
 ## 04/23/2026
 

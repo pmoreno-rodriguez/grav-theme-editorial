@@ -104,6 +104,7 @@ EDITORIAL:
             SELF: 'Open in the same frame as clicked'
             TOP: 'Open in the full body of the window'
           ICON: Icon to Social
+          ICON_HELP: 'Enter the FontAwesome icon class (e.g., facebook, twitter, linkedin, mastodon). Prefix "fa-" is optional and will be added automatically.'
           ICON_TYPE: Icon Type
         CUSTOM_MENU:
           TITLE: 'Custom Menu Items'

@@ -110,6 +110,7 @@ EDITORIAL:
             SELF: 'Ouvrir dans le même cadre que celui cliqué'
             TOP: 'Ouvrir dans tout le corps de la fenêtre'
           ICON: Icône du réseau social
+          ICON_HELP: 'Entrez la classe d''icône FontAwesome (ex: facebook, twitter, linkedin, mastodon). Le préfixe "fa-" est optionnel et sera ajouté automatiquement.'
           ICON_TYPE: Type d'icône
         CUSTOM_MENU:
           TITLE: 'Éléments de menu personnalisés'

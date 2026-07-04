@@ -110,6 +110,7 @@ EDITORIAL:
             SELF: 'Abrir en el mismo marco donde se hizo clic'
             TOP: 'Abrir en todo el cuerpo de la ventana'
           ICON: Icono de la Red Social
+          ICON_HELP: 'Ingresa la clase de icono de FontAwesome (ej: facebook, twitter, linkedin, mastodon). El prefijo "fa-" es opcional y se agregará automáticamente.'
           ICON_TYPE: Tipo de Icono
         CUSTOM_MENU:
           TITLE: 'Elementos de Menú Personalizados'

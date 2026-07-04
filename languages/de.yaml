@@ -110,6 +110,7 @@ EDITORIAL:
             SELF: 'Im gleichen Frame wie angeklickt öffnen'
             TOP: 'Im gesamten Fensterkörper öffnen'
           ICON: Icon zu Social Media
+          ICON_HELP: 'Geben Sie die FontAwesome-Icon-Klasse ein (z.B. facebook, twitter, linkedin, mastodon). Das Präfix "fa-" ist optional und wird automatisch hinzugefügt.'
           ICON_TYPE: Icon-Typ
         CUSTOM_MENU:
           TITLE: 'Benutzerdefinierte Menüeinträge'

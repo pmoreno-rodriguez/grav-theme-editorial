@@ -44,8 +44,9 @@ form:
             _self: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.SELF
             _top: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.TOP
         .icon:
-          type: iconpicker
+          type: text
           label: EDITORIAL.ADMIN.THEME.SOCIAL.ICON
+          description: EDITORIAL.ADMIN.THEME.SOCIAL.ICON_HELP
           size: medium
         .icon_type:
           type: select

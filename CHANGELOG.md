@@ -1,3 +1,11 @@
+# v4.2.0
+## 08/08/2026
+
+1. [](#improved)
+   * Fixed inconsistent styling for JSON feed button in sidebar
+   * Added proper header formatting for SYNDICATE section title
+   * Enhanced date localization with optional Intl plugin support for internationalized dates
+
 # v4.1.0
 ## 07/04/2026
 

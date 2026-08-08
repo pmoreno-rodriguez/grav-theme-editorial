@@ -1,9 +1,10 @@
 {# Date fallback order: publish_date → page.date → page.modified #}
-{% set short_format = system.pages.dateformat.short %}
+{% set raw_date = page.header.publish_date ?: (page.date ?: page.modified) %}
 
-{% set datestamp = (page.header.publish_date) 
-  ? (page.header.publish_date|date(short_format))
-  : (page.date ? page.date|date(short_format) : page.modified|date(short_format))
-%}
+{% set intl_available = config.plugins.intl.enabled|default(false) %}
 
-{{ datestamp }}
+{% if intl_available %}
+  {% include 'partials/page-bits/date-intl.html.twig' with {raw_date: raw_date} %}
+{% else %}
+  {% include 'partials/page-bits/date-fallback.html.twig' with {raw_date: raw_date} %}
+{% endif %}

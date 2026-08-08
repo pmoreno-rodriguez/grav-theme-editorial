@@ -6,7 +6,7 @@
     {% endif %}
     <{{ Htag_title }}>{{ page_title|e }}</{{ Htag_title }}>
     <p class="data-post">
-        {{ 'EDITORIAL.ITEM.POSTED_ON'|t }} {{ datestamp }}
+        {{ 'EDITORIAL.ITEM.POSTED_ON'|t }} {% include 'partials/page-bits/date.html.twig' %}
     </p>
     <p>
     {% if page.summary != page.content %}

@@ -2,8 +2,8 @@
 ## 08/08/2026
 
 1. [](#improved)
-   * Fixed inconsistent styling for JSON feed button in sidebar
-   * Added proper header formatting for SYNDICATE section title
+   * Fixed inconsistent styling for JSON feed button in sidebar ([PR#85](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/85))
+   * Added proper header formatting for SYNDICATE section title ([PR#85](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/85))
    * Enhanced date localization with optional Intl plugin support for internationalized dates
 
 # v4.1.0

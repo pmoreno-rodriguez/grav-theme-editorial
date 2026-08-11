@@ -43,7 +43,7 @@
             {% endblock %}
         </nav>
 
-        {% if menu_lang and config.plugins.langswitcher.enabled and system.languages.supported is not null %}
+        {% if menu_lang and config.plugins.langswitcher.enabled and system.languages.supported is not null and langswitcher.languages %}
         <section>
             <header class="major">
                 <h2>{{ 'EDITORIAL.SIDEBAR.LANGSWITCHER'|t }}</h2>

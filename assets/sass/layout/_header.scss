@@ -23,7 +23,6 @@
 			font-size: unset;
 		}
 		> * {
-			@include vendor.vendor('flex', '1');
 			margin-bottom: 0;
 		}
 		img {
@@ -33,7 +32,7 @@
 			flex: 0 0 calc(25% - 1rem);
 			svg {
 				max-width: 100px;
-				
+
 			}
 		}
 		.logo {

@@ -1,3 +1,10 @@
+# v4.2.1
+## 08/11/2026
+
+1. [](#bugfix)
+   * Removed flex layout constraints from header styling for better responsiveness
+   * Fixed language switcher section rendering with added validation for langswitcher.languages
+
 # v4.2.0
 ## 08/08/2026
 

@@ -1,3 +1,10 @@
+# v4.3.1
+## 08/20/2026
+
+1. [](#bugfix)
+   * Fixed translation string synchronization across all language files (en, es, de, fr)
+   * Removed experimental TABS component translations to simplify maintenance
+
 # v4.3.0
 ## 08/20/2026
 

@@ -10,12 +10,6 @@ EDITORIAL:
         RIGHT_SIDEBAR: Seitenleiste rechts
         RIGHT_SIDEBAR_HELP: Wenn aktiviert, erscheint die Seitenleiste auf der rechten Seite
         GOOGLE_FONTS:
-        SHAREICONS:
-          TITLE: Teilen-Symbole
-          FACEBOOK: Facebook
-          TWITTER: X / Twitter
-          WHATSAPP: WhatsApp
-          TELEGRAM: Telegram
           LOCAL: Lokal gehostete Google Fonts verwenden
         HEADER_SECTION: Header-Bereich
         FAVICON: Eigenes Favicon auswählen
@@ -49,25 +43,35 @@ EDITORIAL:
             CITY: Stadt
             STATE: Bundesland
             ZIP: Postleitzahl
-        SIDEBAR:
-          SECTION: Seitenleisten-Konfiguration
-          WIDGETS_SECTION: Widget-Optionen
-          LANGSWITCHER: Langswitcher-Menüoption aktivieren
-          LANGSWITCHER_HELP: Mit aktiviertem Langswitcher-Plugin und mehrsprachiger Einrichtung können Sie die Langswitcher-Funktionalität in der Seitenleiste ein- oder ausschalten
-          SEARCH: Such-Menüoption aktivieren
-          SEARCH_HELP: Mit aktiviertem SimpleSearch-Plugin können Sie den Suchblock in der Seitenleiste ein- oder ausschalten
-          LOGIN: Login-Menüoption aktivieren
-          LOGIN_HELP: Sie können das Login-Icon in der Seitenleiste ein- oder ausschalten, um den Anmeldestatus anzuzeigen
-          SHOW_TAXONOMY: Beliebte Tags anzeigen
-          SHOW_TAXONOMY_HELP: 'Taxonomylist-Plugin muss installiert sein'
-          SHOW_ARCHIVES: Archive anzeigen
-          SHOW_ARCHIVES_HELP: 'Archives-Plugin muss installiert sein'
-          SHOW_RELATED_PAGES: Verwandte Seiten anzeigen
-          SHOW_RELATED_PAGES_HELP: 'Related Pages-Plugin muss installiert sein'
-          SHOW_FEEDS: Feeds anzeigen
-          SHOW_FEEDS_HELP: 'Feeds-Plugin muss installiert sein'
-          SHOW_RANDOM: Zufälligen Beitrag anzeigen
-          SHOW_RANDOM_HELP: 'Random-Plugin muss installiert sein'
+        SIDEBAR: 
+            SECTION: Seitenleisten-Einstellungen
+            CONFIGURATION: Sidebar-Konfiguration
+            WIDGETS_OPTIONS: Widget-Optionen
+            MENU_SECTION: Menü-Elemente
+            OPEN_BY_DEFAULT: Standardmäßig öffnen
+            OPEN_BY_DEFAULT_HELP: Legt fest, ob die Seitenleiste beim Start geöffnet oder geschlossen ist
+            ON_RIGHT: Seitenleiste auf der rechten Seite
+            ON_RIGHT_HELP: Wenn aktiviert, wird die Seitenleiste auf der rechten Seite angezeigt
+            LANGSWITCHER: Langswitcher-Menüoption aktivieren
+            LANGSWITCHER_HELP: Wenn Langswitcher-Plugin aktiviert und Multi-Sprachen-Setup auf Ihrer Website konfiguriert ist, können Sie die Langswitcher-Funktionalität im Seitenleisten-Menü aktivieren oder deaktivieren
+            SEARCH: Menüoption Suche aktivieren
+            SEARCH_HELP: Bei aktiviertem SimpleSearch-Plugin können Sie den Suchblock im Seitenleisten-Menü aktivieren oder deaktivieren
+            LOGIN: Login-Menüoption aktivieren
+            LOGIN_HELP: Sie können das Login-Symbol im Seitenleisten-Menü aktivieren oder deaktivieren, um den Login-Status anzuzeigen
+            SHOW_FEATURED: Ausgewählte Beiträge anzeigen
+            SHOW_BLOG_CATEGORIES: Blog-Kategorien anzeigen
+            SHOW_TAXONOMY: Beliebte Tags anzeigen
+            SHOW_TAXONOMY_HELP: 'Das Taxonomylist-Plugin muss installiert sein'
+            SHOW_ARCHIVES: Archive anzeigen
+            SHOW_ARCHIVES_HELP: 'Das Archives-Plugin muss installiert sein'
+            SHOW_RELATED_PAGES: Verwandte Seiten anzeigen
+            SHOW_RELATED_PAGES_HELP: 'Das Plugin "Related pages" muss installiert sein'
+            SHOW_FEEDS: Feeds anzeigen
+            SHOW_FEEDS_HELP: 'Das Feeds-Plugin muss installiert sein'
+            SHOW_RANDOM: Zufälligen Beitrag anzeigen
+            SHOW_RANDOM_HELP: 'Das Random-Plugin muss installiert sein'
+            BLOG_CATEGORIES: Blog-Kategorien
+
         BLOG:
           DEFAULTS: Blog-Standardeinstellungen
           PAGE_LABEL: Blog-Seite
@@ -250,6 +254,76 @@ EDITORIAL:
           TH_MODIFIED: Geändert
           TH_DOWNLOAD: Download
           TD_BUTTON: Herunterladen
+        TABS:
+          TITLE: Tabs-Modul
+          CONTENT_TABS: Tabs-Inhalt
+          INSTRUCTIONS: |
+                <p><strong>📑 Registerkarten-Konfigurationsleitfaden</strong></p>
+
+                <p><strong>Grundstruktur:</strong></p>
+                <ul>
+                <li>Jeder Tab enthält einen Titel, ein optionales Symbol, Inhalt und ein optionales Bild</li>
+                <li>Der erste Tab wird auf dem Desktop standardmäßig geöffnet</li>
+                <li>Inhalt unterstützt vollständige Markdown-Formatierung</li>
+                <li>Tabs werden auf Mobilgeräten automatisch in Akkordeons umgewandelt, um bessere Benutzerfreundlichkeit zu bieten</li>
+                </ul>
+
+                <p><strong>🖼️ Medien und Layout:</strong></p>
+                <ul>
+                <li>Wenn ein Bild bereitgestellt wird, passt sich das Layout automatisch an (50/50-Aufteilung)</li>
+                <li>Alt-Text für Bilder verbessert die Barrierefreiheit</li>
+                <li>Tabs ohne Bilder zeigen Inhalt in voller Breite an</li>
+                </ul>
+
+                <p><strong>🎨 Styling-Funktionen:</strong></p>
+                <ul>
+                <li>Font Awesome-Symbole in Tab-Titeln</li>
+                <li>Anpassbare Ausrichtung der Tab-Navigation (links oder Mitte)</li>
+                <li>Farbeanpassung für Standard- und aktive Tabs</li>
+                <li>Schaltflächen mit konfigurierbarem Text, URL und benutzerdefinierten CSS-Klassen</li>
+                <li>Enthält responsives Styling und elegantes Zusammenklappen in den Akkordeon-Modus</li>
+                </ul>
+
+                <p><strong>💡 Pro-Tipps:</strong></p>
+                <ul>
+                <li>Halten Sie Tab-Titel kurz, um eine bessere Desktop-Anzeige zu ermöglichen</li>
+                <li>Verwenden Sie Symbole, um die visuelle Hierarchie und das schnelle Scannen zu verbessern</li>
+                <li>Verteilen Sie komplexe Inhalte auf mehrere Tabs zur Verdeutlichung</li>
+                <li>Fügen Sie eine Call-to-Action-Schaltfläche hinzu, wenn relevant</li>
+                <li>Verwenden Sie Markdown, um reichhaltige Inhalte in jedem Tab zu strukturieren</li>
+                </ul>
+
+                <p><em>Alle Felder sind optional außer dem Titel.</em></p>
+          INTRO_TEXT: Einleitungstext
+          INTRO_TEXT_HELP: Text, der über der Tabs-Komponente angezeigt werden soll.
+          ITEMS_LABEL: Elemente
+          ITEM_TITLE: Tab-Titel
+          ITEM_ICON: Symbolklasse (Font Awesome)
+          ITEM_IMAGE: Tab-Bild
+          ITEM_IMAGE_ALT: Bild-ALT-Text
+          CONTENT_TITLE: Inhaltstitel
+          DESCRIPTION: Beschreibung (Markdown)
+          LINK_URL: Link-URL
+          LINK_TEXT: Link-Text
+          LINK_CLASS: Link-CSS-Klasse
+          STYLES_TAB: Registerkarten-Stile
+          DEFAULT_BG: Standardhintergrund
+          DEFAULT_TEXT: Standardtext
+          BORDER_COLOR: Rahmenfarbe
+          LINK_COLOR: "Link-Farbe"
+          LINK_COLOR_HELP: "Farbe von Links im Tab-Inhalt"
+          LINK_HOVER_COLOR: "Link-Farbe beim Hover"
+          LINK_HOVER_COLOR_HELP: "Farbe von Links beim Hover"
+          LINK_HOVER_BG: "Tab-Hintergrund (beim Hover)"
+          LINK_HOVER_BG_HELP: "Hintergrundfarbe der Tabs beim Hover"
+          ACTIVE_BG: Aktiver Hintergrund
+          ACTIVE_TEXT: Aktiver Text
+          ACCORDION_BG: Mobile Akkordeon-Hintergrund
+          ACCORDION_TEXT: Mobile Akkordeon-Text
+          ALIGNMENT: Registerkarten-Ausrichtung
+          ALIGN_LEFT: Links
+          ALIGN_CENTER: Zentriert
+          ALIGN_VERTICAL: "Vertikal (Linke Seitenleiste)"
       BLOG:
         TAB: Blog-Konfiguration
         ROUTE: Blog-Route
@@ -285,6 +359,12 @@ EDITORIAL:
           FORMAT_LONG: Zusammenfassungstrennzeichen wird ignoriert
           SIZE: Größe
           DELIMITER: Zusammenfassungstrennzeichen
+        SHAREICONS:
+          TITLE: Teilen-Symbole
+          FACEBOOK: Facebook
+          TWITTER: Twitter
+          WHATSAPP: WhatsApp
+          TELEGRAM: Telegram
       GALLERY:
         TAB: Galerie
         TITLE: Bildergalerie

@@ -10,12 +10,6 @@ EDITORIAL:
         RIGHT_SIDEBAR: Barre latérale à droite
         RIGHT_SIDEBAR_HELP: Si activée, la barre latérale apparaîtra à droite
         GOOGLE_FONTS:
-        SHAREICONS:
-          TITLE: Icônes de partage
-          FACEBOOK: Facebook
-          TWITTER: X / Twitter
-          WHATSAPP: WhatsApp
-          TELEGRAM: Telegram
           LOCAL: Utiliser les polices Google hébergées localement
         HEADER_SECTION: Section d'en-tête
         FAVICON: Choisir son propre favicon
@@ -50,24 +44,34 @@ EDITORIAL:
             STATE: État/Région
             ZIP: Code postal
         SIDEBAR: 
-            SECTION: Paramètres de la barre latérale
-            WIDGETS_SECTION: Options des widgets
+            SECTION: Paramètres de la Barre Latérale
+            CONFIGURATION: Configuration de la Barre Latérale
+            WIDGETS_OPTIONS: Options des Widgets
+            MENU_SECTION: Éléments du Menu
+            OPEN_BY_DEFAULT: Ouvert par Défaut
+            OPEN_BY_DEFAULT_HELP: Définit si la barre latérale est ouverte ou fermée au démarrage
+            ON_RIGHT: Barre latérale à droite
+            ON_RIGHT_HELP: Si activée, la barre latérale apparaîtra à droite
             LANGSWITCHER: Activer l'option de menu Langswitcher
-            LANGSWITCHER_HELP: Lorsque le plugin Langswitcher est activé et que votre site est configuré en plusieurs langues, vous pouvez activer ou désactiver la fonctionnalité Langswitcher qui apparaît dans le menu latéral
+            LANGSWITCHER_HELP: Avec le plugin Langswitcher activé et la configuration multilingue sur votre site, vous pouvez activer ou désactiver la fonctionnalité langswitcher apparaissant dans le menu latéral
             SEARCH: Activer l'option de menu Recherche
-            SEARCH_HELP: Si le plugin SimpleSearch est activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu latéral
+            SEARCH_HELP: Avec le plugin SimpleSearch activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu latéral
             LOGIN: Activer l'option de menu Login
-            LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de connexion dans le menu latéral pour afficher le statut de connexion
-            SHOW_TAXONOMY: Afficher les étiquettes populaires
+            LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de connexion dans le menu latéral, pour afficher l'état de connexion
+            SHOW_FEATURED: Afficher les Articles Vedettes
+            SHOW_BLOG_CATEGORIES: Afficher les Catégories du Blog
+            SHOW_TAXONOMY: Afficher les Tags Populaires
             SHOW_TAXONOMY_HELP: 'Le plugin Taxonomylist doit être installé'
-            SHOW_ARCHIVES: Afficher les archives
+            SHOW_ARCHIVES: Afficher les Archives
             SHOW_ARCHIVES_HELP: 'Le plugin Archives doit être installé'
-            SHOW_RELATED_PAGES: Afficher les pages associées
+            SHOW_RELATED_PAGES: Afficher les Pages Connexes
             SHOW_RELATED_PAGES_HELP: 'Le plugin Related pages doit être installé'
-            SHOW_FEEDS: Afficher les flux
+            SHOW_FEEDS: Afficher les Flux
             SHOW_FEEDS_HELP: 'Le plugin Feeds doit être installé'
-            SHOW_RANDOM: Afficher la publication aléatoire
+            SHOW_RANDOM: Afficher un Article Aléatoire
             SHOW_RANDOM_HELP: 'Le plugin Random doit être installé'
+            BLOG_CATEGORIES: Catégories du Blog
+
         BLOG:
           DEFAULTS: Paramètres par défaut du blog
           PAGE_LABEL: Page du blog
@@ -250,6 +254,76 @@ EDITORIAL:
           TH_MODIFIED: Modifié
           TH_DOWNLOAD: Télécharger
           TD_BUTTON: Télécharger
+        TABS:
+          TITLE: Module d'onglets
+          CONTENT_TABS: Contenu des Onglets
+          INSTRUCTIONS: |
+                <p><strong>📑 Guide de Configuration des Onglets</strong></p>
+
+                <p><strong>Structure de Base:</strong></p>
+                <ul>
+                <li>Chaque onglet comprend un titre, une icône optionnelle, du contenu et une image optionnelle</li>
+                <li>Le premier onglet s'ouvre par défaut sur le bureau</li>
+                <li>Le contenu supporte le formatage complet de Markdown</li>
+                <li>Les onglets se convertissent automatiquement en accordéons sur mobile pour une meilleure utilisabilité</li>
+                </ul>
+
+                <p><strong>🖼️ Médias et Mise en Page:</strong></p>
+                <ul>
+                <li>Si une image est fournie, la mise en page s'ajuste automatiquement (division 50/50)</li>
+                <li>Le texte alt pour les images améliore l'accessibilité</li>
+                <li>Les onglets sans images affichent le contenu en largeur complète</li>
+                </ul>
+
+                <p><strong>🎨 Fonctionnalités de Style:</strong></p>
+                <ul>
+                <li>Icônes Font Awesome dans les titres des onglets</li>
+                <li>Alignement personnalisable de la navigation par onglets (gauche ou centre)</li>
+                <li>Personnalisation des couleurs pour les onglets par défaut et actifs</li>
+                <li>Boutons avec texte configurable, URL et classe CSS personnalisée</li>
+                <li>Inclut un style réactif et un repliage élégant en mode accordéon</li>
+                </ul>
+
+                <p><strong>💡 Conseils Pratiques:</strong></p>
+                <ul>
+                <li>Gardez les titres des onglets courts pour un meilleur affichage sur desktop</li>
+                <li>Utilisez des icônes pour améliorer la hiérarchie visuelle et le balayage rapide</li>
+                <li>Divisez le contenu complexe sur plusieurs onglets pour plus de clarté</li>
+                <li>Ajoutez un bouton d'appel à l'action si nécessaire</li>
+                <li>Utilisez Markdown pour structurer le contenu enrichi dans chaque onglet</li>
+                </ul>
+
+                <p><em>Tous les champs sont optionnels sauf le titre.</em></p>
+          INTRO_TEXT: Texte d'Introduction
+          INTRO_TEXT_HELP: Texte à afficher au-dessus du composant d'onglets.
+          ITEMS_LABEL: Éléments
+          ITEM_TITLE: Titre de l'Onglet
+          ITEM_ICON: Classe d'Icône (Font Awesome)
+          ITEM_IMAGE: Image de l'Onglet
+          ITEM_IMAGE_ALT: Texte ALT de l'Image
+          CONTENT_TITLE: Titre du Contenu
+          DESCRIPTION: Description (Markdown)
+          LINK_URL: URL du Lien
+          LINK_TEXT: Texte du Lien
+          LINK_CLASS: Classe CSS du Lien
+          STYLES_TAB: Styles des Onglets
+          DEFAULT_BG: Fond par Défaut
+          DEFAULT_TEXT: Texte par Défaut
+          BORDER_COLOR: Couleur de la Bordure
+          LINK_COLOR: "Couleur du Lien"
+          LINK_COLOR_HELP: "Couleur des liens dans le contenu de l'onglet"
+          LINK_HOVER_COLOR: "Couleur du Lien au Survol"
+          LINK_HOVER_COLOR_HELP: "Couleur des liens lors du survol"
+          LINK_HOVER_BG: "Fond de l'Onglet (au survol)"
+          LINK_HOVER_BG_HELP: "Couleur de fond des onglets lors du survol"
+          ACTIVE_BG: Fond Actif
+          ACTIVE_TEXT: Texte Actif
+          ACCORDION_BG: Fond d'Accordéon Mobile
+          ACCORDION_TEXT: Texte d'Accordéon Mobile
+          ALIGNMENT: Alignement des Onglets
+          ALIGN_LEFT: Gauche
+          ALIGN_CENTER: Centre
+          ALIGN_VERTICAL: "Vertical (Barre Latérale Gauche)"
       BLOG:
         TAB: Configuration du blog
         ROUTE: Route du blog
@@ -285,6 +359,12 @@ EDITORIAL:
           FORMAT_LONG: Le délimiteur de résumé sera ignoré
           SIZE: Taille
           DELIMITER: Délimiteur de résumé
+        SHAREICONS:
+          TITLE: Icônes de partage
+          FACEBOOK: Facebook
+          TWITTER: Twitter
+          WHATSAPP: WhatsApp
+          TELEGRAM: Telegram
       GALLERY:
         TAB: Galerie
         TITLE: Galerie d'images

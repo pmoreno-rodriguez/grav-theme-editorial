@@ -10,12 +10,6 @@ EDITORIAL:
         RIGHT_SIDEBAR: Barra lateral a la derecha
         RIGHT_SIDEBAR_HELP: Si está habilitado, la barra lateral aparecerá a la derecha
         GOOGLE_FONTS:
-        SHAREICONS:
-          TITLE: Iconos para compartir
-          FACEBOOK: Facebook
-          TWITTER: X / Twitter
-          WHATSAPP: WhatsApp
-          TELEGRAM: Telegram
           LOCAL: Usar fuentes de Google alojadas localmente
         HEADER_SECTION: Sección de Encabezado
         FAVICON: Elige tu propio favicon
@@ -50,14 +44,22 @@ EDITORIAL:
             STATE: Estado
             ZIP: Código Postal
         SIDEBAR: 
-            SECTION: Configuración del Sidebar
-            WIDGETS_SECTION: Opciones de Widgets
+            SECTION: Configuración de la Barra Lateral
+            CONFIGURATION: Configuración de la Barra Lateral
+            WIDGETS_OPTIONS: Opciones de Widgets
+            MENU_SECTION: Elementos del Menú
+            OPEN_BY_DEFAULT: Abrir por Defecto
+            OPEN_BY_DEFAULT_HELP: Establece si la barra lateral está abierta o cerrada al inicio
+            ON_RIGHT: Barra lateral a la derecha
+            ON_RIGHT_HELP: Si está habilitado, la barra lateral aparecerá a la derecha
             LANGSWITCHER: Habilitar opción de menú Langswitcher
             LANGSWITCHER_HELP: Con el plugin Langswitcher habilitado y la configuración multi-idioma en tu sitio, puedes habilitar o deshabilitar la funcionalidad langswitcher que aparece en el menú lateral
             SEARCH: Habilitar opción de menú Buscar
             SEARCH_HELP: Con el plugin SimpleSearch habilitado puedes habilitar o deshabilitar el bloque de búsqueda en el menú lateral
             LOGIN: Habilitar opción de menú Login
             LOGIN_HELP: Puedes habilitar o deshabilitar el icono de inicio de sesión en el menú lateral, para mostrar el estado de inicio de sesión
+            SHOW_FEATURED: Mostrar Publicaciones Destacadas
+            SHOW_BLOG_CATEGORIES: Mostrar Categorías del Blog
             SHOW_TAXONOMY: Mostrar Etiquetas Populares
             SHOW_TAXONOMY_HELP: 'El plugin Taxonomylist debe estar instalado'
             SHOW_ARCHIVES: Mostrar Archivos
@@ -68,6 +70,8 @@ EDITORIAL:
             SHOW_FEEDS_HELP: 'El plugin Feeds debe estar instalado'
             SHOW_RANDOM: Mostrar Publicación Aleatoria
             SHOW_RANDOM_HELP: 'El plugin Random debe estar instalado'
+            BLOG_CATEGORIES: Categorías del Blog
+
         BLOG:
           DEFAULTS: Valores Predeterminados del Blog
           PAGE_LABEL: Página del Blog
@@ -250,6 +254,76 @@ EDITORIAL:
           TH_MODIFIED: Modificado
           TH_DOWNLOAD: Descarga
           TD_BUTTON: Descargar
+        TABS:
+          TITLE: Módulo de Pestañas
+          CONTENT_TABS: Contenido de Pestañas
+          INSTRUCTIONS: |
+                <p><strong>📑 Guía de Configuración de Pestañas</strong></p>
+
+                <p><strong>Estructura Básica:</strong></p>
+                <ul>
+                <li>Cada pestaña incluye un título, icono opcional, contenido e imagen opcional</li>
+                <li>La primera pestaña se abre por defecto en escritorio</li>
+                <li>El contenido soporta formato completo de markdown</li>
+                <li>Las pestañas se convierten automáticamente en acordeones en móvil para mejor usabilidad</li>
+                </ul>
+
+                <p><strong>🖼️ Medios y Diseño:</strong></p>
+                <ul>
+                <li>Si se proporciona una imagen, el diseño se ajusta automáticamente (división 50/50)</li>
+                <li>El texto alt para imágenes mejora la accesibilidad</li>
+                <li>Las pestañas sin imágenes muestran contenido a ancho completo</li>
+                </ul>
+
+                <p><strong>🎨 Características de Estilo:</strong></p>
+                <ul>
+                <li>Iconos de Font Awesome en títulos de pestañas</li>
+                <li>Alineación personalizable de la navegación de pestañas (izquierda o centro)</li>
+                <li>Personalización de color para pestañas por defecto y activas</li>
+                <li>Botones con texto configurable, URL y clase CSS personalizada</li>
+                <li>Incluye estilos responsivos y colapso elegante en modo acordeón</li>
+                </ul>
+
+                <p><strong>💡 Consejos Pro:</strong></p>
+                <ul>
+                <li>Mantén los títulos de las pestañas cortos para mejor visualización en escritorio</li>
+                <li>Usa iconos para mejorar la jerarquía visual y el escaneo rápido</li>
+                <li>Divide contenido complejo en múltiples pestañas para claridad</li>
+                <li>Añade un botón de llamada a la acción cuando sea relevante</li>
+                <li>Usa markdown para estructurar contenido enriquecido dentro de cada pestaña</li>
+                </ul>
+
+                <p><em>Todos los campos son opcionales excepto el título.</em></p>
+          INTRO_TEXT: Texto de Introducción
+          INTRO_TEXT_HELP: Texto a mostrar sobre el componente de pestañas.
+          ITEMS_LABEL: Elementos
+          ITEM_TITLE: Título de Pestaña
+          ITEM_ICON: Clase de Icono (Font Awesome)
+          ITEM_IMAGE: Imagen de Pestaña
+          ITEM_IMAGE_ALT: Texto ALT de Imagen
+          CONTENT_TITLE: Título del Contenido
+          DESCRIPTION: Descripción (Markdown)
+          LINK_URL: URL del Enlace
+          LINK_TEXT: Texto del Enlace
+          LINK_CLASS: Clase CSS del Enlace
+          STYLES_TAB: Estilos de Pestañas
+          DEFAULT_BG: Fondo Predeterminado
+          DEFAULT_TEXT: Texto Predeterminado
+          BORDER_COLOR: Color del Borde
+          LINK_COLOR: "Color de Enlace"
+          LINK_COLOR_HELP: "Color de enlaces dentro del contenido de la pestaña"
+          LINK_HOVER_COLOR: "Color de Enlace al Pasar"
+          LINK_HOVER_COLOR_HELP: "Color de enlaces al pasar el ratón sobre ellos"
+          LINK_HOVER_BG: "Fondo de Pestaña (al pasar)"
+          LINK_HOVER_BG_HELP: "Color de fondo de pestañas al pasar el ratón sobre ellas"
+          ACTIVE_BG: Fondo Activo
+          ACTIVE_TEXT: Texto Activo
+          ACCORDION_BG: Fondo de Acordeón Móvil
+          ACCORDION_TEXT: Texto de Acordeón Móvil
+          ALIGNMENT: Alineación de Pestañas
+          ALIGN_LEFT: Izquierda
+          ALIGN_CENTER: Centro
+          ALIGN_VERTICAL: "Vertical (Barra Lateral Izquierda)"
       BLOG:
         TAB: Configuración del Blog
         ROUTE: Ruta del Blog
@@ -285,6 +359,12 @@ EDITORIAL:
           FORMAT_LONG: Se ignorará el delimitador del resumen
           SIZE: Tamaño
           DELIMITER: Delimitador del Resumen
+        SHAREICONS:
+          TITLE: Iconos para compartir
+          FACEBOOK: Facebook
+          TWITTER: Twitter
+          WHATSAPP: WhatsApp
+          TELEGRAM: Telegram
       GALLERY:
         TAB: Galería
         TITLE: Galería de Imágenes

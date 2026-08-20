@@ -69,6 +69,7 @@ Do not directly edit the editorial.yaml file found in the theme folder. Copy the
 * Production mode for CSS styles
 * Custom logo and Custom logo mobile in theme config
 * Support for Taxonomylist, Related Pages, Random, Feeds and Archives plugins.
+* Blog Categories widget - Display blog categories with post count in sidebar.
 * Team template
 * Downloads template
 * Shortcodes to write your pages easily, taking advantage of the styles offered by the theme.
@@ -115,8 +116,6 @@ Editorial comes with a few default options that can be set site-wide.  These opt
 ```yaml
 dropdown.enabled:             # Enable/Disable dropdown menu
 production-mode:              # In production mode, only minified CSS is used. When disabled, nested CSS are enabled
-sidebar_open:                 # Option to display the main page with the sidebar open or closed
-right_sidebar:                # Enable/Disable sidebar on the right
 google_fonts_local:           # Option to load Google Fonts from the theme or from Google servers
 custom_css:                   # Load the custom.css file if it exists in the assets/css folder
 custom_js:                    # Load the custom.js file if it exists in the assets/js folder
@@ -168,9 +167,18 @@ The SEO features automatically generate:
 ### Sidebar Settings
 
 ```yaml
+# Sidebar Behavior
+sidebar_open:                 # Option to display the main page with the sidebar open or closed
+right_sidebar:                # Enable/Disable sidebar on the right
+
+# Menu Items
 menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
 menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
 menu_login:                   # Enable/Disable login icon in menu
+
+# Widget Options
+featured:                     # Show/Hide featured posts in sidebar
+blog_categories_enabled:      # Show/Hide blog categories with post count in sidebar
 sidebar_showtaxonomy:         # Show/Hide taxonomy section in sidebar
 sidebar_showarchives:         # Show/Hide archives section in sidebar
 sidebar_showrelatedpages:     # Show/Hide related pages section in sidebar
@@ -182,9 +190,10 @@ sidebar_showrandom:           # Show/Hide random button in sidebar
 
 ```yaml
 blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout
-featured:                     # Enable/Disable featured posts in left sidebar
 featured_tag:                 # Select category name for featured posts (configured in taxonomies)
 featured_number:              # The number of featured posts will be displayed on the left sidebar (1-5)
+featured_order:               # Sort featured posts by date, modified, publish_date, title, or folder
+featured_dir:                 # Sort direction: ascending (asc) or descending (desc)
 ```
 
 ### Contact Information

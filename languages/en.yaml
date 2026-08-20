@@ -10,7 +10,7 @@ EDITORIAL:
         RIGHT_SIDEBAR: Sidebar on the right
         RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
         GOOGLE_FONTS:
-          LOCAL: Use locally hosted Google Fonts    
+          LOCAL: Use locally hosted Google Fonts
         HEADER_SECTION: Header Section
         FAVICON: Choose your own favicon
         FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
@@ -43,7 +43,7 @@ EDITORIAL:
             CITY: City
             STATE: State
             ZIP: Postal Code
-        SIDEBAR: 
+        SIDEBAR:
             SECTION: Sidebar Settings
             CONFIGURATION: Sidebar Configuration
             WIDGETS_OPTIONS: Widgets Options
@@ -87,7 +87,7 @@ EDITORIAL:
               TAG: Set Title to filter posts by Tag
               AUTHOR: Set Title to filter posts by Author
             BLOG: Set Title for blog without filter
-        FEATURED: 
+        FEATURED:
           SECTION: Featured Section
           LABEL: Enable Featured posts in Sidebar
           NUMBER: Featured posts number to show
@@ -133,7 +133,7 @@ EDITORIAL:
             ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
             URL: 'URL'
             URL_DESCRIPTION: 'URL for menu item.'
-            TARGET: 
+            TARGET:
               LABEL: 'Target'
               BLANK: 'Open in a new window'
               PARENT: 'Open in the parent frame'
@@ -186,7 +186,7 @@ EDITORIAL:
           BUTTON_TEXT: Button Text
           BUTTON_URL: Button URL
           TITLE_HTAG: Title HTML Tag
-          TITLE_HTAG_HELP: Select the HTML tag to be used for the banner title   
+          TITLE_HTAG_HELP: Select the HTML tag to be used for the banner title
         TEXT_BLOCKS:
           TAB: Text Blocks
           CONFIG_TAB: Text Blocks Options
@@ -226,7 +226,7 @@ EDITORIAL:
             LABEL: Layout
             TWO_COLS: Medium   = 2 / 1 columns
             THREE_COLS: Standard  = 3 / 2 / 1 columns
-          LIMIT: Limit 
+          LIMIT: Limit
           LIMIT_HELP: Maximum number of posts to display.
           READMORE_TEXT: Readmore button text
           READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
@@ -243,7 +243,7 @@ EDITORIAL:
           DETAILS_HELP: Brief profile description
           SOCIAL_MEDIA:
             LABEL: Social media
-            HELP: The template allows a maximum of 6 icons for each member. 
+            HELP: The template allows a maximum of 6 icons for each member.
             NAME: Social name
             NAME_HELP: You only have to write the name of the social network here (eg, Facebook, Twitter, etc)
             URL: Social URL
@@ -253,83 +253,14 @@ EDITORIAL:
           TH_MODIFIED: Modified
           TH_DOWNLOAD: Download
           TD_BUTTON: Download
-        TABS:
-          TITLE: Tabs Module
-          CONTENT_TABS: Tabs Content
-          INSTRUCTIONS: |
-                <p><strong>📑 Tabs Configuration Guide</strong></p>
 
-                <p><strong>Basic Structure:</strong></p>
-                <ul>
-                <li>Each tab includes a title, optional icon, content, and an optional image</li>
-                <li>The first tab opens by default on desktop</li>
-                <li>Content supports full markdown formatting</li>
-                <li>Tabs automatically convert into accordions on mobile for better usability</li>
-                </ul>
-
-                <p><strong>🖼️ Media & Layout:</strong></p>
-                <ul>
-                <li>If an image is provided, layout adjusts automatically (50/50 split)</li>
-                <li>Alt text for images enhances accessibility</li>
-                <li>Tabs without images display full-width content</li>
-                </ul>
-
-                <p><strong>🎨 Styling Features:</strong></p>
-                <ul>
-                <li>Font Awesome icons in tab titles</li>
-                <li>Customizable alignment of tab navigation (left or center)</li>
-                <li>Color customization for default and active tabs</li>
-                <li>Buttons with configurable text, URL and custom CSS class</li>
-                <li>Includes responsive styling and graceful collapse into accordion mode</li>
-                </ul>
-
-                <p><strong>💡 Pro Tips:</strong></p>
-                <ul>
-                <li>Keep tab titles short for better desktop display</li>
-                <li>Use icons to enhance visual hierarchy and quick scanning</li>
-                <li>Split complex content across multiple tabs for clarity</li>
-                <li>Add a call-to-action button when relevant</li>
-                <li>Use markdown to structure rich content inside each tab</li>
-                </ul>
-
-                <p><em>All fields are optional except the title.</em></p>
-          INTRO_TEXT: Intro Text
-          INTRO_TEXT_HELP: Text to display above the tabs component.
-          ITEMS_LABEL: Items
-          ITEM_TITLE: Tab Title
-          ITEM_ICON: Icon class (Font Awesome)
-          ITEM_IMAGE: Tab Image
-          ITEM_IMAGE_ALT: Image ALT text
-          CONTENT_TITLE: Content Title
-          DESCRIPTION: Description (Markdown)
-          LINK_URL: Link URL
-          LINK_TEXT: Link Text
-          LINK_CLASS: Link CSS Class
-          STYLES_TAB: Tabs Styles
-          DEFAULT_BG: Default Background
-          DEFAULT_TEXT: Default Text
-          BORDER_COLOR: Border Color
-          LINK_COLOR: "Link Color"
-          LINK_COLOR_HELP: "Color of links within the tab content"
-          LINK_HOVER_COLOR: "Link Hover Color"
-          LINK_HOVER_COLOR_HELP: "Color of links when hovering over them"
-          LINK_HOVER_BG: "Tab Background (hover)"
-          LINK_HOVER_BG_HELP: "Background color of tabs when hovering over them"
-          ACTIVE_BG: Active Background
-          ACTIVE_TEXT: Active Text
-          ACCORDION_BG: Mobile Accordion BG
-          ACCORDION_TEXT: Mobile Accordion Text
-          ALIGNMENT: Tab Alignment
-          ALIGN_LEFT: Left
-          ALIGN_CENTER: Center
-          ALIGN_VERTICAL: "Vertical (Left Sidebar)"
       BLOG:
         TAB: Blog Config
         ROUTE: Blog Route
         ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
         CONFIGURATION: Configuration
         TITLE: Content Definition
-        ITEMS: 
+        ITEMS:
           LABEL: Items
           LIMIT: Max Item Count
           ORDER_BY:
@@ -342,7 +273,7 @@ EDITORIAL:
           DIR_ASC: Ascending
           DIR_DESC: Descending
         SHOW_BREADCRUMBS: Show Breadcrumbs
-        PAGINATION: 
+        PAGINATION:
           LABEL: Pagination
         URL_TAXONOMY_FILTERS: URL Taxonomy Filters
         READMORE_TEXT: Readmore button text
@@ -350,7 +281,7 @@ EDITORIAL:
       ITEM:
         TAB: Blog Item
         OPTIONS: Options
-        SUMMARY: 
+        SUMMARY:
           TITLE: Summary Item
           ENABLED: Enabled Summary
           FORMAT: Summary Format
@@ -367,7 +298,7 @@ EDITORIAL:
       GALLERY:
         TAB: Gallery
         TITLE: Image Gallery
-        LAYOUT: 
+        LAYOUT:
           LABEL: Layout
           TWOCOLS: Medium   = 2 / 1 columns
           THREECOLS: Standard  = 3 / 2 / 1 columas
@@ -375,12 +306,12 @@ EDITORIAL:
         THUMB_WIDTH_HELP: Set width for thumbnails
         THUMB_HEIGHT: Thumbnail Height
         THUMB_HEIGHT_HELP: Set height for thumbnails
-        IMAGES: 
+        IMAGES:
           LABEL: Images
           IMAGE: Image
           IMAGE_TITLE: Title
           IMAGE_DESCRIPTION: Description
-          DESCPOSITION: 
+          DESCPOSITION:
             LABEL: Description position
             HELP: Global position for slides description, you can define a specific position on each slide (bottom, top, left, right)
             BOTTOM: Bottom
@@ -487,9 +418,9 @@ EDITORIAL:
         PAGE_INDEX_HELP: If enabled, child pages will be displayed as if they were a table of contents
         CONTENT_SECTION: Content options
         FEATURED_IMAGE_LABEL: Featured Image
-        FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
+        FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image
         IMAGE_OPTIONS: Image options
-        FEATURED_IMAGE: 
+        FEATURED_IMAGE:
           LABEL: Featured image
           HELP: Select a featured image to display at the top of the page
           WIDTH: Width
@@ -521,7 +452,7 @@ EDITORIAL:
         LABEL: Random Article
         BUTTON: I'm Feeling Lucky!
       SYNDICATE:
-        LABEL: Syndicate 
+        LABEL: Syndicate
       TAXONOMYLIST:
         LABEL: Popular Tags
     DEFAULT:
@@ -531,7 +462,7 @@ EDITORIAL:
       LISTING_TITLE_TAG: 'Posts with Tag: '
       LISTING_TITLE_AUTHOR: 'Posts written by Author: '
       LISTING_TITLE_MONTH: 'Post of the month: '
-      PAGINATION: 
+      PAGINATION:
         PREV: Previous
         NEXT: Next
     ITEM:
@@ -556,7 +487,7 @@ ICU:
           RIGHT_SIDEBAR: Sidebar on the right
           RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
           GOOGLE_FONTS:
-            LOCAL: Use locally hosted Google Fonts    
+            LOCAL: Use locally hosted Google Fonts
           HEADER_SECTION: Header Section
           FAVICON: Choose your own favicon
           FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
@@ -589,7 +520,7 @@ ICU:
               CITY: City
               STATE: State
               ZIP: Postal Code
-          SIDEBAR: 
+          SIDEBAR:
               SECTION: Sidebar Settings
               WIDGETS_OPTIONS: Widgets Options
               LANGSWITCHER: Enable Langswitcher menu option
@@ -618,7 +549,7 @@ ICU:
                 TAG: Set Title to filter posts by Tag
                 AUTHOR: Set Title to filter posts by Author
               BLOG: Set Title for blog without filter
-          FEATURED: 
+          FEATURED:
             SECTION: Featured Section
             LABEL: Enable Featured posts in Sidebar
             NUMBER: Featured posts number to show
@@ -664,7 +595,7 @@ ICU:
               ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
               URL: 'URL'
               URL_DESCRIPTION: 'URL for menu item.'
-              TARGET: 
+              TARGET:
                 LABEL: 'Target'
                 BLANK: 'Open in a new window'
                 PARENT: 'Open in the parent frame'
@@ -717,7 +648,7 @@ ICU:
             BUTTON_TEXT: Button Text
             BUTTON_URL: Button URL
             TITLE_HTAG: Title HTML Tag
-            TITLE_HTAG_HELP: Select the HTML tag to be used for the banner title   
+            TITLE_HTAG_HELP: Select the HTML tag to be used for the banner title
           TEXT_BLOCKS:
             TAB: Text Blocks
             CONFIG_TAB: Text Blocks Options
@@ -757,7 +688,7 @@ ICU:
               LABEL: Layout
               TWO_COLS: Medium   = 2 / 1 columns
               THREE_COLS: Standard  = 3 / 2 / 1 columns
-            LIMIT: Limit 
+            LIMIT: Limit
             LIMIT_HELP: Maximum number of posts to display.
             READMORE_TEXT: Readmore button text
             READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
@@ -774,7 +705,7 @@ ICU:
             DETAILS_HELP: Brief profile description
             SOCIAL_MEDIA:
               LABEL: Social media
-              HELP: The template allows a maximum of 6 icons for each member. 
+              HELP: The template allows a maximum of 6 icons for each member.
               NAME: Social name
               NAME_HELP: You only have to write the name of the social network here (eg, Facebook, Twitter, etc)
               URL: Social URL
@@ -784,83 +715,13 @@ ICU:
             TH_MODIFIED: Modified
             TH_DOWNLOAD: Download
             TD_BUTTON: Download
-          TABS:
-            TITLE: Tabs Module
-            CONTENT_TABS: Tabs Content
-            INSTRUCTIONS: |
-                  <p><strong>📑 Tabs Configuration Guide</strong></p>
-  
-                  <p><strong>Basic Structure:</strong></p>
-                  <ul>
-                  <li>Each tab includes a title, optional icon, content, and an optional image</li>
-                  <li>The first tab opens by default on desktop</li>
-                  <li>Content supports full markdown formatting</li>
-                  <li>Tabs automatically convert into accordions on mobile for better usability</li>
-                  </ul>
-  
-                  <p><strong>🖼️ Media & Layout:</strong></p>
-                  <ul>
-                  <li>If an image is provided, layout adjusts automatically (50/50 split)</li>
-                  <li>Alt text for images enhances accessibility</li>
-                  <li>Tabs without images display full-width content</li>
-                  </ul>
-  
-                  <p><strong>🎨 Styling Features:</strong></p>
-                  <ul>
-                  <li>Font Awesome icons in tab titles</li>
-                  <li>Customizable alignment of tab navigation (left or center)</li>
-                  <li>Color customization for default and active tabs</li>
-                  <li>Buttons with configurable text, URL and custom CSS class</li>
-                  <li>Includes responsive styling and graceful collapse into accordion mode</li>
-                  </ul>
-  
-                  <p><strong>💡 Pro Tips:</strong></p>
-                  <ul>
-                  <li>Keep tab titles short for better desktop display</li>
-                  <li>Use icons to enhance visual hierarchy and quick scanning</li>
-                  <li>Split complex content across multiple tabs for clarity</li>
-                  <li>Add a call-to-action button when relevant</li>
-                  <li>Use markdown to structure rich content inside each tab</li>
-                  </ul>
-  
-                  <p><em>All fields are optional except the title.</em></p>
-            INTRO_TEXT: Intro Text
-            INTRO_TEXT_HELP: Text to display above the tabs component.
-            ITEMS_LABEL: Items
-            ITEM_TITLE: Tab Title
-            ITEM_ICON: Icon class (Font Awesome)
-            ITEM_IMAGE: Tab Image
-            ITEM_IMAGE_ALT: Image ALT text
-            CONTENT_TITLE: Content Title
-            DESCRIPTION: Description (Markdown)
-            LINK_URL: Link URL
-            LINK_TEXT: Link Text
-            LINK_CLASS: Link CSS Class
-            STYLES_TAB: Tabs Styles
-            DEFAULT_BG: Default Background
-            DEFAULT_TEXT: Default Text
-            BORDER_COLOR: Border Color
-            LINK_COLOR: "Link Color"
-            LINK_COLOR_HELP: "Color of links within the tab content"
-            LINK_HOVER_COLOR: "Link Hover Color"
-            LINK_HOVER_COLOR_HELP: "Color of links when hovering over them"
-            LINK_HOVER_BG: "Tab Background (hover)"
-            LINK_HOVER_BG_HELP: "Background color of tabs when hovering over them"
-            ACTIVE_BG: Active Background
-            ACTIVE_TEXT: Active Text
-            ACCORDION_BG: Mobile Accordion BG
-            ACCORDION_TEXT: Mobile Accordion Text
-            ALIGNMENT: Tab Alignment
-            ALIGN_LEFT: Left
-            ALIGN_CENTER: Center
-            ALIGN_VERTICAL: "Vertical (Left Sidebar)"
         BLOG:
           TAB: Blog Config
           ROUTE: Blog Route
           ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
           CONFIGURATION: Configuration
           TITLE: Content Definition
-          ITEMS: 
+          ITEMS:
             LABEL: Items
             LIMIT: Max Item Count
             ORDER_BY:
@@ -873,7 +734,7 @@ ICU:
             DIR_ASC: Ascending
             DIR_DESC: Descending
           SHOW_BREADCRUMBS: Show Breadcrumbs
-          PAGINATION: 
+          PAGINATION:
             LABEL: Pagination
           URL_TAXONOMY_FILTERS: URL Taxonomy Filters
           READMORE_TEXT: Readmore button text
@@ -881,7 +742,7 @@ ICU:
         ITEM:
           TAB: Blog Item
           OPTIONS: Options
-          SUMMARY: 
+          SUMMARY:
             TITLE: Summary Item
             ENABLED: Enabled Summary
             FORMAT: Summary Format
@@ -898,7 +759,7 @@ ICU:
         GALLERY:
           TAB: Gallery
           TITLE: Image Gallery
-          LAYOUT: 
+          LAYOUT:
             LABEL: Layout
             TWOCOLS: Medium   = 2 / 1 columns
             THREECOLS: Standard  = 3 / 2 / 1 columas
@@ -906,12 +767,12 @@ ICU:
           THUMB_WIDTH_HELP: Set width for thumbnails
           THUMB_HEIGHT: Thumbnail Height
           THUMB_HEIGHT_HELP: Set height for thumbnails
-          IMAGES: 
+          IMAGES:
             LABEL: Images
             IMAGE: Image
             IMAGE_TITLE: Title
             IMAGE_DESCRIPTION: Description
-            DESCPOSITION: 
+            DESCPOSITION:
               LABEL: Description position
               HELP: Global position for slides description, you can define a specific position on each slide (bottom, top, left, right)
               BOTTOM: Bottom
@@ -1018,9 +879,9 @@ ICU:
           PAGE_INDEX_HELP: If enabled, child pages will be displayed as if they were a table of contents
           CONTENT_SECTION: Content options
           FEATURED_IMAGE_LABEL: Featured Image
-          FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image 
+          FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image
           IMAGE_OPTIONS: Image options
-          FEATURED_IMAGE: 
+          FEATURED_IMAGE:
             LABEL: Featured image
             HELP: Select a featured image to display at the top of the page
             WIDTH: Width
@@ -1051,7 +912,7 @@ ICU:
           LABEL: Random Article
           BUTTON: I'm Feeling Lucky!
         SYNDICATE:
-          LABEL: Syndicate 
+          LABEL: Syndicate
         TAXONOMYLIST:
           LABEL: Popular Tags
       DEFAULT:
@@ -1061,7 +922,7 @@ ICU:
         LISTING_TITLE_TAG: 'Posts with Tag: '
         LISTING_TITLE_AUTHOR: 'Posts written by Author: '
         LISTING_TITLE_MONTH: 'Post of the month: '
-        PAGINATION: 
+        PAGINATION:
           PREV: Previous
           NEXT: Next
       ITEM:

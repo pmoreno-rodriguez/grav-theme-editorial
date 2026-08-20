@@ -43,7 +43,7 @@ EDITORIAL:
             CITY: Stadt
             STATE: Bundesland
             ZIP: Postleitzahl
-        SIDEBAR: 
+        SIDEBAR:
             SECTION: Seitenleisten-Einstellungen
             CONFIGURATION: Sidebar-Konfiguration
             WIDGETS_OPTIONS: Widget-Optionen
@@ -187,7 +187,7 @@ EDITORIAL:
           BUTTON_TEXT: Button-Text
           BUTTON_URL: Button-URL
           TITLE_HTAG: Titel HTML-Tag
-          TITLE_HTAG_HELP: Wählen Sie das HTML-Tag aus, das für den Bannertitel verwendet werden soll 
+          TITLE_HTAG_HELP: Wählen Sie das HTML-Tag aus, das für den Bannertitel verwendet werden soll
         TEXT_BLOCKS:
           TAB: Textblöcke
           CONFIG_TAB: Textblöcke-Optionen
@@ -254,76 +254,6 @@ EDITORIAL:
           TH_MODIFIED: Geändert
           TH_DOWNLOAD: Download
           TD_BUTTON: Herunterladen
-        TABS:
-          TITLE: Tabs-Modul
-          CONTENT_TABS: Tabs-Inhalt
-          INSTRUCTIONS: |
-                <p><strong>📑 Registerkarten-Konfigurationsleitfaden</strong></p>
-
-                <p><strong>Grundstruktur:</strong></p>
-                <ul>
-                <li>Jeder Tab enthält einen Titel, ein optionales Symbol, Inhalt und ein optionales Bild</li>
-                <li>Der erste Tab wird auf dem Desktop standardmäßig geöffnet</li>
-                <li>Inhalt unterstützt vollständige Markdown-Formatierung</li>
-                <li>Tabs werden auf Mobilgeräten automatisch in Akkordeons umgewandelt, um bessere Benutzerfreundlichkeit zu bieten</li>
-                </ul>
-
-                <p><strong>🖼️ Medien und Layout:</strong></p>
-                <ul>
-                <li>Wenn ein Bild bereitgestellt wird, passt sich das Layout automatisch an (50/50-Aufteilung)</li>
-                <li>Alt-Text für Bilder verbessert die Barrierefreiheit</li>
-                <li>Tabs ohne Bilder zeigen Inhalt in voller Breite an</li>
-                </ul>
-
-                <p><strong>🎨 Styling-Funktionen:</strong></p>
-                <ul>
-                <li>Font Awesome-Symbole in Tab-Titeln</li>
-                <li>Anpassbare Ausrichtung der Tab-Navigation (links oder Mitte)</li>
-                <li>Farbeanpassung für Standard- und aktive Tabs</li>
-                <li>Schaltflächen mit konfigurierbarem Text, URL und benutzerdefinierten CSS-Klassen</li>
-                <li>Enthält responsives Styling und elegantes Zusammenklappen in den Akkordeon-Modus</li>
-                </ul>
-
-                <p><strong>💡 Pro-Tipps:</strong></p>
-                <ul>
-                <li>Halten Sie Tab-Titel kurz, um eine bessere Desktop-Anzeige zu ermöglichen</li>
-                <li>Verwenden Sie Symbole, um die visuelle Hierarchie und das schnelle Scannen zu verbessern</li>
-                <li>Verteilen Sie komplexe Inhalte auf mehrere Tabs zur Verdeutlichung</li>
-                <li>Fügen Sie eine Call-to-Action-Schaltfläche hinzu, wenn relevant</li>
-                <li>Verwenden Sie Markdown, um reichhaltige Inhalte in jedem Tab zu strukturieren</li>
-                </ul>
-
-                <p><em>Alle Felder sind optional außer dem Titel.</em></p>
-          INTRO_TEXT: Einleitungstext
-          INTRO_TEXT_HELP: Text, der über der Tabs-Komponente angezeigt werden soll.
-          ITEMS_LABEL: Elemente
-          ITEM_TITLE: Tab-Titel
-          ITEM_ICON: Symbolklasse (Font Awesome)
-          ITEM_IMAGE: Tab-Bild
-          ITEM_IMAGE_ALT: Bild-ALT-Text
-          CONTENT_TITLE: Inhaltstitel
-          DESCRIPTION: Beschreibung (Markdown)
-          LINK_URL: Link-URL
-          LINK_TEXT: Link-Text
-          LINK_CLASS: Link-CSS-Klasse
-          STYLES_TAB: Registerkarten-Stile
-          DEFAULT_BG: Standardhintergrund
-          DEFAULT_TEXT: Standardtext
-          BORDER_COLOR: Rahmenfarbe
-          LINK_COLOR: "Link-Farbe"
-          LINK_COLOR_HELP: "Farbe von Links im Tab-Inhalt"
-          LINK_HOVER_COLOR: "Link-Farbe beim Hover"
-          LINK_HOVER_COLOR_HELP: "Farbe von Links beim Hover"
-          LINK_HOVER_BG: "Tab-Hintergrund (beim Hover)"
-          LINK_HOVER_BG_HELP: "Hintergrundfarbe der Tabs beim Hover"
-          ACTIVE_BG: Aktiver Hintergrund
-          ACTIVE_TEXT: Aktiver Text
-          ACCORDION_BG: Mobile Akkordeon-Hintergrund
-          ACCORDION_TEXT: Mobile Akkordeon-Text
-          ALIGNMENT: Registerkarten-Ausrichtung
-          ALIGN_LEFT: Links
-          ALIGN_CENTER: Zentriert
-          ALIGN_VERTICAL: "Vertikal (Linke Seitenleiste)"
       BLOG:
         TAB: Blog-Konfiguration
         ROUTE: Blog-Route
@@ -505,7 +435,7 @@ EDITORIAL:
           TWITTER_CREATOR_HELP: "Ihr Twitter-Handle (ohne @)"
           TWITTER_CREATOR_VALIDATE: "Gültiger Twitter-Handle: 1-15 Buchstaben, Zahlen oder _"
           IMAGE: "Bild für soziale Medien teilen"
-          IMAGE_HELP: "Wählen Sie ein Bild aus, das für soziale Medien geteilt wird. Wenn kein Bild ausgewählt ist, wird das Featured-Bild der Seite verwendet." 
+          IMAGE_HELP: "Wählen Sie ein Bild aus, das für soziale Medien geteilt wird. Wenn kein Bild ausgewählt ist, wird das Featured-Bild der Seite verwendet."
     SIDEBAR:
       MENU_TITLE: Menü
       LANGSWITCHER: Sprache wählen
@@ -724,7 +654,7 @@ ICU:
             BUTTON_TEXT: Button-Text
             BUTTON_URL: Button-URL
             TITLE_HTAG: Titel HTML-Tag
-            TITLE_HTAG_HELP: Wählen Sie das HTML-Tag aus, das für den Bannertitel verwendet werden soll 
+            TITLE_HTAG_HELP: Wählen Sie das HTML-Tag aus, das für den Bannertitel verwendet werden soll
           TEXT_BLOCKS:
             TAB: Textblöcke
             CONFIG_TAB: Textblöcke-Optionen
@@ -966,7 +896,7 @@ ICU:
             TWITTER_CREATOR_HELP: "Ihr Twitter-Handle (ohne @)"
             TWITTER_CREATOR_VALIDATE: "Gültiger Twitter-Handle: 1-15 Buchstaben, Zahlen oder _"
             IMAGE: "Bild für soziale Medien teilen"
-            IMAGE_HELP: "Wählen Sie ein Bild aus, das für soziale Medien geteilt wird. Wenn kein Bild ausgewählt ist, wird das Featured-Bild der Seite verwendet." 
+            IMAGE_HELP: "Wählen Sie ein Bild aus, das für soziale Medien geteilt wird. Wenn kein Bild ausgewählt ist, wird das Featured-Bild der Seite verwendet."
       SIDEBAR:
         MENU_TITLE: Menü
         LANGSWITCHER: Sprache wählen

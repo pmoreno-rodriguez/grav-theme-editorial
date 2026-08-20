@@ -43,7 +43,7 @@ EDITORIAL:
             CITY: Ciudad
             STATE: Estado
             ZIP: Código Postal
-        SIDEBAR: 
+        SIDEBAR:
             SECTION: Configuración de la Barra Lateral
             CONFIGURATION: Configuración de la Barra Lateral
             WIDGETS_OPTIONS: Opciones de Widgets
@@ -88,7 +88,7 @@ EDITORIAL:
               TAG: Establecer Título para filtrar publicaciones por Etiqueta
               AUTHOR: Establecer Título para filtrar publicaciones por Autor
             BLOG: Establecer Título para el blog sin filtro
-        FEATURED: 
+        FEATURED:
           SECTION: Sección Destacados
           LABEL: Habilitar publicaciones destacadas en la Barra Lateral
           NUMBER: Número de publicaciones destacadas a mostrar
@@ -134,7 +134,7 @@ EDITORIAL:
             ICON_DESCRIPTION: 'Icono de Font Awesome para el elemento del menú'
             URL: 'URL'
             URL_DESCRIPTION: 'URL para el elemento del menú'
-            TARGET: 
+            TARGET:
               LABEL: 'Objetivo'
               BLANK: 'Abrir en una nueva ventana'
               PARENT: 'Abrir en el marco principal'
@@ -254,83 +254,13 @@ EDITORIAL:
           TH_MODIFIED: Modificado
           TH_DOWNLOAD: Descarga
           TD_BUTTON: Descargar
-        TABS:
-          TITLE: Módulo de Pestañas
-          CONTENT_TABS: Contenido de Pestañas
-          INSTRUCTIONS: |
-                <p><strong>📑 Guía de Configuración de Pestañas</strong></p>
-
-                <p><strong>Estructura Básica:</strong></p>
-                <ul>
-                <li>Cada pestaña incluye un título, icono opcional, contenido e imagen opcional</li>
-                <li>La primera pestaña se abre por defecto en escritorio</li>
-                <li>El contenido soporta formato completo de markdown</li>
-                <li>Las pestañas se convierten automáticamente en acordeones en móvil para mejor usabilidad</li>
-                </ul>
-
-                <p><strong>🖼️ Medios y Diseño:</strong></p>
-                <ul>
-                <li>Si se proporciona una imagen, el diseño se ajusta automáticamente (división 50/50)</li>
-                <li>El texto alt para imágenes mejora la accesibilidad</li>
-                <li>Las pestañas sin imágenes muestran contenido a ancho completo</li>
-                </ul>
-
-                <p><strong>🎨 Características de Estilo:</strong></p>
-                <ul>
-                <li>Iconos de Font Awesome en títulos de pestañas</li>
-                <li>Alineación personalizable de la navegación de pestañas (izquierda o centro)</li>
-                <li>Personalización de color para pestañas por defecto y activas</li>
-                <li>Botones con texto configurable, URL y clase CSS personalizada</li>
-                <li>Incluye estilos responsivos y colapso elegante en modo acordeón</li>
-                </ul>
-
-                <p><strong>💡 Consejos Pro:</strong></p>
-                <ul>
-                <li>Mantén los títulos de las pestañas cortos para mejor visualización en escritorio</li>
-                <li>Usa iconos para mejorar la jerarquía visual y el escaneo rápido</li>
-                <li>Divide contenido complejo en múltiples pestañas para claridad</li>
-                <li>Añade un botón de llamada a la acción cuando sea relevante</li>
-                <li>Usa markdown para estructurar contenido enriquecido dentro de cada pestaña</li>
-                </ul>
-
-                <p><em>Todos los campos son opcionales excepto el título.</em></p>
-          INTRO_TEXT: Texto de Introducción
-          INTRO_TEXT_HELP: Texto a mostrar sobre el componente de pestañas.
-          ITEMS_LABEL: Elementos
-          ITEM_TITLE: Título de Pestaña
-          ITEM_ICON: Clase de Icono (Font Awesome)
-          ITEM_IMAGE: Imagen de Pestaña
-          ITEM_IMAGE_ALT: Texto ALT de Imagen
-          CONTENT_TITLE: Título del Contenido
-          DESCRIPTION: Descripción (Markdown)
-          LINK_URL: URL del Enlace
-          LINK_TEXT: Texto del Enlace
-          LINK_CLASS: Clase CSS del Enlace
-          STYLES_TAB: Estilos de Pestañas
-          DEFAULT_BG: Fondo Predeterminado
-          DEFAULT_TEXT: Texto Predeterminado
-          BORDER_COLOR: Color del Borde
-          LINK_COLOR: "Color de Enlace"
-          LINK_COLOR_HELP: "Color de enlaces dentro del contenido de la pestaña"
-          LINK_HOVER_COLOR: "Color de Enlace al Pasar"
-          LINK_HOVER_COLOR_HELP: "Color de enlaces al pasar el ratón sobre ellos"
-          LINK_HOVER_BG: "Fondo de Pestaña (al pasar)"
-          LINK_HOVER_BG_HELP: "Color de fondo de pestañas al pasar el ratón sobre ellas"
-          ACTIVE_BG: Fondo Activo
-          ACTIVE_TEXT: Texto Activo
-          ACCORDION_BG: Fondo de Acordeón Móvil
-          ACCORDION_TEXT: Texto de Acordeón Móvil
-          ALIGNMENT: Alineación de Pestañas
-          ALIGN_LEFT: Izquierda
-          ALIGN_CENTER: Centro
-          ALIGN_VERTICAL: "Vertical (Barra Lateral Izquierda)"
       BLOG:
         TAB: Configuración del Blog
         ROUTE: Ruta del Blog
         ROUTE_HELP: La ruta a la página principal del blog que contiene la configuración "Mostrar ..."
         CONFIGURATION: Configuración
         TITLE: Definición de Contenido
-        ITEMS: 
+        ITEMS:
           LABEL: Elementos
           LIMIT: Número Máximo de Elementos
           ORDER_BY:
@@ -343,7 +273,7 @@ EDITORIAL:
           DIR_ASC: Ascendente
           DIR_DESC: Descendente
         SHOW_BREADCRUMBS: Mostrar Migas de Pan
-        PAGINATION: 
+        PAGINATION:
           LABEL: Paginación
         URL_TAXONOMY_FILTERS: Filtros de Taxonomía de URL
         READMORE_TEXT: Texto del botón Leer más
@@ -351,7 +281,7 @@ EDITORIAL:
       ITEM:
         TAB: Elemento del Blog
         OPTIONS: Opciones
-        SUMMARY: 
+        SUMMARY:
           TITLE: Resumen del Elemento
           ENABLED: Resumen Habilitado
           FORMAT: Formato del Resumen
@@ -368,7 +298,7 @@ EDITORIAL:
       GALLERY:
         TAB: Galería
         TITLE: Galería de Imágenes
-        LAYOUT: 
+        LAYOUT:
           LABEL: Diseño
           TWOCOLS: Medio = 2 / 1 columnas
           THREECOLS: Estándar = 3 / 2 / 1 columnas
@@ -376,12 +306,12 @@ EDITORIAL:
         THUMB_WIDTH_HELP: Establecer ancho para miniaturas
         THUMB_HEIGHT: Alto de Miniatura
         THUMB_HEIGHT_HELP: Establecer alto para miniaturas
-        IMAGES: 
+        IMAGES:
           LABEL: Imágenes
           IMAGE: Imagen
           IMAGE_TITLE: Título
           IMAGE_DESCRIPTION: Descripción
-          DESCPOSITION: 
+          DESCPOSITION:
             LABEL: Posición de la Descripción
             HELP: Posición global para la descripción de diapositivas, puedes definir una posición específica en cada diapositiva (inferior, superior, izquierda, derecha)
             BOTTOM: Inferior
@@ -490,7 +420,7 @@ EDITORIAL:
         FEATURED_IMAGE_LABEL: Imagen Destacada
         FEATURED_IMAGE_HELP: Seleccionar un archivo para usar como la imagen destacada superior de la página
         IMAGE_OPTIONS: Opciones de Imagen
-        FEATURED_IMAGE: 
+        FEATURED_IMAGE:
           LABEL: Imagen destacada
           HELP: Seleccionar una imagen destacada para mostrar en la parte superior de la página
           WIDTH: Ancho
@@ -532,7 +462,7 @@ EDITORIAL:
       LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
       LISTING_TITLE_AUTHOR: 'Publicaciones escritas por el autor: '
       LISTING_TITLE_MONTH: 'Publicación del mes: '
-      PAGINATION: 
+      PAGINATION:
         PREV: Anterior
         NEXT: Siguiente
     ITEM:
@@ -596,7 +526,7 @@ ICU:
               CITY: Ciudad
               STATE: Estado
               ZIP: Código Postal
-          SIDEBAR: 
+          SIDEBAR:
               SECTION: Configuración de la Barra Lateral
               WIDGETS_SECTION: Opciones de Widgets
               LANGSWITCHER: Habilitar opción de menú Langswitcher
@@ -625,7 +555,7 @@ ICU:
                 TAG: Establecer Título para filtrar publicaciones por Etiqueta
                 AUTHOR: Establecer Título para filtrar publicaciones por Autor
               BLOG: Establecer Título para el blog sin filtro
-          FEATURED: 
+          FEATURED:
             SECTION: Sección Destacados
             LABEL: Habilitar publicaciones destacadas en la Barra Lateral
             NUMBER: Número de publicaciones destacadas a mostrar
@@ -671,7 +601,7 @@ ICU:
               ICON_DESCRIPTION: 'Icono de Font Awesome para el elemento del menú'
               URL: 'URL'
               URL_DESCRIPTION: 'URL para el elemento del menú'
-              TARGET: 
+              TARGET:
                 LABEL: 'Objetivo'
                 BLANK: 'Abrir en una nueva ventana'
                 PARENT: 'Abrir en el marco principal'
@@ -797,7 +727,7 @@ ICU:
           ROUTE_HELP: La ruta a la página principal del blog que contiene la configuración "Mostrar ..."
           CONFIGURATION: Configuración
           TITLE: Definición de Contenido
-          ITEMS: 
+          ITEMS:
             LABEL: Elementos
             LIMIT: Número Máximo de Elementos
             ORDER_BY:
@@ -810,7 +740,7 @@ ICU:
             DIR_ASC: Ascendente
             DIR_DESC: Descendente
           SHOW_BREADCRUMBS: Mostrar Migas de Pan
-          PAGINATION: 
+          PAGINATION:
             LABEL: Paginación
           URL_TAXONOMY_FILTERS: Filtros de Taxonomía de URL
           READMORE_TEXT: Texto del botón Leer más
@@ -818,7 +748,7 @@ ICU:
         ITEM:
           TAB: Elemento del Blog
           OPTIONS: Opciones
-          SUMMARY: 
+          SUMMARY:
             TITLE: Resumen del Elemento
             ENABLED: Resumen Habilitado
             FORMAT: Formato del Resumen
@@ -829,7 +759,7 @@ ICU:
         GALLERY:
           TAB: Galería
           TITLE: Galería de Imágenes
-          LAYOUT: 
+          LAYOUT:
             LABEL: Diseño
             TWOCOLS: Medio = 2 / 1 columnas
             THREECOLS: Estándar = 3 / 2 / 1 columnas
@@ -837,12 +767,12 @@ ICU:
           THUMB_WIDTH_HELP: Establecer ancho para miniaturas
           THUMB_HEIGHT: Alto de Miniatura
           THUMB_HEIGHT_HELP: Establecer alto para miniaturas
-          IMAGES: 
+          IMAGES:
             LABEL: Imágenes
             IMAGE: Imagen
             IMAGE_TITLE: Título
             IMAGE_DESCRIPTION: Descripción
-            DESCPOSITION: 
+            DESCPOSITION:
               LABEL: Posición de la Descripción
               HELP: Posición global para la descripción de diapositivas, puedes definir una posición específica en cada diapositiva (inferior, superior, izquierda, derecha)
               BOTTOM: Inferior
@@ -951,7 +881,7 @@ ICU:
           FEATURED_IMAGE_LABEL: Imagen Destacada
           FEATURED_IMAGE_HELP: Seleccionar un archivo para usar como la imagen destacada superior de la página
           IMAGE_OPTIONS: Opciones de Imagen
-          FEATURED_IMAGE: 
+          FEATURED_IMAGE:
             LABEL: Imagen destacada
             HELP: Seleccionar una imagen destacada para mostrar en la parte superior de la página
             WIDTH: Ancho
@@ -992,7 +922,7 @@ ICU:
         LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
         LISTING_TITLE_AUTHOR: 'Publicaciones escritas por el autor: '
         LISTING_TITLE_MONTH: 'Publicación del mes: '
-        PAGINATION: 
+        PAGINATION:
           PREV: Anterior
           NEXT: Siguiente
       ITEM:

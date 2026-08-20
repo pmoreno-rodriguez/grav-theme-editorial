@@ -19,17 +19,6 @@ form:
       title: EDITORIAL.ADMIN.THEME.FEATURED.SECTION
       underline: true
     
-    featured:
-      type: toggle
-      label: EDITORIAL.ADMIN.THEME.FEATURED.LABEL
-      highlight: 0
-      default: 0
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
-    
     featured_tag:
       type: text
       markdown: true

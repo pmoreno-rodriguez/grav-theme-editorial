@@ -20,9 +20,11 @@
 		flex-wrap: nowrap;
 
 		h1 {
+		    @include vendor.vendor('flex', '1');
 			font-size: unset;
 		}
 		> * {
+		    @include vendor.vendor('flex', '0 0 auto');
 			margin-bottom: 0;
 		}
 		img {
@@ -46,7 +48,7 @@
 
 		.icons {
 			text-align: right;
-			flex: auto;
+			@include vendor.vendor('flex', '0 0 auto');
 		}
 		.slogan {
 			font-family: functions.font(family-heading);

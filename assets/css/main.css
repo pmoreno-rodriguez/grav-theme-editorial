@@ -3765,10 +3765,14 @@ table.alt tfoot {
 }
 
 #header h1 {
+  -moz-flex: 1;
+  flex: 1;
   font-size: unset;
 }
 
 #header > * {
+  -moz-flex: 0 0 auto;
+  flex: 0 0 auto;
   margin-bottom: 0;
 }
 
@@ -3794,7 +3798,8 @@ table.alt tfoot {
 
 #header .icons {
   text-align: right;
-  flex: auto;
+  -moz-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 #header .slogan {

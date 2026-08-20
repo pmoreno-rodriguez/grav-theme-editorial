@@ -1,0 +1,38 @@
+{% if blog %}
+    {% set published_posts = blog.children.published(true) %}
+    
+    {% if published_posts|length > 0 %}
+        {% set terms = [] %}
+        {% set catItemsCounts = [] %}
+        
+        {# Collect all categories and their post counts #}
+        {% for item in published_posts %}
+            {% set item_categories = item.taxonomy.category|default([]) %}
+            {% for cat in item_categories %}
+                {% if cat not in terms %}
+                    {% set terms = terms|merge([cat]) %}
+                {% endif %}
+                {% set catItemsCounts = catItemsCounts|merge({(cat): (catItemsCounts[cat]|default(0)) + 1}) %}
+            {% endfor %}
+        {% endfor %}
+        
+        {% if terms|length > 0 %}
+        <section>
+            <header class="major">
+                <h2>{{ 'EDITORIAL.SIDEBAR.BLOG_CATEGORIES'|t }}</h2>
+            </header>
+            
+            <ul class="actions aln-left">
+                {% for term in terms|sort %}
+                    <li>
+                        <span class="archive_items">{{ catItemsCounts[term] }}</span>
+                        <a href="{{ blog.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ term|e('url') }}">
+                            <span class="category-name">{{ term|titleize }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+    {% endif %}
+{% endif %}

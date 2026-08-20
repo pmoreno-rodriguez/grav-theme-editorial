@@ -6,6 +6,7 @@
 {% set show_featured = theme_var('featured')|defined(false) %}
 {% set sidebar_open = theme_var('sidebar_open')|defined(true) %}
 {% set contact = theme_var('enable_contact')|defined(false) %}
+{% set blog_categories_enabled = theme_var('blog_categories_enabled')|defined(true) %}
 
 {# Plugin Settings in Sidebar #}
 {% set showTaxonomyList = config.plugins.taxonomylist.enabled and theme_var('sidebar_showtaxonomy')|defined(false) %}
@@ -56,6 +57,11 @@
         {# display posts with 'featured_tag' tag on current blog page #}
         {% if show_featured is same as(true) %}
             {{ include('partials/sidebar/featured-posts.html.twig', {blog: new_base_url}) }}
+        {% endif %}
+
+        {# Show blog categories only on blog or item pages #}
+        {% if blog_categories_enabled and (page.template == 'blog' or page.template == 'item') %}
+            {{ include('partials/blog-categories.html.twig', {blog: blog}) }}
         {% endif %}
 
         {# Show Random post if plugin is enabled #}

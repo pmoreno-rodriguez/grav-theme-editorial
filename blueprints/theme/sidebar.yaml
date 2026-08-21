@@ -4,7 +4,7 @@ form:
   fields:
     configuration_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.SIDEBAR.CONFIGURATION
+      title: EDITORIAL.ADMIN.THEME.SIDEBAR.OPTIONS
       underline: true
 
     menu_langswitcher:

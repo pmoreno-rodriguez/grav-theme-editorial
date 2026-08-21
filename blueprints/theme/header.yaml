@@ -4,14 +4,14 @@ form:
   fields:
     header_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.HEADER_SECTION
+      title: EDITORIAL.ADMIN.THEME.HEADER_SETTINGS
       underline: true
-    
+
     themeSlogan:
       type: text
       label: EDITORIAL.ADMIN.THEME.SLOGAN
       help: EDITORIAL.ADMIN.THEME.SLOGAN_HELP
-    
+
     favicon:
       type: file
       label: EDITORIAL.ADMIN.THEME.FAVICON
@@ -23,12 +23,12 @@ form:
       toggleable: true
       filesize: 3
       accept: ['image/png', '.ico']
-    
+
     logo_section:
       type: section
       title: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.SECTION
       underline: true
-    
+
     custom_logo_enabled:
       type: toggle
       label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.ENABLED
@@ -39,7 +39,7 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    
+
     custom_logo_width:
       type: number
       size: small
@@ -48,7 +48,7 @@ form:
         min: 50
         max: 150
       label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.WIDTH
-    
+
     custom_logo:
       type: file
       label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.LOGO
@@ -59,7 +59,7 @@ form:
       description: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.DESCRIPTION
       accept:
         - image/*
-    
+
     custom_logo_mobile:
       type: file
       label: EDITORIAL.ADMIN.THEME.CUSTOM_LOGO.MOBILE

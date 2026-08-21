@@ -1,7 +1,7 @@
 EDITORIAL:
     ADMIN:
       THEME:
-        THEME_CONFIG: Theme Config
+        THEME_CONFIG_FIELDSET: Theme Config
         DROPDOWN_MENU: Dropdown in navbar
         PRODUCTION_MODE: Production mode
         PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
@@ -11,7 +11,8 @@ EDITORIAL:
         RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
         GOOGLE_FONTS:
           LOCAL: Use locally hosted Google Fonts
-        HEADER_SECTION: Header Section
+        HEADER_FIELDSET: Header Section
+        HEADER_SETTINGS: Header Options
         FAVICON: Choose your own favicon
         FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
         SLOGAN: Theme Slogan
@@ -28,7 +29,8 @@ EDITORIAL:
         CUSTOM_JS: Load Custom JS
         CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
         CONTACT:
-          TITLE: Contact
+          FIELDSET: Contact Settings
+          TITLE: Contact Options
           ENABLE: Enable Contact section
           COPYRIGHT_TEXT: Copyright Text
           COPYRIGHT_TEXT_HELP: Display custom copyright text in the footer, next to the site name.
@@ -44,8 +46,8 @@ EDITORIAL:
             STATE: State
             ZIP: Postal Code
         SIDEBAR:
-            SECTION: Sidebar Settings
-            CONFIGURATION: Sidebar Configuration
+            FIELDSET: Sidebar Settings
+            OPTIONS: Sidebar Options
             WIDGETS_OPTIONS: Widgets Options
             MENU_SECTION: Menu Items
             OPEN_BY_DEFAULT: Open By Default
@@ -72,6 +74,7 @@ EDITORIAL:
             SHOW_RANDOM_HELP: 'Random plugin must be installed'
             BLOG_CATEGORIES: Blog Categories
         BLOG:
+          FIELDSET: Blog Settings
           DEFAULTS: Blog Defaults
           PAGE_LABEL: Blog Page
           PAGE_HELP: The route to the blog page when working with blog sidebar
@@ -106,7 +109,7 @@ EDITORIAL:
           DIRECTION_DESC: "Descending"
           DIRECTION_ASC: "Ascending"
         SOCIAL:
-          TITLE: Social Media
+          FIELDSET: Social Media Settings
           TEXT: Include full url's to your various social media presences.  An icon/ link will appear at the top of the page for each respective platform.
           ENABLED: Enable Social Icons
           ICONS: Social Icons
@@ -122,6 +125,7 @@ EDITORIAL:
           ICON_HELP: 'Enter the FontAwesome icon class (e.g., facebook, twitter, linkedin, mastodon). Prefix "fa-" is optional and will be added automatically.'
           ICON_TYPE: Icon Type
         CUSTOM_MENU:
+          FIELDSET: Custom Menu Settings
           TITLE: 'Custom Menu Items'
           ENABLE: 'Display Custom Menu Items'
           ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
@@ -140,28 +144,28 @@ EDITORIAL:
               SELF: 'Open in the same frame as clicked'
               TOP: 'Open in the full body of the window'
         SEO:
-          TITLE: "SEO Settings"
+          FIELDSET: "SEO Settings"
           ENABLED: "Enable SEO"
           ENABLED_HELP: "Enable or disable all SEO functionality. Disable if using an SEO plugin"
           JSON_LD_ENABLED: "Structured JSON-LD"
           JSON_LD_ENABLED_HELP: "Generate JSON-LD structured data for rich snippets"
-          GENERAL_SECTION: "General SEO Settings"
+          GENERAL_OPTIONS: "General SEO Options"
           ROBOTS: "Robots directives"
           ROBOTS_HELP: "Instructions for search engines about indexing and following"
           ROBOTS_INDEX_FOLLOW: "Index, Follow"
           ROBOTS_NOINDEX_FOLLOW: "No Index, Follow"
           ROBOTS_INDEX_NOFOLLOW: "Index, No Follow"
           ROBOTS_NOINDEX_NOFOLLOW: "No Index, No Follow"
-          DESCRIPTION_SECTION: "Description Configuration"
+          DESCRIPTION_SECTION: "Description Options"
           DESCRIPTION_LENGTH: "Description length"
           DESCRIPTION_LENGTH_HELP: "Maximum number of words in description meta tag"
           DESCRIPTION_FALLBACK: "Description fallback"
-          DESCRIPTION_FALLBACK_HELP: "Use the site-wide description when no page-specific description is available"
-          DESCRIPTION_SUMMARIZATION: "Description generation method"
-          DESCRIPTION_SUMMARIZATION_HELP: "Defines how the description is generated from the page content"
+          DESCRIPTION_FALLBACK_HELP: "Use content summary when description is not available"
+          DESCRIPTION_SUMMARIZATION: "Description summarization"
+          DESCRIPTION_SUMMARIZATION_HELP: "Method used to generate descriptions from content"
           SUMMARIZATION_SIMPLE: "Simple truncation"
           SUMMARIZATION_SMART: "Smart summarization"
-          TWITTER_SECTION: "Twitter Card Settings"
+          TWITTER_SECTION: "Twitter Card Options"
           TWITTER_ENABLED: "Enable Twitter Cards"
           TWITTER_ENABLED_HELP: "Generate Twitter Card meta tags"
           TWITTER_SITE: "Twitter site username"
@@ -173,7 +177,7 @@ EDITORIAL:
           TWITTER_CARD_SUMMARY: "Summary"
           TWITTER_CARD_APP: "App"
           TWITTER_CARD_PLAYER: "Player"
-          FACEBOOK_SECTION: "Facebook Open Graph Settings"
+          FACEBOOK_SECTION: "Facebook Open Graph Options"
           FACEBOOK_ENABLED: "Enable Open Graph"
           FACEBOOK_ENABLED_HELP: "Generate Facebook Open Graph meta tags"
           FACEBOOK_APP_ID: "Facebook App ID"
@@ -253,7 +257,6 @@ EDITORIAL:
           TH_MODIFIED: Modified
           TH_DOWNLOAD: Download
           TD_BUTTON: Download
-
       BLOG:
         TAB: Blog Config
         ROUTE: Blog Route
@@ -301,7 +304,7 @@ EDITORIAL:
         LAYOUT:
           LABEL: Layout
           TWOCOLS: Medium   = 2 / 1 columns
-          THREECOLS: Standard  = 3 / 2 / 1 columas
+          THREECOLS: Standard  = 3 / 2 / 1 columns
         THUMB_WIDTH: Thumbnail Width
         THUMB_WIDTH_HELP: Set width for thumbnails
         THUMB_HEIGHT: Thumbnail Height
@@ -428,14 +431,14 @@ EDITORIAL:
         SHOW_PAGEIMAGE: Show Image
         SHOW_PAGEIMAGE_HELP: Show featured image if it is defined or the first image of the media page.
         SEO:
-          TAB: SEO & Social
-          SECTION_TITLE: Social Media Options
+          TAB: "SEO and Social"
+          SECTION_TITLE: "Social Media Options"
           ROBOTS_HELP: "Instructions for search engines about indexing and following. This page setting overrides the global configuration."
           TWITTER_CREATOR: "Twitter username"
           TWITTER_CREATOR_HELP: "Your Twitter handle (without @)"
           TWITTER_CREATOR_VALIDATE: "Valid Twitter handle: 1-15 letters, numbers or _"
-          IMAGE: Social Share Image
-          IMAGE_HELP: Select an image to be used in social media shares. If no image is selected, the page's featured image will be used.
+          IMAGE: "Social Share Image"
+          IMAGE_HELP: "Select an image to be used in social media shares. If no image is selected, the page's featured image will be used."
     SIDEBAR:
       MENU_TITLE: Menu
       LANGSWITCHER: Choose language
@@ -478,7 +481,7 @@ ICU:
   EDITORIAL:
       ADMIN:
         THEME:
-          THEME_CONFIG: Theme Config
+          THEME_CONFIG_FIELDSET: Theme Config
           DROPDOWN_MENU: Dropdown in navbar
           PRODUCTION_MODE: Production mode
           PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
@@ -488,7 +491,8 @@ ICU:
           RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
           GOOGLE_FONTS:
             LOCAL: Use locally hosted Google Fonts
-          HEADER_SECTION: Header Section
+          HEADER_FIELDSET: Header Section
+          HEADER_SETTINGS: Header Options
           FAVICON: Choose your own favicon
           FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
           SLOGAN: Theme Slogan
@@ -505,7 +509,8 @@ ICU:
           CUSTOM_JS: Load Custom JS
           CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
           CONTACT:
-            TITLE: Contact
+            FIELDSET: Contact Settings
+            TITLE: Contact Options
             ENABLE: Enable Contact section
             COPYRIGHT_TEXT: Copyright Text
             COPYRIGHT_TEXT_HELP: Display custom copyright text in the footer, next to the site name.
@@ -521,14 +526,22 @@ ICU:
               STATE: State
               ZIP: Postal Code
           SIDEBAR:
-              SECTION: Sidebar Settings
+              FIELDSET: Sidebar Settings
+              OPTIONS: Sidebar Options
               WIDGETS_OPTIONS: Widgets Options
+              MENU_SECTION: Menu Items
+              OPEN_BY_DEFAULT: Open By Default
+              OPEN_BY_DEFAULT_HELP: Set if the sidebar is open or closed at startup
+              ON_RIGHT: Sidebar on the right
+              ON_RIGHT_HELP: If set to enabled the sidebar will appear on the right
               LANGSWITCHER: Enable Langswitcher menu option
               LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the sidebar menu.
               SEARCH: Enable Search menu option
               SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in sidebar menu.
               LOGIN: Enable Login menu option
               LOGIN_HELP: You can enable or disable Login icon in sidebar menu, to show login status.
+              SHOW_FEATURED: Show Featured Posts
+              SHOW_BLOG_CATEGORIES: Show Blog Categories
               SHOW_TAXONOMY: Show Popular Tags
               SHOW_TAXONOMY_HELP: 'Taxonomylist plugin must be installed'
               SHOW_ARCHIVES: Show Archives
@@ -539,10 +552,18 @@ ICU:
               SHOW_FEEDS_HELP: 'Feeds plugin must be installed'
               SHOW_RANDOM: Show Random Post
               SHOW_RANDOM_HELP: 'Random plugin must be installed'
+              BLOG_CATEGORIES: Blog Categories
           BLOG:
+            FIELDSET: Blog Settings
             DEFAULTS: Blog Defaults
             PAGE_LABEL: Blog Page
             PAGE_HELP: The route to the blog page when working with blog sidebar
+            CATEGORIES_ENABLED: Show Blog Categories
+            CATEGORIES_ENABLED_HELP: Display blog categories with post count in the sidebar
+            CATEGORIES_SCOPE: Categories Scope
+            CATEGORIES_SCOPE_HELP: Choose where to display blog categories
+            CATEGORIES_SCOPE_BLOG_ONLY: Blog pages only
+            CATEGORIES_SCOPE_ALL_BLOGS: All blogs on all pages
             LISTING_TITLE:
               TAXONOMY:
                 CATEGORY: Set Title to filter posts by Category
@@ -568,7 +589,7 @@ ICU:
             DIRECTION_DESC: "Descending"
             DIRECTION_ASC: "Ascending"
           SOCIAL:
-            TITLE: Social Media
+            FIELDSET: Social Media Settings
             TEXT: Include full url's to your various social media presences.  An icon/ link will appear at the top of the page for each respective platform.
             ENABLED: Enable Social Icons
             ICONS: Social Icons
@@ -584,6 +605,7 @@ ICU:
             ICON_HELP: 'Enter the FontAwesome icon class (e.g., facebook, twitter, linkedin, mastodon). Prefix "fa-" is optional and will be added automatically.'
             ICON_TYPE: Icon Type
           CUSTOM_MENU:
+            FIELDSET: Custom Menu Settings
             TITLE: 'Custom Menu Items'
             ENABLE: 'Display Custom Menu Items'
             ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
@@ -602,28 +624,28 @@ ICU:
                 SELF: 'Open in the same frame as clicked'
                 TOP: 'Open in the full body of the window'
           SEO:
-            TITLE: "SEO Settings"
+            FIELDSET: "SEO Settings"
             ENABLED: "Enable SEO"
             ENABLED_HELP: "Enable or disable all SEO functionality. Disable if using an SEO plugin"
             JSON_LD_ENABLED: "Structured JSON-LD"
             JSON_LD_ENABLED_HELP: "Generate JSON-LD structured data for rich snippets"
-            GENERAL_SECTION: "General SEO Settings"
+            GENERAL_OPTIONS: "General SEO Options"
             ROBOTS: "Robots directives"
             ROBOTS_HELP: "Instructions for search engines about indexing and following"
             ROBOTS_INDEX_FOLLOW: "Index, Follow"
             ROBOTS_NOINDEX_FOLLOW: "No Index, Follow"
             ROBOTS_INDEX_NOFOLLOW: "Index, No Follow"
             ROBOTS_NOINDEX_NOFOLLOW: "No Index, No Follow"
-            DESCRIPTION_SECTION: "Description Configuration"
+            DESCRIPTION_SECTION: "Description Options"
             DESCRIPTION_LENGTH: "Description length"
             DESCRIPTION_LENGTH_HELP: "Maximum number of words in description meta tag"
             DESCRIPTION_FALLBACK: "Description fallback"
-            DESCRIPTION_FALLBACK_HELP: "Use the site-wide description when no page-specific description is available"
-            DESCRIPTION_SUMMARIZATION: "Description generation method"
-            DESCRIPTION_SUMMARIZATION_HELP: "Defines how the description is generated from the page content"
+            DESCRIPTION_FALLBACK_HELP: "Use content summary when description is not available"
+            DESCRIPTION_SUMMARIZATION: "Description summarization"
+            DESCRIPTION_SUMMARIZATION_HELP: "Method used to generate descriptions from content"
             SUMMARIZATION_SIMPLE: "Simple truncation"
             SUMMARIZATION_SMART: "Smart summarization"
-            TWITTER_SECTION: "Twitter Card Settings"
+            TWITTER_SECTION: "Twitter Card Options"
             TWITTER_ENABLED: "Enable Twitter Cards"
             TWITTER_ENABLED_HELP: "Generate Twitter Card meta tags"
             TWITTER_SITE: "Twitter site username"
@@ -635,7 +657,7 @@ ICU:
             TWITTER_CARD_SUMMARY: "Summary"
             TWITTER_CARD_APP: "App"
             TWITTER_CARD_PLAYER: "Player"
-            FACEBOOK_SECTION: "Facebook Open Graph Settings"
+            FACEBOOK_SECTION: "Facebook Open Graph Options"
             FACEBOOK_ENABLED: "Enable Open Graph"
             FACEBOOK_ENABLED_HELP: "Generate Facebook Open Graph meta tags"
             FACEBOOK_APP_ID: "Facebook App ID"
@@ -762,7 +784,7 @@ ICU:
           LAYOUT:
             LABEL: Layout
             TWOCOLS: Medium   = 2 / 1 columns
-            THREECOLS: Standard  = 3 / 2 / 1 columas
+            THREECOLS: Standard  = 3 / 2 / 1 columns
           THUMB_WIDTH: Thumbnail Width
           THUMB_WIDTH_HELP: Set width for thumbnails
           THUMB_HEIGHT: Thumbnail Height
@@ -889,14 +911,14 @@ ICU:
           SHOW_PAGEIMAGE: Show Image
           SHOW_PAGEIMAGE_HELP: Show featured image if it is defined or the first image of the media page.
           SEO:
-            TAB: SEO & Social
-            SECTION_TITLE: Social Media Options
+            TAB: "SEO and Social"
+            SECTION_TITLE: "Social Media Options"
             ROBOTS_HELP: "Instructions for search engines about indexing and following. This page setting overrides the global configuration."
             TWITTER_CREATOR: "Twitter username"
             TWITTER_CREATOR_HELP: "Your Twitter handle (without @)"
             TWITTER_CREATOR_VALIDATE: "Valid Twitter handle: 1-15 letters, numbers or _"
-            IMAGE: Social Share Image
-            IMAGE_HELP: Select an image to be used in social media shares. If no image is selected, the page's featured image will be used.
+            IMAGE: "Social Share Image"
+            IMAGE_HELP: "Select an image to be used in social media shares. If no image is selected, the page's featured image will be used."
       SIDEBAR:
         MENU_TITLE: Menu
         LANGSWITCHER: Choose language
@@ -904,6 +926,7 @@ ICU:
         FEATURED_POSTS: Featured Posts
         FEATURED_MORE: More featured posts
         NO_FEATURED: No featured posts
+        BLOG_CATEGORIES: Blog Categories
         LOGIN_SECTION: Login
         LOGGUED_AS: 'Logged as: '
         RELATEDPAGES_SECTION: Related pages

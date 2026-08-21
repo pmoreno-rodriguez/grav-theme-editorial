@@ -2,11 +2,7 @@ title: Social Media
 
 form:
   fields:
-    social_section:
-      type: section
-      title: EDITORIAL.ADMIN.THEME.SOCIAL.TITLE
-      underline: true
-    
+
     social_enabled:
       type: toggle
       label: EDITORIAL.ADMIN.THEME.SOCIAL.ENABLED
@@ -17,7 +13,7 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    
+
     social:
       name: social
       label: EDITORIAL.ADMIN.THEME.SOCIAL.ICONS

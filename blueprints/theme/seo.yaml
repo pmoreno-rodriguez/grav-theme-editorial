@@ -2,7 +2,7 @@ title: SEO Settings
 
 form:
   fields:
-    
+
     seo.enabled:
       type: toggle
       label: EDITORIAL.ADMIN.THEME.SEO.ENABLED
@@ -14,13 +14,13 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    
+
     # General SEO Settings
     seo_general_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.SEO.GENERAL_SECTION
+      title: EDITORIAL.ADMIN.THEME.SEO.GENERAL_OPTIONS
       underline: true
-    
+
     seo.json_ld_enabled:
       type: toggle
       label: EDITORIAL.ADMIN.THEME.SEO.JSON_LD_ENABLED
@@ -32,7 +32,7 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-  
+
     seo.robots:
       type: select
       label: EDITORIAL.ADMIN.THEME.SEO.ROBOTS
@@ -46,13 +46,13 @@ form:
         'noindex, nofollow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_NOINDEX_NOFOLLOW
       validate:
         type: string
-    
+
     # Description Configuration
     description_section:
       type: section
       title: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_SECTION
       underline: true
-    
+
     seo.description_length:
       type: number
       label: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_LENGTH
@@ -63,7 +63,7 @@ form:
         type: int
         min: 10
         max: 100
-    
+
     seo.description_fallback:
       type: toggle
       label: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_FALLBACK
@@ -75,7 +75,7 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    
+
     seo.description_summarization:
       type: select
       label: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_SUMMARIZATION
@@ -87,13 +87,13 @@ form:
         'smart': EDITORIAL.ADMIN.THEME.SEO.SUMMARIZATION_SMART
       validate:
         type: string
-    
+
     # Twitter Card Settings
     twitter_section:
       type: section
       title: EDITORIAL.ADMIN.THEME.SEO.TWITTER_SECTION
       underline: true
-    
+
     seo.twitter.enabled:
       type: toggle
       label: EDITORIAL.ADMIN.THEME.SEO.TWITTER_ENABLED
@@ -105,7 +105,7 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    
+
     seo.twitter.site:
       type: text
       label: EDITORIAL.ADMIN.THEME.SEO.TWITTER_SITE
@@ -115,7 +115,7 @@ form:
       validate:
         pattern: '^[A-Za-z0-9_]{1,15}$'
         message: EDITORIAL.ADMIN.THEME.SEO.TWITTER_SITE_VALIDATE
-    
+
     seo.twitter.card_type:
       type: select
       label: EDITORIAL.ADMIN.THEME.SEO.TWITTER_CARD_TYPE
@@ -129,13 +129,13 @@ form:
         'player': EDITORIAL.ADMIN.THEME.SEO.TWITTER_CARD_PLAYER
       validate:
         type: string
-    
+
     # Facebook Open Graph Settings
     facebook_section:
       type: section
       title: EDITORIAL.ADMIN.THEME.SEO.FACEBOOK_SECTION
       underline: true
-    
+
     seo.facebook.enabled:
       type: toggle
       label: EDITORIAL.ADMIN.THEME.SEO.FACEBOOK_ENABLED
@@ -147,7 +147,7 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    
+
     seo.facebook.app_id:
       type: text
       label: EDITORIAL.ADMIN.THEME.SEO.FACEBOOK_APP_ID

@@ -11,7 +11,8 @@ EDITORIAL:
         RIGHT_SIDEBAR_HELP: Si activée, la barre latérale apparaîtra à droite
         GOOGLE_FONTS:
           LOCAL: Utiliser les polices Google hébergées localement
-        HEADER_SECTION: Section d'en-tête
+        HEADER_FIELDSET: Section d'en-tête
+        HEADER_SETTINGS: Options d'en-tête
         FAVICON: Choisir son propre favicon
         FAVICON_DESCRIPTION: Sera utilisé à la place du favicon par défaut `theme://images/favicon.png`
         SLOGAN: Slogan du thème
@@ -28,7 +29,8 @@ EDITORIAL:
         CUSTOM_JS: Charger JS personnalisé
         CUSTOM_JS_HELP: Charger JS personnalisé depuis theme://assets/js/custom.js
         CONTACT:
-          TITLE: Contact
+          FIELDSET: Paramètres de contact
+          TITLE: Options de contact
           ENABLE: Activer la section Contact
           COPYRIGHT_TEXT: Texte de copyright
           COPYRIGHT_TEXT_HELP: Afficher un texte de copyright personnalisé dans le pied de page, à côté du nom du site
@@ -44,11 +46,11 @@ EDITORIAL:
             STATE: État/Région
             ZIP: Code postal
         SIDEBAR:
-            SECTION: Paramètres de la Barre Latérale
-            CONFIGURATION: Configuration de la Barre Latérale
-            WIDGETS_OPTIONS: Options des Widgets
-            MENU_SECTION: Éléments du Menu
-            OPEN_BY_DEFAULT: Ouvert par Défaut
+            FIELDSET: Paramètres de la barre latérale
+            OPTIONS: Options de la barre latérale
+            WIDGETS_OPTIONS: Options des widgets
+            MENU_SECTION: Éléments du menu
+            OPEN_BY_DEFAULT: Ouvert par défaut
             OPEN_BY_DEFAULT_HELP: Définit si la barre latérale est ouverte ou fermée au démarrage
             ON_RIGHT: Barre latérale à droite
             ON_RIGHT_HELP: Si activée, la barre latérale apparaîtra à droite
@@ -58,21 +60,21 @@ EDITORIAL:
             SEARCH_HELP: Avec le plugin SimpleSearch activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu latéral
             LOGIN: Activer l'option de menu Login
             LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de connexion dans le menu latéral, pour afficher l'état de connexion
-            SHOW_FEATURED: Afficher les Articles Vedettes
-            SHOW_BLOG_CATEGORIES: Afficher les Catégories du Blog
-            SHOW_TAXONOMY: Afficher les Tags Populaires
+            SHOW_FEATURED: Afficher les articles vedettes
+            SHOW_BLOG_CATEGORIES: Afficher les catégories du blog
+            SHOW_TAXONOMY: Afficher les étiquettes populaires
             SHOW_TAXONOMY_HELP: 'Le plugin Taxonomylist doit être installé'
-            SHOW_ARCHIVES: Afficher les Archives
+            SHOW_ARCHIVES: Afficher les archives
             SHOW_ARCHIVES_HELP: 'Le plugin Archives doit être installé'
-            SHOW_RELATED_PAGES: Afficher les Pages Connexes
+            SHOW_RELATED_PAGES: Afficher les pages associées
             SHOW_RELATED_PAGES_HELP: 'Le plugin Related pages doit être installé'
-            SHOW_FEEDS: Afficher les Flux
+            SHOW_FEEDS: Afficher les flux
             SHOW_FEEDS_HELP: 'Le plugin Feeds doit être installé'
-            SHOW_RANDOM: Afficher un Article Aléatoire
+            SHOW_RANDOM: Afficher un article aléatoire
             SHOW_RANDOM_HELP: 'Le plugin Random doit être installé'
-            BLOG_CATEGORIES: Catégories du Blog
-
+            BLOG_CATEGORIES: Catégories du blog
         BLOG:
+          FIELDSET: Paramètres du blog
           DEFAULTS: Paramètres par défaut du blog
           PAGE_LABEL: Page du blog
           PAGE_HELP: La route vers la page du blog lors de l'utilisation de la barre latérale du blog
@@ -107,7 +109,7 @@ EDITORIAL:
           DIRECTION_DESC: "Décroissant"
           DIRECTION_ASC: "Croissant"
         SOCIAL:
-          TITLE: Réseaux sociaux
+          FIELDSET: Paramètres des réseaux sociaux
           TEXT: Inclure les URL complètes de vos différentes présences sur les réseaux sociaux. Une icône/lien apparaîtra en haut de la page pour chaque plateforme respective
           ENABLED: Activer les icônes sociales
           ICONS: Icônes sociales
@@ -123,6 +125,7 @@ EDITORIAL:
           ICON_HELP: 'Entrez la classe d''icône FontAwesome (ex: facebook, twitter, linkedin, mastodon). Le préfixe "fa-" est optionnel et sera ajouté automatiquement.'
           ICON_TYPE: Type d'icône
         CUSTOM_MENU:
+          FIELDSET: Paramètres du menu personnalisé
           TITLE: 'Éléments de menu personnalisés'
           ENABLE: 'Afficher les éléments de menu personnalisés'
           ENABLE_HELP: 'Détermine si les entrées de menu personnalisées définies sont affichées dans la barre de menu'
@@ -141,19 +144,19 @@ EDITORIAL:
               SELF: 'Ouvrir dans le même cadre que celui cliqué'
               TOP: 'Ouvrir dans tout le corps de la fenêtre'
         SEO:
-          TITLE: "Paramètres SEO"
+          FIELDSET: "Paramètres SEO"
           ENABLED: "Activer le SEO"
           ENABLED_HELP: "Activer ou désactiver toutes les fonctionnalités SEO. Désactiver si vous utilisez un plugin SEO"
           JSON_LD_ENABLED: "Données structurées JSON-LD"
           JSON_LD_ENABLED_HELP: "Générer des données structurées JSON-LD pour les rich snippets"
-          GENERAL_SECTION: "Paramètres SEO généraux"
+          GENERAL_OPTIONS: "Options générales du SEO"
           ROBOTS: "Directives Robots"
           ROBOTS_HELP: "Instructions pour les moteurs de recherche concernant l'indexation et le suivi"
           ROBOTS_INDEX_FOLLOW: "Indexer, Suivre"
           ROBOTS_NOINDEX_FOLLOW: "Ne pas indexer, Suivre"
           ROBOTS_INDEX_NOFOLLOW: "Indexer, Ne pas suivre"
           ROBOTS_NOINDEX_NOFOLLOW: "Ne pas indexer, Ne pas suivre"
-          DESCRIPTION_SECTION: "Configuration de la description"
+          DESCRIPTION_SECTION: "Options de description"
           DESCRIPTION_LENGTH: "Longueur de la description"
           DESCRIPTION_LENGTH_HELP: "Nombre maximum de mots dans la balise meta de description"
           DESCRIPTION_FALLBACK: "Description de secours"
@@ -162,19 +165,19 @@ EDITORIAL:
           DESCRIPTION_SUMMARIZATION_HELP: "Méthode utilisée pour générer les descriptions à partir du contenu"
           SUMMARIZATION_SIMPLE: "Troncation simple"
           SUMMARIZATION_SMART: "Résumé intelligent"
-          TWITTER_SECTION: "Paramètres des cartes Twitter"
+          TWITTER_SECTION: "Options des cartes Twitter"
           TWITTER_ENABLED: "Activer les cartes Twitter"
           TWITTER_ENABLED_HELP: "Générer les balises meta des cartes Twitter"
-          TWITTER_SITE: "Twitter Seiten-Benutzername"
-          TWITTER_SITE_HELP: "Dein Twitter-Handle für die Website (ohne @)"
-          TWITTER_SITE_VALIDATE: "Gültiger Twitter-Handle: 1-15 Buchstaben, Zahlen oder _"
+          TWITTER_SITE: "Nom d'utilisateur du site Twitter"
+          TWITTER_SITE_HELP: "Le handle Twitter de votre site web (sans @)"
+          TWITTER_SITE_VALIDATE: "Handle Twitter valide : 1-15 lettres, chiffres ou _"
           TWITTER_CARD_TYPE: "Type de carte Twitter"
           TWITTER_CARD_TYPE_HELP: "Type de carte Twitter à générer"
-          TWITTER_CARD_SUMMARY_LARGE: "Summary Large Image"
-          TWITTER_CARD_SUMMARY: "Summary"
-          TWITTER_CARD_APP: "App"
-          TWITTER_CARD_PLAYER: "Player"
-          FACEBOOK_SECTION: "Paramètres Facebook Open Graph"
+          TWITTER_CARD_SUMMARY_LARGE: "Résumé avec grande image"
+          TWITTER_CARD_SUMMARY: "Résumé"
+          TWITTER_CARD_APP: "Application"
+          TWITTER_CARD_PLAYER: "Lecteur"
+          FACEBOOK_SECTION: "Options Facebook Open Graph"
           FACEBOOK_ENABLED: "Activer Open Graph"
           FACEBOOK_ENABLED_HELP: "Générer les balises meta Facebook Open Graph"
           FACEBOOK_APP_ID: "ID d'application Facebook"
@@ -431,7 +434,7 @@ EDITORIAL:
           TAB: "SEO & Réseaux sociaux"
           SECTION_TITLE: "Options des réseaux sociaux"
           ROBOTS_HELP: "Instructions pour les moteurs de recherche concernant l'indexation et le suivi. Ce paramètre de page remplace le paramètre global."
-          TWITTER_CREATOR: "Twitter Auteur Nom d'utilisateur"
+          TWITTER_CREATOR: "Nom d'utilisateur Twitter"
           TWITTER_CREATOR_HELP: "Votre Twitter handle (sans @)"
           TWITTER_CREATOR_VALIDATE: "Twitter handle valide : 1-15 lettres, chiffres ou _"
           IMAGE: "Image à partager sur les réseaux sociaux"
@@ -487,14 +490,9 @@ ICU:
           RIGHT_SIDEBAR: Barre latérale à droite
           RIGHT_SIDEBAR_HELP: Si activée, la barre latérale apparaîtra à droite
           GOOGLE_FONTS:
-          SHAREICONS:
-            TITLE: Icônes de partage
-            FACEBOOK: Facebook
-            TWITTER: X / Twitter
-            WHATSAPP: WhatsApp
-            TELEGRAM: Telegram
             LOCAL: Utiliser les polices Google hébergées localement
-          HEADER_SECTION: Section d'en-tête
+          HEADER_FIELDSET: Section d'en-tête
+          HEADER_SETTINGS: Options d'en-tête
           FAVICON: Choisir son propre favicon
           FAVICON_DESCRIPTION: Sera utilisé à la place du favicon par défaut `theme://images/favicon.png`
           SLOGAN: Slogan du thème
@@ -511,7 +509,8 @@ ICU:
           CUSTOM_JS: Charger JS personnalisé
           CUSTOM_JS_HELP: Charger JS personnalisé depuis theme://assets/js/custom.js
           CONTACT:
-            TITLE: Contact
+            FIELDSET: Paramètres de contact
+            TITLE: Options de contact
             ENABLE: Activer la section Contact
             COPYRIGHT_TEXT: Texte de copyright
             COPYRIGHT_TEXT_HELP: Afficher un texte de copyright personnalisé dans le pied de page, à côté du nom du site
@@ -527,14 +526,22 @@ ICU:
               STATE: État/Région
               ZIP: Code postal
           SIDEBAR:
-              SECTION: Configuration de la barre latérale
-              WIDGETS_SECTION: Options des widgets
+              FIELDSET: Paramètres de la barre latérale
+              OPTIONS: Options de la barre latérale
+              WIDGETS_OPTIONS: Options des widgets
+              MENU_SECTION: Éléments du menu
+              OPEN_BY_DEFAULT: Ouvert par défaut
+              OPEN_BY_DEFAULT_HELP: Définit si la barre latérale est ouverte ou fermée au démarrage
+              ON_RIGHT: Barre latérale à droite
+              ON_RIGHT_HELP: Si activée, la barre latérale apparaîtra à droite
               LANGSWITCHER: Activer l'option de menu Langswitcher
-              LANGSWITCHER_HELP: Lorsque le plugin Langswitcher est activé et que votre site est configuré en plusieurs langues, vous pouvez activer ou désactiver la fonctionnalité Langswitcher qui apparaît dans le menu latéral
+              LANGSWITCHER_HELP: Avec le plugin Langswitcher activé et la configuration multilingue sur votre site, vous pouvez activer ou désactiver la fonctionnalité langswitcher apparaissant dans le menu latéral
               SEARCH: Activer l'option de menu Recherche
-              SEARCH_HELP: Si le plugin SimpleSearch est activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu latéral
+              SEARCH_HELP: Avec le plugin SimpleSearch activé, vous pouvez activer ou désactiver le bloc de recherche dans le menu latéral
               LOGIN: Activer l'option de menu Login
-              LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de connexion dans le menu latéral pour afficher le statut de connexion
+              LOGIN_HELP: Vous pouvez activer ou désactiver l'icône de connexion dans le menu latéral, pour afficher l'état de connexion
+              SHOW_FEATURED: Afficher les articles vedettes
+              SHOW_BLOG_CATEGORIES: Afficher les catégories du blog
               SHOW_TAXONOMY: Afficher les étiquettes populaires
               SHOW_TAXONOMY_HELP: 'Le plugin Taxonomylist doit être installé'
               SHOW_ARCHIVES: Afficher les archives
@@ -543,12 +550,20 @@ ICU:
               SHOW_RELATED_PAGES_HELP: 'Le plugin Related pages doit être installé'
               SHOW_FEEDS: Afficher les flux
               SHOW_FEEDS_HELP: 'Le plugin Feeds doit être installé'
-              SHOW_RANDOM: Afficher la publication aléatoire
+              SHOW_RANDOM: Afficher un article aléatoire
               SHOW_RANDOM_HELP: 'Le plugin Random doit être installé'
+              BLOG_CATEGORIES: Catégories du blog
           BLOG:
+            FIELDSET: Paramètres du blog
             DEFAULTS: Paramètres par défaut du blog
             PAGE_LABEL: Page du blog
             PAGE_HELP: La route vers la page du blog lors de l'utilisation de la barre latérale du blog
+            CATEGORIES_ENABLED: Afficher les catégories du blog
+            CATEGORIES_ENABLED_HELP: Afficher les catégories du blog avec le nombre de publications dans la barre latérale
+            CATEGORIES_SCOPE: Portée des catégories
+            CATEGORIES_SCOPE_HELP: Choisissez où afficher les catégories du blog
+            CATEGORIES_SCOPE_BLOG_ONLY: Uniquement sur les pages de blog
+            CATEGORIES_SCOPE_ALL_BLOGS: Tous les blogs sur toutes les pages
             LISTING_TITLE:
               TAXONOMY:
                 CATEGORY: Définir le titre pour filtrer les publications par catégorie
@@ -574,7 +589,7 @@ ICU:
             DIRECTION_DESC: "Décroissant"
             DIRECTION_ASC: "Croissant"
           SOCIAL:
-            TITLE: Réseaux sociaux
+            FIELDSET: Paramètres des réseaux sociaux
             TEXT: Inclure les URL complètes de vos différentes présences sur les réseaux sociaux. Une icône/lien apparaîtra en haut de la page pour chaque plateforme respective
             ENABLED: Activer les icônes sociales
             ICONS: Icônes sociales
@@ -590,6 +605,7 @@ ICU:
             ICON_HELP: 'Entrez la classe d''icône FontAwesome (ex: facebook, twitter, linkedin, mastodon). Le préfixe "fa-" est optionnel et sera ajouté automatiquement.'
             ICON_TYPE: Type d'icône
           CUSTOM_MENU:
+            FIELDSET: Paramètres du menu personnalisé
             TITLE: 'Éléments de menu personnalisés'
             ENABLE: 'Afficher les éléments de menu personnalisés'
             ENABLE_HELP: 'Détermine si les entrées de menu personnalisées définies sont affichées dans la barre de menu'
@@ -608,19 +624,19 @@ ICU:
                 SELF: 'Ouvrir dans le même cadre que celui cliqué'
                 TOP: 'Ouvrir dans tout le corps de la fenêtre'
           SEO:
-            TITLE: "Paramètres SEO"
+            FIELDSET: "Paramètres SEO"
             ENABLED: "Activer le SEO"
             ENABLED_HELP: "Activer ou désactiver toutes les fonctionnalités SEO. Désactiver si vous utilisez un plugin SEO"
             JSON_LD_ENABLED: "Données structurées JSON-LD"
             JSON_LD_ENABLED_HELP: "Générer des données structurées JSON-LD pour les rich snippets"
-            GENERAL_SECTION: "Paramètres SEO généraux"
+            GENERAL_OPTIONS: "Options générales du SEO"
             ROBOTS: "Directives Robots"
             ROBOTS_HELP: "Instructions pour les moteurs de recherche concernant l'indexation et le suivi"
             ROBOTS_INDEX_FOLLOW: "Indexer, Suivre"
             ROBOTS_NOINDEX_FOLLOW: "Ne pas indexer, Suivre"
             ROBOTS_INDEX_NOFOLLOW: "Indexer, Ne pas suivre"
             ROBOTS_NOINDEX_NOFOLLOW: "Ne pas indexer, Ne pas suivre"
-            DESCRIPTION_SECTION: "Configuration de la description"
+            DESCRIPTION_SECTION: "Options de description"
             DESCRIPTION_LENGTH: "Longueur de la description"
             DESCRIPTION_LENGTH_HELP: "Nombre maximum de mots dans la balise meta de description"
             DESCRIPTION_FALLBACK: "Description de secours"
@@ -629,19 +645,19 @@ ICU:
             DESCRIPTION_SUMMARIZATION_HELP: "Méthode utilisée pour générer les descriptions à partir du contenu"
             SUMMARIZATION_SIMPLE: "Troncation simple"
             SUMMARIZATION_SMART: "Résumé intelligent"
-            TWITTER_SECTION: "Paramètres des cartes Twitter"
+            TWITTER_SECTION: "Options des cartes Twitter"
             TWITTER_ENABLED: "Activer les cartes Twitter"
             TWITTER_ENABLED_HELP: "Générer les balises meta des cartes Twitter"
-            TWITTER_SITE: "Twitter Seiten-Benutzername"
-            TWITTER_SITE_HELP: "Dein Twitter-Handle für die Website (ohne @)"
-            TWITTER_SITE_VALIDATE: "Gültiger Twitter-Handle: 1-15 Buchstaben, Zahlen oder _"
+            TWITTER_SITE: "Nom d'utilisateur du site Twitter"
+            TWITTER_SITE_HELP: "Le handle Twitter de votre site web (sans @)"
+            TWITTER_SITE_VALIDATE: "Handle Twitter valide : 1-15 lettres, chiffres ou _"
             TWITTER_CARD_TYPE: "Type de carte Twitter"
             TWITTER_CARD_TYPE_HELP: "Type de carte Twitter à générer"
-            TWITTER_CARD_SUMMARY_LARGE: "Summary Large Image"
-            TWITTER_CARD_SUMMARY: "Summary"
-            TWITTER_CARD_APP: "App"
-            TWITTER_CARD_PLAYER: "Player"
-            FACEBOOK_SECTION: "Paramètres Facebook Open Graph"
+            TWITTER_CARD_SUMMARY_LARGE: "Résumé avec grande image"
+            TWITTER_CARD_SUMMARY: "Résumé"
+            TWITTER_CARD_APP: "Application"
+            TWITTER_CARD_PLAYER: "Lecteur"
+            FACEBOOK_SECTION: "Options Facebook Open Graph"
             FACEBOOK_ENABLED: "Activer Open Graph"
             FACEBOOK_ENABLED_HELP: "Générer les balises meta Facebook Open Graph"
             FACEBOOK_APP_ID: "ID d'application Facebook"
@@ -756,6 +772,12 @@ ICU:
             FORMAT_LONG: Le délimiteur de résumé sera ignoré
             SIZE: Taille
             DELIMITER: Délimiteur de résumé
+          SHAREICONS:
+            TITLE: Icônes de partage
+            FACEBOOK: Facebook
+            TWITTER: Twitter
+            WHATSAPP: WhatsApp
+            TELEGRAM: Telegram
         GALLERY:
           TAB: Galerie
           TITLE: Galerie d'images
@@ -892,7 +914,7 @@ ICU:
             TAB: "SEO & Réseaux sociaux"
             SECTION_TITLE: "Options des réseaux sociaux"
             ROBOTS_HELP: "Instructions pour les moteurs de recherche concernant l'indexation et le suivi. Ce paramètre de page remplace le paramètre global."
-            TWITTER_CREATOR: "Twitter Auteur Nom d'utilisateur"
+            TWITTER_CREATOR: "Nom d'utilisateur Twitter"
             TWITTER_CREATOR_HELP: "Votre Twitter handle (sans @)"
             TWITTER_CREATOR_VALIDATE: "Twitter handle valide : 1-15 lettres, chiffres ou _"
             IMAGE: "Image à partager sur les réseaux sociaux"
@@ -904,6 +926,7 @@ ICU:
         FEATURED_POSTS: Publications en vedette
         FEATURED_MORE: Plus de publications en vedette
         NO_FEATURED: Aucune publication en vedette
+        BLOG_CATEGORIES: Catégories du blog
         LOGIN_SECTION: Connexion
         LOGGUED_AS: 'Connecté en tant que : '
         RELATEDPAGES_SECTION: Pages associées

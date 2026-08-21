@@ -11,7 +11,8 @@ EDITORIAL:
         RIGHT_SIDEBAR_HELP: Wenn aktiviert, erscheint die Seitenleiste auf der rechten Seite
         GOOGLE_FONTS:
           LOCAL: Lokal gehostete Google Fonts verwenden
-        HEADER_SECTION: Header-Bereich
+        HEADER_FIELDSET: Header-Bereich
+        HEADER_SETTINGS: Header-Optionen
         FAVICON: Eigenes Favicon auswählen
         FAVICON_DESCRIPTION: Wird anstelle des Standardfavicons `theme://images/favicon.png` verwendet
         SLOGAN: Theme-Slogan
@@ -28,7 +29,8 @@ EDITORIAL:
         CUSTOM_JS: Benutzerdefiniertes JS laden
         CUSTOM_JS_HELP: Lädt benutzerdefiniertes JS von theme://assets/js/custom.js
         CONTACT:
-          TITLE: Kontakt
+          FIELDSET: Kontakt-Einstellungen
+          TITLE: Kontakt-Optionen
           ENABLE: Kontaktbereich aktivieren
           COPYRIGHT_TEXT: Copyright-Text
           COPYRIGHT_TEXT_HELP: Zeigt benutzerdefinierten Copyright-Text in der Fußzeile neben dem Seitennamen an
@@ -44,8 +46,8 @@ EDITORIAL:
             STATE: Bundesland
             ZIP: Postleitzahl
         SIDEBAR:
-            SECTION: Seitenleisten-Einstellungen
-            CONFIGURATION: Sidebar-Konfiguration
+            FIELDSET: Seitenleisten-Einstellungen
+            OPTIONS: Seitenleisten-Optionen
             WIDGETS_OPTIONS: Widget-Optionen
             MENU_SECTION: Menü-Elemente
             OPEN_BY_DEFAULT: Standardmäßig öffnen
@@ -71,8 +73,8 @@ EDITORIAL:
             SHOW_RANDOM: Zufälligen Beitrag anzeigen
             SHOW_RANDOM_HELP: 'Das Random-Plugin muss installiert sein'
             BLOG_CATEGORIES: Blog-Kategorien
-
         BLOG:
+          FIELDSET: Blog-Einstellungen
           DEFAULTS: Blog-Standardeinstellungen
           PAGE_LABEL: Blog-Seite
           PAGE_HELP: Die Route zur Blog-Seite bei Verwendung der Blog-Seitenleiste
@@ -107,7 +109,7 @@ EDITORIAL:
           DIRECTION_DESC: "Absteigend"
           DIRECTION_ASC: "Aufsteigend"
         SOCIAL:
-          TITLE: Soziale Medien
+          FIELDSET: Soziale Medien-Einstellungen
           TEXT: Fügen Sie vollständige URLs zu Ihren Social-Media-Präsenzen hinzu. Für jede Plattform erscheint ein Icon/Link im oberen Bereich der Seite
           ENABLED: Soziale Icons aktivieren
           ICONS: Soziale Icons
@@ -123,6 +125,7 @@ EDITORIAL:
           ICON_HELP: 'Geben Sie die FontAwesome-Icon-Klasse ein (z.B. facebook, twitter, linkedin, mastodon). Das Präfix "fa-" ist optional und wird automatisch hinzugefügt.'
           ICON_TYPE: Icon-Typ
         CUSTOM_MENU:
+          FIELDSET: Benutzerdefinierte Menü-Einstellungen
           TITLE: 'Benutzerdefinierte Menüeinträge'
           ENABLE: 'Benutzerdefinierte Menüeinträge anzeigen'
           ENABLE_HELP: 'Bestimmt, ob definierte benutzerdefinierte Menüpunkte in der Menüleiste angezeigt werden'
@@ -141,19 +144,19 @@ EDITORIAL:
               SELF: 'Im gleichen Frame wie angeklickt öffnen'
               TOP: 'Im gesamten Fensterkörper öffnen'
         SEO:
-          TITLE: "SEO-Einstellungen"
+          FIELDSET: "SEO-Einstellungen"
           ENABLED: "SEO aktivieren"
           ENABLED_HELP: "Alle SEO-Funktionalitäten aktivieren oder deaktivieren. Deaktivieren, wenn ein SEO-Plugin verwendet wird"
           JSON_LD_ENABLED: "Strukturierte JSON-LD-Daten"
           JSON_LD_ENABLED_HELP: "JSON-LD strukturierte Daten für Rich Snippets generieren"
-          GENERAL_SECTION: "Allgemeine SEO-Einstellungen"
+          GENERAL_OPTIONS: "Allgemeine SEO-Optionen"
           ROBOTS: "Robots-Direktiven"
           ROBOTS_HELP: "Anweisungen für Suchmaschinen zur Indexierung und Folgung"
           ROBOTS_INDEX_FOLLOW: "Indexieren, Folgen"
           ROBOTS_NOINDEX_FOLLOW: "Nicht indexieren, Folgen"
           ROBOTS_INDEX_NOFOLLOW: "Indexieren, Nicht folgen"
           ROBOTS_NOINDEX_NOFOLLOW: "Nicht indexieren, Nicht folgen"
-          DESCRIPTION_SECTION: "Beschreibungs-Konfiguration"
+          DESCRIPTION_SECTION: "Beschreibungs-Optionen"
           DESCRIPTION_LENGTH: "Beschreibungs-Länge"
           DESCRIPTION_LENGTH_HELP: "Maximale Anzahl von Wörtern im Beschreibungs-Meta-Tag"
           DESCRIPTION_FALLBACK: "Beschreibungs-Fallback"
@@ -162,7 +165,7 @@ EDITORIAL:
           DESCRIPTION_SUMMARIZATION_HELP: "Methode zur Generierung von Beschreibungen aus Inhalten"
           SUMMARIZATION_SIMPLE: "Einfache Kürzung"
           SUMMARIZATION_SMART: "Intelligente Zusammenfassung"
-          TWITTER_SECTION: "Twitter Card-Einstellungen"
+          TWITTER_SECTION: "Twitter Card-Optionen"
           TWITTER_ENABLED: "Twitter Cards aktivieren"
           TWITTER_ENABLED_HELP: "Twitter Card Meta-Tags generieren"
           TWITTER_SITE: "Twitter Seiten-Benutzername"
@@ -174,7 +177,7 @@ EDITORIAL:
           TWITTER_CARD_SUMMARY: "Summary"
           TWITTER_CARD_APP: "App"
           TWITTER_CARD_PLAYER: "Player"
-          FACEBOOK_SECTION: "Facebook Open Graph-Einstellungen"
+          FACEBOOK_SECTION: "Facebook Open Graph-Optionen"
           FACEBOOK_ENABLED: "Open Graph aktivieren"
           FACEBOOK_ENABLED_HELP: "Facebook Open Graph Meta-Tags generieren"
           FACEBOOK_APP_ID: "Facebook App-ID"
@@ -487,14 +490,9 @@ ICU:
           RIGHT_SIDEBAR: Seitenleiste rechts
           RIGHT_SIDEBAR_HELP: Wenn aktiviert, erscheint die Seitenleiste auf der rechten Seite
           GOOGLE_FONTS:
-          SHAREICONS:
-            TITLE: Teilen-Symbole
-            FACEBOOK: Facebook
-            TWITTER: X / Twitter
-            WHATSAPP: WhatsApp
-            TELEGRAM: Telegram
             LOCAL: Lokal gehostete Google Fonts verwenden
-          HEADER_SECTION: Header-Bereich
+          HEADER_FIELDSET: Header-Bereich
+          HEADER_SETTINGS: Header-Optionen
           FAVICON: Eigenes Favicon auswählen
           FAVICON_DESCRIPTION: Wird anstelle des Standardfavicons `theme://images/favicon.png` verwendet
           SLOGAN: Theme-Slogan
@@ -511,7 +509,8 @@ ICU:
           CUSTOM_JS: Benutzerdefiniertes JS laden
           CUSTOM_JS_HELP: Lädt benutzerdefiniertes JS von theme://assets/js/custom.js
           CONTACT:
-            TITLE: Kontakt
+            FIELDSET: Kontakt-Einstellungen
+            TITLE: Kontakt-Optionen
             ENABLE: Kontaktbereich aktivieren
             COPYRIGHT_TEXT: Copyright-Text
             COPYRIGHT_TEXT_HELP: Zeigt benutzerdefinierten Copyright-Text in der Fußzeile neben dem Seitennamen an
@@ -527,28 +526,44 @@ ICU:
               STATE: Bundesland
               ZIP: Postleitzahl
           SIDEBAR:
-            SECTION: Seitenleisten-Konfiguration
-            WIDGETS_SECTION: Widget-Optionen
-            LANGSWITCHER: Langswitcher-Menüoption aktivieren
-            LANGSWITCHER_HELP: Mit aktiviertem Langswitcher-Plugin und mehrsprachiger Einrichtung können Sie die Langswitcher-Funktionalität in der Seitenleiste ein- oder ausschalten
-            SEARCH: Such-Menüoption aktivieren
-            SEARCH_HELP: Mit aktiviertem SimpleSearch-Plugin können Sie den Suchblock in der Seitenleiste ein- oder ausschalten
-            LOGIN: Login-Menüoption aktivieren
-            LOGIN_HELP: Sie können das Login-Icon in der Seitenleiste ein- oder ausschalten, um den Anmeldestatus anzuzeigen
-            SHOW_TAXONOMY: Beliebte Tags anzeigen
-            SHOW_TAXONOMY_HELP: 'Taxonomylist-Plugin muss installiert sein'
-            SHOW_ARCHIVES: Archive anzeigen
-            SHOW_ARCHIVES_HELP: 'Archives-Plugin muss installiert sein'
-            SHOW_RELATED_PAGES: Verwandte Seiten anzeigen
-            SHOW_RELATED_PAGES_HELP: 'Related Pages-Plugin muss installiert sein'
-            SHOW_FEEDS: Feeds anzeigen
-            SHOW_FEEDS_HELP: 'Feeds-Plugin muss installiert sein'
-            SHOW_RANDOM: Zufälligen Beitrag anzeigen
-            SHOW_RANDOM_HELP: 'Random-Plugin muss installiert sein'
+              FIELDSET: Seitenleisten-Einstellungen
+              OPTIONS: Seitenleisten-Optionen
+              WIDGETS_OPTIONS: Widget-Optionen
+              MENU_SECTION: Menü-Elemente
+              OPEN_BY_DEFAULT: Standardmäßig öffnen
+              OPEN_BY_DEFAULT_HELP: Legt fest, ob die Seitenleiste beim Start geöffnet oder geschlossen ist
+              ON_RIGHT: Seitenleiste auf der rechten Seite
+              ON_RIGHT_HELP: Wenn aktiviert, wird die Seitenleiste auf der rechten Seite angezeigt
+              LANGSWITCHER: Langswitcher-Menüoption aktivieren
+              LANGSWITCHER_HELP: Wenn Langswitcher-Plugin aktiviert und Multi-Sprachen-Setup auf Ihrer Website konfiguriert ist, können Sie die Langswitcher-Funktionalität im Seitenleisten-Menü aktivieren oder deaktivieren
+              SEARCH: Menüoption Suche aktivieren
+              SEARCH_HELP: Bei aktiviertem SimpleSearch-Plugin können Sie den Suchblock im Seitenleisten-Menü aktivieren oder deaktivieren
+              LOGIN: Login-Menüoption aktivieren
+              LOGIN_HELP: Sie können das Login-Symbol im Seitenleisten-Menü aktivieren oder deaktivieren, um den Login-Status anzuzeigen
+              SHOW_FEATURED: Ausgewählte Beiträge anzeigen
+              SHOW_BLOG_CATEGORIES: Blog-Kategorien anzeigen
+              SHOW_TAXONOMY: Beliebte Tags anzeigen
+              SHOW_TAXONOMY_HELP: 'Das Taxonomylist-Plugin muss installiert sein'
+              SHOW_ARCHIVES: Archive anzeigen
+              SHOW_ARCHIVES_HELP: 'Das Archives-Plugin muss installiert sein'
+              SHOW_RELATED_PAGES: Verwandte Seiten anzeigen
+              SHOW_RELATED_PAGES_HELP: 'Das Plugin "Related pages" muss installiert sein'
+              SHOW_FEEDS: Feeds anzeigen
+              SHOW_FEEDS_HELP: 'Das Feeds-Plugin muss installiert sein'
+              SHOW_RANDOM: Zufälligen Beitrag anzeigen
+              SHOW_RANDOM_HELP: 'Das Random-Plugin muss installiert sein'
+              BLOG_CATEGORIES: Blog-Kategorien
           BLOG:
+            FIELDSET: Blog-Einstellungen
             DEFAULTS: Blog-Standardeinstellungen
             PAGE_LABEL: Blog-Seite
             PAGE_HELP: Die Route zur Blog-Seite bei Verwendung der Blog-Seitenleiste
+            CATEGORIES_ENABLED: Blog-Kategorien anzeigen
+            CATEGORIES_ENABLED_HELP: Blog-Kategorien mit Beitragszahl in der Seitenleiste anzeigen
+            CATEGORIES_SCOPE: Kategorienbereich
+            CATEGORIES_SCOPE_HELP: Wählen Sie, wo Blog-Kategorien angezeigt werden sollen
+            CATEGORIES_SCOPE_BLOG_ONLY: Nur auf Blog-Seiten
+            CATEGORIES_SCOPE_ALL_BLOGS: Alle Blogs auf allen Seiten
             LISTING_TITLE:
               TAXONOMY:
                 CATEGORY: Titel zum Filtern von Beiträgen nach Kategorie setzen
@@ -574,7 +589,7 @@ ICU:
             DIRECTION_DESC: "Absteigend"
             DIRECTION_ASC: "Aufsteigend"
           SOCIAL:
-            TITLE: Soziale Medien
+            FIELDSET: Soziale Medien-Einstellungen
             TEXT: Fügen Sie vollständige URLs zu Ihren Social-Media-Präsenzen hinzu. Für jede Plattform erscheint ein Icon/Link im oberen Bereich der Seite
             ENABLED: Soziale Icons aktivieren
             ICONS: Soziale Icons
@@ -590,6 +605,7 @@ ICU:
             ICON_HELP: 'Geben Sie die FontAwesome-Icon-Klasse ein (z.B. facebook, twitter, linkedin, mastodon). Das Präfix "fa-" ist optional und wird automatisch hinzugefügt.'
             ICON_TYPE: Icon-Typ
           CUSTOM_MENU:
+            FIELDSET: Benutzerdefinierte Menü-Einstellungen
             TITLE: 'Benutzerdefinierte Menüeinträge'
             ENABLE: 'Benutzerdefinierte Menüeinträge anzeigen'
             ENABLE_HELP: 'Bestimmt, ob definierte benutzerdefinierte Menüpunkte in der Menüleiste angezeigt werden'
@@ -608,19 +624,19 @@ ICU:
                 SELF: 'Im gleichen Frame wie angeklickt öffnen'
                 TOP: 'Im gesamten Fensterkörper öffnen'
           SEO:
-            TITLE: "SEO-Einstellungen"
+            FIELDSET: "SEO-Einstellungen"
             ENABLED: "SEO aktivieren"
             ENABLED_HELP: "Alle SEO-Funktionalitäten aktivieren oder deaktivieren. Deaktivieren, wenn ein SEO-Plugin verwendet wird"
             JSON_LD_ENABLED: "Strukturierte JSON-LD-Daten"
             JSON_LD_ENABLED_HELP: "JSON-LD strukturierte Daten für Rich Snippets generieren"
-            GENERAL_SECTION: "Allgemeine SEO-Einstellungen"
+            GENERAL_OPTIONS: "Allgemeine SEO-Optionen"
             ROBOTS: "Robots-Direktiven"
             ROBOTS_HELP: "Anweisungen für Suchmaschinen zur Indexierung und Folgung"
             ROBOTS_INDEX_FOLLOW: "Indexieren, Folgen"
             ROBOTS_NOINDEX_FOLLOW: "Nicht indexieren, Folgen"
             ROBOTS_INDEX_NOFOLLOW: "Indexieren, Nicht folgen"
             ROBOTS_NOINDEX_NOFOLLOW: "Nicht indexieren, Nicht folgen"
-            DESCRIPTION_SECTION: "Beschreibungs-Konfiguration"
+            DESCRIPTION_SECTION: "Beschreibungs-Optionen"
             DESCRIPTION_LENGTH: "Beschreibungs-Länge"
             DESCRIPTION_LENGTH_HELP: "Maximale Anzahl von Wörtern im Beschreibungs-Meta-Tag"
             DESCRIPTION_FALLBACK: "Beschreibungs-Fallback"
@@ -629,7 +645,7 @@ ICU:
             DESCRIPTION_SUMMARIZATION_HELP: "Methode zur Generierung von Beschreibungen aus Inhalten"
             SUMMARIZATION_SIMPLE: "Einfache Kürzung"
             SUMMARIZATION_SMART: "Intelligente Zusammenfassung"
-            TWITTER_SECTION: "Twitter Card-Einstellungen"
+            TWITTER_SECTION: "Twitter Card-Optionen"
             TWITTER_ENABLED: "Twitter Cards aktivieren"
             TWITTER_ENABLED_HELP: "Twitter Card Meta-Tags generieren"
             TWITTER_SITE: "Twitter Seiten-Benutzername"
@@ -641,7 +657,7 @@ ICU:
             TWITTER_CARD_SUMMARY: "Summary"
             TWITTER_CARD_APP: "App"
             TWITTER_CARD_PLAYER: "Player"
-            FACEBOOK_SECTION: "Facebook Open Graph-Einstellungen"
+            FACEBOOK_SECTION: "Facebook Open Graph-Optionen"
             FACEBOOK_ENABLED: "Open Graph aktivieren"
             FACEBOOK_ENABLED_HELP: "Facebook Open Graph Meta-Tags generieren"
             FACEBOOK_APP_ID: "Facebook App-ID"
@@ -756,6 +772,12 @@ ICU:
             FORMAT_LONG: Zusammenfassungstrennzeichen wird ignoriert
             SIZE: Größe
             DELIMITER: Zusammenfassungstrennzeichen
+          SHAREICONS:
+            TITLE: Teilen-Symbole
+            FACEBOOK: Facebook
+            TWITTER: Twitter
+            WHATSAPP: WhatsApp
+            TELEGRAM: Telegram
         GALLERY:
           TAB: Galerie
           TITLE: Bildergalerie
@@ -904,6 +926,7 @@ ICU:
         FEATURED_POSTS: Featured-Beiträge
         FEATURED_MORE: Weitere Featured-Beiträge
         NO_FEATURED: Keine Featured-Beiträge
+        BLOG_CATEGORIES: Blog-Kategorien
         LOGIN_SECTION: Anmeldung
         LOGGUED_AS: 'Angemeldet als: '
         RELATEDPAGES_SECTION: Verwandte Seiten

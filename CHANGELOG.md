@@ -1,3 +1,11 @@
+# v4.3.2
+## 08/21/2026
+
+1. [](#improved)
+   * Standardized translations across all supported languages for better consistency and compatibility with both Grav 1.7 and Grav 2.
+2. [](#bugfix)
+   * Fixed blog listing cards to correctly use each post's `header.featured_image` instead of always falling back to the first image in the post's media folder ([#86](https://github.com/pmoreno-rodriguez/grav-theme-editorial/issues/86)).
+
 # v4.3.1
 ## 08/20/2026
 

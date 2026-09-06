@@ -1,4 +1,4 @@
-title: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.TAB
+title: EDITORIAL.ADMIN.MODULAR_RECENT_POSTS_TAB
 '@extends': default
 
 form:
@@ -13,20 +13,20 @@ form:
               unset@: true
         bloglist:
           type: tab
-          title: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.TAB
+          title: EDITORIAL.ADMIN.MODULAR_RECENT_POSTS_TAB
           fields:
             header.blog_url:
               type: text
-              label: EDITORIAL.ADMIN.BLOG.ROUTE
-              help: EDITORIAL.ADMIN.BLOG.ROUTE_HELP
+              label: EDITORIAL.ADMIN.BLOG_ROUTE
+              help: EDITORIAL.ADMIN.BLOG_ROUTE_HELP
               default: '/blog'
               placeholder: '/blog'
               size: medium
             header.limit:
               type: number
               size: small
-              label: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.LIMIT
-              help: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.LIMIT_HELP
+              label: EDITORIAL.ADMIN.MODULAR_RECENT_POSTS_LIMIT
+              help: EDITORIAL.ADMIN.MODULAR_RECENT_POSTS_LIMIT_HELP
               default: 3
               validate:
                 type: int
@@ -37,7 +37,7 @@ form:
               toggleable: true
               default: 'Read more'
               size: large
-              label: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.READMORE_TEXT
-              description: EDITORIAL.ADMIN.MODULAR.RECENT_POSTS.READMORE_TEXT_DESCRIPTION
+              label: EDITORIAL.ADMIN.MODULAR_RECENT_POSTS_READMORE_TEXT
+              description: EDITORIAL.ADMIN.MODULAR_RECENT_POSTS_READMORE_TEXT_DESCRIPTION
         seo:
           unset@: true

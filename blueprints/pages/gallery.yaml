@@ -11,23 +11,23 @@ form:
               unset@: true
         gallery_images:
           type: tab
-          title: EDITORIAL.ADMIN.GALLERY.TAB
+          title: EDITORIAL.ADMIN.GALLERY_TAB
           fields:
             content_title:
               type: spacer
-              title: EDITORIAL.ADMIN.GALLERY.TITLE
+              title: EDITORIAL.ADMIN.GALLERY_TITLE
             header.layout:
               type: select
-              label: EDITORIAL.ADMIN.GALLERY.LAYOUT.LABEL
+              label: EDITORIAL.ADMIN.GALLERY_LAYOUT_LABEL
               default: standard
               size: medium
               options:
-                medium: EDITORIAL.ADMIN.GALLERY.LAYOUT.TWOCOLS
-                standard: EDITORIAL.ADMIN.GALLERY.LAYOUT.THREECOLS   
+                medium: EDITORIAL.ADMIN.GALLERY_LAYOUT_TWOCOLS
+                standard: EDITORIAL.ADMIN.GALLERY_LAYOUT_THREECOLS   
             header.thumb_width:
               type: number
-              label: EDITORIAL.ADMIN.GALLERY.THUMB_WIDTH
-              help: EDITORIAL.ADMIN.GALLERY.THUMB_WIDTH_HELP
+              label: EDITORIAL.ADMIN.GALLERY_THUMB_WIDTH
+              help: EDITORIAL.ADMIN.GALLERY_THUMB_WIDTH_HELP
               size: small
               default: 600
               validate:
@@ -35,8 +35,8 @@ form:
                 max: 1000
             header.thumb_height:
               type: number
-              label: EDITORIAL.ADMIN.GALLERY.THUMB_HEIGHT
-              help: EDITORIAL.ADMIN.GALLERY.THUMB_HEIGHT_HELP
+              label: EDITORIAL.ADMIN.GALLERY_THUMB_HEIGHT
+              help: EDITORIAL.ADMIN.GALLERY_THUMB_HEIGHT_HELP
               size: small
               default: 450
               validate:
@@ -45,13 +45,13 @@ form:
             header.images:
               type: list
               style: vertical
-              label: EDITORIAL.ADMIN.GALLERY.IMAGES.LABEL
+              label: EDITORIAL.ADMIN.GALLERY_IMAGES_LABEL
               collapsed: true
               fields:
                 .image:
                   type: pagemediaselect
                   size: medium
-                  label: EDITORIAL.ADMIN.GALLERY.IMAGES.IMAGE
+                  label: EDITORIAL.ADMIN.GALLERY_IMAGES_IMAGE
                   preview_images: true
                   accept:
                   - .png
@@ -63,38 +63,38 @@ form:
                 .title:
                   type: text
                   size: medium
-                  label: EDITORIAL.ADMIN.GALLERY.IMAGES.IMAGE_TITLE
+                  label: EDITORIAL.ADMIN.GALLERY_IMAGES_IMAGE_TITLE
                 .description:
                   type: textarea
                   rows: 3
-                  label: EDITORIAL.ADMIN.GALLERY.IMAGES.IMAGE_DESCRIPTION
+                  label: EDITORIAL.ADMIN.GALLERY_IMAGES_IMAGE_DESCRIPTION
                 .descPosition:
                   type: select
-                  label: EDITORIAL.ADMIN.GALLERY.IMAGES.DESCPOSITION.LABEL
-                  help: EDITORIAL.ADMIN.GALLERY.IMAGES.DESCPOSITION.HELP
+                  label: EDITORIAL.ADMIN.GALLERY_IMAGES_DESCPOSITION_LABEL
+                  help: EDITORIAL.ADMIN.GALLERY_IMAGES_DESCPOSITION_HELP
                   default: bottom
                   size: medium
                   options:
-                    bottom: EDITORIAL.ADMIN.GALLERY.IMAGES.DESCPOSITION.BOTTOM
-                    top: EDITORIAL.ADMIN.GALLERY.IMAGES.DESCPOSITION.TOP
-                    left: EDITORIAL.ADMIN.GALLERY.IMAGES.DESCPOSITION.LEFT
-                    right: EDITORIAL.ADMIN.GALLERY.IMAGES.DESCPOSITION.RIGHT
+                    bottom: EDITORIAL.ADMIN.GALLERY_IMAGES_DESCPOSITION_BOTTOM
+                    top: EDITORIAL.ADMIN.GALLERY_IMAGES_DESCPOSITION_TOP
+                    left: EDITORIAL.ADMIN.GALLERY_IMAGES_DESCPOSITION_LEFT
+                    right: EDITORIAL.ADMIN.GALLERY_IMAGES_DESCPOSITION_RIGHT
             Videos_title:
               type: spacer
-              title: EDITORIAL.ADMIN.GALLERY.VIDEO_TITLE
+              title: EDITORIAL.ADMIN.GALLERY_VIDEO_TITLE
 
             header.video_width:
               type: text
-              label: EDITORIAL.ADMIN.GALLERY.VIDEO_WIDTH
-              help: EDITORIAL.ADMIN.GALLERY.VIDEO_WIDTH_HELP
+              label: EDITORIAL.ADMIN.GALLERY_VIDEO_WIDTH
+              help: EDITORIAL.ADMIN.GALLERY_VIDEO_WIDTH_HELP
               placeholder: '960px'
               size: small
               default: '960px'
 
             header.autofocus_videos:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.VIDEO_AUTOFOCUS
-              help: EDITORIAL.ADMIN.GALLERY.VIDEO_AUTOFOCUS_HELP
+              label: EDITORIAL.ADMIN.GALLERY_VIDEO_AUTOFOCUS
+              help: EDITORIAL.ADMIN.GALLERY_VIDEO_AUTOFOCUS_HELP
               default: 1
               highlight: 1
               options:
@@ -103,8 +103,8 @@ form:
 
             header.autoplay_videos:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.VIDEO_AUTOPLAY
-              help: EDITORIAL.ADMIN.GALLERY.VIDEO_AUTOPLAY_HELP
+              label: EDITORIAL.ADMIN.GALLERY_VIDEO_AUTOPLAY
+              help: EDITORIAL.ADMIN.GALLERY_VIDEO_AUTOPLAY_HELP
               default: 1
               highlight: 1
               options:
@@ -113,32 +113,32 @@ form:
             header.videos:
               type: list
               style: vertical
-              label: EDITORIAL.ADMIN.GALLERY.VIDEOS.LABEL
+              label: EDITORIAL.ADMIN.GALLERY_VIDEOS_LABEL
               collapsed: true
               fields:
                 .source:
                   type: select
-                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.SOURCE
-                  description: EDITORIAL.ADMIN.GALLERY.VIDEOS.SOURCE_DESCRIPTION
+                  label: EDITORIAL.ADMIN.GALLERY_VIDEOS_SOURCE
+                  description: EDITORIAL.ADMIN.GALLERY_VIDEOS_SOURCE_DESCRIPTION
                   size: medium
                   default: local
                   options:
-                      remote: EDITORIAL.ADMIN.GALLERY.VIDEOS.SOURCE_OPTIONS.REMOTE
-                      local: EDITORIAL.ADMIN.GALLERY.VIDEOS.SOURCE_OPTIONS.LOCAL
+                      remote: EDITORIAL.ADMIN.GALLERY_VIDEOS_SOURCE_OPTIONS_REMOTE
+                      local: EDITORIAL.ADMIN.GALLERY_VIDEOS_SOURCE_OPTIONS_LOCAL
                 .remote_video:
                   type: text
-                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.REMOTE_VIDEO
-                  description: EDITORIAL.ADMIN.GALLERY.VIDEOS.REMOTE_VIDEO_DESCRIPTION
+                  label: EDITORIAL.ADMIN.GALLERY_VIDEOS_REMOTE_VIDEO
+                  description: EDITORIAL.ADMIN.GALLERY_VIDEOS_REMOTE_VIDEO_DESCRIPTION
                   size: medium
                 .remote_thumbnail:
                   type: text
-                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.REMOTE_THUMBNAIL
-                  description: EDITORIAL.ADMIN.GALLERY.VIDEOS.REMOTE_THUMBNAIL_DESCRIPTION
+                  label: EDITORIAL.ADMIN.GALLERY_VIDEOS_REMOTE_THUMBNAIL
+                  description: EDITORIAL.ADMIN.GALLERY_VIDEOS_REMOTE_THUMBNAIL_DESCRIPTION
                   size: medium
                 .video:
                   type: pagemediaselect
                   size: medium
-                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.LOCAL_VIDEO
+                  label: EDITORIAL.ADMIN.GALLERY_VIDEOS_LOCAL_VIDEO
                   preview_images: false
                   accept:
                     - .mp4
@@ -146,8 +146,8 @@ form:
                     - .ogv
                 .local_thumbnail:
                   type: pagemediaselect
-                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.LOCAL_THUMBNAIL
-                  description: EDITORIAL.ADMIN.GALLERY.VIDEOS.LOCAL_THUMBNAIL_DESCRIPTION
+                  label: EDITORIAL.ADMIN.GALLERY_VIDEOS_LOCAL_THUMBNAIL
+                  description: EDITORIAL.ADMIN.GALLERY_VIDEOS_LOCAL_THUMBNAIL_DESCRIPTION
                   size: medium
                   preview_images: true
                   accept:
@@ -158,20 +158,20 @@ form:
                 .title:
                   type: text
                   size: medium
-                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.TITLE
+                  label: EDITORIAL.ADMIN.GALLERY_VIDEOS_TITLE
                   validate:
                     required: true
                 .description:
                   type: textarea
                   rows: 3
-                  label: EDITORIAL.ADMIN.GALLERY.VIDEOS.DESCRIPTION
+                  label: EDITORIAL.ADMIN.GALLERY_VIDEOS_DESCRIPTION
         gallery_options:
           type: tab
-          title: EDITORIAL.ADMIN.GALLERY.OPTIONS.TAB
+          title: EDITORIAL.ADMIN.GALLERY_OPTIONS_TAB
           fields:
             Effects_title:
               type: spacer
-              title: EDITORIAL.ADMIN.GALLERY.OPTIONS.EFFECTS_TITLE
+              title: EDITORIAL.ADMIN.GALLERY_OPTIONS_EFFECTS_TITLE
             header.lightbox_selector:
               type: text
               label: CSS Selector for Lightbox
@@ -182,57 +182,57 @@ form:
               default: 'glightbox'
             header.overlay_hover_effect:
               type: select
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.LABEL
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_LABEL
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_HELP
               default: fadeIn-bottom
               size: medium
               options:
-                fadeIn-bottom: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM
-                fadeIn-top: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP
-                fadeIn-left: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_LEFT
-                fadeIn-right: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_RIGHT
-                fadeIn-top fadeIn-right: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP_RIGHT
-                fadeIn-top fadeIn-left: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP_LEFT
-                fadeIn-bottom fadeIn-right: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM_RIGHT
-                fadeIn-bottom fadeIn-left: EDITORIAL.ADMIN.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM_LEFT
+                fadeIn-bottom: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_BOTTOM
+                fadeIn-top: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_TOP
+                fadeIn-left: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_LEFT
+                fadeIn-right: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_RIGHT
+                fadeIn-top fadeIn-right: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_TOP_RIGHT
+                fadeIn-top fadeIn-left: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_TOP_LEFT
+                fadeIn-bottom fadeIn-right: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_BOTTOM_RIGHT
+                fadeIn-bottom fadeIn-left: EDITORIAL.ADMIN.GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_BOTTOM_LEFT
             header.open_effect:
               type: select
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.OPEN_EFFECT.LABEL
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_OPEN_EFFECT_LABEL
               default: zoom
               size: medium
               options:
-                zoom: EDITORIAL.ADMIN.GALLERY.OPTIONS.OPEN_EFFECT.ZOOM
-                fade: EDITORIAL.ADMIN.GALLERY.OPTIONS.OPEN_EFFECT.FADE
-                none: EDITORIAL.ADMIN.GALLERY.OPTIONS.OPEN_EFFECT.NONE
+                zoom: EDITORIAL.ADMIN.GALLERY_OPTIONS_OPEN_EFFECT_ZOOM
+                fade: EDITORIAL.ADMIN.GALLERY_OPTIONS_OPEN_EFFECT_FADE
+                none: EDITORIAL.ADMIN.GALLERY_OPTIONS_OPEN_EFFECT_NONE
             header.close_effect:
               type: select
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.CLOSE_EFFECT.LABEL
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_CLOSE_EFFECT_LABEL
               default: zoom
               size: medium
               options:
-                zoom: EDITORIAL.ADMIN.GALLERY.OPTIONS.CLOSE_EFFECT.ZOOM
-                fade: EDITORIAL.ADMIN.GALLERY.OPTIONS.CLOSE_EFFECT.FADE
-                none: EDITORIAL.ADMIN.GALLERY.OPTIONS.CLOSE_EFFECT.NONE
+                zoom: EDITORIAL.ADMIN.GALLERY_OPTIONS_CLOSE_EFFECT_ZOOM
+                fade: EDITORIAL.ADMIN.GALLERY_OPTIONS_CLOSE_EFFECT_FADE
+                none: EDITORIAL.ADMIN.GALLERY_OPTIONS_CLOSE_EFFECT_NONE
             header.slide_effect:
               type: select
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.SLIDE_EFFECT.LABEL
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_SLIDE_EFFECT_LABEL
               default: slide
               size: medium
               options:
-                slide: EDITORIAL.ADMIN.GALLERY.OPTIONS.SLIDE_EFFECT.SLIDE
-                zoom: EDITORIAL.ADMIN.GALLERY.OPTIONS.SLIDE_EFFECT.ZOOM
-                fade: EDITORIAL.ADMIN.GALLERY.OPTIONS.SLIDE_EFFECT.FADE
-                none: EDITORIAL.ADMIN.GALLERY.OPTIONS.SLIDE_EFFECT.NONE
+                slide: EDITORIAL.ADMIN.GALLERY_OPTIONS_SLIDE_EFFECT_SLIDE
+                zoom: EDITORIAL.ADMIN.GALLERY_OPTIONS_SLIDE_EFFECT_ZOOM
+                fade: EDITORIAL.ADMIN.GALLERY_OPTIONS_SLIDE_EFFECT_FADE
+                none: EDITORIAL.ADMIN.GALLERY_OPTIONS_SLIDE_EFFECT_NONE
             header.more_text:
               type: text
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_TEXT
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_TEXT_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_MORE_TEXT
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_MORE_TEXT_HELP
               default: 'Ver más'
               size: medium
             header.more_length:
               type: number
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_LENGTH
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_LENGTH_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_MORE_LENGTH
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_MORE_LENGTH_HELP
               size: small
               default: 60
               validate:
@@ -240,11 +240,11 @@ form:
                 max: 500
             Actions_title:
               type: spacer
-              title: EDITORIAL.ADMIN.GALLERY.OPTIONS.ACTIONS_TITLE
+              title: EDITORIAL.ADMIN.GALLERY_OPTIONS_ACTIONS_TITLE
             header.close_button:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.CLOSE_BUTTON
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.CLOSE_BUTTON_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_CLOSE_BUTTON
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_CLOSE_BUTTON_HELP
               default: 1
               highlight: 1
               options:
@@ -252,8 +252,8 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             header.touch_navigation:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.TOUCH_NAVIGATION
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.TOUCH_NAVIGATION_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_TOUCH_NAVIGATION
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_TOUCH_NAVIGATION_HELP
               default: 1
               highlight: 1
               options:
@@ -261,8 +261,8 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             header.touch_axis:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.TOUCH_AXIS
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.TOUCH_AXIS_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_TOUCH_AXIS
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_TOUCH_AXIS_HELP
               default: 1
               highlight: 1
               options:
@@ -270,8 +270,8 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             header.keyboard_navigation:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.KEYBOARD
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.KEYBOARD_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_KEYBOARD
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_KEYBOARD_HELP
               default: 1
               highlight: 1
               options:
@@ -279,8 +279,8 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             header.closeOutside:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.CLOSE_OUTSIDE
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.CLOSE_OUTSIDE_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_CLOSE_OUTSIDE
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_CLOSE_OUTSIDE_HELP
               default: 1
               highlight: 1
               options:
@@ -288,34 +288,34 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             header.startAt:
               type: number
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_STARTAT
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.MORE_STARTAT_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_MORE_STARTAT
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_MORE_STARTAT_HELP
               size: small
               validate:
                 min: 0
                 max: 1000
             Styling_title:
               type: spacer
-              title: EDITORIAL.ADMIN.GALLERY.OPTIONS.STYLING_TITLE
+              title: EDITORIAL.ADMIN.GALLERY_OPTIONS_STYLING_TITLE
             header.width:
               type: text
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.WIDTH
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.WIDTH_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_WIDTH
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_WIDTH_HELP
               placeholder: 'auto'
               size: small
             header.height:
               type: text
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.HEIGHT
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.HEIGHT_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_HEIGHT
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_HEIGHT_HELP
               placeholder: 'auto'
               size: small
             Behavior_title:
               type: spacer
-              title: EDITORIAL.ADMIN.GALLERY.OPTIONS.BEHAVIOR_TITLE
+              title: EDITORIAL.ADMIN.GALLERY_OPTIONS_BEHAVIOR_TITLE
             header.loop:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.LOOP
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.LOOP_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_LOOP
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_LOOP_HELP
               default: 0
               highlight: 0
               options:
@@ -323,8 +323,8 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             header.zoomable:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.ZOOMABLE
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.ZOOMABLE_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_ZOOMABLE
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_ZOOMABLE_HELP
               default: 1
               highlight: 1
               options:
@@ -332,8 +332,8 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             header.draggable:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.DRAGGABLE
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.DRAGGABLE_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_DRAGGABLE
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_DRAGGABLE_HELP
               default: 1
               highlight: 1
               options:
@@ -341,8 +341,8 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             header.draggableX:
               type: number
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.DRAGGABLE_X
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.DRAGGABLE_X_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_DRAGGABLE_X
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_DRAGGABLE_X_HELP
               size: small
               default: 40
               validate:
@@ -350,8 +350,8 @@ form:
                 max: 500
             header.draggableY:
               type: number
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.DRAGGABLE_Y
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.DRAGGABLE_Y_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_DRAGGABLE_Y
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_DRAGGABLE_Y_HELP
               size: small
               default: 65
               validate:
@@ -359,8 +359,8 @@ form:
                 max: 500
             header.dragAuto:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.DRAG_AUTO_SNAP
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.DRAG_AUTO_SNAP_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_DRAG_AUTO_SNAP
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_DRAG_AUTO_SNAP_HELP
               default: 0
               highlight: 0
               options:
@@ -368,8 +368,8 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
             header.preload:
               type: toggle
-              label: EDITORIAL.ADMIN.GALLERY.OPTIONS.PRELOAD
-              help: EDITORIAL.ADMIN.GALLERY.OPTIONS.PRELOAD_HELP
+              label: EDITORIAL.ADMIN.GALLERY_OPTIONS_PRELOAD
+              help: EDITORIAL.ADMIN.GALLERY_OPTIONS_PRELOAD_HELP
               default: 1
               highlight: 1
               options:
@@ -377,6 +377,6 @@ form:
                 0: PLUGIN_ADMIN.DISABLED  
         seo:
           type: tab
-          title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB
+          title: EDITORIAL.ADMIN.DEFAULT_SEO_TAB
           ordering@: 99
           import@: partials/seo-tab.yaml        

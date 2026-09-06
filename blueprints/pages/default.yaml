@@ -21,7 +21,7 @@ form:
             _Headings_Section:
               type: section
               underline: true
-              title: EDITORIAL.ADMIN.DEFAULT.HEADINGS_SECTION
+              title: EDITORIAL.ADMIN.DEFAULT_HEADINGS_SECTION
             _Headings:
               type: columns
               fields:
@@ -39,15 +39,15 @@ form:
                     header.subtitle:
                       type: text
                       style: vertical
-                      label: EDITORIAL.ADMIN.DEFAULT.HEADER_SUBTITLE
+                      label: EDITORIAL.ADMIN.DEFAULT_HEADER_SUBTITLE
                 _TitleToggle:
                   type: column
                   fields:
                     header.show_title:
                       type: toggle
                       style: vertical
-                      label: EDITORIAL.ADMIN.DEFAULT.SHOW_TITLE
-                      help: EDITORIAL.ADMIN.DEFAULT.SHOW_TITLE_HELP
+                      label: EDITORIAL.ADMIN.DEFAULT_SHOW_TITLE
+                      help: EDITORIAL.ADMIN.DEFAULT_SHOW_TITLE_HELP
                       default: 1
                       highlight: 1
                       options:
@@ -56,12 +56,12 @@ form:
             _Content_Section:
               type: section
               underline: true
-              title: EDITORIAL.ADMIN.DEFAULT.CONTENT_SECTION
+              title: EDITORIAL.ADMIN.DEFAULT_CONTENT_SECTION
             header.page_index:
               type: toggle
               style: vertical
-              label: EDITORIAL.ADMIN.DEFAULT.PAGE_INDEX
-              help: EDITORIAL.ADMIN.DEFAULT.PAGE_INDEX_HELP
+              label: EDITORIAL.ADMIN.DEFAULT_PAGE_INDEX
+              help: EDITORIAL.ADMIN.DEFAULT_PAGE_INDEX_HELP
               default: 0
               highlight: 0
               options:
@@ -77,7 +77,7 @@ form:
             _Media_Section:
               type: section
               underline: true
-              title: EDITORIAL.ADMIN.DEFAULT.IMAGE_OPTIONS      
+              title: EDITORIAL.ADMIN.DEFAULT_IMAGE_OPTIONS      
             _MediaOptions:
               type: columns
               fields:
@@ -93,8 +93,8 @@ form:
                     header.show_pageimage:
                       type: toggle
   
-                      label: EDITORIAL.ADMIN.DEFAULT.SHOW_PAGEIMAGE
-                      help: EDITORIAL.ADMIN.DEFAULT.SHOW_PAGEIMAGE_HELP
+                      label: EDITORIAL.ADMIN.DEFAULT_SHOW_PAGEIMAGE
+                      help: EDITORIAL.ADMIN.DEFAULT_SHOW_PAGEIMAGE_HELP
                       default: 1
                       highlight: 1
                       options:
@@ -106,23 +106,23 @@ form:
                       ordering@: header.subtitle
                       size: large
                       type: pagemediaselect
-                      label: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE.LABEL
-                      help: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE.HELP
+                      label: EDITORIAL.ADMIN.DEFAULT_FEATURED_IMAGE_LABEL
+                      help: EDITORIAL.ADMIN.DEFAULT_FEATURED_IMAGE_HELP
                       preview_images: true
                     header.image_width:
                       type: number
-                      label: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE.WIDTH
+                      label: EDITORIAL.ADMIN.DEFAULT_FEATURED_IMAGE_WIDTH
                       size: small
                       default: 1000
                     header.image_height:
                       type: number
-                      label: EDITORIAL.ADMIN.DEFAULT.FEATURED_IMAGE.HEIGHT
+                      label: EDITORIAL.ADMIN.DEFAULT_FEATURED_IMAGE_HEIGHT
                       size: small
                       default: 300
         
         seo:
           type: tab
-          title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB
+          title: EDITORIAL.ADMIN.DEFAULT_SEO_TAB
           ordering@: 999
           import@: partials/seo-bits.yaml
  

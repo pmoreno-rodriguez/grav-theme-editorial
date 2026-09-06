@@ -14,7 +14,7 @@ form:
               type: section
               underline: true
               ordering@: _ContentOptions
-              title: EDITORIAL.ADMIN.MODULAR.BANNER.SECTION
+              title: EDITORIAL.ADMIN.MODULAR_BANNER_SECTION
             _BannerOptions:
               type: columns
               ordering@: _BannerSection
@@ -24,8 +24,8 @@ form:
                   fields:
                     header.title_htag:
                       type: select
-                      label: EDITORIAL.ADMIN.MODULAR.BANNER.TITLE_HTAG
-                      help: EDITORIAL.ADMIN.MODULAR.BANNER.TITLE_HTAG_HELP
+                      label: EDITORIAL.ADMIN.MODULAR_BANNER_TITLE_HTAG
+                      help: EDITORIAL.ADMIN.MODULAR_BANNER_TITLE_HTAG_HELP
                       size: small
                       options:
                         h1: H1
@@ -33,11 +33,11 @@ form:
                     header.button_text:
                       type: text
                       size: medium
-                      label: EDITORIAL.ADMIN.MODULAR.BANNER.BUTTON_TEXT
+                      label: EDITORIAL.ADMIN.MODULAR_BANNER_BUTTON_TEXT
                     header.button_url:
                       type: text
                       size: medium
-                      label: EDITORIAL.ADMIN.MODULAR.BANNER.BUTTON_URL
+                      label: EDITORIAL.ADMIN.MODULAR_BANNER_BUTTON_URL
         seo:
           unset@: true
             

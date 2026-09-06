@@ -19,8 +19,8 @@ form:
             header.onpage_menu:
               type: toggle
               style: vertical
-              label: EDITORIAL.ADMIN.MODULAR.SHOW_ONPAGE_MENU
-              help: EDITORIAL.ADMIN.MODULAR.SHOW_ONPAGE_MENU_HELP
+              label: EDITORIAL.ADMIN.MODULAR_SHOW_ONPAGE_MENU
+              help: EDITORIAL.ADMIN.MODULAR_SHOW_ONPAGE_MENU_HELP
               default: 0
               highlight: 0
               options:
@@ -45,6 +45,6 @@ form:
               size: small
         seo:
           type: tab
-          title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB
+          title: EDITORIAL.ADMIN.DEFAULT_SEO_TAB
           ordering@: 99
           import@: partials/seo-tab.yaml

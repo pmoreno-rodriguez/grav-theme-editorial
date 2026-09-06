@@ -5,8 +5,8 @@ form:
 
     seo.enabled:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SEO.ENABLED
-      help: EDITORIAL.ADMIN.THEME.SEO.ENABLED_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_ENABLED
+      help: EDITORIAL.ADMIN.THEME_SEO_ENABLED_HELP
       highlight: 1
       default: 1
       options:
@@ -18,13 +18,13 @@ form:
     # General SEO Settings
     seo_general_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.SEO.GENERAL_OPTIONS
+      title: EDITORIAL.ADMIN.THEME_SEO_GENERAL_OPTIONS
       underline: true
 
     seo.json_ld_enabled:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SEO.JSON_LD_ENABLED
-      help: EDITORIAL.ADMIN.THEME.SEO.JSON_LD_ENABLED_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_JSON_LD_ENABLED
+      help: EDITORIAL.ADMIN.THEME_SEO_JSON_LD_ENABLED_HELP
       highlight: 1
       default: 1
       options:
@@ -35,28 +35,28 @@ form:
 
     seo.robots:
       type: select
-      label: EDITORIAL.ADMIN.THEME.SEO.ROBOTS
-      help: EDITORIAL.ADMIN.THEME.SEO.ROBOTS_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_ROBOTS
+      help: EDITORIAL.ADMIN.THEME_SEO_ROBOTS_HELP
       default: 'index, follow'
       size: medium
       options:
-        'index, follow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_INDEX_FOLLOW
-        'noindex, follow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_NOINDEX_FOLLOW
-        'index, nofollow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_INDEX_NOFOLLOW
-        'noindex, nofollow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_NOINDEX_NOFOLLOW
+        'index, follow': EDITORIAL.ADMIN.THEME_SEO_ROBOTS_INDEX_FOLLOW
+        'noindex, follow': EDITORIAL.ADMIN.THEME_SEO_ROBOTS_NOINDEX_FOLLOW
+        'index, nofollow': EDITORIAL.ADMIN.THEME_SEO_ROBOTS_INDEX_NOFOLLOW
+        'noindex, nofollow': EDITORIAL.ADMIN.THEME_SEO_ROBOTS_NOINDEX_NOFOLLOW
       validate:
         type: string
 
     # Description Configuration
     description_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_SECTION
+      title: EDITORIAL.ADMIN.THEME_SEO_DESCRIPTION_SECTION
       underline: true
 
     seo.description_length:
       type: number
-      label: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_LENGTH
-      help: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_LENGTH_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_DESCRIPTION_LENGTH
+      help: EDITORIAL.ADMIN.THEME_SEO_DESCRIPTION_LENGTH_HELP
       size: small
       default: 70
       validate:
@@ -66,8 +66,8 @@ form:
 
     seo.description_fallback:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_FALLBACK
-      help: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_FALLBACK_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_DESCRIPTION_FALLBACK
+      help: EDITORIAL.ADMIN.THEME_SEO_DESCRIPTION_FALLBACK_HELP
       highlight: 1
       default: 1
       options:
@@ -78,26 +78,26 @@ form:
 
     seo.description_summarization:
       type: select
-      label: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_SUMMARIZATION
-      help: EDITORIAL.ADMIN.THEME.SEO.DESCRIPTION_SUMMARIZATION_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_DESCRIPTION_SUMMARIZATION
+      help: EDITORIAL.ADMIN.THEME_SEO_DESCRIPTION_SUMMARIZATION_HELP
       size: medium
       default: 'simple'
       options:
-        'simple': EDITORIAL.ADMIN.THEME.SEO.SUMMARIZATION_SIMPLE
-        'smart': EDITORIAL.ADMIN.THEME.SEO.SUMMARIZATION_SMART
+        'simple': EDITORIAL.ADMIN.THEME_SEO_SUMMARIZATION_SIMPLE
+        'smart': EDITORIAL.ADMIN.THEME_SEO_SUMMARIZATION_SMART
       validate:
         type: string
 
     # Twitter Card Settings
     twitter_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.SEO.TWITTER_SECTION
+      title: EDITORIAL.ADMIN.THEME_SEO_TWITTER_SECTION
       underline: true
 
     seo.twitter.enabled:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SEO.TWITTER_ENABLED
-      help: EDITORIAL.ADMIN.THEME.SEO.TWITTER_ENABLED_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_TWITTER_ENABLED
+      help: EDITORIAL.ADMIN.THEME_SEO_TWITTER_ENABLED_HELP
       highlight: 1
       default: 1
       options:
@@ -108,38 +108,38 @@ form:
 
     seo.twitter.site:
       type: text
-      label: EDITORIAL.ADMIN.THEME.SEO.TWITTER_SITE
-      help: EDITORIAL.ADMIN.THEME.SEO.TWITTER_SITE_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_TWITTER_SITE
+      help: EDITORIAL.ADMIN.THEME_SEO_TWITTER_SITE_HELP
       size: medium
       placeholder: '@yoursite'
       validate:
         pattern: '^[A-Za-z0-9_]{1,15}$'
-        message: EDITORIAL.ADMIN.THEME.SEO.TWITTER_SITE_VALIDATE
+        message: EDITORIAL.ADMIN.THEME_SEO_TWITTER_SITE_VALIDATE
 
     seo.twitter.card_type:
       type: select
-      label: EDITORIAL.ADMIN.THEME.SEO.TWITTER_CARD_TYPE
-      help: EDITORIAL.ADMIN.THEME.SEO.TWITTER_CARD_TYPE_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_TWITTER_CARD_TYPE
+      help: EDITORIAL.ADMIN.THEME_SEO_TWITTER_CARD_TYPE_HELP
       size: medium
       default: 'summary_large_image'
       options:
-        'summary_large_image': EDITORIAL.ADMIN.THEME.SEO.TWITTER_CARD_SUMMARY_LARGE
-        'summary': EDITORIAL.ADMIN.THEME.SEO.TWITTER_CARD_SUMMARY
-        'app': EDITORIAL.ADMIN.THEME.SEO.TWITTER_CARD_APP
-        'player': EDITORIAL.ADMIN.THEME.SEO.TWITTER_CARD_PLAYER
+        'summary_large_image': EDITORIAL.ADMIN.THEME_SEO_TWITTER_CARD_SUMMARY_LARGE
+        'summary': EDITORIAL.ADMIN.THEME_SEO_TWITTER_CARD_SUMMARY
+        'app': EDITORIAL.ADMIN.THEME_SEO_TWITTER_CARD_APP
+        'player': EDITORIAL.ADMIN.THEME_SEO_TWITTER_CARD_PLAYER
       validate:
         type: string
 
     # Facebook Open Graph Settings
     facebook_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.SEO.FACEBOOK_SECTION
+      title: EDITORIAL.ADMIN.THEME_SEO_FACEBOOK_SECTION
       underline: true
 
     seo.facebook.enabled:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SEO.FACEBOOK_ENABLED
-      help: EDITORIAL.ADMIN.THEME.SEO.FACEBOOK_ENABLED_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_FACEBOOK_ENABLED
+      help: EDITORIAL.ADMIN.THEME_SEO_FACEBOOK_ENABLED_HELP
       highlight: 1
       default: 1
       options:
@@ -150,8 +150,8 @@ form:
 
     seo.facebook.app_id:
       type: text
-      label: EDITORIAL.ADMIN.THEME.SEO.FACEBOOK_APP_ID
-      help: EDITORIAL.ADMIN.THEME.SEO.FACEBOOK_APP_ID_HELP
+      label: EDITORIAL.ADMIN.THEME_SEO_FACEBOOK_APP_ID
+      help: EDITORIAL.ADMIN.THEME_SEO_FACEBOOK_APP_ID_HELP
       size: medium
       placeholder: '1234567890123456'
       validate:

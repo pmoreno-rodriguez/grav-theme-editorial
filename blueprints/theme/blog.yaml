@@ -4,33 +4,33 @@ form:
   fields:
     blog_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.BLOG.DEFAULTS
+      title: EDITORIAL.ADMIN.THEME_BLOG_DEFAULTS
       underline: true
     
     blog-page:
       type: text
-      label: EDITORIAL.ADMIN.THEME.BLOG.PAGE_LABEL
-      help: EDITORIAL.ADMIN.THEME.BLOG.PAGE_HELP
+      label: EDITORIAL.ADMIN.THEME_BLOG_PAGE_LABEL
+      help: EDITORIAL.ADMIN.THEME_BLOG_PAGE_HELP
       size: medium
       default: '/blog'
     
     featured_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.FEATURED.SECTION
+      title: EDITORIAL.ADMIN.THEME_FEATURED_SECTION
       underline: true
     
     featured_tag:
       type: text
       markdown: true
-      label: EDITORIAL.ADMIN.THEME.FEATURED.CATEGORY
-      description: EDITORIAL.ADMIN.THEME.FEATURED.CATEGORY_DESCRIPTION
+      label: EDITORIAL.ADMIN.THEME_FEATURED_CATEGORY
+      description: EDITORIAL.ADMIN.THEME_FEATURED_CATEGORY_DESCRIPTION
       size: medium
       default: 'featured'
     
     featured_number:
       type: range
-      label: EDITORIAL.ADMIN.THEME.FEATURED.NUMBER
-      description: EDITORIAL.ADMIN.THEME.FEATURED.NUMBER_DESCRIPTION
+      label: EDITORIAL.ADMIN.THEME_FEATURED_NUMBER
+      description: EDITORIAL.ADMIN.THEME_FEATURED_NUMBER_DESCRIPTION
       default: 3
       validate:
         min: 1
@@ -38,23 +38,23 @@ form:
 
     featured_order:
       type: select
-      label: EDITORIAL.ADMIN.THEME.FEATURED.ORDER
-      description: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_DESCRIPTION
+      label: EDITORIAL.ADMIN.THEME_FEATURED_ORDER
+      description: EDITORIAL.ADMIN.THEME_FEATURED_ORDER_DESCRIPTION
       size: medium
       default: date
       options:
-        date: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_DATE
-        modified: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_MODIFIED
-        publish_date: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_PUBLISH_DATE
-        title: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_TITLE
-        folder: EDITORIAL.ADMIN.THEME.FEATURED.ORDER_FOLDER
+        date: EDITORIAL.ADMIN.THEME_FEATURED_ORDER_DATE
+        modified: EDITORIAL.ADMIN.THEME_FEATURED_ORDER_MODIFIED
+        publish_date: EDITORIAL.ADMIN.THEME_FEATURED_ORDER_PUBLISH_DATE
+        title: EDITORIAL.ADMIN.THEME_FEATURED_ORDER_TITLE
+        folder: EDITORIAL.ADMIN.THEME_FEATURED_ORDER_FOLDER
 
     featured_dir:
       type: select
-      label: EDITORIAL.ADMIN.THEME.FEATURED.DIRECTION
-      description: EDITORIAL.ADMIN.THEME.FEATURED.DIRECTION_DESCRIPTION
+      label: EDITORIAL.ADMIN.THEME_FEATURED_DIRECTION
+      description: EDITORIAL.ADMIN.THEME_FEATURED_DIRECTION_DESCRIPTION
       size: medium
       default: desc
       options:
-        desc: EDITORIAL.ADMIN.THEME.FEATURED.DIRECTION_DESC
-        asc: EDITORIAL.ADMIN.THEME.FEATURED.DIRECTION_ASC
+        desc: EDITORIAL.ADMIN.THEME_FEATURED_DIRECTION_DESC
+        asc: EDITORIAL.ADMIN.THEME_FEATURED_DIRECTION_ASC

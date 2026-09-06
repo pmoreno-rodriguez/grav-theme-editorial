@@ -1,4 +1,4 @@
-title: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.TAB
+title: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_TAB
 '@extends': default
 
 form:
@@ -13,48 +13,48 @@ form:
               unset@: true
         text_blocks:
           type: tab
-          title: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.CONFIG_TAB
+          title: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_CONFIG_TAB
           fields:
             _TextSection:
               type: section
               underline: true
               ordering@: _ContentOptions
-              title: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.SECTION
+              title: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_SECTION
             header.layout:
               type: select
-              label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.LAYOUT.LABEL
+              label: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_LAYOUT_LABEL
               size: small
               default: one
               options:
-                one: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.LAYOUT.ONE
-                two: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.LAYOUT.TWO
-                three: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.LAYOUT.THREE
+                one: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_LAYOUT_ONE
+                two: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_LAYOUT_TWO
+                three: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_LAYOUT_THREE
             header.texts:
               name: texts
               type: list
-              label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEMS
+              label: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_ITEMS
               fields:
                 .title:
                   type: text
-                  label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEM_TITLE
+                  label: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_ITEM_TITLE
                 .box_style:
                   type: select
-                  label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEM_BOX
+                  label: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_ITEM_BOX
                   default: default
                   options:
-                    none: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.NONE
-                    default: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.DEFAULT
-                    primary: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.PRIMARY
-                    secondary: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.SECONDARY
-                    success: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.SUCCESS
-                    info: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.INFO
-                    warning: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.WARNING
-                    danger: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.DANGER
-                    light: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.BOX.LIGHT
+                    none: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_BOX_NONE
+                    default: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_BOX_DEFAULT
+                    primary: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_BOX_PRIMARY
+                    secondary: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_BOX_SECONDARY
+                    success: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_BOX_SUCCESS
+                    info: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_BOX_INFO
+                    warning: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_BOX_WARNING
+                    danger: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_BOX_DANGER
+                    light: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_BOX_LIGHT
                 .content:
                   type: textarea
                   rows: 6
-                  label: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEM_CONTENT
-                  help: EDITORIAL.ADMIN.MODULAR.TEXT_BLOCKS.ITEM_CONTENT_HELP
+                  label: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_ITEM_CONTENT
+                  help: EDITORIAL.ADMIN.MODULAR_TEXT_BLOCKS_ITEM_CONTENT_HELP
         seo:
           unset@: true

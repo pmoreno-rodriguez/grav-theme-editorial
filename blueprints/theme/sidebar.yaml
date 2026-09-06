@@ -4,13 +4,13 @@ form:
   fields:
     configuration_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.SIDEBAR.OPTIONS
+      title: EDITORIAL.ADMIN.THEME_SIDEBAR_OPTIONS
       underline: true
 
     menu_langswitcher:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.LANGSWITCHER_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_LANGSWITCHER
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_LANGSWITCHER_HELP
       default: 0
       highlight: 0
       options:
@@ -21,8 +21,8 @@ form:
 
     menu_search:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SEARCH_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_SEARCH
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_SEARCH_HELP
       default: 0
       highlight: 0
       options:
@@ -33,8 +33,8 @@ form:
 
     menu_login:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.LOGIN_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_LOGIN
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_LOGIN_HELP
       default: 0
       highlight: 0
       options:
@@ -45,8 +45,8 @@ form:
 
     sidebar_open:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.OPEN_BY_DEFAULT
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.OPEN_BY_DEFAULT_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_OPEN_BY_DEFAULT
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_OPEN_BY_DEFAULT_HELP
       highlight: 1
       default: 1
       options:
@@ -57,8 +57,8 @@ form:
 
     right_sidebar:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.ON_RIGHT
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.ON_RIGHT_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_ON_RIGHT
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_ON_RIGHT_HELP
       highlight: 0
       default: 0
       options:
@@ -69,13 +69,13 @@ form:
 
     widgets_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.SIDEBAR.WIDGETS_OPTIONS
+      title: EDITORIAL.ADMIN.THEME_SIDEBAR_WIDGETS_OPTIONS
       underline: true
 
     featured:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEATURED
-      help: EDITORIAL.ADMIN.THEME.FEATURED.CATEGORY_DESCRIPTION
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_FEATURED
+      help: EDITORIAL.ADMIN.THEME_FEATURED_CATEGORY_DESCRIPTION
       highlight: 0
       default: 0
       options:
@@ -86,8 +86,8 @@ form:
 
     blog_categories_enabled:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_BLOG_CATEGORIES
-      help: EDITORIAL.ADMIN.THEME.BLOG.CATEGORIES_ENABLED_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_BLOG_CATEGORIES
+      help: EDITORIAL.ADMIN.THEME_BLOG_CATEGORIES_ENABLED_HELP
       highlight: 0
       default: 0
       options:
@@ -98,8 +98,8 @@ form:
 
     sidebar_showtaxonomy:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_TAXONOMY_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_TAXONOMY
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_TAXONOMY_HELP
       highlight: 0
       default: 0
       options:
@@ -110,8 +110,8 @@ form:
 
     sidebar_showarchives:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_ARCHIVES_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_ARCHIVES
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_ARCHIVES_HELP
       highlight: 0
       default: 0
       options:
@@ -122,8 +122,8 @@ form:
 
     sidebar_showrelatedpages:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RELATED_PAGES_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_RELATED_PAGES
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_RELATED_PAGES_HELP
       highlight: 0
       default: 0
       options:
@@ -134,8 +134,8 @@ form:
 
     sidebar_showfeeds:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_FEEDS_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_FEEDS
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_FEEDS_HELP
       highlight: 0
       default: 0
       options:
@@ -146,8 +146,8 @@ form:
 
     sidebar_showrandom:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM
-      help: EDITORIAL.ADMIN.THEME.SIDEBAR.SHOW_RANDOM_HELP
+      label: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_RANDOM
+      help: EDITORIAL.ADMIN.THEME_SIDEBAR_SHOW_RANDOM_HELP
       highlight: 0
       default: 0
       options:

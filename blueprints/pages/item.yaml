@@ -11,32 +11,32 @@ form:
               unset@: true
         blog-item:
           type: tab
-          title: EDITORIAL.ADMIN.ITEM.TAB
+          title: EDITORIAL.ADMIN.ITEM_TAB
           fields:
             summary:
               type: section
-              title: EDITORIAL.ADMIN.ITEM.SUMMARY.TITLE
+              title: EDITORIAL.ADMIN.ITEM_SUMMARY_TITLE
               underline: true
             header.summary.enabled:
               type: toggle
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.SUMMARY.ENABLED
+              label: EDITORIAL.ADMIN.ITEM_SUMMARY_ENABLED
               highlight: 1
               options:
-                1: Enabled
-                0: Disabled
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
             header.summary.format:
               type: select
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.SUMMARY.FORMAT
+              label: EDITORIAL.ADMIN.ITEM_SUMMARY_FORMAT
               classes: fancy
               options:
-                'short': EDITORIAL.ADMIN.ITEM.SUMMARY.FORMAT_SHORT
-                'long': EDITORIAL.ADMIN.ITEM.SUMMARY.FORMAT_LONG
+                'short': EDITORIAL.ADMIN.ITEM_SUMMARY_FORMAT_SHORT
+                'long': EDITORIAL.ADMIN.ITEM_SUMMARY_FORMAT_LONG
             header.summary.size:
               type: text
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.SUMMARY.SIZE
+              label: EDITORIAL.ADMIN.ITEM_SUMMARY_SIZE
               classes: large
               placeholder: 300
               validate:
@@ -45,47 +45,47 @@ form:
             header.summary.delimiter:
               type: text
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.SUMMARY.DELIMITER
+              label: EDITORIAL.ADMIN.ITEM_SUMMARY_DELIMITER
               classes: large
               placeholder: ===
             shareicons:
               type: section
-              title: EDITORIAL.ADMIN.ITEM.SHAREICONS.TITLE
+              title: EDITORIAL.ADMIN.ITEM_SHAREICONS_TITLE
               underline: true
             header.shareicons.facebook:
               type: toggle
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.SHAREICONS.FACEBOOK
+              label: EDITORIAL.ADMIN.ITEM_SHAREICONS_FACEBOOK
               highlight: 1
               options:
-                1: Enabled
-                0: Disabled
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
             header.shareicons.twitter:
               type: toggle
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.SHAREICONS.TWITTER
+              label: EDITORIAL.ADMIN.ITEM_SHAREICONS_TWITTER
               highlight: 1
               options:
-                1: Enabled
-                0: Disabled
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
             header.shareicons.whatsapp:
               type: toggle
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.SHAREICONS.WHATSAPP
+              label: EDITORIAL.ADMIN.ITEM_SHAREICONS_WHATSAPP
               highlight: 1
               options:
-                1: Enabled
-                0: Disabled
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
             header.shareicons.telegram:
               type: toggle
               toggleable: true
-              label: EDITORIAL.ADMIN.ITEM.SHAREICONS.TELEGRAM
+              label: EDITORIAL.ADMIN.ITEM_SHAREICONS_TELEGRAM
               highlight: 1
               options:
-                1: Enabled
-                0: Disabled
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
         seo:
           type: tab
-          title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB
+          title: EDITORIAL.ADMIN.DEFAULT_SEO_TAB
           ordering@: 99
           import@: partials/seo-tab.yaml

@@ -3,15 +3,15 @@ form:
 
     blog_config:
       type: spacer
-      title: EDITORIAL.ADMIN.BLOG.CONFIGURATION
+      title: EDITORIAL.ADMIN.BLOG_CONFIGURATION
 
     header.readmore_text:
       type: text
       toggleable: true
       default: 'Read more'
       size: large
-      label: EDITORIAL.ADMIN.BLOG.READMORE_TEXT
-      description: EDITORIAL.ADMIN.BLOG.READMORE_TEXT_DESCRIPTION
+      label: EDITORIAL.ADMIN.BLOG_READMORE_TEXT
+      description: EDITORIAL.ADMIN.BLOG_READMORE_TEXT_DESCRIPTION
 
     header.blog_url:
       type: text
@@ -25,7 +25,7 @@ form:
     header.content.breadcrumbs:
       type: toggle
       toggleable: true
-      label:  EDITORIAL.ADMIN.BLOG.SHOW_BREADCRUMBS
+      label:  EDITORIAL.ADMIN.BLOG_SHOW_BREADCRUMBS
       highlight: 0
       options:
         1: PLUGIN_ADMIN.ENABLED

@@ -31,22 +31,22 @@ form:
                   default: item
         blog:
           type: tab
-          title: EDITORIAL.ADMIN.BLOG.TAB
+          title: EDITORIAL.ADMIN.BLOG_TAB
           ordering@: 50
           fields:
             content_title:
               type: spacer
-              title: EDITORIAL.ADMIN.BLOG.TITLE
+              title: EDITORIAL.ADMIN.BLOG_TITLE
             header.content.items:
               type: textarea
               yaml: true
-              label: EDITORIAL.ADMIN.BLOG.ITEMS.LABEL
+              label: EDITORIAL.ADMIN.BLOG_ITEMS_LABEL
               default: '@self.children'
               validate:
                 type: yaml
             header.content.limit:
               type: text
-              label: EDITORIAL.ADMIN.BLOG.ITEMS.LIMIT
+              label: EDITORIAL.ADMIN.BLOG_ITEMS_LIMIT
               size: small
               default: 5
               validate:
@@ -55,25 +55,25 @@ form:
                 min: 1
             header.content.order.by:
               type: select
-              label: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.LABEL
+              label: EDITORIAL.ADMIN.BLOG_ITEMS_ORDER_BY_LABEL
               size: medium
               default: date
               options:
-                folder: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.FOLDER
-                title: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.TITLE
-                date: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.DATE
-                default: EDITORIAL.ADMIN.BLOG.ITEMS.ORDER_BY.DEFAULT
+                folder: EDITORIAL.ADMIN.BLOG_ITEMS_ORDER_BY_FOLDER
+                title: EDITORIAL.ADMIN.BLOG_ITEMS_ORDER_BY_TITLE
+                date: EDITORIAL.ADMIN.BLOG_ITEMS_ORDER_BY_DATE
+                default: EDITORIAL.ADMIN.BLOG_ITEMS_ORDER_BY_DEFAULT
             header.content.order.dir:
               type: select
-              label: EDITORIAL.ADMIN.BLOG.ITEMS.DIR
+              label: EDITORIAL.ADMIN.BLOG_ITEMS_DIR
               size: medium
               default: desc
               options:
-                asc: EDITORIAL.ADMIN.BLOG.ITEMS.DIR_ASC
-                desc: EDITORIAL.ADMIN.BLOG.ITEMS.DIR_DESC
+                asc: EDITORIAL.ADMIN.BLOG_ITEMS_DIR_ASC
+                desc: EDITORIAL.ADMIN.BLOG_ITEMS_DIR_DESC
             header.content.pagination:
               type: toggle
-              label: EDITORIAL.ADMIN.BLOG.PAGINATION.LABEL
+              label: EDITORIAL.ADMIN.BLOG_PAGINATION_LABEL
               highlight: 1
               default: 1
               options:
@@ -83,7 +83,7 @@ form:
                 type: bool            
             header.content.url_taxonomy_filters:
               type: toggle
-              label: EDITORIAL.ADMIN.BLOG.URL_TAXONOMY_FILTERS
+              label: EDITORIAL.ADMIN.BLOG_URL_TAXONOMY_FILTERS
               highlight: 1
               default: 1
               options:
@@ -97,6 +97,6 @@ form:
         
         seo:
           type: tab
-          title: EDITORIAL.ADMIN.DEFAULT.SEO.TAB
+          title: EDITORIAL.ADMIN.DEFAULT_SEO_TAB
           ordering@: 999
           import@: partials/seo-bits.yaml

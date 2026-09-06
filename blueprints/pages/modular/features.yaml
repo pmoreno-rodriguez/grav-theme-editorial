@@ -1,4 +1,4 @@
-title: EDITORIAL.ADMIN.MODULAR.FEATURES.TAB
+title: EDITORIAL.ADMIN.MODULAR_FEATURES_TAB
 '@extends': default
 
 form:
@@ -11,27 +11,27 @@ form:
               unset@: true
         features:
           type: tab
-          title: EDITORIAL.ADMIN.MODULAR.FEATURES.TAB
+          title: EDITORIAL.ADMIN.MODULAR_FEATURES_TAB
           fields:
             header.features:
               name: features
               type: list
-              label: EDITORIAL.ADMIN.MODULAR.FEATURES.TAB
+              label: EDITORIAL.ADMIN.MODULAR_FEATURES_TAB
               fields:
                 .icon:
                   type: text
-                  label: EDITORIAL.ADMIN.MODULAR.FEATURES.ICON
-                  description: EDITORIAL.ADMIN.MODULAR.FEATURES.ICON_DESCRIPTION
+                  label: EDITORIAL.ADMIN.MODULAR_FEATURES_ICON
+                  description: EDITORIAL.ADMIN.MODULAR_FEATURES_ICON_DESCRIPTION
                 .title:
                   type: text
-                  label: EDITORIAL.ADMIN.MODULAR.FEATURES.TITLE
+                  label: EDITORIAL.ADMIN.MODULAR_FEATURES_TITLE
                 .text:
                   type: textarea
                   rows: 3
-                  label: EDITORIAL.ADMIN.MODULAR.FEATURES.TEXT
-                  help: EDITORIAL.ADMIN.MODULAR.FEATURES.TEXT_HELP
+                  label: EDITORIAL.ADMIN.MODULAR_FEATURES_TEXT
+                  help: EDITORIAL.ADMIN.MODULAR_FEATURES_TEXT_HELP
                 .url:
                   type: text
-                  label: EDITORIAL.ADMIN.MODULAR.FEATURES.BUTTON_URL
+                  label: EDITORIAL.ADMIN.MODULAR_FEATURES_BUTTON_URL
         seo:
           unset@: true

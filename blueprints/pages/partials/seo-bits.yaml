@@ -3,7 +3,7 @@ form:
     _SocialMedia_Section:
       type: section
       underline: true
-      title: EDITORIAL.ADMIN.DEFAULT.SEO.SECTION_TITLE
+      title: EDITORIAL.ADMIN.DEFAULT_SEO_SECTION_TITLE
     _TwitterOptions:
       type: columns
       fields:
@@ -13,29 +13,29 @@ form:
             header.seo.robots:
               type: select
               name: robots
-              label: EDITORIAL.ADMIN.THEME.SEO.ROBOTS
-              help: EDITORIAL.ADMIN.DEFAULT.SEO.ROBOTS_HELP
+              label: EDITORIAL.ADMIN.THEME_SEO_ROBOTS
+              help: EDITORIAL.ADMIN.DEFAULT_SEO_ROBOTS_HELP
               default: 'index, follow'
               size: medium
               options:
-                'index, follow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_INDEX_FOLLOW
-                'noindex, follow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_NOINDEX_FOLLOW
-                'index, nofollow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_INDEX_NOFOLLOW
-                'noindex, nofollow': EDITORIAL.ADMIN.THEME.SEO.ROBOTS_NOINDEX_NOFOLLOW
+                'index, follow': EDITORIAL.ADMIN.THEME_SEO_ROBOTS_INDEX_FOLLOW
+                'noindex, follow': EDITORIAL.ADMIN.THEME_SEO_ROBOTS_NOINDEX_FOLLOW
+                'index, nofollow': EDITORIAL.ADMIN.THEME_SEO_ROBOTS_INDEX_NOFOLLOW
+                'noindex, nofollow': EDITORIAL.ADMIN.THEME_SEO_ROBOTS_NOINDEX_NOFOLLOW
               validate:
                 type: string
             header.seo.twitter_creator:
               type: text
-              label: EDITORIAL.ADMIN.DEFAULT.SEO.TWITTER_CREATOR
-              help: EDITORIAL.ADMIN.DEFAULT.SEO.TWITTER_CREATOR_HELP
+              label: EDITORIAL.ADMIN.DEFAULT_SEO_TWITTER_CREATOR
+              help: EDITORIAL.ADMIN.DEFAULT_SEO_TWITTER_CREATOR_HELP
               size: medium
               placeholder: '@username'
               validate:
                 pattern: '^[A-Za-z0-9_]{1,15}$'
-                message: EDITORIAL.ADMIN.DEFAULT.SEO.TWITTER_CREATOR_VALIDATE
+                message: EDITORIAL.ADMIN.DEFAULT_SEO_TWITTER_CREATOR_VALIDATE
             header.seo.image:
               type: pagemediaselect
-              label: EDITORIAL.ADMIN.DEFAULT.SEO.IMAGE
-              help: EDITORIAL.ADMIN.DEFAULT.SEO.IMAGE_HELP
+              label: EDITORIAL.ADMIN.DEFAULT_SEO_IMAGE
+              help: EDITORIAL.ADMIN.DEFAULT_SEO_IMAGE_HELP
               size: large
               preview_images: true

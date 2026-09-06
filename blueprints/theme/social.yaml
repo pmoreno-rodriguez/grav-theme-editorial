@@ -5,7 +5,7 @@ form:
 
     social_enabled:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.SOCIAL.ENABLED
+      label: EDITORIAL.ADMIN.THEME_SOCIAL_ENABLED
       highlight: 0
       default: 0
       options:
@@ -16,7 +16,7 @@ form:
 
     social:
       name: social
-      label: EDITORIAL.ADMIN.THEME.SOCIAL.ICONS
+      label: EDITORIAL.ADMIN.THEME_SOCIAL_ICONS
       type: list
       style: vertical
       collapsed: false
@@ -24,29 +24,29 @@ form:
       fields:
         .name:
           type: text
-          label: EDITORIAL.ADMIN.THEME.SOCIAL.NAME
+          label: EDITORIAL.ADMIN.THEME_SOCIAL_NAME
           size: medium
         .url:
           type: text
-          label: EDITORIAL.ADMIN.THEME.SOCIAL.URL
+          label: EDITORIAL.ADMIN.THEME_SOCIAL_URL
         .target:
           type: select
-          label: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.LABEL
+          label: EDITORIAL.ADMIN.THEME_SOCIAL_TARGET_LABEL
           default: _self
           size: medium
           options:
-            _blank: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.BLANK
-            _parent: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.PARENT
-            _self: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.SELF
-            _top: EDITORIAL.ADMIN.THEME.SOCIAL.TARGET.TOP
+            _blank: EDITORIAL.ADMIN.THEME_SOCIAL_TARGET_BLANK
+            _parent: EDITORIAL.ADMIN.THEME_SOCIAL_TARGET_PARENT
+            _self: EDITORIAL.ADMIN.THEME_SOCIAL_TARGET_SELF
+            _top: EDITORIAL.ADMIN.THEME_SOCIAL_TARGET_TOP
         .icon:
           type: text
-          label: EDITORIAL.ADMIN.THEME.SOCIAL.ICON
-          description: EDITORIAL.ADMIN.THEME.SOCIAL.ICON_HELP
+          label: EDITORIAL.ADMIN.THEME_SOCIAL_ICON
+          description: EDITORIAL.ADMIN.THEME_SOCIAL_ICON_HELP
           size: medium
         .icon_type:
           type: select
-          label: EDITORIAL.ADMIN.THEME.SOCIAL.ICON_TYPE
+          label: EDITORIAL.ADMIN.THEME_SOCIAL_ICON_TYPE
           default: brands
           size: medium
           options:

@@ -4,12 +4,12 @@ form:
   fields:
     contact_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.CONTACT.INFORMATION_TITLE
+      title: EDITORIAL.ADMIN.THEME_CONTACT_INFORMATION_TITLE
       underline: true
     
     enable_contact:
       type: toggle
-      label: EDITORIAL.ADMIN.THEME.CONTACT.ENABLE
+      label: EDITORIAL.ADMIN.THEME_CONTACT_ENABLE
       highlight: 0
       default: 0
       options:
@@ -23,44 +23,44 @@ form:
       rows: 3
       size: long
       markdown: true
-      label: EDITORIAL.ADMIN.THEME.CONTACT.TEXT
+      label: EDITORIAL.ADMIN.THEME_CONTACT_TEXT
     
     contact.email:
-      label: EDITORIAL.ADMIN.THEME.CONTACT.EMAIL
+      label: EDITORIAL.ADMIN.THEME_CONTACT_EMAIL
       type: email
       size: medium
       placeholder: webmaster@example.com
     
     contact.phone:
-      label: EDITORIAL.ADMIN.THEME.CONTACT.PHONE
+      label: EDITORIAL.ADMIN.THEME_CONTACT_PHONE
       type: text
       size: medium
       placeholder: (555) 555-5555
     
     address_section:
       type: section
-      title: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.SECTION
+      title: EDITORIAL.ADMIN.THEME_CONTACT_ADDRESS_SECTION
       underline: true
     
     contact.street:
-      label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STREET
+      label: EDITORIAL.ADMIN.THEME_CONTACT_ADDRESS_STREET
       type: text
       placeholder: 123 Any Street
     
     contact.city:
-      label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.CITY
+      label: EDITORIAL.ADMIN.THEME_CONTACT_ADDRESS_CITY
       type: text
       size: medium
       placeholder: AnyTown
     
     contact.state:
-      label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.STATE
+      label: EDITORIAL.ADMIN.THEME_CONTACT_ADDRESS_STATE
       type: text
       size: medium
       placeholder: CA
     
     contact.zip:
-      label: EDITORIAL.ADMIN.THEME.CONTACT.ADDRESS.ZIP
+      label: EDITORIAL.ADMIN.THEME_CONTACT_ADDRESS_ZIP
       type: text
       size: small
       placeholder: 12345

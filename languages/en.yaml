@@ -1,444 +1,824 @@
 EDITORIAL:
+  ADMIN:
+    THEME_GLOBAL_SETTING: Global Setting
+    THEME_DROPDOWN_MENU: Dropdown in navbar
+    THEME_PRODUCTION_MODE: Production mode
+    THEME_PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
+    THEME_SIDEBAR_OPEN: Open sidebar
+    THEME_SIDEBAR_OPEN_HELP: Set if the sidebar is open or closed at startup
+    THEME_RIGHT_SIDEBAR: Sidebar on the right
+    THEME_RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
+    THEME_GOOGLE_FONTS_LOCAL: Use locally hosted Google Fonts
+    THEME_HEADER_SETTING: Header Setting
+    THEME_HEADER_SECTION: Header Options
+    THEME_FAVICON: Choose your own favicon
+    THEME_FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
+    THEME_SLOGAN: Theme Slogan
+    THEME_SLOGAN_HELP: Use this to add a text snippet to the sitename.
+    THEME_CUSTOM_LOGO_ENABLED: Enabled Logo
+    THEME_CUSTOM_LOGO_SECTION: Custom Logo Section
+    THEME_CUSTOM_LOGO_WIDTH: Custom Logo Width
+    THEME_CUSTOM_LOGO_LOGO: Custom Logo
+    THEME_CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
+    THEME_CUSTOM_LOGO_MOBILE: Mobile Custom Logo
+    THEME_CUSTOM_CSS: Load Custom CSS
+    THEME_CUSTOM_CSS_HELP: Load custom CSS styles from theme://assets/css/custom.css
+    THEME_CUSTOM_JS: Load Custom JS
+    THEME_CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
+    THEME_CONTACT_TITLE: Contact Options
+    THEME_CONTACT_ENABLE: Enable Contact section
+    THEME_CONTACT_COPYRIGHT_TEXT: Copyright Text
+    THEME_CONTACT_COPYRIGHT_TEXT_HELP: Display custom copyright text in the footer, next to the site name.
+    THEME_CONTACT_INFORMATION_TITLE: Contact Information
+    THEME_CONTACT_INFORMATION_TEXT: Contact information is displayed in the sidebar area.
+    THEME_CONTACT_TEXT: Contact Information Text
+    THEME_CONTACT_EMAIL: Email
+    THEME_CONTACT_PHONE: Phone
+    THEME_CONTACT_ADDRESS_SECTION: Address Information
+    THEME_CONTACT_ADDRESS_STREET: Street Address
+    THEME_CONTACT_ADDRESS_CITY: City
+    THEME_CONTACT_ADDRESS_STATE: State
+    THEME_CONTACT_ADDRESS_ZIP: Postal Code
+    THEME_SIDEBAR_OPTIONS: Sidebar Options
+    THEME_SIDEBAR_WIDGETS_OPTIONS: Widgets Options
+    THEME_SIDEBAR_MENU_SECTION: Menu Items
+    THEME_SIDEBAR_OPEN_BY_DEFAULT: Open By Default
+    THEME_SIDEBAR_OPEN_BY_DEFAULT_HELP: Set if the sidebar is open or closed at startup
+    THEME_SIDEBAR_ON_RIGHT: Sidebar on the right
+    THEME_SIDEBAR_ON_RIGHT_HELP: If set to enabled the sidebar will appear on the right
+    THEME_SIDEBAR_LANGSWITCHER: Enable Langswitcher menu option
+    THEME_SIDEBAR_LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the sidebar menu.
+    THEME_SIDEBAR_SEARCH: Enable Search menu option
+    THEME_SIDEBAR_SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in sidebar menu.
+    THEME_SIDEBAR_LOGIN: Enable Login menu option
+    THEME_SIDEBAR_LOGIN_HELP: You can enable or disable Login icon in sidebar menu, to show login status.
+    THEME_SIDEBAR_SHOW_FEATURED: Show Featured Posts
+    THEME_SIDEBAR_SHOW_BLOG_CATEGORIES: Show Blog Categories
+    THEME_SIDEBAR_SHOW_TAXONOMY: Show Popular Tags
+    THEME_SIDEBAR_SHOW_TAXONOMY_HELP: Taxonomylist plugin must be installed
+    THEME_SIDEBAR_SHOW_ARCHIVES: Show Archives
+    THEME_SIDEBAR_SHOW_ARCHIVES_HELP: Archives plugin must be installed
+    THEME_SIDEBAR_SHOW_RELATED_PAGES: Show Related Pages
+    THEME_SIDEBAR_SHOW_RELATED_PAGES_HELP: Related pages plugin must be installed
+    THEME_SIDEBAR_SHOW_FEEDS: Show Feeds
+    THEME_SIDEBAR_SHOW_FEEDS_HELP: Feeds plugin must be installed
+    THEME_SIDEBAR_SHOW_RANDOM: Show Random Post
+    THEME_SIDEBAR_SHOW_RANDOM_HELP: Random plugin must be installed
+    THEME_SIDEBAR_BLOG_CATEGORIES: Blog Categories
+    THEME_BLOG_DEFAULTS: Blog Defaults
+    THEME_BLOG_PAGE_LABEL: Blog Page
+    THEME_BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
+    THEME_BLOG_CATEGORIES_ENABLED: Show Blog Categories
+    THEME_BLOG_CATEGORIES_ENABLED_HELP: Display blog categories with post count in the sidebar
+    THEME_BLOG_CATEGORIES_SCOPE: Categories Scope
+    THEME_BLOG_CATEGORIES_SCOPE_HELP: Choose where to display blog categories
+    THEME_BLOG_CATEGORIES_SCOPE_BLOG_ONLY: Blog pages only
+    THEME_BLOG_CATEGORIES_SCOPE_ALL_BLOGS: All blogs on all pages
+    THEME_BLOG_LISTING_TITLE_TAXONOMY_CATEGORY: Set Title to filter posts by Category
+    THEME_BLOG_LISTING_TITLE_TAXONOMY_TAG: Set Title to filter posts by Tag
+    THEME_BLOG_LISTING_TITLE_TAXONOMY_AUTHOR: Set Title to filter posts by Author
+    THEME_BLOG_LISTING_TITLE_BLOG: Set Title for blog without filter
+    THEME_FEATURED_SECTION: Featured Section
+    THEME_FEATURED_LABEL: Enable Featured posts in Sidebar
+    THEME_FEATURED_NUMBER: Featured posts number to show
+    THEME_FEATURED_NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
+    THEME_FEATURED_CATEGORY: Featured Tag
+    THEME_FEATURED_CATEGORY_DESCRIPTION: Set name to featured tag.<br />`You must include this name in Options->Taxonomy->Tag`
+    THEME_FEATURED_ORDER: Order by
+    THEME_FEATURED_ORDER_DESCRIPTION: Field to sort featured posts by
+    THEME_FEATURED_ORDER_DATE: Creation date
+    THEME_FEATURED_ORDER_PUBLISH_DATE: Publication date
+    THEME_FEATURED_ORDER_MODIFIED: Modified date
+    THEME_FEATURED_ORDER_TITLE: Title
+    THEME_FEATURED_ORDER_FOLDER: Folder name
+    THEME_FEATURED_DIRECTION: Sort direction
+    THEME_FEATURED_DIRECTION_DESCRIPTION: Ascending or descending order
+    THEME_FEATURED_DIRECTION_DESC: Descending
+    THEME_FEATURED_DIRECTION_ASC: Ascending
+    THEME_SOCIAL_TEXT: Include full url's to your various social media presences.  An icon/ link will appear at the top of the page for each respective platform.
+    THEME_SOCIAL_ENABLED: Enable Social Icons
+    THEME_SOCIAL_ICONS: Social Icons
+    THEME_SOCIAL_NAME: Social Name
+    THEME_SOCIAL_URL: URL Link to Social
+    THEME_SOCIAL_TARGET_BLANK: Open in a new window
+    THEME_SOCIAL_TARGET_PARENT: Open in the parent frame
+    THEME_SOCIAL_TARGET_SELF: Open in the same frame as clicked
+    THEME_SOCIAL_TARGET_TOP: Open in the full body of the window
+    THEME_SOCIAL_ICON: Icon to Social
+    THEME_SOCIAL_ICON_HELP: Enter the FontAwesome icon class (e.g., facebook, twitter, linkedin, mastodon). Prefix "fa-" is optional and will be added automatically.
+    THEME_SOCIAL_ICON_TYPE: Icon Type
+    THEME_SOCIAL_TARGET_LABEL: Target
+    THEME_CUSTOM_MENU_ENABLE: Display Custom Menu Items
+    THEME_CUSTOM_MENU_ENABLE_HELP: Determines if any defined custom menu entries are displayed in the menubar.
+    THEME_CUSTOM_MENU_ITEM_TEXT: Text
+    THEME_CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: Text label for menu item.
+    THEME_CUSTOM_MENU_ITEM_ICON: Icon
+    THEME_CUSTOM_MENU_ITEM_ICON_DESCRIPTION: Font Awesome icon for menu item.
+    THEME_CUSTOM_MENU_ITEM_URL: URL
+    THEME_CUSTOM_MENU_ITEM_URL_DESCRIPTION: URL for menu item.
+    THEME_CUSTOM_MENU_ITEM_TARGET_BLANK: Open in a new window
+    THEME_CUSTOM_MENU_ITEM_TARGET_PARENT: Open in the parent frame
+    THEME_CUSTOM_MENU_ITEM_TARGET_SELF: Open in the same frame as clicked
+    THEME_CUSTOM_MENU_ITEM_TARGET_TOP: Open in the full body of the window
+    THEME_CUSTOM_MENU_ITEM_TARGET_LABEL: Target
+    THEME_SEO_ENABLED: Enable SEO
+    THEME_SEO_ENABLED_HELP: Enable or disable all SEO functionality. Disable if using an SEO plugin
+    THEME_SEO_JSON_LD_ENABLED: Structured JSON-LD
+    THEME_SEO_JSON_LD_ENABLED_HELP: Generate JSON-LD structured data for rich snippets
+    THEME_SEO_GENERAL_OPTIONS: General SEO Options
+    THEME_SEO_ROBOTS: Robots directives
+    THEME_SEO_ROBOTS_HELP: Instructions for search engines about indexing and following
+    THEME_SEO_ROBOTS_INDEX_FOLLOW: Index, Follow
+    THEME_SEO_ROBOTS_NOINDEX_FOLLOW: No Index, Follow
+    THEME_SEO_ROBOTS_INDEX_NOFOLLOW: Index, No Follow
+    THEME_SEO_ROBOTS_NOINDEX_NOFOLLOW: No Index, No Follow
+    THEME_SEO_DESCRIPTION_SECTION: Description Options
+    THEME_SEO_DESCRIPTION_LENGTH: Description length
+    THEME_SEO_DESCRIPTION_LENGTH_HELP: Maximum number of words in description meta tag
+    THEME_SEO_DESCRIPTION_FALLBACK: Description fallback
+    THEME_SEO_DESCRIPTION_FALLBACK_HELP: Use content summary when description is not available
+    THEME_SEO_DESCRIPTION_SUMMARIZATION: Description summarization
+    THEME_SEO_DESCRIPTION_SUMMARIZATION_HELP: Method used to generate descriptions from content
+    THEME_SEO_SUMMARIZATION_SIMPLE: Simple truncation
+    THEME_SEO_SUMMARIZATION_SMART: Smart summarization
+    THEME_SEO_TWITTER_SECTION: Twitter Card Options
+    THEME_SEO_TWITTER_ENABLED: Enable Twitter Cards
+    THEME_SEO_TWITTER_ENABLED_HELP: Generate Twitter Card meta tags
+    THEME_SEO_TWITTER_SITE: Twitter site username
+    THEME_SEO_TWITTER_SITE_HELP: Your website's Twitter handle (without @)
+    THEME_SEO_TWITTER_SITE_VALIDATE: 'Valid Twitter handle: 1-15 letters, numbers or _'
+    THEME_SEO_TWITTER_CARD_TYPE: Twitter Card type
+    THEME_SEO_TWITTER_CARD_TYPE_HELP: Type of Twitter Card to generate
+    THEME_SEO_TWITTER_CARD_SUMMARY_LARGE: Summary Large Image
+    THEME_SEO_TWITTER_CARD_SUMMARY: Summary
+    THEME_SEO_TWITTER_CARD_APP: App
+    THEME_SEO_TWITTER_CARD_PLAYER: Player
+    THEME_SEO_FACEBOOK_SECTION: Facebook Open Graph Options
+    THEME_SEO_FACEBOOK_ENABLED: Enable Open Graph
+    THEME_SEO_FACEBOOK_ENABLED_HELP: Generate Facebook Open Graph meta tags
+    THEME_SEO_FACEBOOK_APP_ID: Facebook App ID
+    THEME_SEO_FACEBOOK_APP_ID_HELP: Your Facebook Application ID
+    THEME_CUSTOM_MENU_TITLE: Custom Menu Items
+    THEME_CUSTOM_MENU_LABEL: Menu Items
+    THEME_SIDEBAR_SETTING: Sidebar Setting
+    THEME_BLOG_SETTING: Blog Setting
+    THEME_CONTACT_SETTING: Contact Setting
+    THEME_SOCIAL_SETTING: Social Media Setting
+    THEME_CUSTOM_MENU_SETTING: Custom Menu Setting
+    THEME_SEO_SETTING: SEO Setting
+    MODULAR_SHOW_ONPAGE_MENU: Show navigation on one-page sites
+    MODULAR_SHOW_ONPAGE_MENU_HELP: On single-page sites, it adds smooth scrolling on click navigation and automatically selects the correct navigation elements as you scroll through different sections.
+    MODULAR_BANNER_SECTION: Banner Options
+    MODULAR_BANNER_BUTTON_TEXT: Button Text
+    MODULAR_BANNER_BUTTON_URL: Button URL
+    MODULAR_BANNER_TITLE_HTAG: Title HTML Tag
+    MODULAR_BANNER_TITLE_HTAG_HELP: Select the HTML tag to be used for the banner title
+    MODULAR_TEXT_BLOCKS_TAB: Text Blocks
+    MODULAR_TEXT_BLOCKS_CONFIG_TAB: Text Blocks Settings
+    MODULAR_TEXT_BLOCKS_SECTION: Text Blocks Settings
+    MODULAR_TEXT_BLOCKS_LAYOUT_ONE: One column
+    MODULAR_TEXT_BLOCKS_LAYOUT_TWO: Two columns
+    MODULAR_TEXT_BLOCKS_LAYOUT_THREE: Three columns
+    MODULAR_TEXT_BLOCKS_ITEMS: Text blocks
+    MODULAR_TEXT_BLOCKS_ITEM_TITLE: Box title
+    MODULAR_TEXT_BLOCKS_ITEM_CONTENT: Content
+    MODULAR_TEXT_BLOCKS_ITEM_CONTENT_HELP: Supports markdown.
+    MODULAR_TEXT_BLOCKS_ITEM_BOX: Box style
+    MODULAR_TEXT_BLOCKS_BOX_NONE: No box
+    MODULAR_TEXT_BLOCKS_BOX_DEFAULT: Default
+    MODULAR_TEXT_BLOCKS_BOX_PRIMARY: Primary
+    MODULAR_TEXT_BLOCKS_BOX_SECONDARY: Secondary
+    MODULAR_TEXT_BLOCKS_BOX_SUCCESS: Success
+    MODULAR_TEXT_BLOCKS_BOX_INFO: Info
+    MODULAR_TEXT_BLOCKS_BOX_WARNING: Warning
+    MODULAR_TEXT_BLOCKS_BOX_DANGER: Danger
+    MODULAR_TEXT_BLOCKS_BOX_LIGHT: Light
+    MODULAR_TEXT_BLOCKS_LAYOUT_LABEL: Layout
+    MODULAR_FEATURES_TAB: Features
+    MODULAR_FEATURES_ICON: Icon
+    MODULAR_FEATURES_ICON_DESCRIPTION: Select the code of Fontawesome Icons free version (https://fontawesome.com/icons?m=free)
+    MODULAR_FEATURES_TEXT: Text
+    MODULAR_FEATURES_TEXT_HELP: Short description for each feature. Support markdown.
+    MODULAR_FEATURES_BUTTON_URL: Button URL
+    MODULAR_FEATURES_BUTTON_URL_TARGET: Open URL in a new window
+    MODULAR_RECENT_POSTS_TAB: Recent Posts
+    MODULAR_RECENT_POSTS_LAYOUT_LABEL: Layout
+    MODULAR_RECENT_POSTS_LAYOUT_TWO_COLS: Medium   = 2 / 1 columns
+    MODULAR_RECENT_POSTS_LAYOUT_THREE_COLS: Standard  = 3 / 2 / 1 columns
+    MODULAR_RECENT_POSTS_LIMIT: Limit
+    MODULAR_RECENT_POSTS_LIMIT_HELP: Maximum number of posts to display.
+    MODULAR_RECENT_POSTS_READMORE_TEXT: Readmore button text
+    MODULAR_RECENT_POSTS_READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
+    MODULAR_TEAM_TAB: Team
+    MODULAR_TEAM_TEAM_LAYOUT: Layout
+    MODULAR_TEAM_TEAM_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
+    MODULAR_TEAM_TEAM_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
+    MODULAR_TEAM_IMAGE: Profile image
+    MODULAR_TEAM_IMAGE_HELP: Select a profile image
+    MODULAR_TEAM_NAME: Name
+    MODULAR_TEAM_POSITION: Position
+    MODULAR_TEAM_DETAILS: Profile details
+    MODULAR_TEAM_DETAILS_HELP: Brief profile description
+    MODULAR_TEAM_SOCIAL_MEDIA_NAME: Social name
+    MODULAR_TEAM_SOCIAL_MEDIA_NAME_HELP: You only have to write the name of the social network here (eg, Facebook, Twitter, etc)
+    MODULAR_TEAM_SOCIAL_MEDIA_URL: Social URL
+    MODULAR_TEAM_SOCIAL_MEDIA_LABEL: Social media
+    MODULAR_TEAM_SOCIAL_MEDIA_HELP: The template allows a maximum of 6 icons for each member.
+    MODULAR_DOWNLOADS_TH_NAME: Name
+    MODULAR_DOWNLOADS_TH_SIZE: Size
+    MODULAR_DOWNLOADS_TH_MODIFIED: Modified
+    MODULAR_DOWNLOADS_TH_DOWNLOAD: Download
+    MODULAR_DOWNLOADS_TD_BUTTON: Download
+    MODULAR_FEATURES_TITLE: Title
+    BLOG_TAB: Blog
+    BLOG_ROUTE: Blog Route
+    BLOG_ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
+    BLOG_CONFIGURATION: Configuration
+    BLOG_ITEMS_LIMIT: Max Item Count
+    BLOG_ITEMS_ORDER_BY_DATE: Date
+    BLOG_ITEMS_ORDER_BY_TITLE: Title
+    BLOG_ITEMS_ORDER_BY_FOLDER: Folder
+    BLOG_ITEMS_ORDER_BY_DEFAULT: Default
+    BLOG_ITEMS_DIR: Order
+    BLOG_ITEMS_DIR_ASC: Ascending
+    BLOG_ITEMS_DIR_DESC: Descending
+    BLOG_ITEMS_ORDER_BY_LABEL: Order By
+    BLOG_SHOW_BREADCRUMBS: Show Breadcrumbs
+    BLOG_URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+    BLOG_READMORE_TEXT: Readmore button text
+    BLOG_READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
+    BLOG_ITEMS_LABEL: Items
+    ITEM_TAB: Blog Item
+    ITEM_OPTIONS: Options
+    ITEM_SUMMARY_ENABLED: Enabled Summary
+    ITEM_SUMMARY_FORMAT: Summary Format
+    ITEM_SUMMARY_FORMAT_SHORT: Use the first occurence of delimter or size
+    ITEM_SUMMARY_FORMAT_LONG: Summary delimiter will be ignored
+    ITEM_SUMMARY_SIZE: Size
+    ITEM_SUMMARY_DELIMITER: Summary Delimiter
+    ITEM_SHAREICONS_FACEBOOK: Facebook
+    ITEM_SHAREICONS_TWITTER: Twitter
+    ITEM_SHAREICONS_WHATSAPP: WhatsApp
+    ITEM_SHAREICONS_TELEGRAM: Telegram
+    ITEM_SUMMARY_TITLE: Summary Item
+    ITEM_SHAREICONS_TITLE: Share icons
+    GALLERY_TAB: Gallery
+    GALLERY_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
+    GALLERY_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
+    GALLERY_THUMB_WIDTH: Thumbnail Width
+    GALLERY_THUMB_WIDTH_HELP: Set width for thumbnails
+    GALLERY_THUMB_HEIGHT: Thumbnail Height
+    GALLERY_THUMB_HEIGHT_HELP: Set height for thumbnails
+    GALLERY_IMAGES_IMAGE: Image
+    GALLERY_IMAGES_IMAGE_TITLE: Title
+    GALLERY_IMAGES_IMAGE_DESCRIPTION: Description
+    GALLERY_IMAGES_DESCPOSITION_BOTTOM: Bottom
+    GALLERY_IMAGES_DESCPOSITION_TOP: Top
+    GALLERY_IMAGES_DESCPOSITION_LEFT: Left
+    GALLERY_IMAGES_DESCPOSITION_RIGHT: Right
+    GALLERY_IMAGES_IMAGE_THUMB: Thumbnail
+    GALLERY_IMAGES_DESCPOSITION_LABEL: Description position
+    GALLERY_IMAGES_DESCPOSITION_HELP: Global position for slides description, you can define a specific position on each slide (bottom, top, left, right)
+    GALLERY_VIDEO_TITLE: Video Gallery
+    GALLERY_VIDEO_WIDTH: Video Width
+    GALLERY_VIDEO_WIDTH_HELP: Default width for videos. Videos are responsive so height is not required. The width can be in px % or even vw for example, 500px, 90% or 100vw for full width videos
+    GALLERY_VIDEO_AUTOFOCUS: Autofocus
+    GALLERY_VIDEO_AUTOFOCUS_HELP: If true video will be focused on play to allow keyboard sortcuts for the player, this will deactivate prev and next arrows to change slide so use it only if you know what you are doing
+    GALLERY_VIDEO_AUTOPLAY: Autoplay
+    GALLERY_VIDEO_AUTOPLAY_HELP: Autoplay videos on open
+    GALLERY_VIDEOS_SOURCE: Video Source
+    GALLERY_VIDEOS_SOURCE_DESCRIPTION: Select the video source type
+    GALLERY_VIDEOS_SOURCE_OPTIONS_REMOTE: Remote Video
+    GALLERY_VIDEOS_SOURCE_OPTIONS_LOCAL: Local Video
+    GALLERY_VIDEOS_REMOTE_VIDEO: Remote Video URL
+    GALLERY_VIDEOS_REMOTE_VIDEO_DESCRIPTION: URL from YouTube, Vimeo, or other external service
+    GALLERY_VIDEOS_REMOTE_THUMBNAIL: Remote Thumbnail
+    GALLERY_VIDEOS_REMOTE_THUMBNAIL_DESCRIPTION: Thumbnail URL image for gallery
+    GALLERY_VIDEOS_LOCAL_VIDEO: Local Video
+    GALLERY_VIDEOS_LOCAL_THUMBNAIL: Local Thumbnail
+    GALLERY_VIDEOS_LOCAL_THUMBNAIL_DESCRIPTION: Thumbnail image for gallery
+    GALLERY_VIDEOS_DESCRIPTION: Video Description
+    GALLERY_OPTIONS_TAB: Gallery Settings
+    GALLERY_OPTIONS_EFFECTS_TITLE: Appearance & Effects
+    GALLERY_OPTIONS_ACTIONS_TITLE: Actions
+    GALLERY_OPTIONS_STYLING_TITLE: Styling
+    GALLERY_OPTIONS_BEHAVIOR_TITLE: Behaviors
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_BOTTOM: Fade in bottom
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_TOP: Fade in top
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_LEFT: Fade in left
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_RIGHT: Fade in right
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_TOP_RIGHT: Fade in top right
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_TOP_LEFT: Fade in top left
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_BOTTOM_RIGHT: Fade in bottom right
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_BOTTOM_LEFT: Fade in bottom left
+    GALLERY_OPTIONS_OPEN_EFFECT_ZOOM: Zoom
+    GALLERY_OPTIONS_OPEN_EFFECT_FADE: Fade
+    GALLERY_OPTIONS_OPEN_EFFECT_NONE: None
+    GALLERY_OPTIONS_CLOSE_EFFECT_ZOOM: Zoom
+    GALLERY_OPTIONS_CLOSE_EFFECT_FADE: Fade
+    GALLERY_OPTIONS_CLOSE_EFFECT_NONE: None
+    GALLERY_OPTIONS_SLIDE_EFFECT_SLIDE: Slide
+    GALLERY_OPTIONS_SLIDE_EFFECT_ZOOM: Zoom
+    GALLERY_OPTIONS_SLIDE_EFFECT_FADE: Fade
+    GALLERY_OPTIONS_SLIDE_EFFECT_NONE: None
+    GALLERY_OPTIONS_MORE_TEXT: More Text
+    GALLERY_OPTIONS_MORE_TEXT_HELP: More text for descriptions on mobile devices.
+    GALLERY_OPTIONS_MORE_LENGTH: More Length
+    GALLERY_OPTIONS_MORE_LENGTH_HELP: Number of characters to display on the description before adding the moreText link (only for mobiles), if 0 it will display the entire description.
+    GALLERY_OPTIONS_CLOSE_BUTTON: Close Button
+    GALLERY_OPTIONS_CLOSE_BUTTON_HELP: Show or hide the close button
+    GALLERY_OPTIONS_TOUCH_NAVIGATION: Touch Navigation
+    GALLERY_OPTIONS_TOUCH_NAVIGATION_HELP: Enable or disable the touch navigation (swipe)
+    GALLERY_OPTIONS_TOUCH_AXIS: Touch Follow Axis
+    GALLERY_OPTIONS_TOUCH_AXIS_HELP: Image follow axis when dragging on mobile.
+    GALLERY_OPTIONS_KEYBOARD: Keyboard Navigation
+    GALLERY_OPTIONS_KEYBOARD_HELP: Enable or disable the keyboard navigation
+    GALLERY_OPTIONS_CLOSE_OUTSIDE: Close with Outside Click
+    GALLERY_OPTIONS_CLOSE_OUTSIDE_HELP: Close the lightbox when clicking outside the active slide.
+    GALLERY_OPTIONS_MORE_STARTAT: 'Start At:'
+    GALLERY_OPTIONS_MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide). If it is not defined, the clicked image is shown
+    GALLERY_OPTIONS_WIDTH: Width
+    GALLERY_OPTIONS_WIDTH_HELP: Default width for inline elements and iframes, you can define a specific size on each slide. You can use any unit for example 90% or 100vw for full width
+    GALLERY_OPTIONS_HEIGHT: Height
+    GALLERY_OPTIONS_HEIGHT_HELP: Default height for inline elements and iframes, you can define a specific size on each slide.You can use any unit for example 90% or 100vh For inline elements you can set the height to auto
+    GALLERY_OPTIONS_LOOP: Loop
+    GALLERY_OPTIONS_LOOP_HELP: Loop slides on end
+    GALLERY_OPTIONS_ZOOMABLE: Zoomable
+    GALLERY_OPTIONS_ZOOMABLE_HELP: Enable or disable zoomable images you can also use `data-zoomable="false"` on individual nodes.
+    GALLERY_OPTIONS_DRAGGABLE: Draggable
+    GALLERY_OPTIONS_DRAGGABLE_HELP: Enable or disable mouse drag to go prev and next slide (only images and inline content), you can also use `data-draggable="false"` on individual nodes.
+    GALLERY_OPTIONS_DRAGGABLE_X: Drag Tolerance X
+    GALLERY_OPTIONS_DRAGGABLE_X_HELP: Used with draggable. Number of pixels the user has to drag to go to prev or next slide.
+    GALLERY_OPTIONS_DRAGGABLE_Y: Drag Tolerance Y
+    GALLERY_OPTIONS_DRAGGABLE_Y_HELP: Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag).
+    GALLERY_OPTIONS_DRAG_AUTO_SNAP: Drag Auto-Snap
+    GALLERY_OPTIONS_DRAG_AUTO_SNAP_HELP: If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released.
+    GALLERY_OPTIONS_PRELOAD: Preload
+    GALLERY_OPTIONS_PRELOAD_HELP: Enable or disable preloading.
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_LABEL: Overlay effect on hover
+    GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_HELP: Set the hover effect when the mouse is over an image
+    GALLERY_OPTIONS_OPEN_EFFECT_LABEL: Open Effect
+    GALLERY_OPTIONS_CLOSE_EFFECT_LABEL: Close Effect
+    GALLERY_OPTIONS_SLIDE_EFFECT_LABEL: Slide Effect
+    GALLERY_LAYOUT_LABEL: Layout
+    GALLERY_IMAGES_LABEL: Images
+    GALLERY_VIDEOS_LABEL: Videos
+    GALLERY_VIDEOS_TITLE: Video Title
+    DEFAULT_HEADINGS_SECTION: Headings options
+    DEFAULT_SHOW_TITLE: Show Title
+    DEFAULT_SHOW_TITLE_HELP: Show or hide the page title
+    DEFAULT_HEADER_SUBTITLE: Subtitle
+    DEFAULT_PAGE_INDEX: Page Index
+    DEFAULT_PAGE_INDEX_HELP: If enabled, child pages will be displayed as if they were a table of contents
+    DEFAULT_CONTENT_SECTION: Content options
+    DEFAULT_FEATURED_IMAGE_LABEL: Featured image
+    DEFAULT_FEATURED_IMAGE_HELP: Select a featured image to display at the top of the page
+    DEFAULT_IMAGE_OPTIONS: Image options
+    DEFAULT_FEATURED_IMAGE_WIDTH: Width
+    DEFAULT_FEATURED_IMAGE_HEIGHT: Height
+    DEFAULT_SHOW_PAGEIMAGE: Show Image
+    DEFAULT_SHOW_PAGEIMAGE_HELP: Show featured image if it is defined or the first image of the media page.
+    DEFAULT_SEO_TAB: SEO & Social Settings
+    DEFAULT_SEO_SECTION_TITLE: Social Media Options
+    DEFAULT_SEO_ROBOTS_HELP: Instructions for search engines about indexing and following. This page setting overrides the global configuration.
+    DEFAULT_SEO_TWITTER_CREATOR: Twitter username
+    DEFAULT_SEO_TWITTER_CREATOR_HELP: Your Twitter handle (without @)
+    DEFAULT_SEO_TWITTER_CREATOR_VALIDATE: 'Valid Twitter handle: 1-15 letters, numbers or _'
+    DEFAULT_SEO_IMAGE: Social Share Image
+    DEFAULT_SEO_IMAGE_HELP: Select an image to be used in social media shares. If no image is selected, the page's featured image will be used.
+    BLOG_TITLE: Content Definition
+    BLOG_PAGINATION_LABEL: Pagination
+    GALLERY_TITLE: Image Gallery
+  SIDEBAR:
+    MENU_TITLE: Menu
+    LANGSWITCHER: Choose language
+    CONTACT_INFO: Get in touch
+    FEATURED_POSTS: Featured Posts
+    FEATURED_MORE: More featured posts
+    NO_FEATURED: No featured posts
+    BLOG_CATEGORIES: Blog Categories
+    LOGIN_SECTION: Login
+    LOGGUED_AS: 'Logged as: '
+    RELATEDPAGES_SECTION: Related pages
+    ARCHIVES_SECTION: Archives
+    RANDOM_ARTICLE:
+      LABEL: Random Article
+      BUTTON: I'm Feeling Lucky!
+    SYNDICATE:
+      LABEL: Syndicate
+    TAXONOMYLIST:
+      LABEL: Popular Tags
+  DEFAULT:
+    PAGE_INDEX_TITLE: Page content
+  BLOG:
+    LISTING_TITLE_CATEGORY: 'Posts in Category: '
+    LISTING_TITLE_TAG: 'Posts with Tag: '
+    LISTING_TITLE_AUTHOR: 'Posts written by Author: '
+    LISTING_TITLE_MONTH: 'Post of the month: '
+    PAGINATION:
+      PREV: Previous
+      NEXT: Next
+  ITEM:
+    POSTED_ON: Posted on
+    SEE_OTHER_POSTS_OF: See other posts by
+    SEE_OTHER_POSTS_IN: See other posts in
+  FORM_SUMMARY: Here is the summary of what you wrote to us
+  MISC:
+    SHARE_ON: Share on
+    IN: in
+    BACK_TO_TOP: Back to top
+ICU:
+  EDITORIAL:
     ADMIN:
-      THEME:
-        THEME_CONFIG_FIELDSET: Theme Config
-        DROPDOWN_MENU: Dropdown in navbar
-        PRODUCTION_MODE: Production mode
-        PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
-        SIDEBAR_OPEN: Open sidebar
-        SIDEBAR_OPEN_HELP: Set if the sidebar is open or closed at startup
-        RIGHT_SIDEBAR: Sidebar on the right
-        RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
-        GOOGLE_FONTS:
-          LOCAL: Use locally hosted Google Fonts
-        HEADER_FIELDSET: Header Section
-        HEADER_SETTINGS: Header Options
-        FAVICON: Choose your own favicon
-        FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
-        SLOGAN: Theme Slogan
-        SLOGAN_HELP: Use this to add a text snippet to the sitename.
-        CUSTOM_LOGO:
-          ENABLED: Enabled Logo
-          SECTION: Custom Logo Section
-          WIDTH: Custom Logo Width
-          LOGO: Custom Logo
-          DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
-          MOBILE: Mobile Custom Logo
-        CUSTOM_CSS: Load Custom CSS
-        CUSTOM_CSS_HELP: Load custom CSS styles from theme://assets/css/custom.css
-        CUSTOM_JS: Load Custom JS
-        CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
-        CONTACT:
-          FIELDSET: Contact Settings
-          TITLE: Contact Options
-          ENABLE: Enable Contact section
-          COPYRIGHT_TEXT: Copyright Text
-          COPYRIGHT_TEXT_HELP: Display custom copyright text in the footer, next to the site name.
-          INFORMATION_TITLE: Contact Information
-          INFORMATION_TEXT: Contact information is displayed in the sidebar area.
-          TEXT: Contact Information Text
-          EMAIL: Email
-          PHONE: Phone
-          ADDRESS:
-            SECTION: Address Information
-            STREET: Street Address
-            CITY: City
-            STATE: State
-            ZIP: Postal Code
-        SIDEBAR:
-            FIELDSET: Sidebar Settings
-            OPTIONS: Sidebar Options
-            WIDGETS_OPTIONS: Widgets Options
-            MENU_SECTION: Menu Items
-            OPEN_BY_DEFAULT: Open By Default
-            OPEN_BY_DEFAULT_HELP: Set if the sidebar is open or closed at startup
-            ON_RIGHT: Sidebar on the right
-            ON_RIGHT_HELP: If set to enabled the sidebar will appear on the right
-            LANGSWITCHER: Enable Langswitcher menu option
-            LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the sidebar menu.
-            SEARCH: Enable Search menu option
-            SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in sidebar menu.
-            LOGIN: Enable Login menu option
-            LOGIN_HELP: You can enable or disable Login icon in sidebar menu, to show login status.
-            SHOW_FEATURED: Show Featured Posts
-            SHOW_BLOG_CATEGORIES: Show Blog Categories
-            SHOW_TAXONOMY: Show Popular Tags
-            SHOW_TAXONOMY_HELP: 'Taxonomylist plugin must be installed'
-            SHOW_ARCHIVES: Show Archives
-            SHOW_ARCHIVES_HELP: 'Archives plugin must be installed'
-            SHOW_RELATED_PAGES: Show Related Pages
-            SHOW_RELATED_PAGES_HELP: 'Related pages plugin must be installed'
-            SHOW_FEEDS: Show Feeds
-            SHOW_FEEDS_HELP: 'Feeds plugin must be installed'
-            SHOW_RANDOM: Show Random Post
-            SHOW_RANDOM_HELP: 'Random plugin must be installed'
-            BLOG_CATEGORIES: Blog Categories
-        BLOG:
-          FIELDSET: Blog Settings
-          DEFAULTS: Blog Defaults
-          PAGE_LABEL: Blog Page
-          PAGE_HELP: The route to the blog page when working with blog sidebar
-          CATEGORIES_ENABLED: Show Blog Categories
-          CATEGORIES_ENABLED_HELP: Display blog categories with post count in the sidebar
-          CATEGORIES_SCOPE: Categories Scope
-          CATEGORIES_SCOPE_HELP: Choose where to display blog categories
-          CATEGORIES_SCOPE_BLOG_ONLY: Blog pages only
-          CATEGORIES_SCOPE_ALL_BLOGS: All blogs on all pages
-          LISTING_TITLE:
-            TAXONOMY:
-              CATEGORY: Set Title to filter posts by Category
-              TAG: Set Title to filter posts by Tag
-              AUTHOR: Set Title to filter posts by Author
-            BLOG: Set Title for blog without filter
-        FEATURED:
-          SECTION: Featured Section
-          LABEL: Enable Featured posts in Sidebar
-          NUMBER: Featured posts number to show
-          NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
-          CATEGORY: Featured Tag
-          CATEGORY_DESCRIPTION: Set name to featured tag.<br />`You must include this name in Options->Taxonomy->Tag`
-          ORDER: "Order by"
-          ORDER_DESCRIPTION: "Field to sort featured posts by"
-          ORDER_DATE: "Creation date"
-          ORDER_PUBLISH_DATE: "Publication date"
-          ORDER_MODIFIED: "Modified date"
-          ORDER_TITLE: "Title"
-          ORDER_FOLDER: "Folder name"
-          DIRECTION: "Sort direction"
-          DIRECTION_DESCRIPTION: "Ascending or descending order"
-          DIRECTION_DESC: "Descending"
-          DIRECTION_ASC: "Ascending"
-        SOCIAL:
-          FIELDSET: Social Media Settings
-          TEXT: Include full url's to your various social media presences.  An icon/ link will appear at the top of the page for each respective platform.
-          ENABLED: Enable Social Icons
-          ICONS: Social Icons
-          NAME: Social Name
-          URL: URL Link to Social
-          TARGET:
-            LABEL: Target
-            BLANK: 'Open in a new window'
-            PARENT: 'Open in the parent frame'
-            SELF: 'Open in the same frame as clicked'
-            TOP: 'Open in the full body of the window'
-          ICON: Icon to Social
-          ICON_HELP: 'Enter the FontAwesome icon class (e.g., facebook, twitter, linkedin, mastodon). Prefix "fa-" is optional and will be added automatically.'
-          ICON_TYPE: Icon Type
-        CUSTOM_MENU:
-          FIELDSET: Custom Menu Settings
-          TITLE: 'Custom Menu Items'
-          ENABLE: 'Display Custom Menu Items'
-          ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
-          LABEL: 'Menu Items'
-          ITEM:
-            TEXT: 'Text'
-            TEXT_DESCRIPTION: 'Text label for menu item.'
-            ICON: 'Icon'
-            ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
-            URL: 'URL'
-            URL_DESCRIPTION: 'URL for menu item.'
-            TARGET:
-              LABEL: 'Target'
-              BLANK: 'Open in a new window'
-              PARENT: 'Open in the parent frame'
-              SELF: 'Open in the same frame as clicked'
-              TOP: 'Open in the full body of the window'
-        SEO:
-          FIELDSET: "SEO Settings"
-          ENABLED: "Enable SEO"
-          ENABLED_HELP: "Enable or disable all SEO functionality. Disable if using an SEO plugin"
-          JSON_LD_ENABLED: "Structured JSON-LD"
-          JSON_LD_ENABLED_HELP: "Generate JSON-LD structured data for rich snippets"
-          GENERAL_OPTIONS: "General SEO Options"
-          ROBOTS: "Robots directives"
-          ROBOTS_HELP: "Instructions for search engines about indexing and following"
-          ROBOTS_INDEX_FOLLOW: "Index, Follow"
-          ROBOTS_NOINDEX_FOLLOW: "No Index, Follow"
-          ROBOTS_INDEX_NOFOLLOW: "Index, No Follow"
-          ROBOTS_NOINDEX_NOFOLLOW: "No Index, No Follow"
-          DESCRIPTION_SECTION: "Description Options"
-          DESCRIPTION_LENGTH: "Description length"
-          DESCRIPTION_LENGTH_HELP: "Maximum number of words in description meta tag"
-          DESCRIPTION_FALLBACK: "Description fallback"
-          DESCRIPTION_FALLBACK_HELP: "Use content summary when description is not available"
-          DESCRIPTION_SUMMARIZATION: "Description summarization"
-          DESCRIPTION_SUMMARIZATION_HELP: "Method used to generate descriptions from content"
-          SUMMARIZATION_SIMPLE: "Simple truncation"
-          SUMMARIZATION_SMART: "Smart summarization"
-          TWITTER_SECTION: "Twitter Card Options"
-          TWITTER_ENABLED: "Enable Twitter Cards"
-          TWITTER_ENABLED_HELP: "Generate Twitter Card meta tags"
-          TWITTER_SITE: "Twitter site username"
-          TWITTER_SITE_HELP: "Your website's Twitter handle (without @)"
-          TWITTER_SITE_VALIDATE: "Valid Twitter handle: 1-15 letters, numbers or _"
-          TWITTER_CARD_TYPE: "Twitter Card type"
-          TWITTER_CARD_TYPE_HELP: "Type of Twitter Card to generate"
-          TWITTER_CARD_SUMMARY_LARGE: "Summary Large Image"
-          TWITTER_CARD_SUMMARY: "Summary"
-          TWITTER_CARD_APP: "App"
-          TWITTER_CARD_PLAYER: "Player"
-          FACEBOOK_SECTION: "Facebook Open Graph Options"
-          FACEBOOK_ENABLED: "Enable Open Graph"
-          FACEBOOK_ENABLED_HELP: "Generate Facebook Open Graph meta tags"
-          FACEBOOK_APP_ID: "Facebook App ID"
-          FACEBOOK_APP_ID_HELP: "Your Facebook Application ID"
-      MODULAR:
-        SHOW_ONPAGE_MENU: Show navigation on one-page sites
-        SHOW_ONPAGE_MENU_HELP: On single-page sites, it adds smooth scrolling on click navigation and automatically selects the correct navigation elements as you scroll through different sections.
-        BANNER:
-          SECTION: Banner Options
-          BUTTON_TEXT: Button Text
-          BUTTON_URL: Button URL
-          TITLE_HTAG: Title HTML Tag
-          TITLE_HTAG_HELP: Select the HTML tag to be used for the banner title
-        TEXT_BLOCKS:
-          TAB: Text Blocks
-          CONFIG_TAB: Text Blocks Options
-          SECTION: Text Blocks Options
-          LAYOUT:
-            LABEL: Layout
-            ONE: One column
-            TWO: Two columns
-            THREE: Three columns
-          ITEMS: Text blocks
-          ITEM_TITLE: Box title
-          ITEM_CONTENT: Content
-          ITEM_CONTENT_HELP: Supports markdown.
-          ITEM_BOX: Box style
-          BOX:
-            NONE: No box
-            DEFAULT: Default
-            PRIMARY: Primary
-            SECONDARY: Secondary
-            SUCCESS: Success
-            INFO: Info
-            WARNING: Warning
-            DANGER: Danger
-            LIGHT: Light
-        FEATURES:
-          TAB: Features
-          ICON: Icon
-          ICON_DESCRIPTION: Select the code of Fontawesome Icons free version (https://fontawesome.com/icons?m=free)
-          TITLE: Title
-          TEXT: Text
-          TEXT_HELP: Short description for each feature. Support markdown.
-          BUTTON_URL: Button URL
-          BUTTON_URL_TARGET: Open URL in a new window
-        RECENT_POSTS:
-          TAB: Recent Posts Config
-          LAYOUT:
-            LABEL: Layout
-            TWO_COLS: Medium   = 2 / 1 columns
-            THREE_COLS: Standard  = 3 / 2 / 1 columns
-          LIMIT: Limit
-          LIMIT_HELP: Maximum number of posts to display.
-          READMORE_TEXT: Readmore button text
-          READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
-        TEAM:
-          TAB: Team
-          TEAM_LAYOUT: Layout
-          TEAM_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
-          TEAM_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
-          IMAGE: Profile image
-          IMAGE_HELP: Select a profile image
-          NAME: Name
-          POSITION: Position
-          DETAILS: Profile details
-          DETAILS_HELP: Brief profile description
-          SOCIAL_MEDIA:
-            LABEL: Social media
-            HELP: The template allows a maximum of 6 icons for each member.
-            NAME: Social name
-            NAME_HELP: You only have to write the name of the social network here (eg, Facebook, Twitter, etc)
-            URL: Social URL
-        DOWNLOADS:
-          TH_NAME: Name
-          TH_SIZE: Size
-          TH_MODIFIED: Modified
-          TH_DOWNLOAD: Download
-          TD_BUTTON: Download
-      BLOG:
-        TAB: Blog Config
-        ROUTE: Blog Route
-        ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
-        CONFIGURATION: Configuration
-        TITLE: Content Definition
-        ITEMS:
-          LABEL: Items
-          LIMIT: Max Item Count
-          ORDER_BY:
-            LABEL: Order By
-            DATE: Date
-            TITLE: Title
-            FOLDER: Folder
-            DEFAULT: Default
-          DIR: Order
-          DIR_ASC: Ascending
-          DIR_DESC: Descending
-        SHOW_BREADCRUMBS: Show Breadcrumbs
-        PAGINATION:
-          LABEL: Pagination
-        URL_TAXONOMY_FILTERS: URL Taxonomy Filters
-        READMORE_TEXT: Readmore button text
-        READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
-      ITEM:
-        TAB: Blog Item
-        OPTIONS: Options
-        SUMMARY:
-          TITLE: Summary Item
-          ENABLED: Enabled Summary
-          FORMAT: Summary Format
-          FORMAT_SHORT: Use the first occurence of delimter or size
-          FORMAT_LONG: Summary delimiter will be ignored
-          SIZE: Size
-          DELIMITER: Summary Delimiter
-        SHAREICONS:
-          TITLE: Share icons
-          FACEBOOK: Facebook
-          TWITTER: Twitter
-          WHATSAPP: WhatsApp
-          TELEGRAM: Telegram
-      GALLERY:
-        TAB: Gallery
-        TITLE: Image Gallery
-        LAYOUT:
-          LABEL: Layout
-          TWOCOLS: Medium   = 2 / 1 columns
-          THREECOLS: Standard  = 3 / 2 / 1 columns
-        THUMB_WIDTH: Thumbnail Width
-        THUMB_WIDTH_HELP: Set width for thumbnails
-        THUMB_HEIGHT: Thumbnail Height
-        THUMB_HEIGHT_HELP: Set height for thumbnails
-        IMAGES:
-          LABEL: Images
-          IMAGE: Image
-          IMAGE_TITLE: Title
-          IMAGE_DESCRIPTION: Description
-          DESCPOSITION:
-            LABEL: Description position
-            HELP: Global position for slides description, you can define a specific position on each slide (bottom, top, left, right)
-            BOTTOM: Bottom
-            TOP: Top
-            LEFT: Left
-            RIGHT: Right
-          IMAGE_THUMB: Thumbnail
-        VIDEO_TITLE: Video Gallery
-        VIDEO_WIDTH: Video Width
-        VIDEO_WIDTH_HELP: 'Default width for videos. Videos are responsive so height is not required. The width can be in px % or even vw for example, 500px, 90% or 100vw for full width videos'
-        VIDEO_AUTOFOCUS: Autofocus
-        VIDEO_AUTOFOCUS_HELP: If true video will be focused on play to allow keyboard sortcuts for the player, this will deactivate prev and next arrows to change slide so use it only if you know what you are doing
-        VIDEO_AUTOPLAY: Autoplay
-        VIDEO_AUTOPLAY_HELP: Autoplay videos on open
-        VIDEOS:
-          LABEL: Videos
-          SOURCE: Video Source
-          SOURCE_DESCRIPTION: Select the video source type
-          SOURCE_OPTIONS:
-            REMOTE: Remote Video
-            LOCAL: Local Video
-          REMOTE_VIDEO: Remote Video URL
-          REMOTE_VIDEO_DESCRIPTION: URL from YouTube, Vimeo, or other external service
-          REMOTE_THUMBNAIL: Remote Thumbnail
-          REMOTE_THUMBNAIL_DESCRIPTION: Thumbnail URL image for gallery
-          LOCAL_VIDEO: Local Video
-          LOCAL_THUMBNAIL: Local Thumbnail
-          LOCAL_THUMBNAIL_DESCRIPTION: Thumbnail image for gallery
-          TITLE: Video Title
-          DESCRIPTION: Video Description
-        OPTIONS:
-          TAB: Gallery Options
-          EFFECTS_TITLE: Appearance & Effects
-          ACTIONS_TITLE: Actions
-          STYLING_TITLE: Styling
-          BEHAVIOR_TITLE: Behaviors
-          OVERLAY_HOVER_EFFECT:
-            LABEL: Overlay effect on hover
-            HELP: Set the hover effect when the mouse is over an image
-            FADEIN_BOTTOM: Fade in bottom
-            FADEIN_TOP: Fade in top
-            FADEIN_LEFT: Fade in left
-            FADEIN_RIGHT: Fade in right
-            FADEIN_TOP_RIGHT: Fade in top right
-            FADEIN_TOP_LEFT: Fade in top left
-            FADEIN_BOTTOM_RIGHT: Fade in bottom right
-            FADEIN_BOTTOM_LEFT: Fade in bottom left
-          OPEN_EFFECT:
-            LABEL: Open Effect
-            ZOOM: Zoom
-            FADE: Fade
-            NONE: None
-          CLOSE_EFFECT:
-            LABEL: Close Effect
-            ZOOM: Zoom
-            FADE: Fade
-            NONE: None
-          SLIDE_EFFECT:
-            LABEL: Slide Effect
-            SLIDE: Slide
-            ZOOM: Zoom
-            FADE: Fade
-            NONE: None
-          MORE_TEXT: More Text
-          MORE_TEXT_HELP: More text for descriptions on mobile devices.
-          MORE_LENGTH: More Length
-          MORE_LENGTH_HELP: Number of characters to display on the description before adding the moreText link (only for mobiles), if 0 it will display the entire description.
-          CLOSE_BUTTON: Close Button
-          CLOSE_BUTTON_HELP: Show or hide the close button
-          TOUCH_NAVIGATION: Touch Navigation
-          TOUCH_NAVIGATION_HELP: Enable or disable the touch navigation (swipe)
-          TOUCH_AXIS: Touch Follow Axis
-          TOUCH_AXIS_HELP: Image follow axis when dragging on mobile.
-          KEYBOARD: Keyboard Navigation
-          KEYBOARD_HELP: Enable or disable the keyboard navigation
-          CLOSE_OUTSIDE: Close with Outside Click
-          CLOSE_OUTSIDE_HELP: Close the lightbox when clicking outside the active slide.
-          MORE_STARTAT: 'Start At:'
-          MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide). If it is not defined, the clicked image is shown
-          WIDTH: Width
-          WIDTH_HELP: 'Default width for inline elements and iframes, you can define a specific size on each slide. You can use any unit for example 90% or 100vw for full width'
-          HEIGHT: Height
-          HEIGHT_HELP: 'Default height for inline elements and iframes, you can define a specific size on each slide.You can use any unit for example 90% or 100vh For inline elements you can set the height to auto'
-          LOOP: Loop
-          LOOP_HELP: Loop slides on end
-          ZOOMABLE: Zoomable
-          ZOOMABLE_HELP: Enable or disable zoomable images you can also use `data-zoomable="false"` on individual nodes.
-          DRAGGABLE: Draggable
-          DRAGGABLE_HELP: Enable or disable mouse drag to go prev and next slide (only images and inline content), you can also use `data-draggable="false"` on individual nodes.
-          DRAGGABLE_X: Drag Tolerance X
-          DRAGGABLE_X_HELP: Used with draggable. Number of pixels the user has to drag to go to prev or next slide.
-          DRAGGABLE_Y: Drag Tolerance Y
-          DRAGGABLE_Y_HELP: Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag).
-          DRAG_AUTO_SNAP: Drag Auto-Snap
-          DRAG_AUTO_SNAP_HELP: If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released.
-          PRELOAD: Preload
-          PRELOAD_HELP: Enable or disable preloading.
-      DEFAULT:
-        HEADINGS_SECTION: Headings options
-        SHOW_TITLE: Show Title
-        SHOW_TITLE_HELP: Show or hide the page title
-        HEADER_SUBTITLE: Subtitle
-        PAGE_INDEX: Page Index
-        PAGE_INDEX_HELP: If enabled, child pages will be displayed as if they were a table of contents
-        CONTENT_SECTION: Content options
-        FEATURED_IMAGE_LABEL: Featured Image
-        FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image
-        IMAGE_OPTIONS: Image options
-        FEATURED_IMAGE:
-          LABEL: Featured image
-          HELP: Select a featured image to display at the top of the page
-          WIDTH: Width
-          HEIGHT: Height
-        SHOW_PAGEIMAGE: Show Image
-        SHOW_PAGEIMAGE_HELP: Show featured image if it is defined or the first image of the media page.
-        SEO:
-          TAB: "SEO and Social"
-          SECTION_TITLE: "Social Media Options"
-          ROBOTS_HELP: "Instructions for search engines about indexing and following. This page setting overrides the global configuration."
-          TWITTER_CREATOR: "Twitter username"
-          TWITTER_CREATOR_HELP: "Your Twitter handle (without @)"
-          TWITTER_CREATOR_VALIDATE: "Valid Twitter handle: 1-15 letters, numbers or _"
-          IMAGE: "Social Share Image"
-          IMAGE_HELP: "Select an image to be used in social media shares. If no image is selected, the page's featured image will be used."
+      THEME_GLOBAL_SETTING: Global Setting
+      THEME_DROPDOWN_MENU: Dropdown in navbar
+      THEME_PRODUCTION_MODE: Production mode
+      THEME_PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
+      THEME_SIDEBAR_OPEN: Open sidebar
+      THEME_SIDEBAR_OPEN_HELP: Set if the sidebar is open or closed at startup
+      THEME_RIGHT_SIDEBAR: Sidebar on the right
+      THEME_RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
+      THEME_GOOGLE_FONTS_LOCAL: Use locally hosted Google Fonts
+      THEME_HEADER_SETTING: Header Setting
+      THEME_HEADER_SECTION: Header Options
+      THEME_FAVICON: Choose your own favicon
+      THEME_FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
+      THEME_SLOGAN: Theme Slogan
+      THEME_SLOGAN_HELP: Use this to add a text snippet to the sitename.
+      THEME_CUSTOM_LOGO_ENABLED: Enabled Logo
+      THEME_CUSTOM_LOGO_SECTION: Custom Logo Section
+      THEME_CUSTOM_LOGO_WIDTH: Custom Logo Width
+      THEME_CUSTOM_LOGO_LOGO: Custom Logo
+      THEME_CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
+      THEME_CUSTOM_LOGO_MOBILE: Mobile Custom Logo
+      THEME_CUSTOM_CSS: Load Custom CSS
+      THEME_CUSTOM_CSS_HELP: Load custom CSS styles from theme://assets/css/custom.css
+      THEME_CUSTOM_JS: Load Custom JS
+      THEME_CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
+      THEME_CONTACT_TITLE: Contact Options
+      THEME_CONTACT_ENABLE: Enable Contact section
+      THEME_CONTACT_COPYRIGHT_TEXT: Copyright Text
+      THEME_CONTACT_COPYRIGHT_TEXT_HELP: Display custom copyright text in the footer, next to the site name.
+      THEME_CONTACT_INFORMATION_TITLE: Contact Information
+      THEME_CONTACT_INFORMATION_TEXT: Contact information is displayed in the sidebar area.
+      THEME_CONTACT_TEXT: Contact Information Text
+      THEME_CONTACT_EMAIL: Email
+      THEME_CONTACT_PHONE: Phone
+      THEME_CONTACT_ADDRESS_SECTION: Address Information
+      THEME_CONTACT_ADDRESS_STREET: Street Address
+      THEME_CONTACT_ADDRESS_CITY: City
+      THEME_CONTACT_ADDRESS_STATE: State
+      THEME_CONTACT_ADDRESS_ZIP: Postal Code
+      THEME_SIDEBAR_OPTIONS: Sidebar Options
+      THEME_SIDEBAR_WIDGETS_OPTIONS: Widgets Options
+      THEME_SIDEBAR_MENU_SECTION: Menu Items
+      THEME_SIDEBAR_OPEN_BY_DEFAULT: Open By Default
+      THEME_SIDEBAR_OPEN_BY_DEFAULT_HELP: Set if the sidebar is open or closed at startup
+      THEME_SIDEBAR_ON_RIGHT: Sidebar on the right
+      THEME_SIDEBAR_ON_RIGHT_HELP: If set to enabled the sidebar will appear on the right
+      THEME_SIDEBAR_LANGSWITCHER: Enable Langswitcher menu option
+      THEME_SIDEBAR_LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the sidebar menu.
+      THEME_SIDEBAR_SEARCH: Enable Search menu option
+      THEME_SIDEBAR_SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in sidebar menu.
+      THEME_SIDEBAR_LOGIN: Enable Login menu option
+      THEME_SIDEBAR_LOGIN_HELP: You can enable or disable Login icon in sidebar menu, to show login status.
+      THEME_SIDEBAR_SHOW_FEATURED: Show Featured Posts
+      THEME_SIDEBAR_SHOW_BLOG_CATEGORIES: Show Blog Categories
+      THEME_SIDEBAR_SHOW_TAXONOMY: Show Popular Tags
+      THEME_SIDEBAR_SHOW_TAXONOMY_HELP: Taxonomylist plugin must be installed
+      THEME_SIDEBAR_SHOW_ARCHIVES: Show Archives
+      THEME_SIDEBAR_SHOW_ARCHIVES_HELP: Archives plugin must be installed
+      THEME_SIDEBAR_SHOW_RELATED_PAGES: Show Related Pages
+      THEME_SIDEBAR_SHOW_RELATED_PAGES_HELP: Related pages plugin must be installed
+      THEME_SIDEBAR_SHOW_FEEDS: Show Feeds
+      THEME_SIDEBAR_SHOW_FEEDS_HELP: Feeds plugin must be installed
+      THEME_SIDEBAR_SHOW_RANDOM: Show Random Post
+      THEME_SIDEBAR_SHOW_RANDOM_HELP: Random plugin must be installed
+      THEME_SIDEBAR_BLOG_CATEGORIES: Blog Categories
+      THEME_BLOG_DEFAULTS: Blog Defaults
+      THEME_BLOG_PAGE_LABEL: Blog Page
+      THEME_BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
+      THEME_BLOG_CATEGORIES_ENABLED: Show Blog Categories
+      THEME_BLOG_CATEGORIES_ENABLED_HELP: Display blog categories with post count in the sidebar
+      THEME_BLOG_CATEGORIES_SCOPE: Categories Scope
+      THEME_BLOG_CATEGORIES_SCOPE_HELP: Choose where to display blog categories
+      THEME_BLOG_CATEGORIES_SCOPE_BLOG_ONLY: Blog pages only
+      THEME_BLOG_CATEGORIES_SCOPE_ALL_BLOGS: All blogs on all pages
+      THEME_BLOG_LISTING_TITLE_TAXONOMY_CATEGORY: Set Title to filter posts by Category
+      THEME_BLOG_LISTING_TITLE_TAXONOMY_TAG: Set Title to filter posts by Tag
+      THEME_BLOG_LISTING_TITLE_TAXONOMY_AUTHOR: Set Title to filter posts by Author
+      THEME_BLOG_LISTING_TITLE_BLOG: Set Title for blog without filter
+      THEME_FEATURED_SECTION: Featured Section
+      THEME_FEATURED_LABEL: Enable Featured posts in Sidebar
+      THEME_FEATURED_NUMBER: Featured posts number to show
+      THEME_FEATURED_NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
+      THEME_FEATURED_CATEGORY: Featured Tag
+      THEME_FEATURED_CATEGORY_DESCRIPTION: Set name to featured tag.<br />`You must include this name in Options->Taxonomy->Tag`
+      THEME_FEATURED_ORDER: Order by
+      THEME_FEATURED_ORDER_DESCRIPTION: Field to sort featured posts by
+      THEME_FEATURED_ORDER_DATE: Creation date
+      THEME_FEATURED_ORDER_PUBLISH_DATE: Publication date
+      THEME_FEATURED_ORDER_MODIFIED: Modified date
+      THEME_FEATURED_ORDER_TITLE: Title
+      THEME_FEATURED_ORDER_FOLDER: Folder name
+      THEME_FEATURED_DIRECTION: Sort direction
+      THEME_FEATURED_DIRECTION_DESCRIPTION: Ascending or descending order
+      THEME_FEATURED_DIRECTION_DESC: Descending
+      THEME_FEATURED_DIRECTION_ASC: Ascending
+      THEME_SOCIAL_TEXT: Include full url's to your various social media presences.  An icon/ link will appear at the top of the page for each respective platform.
+      THEME_SOCIAL_ENABLED: Enable Social Icons
+      THEME_SOCIAL_ICONS: Social Icons
+      THEME_SOCIAL_NAME: Social Name
+      THEME_SOCIAL_URL: URL Link to Social
+      THEME_SOCIAL_TARGET_BLANK: Open in a new window
+      THEME_SOCIAL_TARGET_PARENT: Open in the parent frame
+      THEME_SOCIAL_TARGET_SELF: Open in the same frame as clicked
+      THEME_SOCIAL_TARGET_TOP: Open in the full body of the window
+      THEME_SOCIAL_ICON: Icon to Social
+      THEME_SOCIAL_ICON_HELP: Enter the FontAwesome icon class (e.g., facebook, twitter, linkedin, mastodon). Prefix "fa-" is optional and will be added automatically.
+      THEME_SOCIAL_ICON_TYPE: Icon Type
+      THEME_SOCIAL_TARGET_LABEL: Target
+      THEME_CUSTOM_MENU_ENABLE: Display Custom Menu Items
+      THEME_CUSTOM_MENU_ENABLE_HELP: Determines if any defined custom menu entries are displayed in the menubar.
+      THEME_CUSTOM_MENU_ITEM_TEXT: Text
+      THEME_CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: Text label for menu item.
+      THEME_CUSTOM_MENU_ITEM_ICON: Icon
+      THEME_CUSTOM_MENU_ITEM_ICON_DESCRIPTION: Font Awesome icon for menu item.
+      THEME_CUSTOM_MENU_ITEM_URL: URL
+      THEME_CUSTOM_MENU_ITEM_URL_DESCRIPTION: URL for menu item.
+      THEME_CUSTOM_MENU_ITEM_TARGET_BLANK: Open in a new window
+      THEME_CUSTOM_MENU_ITEM_TARGET_PARENT: Open in the parent frame
+      THEME_CUSTOM_MENU_ITEM_TARGET_SELF: Open in the same frame as clicked
+      THEME_CUSTOM_MENU_ITEM_TARGET_TOP: Open in the full body of the window
+      THEME_CUSTOM_MENU_ITEM_TARGET_LABEL: Target
+      THEME_SEO_ENABLED: Enable SEO
+      THEME_SEO_ENABLED_HELP: Enable or disable all SEO functionality. Disable if using an SEO plugin
+      THEME_SEO_JSON_LD_ENABLED: Structured JSON-LD
+      THEME_SEO_JSON_LD_ENABLED_HELP: Generate JSON-LD structured data for rich snippets
+      THEME_SEO_GENERAL_OPTIONS: General SEO Options
+      THEME_SEO_ROBOTS: Robots directives
+      THEME_SEO_ROBOTS_HELP: Instructions for search engines about indexing and following
+      THEME_SEO_ROBOTS_INDEX_FOLLOW: Index, Follow
+      THEME_SEO_ROBOTS_NOINDEX_FOLLOW: No Index, Follow
+      THEME_SEO_ROBOTS_INDEX_NOFOLLOW: Index, No Follow
+      THEME_SEO_ROBOTS_NOINDEX_NOFOLLOW: No Index, No Follow
+      THEME_SEO_DESCRIPTION_SECTION: Description Options
+      THEME_SEO_DESCRIPTION_LENGTH: Description length
+      THEME_SEO_DESCRIPTION_LENGTH_HELP: Maximum number of words in description meta tag
+      THEME_SEO_DESCRIPTION_FALLBACK: Description fallback
+      THEME_SEO_DESCRIPTION_FALLBACK_HELP: Use content summary when description is not available
+      THEME_SEO_DESCRIPTION_SUMMARIZATION: Description summarization
+      THEME_SEO_DESCRIPTION_SUMMARIZATION_HELP: Method used to generate descriptions from content
+      THEME_SEO_SUMMARIZATION_SIMPLE: Simple truncation
+      THEME_SEO_SUMMARIZATION_SMART: Smart summarization
+      THEME_SEO_TWITTER_SECTION: Twitter Card Options
+      THEME_SEO_TWITTER_ENABLED: Enable Twitter Cards
+      THEME_SEO_TWITTER_ENABLED_HELP: Generate Twitter Card meta tags
+      THEME_SEO_TWITTER_SITE: Twitter site username
+      THEME_SEO_TWITTER_SITE_HELP: Your website's Twitter handle (without @)
+      THEME_SEO_TWITTER_SITE_VALIDATE: 'Valid Twitter handle: 1-15 letters, numbers or _'
+      THEME_SEO_TWITTER_CARD_TYPE: Twitter Card type
+      THEME_SEO_TWITTER_CARD_TYPE_HELP: Type of Twitter Card to generate
+      THEME_SEO_TWITTER_CARD_SUMMARY_LARGE: Summary Large Image
+      THEME_SEO_TWITTER_CARD_SUMMARY: Summary
+      THEME_SEO_TWITTER_CARD_APP: App
+      THEME_SEO_TWITTER_CARD_PLAYER: Player
+      THEME_SEO_FACEBOOK_SECTION: Facebook Open Graph Options
+      THEME_SEO_FACEBOOK_ENABLED: Enable Open Graph
+      THEME_SEO_FACEBOOK_ENABLED_HELP: Generate Facebook Open Graph meta tags
+      THEME_SEO_FACEBOOK_APP_ID: Facebook App ID
+      THEME_SEO_FACEBOOK_APP_ID_HELP: Your Facebook Application ID
+      THEME_CUSTOM_MENU_TITLE: Custom Menu Items
+      THEME_CUSTOM_MENU_LABEL: Menu Items
+      THEME_SIDEBAR_SETTING: Sidebar Setting
+      THEME_BLOG_SETTING: Blog Setting
+      THEME_CONTACT_SETTING: Contact Setting
+      THEME_SOCIAL_SETTING: Social Media Setting
+      THEME_CUSTOM_MENU_SETTING: Custom Menu Setting
+      THEME_SEO_SETTING: SEO Setting
+      MODULAR_SHOW_ONPAGE_MENU: Show navigation on one-page sites
+      MODULAR_SHOW_ONPAGE_MENU_HELP: On single-page sites, it adds smooth scrolling on click navigation and automatically selects the correct navigation elements as you scroll through different sections.
+      MODULAR_BANNER_SECTION: Banner Options
+      MODULAR_BANNER_BUTTON_TEXT: Button Text
+      MODULAR_BANNER_BUTTON_URL: Button URL
+      MODULAR_BANNER_TITLE_HTAG: Title HTML Tag
+      MODULAR_BANNER_TITLE_HTAG_HELP: Select the HTML tag to be used for the banner title
+      MODULAR_TEXT_BLOCKS_TAB: Text Blocks
+      MODULAR_TEXT_BLOCKS_CONFIG_TAB: Text Blocks Settings
+      MODULAR_TEXT_BLOCKS_SECTION: Text Blocks Settings
+      MODULAR_TEXT_BLOCKS_LAYOUT_ONE: One column
+      MODULAR_TEXT_BLOCKS_LAYOUT_TWO: Two columns
+      MODULAR_TEXT_BLOCKS_LAYOUT_THREE: Three columns
+      MODULAR_TEXT_BLOCKS_ITEMS: Text blocks
+      MODULAR_TEXT_BLOCKS_ITEM_TITLE: Box title
+      MODULAR_TEXT_BLOCKS_ITEM_CONTENT: Content
+      MODULAR_TEXT_BLOCKS_ITEM_CONTENT_HELP: Supports markdown.
+      MODULAR_TEXT_BLOCKS_ITEM_BOX: Box style
+      MODULAR_TEXT_BLOCKS_BOX_NONE: No box
+      MODULAR_TEXT_BLOCKS_BOX_DEFAULT: Default
+      MODULAR_TEXT_BLOCKS_BOX_PRIMARY: Primary
+      MODULAR_TEXT_BLOCKS_BOX_SECONDARY: Secondary
+      MODULAR_TEXT_BLOCKS_BOX_SUCCESS: Success
+      MODULAR_TEXT_BLOCKS_BOX_INFO: Info
+      MODULAR_TEXT_BLOCKS_BOX_WARNING: Warning
+      MODULAR_TEXT_BLOCKS_BOX_DANGER: Danger
+      MODULAR_TEXT_BLOCKS_BOX_LIGHT: Light
+      MODULAR_TEXT_BLOCKS_LAYOUT_LABEL: Layout
+      MODULAR_FEATURES_TAB: Features
+      MODULAR_FEATURES_ICON: Icon
+      MODULAR_FEATURES_ICON_DESCRIPTION: Select the code of Fontawesome Icons free version (https://fontawesome.com/icons?m=free)
+      MODULAR_FEATURES_TEXT: Text
+      MODULAR_FEATURES_TEXT_HELP: Short description for each feature. Support markdown.
+      MODULAR_FEATURES_BUTTON_URL: Button URL
+      MODULAR_FEATURES_BUTTON_URL_TARGET: Open URL in a new window
+      MODULAR_RECENT_POSTS_TAB: Recent Posts
+      MODULAR_RECENT_POSTS_LAYOUT_LABEL: Layout
+      MODULAR_RECENT_POSTS_LAYOUT_TWO_COLS: Medium   = 2 / 1 columns
+      MODULAR_RECENT_POSTS_LAYOUT_THREE_COLS: Standard  = 3 / 2 / 1 columns
+      MODULAR_RECENT_POSTS_LIMIT: Limit
+      MODULAR_RECENT_POSTS_LIMIT_HELP: Maximum number of posts to display.
+      MODULAR_RECENT_POSTS_READMORE_TEXT: Readmore button text
+      MODULAR_RECENT_POSTS_READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
+      MODULAR_TEAM_TAB: Team
+      MODULAR_TEAM_TEAM_LAYOUT: Layout
+      MODULAR_TEAM_TEAM_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
+      MODULAR_TEAM_TEAM_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
+      MODULAR_TEAM_IMAGE: Profile image
+      MODULAR_TEAM_IMAGE_HELP: Select a profile image
+      MODULAR_TEAM_NAME: Name
+      MODULAR_TEAM_POSITION: Position
+      MODULAR_TEAM_DETAILS: Profile details
+      MODULAR_TEAM_DETAILS_HELP: Brief profile description
+      MODULAR_TEAM_SOCIAL_MEDIA_NAME: Social name
+      MODULAR_TEAM_SOCIAL_MEDIA_NAME_HELP: You only have to write the name of the social network here (eg, Facebook, Twitter, etc)
+      MODULAR_TEAM_SOCIAL_MEDIA_URL: Social URL
+      MODULAR_TEAM_SOCIAL_MEDIA_LABEL: Social media
+      MODULAR_TEAM_SOCIAL_MEDIA_HELP: The template allows a maximum of 6 icons for each member.
+      MODULAR_DOWNLOADS_TH_NAME: Name
+      MODULAR_DOWNLOADS_TH_SIZE: Size
+      MODULAR_DOWNLOADS_TH_MODIFIED: Modified
+      MODULAR_DOWNLOADS_TH_DOWNLOAD: Download
+      MODULAR_DOWNLOADS_TD_BUTTON: Download
+      MODULAR_FEATURES_TITLE: Title
+      BLOG_TAB: Blog
+      BLOG_ROUTE: Blog Route
+      BLOG_ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
+      BLOG_CONFIGURATION: Configuration
+      BLOG_ITEMS_LIMIT: Max Item Count
+      BLOG_ITEMS_ORDER_BY_DATE: Date
+      BLOG_ITEMS_ORDER_BY_TITLE: Title
+      BLOG_ITEMS_ORDER_BY_FOLDER: Folder
+      BLOG_ITEMS_ORDER_BY_DEFAULT: Default
+      BLOG_ITEMS_DIR: Order
+      BLOG_ITEMS_DIR_ASC: Ascending
+      BLOG_ITEMS_DIR_DESC: Descending
+      BLOG_ITEMS_ORDER_BY_LABEL: Order By
+      BLOG_SHOW_BREADCRUMBS: Show Breadcrumbs
+      BLOG_URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+      BLOG_READMORE_TEXT: Readmore button text
+      BLOG_READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
+      BLOG_ITEMS_LABEL: Items
+      ITEM_TAB: Blog Item
+      ITEM_OPTIONS: Options
+      ITEM_SUMMARY_ENABLED: Enabled Summary
+      ITEM_SUMMARY_FORMAT: Summary Format
+      ITEM_SUMMARY_FORMAT_SHORT: Use the first occurence of delimter or size
+      ITEM_SUMMARY_FORMAT_LONG: Summary delimiter will be ignored
+      ITEM_SUMMARY_SIZE: Size
+      ITEM_SUMMARY_DELIMITER: Summary Delimiter
+      ITEM_SHAREICONS_FACEBOOK: Facebook
+      ITEM_SHAREICONS_TWITTER: Twitter
+      ITEM_SHAREICONS_WHATSAPP: WhatsApp
+      ITEM_SHAREICONS_TELEGRAM: Telegram
+      ITEM_SUMMARY_TITLE: Summary Item
+      ITEM_SHAREICONS_TITLE: Share icons
+      GALLERY_TAB: Gallery
+      GALLERY_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
+      GALLERY_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
+      GALLERY_THUMB_WIDTH: Thumbnail Width
+      GALLERY_THUMB_WIDTH_HELP: Set width for thumbnails
+      GALLERY_THUMB_HEIGHT: Thumbnail Height
+      GALLERY_THUMB_HEIGHT_HELP: Set height for thumbnails
+      GALLERY_IMAGES_IMAGE: Image
+      GALLERY_IMAGES_IMAGE_TITLE: Title
+      GALLERY_IMAGES_IMAGE_DESCRIPTION: Description
+      GALLERY_IMAGES_DESCPOSITION_BOTTOM: Bottom
+      GALLERY_IMAGES_DESCPOSITION_TOP: Top
+      GALLERY_IMAGES_DESCPOSITION_LEFT: Left
+      GALLERY_IMAGES_DESCPOSITION_RIGHT: Right
+      GALLERY_IMAGES_IMAGE_THUMB: Thumbnail
+      GALLERY_IMAGES_DESCPOSITION_LABEL: Description position
+      GALLERY_IMAGES_DESCPOSITION_HELP: Global position for slides description, you can define a specific position on each slide (bottom, top, left, right)
+      GALLERY_VIDEO_TITLE: Video Gallery
+      GALLERY_VIDEO_WIDTH: Video Width
+      GALLERY_VIDEO_WIDTH_HELP: Default width for videos. Videos are responsive so height is not required. The width can be in px % or even vw for example, 500px, 90% or 100vw for full width videos
+      GALLERY_VIDEO_AUTOFOCUS: Autofocus
+      GALLERY_VIDEO_AUTOFOCUS_HELP: If true video will be focused on play to allow keyboard sortcuts for the player, this will deactivate prev and next arrows to change slide so use it only if you know what you are doing
+      GALLERY_VIDEO_AUTOPLAY: Autoplay
+      GALLERY_VIDEO_AUTOPLAY_HELP: Autoplay videos on open
+      GALLERY_VIDEOS_SOURCE: Video Source
+      GALLERY_VIDEOS_SOURCE_DESCRIPTION: Select the video source type
+      GALLERY_VIDEOS_SOURCE_OPTIONS_REMOTE: Remote Video
+      GALLERY_VIDEOS_SOURCE_OPTIONS_LOCAL: Local Video
+      GALLERY_VIDEOS_REMOTE_VIDEO: Remote Video URL
+      GALLERY_VIDEOS_REMOTE_VIDEO_DESCRIPTION: URL from YouTube, Vimeo, or other external service
+      GALLERY_VIDEOS_REMOTE_THUMBNAIL: Remote Thumbnail
+      GALLERY_VIDEOS_REMOTE_THUMBNAIL_DESCRIPTION: Thumbnail URL image for gallery
+      GALLERY_VIDEOS_LOCAL_VIDEO: Local Video
+      GALLERY_VIDEOS_LOCAL_THUMBNAIL: Local Thumbnail
+      GALLERY_VIDEOS_LOCAL_THUMBNAIL_DESCRIPTION: Thumbnail image for gallery
+      GALLERY_VIDEOS_DESCRIPTION: Video Description
+      GALLERY_OPTIONS_TAB: Gallery Settings
+      GALLERY_OPTIONS_EFFECTS_TITLE: Appearance & Effects
+      GALLERY_OPTIONS_ACTIONS_TITLE: Actions
+      GALLERY_OPTIONS_STYLING_TITLE: Styling
+      GALLERY_OPTIONS_BEHAVIOR_TITLE: Behaviors
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_BOTTOM: Fade in bottom
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_TOP: Fade in top
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_LEFT: Fade in left
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_RIGHT: Fade in right
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_TOP_RIGHT: Fade in top right
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_TOP_LEFT: Fade in top left
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_BOTTOM_RIGHT: Fade in bottom right
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_FADEIN_BOTTOM_LEFT: Fade in bottom left
+      GALLERY_OPTIONS_OPEN_EFFECT_ZOOM: Zoom
+      GALLERY_OPTIONS_OPEN_EFFECT_FADE: Fade
+      GALLERY_OPTIONS_OPEN_EFFECT_NONE: None
+      GALLERY_OPTIONS_CLOSE_EFFECT_ZOOM: Zoom
+      GALLERY_OPTIONS_CLOSE_EFFECT_FADE: Fade
+      GALLERY_OPTIONS_CLOSE_EFFECT_NONE: None
+      GALLERY_OPTIONS_SLIDE_EFFECT_SLIDE: Slide
+      GALLERY_OPTIONS_SLIDE_EFFECT_ZOOM: Zoom
+      GALLERY_OPTIONS_SLIDE_EFFECT_FADE: Fade
+      GALLERY_OPTIONS_SLIDE_EFFECT_NONE: None
+      GALLERY_OPTIONS_MORE_TEXT: More Text
+      GALLERY_OPTIONS_MORE_TEXT_HELP: More text for descriptions on mobile devices.
+      GALLERY_OPTIONS_MORE_LENGTH: More Length
+      GALLERY_OPTIONS_MORE_LENGTH_HELP: Number of characters to display on the description before adding the moreText link (only for mobiles), if 0 it will display the entire description.
+      GALLERY_OPTIONS_CLOSE_BUTTON: Close Button
+      GALLERY_OPTIONS_CLOSE_BUTTON_HELP: Show or hide the close button
+      GALLERY_OPTIONS_TOUCH_NAVIGATION: Touch Navigation
+      GALLERY_OPTIONS_TOUCH_NAVIGATION_HELP: Enable or disable the touch navigation (swipe)
+      GALLERY_OPTIONS_TOUCH_AXIS: Touch Follow Axis
+      GALLERY_OPTIONS_TOUCH_AXIS_HELP: Image follow axis when dragging on mobile.
+      GALLERY_OPTIONS_KEYBOARD: Keyboard Navigation
+      GALLERY_OPTIONS_KEYBOARD_HELP: Enable or disable the keyboard navigation
+      GALLERY_OPTIONS_CLOSE_OUTSIDE: Close with Outside Click
+      GALLERY_OPTIONS_CLOSE_OUTSIDE_HELP: Close the lightbox when clicking outside the active slide.
+      GALLERY_OPTIONS_MORE_STARTAT: 'Start At:'
+      GALLERY_OPTIONS_MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide). If it is not defined, the clicked image is shown
+      GALLERY_OPTIONS_WIDTH: Width
+      GALLERY_OPTIONS_WIDTH_HELP: Default width for inline elements and iframes, you can define a specific size on each slide. You can use any unit for example 90% or 100vw for full width
+      GALLERY_OPTIONS_HEIGHT: Height
+      GALLERY_OPTIONS_HEIGHT_HELP: Default height for inline elements and iframes, you can define a specific size on each slide.You can use any unit for example 90% or 100vh For inline elements you can set the height to auto
+      GALLERY_OPTIONS_LOOP: Loop
+      GALLERY_OPTIONS_LOOP_HELP: Loop slides on end
+      GALLERY_OPTIONS_ZOOMABLE: Zoomable
+      GALLERY_OPTIONS_ZOOMABLE_HELP: Enable or disable zoomable images you can also use `data-zoomable="false"` on individual nodes.
+      GALLERY_OPTIONS_DRAGGABLE: Draggable
+      GALLERY_OPTIONS_DRAGGABLE_HELP: Enable or disable mouse drag to go prev and next slide (only images and inline content), you can also use `data-draggable="false"` on individual nodes.
+      GALLERY_OPTIONS_DRAGGABLE_X: Drag Tolerance X
+      GALLERY_OPTIONS_DRAGGABLE_X_HELP: Used with draggable. Number of pixels the user has to drag to go to prev or next slide.
+      GALLERY_OPTIONS_DRAGGABLE_Y: Drag Tolerance Y
+      GALLERY_OPTIONS_DRAGGABLE_Y_HELP: Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag).
+      GALLERY_OPTIONS_DRAG_AUTO_SNAP: Drag Auto-Snap
+      GALLERY_OPTIONS_DRAG_AUTO_SNAP_HELP: If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released.
+      GALLERY_OPTIONS_PRELOAD: Preload
+      GALLERY_OPTIONS_PRELOAD_HELP: Enable or disable preloading.
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_LABEL: Overlay effect on hover
+      GALLERY_OPTIONS_OVERLAY_HOVER_EFFECT_HELP: Set the hover effect when the mouse is over an image
+      GALLERY_OPTIONS_OPEN_EFFECT_LABEL: Open Effect
+      GALLERY_OPTIONS_CLOSE_EFFECT_LABEL: Close Effect
+      GALLERY_OPTIONS_SLIDE_EFFECT_LABEL: Slide Effect
+      GALLERY_LAYOUT_LABEL: Layout
+      GALLERY_IMAGES_LABEL: Images
+      GALLERY_VIDEOS_LABEL: Videos
+      GALLERY_VIDEOS_TITLE: Video Title
+      DEFAULT_HEADINGS_SECTION: Headings options
+      DEFAULT_SHOW_TITLE: Show Title
+      DEFAULT_SHOW_TITLE_HELP: Show or hide the page title
+      DEFAULT_HEADER_SUBTITLE: Subtitle
+      DEFAULT_PAGE_INDEX: Page Index
+      DEFAULT_PAGE_INDEX_HELP: If enabled, child pages will be displayed as if they were a table of contents
+      DEFAULT_CONTENT_SECTION: Content options
+      DEFAULT_FEATURED_IMAGE_LABEL: Featured image
+      DEFAULT_FEATURED_IMAGE_HELP: Select a featured image to display at the top of the page
+      DEFAULT_IMAGE_OPTIONS: Image options
+      DEFAULT_FEATURED_IMAGE_WIDTH: Width
+      DEFAULT_FEATURED_IMAGE_HEIGHT: Height
+      DEFAULT_SHOW_PAGEIMAGE: Show Image
+      DEFAULT_SHOW_PAGEIMAGE_HELP: Show featured image if it is defined or the first image of the media page.
+      DEFAULT_SEO_TAB: SEO & Social Settings
+      DEFAULT_SEO_SECTION_TITLE: Social Media Options
+      DEFAULT_SEO_ROBOTS_HELP: Instructions for search engines about indexing and following. This page setting overrides the global configuration.
+      DEFAULT_SEO_TWITTER_CREATOR: Twitter username
+      DEFAULT_SEO_TWITTER_CREATOR_HELP: Your Twitter handle (without @)
+      DEFAULT_SEO_TWITTER_CREATOR_VALIDATE: 'Valid Twitter handle: 1-15 letters, numbers or _'
+      DEFAULT_SEO_IMAGE: Social Share Image
+      DEFAULT_SEO_IMAGE_HELP: Select an image to be used in social media shares. If no image is selected, the page's featured image will be used.
+      BLOG_TITLE: Content Definition
+      BLOG_PAGINATION_LABEL: Pagination
+      GALLERY_TITLE: Image Gallery
     SIDEBAR:
       MENU_TITLE: Menu
       LANGSWITCHER: Choose language
@@ -477,483 +857,3 @@ EDITORIAL:
       SHARE_ON: Share on
       IN: in
       BACK_TO_TOP: Back to top
-ICU:
-  EDITORIAL:
-      ADMIN:
-        THEME:
-          THEME_CONFIG_FIELDSET: Theme Config
-          DROPDOWN_MENU: Dropdown in navbar
-          PRODUCTION_MODE: Production mode
-          PRODUCTION_MODE_HELP: When enabled, EDITORIAL will render with minified CSS
-          SIDEBAR_OPEN: Open sidebar
-          SIDEBAR_OPEN_HELP: Set if the sidebar is open or closed at startup
-          RIGHT_SIDEBAR: Sidebar on the right
-          RIGHT_SIDEBAR_HELP: If set to enabled the sidebar will appear on the right
-          GOOGLE_FONTS:
-            LOCAL: Use locally hosted Google Fonts
-          HEADER_FIELDSET: Header Section
-          HEADER_SETTINGS: Header Options
-          FAVICON: Choose your own favicon
-          FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
-          SLOGAN: Theme Slogan
-          SLOGAN_HELP: Use this to add a text snippet to the sitename.
-          CUSTOM_LOGO:
-            ENABLED: Enabled Logo
-            SECTION: Custom Logo Section
-            WIDTH: Custom Logo Width
-            LOGO: Custom Logo
-            DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
-            MOBILE: Mobile Custom Logo
-          CUSTOM_CSS: Load Custom CSS
-          CUSTOM_CSS_HELP: Load custom CSS styles from theme://assets/css/custom.css
-          CUSTOM_JS: Load Custom JS
-          CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
-          CONTACT:
-            FIELDSET: Contact Settings
-            TITLE: Contact Options
-            ENABLE: Enable Contact section
-            COPYRIGHT_TEXT: Copyright Text
-            COPYRIGHT_TEXT_HELP: Display custom copyright text in the footer, next to the site name.
-            INFORMATION_TITLE: Contact Information
-            INFORMATION_TEXT: Contact information is displayed in the sidebar area.
-            TEXT: Contact Information Text
-            EMAIL: Email
-            PHONE: Phone
-            ADDRESS:
-              SECTION: Address Information
-              STREET: Street Address
-              CITY: City
-              STATE: State
-              ZIP: Postal Code
-          SIDEBAR:
-              FIELDSET: Sidebar Settings
-              OPTIONS: Sidebar Options
-              WIDGETS_OPTIONS: Widgets Options
-              MENU_SECTION: Menu Items
-              OPEN_BY_DEFAULT: Open By Default
-              OPEN_BY_DEFAULT_HELP: Set if the sidebar is open or closed at startup
-              ON_RIGHT: Sidebar on the right
-              ON_RIGHT_HELP: If set to enabled the sidebar will appear on the right
-              LANGSWITCHER: Enable Langswitcher menu option
-              LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the sidebar menu.
-              SEARCH: Enable Search menu option
-              SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in sidebar menu.
-              LOGIN: Enable Login menu option
-              LOGIN_HELP: You can enable or disable Login icon in sidebar menu, to show login status.
-              SHOW_FEATURED: Show Featured Posts
-              SHOW_BLOG_CATEGORIES: Show Blog Categories
-              SHOW_TAXONOMY: Show Popular Tags
-              SHOW_TAXONOMY_HELP: 'Taxonomylist plugin must be installed'
-              SHOW_ARCHIVES: Show Archives
-              SHOW_ARCHIVES_HELP: 'Archives plugin must be installed'
-              SHOW_RELATED_PAGES: Show Related Pages
-              SHOW_RELATED_PAGES_HELP: 'Related pages plugin must be installed'
-              SHOW_FEEDS: Show Feeds
-              SHOW_FEEDS_HELP: 'Feeds plugin must be installed'
-              SHOW_RANDOM: Show Random Post
-              SHOW_RANDOM_HELP: 'Random plugin must be installed'
-              BLOG_CATEGORIES: Blog Categories
-          BLOG:
-            FIELDSET: Blog Settings
-            DEFAULTS: Blog Defaults
-            PAGE_LABEL: Blog Page
-            PAGE_HELP: The route to the blog page when working with blog sidebar
-            CATEGORIES_ENABLED: Show Blog Categories
-            CATEGORIES_ENABLED_HELP: Display blog categories with post count in the sidebar
-            CATEGORIES_SCOPE: Categories Scope
-            CATEGORIES_SCOPE_HELP: Choose where to display blog categories
-            CATEGORIES_SCOPE_BLOG_ONLY: Blog pages only
-            CATEGORIES_SCOPE_ALL_BLOGS: All blogs on all pages
-            LISTING_TITLE:
-              TAXONOMY:
-                CATEGORY: Set Title to filter posts by Category
-                TAG: Set Title to filter posts by Tag
-                AUTHOR: Set Title to filter posts by Author
-              BLOG: Set Title for blog without filter
-          FEATURED:
-            SECTION: Featured Section
-            LABEL: Enable Featured posts in Sidebar
-            NUMBER: Featured posts number to show
-            NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
-            CATEGORY: Featured Tag
-            CATEGORY_DESCRIPTION: Set name to featured tag.<br />`You must include this name in Options->Taxonomy->Tag`
-            ORDER: "Order by"
-            ORDER_DESCRIPTION: "Field to sort featured posts by"
-            ORDER_DATE: "Creation date"
-            ORDER_PUBLISH_DATE: "Publication date"
-            ORDER_MODIFIED: "Modified date"
-            ORDER_TITLE: "Title"
-            ORDER_FOLDER: "Folder name"
-            DIRECTION: "Sort direction"
-            DIRECTION_DESCRIPTION: "Ascending or descending order"
-            DIRECTION_DESC: "Descending"
-            DIRECTION_ASC: "Ascending"
-          SOCIAL:
-            FIELDSET: Social Media Settings
-            TEXT: Include full url's to your various social media presences.  An icon/ link will appear at the top of the page for each respective platform.
-            ENABLED: Enable Social Icons
-            ICONS: Social Icons
-            NAME: Social Name
-            URL: URL Link to Social
-            TARGET:
-              LABEL: Target
-              BLANK: 'Open in a new window'
-              PARENT: 'Open in the parent frame'
-              SELF: 'Open in the same frame as clicked'
-              TOP: 'Open in the full body of the window'
-            ICON: Icon to Social
-            ICON_HELP: 'Enter the FontAwesome icon class (e.g., facebook, twitter, linkedin, mastodon). Prefix "fa-" is optional and will be added automatically.'
-            ICON_TYPE: Icon Type
-          CUSTOM_MENU:
-            FIELDSET: Custom Menu Settings
-            TITLE: 'Custom Menu Items'
-            ENABLE: 'Display Custom Menu Items'
-            ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
-            LABEL: 'Menu Items'
-            ITEM:
-              TEXT: 'Text'
-              TEXT_DESCRIPTION: 'Text label for menu item.'
-              ICON: 'Icon'
-              ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
-              URL: 'URL'
-              URL_DESCRIPTION: 'URL for menu item.'
-              TARGET:
-                LABEL: 'Target'
-                BLANK: 'Open in a new window'
-                PARENT: 'Open in the parent frame'
-                SELF: 'Open in the same frame as clicked'
-                TOP: 'Open in the full body of the window'
-          SEO:
-            FIELDSET: "SEO Settings"
-            ENABLED: "Enable SEO"
-            ENABLED_HELP: "Enable or disable all SEO functionality. Disable if using an SEO plugin"
-            JSON_LD_ENABLED: "Structured JSON-LD"
-            JSON_LD_ENABLED_HELP: "Generate JSON-LD structured data for rich snippets"
-            GENERAL_OPTIONS: "General SEO Options"
-            ROBOTS: "Robots directives"
-            ROBOTS_HELP: "Instructions for search engines about indexing and following"
-            ROBOTS_INDEX_FOLLOW: "Index, Follow"
-            ROBOTS_NOINDEX_FOLLOW: "No Index, Follow"
-            ROBOTS_INDEX_NOFOLLOW: "Index, No Follow"
-            ROBOTS_NOINDEX_NOFOLLOW: "No Index, No Follow"
-            DESCRIPTION_SECTION: "Description Options"
-            DESCRIPTION_LENGTH: "Description length"
-            DESCRIPTION_LENGTH_HELP: "Maximum number of words in description meta tag"
-            DESCRIPTION_FALLBACK: "Description fallback"
-            DESCRIPTION_FALLBACK_HELP: "Use content summary when description is not available"
-            DESCRIPTION_SUMMARIZATION: "Description summarization"
-            DESCRIPTION_SUMMARIZATION_HELP: "Method used to generate descriptions from content"
-            SUMMARIZATION_SIMPLE: "Simple truncation"
-            SUMMARIZATION_SMART: "Smart summarization"
-            TWITTER_SECTION: "Twitter Card Options"
-            TWITTER_ENABLED: "Enable Twitter Cards"
-            TWITTER_ENABLED_HELP: "Generate Twitter Card meta tags"
-            TWITTER_SITE: "Twitter site username"
-            TWITTER_SITE_HELP: "Your website's Twitter handle (without @)"
-            TWITTER_SITE_VALIDATE: "Valid Twitter handle: 1-15 letters, numbers or _"
-            TWITTER_CARD_TYPE: "Twitter Card type"
-            TWITTER_CARD_TYPE_HELP: "Type of Twitter Card to generate"
-            TWITTER_CARD_SUMMARY_LARGE: "Summary Large Image"
-            TWITTER_CARD_SUMMARY: "Summary"
-            TWITTER_CARD_APP: "App"
-            TWITTER_CARD_PLAYER: "Player"
-            FACEBOOK_SECTION: "Facebook Open Graph Options"
-            FACEBOOK_ENABLED: "Enable Open Graph"
-            FACEBOOK_ENABLED_HELP: "Generate Facebook Open Graph meta tags"
-            FACEBOOK_APP_ID: "Facebook App ID"
-            FACEBOOK_APP_ID_HELP: "Your Facebook Application ID"
-        MODULAR:
-          SHOW_ONPAGE_MENU: Show navigation on one-page sites
-          SHOW_ONPAGE_MENU_HELP: On single-page sites, it adds smooth scrolling on click navigation and automatically selects the correct navigation elements as you scroll through different sections.
-          BANNER:
-            SECTION: Banner Options
-            BUTTON_TEXT: Button Text
-            BUTTON_URL: Button URL
-            TITLE_HTAG: Title HTML Tag
-            TITLE_HTAG_HELP: Select the HTML tag to be used for the banner title
-          TEXT_BLOCKS:
-            TAB: Text Blocks
-            CONFIG_TAB: Text Blocks Options
-            SECTION: Text Blocks Options
-            LAYOUT:
-              LABEL: Layout
-              ONE: One column
-              TWO: Two columns
-              THREE: Three columns
-            ITEMS: Text blocks
-            ITEM_TITLE: Box title
-            ITEM_CONTENT: Content
-            ITEM_CONTENT_HELP: Supports markdown.
-            ITEM_BOX: Box style
-            BOX:
-              NONE: No box
-              DEFAULT: Default
-              PRIMARY: Primary
-              SECONDARY: Secondary
-              SUCCESS: Success
-              INFO: Info
-              WARNING: Warning
-              DANGER: Danger
-              LIGHT: Light
-          FEATURES:
-            TAB: Features
-            ICON: Icon
-            ICON_DESCRIPTION: Select the code of Fontawesome Icons free version (https://fontawesome.com/icons?m=free)
-            TITLE: Title
-            TEXT: Text
-            TEXT_HELP: Short description for each feature. Support markdown.
-            BUTTON_URL: Button URL
-            BUTTON_URL_TARGET: Open URL in a new window
-          RECENT_POSTS:
-            TAB: Recent Posts Config
-            LAYOUT:
-              LABEL: Layout
-              TWO_COLS: Medium   = 2 / 1 columns
-              THREE_COLS: Standard  = 3 / 2 / 1 columns
-            LIMIT: Limit
-            LIMIT_HELP: Maximum number of posts to display.
-            READMORE_TEXT: Readmore button text
-            READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
-          TEAM:
-            TAB: Team
-            TEAM_LAYOUT: Layout
-            TEAM_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
-            TEAM_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
-            IMAGE: Profile image
-            IMAGE_HELP: Select a profile image
-            NAME: Name
-            POSITION: Position
-            DETAILS: Profile details
-            DETAILS_HELP: Brief profile description
-            SOCIAL_MEDIA:
-              LABEL: Social media
-              HELP: The template allows a maximum of 6 icons for each member.
-              NAME: Social name
-              NAME_HELP: You only have to write the name of the social network here (eg, Facebook, Twitter, etc)
-              URL: Social URL
-          DOWNLOADS:
-            TH_NAME: Name
-            TH_SIZE: Size
-            TH_MODIFIED: Modified
-            TH_DOWNLOAD: Download
-            TD_BUTTON: Download
-        BLOG:
-          TAB: Blog Config
-          ROUTE: Blog Route
-          ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
-          CONFIGURATION: Configuration
-          TITLE: Content Definition
-          ITEMS:
-            LABEL: Items
-            LIMIT: Max Item Count
-            ORDER_BY:
-              LABEL: Order By
-              DATE: Date
-              TITLE: Title
-              FOLDER: Folder
-              DEFAULT: Default
-            DIR: Order
-            DIR_ASC: Ascending
-            DIR_DESC: Descending
-          SHOW_BREADCRUMBS: Show Breadcrumbs
-          PAGINATION:
-            LABEL: Pagination
-          URL_TAXONOMY_FILTERS: URL Taxonomy Filters
-          READMORE_TEXT: Readmore button text
-          READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
-        ITEM:
-          TAB: Blog Item
-          OPTIONS: Options
-          SUMMARY:
-            TITLE: Summary Item
-            ENABLED: Enabled Summary
-            FORMAT: Summary Format
-            FORMAT_SHORT: Use the first occurence of delimter or size
-            FORMAT_LONG: Summary delimiter will be ignored
-            SIZE: Size
-            DELIMITER: Summary Delimiter
-          SHAREICONS:
-            TITLE: Share icons
-            FACEBOOK: Facebook
-            TWITTER: Twitter
-            WHATSAPP: WhatsApp
-            TELEGRAM: Telegram
-        GALLERY:
-          TAB: Gallery
-          TITLE: Image Gallery
-          LAYOUT:
-            LABEL: Layout
-            TWOCOLS: Medium   = 2 / 1 columns
-            THREECOLS: Standard  = 3 / 2 / 1 columns
-          THUMB_WIDTH: Thumbnail Width
-          THUMB_WIDTH_HELP: Set width for thumbnails
-          THUMB_HEIGHT: Thumbnail Height
-          THUMB_HEIGHT_HELP: Set height for thumbnails
-          IMAGES:
-            LABEL: Images
-            IMAGE: Image
-            IMAGE_TITLE: Title
-            IMAGE_DESCRIPTION: Description
-            DESCPOSITION:
-              LABEL: Description position
-              HELP: Global position for slides description, you can define a specific position on each slide (bottom, top, left, right)
-              BOTTOM: Bottom
-              TOP: Top
-              LEFT: Left
-              RIGHT: Right
-            IMAGE_THUMB: Thumbnail
-          VIDEO_TITLE: Video Gallery
-          VIDEO_WIDTH: Video Width
-          VIDEO_WIDTH_HELP: 'Default width for videos. Videos are responsive so height is not required. The width can be in px % or even vw for example, 500px, 90% or 100vw for full width videos'
-          VIDEO_AUTOFOCUS: Autofocus
-          VIDEO_AUTOFOCUS_HELP: If true video will be focused on play to allow keyboard sortcuts for the player, this will deactivate prev and next arrows to change slide so use it only if you know what you are doing
-          VIDEO_AUTOPLAY: Autoplay
-          VIDEO_AUTOPLAY_HELP: Autoplay videos on open
-          VIDEOS:
-            LABEL: Videos
-            SOURCE: Video Source
-            SOURCE_DESCRIPTION: Select the video source type
-            SOURCE_OPTIONS:
-              REMOTE: Remote Video
-              LOCAL: Local Video
-            REMOTE_VIDEO: Remote Video URL
-            REMOTE_VIDEO_DESCRIPTION: URL from YouTube, Vimeo, or other external service
-            REMOTE_THUMBNAIL: Remote Thumbnail
-            REMOTE_THUMBNAIL_DESCRIPTION: Thumbnail URL image for gallery
-            LOCAL_VIDEO: Local Video
-            LOCAL_THUMBNAIL: Local Thumbnail
-            LOCAL_THUMBNAIL_DESCRIPTION: Thumbnail image for gallery
-            TITLE: Video Title
-            DESCRIPTION: Video Description
-          OPTIONS:
-            TAB: Gallery Options
-            EFFECTS_TITLE: Appearance & Effects
-            ACTIONS_TITLE: Actions
-            STYLING_TITLE: Styling
-            BEHAVIOR_TITLE: Behaviors
-            OVERLAY_HOVER_EFFECT:
-              LABEL: Overlay effect on hover
-              HELP: Set the hover effect when the mouse is over an image
-              FADEIN_BOTTOM: Fade in bottom
-              FADEIN_TOP: Fade in top
-              FADEIN_LEFT: Fade in left
-              FADEIN_RIGHT: Fade in right
-              FADEIN_TOP_RIGHT: Fade in top right
-              FADEIN_TOP_LEFT: Fade in top left
-              FADEIN_BOTTOM_RIGHT: Fade in bottom right
-              FADEIN_BOTTOM_LEFT: Fade in bottom left
-            OPEN_EFFECT:
-              LABEL: Open Effect
-              ZOOM: Zoom
-              FADE: Fade
-              NONE: None
-            CLOSE_EFFECT:
-              LABEL: Close Effect
-              ZOOM: Zoom
-              FADE: Fade
-              NONE: None
-            SLIDE_EFFECT:
-              LABEL: Slide Effect
-              SLIDE: Slide
-              ZOOM: Zoom
-              FADE: Fade
-              NONE: None
-            MORE_TEXT: More Text
-            MORE_TEXT_HELP: More text for descriptions on mobile devices.
-            MORE_LENGTH: More Length
-            MORE_LENGTH_HELP: Number of characters to display on the description before adding the moreText link (only for mobiles), if 0 it will display the entire description.
-            CLOSE_BUTTON: Close Button
-            CLOSE_BUTTON_HELP: Show or hide the close button
-            TOUCH_NAVIGATION: Touch Navigation
-            TOUCH_NAVIGATION_HELP: Enable or disable the touch navigation (swipe)
-            TOUCH_AXIS: Touch Follow Axis
-            TOUCH_AXIS_HELP: Image follow axis when dragging on mobile.
-            KEYBOARD: Keyboard Navigation
-            KEYBOARD_HELP: Enable or disable the keyboard navigation
-            CLOSE_OUTSIDE: Close with Outside Click
-            CLOSE_OUTSIDE_HELP: Close the lightbox when clicking outside the active slide.
-            MORE_STARTAT: 'Start At:'
-            MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide). If it is not defined, the clicked image is shown
-            WIDTH: Width
-            WIDTH_HELP: 'Default width for inline elements and iframes, you can define a specific size on each slide. You can use any unit for example 90% or 100vw for full width'
-            HEIGHT: Height
-            HEIGHT_HELP: 'Default height for inline elements and iframes, you can define a specific size on each slide.You can use any unit for example 90% or 100vh For inline elements you can set the height to auto'
-            LOOP: Loop
-            LOOP_HELP: Loop slides on end
-            ZOOMABLE: Zoomable
-            ZOOMABLE_HELP: Enable or disable zoomable images you can also use `data-zoomable="false"` on individual nodes.
-            DRAGGABLE: Draggable
-            DRAGGABLE_HELP: Enable or disable mouse drag to go prev and next slide (only images and inline content), you can also use `data-draggable="false"` on individual nodes.
-            DRAGGABLE_X: Drag Tolerance X
-            DRAGGABLE_X_HELP: Used with draggable. Number of pixels the user has to drag to go to prev or next slide.
-            DRAGGABLE_Y: Drag Tolerance Y
-            DRAGGABLE_Y_HELP: Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag).
-            DRAG_AUTO_SNAP: Drag Auto-Snap
-            DRAG_AUTO_SNAP_HELP: If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released.
-            PRELOAD: Preload
-            PRELOAD_HELP: Enable or disable preloading.
-        DEFAULT:
-          HEADINGS_SECTION: Headings options
-          SHOW_TITLE: Show Title
-          SHOW_TITLE_HELP: Show or hide the page title
-          HEADER_SUBTITLE: Subtitle
-          PAGE_INDEX: Page Index
-          PAGE_INDEX_HELP: If enabled, child pages will be displayed as if they were a table of contents
-          CONTENT_SECTION: Content options
-          FEATURED_IMAGE_LABEL: Featured Image
-          FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image
-          IMAGE_OPTIONS: Image options
-          FEATURED_IMAGE:
-            LABEL: Featured image
-            HELP: Select a featured image to display at the top of the page
-            WIDTH: Width
-            HEIGHT: Height
-          SHOW_PAGEIMAGE: Show Image
-          SHOW_PAGEIMAGE_HELP: Show featured image if it is defined or the first image of the media page.
-          SEO:
-            TAB: "SEO and Social"
-            SECTION_TITLE: "Social Media Options"
-            ROBOTS_HELP: "Instructions for search engines about indexing and following. This page setting overrides the global configuration."
-            TWITTER_CREATOR: "Twitter username"
-            TWITTER_CREATOR_HELP: "Your Twitter handle (without @)"
-            TWITTER_CREATOR_VALIDATE: "Valid Twitter handle: 1-15 letters, numbers or _"
-            IMAGE: "Social Share Image"
-            IMAGE_HELP: "Select an image to be used in social media shares. If no image is selected, the page's featured image will be used."
-      SIDEBAR:
-        MENU_TITLE: Menu
-        LANGSWITCHER: Choose language
-        CONTACT_INFO: Get in touch
-        FEATURED_POSTS: Featured Posts
-        FEATURED_MORE: More featured posts
-        NO_FEATURED: No featured posts
-        BLOG_CATEGORIES: Blog Categories
-        LOGIN_SECTION: Login
-        LOGGUED_AS: 'Logged as: '
-        RELATEDPAGES_SECTION: Related pages
-        ARCHIVES_SECTION: Archives
-        RANDOM_ARTICLE:
-          LABEL: Random Article
-          BUTTON: I'm Feeling Lucky!
-        SYNDICATE:
-          LABEL: Syndicate
-        TAXONOMYLIST:
-          LABEL: Popular Tags
-      DEFAULT:
-        PAGE_INDEX_TITLE: Page content
-      BLOG:
-        LISTING_TITLE_CATEGORY: 'Posts in Category: '
-        LISTING_TITLE_TAG: 'Posts with Tag: '
-        LISTING_TITLE_AUTHOR: 'Posts written by Author: '
-        LISTING_TITLE_MONTH: 'Post of the month: '
-        PAGINATION:
-          PREV: Previous
-          NEXT: Next
-      ITEM:
-        POSTED_ON: Posted on
-        SEE_OTHER_POSTS_OF: See other posts by
-        SEE_OTHER_POSTS_IN: See other posts in
-      FORM_SUMMARY: Here is the summary of what you wrote to us
-      MISC:
-        SHARE_ON: Share on
-        IN: in
-        BACK_TO_TOP: Back to top

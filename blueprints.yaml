@@ -1,7 +1,7 @@
 name: Editorial
 slug: editorial
 type: theme
-version: 4.3.2
+version: 4.4.0
 description: GravCMS port of the HTML5UP theme Editorial
 icon: text-width
 author:
@@ -26,7 +26,7 @@ form:
   fields:
     general:
       type: fieldset
-      title: EDITORIAL.ADMIN.THEME.THEME_CONFIG_FIELDSET
+      title: EDITORIAL.ADMIN.THEME_GLOBAL_SETTING
       collapsible: true
       collapsed: false
       import@:
@@ -35,7 +35,7 @@ form:
 
     header:
       type: fieldset
-      title: EDITORIAL.ADMIN.THEME.HEADER_FIELDSET
+      title: EDITORIAL.ADMIN.THEME_HEADER_SETTING
       collapsible: true
       collapsed: true
       import@:
@@ -44,7 +44,7 @@ form:
 
     sidebar:
       type: fieldset
-      title: EDITORIAL.ADMIN.THEME.SIDEBAR.FIELDSET
+      title: EDITORIAL.ADMIN.THEME_SIDEBAR_SETTING
       collapsible: true
       collapsed: true
       import@:
@@ -53,7 +53,7 @@ form:
 
     blog:
       type: fieldset
-      title: EDITORIAL.ADMIN.THEME.BLOG.FIELDSET
+      title: EDITORIAL.ADMIN.THEME_BLOG_SETTING
       collapsible: true
       collapsed: true
       import@:
@@ -62,7 +62,7 @@ form:
 
     contact:
       type: fieldset
-      title: EDITORIAL.ADMIN.THEME.CONTACT.FIELDSET
+      title: EDITORIAL.ADMIN.THEME_CONTACT_SETTING
       collapsible: true
       collapsed: true
       import@:
@@ -71,7 +71,7 @@ form:
 
     social:
       type: fieldset
-      title: EDITORIAL.ADMIN.THEME.SOCIAL.FIELDSET
+      title: EDITORIAL.ADMIN.THEME_SOCIAL_SETTING
       collapsible: true
       collapsed: true
       import@:
@@ -80,7 +80,7 @@ form:
 
     custommenu:
       type: fieldset
-      title: EDITORIAL.ADMIN.THEME.CUSTOM_MENU.FIELDSET
+      title: EDITORIAL.ADMIN.THEME_CUSTOM_MENU_SETTING
       collapsible: true
       collapsed: true
       import@:
@@ -89,7 +89,7 @@ form:
 
     seo:
       type: fieldset
-      title: EDITORIAL.ADMIN.THEME.SEO.FIELDSET
+      title: EDITORIAL.ADMIN.THEME_SEO_SETTING
       collapsible: true
       collapsed: true
       import@:

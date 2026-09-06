@@ -1,3 +1,10 @@
+# v4.4.0
+## 09/06/2026
+
+1. [](#improved)
+   * Enhanced Grav 2 Admin2 compatibility with flattened translation key hierarchy and ICU (International Components for Unicode) format support
+   * Fixed minor translation inconsistencies in French and German language files
+
 # v4.3.2
 ## 08/21/2026
 

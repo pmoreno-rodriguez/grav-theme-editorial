@@ -51,28 +51,35 @@ pages:
 
 Do not directly edit the editorial.yaml file found in the theme folder. Copy the editorial.yaml file to user/config/themes and edit the new file there.
 
+## Compatibility
+
+**Grav Versions:**
+- Grav 1.7.x - Full compatibility
+- Grav 2.x - Full compatibility with enhanced Admin2 support
+
+**Minimum Requirements:**
+- Grav 1.7.0 or higher
+
+**Special Features for Grav 2:**
+- ICU (International Components for Unicode) format support for Admin2 compatibility
+- Flattened translation key hierarchy for improved Admin Next integration
+- Support for modern Grav 2 plugin ecosystem
+
 ## Theme Features
 
 * Theme Slogan (optional) - Used to add additional text to the site name at the top of the page.
 * Contact Information - Complete the form and the contact information will display in the sidebar.
 * Social Icons (optional) - Add the full URL to a social platform, and an icon/link will automatically display on the top of the page.
-* Blog (optional) - Blog and Item templates.
-* Features module
-* Banner module like the original theme.
-* Text Blocks module
-* Contact Form module.
-* Contact Form non-modular template.
-* Recent Posts module - Show the latest posts in a module, eg. Home. (can be changed from twig template)
+* Blog (optional) - Blog and Item templates with featured image support.
+* Modular templates - Banner, Contact, Features, Recent Posts, Team, and Text Blocks modules.
 * Gallery template (with Glightbox JS)
 * Custom Twig templates for SimpleSearch plugin.
-* Functionality to searchbox in sidebar
 * Production mode for CSS styles
-* Custom logo and Custom logo mobile in theme config
+* Custom logo and Custom logo mobile support
 * Support for Taxonomylist, Related Pages, Random, Feeds and Archives plugins.
 * Blog Categories widget - Display blog categories with post count in sidebar.
-* Team template
-* Downloads template
-* Shortcodes to write your pages easily, taking advantage of the styles offered by the theme.
+* Downloads template - Automatically display uploaded files with metadata.
+* Shortcodes for easy page creation - Leverage theme styles with custom shortcodes.
 * Custom styles for Login forms. 
 * Support for navigation menu on one-page websites.
 * **SEO optimization** - Built-in SEO features including meta tags, Open Graph, Twitter Cards, and JSON-LD structured data.
@@ -114,12 +121,12 @@ Editorial comes with a few default options that can be set site-wide.  These opt
 ### General Settings
 
 ```yaml
-dropdown.enabled:             # Enable/Disable dropdown menu
+dropdown.enabled:             # Enable/Disable dropdown menu in navigation
 production-mode:              # In production mode, only minified CSS is used. When disabled, nested CSS are enabled
 google_fonts_local:           # Option to load Google Fonts from the theme or from Google servers
 custom_css:                   # Load the custom.css file if it exists in the assets/css folder
 custom_js:                    # Load the custom.js file if it exists in the assets/js folder
-copyright.text:               # Set the copyright text
+copyright.text:               # Set the copyright text in footer
 ```
 
 ### Header Settings
@@ -172,18 +179,18 @@ sidebar_open:                 # Option to display the main page with the sidebar
 right_sidebar:                # Enable/Disable sidebar on the right
 
 # Menu Items
-menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
+menu_langswitcher:            # Enable/Disable language switcher icon in menu (langswitcher plugin needed)
 menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
-menu_login:                   # Enable/Disable login icon in menu
+menu_login:                   # Enable/Disable login/logout icon in menu
 
-# Widget Options
-featured:                     # Show/Hide featured posts in sidebar
+# Sidebar Widgets
+featured:                     # Show/Hide featured posts widget in sidebar
 blog_categories_enabled:      # Show/Hide blog categories with post count in sidebar
-sidebar_showtaxonomy:         # Show/Hide taxonomy section in sidebar
-sidebar_showarchives:         # Show/Hide archives section in sidebar
-sidebar_showrelatedpages:     # Show/Hide related pages section in sidebar
-sidebar_showfeeds:            # Show/Hide feeds section in sidebar
-sidebar_showrandom:           # Show/Hide random button in sidebar
+sidebar_showtaxonomy:         # Show/Hide taxonomy list widget in sidebar
+sidebar_showarchives:         # Show/Hide archives widget in sidebar
+sidebar_showrelatedpages:     # Show/Hide related pages widget in sidebar
+sidebar_showfeeds:            # Show/Hide feeds widget in sidebar
+sidebar_showrandom:           # Show/Hide random content button in sidebar
 ```
 
 ### Blog Settings
@@ -307,6 +314,28 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Editor
 | dragToleranceY | number | `65` | Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag). |
 | dragAutoSnap | boolean | `false` | If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released. |
 | preload | boolean | `true` | Enable or disable preloading. | 
+
+## Modular Templates
+
+Editorial includes several modular content sections that can be added to pages to build dynamic content layouts:
+
+* **Banner** - Large hero banner section with background image, title, and call-to-action button
+* **Contact** - Contact form module for collecting user inquiries
+* **Features** - Showcase features or services with icon, title, and description layout
+* **Recent Posts** - Display the latest blog posts automatically in a module
+* **Team** - Display team member profiles with image, name, and description
+* **Text Blocks** - Simple text content blocks for flexible content sections
+
+## Additional Templates
+
+Beyond the main templates, Editorial provides several specialized templates:
+
+* **Profile** - User profile page template
+* **Password Reset** - Password recovery and reset page
+* **Error** - Custom error page template (404, 500, etc.)
+* **Offline** - Offline mode fallback page
+* **Contact Form** - Non-modular contact form page template (alternative to modular contact)
+* **SimpleSearch Results** - Custom template for search results from SimpleSearch plugin
 
 ## Shortcodes
 

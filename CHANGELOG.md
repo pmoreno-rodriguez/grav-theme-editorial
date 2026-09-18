@@ -1,3 +1,10 @@
+# v4.4.1
+## 09/18/2026
+
+1. [](#improved)
+   * Updated README documentation with complete compatibility information and template details
+   * Removed custom WordCount Twig extension in favor of built-in Grav core filter
+
 # v4.4.0
 ## 09/06/2026
 

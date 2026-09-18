@@ -4,7 +4,6 @@ namespace Grav\Theme;
 use Grav\Common\Theme;
 use RocketTheme\Toolbox\Event\Event;
 use Grav\Common\Page\Interfaces\PageInterface;
-use Grav\Theme\Editorial\WordCountTwigExtension;
 
 /**
  * Editorial Theme
@@ -29,7 +28,6 @@ class Editorial extends Theme
         return [
             'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
             'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
-            'onTwigExtensions' => ['onTwigExtensions', 0],
         ];
     }
 
@@ -45,26 +43,13 @@ class Editorial extends Theme
         }
 
         $shortcodesPath = __DIR__ . '/shortcodes';
-        
+
         if (!is_dir($shortcodesPath)) {
             $this->grav['log']->warning("Editorial Theme: Shortcodes directory not found at {$shortcodesPath}");
             return;
         }
 
         $this->grav['shortcode']->registerAllShortcodes($shortcodesPath);
-    }
-
-    /**
-     * Register custom Twig extensions
-     * Adds word_count filter for accurate word counting in multiple languages
-     *
-     * @return void
-     */
-    public function onTwigExtensions(): void
-    {
-        require_once __DIR__ . '/twig/WordCountTwigExtension.php';
-        
-        $this->grav['twig']->twig->addExtension(new WordCountTwigExtension());
     }
 
     /**
@@ -81,7 +66,7 @@ class Editorial extends Theme
         }
 
         $themeConfig = $this->getThemeConfig();
-        
+
         $this->registerCustomCss($themeConfig);
         $this->registerCustomJs($themeConfig);
     }
@@ -110,7 +95,7 @@ class Editorial extends Theme
         }
 
         $customCssPath = 'theme://assets/css/custom.css';
-        
+
         if (!$this->assetExists($customCssPath)) {
             $this->grav['log']->notice("Editorial Theme: Custom CSS enabled but file not found at {$customCssPath}");
             return;
@@ -132,7 +117,7 @@ class Editorial extends Theme
         }
 
         $customJsPath = 'theme://assets/js/custom.js';
-        
+
         if (!$this->assetExists($customJsPath)) {
             $this->grav['log']->notice("Editorial Theme: Custom JS enabled but file not found at {$customJsPath}");
             return;
